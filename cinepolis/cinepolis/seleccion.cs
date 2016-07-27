@@ -51,5 +51,12 @@ namespace cinepolis
             gestionpeliculas r = new gestionpeliculas();
             r.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            usuario r = new usuario();
+            r.ShowDialog();
+        }
     }
 }
