@@ -1,0 +1,14 @@
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\bin\Debug\cinepolis.exe.config
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\bin\Debug\cinepolis.exe
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\bin\Debug\cinepolis.pdb
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.Form1.resources
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.Properties.Resources.resources
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.exe
+c:\users\walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.pdb
+C:\Users\Walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.mantenimiento.resources
+C:\Users\Walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
+C:\Users\Walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.reportes.resources
+C:\Users\Walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
+C:\Users\Walter\documents\visual studio 2015\Projects\cinepolis\cinepolis\obj\Debug\cinepolis.gestionpeliculas.resources
