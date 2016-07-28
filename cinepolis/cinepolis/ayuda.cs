@@ -30,5 +30,10 @@ namespace cinepolis
             seleccion r = new seleccion();
             r.ShowDialog();
         }
+
+        private void ayuda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

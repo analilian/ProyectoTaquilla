@@ -27,3 +27,6 @@ C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe.config
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.exe
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.pdb

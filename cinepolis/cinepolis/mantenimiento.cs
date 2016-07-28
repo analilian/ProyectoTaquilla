@@ -35,5 +35,10 @@ namespace cinepolis
             seleccion r = new seleccion();
             r.ShowDialog();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
