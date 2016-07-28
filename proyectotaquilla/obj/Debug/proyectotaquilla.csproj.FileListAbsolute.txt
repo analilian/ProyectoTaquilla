@@ -32,6 +32,7 @@ C:\Users\Roberto Carlos\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\obj\D
 C:\Users\Roberto Carlos\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.Properties.Resources.resources
 C:\Users\Roberto Carlos\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.sinopsis.resources
 C:\Users\Roberto Carlos\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla\bin\Debug\proyectotaquilla.exe.config
 C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla\obj\Debug\Interop.ShockwaveFlashObjects.dll
 C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
@@ -50,3 +51,5 @@ C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla
 C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.Properties.Resources.resources
 C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.sinopsis.resources
 C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.GenerateResource.Cache
+=======
+>>>>>>> 1dbda8f4cbdec9c58824dedeb28726dcf95c062f
