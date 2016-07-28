@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -61,6 +62,18 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.button5.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(638, 106);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(257, 146);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "GESTIÓN DE ASPECTOS DE PELÍCULA";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::cinepolis.Properties.Resources._13672487_10208834486171149_1624040466_n;
@@ -87,7 +100,7 @@
             // 
             this.button3.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
             this.button3.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(508, 127);
+            this.button3.Location = new System.Drawing.Point(337, 106);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(257, 146);
             this.button3.TabIndex = 5;
@@ -99,7 +112,7 @@
             // 
             this.button2.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
             this.button2.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(150, 127);
+            this.button2.Location = new System.Drawing.Point(32, 106);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(257, 146);
             this.button2.TabIndex = 4;
@@ -127,6 +140,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(923, 358);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -149,6 +163,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
     }
 }

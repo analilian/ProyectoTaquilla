@@ -40,35 +40,5 @@ namespace cinepolis
         {
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbc_ingresar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgv_eliminar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_buscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_buscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_buscar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -31,15 +31,3 @@ C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\c
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.exe
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.pdb
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Form1.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.mantenimiento.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Properties.Resources.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.reportes.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.pdb
