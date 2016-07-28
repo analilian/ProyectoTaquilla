@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="butacas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="butacas.Designer.cs">
+      <DependentUpon>butacas.cs</DependentUpon>
+    </Compile>
     <Compile Include="cartelera.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="cartelera.Designer.cs">
       <DependentUpon>cartelera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pago.Designer.cs">
+      <DependentUpon>pago.cs</DependentUpon>
     </Compile>
     <Compile Include="principal.cs">
       <SubType>Form</SubType>
@@ -66,8 +78,14 @@
     <Compile Include="sinopsis.Designer.cs">
       <DependentUpon>sinopsis.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="butacas.resx">
+      <DependentUpon>butacas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cartelera.resx">
       <DependentUpon>cartelera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pago.resx">
+      <DependentUpon>pago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.cs</DependentUpon>
@@ -161,6 +179,21 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pantalla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

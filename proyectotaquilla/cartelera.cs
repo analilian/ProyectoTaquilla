@@ -38,5 +38,12 @@ namespace proyectotaquilla
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            butacas butacas = new butacas();
+            this.Hide();
+            butacas.Show();
+        }
     }
 }
