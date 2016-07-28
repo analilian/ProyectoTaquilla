@@ -29,51 +29,118 @@
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lbl_mod = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.lbl_trailer = new System.Windows.Forms.Label();
+            this.lbl_descrip = new System.Windows.Forms.Label();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.lbl_fecha = new System.Windows.Forms.Label();
+            this.lbl_portada = new System.Windows.Forms.Label();
+            this.lbl_nombre = new System.Windows.Forms.Label();
+            this.lbl_agregar = new System.Windows.Forms.Label();
+            this.tbc_mantenimiento_cine = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label18 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_codigo_buscar = new System.Windows.Forms.Label();
+            this.dgv_buscar_pelicula = new System.Windows.Forms.DataGridView();
+            this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
+            this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_cerrarsesion = new System.Windows.Forms.Button();
+            this.txt_nombre1 = new System.Windows.Forms.TextBox();
+            this.cbo_horarioinicio = new System.Windows.Forms.ComboBox();
+            this.txt_trailer = new System.Windows.Forms.TextBox();
+            this.lbl_sala = new System.Windows.Forms.Label();
+            this.cbo_sala = new System.Windows.Forms.ComboBox();
+            this.lbl_idioma = new System.Windows.Forms.Label();
+            this.cbo_idioma = new System.Windows.Forms.ComboBox();
+            this.lbl_proyeccion = new System.Windows.Forms.Label();
+            this.cbo_proyeccion = new System.Windows.Forms.ComboBox();
+            this.lbl_clasificacion = new System.Windows.Forms.Label();
+            this.cbo_clasificacion = new System.Windows.Forms.ComboBox();
+            this.lbl_categoria = new System.Windows.Forms.Label();
+            this.cbo_categoria = new System.Windows.Forms.ComboBox();
+            this.lbl_cine = new System.Windows.Forms.Label();
+            this.cbo_cine = new System.Windows.Forms.ComboBox();
+            this.cbo_fecha = new System.Windows.Forms.ComboBox();
+            this.txt_descrip = new System.Windows.Forms.TextBox();
+            this.txt_mod_descrip = new System.Windows.Forms.TextBox();
+            this.cbo_mod_fecha = new System.Windows.Forms.ComboBox();
+            this.cbo_mod_cine = new System.Windows.Forms.ComboBox();
+            this.lbl_mod_cine = new System.Windows.Forms.Label();
+            this.cbo_mod_categoria = new System.Windows.Forms.ComboBox();
+            this.lbl_mod_categoria = new System.Windows.Forms.Label();
+            this.cbo_mod_clasificacion = new System.Windows.Forms.ComboBox();
+            this.lbl_mod_clasificacion = new System.Windows.Forms.Label();
+            this.cbo_mod_proyeccion = new System.Windows.Forms.ComboBox();
+            this.lbl_mod_proyeccion = new System.Windows.Forms.Label();
+            this.cbo_mod_idioma = new System.Windows.Forms.ComboBox();
+            this.lbl_mod_idioma = new System.Windows.Forms.Label();
+            this.cbo_mod_sala = new System.Windows.Forms.ComboBox();
+            this.lbl_mod_sala = new System.Windows.Forms.Label();
+            this.txt_mod_trailer = new System.Windows.Forms.TextBox();
+            this.cbo_mod_hora = new System.Windows.Forms.ComboBox();
+            this.txt_mod_nombre = new System.Windows.Forms.TextBox();
+            this.lbl_mod_trailer = new System.Windows.Forms.Label();
+            this.lbl_mod_descrip = new System.Windows.Forms.Label();
+            this.lbl_mod_hora = new System.Windows.Forms.Label();
+            this.lbl_mod_fecha = new System.Windows.Forms.Label();
+            this.lbl_mod_portada = new System.Windows.Forms.Label();
+            this.lbl_mod_nombre = new System.Windows.Forms.Label();
+            this.txt_buscar = new System.Windows.Forms.TextBox();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_borrar = new System.Windows.Forms.Button();
+            this.btn_extraer = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.dgv_modificar_pelicula = new System.Windows.Forms.DataGridView();
+            this.btn_portada = new System.Windows.Forms.Button();
+            this.btn_portada1 = new System.Windows.Forms.Button();
+            this.pic_mod_portada = new System.Windows.Forms.PictureBox();
+            this.pic_portada = new System.Windows.Forms.PictureBox();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tbc_mantenimiento_cine.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_portada)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
+            this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.label17);
+            this.tabPage2.Controls.Add(this.pic_mod_portada);
+            this.tabPage2.Controls.Add(this.btn_portada1);
+            this.tabPage2.Controls.Add(this.dgv_modificar_pelicula);
+            this.tabPage2.Controls.Add(this.btn_actualizar);
+            this.tabPage2.Controls.Add(this.btn_extraer);
+            this.tabPage2.Controls.Add(this.txt_mod_descrip);
+            this.tabPage2.Controls.Add(this.cbo_mod_fecha);
+            this.tabPage2.Controls.Add(this.cbo_mod_cine);
+            this.tabPage2.Controls.Add(this.lbl_mod_cine);
+            this.tabPage2.Controls.Add(this.cbo_mod_categoria);
+            this.tabPage2.Controls.Add(this.lbl_mod_categoria);
+            this.tabPage2.Controls.Add(this.cbo_mod_clasificacion);
+            this.tabPage2.Controls.Add(this.lbl_mod_clasificacion);
+            this.tabPage2.Controls.Add(this.cbo_mod_proyeccion);
+            this.tabPage2.Controls.Add(this.lbl_mod_proyeccion);
+            this.tabPage2.Controls.Add(this.cbo_mod_idioma);
+            this.tabPage2.Controls.Add(this.lbl_mod_idioma);
+            this.tabPage2.Controls.Add(this.cbo_mod_sala);
+            this.tabPage2.Controls.Add(this.lbl_mod_sala);
+            this.tabPage2.Controls.Add(this.txt_mod_trailer);
+            this.tabPage2.Controls.Add(this.cbo_mod_hora);
+            this.tabPage2.Controls.Add(this.txt_mod_nombre);
+            this.tabPage2.Controls.Add(this.lbl_mod_trailer);
+            this.tabPage2.Controls.Add(this.lbl_mod_descrip);
+            this.tabPage2.Controls.Add(this.lbl_mod_hora);
+            this.tabPage2.Controls.Add(this.lbl_mod_fecha);
+            this.tabPage2.Controls.Add(this.lbl_mod_portada);
+            this.tabPage2.Controls.Add(this.lbl_mod_nombre);
+            this.tabPage2.Controls.Add(this.lbl_mod);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -82,202 +149,144 @@
             this.tabPage2.Text = "Modificar Película";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
-            // label10
+            // lbl_mod
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 189);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 16);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Descripción:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 161);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(143, 16);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Horario de finalización :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 135);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 16);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Horario de inicio :";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(15, 109);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(135, 16);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Fecha de finalización :";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(15, 84);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 16);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Fecha de inicio :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(513, 59);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(123, 16);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Portada de pelicula:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(15, 59);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 16);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "Nombre:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Rockwell", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(255, 3);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(350, 36);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "MODIFICAR PELÍCULA";
+            this.lbl_mod.AutoSize = true;
+            this.lbl_mod.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod.Location = new System.Drawing.Point(255, 3);
+            this.lbl_mod.Name = "lbl_mod";
+            this.lbl_mod.Size = new System.Drawing.Size(324, 36);
+            this.lbl_mod.TabIndex = 17;
+            this.lbl_mod.Text = "MODIFICAR PELÍCULA";
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.pic_portada);
+            this.tabPage1.Controls.Add(this.btn_portada);
+            this.tabPage1.Controls.Add(this.btn_guardar);
+            this.tabPage1.Controls.Add(this.txt_descrip);
+            this.tabPage1.Controls.Add(this.cbo_fecha);
+            this.tabPage1.Controls.Add(this.cbo_cine);
+            this.tabPage1.Controls.Add(this.lbl_cine);
+            this.tabPage1.Controls.Add(this.cbo_categoria);
+            this.tabPage1.Controls.Add(this.lbl_categoria);
+            this.tabPage1.Controls.Add(this.cbo_clasificacion);
+            this.tabPage1.Controls.Add(this.lbl_clasificacion);
+            this.tabPage1.Controls.Add(this.cbo_proyeccion);
+            this.tabPage1.Controls.Add(this.lbl_proyeccion);
+            this.tabPage1.Controls.Add(this.cbo_idioma);
+            this.tabPage1.Controls.Add(this.lbl_idioma);
+            this.tabPage1.Controls.Add(this.cbo_sala);
+            this.tabPage1.Controls.Add(this.lbl_sala);
+            this.tabPage1.Controls.Add(this.txt_trailer);
+            this.tabPage1.Controls.Add(this.cbo_horarioinicio);
+            this.tabPage1.Controls.Add(this.txt_nombre1);
+            this.tabPage1.Controls.Add(this.lbl_trailer);
+            this.tabPage1.Controls.Add(this.lbl_descrip);
+            this.tabPage1.Controls.Add(this.lbl_hora);
+            this.tabPage1.Controls.Add(this.lbl_fecha);
+            this.tabPage1.Controls.Add(this.lbl_portada);
+            this.tabPage1.Controls.Add(this.lbl_nombre);
+            this.tabPage1.Controls.Add(this.lbl_agregar);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(868, 384);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Agregar Película";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // label3
+            // lbl_trailer
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 16);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Descripción:";
+            this.lbl_trailer.AutoSize = true;
+            this.lbl_trailer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_trailer.Location = new System.Drawing.Point(6, 98);
+            this.lbl_trailer.Name = "lbl_trailer";
+            this.lbl_trailer.Size = new System.Drawing.Size(81, 21);
+            this.lbl_trailer.TabIndex = 32;
+            this.lbl_trailer.Text = "Url trailer:";
             // 
-            // label4
+            // lbl_descrip
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 16);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Horario de finalización :";
+            this.lbl_descrip.AutoSize = true;
+            this.lbl_descrip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_descrip.Location = new System.Drawing.Point(389, 128);
+            this.lbl_descrip.Name = "lbl_descrip";
+            this.lbl_descrip.Size = new System.Drawing.Size(104, 21);
+            this.lbl_descrip.TabIndex = 31;
+            this.lbl_descrip.Text = "Descripción:";
             // 
-            // label5
+            // lbl_hora
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 172);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 16);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Horario de inicio :";
+            this.lbl_hora.AutoSize = true;
+            this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Location = new System.Drawing.Point(6, 71);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(141, 21);
+            this.lbl_hora.TabIndex = 29;
+            this.lbl_hora.Text = "Horario de inicio :";
             // 
-            // label6
+            // lbl_fecha
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 146);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 16);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Fecha de finalización :";
+            this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha.Location = new System.Drawing.Point(389, 99);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.Size = new System.Drawing.Size(71, 21);
+            this.lbl_fecha.TabIndex = 28;
+            this.lbl_fecha.Text = "Fecha  :";
             // 
-            // label7
+            // lbl_portada
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 121);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 16);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Fecha de inicio :";
+            this.lbl_portada.AutoSize = true;
+            this.lbl_portada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_portada.Location = new System.Drawing.Point(676, 46);
+            this.lbl_portada.Name = "lbl_portada";
+            this.lbl_portada.Size = new System.Drawing.Size(168, 21);
+            this.lbl_portada.TabIndex = 26;
+            this.lbl_portada.Text = "Portada de pelicula:";
+            this.lbl_portada.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label8
+            // lbl_nombre
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(504, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 16);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Portada de pelicula:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.lbl_nombre.AutoSize = true;
+            this.lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre.Location = new System.Drawing.Point(6, 46);
+            this.lbl_nombre.Name = "lbl_nombre";
+            this.lbl_nombre.Size = new System.Drawing.Size(77, 21);
+            this.lbl_nombre.TabIndex = 25;
+            this.lbl_nombre.Text = "Nombre:";
             // 
-            // label9
+            // lbl_agregar
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 16);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Nombre:";
+            this.lbl_agregar.AutoSize = true;
+            this.lbl_agregar.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_agregar.Location = new System.Drawing.Point(280, 3);
+            this.lbl_agregar.Name = "lbl_agregar";
+            this.lbl_agregar.Size = new System.Drawing.Size(299, 36);
+            this.lbl_agregar.TabIndex = 9;
+            this.lbl_agregar.Text = "AGREGAR PELÍCULA";
             // 
-            // label2
+            // tbc_mantenimiento_cine
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(280, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 36);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "AGREGAR PELÍCULA";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 93);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(876, 410);
-            this.tabControl1.TabIndex = 0;
+            this.tbc_mantenimiento_cine.Controls.Add(this.tabPage1);
+            this.tbc_mantenimiento_cine.Controls.Add(this.tabPage2);
+            this.tbc_mantenimiento_cine.Controls.Add(this.tabPage3);
+            this.tbc_mantenimiento_cine.Location = new System.Drawing.Point(12, 93);
+            this.tbc_mantenimiento_cine.Name = "tbc_mantenimiento_cine";
+            this.tbc_mantenimiento_cine.SelectedIndex = 0;
+            this.tbc_mantenimiento_cine.Size = new System.Drawing.Size(876, 410);
+            this.tbc_mantenimiento_cine.TabIndex = 0;
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage3.Controls.Add(this.label18);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.btn_borrar);
+            this.tabPage3.Controls.Add(this.btn_buscar);
+            this.tabPage3.Controls.Add(this.txt_buscar);
+            this.tabPage3.Controls.Add(this.lbl_codigo_buscar);
+            this.tabPage3.Controls.Add(this.dgv_buscar_pelicula);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -285,33 +294,33 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Borrar Película";
             // 
-            // label18
+            // lbl_codigo_buscar
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(79, 65);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(116, 16);
-            this.label18.TabIndex = 19;
-            this.label18.Text = "Codigo Busqueda:";
+            this.lbl_codigo_buscar.AutoSize = true;
+            this.lbl_codigo_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigo_buscar.Location = new System.Drawing.Point(57, 65);
+            this.lbl_codigo_buscar.Name = "lbl_codigo_buscar";
+            this.lbl_codigo_buscar.Size = new System.Drawing.Size(154, 21);
+            this.lbl_codigo_buscar.TabIndex = 19;
+            this.lbl_codigo_buscar.Text = "Codigo Busqueda:";
             // 
-            // dataGridView1
+            // dgv_buscar_pelicula
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 138);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(825, 228);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_buscar_pelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_buscar_pelicula.Location = new System.Drawing.Point(16, 138);
+            this.dgv_buscar_pelicula.Name = "dgv_buscar_pelicula";
+            this.dgv_buscar_pelicula.Size = new System.Drawing.Size(825, 228);
+            this.dgv_buscar_pelicula.TabIndex = 0;
             // 
-            // label1
+            // lbl_titulo_mantenimiento_cine
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(647, 54);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "MANTENIMIENTO DE CINE ";
+            this.lbl_titulo_mantenimiento_cine.AutoSize = true;
+            this.lbl_titulo_mantenimiento_cine.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(269, 9);
+            this.lbl_titulo_mantenimiento_cine.Name = "lbl_titulo_mantenimiento_cine";
+            this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(387, 36);
+            this.lbl_titulo_mantenimiento_cine.TabIndex = 1;
+            this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE CINE ";
             // 
             // pictureBox1
             // 
@@ -324,37 +333,476 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // btn_regresar
             // 
-            this.button2.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button2.Location = new System.Drawing.Point(12, 41);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Regresar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_regresar.Location = new System.Drawing.Point(12, 41);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(94, 23);
+            this.btn_regresar.TabIndex = 9;
+            this.btn_regresar.Text = "Regresar";
+            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btn_cerrarsesion
             // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Cerrar Sesión";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_cerrarsesion.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_cerrarsesion.Location = new System.Drawing.Point(12, 12);
+            this.btn_cerrarsesion.Name = "btn_cerrarsesion";
+            this.btn_cerrarsesion.Size = new System.Drawing.Size(94, 23);
+            this.btn_cerrarsesion.TabIndex = 2;
+            this.btn_cerrarsesion.Text = "Cerrar Sesión";
+            this.btn_cerrarsesion.UseVisualStyleBackColor = true;
+            this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label19
+            // txt_nombre1
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(6, 253);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(66, 16);
-            this.label19.TabIndex = 32;
-            this.label19.Text = "Url trailer:";
+            this.txt_nombre1.Location = new System.Drawing.Point(199, 46);
+            this.txt_nombre1.Name = "txt_nombre1";
+            this.txt_nombre1.Size = new System.Drawing.Size(151, 20);
+            this.txt_nombre1.TabIndex = 33;
+            // 
+            // cbo_horarioinicio
+            // 
+            this.cbo_horarioinicio.FormattingEnabled = true;
+            this.cbo_horarioinicio.Location = new System.Drawing.Point(199, 72);
+            this.cbo_horarioinicio.Name = "cbo_horarioinicio";
+            this.cbo_horarioinicio.Size = new System.Drawing.Size(151, 21);
+            this.cbo_horarioinicio.TabIndex = 36;
+            // 
+            // txt_trailer
+            // 
+            this.txt_trailer.Location = new System.Drawing.Point(199, 99);
+            this.txt_trailer.Name = "txt_trailer";
+            this.txt_trailer.Size = new System.Drawing.Size(151, 20);
+            this.txt_trailer.TabIndex = 37;
+            // 
+            // lbl_sala
+            // 
+            this.lbl_sala.AutoSize = true;
+            this.lbl_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sala.Location = new System.Drawing.Point(6, 128);
+            this.lbl_sala.Name = "lbl_sala";
+            this.lbl_sala.Size = new System.Drawing.Size(47, 21);
+            this.lbl_sala.TabIndex = 38;
+            this.lbl_sala.Text = "Sala:";
+            // 
+            // cbo_sala
+            // 
+            this.cbo_sala.FormattingEnabled = true;
+            this.cbo_sala.Location = new System.Drawing.Point(199, 128);
+            this.cbo_sala.Name = "cbo_sala";
+            this.cbo_sala.Size = new System.Drawing.Size(151, 21);
+            this.cbo_sala.TabIndex = 39;
+            // 
+            // lbl_idioma
+            // 
+            this.lbl_idioma.AutoSize = true;
+            this.lbl_idioma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_idioma.Location = new System.Drawing.Point(6, 153);
+            this.lbl_idioma.Name = "lbl_idioma";
+            this.lbl_idioma.Size = new System.Drawing.Size(69, 21);
+            this.lbl_idioma.TabIndex = 40;
+            this.lbl_idioma.Text = "Idioma:";
+            // 
+            // cbo_idioma
+            // 
+            this.cbo_idioma.FormattingEnabled = true;
+            this.cbo_idioma.Location = new System.Drawing.Point(199, 155);
+            this.cbo_idioma.Name = "cbo_idioma";
+            this.cbo_idioma.Size = new System.Drawing.Size(151, 21);
+            this.cbo_idioma.TabIndex = 41;
+            // 
+            // lbl_proyeccion
+            // 
+            this.lbl_proyeccion.AutoSize = true;
+            this.lbl_proyeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_proyeccion.Location = new System.Drawing.Point(6, 183);
+            this.lbl_proyeccion.Name = "lbl_proyeccion";
+            this.lbl_proyeccion.Size = new System.Drawing.Size(99, 21);
+            this.lbl_proyeccion.TabIndex = 42;
+            this.lbl_proyeccion.Text = "Proyección:";
+            // 
+            // cbo_proyeccion
+            // 
+            this.cbo_proyeccion.FormattingEnabled = true;
+            this.cbo_proyeccion.Location = new System.Drawing.Point(199, 182);
+            this.cbo_proyeccion.Name = "cbo_proyeccion";
+            this.cbo_proyeccion.Size = new System.Drawing.Size(151, 21);
+            this.cbo_proyeccion.TabIndex = 43;
+            // 
+            // lbl_clasificacion
+            // 
+            this.lbl_clasificacion.AutoSize = true;
+            this.lbl_clasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_clasificacion.Location = new System.Drawing.Point(6, 213);
+            this.lbl_clasificacion.Name = "lbl_clasificacion";
+            this.lbl_clasificacion.Size = new System.Drawing.Size(112, 21);
+            this.lbl_clasificacion.TabIndex = 44;
+            this.lbl_clasificacion.Text = "Clasificación:";
+            // 
+            // cbo_clasificacion
+            // 
+            this.cbo_clasificacion.FormattingEnabled = true;
+            this.cbo_clasificacion.Location = new System.Drawing.Point(199, 209);
+            this.cbo_clasificacion.Name = "cbo_clasificacion";
+            this.cbo_clasificacion.Size = new System.Drawing.Size(151, 21);
+            this.cbo_clasificacion.TabIndex = 45;
+            // 
+            // lbl_categoria
+            // 
+            this.lbl_categoria.AutoSize = true;
+            this.lbl_categoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_categoria.Location = new System.Drawing.Point(389, 46);
+            this.lbl_categoria.Name = "lbl_categoria";
+            this.lbl_categoria.Size = new System.Drawing.Size(95, 21);
+            this.lbl_categoria.TabIndex = 46;
+            this.lbl_categoria.Text = "Categoria:";
+            // 
+            // cbo_categoria
+            // 
+            this.cbo_categoria.FormattingEnabled = true;
+            this.cbo_categoria.Location = new System.Drawing.Point(490, 45);
+            this.cbo_categoria.Name = "cbo_categoria";
+            this.cbo_categoria.Size = new System.Drawing.Size(151, 21);
+            this.cbo_categoria.TabIndex = 47;
+            // 
+            // lbl_cine
+            // 
+            this.lbl_cine.AutoSize = true;
+            this.lbl_cine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cine.Location = new System.Drawing.Point(389, 71);
+            this.lbl_cine.Name = "lbl_cine";
+            this.lbl_cine.Size = new System.Drawing.Size(50, 21);
+            this.lbl_cine.TabIndex = 48;
+            this.lbl_cine.Text = "Cine:";
+            // 
+            // cbo_cine
+            // 
+            this.cbo_cine.FormattingEnabled = true;
+            this.cbo_cine.Location = new System.Drawing.Point(489, 71);
+            this.cbo_cine.Name = "cbo_cine";
+            this.cbo_cine.Size = new System.Drawing.Size(151, 21);
+            this.cbo_cine.TabIndex = 49;
+            // 
+            // cbo_fecha
+            // 
+            this.cbo_fecha.FormattingEnabled = true;
+            this.cbo_fecha.Location = new System.Drawing.Point(489, 99);
+            this.cbo_fecha.Name = "cbo_fecha";
+            this.cbo_fecha.Size = new System.Drawing.Size(151, 21);
+            this.cbo_fecha.TabIndex = 50;
+            // 
+            // txt_descrip
+            // 
+            this.txt_descrip.Location = new System.Drawing.Point(490, 131);
+            this.txt_descrip.Multiline = true;
+            this.txt_descrip.Name = "txt_descrip";
+            this.txt_descrip.Size = new System.Drawing.Size(151, 99);
+            this.txt_descrip.TabIndex = 51;
+            // 
+            // txt_mod_descrip
+            // 
+            this.txt_mod_descrip.Location = new System.Drawing.Point(499, 137);
+            this.txt_mod_descrip.Multiline = true;
+            this.txt_mod_descrip.Name = "txt_mod_descrip";
+            this.txt_mod_descrip.Size = new System.Drawing.Size(151, 103);
+            this.txt_mod_descrip.TabIndex = 74;
+            // 
+            // cbo_mod_fecha
+            // 
+            this.cbo_mod_fecha.FormattingEnabled = true;
+            this.cbo_mod_fecha.Location = new System.Drawing.Point(498, 105);
+            this.cbo_mod_fecha.Name = "cbo_mod_fecha";
+            this.cbo_mod_fecha.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_fecha.TabIndex = 73;
+            // 
+            // cbo_mod_cine
+            // 
+            this.cbo_mod_cine.FormattingEnabled = true;
+            this.cbo_mod_cine.Location = new System.Drawing.Point(498, 77);
+            this.cbo_mod_cine.Name = "cbo_mod_cine";
+            this.cbo_mod_cine.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_cine.TabIndex = 72;
+            // 
+            // lbl_mod_cine
+            // 
+            this.lbl_mod_cine.AutoSize = true;
+            this.lbl_mod_cine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_cine.Location = new System.Drawing.Point(398, 77);
+            this.lbl_mod_cine.Name = "lbl_mod_cine";
+            this.lbl_mod_cine.Size = new System.Drawing.Size(50, 21);
+            this.lbl_mod_cine.TabIndex = 71;
+            this.lbl_mod_cine.Text = "Cine:";
+            // 
+            // cbo_mod_categoria
+            // 
+            this.cbo_mod_categoria.FormattingEnabled = true;
+            this.cbo_mod_categoria.Location = new System.Drawing.Point(499, 51);
+            this.cbo_mod_categoria.Name = "cbo_mod_categoria";
+            this.cbo_mod_categoria.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_categoria.TabIndex = 70;
+            // 
+            // lbl_mod_categoria
+            // 
+            this.lbl_mod_categoria.AutoSize = true;
+            this.lbl_mod_categoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_categoria.Location = new System.Drawing.Point(398, 52);
+            this.lbl_mod_categoria.Name = "lbl_mod_categoria";
+            this.lbl_mod_categoria.Size = new System.Drawing.Size(95, 21);
+            this.lbl_mod_categoria.TabIndex = 69;
+            this.lbl_mod_categoria.Text = "Categoria:";
+            // 
+            // cbo_mod_clasificacion
+            // 
+            this.cbo_mod_clasificacion.FormattingEnabled = true;
+            this.cbo_mod_clasificacion.Location = new System.Drawing.Point(208, 215);
+            this.cbo_mod_clasificacion.Name = "cbo_mod_clasificacion";
+            this.cbo_mod_clasificacion.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_clasificacion.TabIndex = 68;
+            // 
+            // lbl_mod_clasificacion
+            // 
+            this.lbl_mod_clasificacion.AutoSize = true;
+            this.lbl_mod_clasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_clasificacion.Location = new System.Drawing.Point(15, 219);
+            this.lbl_mod_clasificacion.Name = "lbl_mod_clasificacion";
+            this.lbl_mod_clasificacion.Size = new System.Drawing.Size(112, 21);
+            this.lbl_mod_clasificacion.TabIndex = 67;
+            this.lbl_mod_clasificacion.Text = "Clasificación:";
+            // 
+            // cbo_mod_proyeccion
+            // 
+            this.cbo_mod_proyeccion.FormattingEnabled = true;
+            this.cbo_mod_proyeccion.Location = new System.Drawing.Point(208, 188);
+            this.cbo_mod_proyeccion.Name = "cbo_mod_proyeccion";
+            this.cbo_mod_proyeccion.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_proyeccion.TabIndex = 66;
+            // 
+            // lbl_mod_proyeccion
+            // 
+            this.lbl_mod_proyeccion.AutoSize = true;
+            this.lbl_mod_proyeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_proyeccion.Location = new System.Drawing.Point(15, 189);
+            this.lbl_mod_proyeccion.Name = "lbl_mod_proyeccion";
+            this.lbl_mod_proyeccion.Size = new System.Drawing.Size(99, 21);
+            this.lbl_mod_proyeccion.TabIndex = 65;
+            this.lbl_mod_proyeccion.Text = "Proyección:";
+            // 
+            // cbo_mod_idioma
+            // 
+            this.cbo_mod_idioma.FormattingEnabled = true;
+            this.cbo_mod_idioma.Location = new System.Drawing.Point(208, 161);
+            this.cbo_mod_idioma.Name = "cbo_mod_idioma";
+            this.cbo_mod_idioma.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_idioma.TabIndex = 64;
+            // 
+            // lbl_mod_idioma
+            // 
+            this.lbl_mod_idioma.AutoSize = true;
+            this.lbl_mod_idioma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_idioma.Location = new System.Drawing.Point(15, 159);
+            this.lbl_mod_idioma.Name = "lbl_mod_idioma";
+            this.lbl_mod_idioma.Size = new System.Drawing.Size(69, 21);
+            this.lbl_mod_idioma.TabIndex = 63;
+            this.lbl_mod_idioma.Text = "Idioma:";
+            // 
+            // cbo_mod_sala
+            // 
+            this.cbo_mod_sala.FormattingEnabled = true;
+            this.cbo_mod_sala.Location = new System.Drawing.Point(208, 134);
+            this.cbo_mod_sala.Name = "cbo_mod_sala";
+            this.cbo_mod_sala.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_sala.TabIndex = 62;
+            // 
+            // lbl_mod_sala
+            // 
+            this.lbl_mod_sala.AutoSize = true;
+            this.lbl_mod_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_sala.Location = new System.Drawing.Point(15, 134);
+            this.lbl_mod_sala.Name = "lbl_mod_sala";
+            this.lbl_mod_sala.Size = new System.Drawing.Size(47, 21);
+            this.lbl_mod_sala.TabIndex = 61;
+            this.lbl_mod_sala.Text = "Sala:";
+            // 
+            // txt_mod_trailer
+            // 
+            this.txt_mod_trailer.Location = new System.Drawing.Point(208, 105);
+            this.txt_mod_trailer.Name = "txt_mod_trailer";
+            this.txt_mod_trailer.Size = new System.Drawing.Size(151, 20);
+            this.txt_mod_trailer.TabIndex = 60;
+            // 
+            // cbo_mod_hora
+            // 
+            this.cbo_mod_hora.FormattingEnabled = true;
+            this.cbo_mod_hora.Location = new System.Drawing.Point(208, 78);
+            this.cbo_mod_hora.Name = "cbo_mod_hora";
+            this.cbo_mod_hora.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_hora.TabIndex = 59;
+            // 
+            // txt_mod_nombre
+            // 
+            this.txt_mod_nombre.Location = new System.Drawing.Point(208, 52);
+            this.txt_mod_nombre.Name = "txt_mod_nombre";
+            this.txt_mod_nombre.Size = new System.Drawing.Size(151, 20);
+            this.txt_mod_nombre.TabIndex = 58;
+            // 
+            // lbl_mod_trailer
+            // 
+            this.lbl_mod_trailer.AutoSize = true;
+            this.lbl_mod_trailer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_trailer.Location = new System.Drawing.Point(15, 104);
+            this.lbl_mod_trailer.Name = "lbl_mod_trailer";
+            this.lbl_mod_trailer.Size = new System.Drawing.Size(81, 21);
+            this.lbl_mod_trailer.TabIndex = 57;
+            this.lbl_mod_trailer.Text = "Url trailer:";
+            // 
+            // lbl_mod_descrip
+            // 
+            this.lbl_mod_descrip.AutoSize = true;
+            this.lbl_mod_descrip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_descrip.Location = new System.Drawing.Point(398, 134);
+            this.lbl_mod_descrip.Name = "lbl_mod_descrip";
+            this.lbl_mod_descrip.Size = new System.Drawing.Size(104, 21);
+            this.lbl_mod_descrip.TabIndex = 56;
+            this.lbl_mod_descrip.Text = "Descripción:";
+            // 
+            // lbl_mod_hora
+            // 
+            this.lbl_mod_hora.AutoSize = true;
+            this.lbl_mod_hora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_hora.Location = new System.Drawing.Point(15, 77);
+            this.lbl_mod_hora.Name = "lbl_mod_hora";
+            this.lbl_mod_hora.Size = new System.Drawing.Size(141, 21);
+            this.lbl_mod_hora.TabIndex = 55;
+            this.lbl_mod_hora.Text = "Horario de inicio :";
+            // 
+            // lbl_mod_fecha
+            // 
+            this.lbl_mod_fecha.AutoSize = true;
+            this.lbl_mod_fecha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_fecha.Location = new System.Drawing.Point(398, 105);
+            this.lbl_mod_fecha.Name = "lbl_mod_fecha";
+            this.lbl_mod_fecha.Size = new System.Drawing.Size(71, 21);
+            this.lbl_mod_fecha.TabIndex = 54;
+            this.lbl_mod_fecha.Text = "Fecha  :";
+            // 
+            // lbl_mod_portada
+            // 
+            this.lbl_mod_portada.AutoSize = true;
+            this.lbl_mod_portada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_portada.Location = new System.Drawing.Point(679, 52);
+            this.lbl_mod_portada.Name = "lbl_mod_portada";
+            this.lbl_mod_portada.Size = new System.Drawing.Size(164, 21);
+            this.lbl_mod_portada.TabIndex = 53;
+            this.lbl_mod_portada.Text = "Portada de pelicula";
+            // 
+            // lbl_mod_nombre
+            // 
+            this.lbl_mod_nombre.AutoSize = true;
+            this.lbl_mod_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod_nombre.Location = new System.Drawing.Point(15, 52);
+            this.lbl_mod_nombre.Name = "lbl_mod_nombre";
+            this.lbl_mod_nombre.Size = new System.Drawing.Size(77, 21);
+            this.lbl_mod_nombre.TabIndex = 52;
+            this.lbl_mod_nombre.Text = "Nombre:";
+            // 
+            // txt_buscar
+            // 
+            this.txt_buscar.Location = new System.Drawing.Point(227, 66);
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(276, 20);
+            this.txt_buscar.TabIndex = 20;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Location = new System.Drawing.Point(546, 66);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.TabIndex = 21;
+            this.btn_buscar.Text = "buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            // 
+            // btn_borrar
+            // 
+            this.btn_borrar.Location = new System.Drawing.Point(651, 66);
+            this.btn_borrar.Name = "btn_borrar";
+            this.btn_borrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar.TabIndex = 22;
+            this.btn_borrar.Text = "borrar";
+            this.btn_borrar.UseVisualStyleBackColor = true;
+            // 
+            // btn_extraer
+            // 
+            this.btn_extraer.Location = new System.Drawing.Point(158, 258);
+            this.btn_extraer.Name = "btn_extraer";
+            this.btn_extraer.Size = new System.Drawing.Size(75, 23);
+            this.btn_extraer.TabIndex = 75;
+            this.btn_extraer.Text = "extraer";
+            this.btn_extraer.UseVisualStyleBackColor = true;
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.Location = new System.Drawing.Point(479, 258);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(75, 23);
+            this.btn_actualizar.TabIndex = 76;
+            this.btn_actualizar.Text = "actualizar";
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.Location = new System.Drawing.Point(199, 255);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(75, 23);
+            this.btn_guardar.TabIndex = 52;
+            this.btn_guardar.Text = "guardar";
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            // 
+            // dgv_modificar_pelicula
+            // 
+            this.dgv_modificar_pelicula.AllowUserToAddRows = false;
+            this.dgv_modificar_pelicula.AllowUserToDeleteRows = false;
+            this.dgv_modificar_pelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_modificar_pelicula.Location = new System.Drawing.Point(19, 329);
+            this.dgv_modificar_pelicula.Name = "dgv_modificar_pelicula";
+            this.dgv_modificar_pelicula.ReadOnly = true;
+            this.dgv_modificar_pelicula.Size = new System.Drawing.Size(812, 150);
+            this.dgv_modificar_pelicula.TabIndex = 77;
+            // 
+            // btn_portada
+            // 
+            this.btn_portada.Location = new System.Drawing.Point(723, 255);
+            this.btn_portada.Name = "btn_portada";
+            this.btn_portada.Size = new System.Drawing.Size(75, 23);
+            this.btn_portada.TabIndex = 53;
+            this.btn_portada.Text = "portada";
+            this.btn_portada.UseVisualStyleBackColor = true;
+            // 
+            // btn_portada1
+            // 
+            this.btn_portada1.Location = new System.Drawing.Point(732, 258);
+            this.btn_portada1.Name = "btn_portada1";
+            this.btn_portada1.Size = new System.Drawing.Size(75, 23);
+            this.btn_portada1.TabIndex = 78;
+            this.btn_portada1.Text = "portada";
+            this.btn_portada1.UseVisualStyleBackColor = true;
+            // 
+            // pic_mod_portada
+            // 
+            this.pic_mod_portada.Location = new System.Drawing.Point(695, 78);
+            this.pic_mod_portada.Name = "pic_mod_portada";
+            this.pic_mod_portada.Size = new System.Drawing.Size(136, 158);
+            this.pic_mod_portada.TabIndex = 79;
+            this.pic_mod_portada.TabStop = false;
+            // 
+            // pic_portada
+            // 
+            this.pic_portada.Location = new System.Drawing.Point(695, 76);
+            this.pic_portada.Name = "pic_portada";
+            this.pic_portada.Size = new System.Drawing.Size(136, 158);
+            this.pic_portada.TabIndex = 80;
+            this.pic_portada.TabStop = false;
             // 
             // mantenimiento
             // 
@@ -363,21 +811,24 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(900, 515);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btn_regresar);
+            this.Controls.Add(this.btn_cerrarsesion);
+            this.Controls.Add(this.lbl_titulo_mantenimiento_cine);
+            this.Controls.Add(this.tbc_mantenimiento_cine);
             this.Name = "mantenimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tbc_mantenimiento_cine.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_portada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,30 +838,72 @@
 
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabControl tbc_mantenimiento_cine;
+        private System.Windows.Forms.Label lbl_titulo_mantenimiento_cine;
+        private System.Windows.Forms.Label lbl_agregar;
+        private System.Windows.Forms.Label lbl_mod;
+        private System.Windows.Forms.Label lbl_descrip;
+        private System.Windows.Forms.Label lbl_hora;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Label lbl_portada;
+        private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dgv_buscar_pelicula;
+        private System.Windows.Forms.Label lbl_codigo_buscar;
+        private System.Windows.Forms.Button btn_cerrarsesion;
+        private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lbl_trailer;
+        private System.Windows.Forms.ComboBox cbo_fecha;
+        private System.Windows.Forms.ComboBox cbo_cine;
+        private System.Windows.Forms.Label lbl_cine;
+        private System.Windows.Forms.ComboBox cbo_categoria;
+        private System.Windows.Forms.Label lbl_categoria;
+        private System.Windows.Forms.ComboBox cbo_clasificacion;
+        private System.Windows.Forms.Label lbl_clasificacion;
+        private System.Windows.Forms.ComboBox cbo_proyeccion;
+        private System.Windows.Forms.Label lbl_proyeccion;
+        private System.Windows.Forms.ComboBox cbo_idioma;
+        private System.Windows.Forms.Label lbl_idioma;
+        private System.Windows.Forms.ComboBox cbo_sala;
+        private System.Windows.Forms.Label lbl_sala;
+        private System.Windows.Forms.TextBox txt_trailer;
+        private System.Windows.Forms.ComboBox cbo_horarioinicio;
+        private System.Windows.Forms.TextBox txt_nombre1;
+        private System.Windows.Forms.TextBox txt_descrip;
+        private System.Windows.Forms.TextBox txt_mod_descrip;
+        private System.Windows.Forms.ComboBox cbo_mod_fecha;
+        private System.Windows.Forms.ComboBox cbo_mod_cine;
+        private System.Windows.Forms.Label lbl_mod_cine;
+        private System.Windows.Forms.ComboBox cbo_mod_categoria;
+        private System.Windows.Forms.Label lbl_mod_categoria;
+        private System.Windows.Forms.ComboBox cbo_mod_clasificacion;
+        private System.Windows.Forms.Label lbl_mod_clasificacion;
+        private System.Windows.Forms.ComboBox cbo_mod_proyeccion;
+        private System.Windows.Forms.Label lbl_mod_proyeccion;
+        private System.Windows.Forms.ComboBox cbo_mod_idioma;
+        private System.Windows.Forms.Label lbl_mod_idioma;
+        private System.Windows.Forms.ComboBox cbo_mod_sala;
+        private System.Windows.Forms.Label lbl_mod_sala;
+        private System.Windows.Forms.TextBox txt_mod_trailer;
+        private System.Windows.Forms.ComboBox cbo_mod_hora;
+        private System.Windows.Forms.TextBox txt_mod_nombre;
+        private System.Windows.Forms.Label lbl_mod_trailer;
+        private System.Windows.Forms.Label lbl_mod_descrip;
+        private System.Windows.Forms.Label lbl_mod_hora;
+        private System.Windows.Forms.Label lbl_mod_fecha;
+        private System.Windows.Forms.Label lbl_mod_portada;
+        private System.Windows.Forms.Label lbl_mod_nombre;
+        private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Button btn_extraer;
+        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btn_borrar;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.TextBox txt_buscar;
+        private System.Windows.Forms.DataGridView dgv_modificar_pelicula;
+        private System.Windows.Forms.Button btn_portada1;
+        private System.Windows.Forms.Button btn_portada;
+        private System.Windows.Forms.PictureBox pic_mod_portada;
+        private System.Windows.Forms.PictureBox pic_portada;
     }
 }

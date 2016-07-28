@@ -30,3 +30,4 @@ C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe.config
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.exe
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.pdb
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
