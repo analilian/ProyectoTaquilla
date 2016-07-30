@@ -28,110 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lbl_selecciondeventana = new System.Windows.Forms.Label();
+            this.btn_usuario = new System.Windows.Forms.Button();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.btn_cerrarsesion = new System.Windows.Forms.Button();
+            this.btn_reportes = new System.Windows.Forms.Button();
+            this.btn_mantenimientocine = new System.Windows.Forms.Button();
+            this.btn_ayuda = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_selecciondeventana
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(141, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(624, 54);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "SELECCIÓN DE VENTANA ";
+            this.lbl_selecciondeventana.AutoSize = true;
+            this.lbl_selecciondeventana.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_selecciondeventana.Location = new System.Drawing.Point(141, 9);
+            this.lbl_selecciondeventana.Name = "lbl_selecciondeventana";
+            this.lbl_selecciondeventana.Size = new System.Drawing.Size(624, 54);
+            this.lbl_selecciondeventana.TabIndex = 2;
+            this.lbl_selecciondeventana.Text = "SELECCIÓN DE VENTANA ";
             // 
-            // button6
+            // btn_usuario
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImage = global::cinepolis.Properties.Resources.usuario_2;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(892, 329);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(30, 30);
-            this.button6.TabIndex = 12;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btn_usuario.BackColor = System.Drawing.Color.Transparent;
+            this.btn_usuario.BackgroundImage = global::cinepolis.Properties.Resources.usuario_2;
+            this.btn_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_usuario.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_usuario.Location = new System.Drawing.Point(892, 329);
+            this.btn_usuario.Name = "btn_usuario";
+            this.btn_usuario.Size = new System.Drawing.Size(30, 30);
+            this.btn_usuario.TabIndex = 12;
+            this.btn_usuario.UseVisualStyleBackColor = false;
+            this.btn_usuario.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // pic_logo
             // 
-            this.button5.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button5.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(638, 106);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(257, 146);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "GESTIÓN DE ASPECTOS DE PELÍCULA";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.pic_logo.BackgroundImage = global::cinepolis.Properties.Resources._13672487_10208834486171149_1624040466_n;
+            this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_logo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pic_logo.Location = new System.Drawing.Point(817, 9);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(94, 72);
+            this.pic_logo.TabIndex = 10;
+            this.pic_logo.TabStop = false;
             // 
-            // pictureBox1
+            // btn_cerrarsesion
             // 
-            this.pictureBox1.BackgroundImage = global::cinepolis.Properties.Resources._13672487_10208834486171149_1624040466_n;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(817, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 72);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.btn_cerrarsesion.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_cerrarsesion.Location = new System.Drawing.Point(12, 12);
+            this.btn_cerrarsesion.Name = "btn_cerrarsesion";
+            this.btn_cerrarsesion.Size = new System.Drawing.Size(94, 23);
+            this.btn_cerrarsesion.TabIndex = 6;
+            this.btn_cerrarsesion.Text = "Cerrar Sesión";
+            this.btn_cerrarsesion.UseVisualStyleBackColor = true;
+            this.btn_cerrarsesion.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button4
+            // btn_reportes
             // 
-            this.button4.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button4.Location = new System.Drawing.Point(12, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Cerrar Sesión";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_reportes.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_reportes.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reportes.Location = new System.Drawing.Point(508, 106);
+            this.btn_reportes.Name = "btn_reportes";
+            this.btn_reportes.Size = new System.Drawing.Size(257, 146);
+            this.btn_reportes.TabIndex = 5;
+            this.btn_reportes.Text = "REPORTES";
+            this.btn_reportes.UseVisualStyleBackColor = true;
+            this.btn_reportes.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button3
+            // btn_mantenimientocine
             // 
-            this.button3.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button3.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(337, 106);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(257, 146);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "REPORTES";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_mantenimientocine.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_mantenimientocine.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mantenimientocine.Location = new System.Drawing.Point(150, 106);
+            this.btn_mantenimientocine.Name = "btn_mantenimientocine";
+            this.btn_mantenimientocine.Size = new System.Drawing.Size(257, 146);
+            this.btn_mantenimientocine.TabIndex = 4;
+            this.btn_mantenimientocine.Text = "MANTENIMIENTO DE CINE ";
+            this.btn_mantenimientocine.UseVisualStyleBackColor = true;
+            this.btn_mantenimientocine.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // btn_ayuda
             // 
-            this.button2.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button2.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(32, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(257, 146);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "MANTENIMIENTO DE CINE ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
+            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ayuda.Location = new System.Drawing.Point(0, 329);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
+            this.btn_ayuda.TabIndex = 3;
+            this.btn_ayuda.UseVisualStyleBackColor = false;
+            this.btn_ayuda.Click += new System.EventHandler(this.button1_Click);
             // 
             // seleccion
             // 
@@ -139,17 +126,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(923, 358);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_usuario);
+            this.Controls.Add(this.pic_logo);
+            this.Controls.Add(this.btn_cerrarsesion);
+            this.Controls.Add(this.btn_reportes);
+            this.Controls.Add(this.btn_mantenimientocine);
+            this.Controls.Add(this.btn_ayuda);
+            this.Controls.Add(this.lbl_selecciondeventana);
             this.Name = "seleccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.seleccion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,13 +144,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label lbl_selecciondeventana;
+        private System.Windows.Forms.Button btn_ayuda;
+        private System.Windows.Forms.Button btn_mantenimientocine;
+        private System.Windows.Forms.Button btn_reportes;
+        private System.Windows.Forms.Button btn_cerrarsesion;
+        private System.Windows.Forms.PictureBox pic_logo;
+        private System.Windows.Forms.Button btn_usuario;
     }
 }

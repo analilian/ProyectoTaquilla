@@ -28,41 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lbl_pruebascroll = new System.Windows.Forms.Label();
+            this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_cerrarsesion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label2
+            // lbl_pruebascroll
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(407, 556);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.lbl_pruebascroll.AutoSize = true;
+            this.lbl_pruebascroll.Location = new System.Drawing.Point(407, 556);
+            this.lbl_pruebascroll.Name = "lbl_pruebascroll";
+            this.lbl_pruebascroll.Size = new System.Drawing.Size(64, 13);
+            this.lbl_pruebascroll.TabIndex = 2;
+            this.lbl_pruebascroll.Text = "pruebascroll";
             // 
-            // button2
+            // btn_regresar
             // 
-            this.button2.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button2.Location = new System.Drawing.Point(12, 40);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Regresar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.volver;
+            this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_regresar.Location = new System.Drawing.Point(12, 40);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(56, 37);
+            this.btn_regresar.TabIndex = 11;
+            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btn_cerrarsesion
             // 
-            this.button3.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button3.Location = new System.Drawing.Point(12, 11);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Cerrar Sesión";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_cerrarsesion.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_cerrarsesion.Location = new System.Drawing.Point(12, 11);
+            this.btn_cerrarsesion.Name = "btn_cerrarsesion";
+            this.btn_cerrarsesion.Size = new System.Drawing.Size(94, 23);
+            this.btn_cerrarsesion.TabIndex = 10;
+            this.btn_cerrarsesion.Text = "Cerrar Sesión";
+            this.btn_cerrarsesion.UseVisualStyleBackColor = true;
+            this.btn_cerrarsesion.Click += new System.EventHandler(this.button3_Click);
             // 
             // ayuda
             // 
@@ -71,12 +71,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(912, 421);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btn_regresar);
+            this.Controls.Add(this.btn_cerrarsesion);
+            this.Controls.Add(this.lbl_pruebascroll);
             this.Name = "ayuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ayuda";
             this.Load += new System.EventHandler(this.ayuda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -84,8 +83,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lbl_pruebascroll;
+        private System.Windows.Forms.Button btn_regresar;
+        private System.Windows.Forms.Button btn_cerrarsesion;
     }
 }

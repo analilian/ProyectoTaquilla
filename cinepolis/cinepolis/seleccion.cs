@@ -47,9 +47,7 @@ namespace cinepolis
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            gestionpeliculas r = new gestionpeliculas();
-            r.ShowDialog();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -57,6 +55,11 @@ namespace cinepolis
             this.Hide();
             usuario r = new usuario();
             r.ShowDialog();
+        }
+
+        private void seleccion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

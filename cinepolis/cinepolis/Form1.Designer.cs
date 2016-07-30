@@ -28,95 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txt_usuario = new System.Windows.Forms.TextBox();
+            this.txt_pass = new System.Windows.Forms.TextBox();
+            this.lbl_usuario = new System.Windows.Forms.Label();
+            this.lbl_pass = new System.Windows.Forms.Label();
+            this.lbl_iniciosesion = new System.Windows.Forms.Label();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.pic_usuario = new System.Windows.Forms.PictureBox();
+            this.btn_iniciosesion = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_usuario)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_usuario
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(128, 232);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(321, 20);
-            this.textBox1.TabIndex = 0;
+            this.txt_usuario.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_usuario.Location = new System.Drawing.Point(128, 232);
+            this.txt_usuario.Name = "txt_usuario";
+            this.txt_usuario.Size = new System.Drawing.Size(321, 20);
+            this.txt_usuario.TabIndex = 0;
             // 
-            // textBox2
+            // txt_pass
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox2.Location = new System.Drawing.Point(128, 258);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(321, 20);
-            this.textBox2.TabIndex = 1;
+            this.txt_pass.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_pass.Location = new System.Drawing.Point(128, 258);
+            this.txt_pass.Name = "txt_pass";
+            this.txt_pass.PasswordChar = '*';
+            this.txt_pass.Size = new System.Drawing.Size(321, 20);
+            this.txt_pass.TabIndex = 1;
             // 
-            // label1
+            // lbl_usuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 235);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "USUARIO:";
+            this.lbl_usuario.AutoSize = true;
+            this.lbl_usuario.Location = new System.Drawing.Point(38, 235);
+            this.lbl_usuario.Name = "lbl_usuario";
+            this.lbl_usuario.Size = new System.Drawing.Size(59, 13);
+            this.lbl_usuario.TabIndex = 3;
+            this.lbl_usuario.Text = "USUARIO:";
             // 
-            // label2
+            // lbl_pass
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 265);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "CONTRASEÑA:";
+            this.lbl_pass.AutoSize = true;
+            this.lbl_pass.Location = new System.Drawing.Point(38, 265);
+            this.lbl_pass.Name = "lbl_pass";
+            this.lbl_pass.Size = new System.Drawing.Size(84, 13);
+            this.lbl_pass.TabIndex = 4;
+            this.lbl_pass.Text = "CONTRASEÑA:";
             // 
-            // label3
+            // lbl_iniciosesion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(52, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(434, 54);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "INICIO DE SESIÓN";
+            this.lbl_iniciosesion.AutoSize = true;
+            this.lbl_iniciosesion.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_iniciosesion.Location = new System.Drawing.Point(52, 9);
+            this.lbl_iniciosesion.Name = "lbl_iniciosesion";
+            this.lbl_iniciosesion.Size = new System.Drawing.Size(434, 54);
+            this.lbl_iniciosesion.TabIndex = 6;
+            this.lbl_iniciosesion.Text = "INICIO DE SESIÓN";
             // 
-            // pictureBox2
+            // pic_logo
             // 
-            this.pictureBox2.BackgroundImage = global::cinepolis.Properties.Resources._13672487_10208834486171149_1624040466_n;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(492, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(55, 48);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.pic_logo.BackgroundImage = global::cinepolis.Properties.Resources._13672487_10208834486171149_1624040466_n;
+            this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_logo.Location = new System.Drawing.Point(492, 9);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(55, 48);
+            this.pic_logo.TabIndex = 7;
+            this.pic_logo.TabStop = false;
             // 
-            // pictureBox1
+            // pic_usuario
             // 
-            this.pictureBox1.BackgroundImage = global::cinepolis.Properties.Resources.usuario_1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(201, 66);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 134);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pic_usuario.BackgroundImage = global::cinepolis.Properties.Resources.usuario_1;
+            this.pic_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_usuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pic_usuario.Location = new System.Drawing.Point(201, 66);
+            this.pic_usuario.Name = "pic_usuario";
+            this.pic_usuario.Size = new System.Drawing.Size(171, 134);
+            this.pic_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pic_usuario.TabIndex = 5;
+            this.pic_usuario.TabStop = false;
             // 
-            // button1
+            // btn_iniciosesion
             // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.inicio_de_sesion;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(173, 322);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 48);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_iniciosesion.BackgroundImage = global::cinepolis.Properties.Resources.inicio_de_sesion;
+            this.btn_iniciosesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_iniciosesion.Location = new System.Drawing.Point(173, 322);
+            this.btn_iniciosesion.Name = "btn_iniciosesion";
+            this.btn_iniciosesion.Size = new System.Drawing.Size(199, 48);
+            this.btn_iniciosesion.TabIndex = 2;
+            this.btn_iniciosesion.UseVisualStyleBackColor = true;
+            this.btn_iniciosesion.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -124,18 +124,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(556, 406);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pic_logo);
+            this.Controls.Add(this.lbl_iniciosesion);
+            this.Controls.Add(this.pic_usuario);
+            this.Controls.Add(this.lbl_pass);
+            this.Controls.Add(this.lbl_usuario);
+            this.Controls.Add(this.btn_iniciosesion);
+            this.Controls.Add(this.txt_pass);
+            this.Controls.Add(this.txt_usuario);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_usuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,14 +143,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txt_usuario;
+        private System.Windows.Forms.TextBox txt_pass;
+        private System.Windows.Forms.Button btn_iniciosesion;
+        private System.Windows.Forms.Label lbl_usuario;
+        private System.Windows.Forms.Label lbl_pass;
+        private System.Windows.Forms.Label lbl_iniciosesion;
+        private System.Windows.Forms.PictureBox pic_usuario;
+        private System.Windows.Forms.PictureBox pic_logo;
     }
 }
 
