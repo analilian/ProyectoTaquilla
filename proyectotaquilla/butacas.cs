@@ -26,17 +26,22 @@ namespace proyectotaquilla
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.CheckState == CheckState.Checked)
+            if (chkA2.CheckState == CheckState.Checked)
             {
 
-                checkBox2.BackgroundImage = proyectotaquilla.Properties.Resources.verde;
+                chkA2.BackgroundImage = proyectotaquilla.Properties.Resources.verde;
             }
             else
             {
 
-                checkBox2.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+                chkA2.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
 
             }
+        }
+
+        private void checkBox15_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtfecha2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtFecha1 = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtNumeroTarjeta = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTarjetaPuntos = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtNombreTarjeta = new System.Windows.Forms.TextBox();
+            this.txtcorreo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,12 +58,12 @@
             this.button1.Text = "Confirmar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txtTelefono
             // 
-            this.textBox6.Location = new System.Drawing.Point(660, 61);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 32;
+            this.txtTelefono.Location = new System.Drawing.Point(660, 61);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.TabIndex = 32;
             // 
             // label6
             // 
@@ -74,23 +74,23 @@
             this.label6.TabIndex = 31;
             this.label6.Text = "Telefono";
             // 
-            // maskedTextBox2
+            // txtfecha2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(782, 14);
-            this.maskedTextBox2.Mask = "00/00/0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox2.TabIndex = 30;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.txtfecha2.Location = new System.Drawing.Point(782, 14);
+            this.txtfecha2.Mask = "00/00/0000";
+            this.txtfecha2.Name = "txtfecha2";
+            this.txtfecha2.Size = new System.Drawing.Size(100, 20);
+            this.txtfecha2.TabIndex = 30;
+            this.txtfecha2.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox1
+            // txtFecha1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(660, 14);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 29;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.txtFecha1.Location = new System.Drawing.Point(660, 14);
+            this.txtFecha1.Mask = "00/00/0000";
+            this.txtFecha1.Name = "txtFecha1";
+            this.txtFecha1.Size = new System.Drawing.Size(100, 20);
+            this.txtFecha1.TabIndex = 29;
+            this.txtFecha1.ValidatingType = typeof(System.DateTime);
             // 
             // label5
             // 
@@ -101,12 +101,12 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Fecha de Vencimiento";
             // 
-            // textBox5
+            // txtNumeroTarjeta
             // 
-            this.textBox5.Location = new System.Drawing.Point(319, 112);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(157, 20);
-            this.textBox5.TabIndex = 27;
+            this.txtNumeroTarjeta.Location = new System.Drawing.Point(319, 112);
+            this.txtNumeroTarjeta.Name = "txtNumeroTarjeta";
+            this.txtNumeroTarjeta.Size = new System.Drawing.Size(157, 20);
+            this.txtNumeroTarjeta.TabIndex = 27;
             // 
             // label4
             // 
@@ -117,34 +117,34 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Numedo de Tarjeta";
             // 
-            // textBox4
+            // txtTarjetaPuntos
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(467, 177);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(157, 20);
-            this.textBox4.TabIndex = 25;
+            this.txtTarjetaPuntos.Enabled = false;
+            this.txtTarjetaPuntos.Location = new System.Drawing.Point(467, 177);
+            this.txtTarjetaPuntos.Name = "txtTarjetaPuntos";
+            this.txtTarjetaPuntos.Size = new System.Drawing.Size(157, 20);
+            this.txtTarjetaPuntos.TabIndex = 25;
             // 
-            // textBox3
+            // txtTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(660, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 24;
+            this.txtTotal.Location = new System.Drawing.Point(660, 112);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 24;
             // 
-            // textBox2
+            // txtNombreTarjeta
             // 
-            this.textBox2.Location = new System.Drawing.Point(319, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(157, 20);
-            this.textBox2.TabIndex = 23;
+            this.txtNombreTarjeta.Location = new System.Drawing.Point(319, 61);
+            this.txtNombreTarjeta.Name = "txtNombreTarjeta";
+            this.txtNombreTarjeta.Size = new System.Drawing.Size(157, 20);
+            this.txtNombreTarjeta.TabIndex = 23;
             // 
-            // textBox1
+            // txtcorreo
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 22;
+            this.txtcorreo.Location = new System.Drawing.Point(319, 18);
+            this.txtcorreo.Name = "txtcorreo";
+            this.txtcorreo.Size = new System.Drawing.Size(157, 20);
+            this.txtcorreo.TabIndex = 22;
             // 
             // label3
             // 
@@ -201,17 +201,17 @@
             this.ClientSize = new System.Drawing.Size(941, 291);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.txtfecha2);
+            this.Controls.Add(this.txtFecha1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtNumeroTarjeta);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTarjetaPuntos);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.txtNombreTarjeta);
+            this.Controls.Add(this.txtcorreo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
@@ -229,17 +229,17 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtfecha2;
+        private System.Windows.Forms.MaskedTextBox txtFecha1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtNumeroTarjeta;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTarjetaPuntos;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtNombreTarjeta;
+        private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
