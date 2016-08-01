@@ -43,5 +43,10 @@ namespace proyectotaquilla
         {
 
         }
+
+        private void butacas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

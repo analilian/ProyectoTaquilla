@@ -154,6 +154,7 @@
             this.btnHorario2.TabIndex = 20;
             this.btnHorario2.Text = "9:45";
             this.btnHorario2.UseVisualStyleBackColor = false;
+            this.btnHorario2.Click += new System.EventHandler(this.btnHorario2_Click);
             // 
             // btnHorario3
             // 
@@ -179,6 +180,7 @@
             this.btnHorario4.TabIndex = 22;
             this.btnHorario4.Text = "12:45";
             this.btnHorario4.UseVisualStyleBackColor = false;
+            this.btnHorario4.Click += new System.EventHandler(this.btnHorario4_Click);
             // 
             // btnHorario5
             // 
@@ -191,6 +193,7 @@
             this.btnHorario5.TabIndex = 23;
             this.btnHorario5.Text = "3:45";
             this.btnHorario5.UseVisualStyleBackColor = false;
+            this.btnHorario5.Click += new System.EventHandler(this.btnHorario5_Click);
             // 
             // btnHorario6
             // 
@@ -203,6 +206,7 @@
             this.btnHorario6.TabIndex = 24;
             this.btnHorario6.Text = "7:45";
             this.btnHorario6.UseVisualStyleBackColor = false;
+            this.btnHorario6.Click += new System.EventHandler(this.btnHorario6_Click);
             // 
             // btnHorario11
             // 
@@ -215,6 +219,7 @@
             this.btnHorario11.TabIndex = 29;
             this.btnHorario11.Text = "7:45";
             this.btnHorario11.UseVisualStyleBackColor = false;
+            this.btnHorario11.Click += new System.EventHandler(this.btnHorario11_Click);
             // 
             // gBProyeccion
             // 
@@ -377,6 +382,7 @@
             this.btnHorario7.TabIndex = 35;
             this.btnHorario7.Text = "9:45";
             this.btnHorario7.UseVisualStyleBackColor = false;
+            this.btnHorario7.Click += new System.EventHandler(this.btnHorario7_Click);
             // 
             // btnHorario8
             // 
@@ -389,6 +395,7 @@
             this.btnHorario8.TabIndex = 36;
             this.btnHorario8.Text = "10:45";
             this.btnHorario8.UseVisualStyleBackColor = false;
+            this.btnHorario8.Click += new System.EventHandler(this.btnHorario8_Click);
             // 
             // btnHorario9
             // 
@@ -401,6 +408,7 @@
             this.btnHorario9.TabIndex = 37;
             this.btnHorario9.Text = "12:45";
             this.btnHorario9.UseVisualStyleBackColor = false;
+            this.btnHorario9.Click += new System.EventHandler(this.btnHorario9_Click);
             // 
             // btnHorario14
             // 
@@ -413,6 +421,7 @@
             this.btnHorario14.TabIndex = 38;
             this.btnHorario14.Text = "12:45";
             this.btnHorario14.UseVisualStyleBackColor = false;
+            this.btnHorario14.Click += new System.EventHandler(this.btnHorario14_Click);
             // 
             // btnHorario10
             // 
@@ -425,6 +434,7 @@
             this.btnHorario10.TabIndex = 39;
             this.btnHorario10.Text = "3:45";
             this.btnHorario10.UseVisualStyleBackColor = false;
+            this.btnHorario10.Click += new System.EventHandler(this.btnHorario10_Click);
             // 
             // btnHorario15
             // 
@@ -437,6 +447,7 @@
             this.btnHorario15.TabIndex = 40;
             this.btnHorario15.Text = "3:45";
             this.btnHorario15.UseVisualStyleBackColor = false;
+            this.btnHorario15.Click += new System.EventHandler(this.btnHorario15_Click);
             // 
             // btnHorario12
             // 
@@ -449,6 +460,7 @@
             this.btnHorario12.TabIndex = 41;
             this.btnHorario12.Text = "9:45";
             this.btnHorario12.UseVisualStyleBackColor = false;
+            this.btnHorario12.Click += new System.EventHandler(this.btnHorario12_Click);
             // 
             // btnHorario13
             // 
@@ -461,6 +473,7 @@
             this.btnHorario13.TabIndex = 42;
             this.btnHorario13.Text = "10:45";
             this.btnHorario13.UseVisualStyleBackColor = false;
+            this.btnHorario13.Click += new System.EventHandler(this.btnHorario13_Click);
             // 
             // cartelera
             // 

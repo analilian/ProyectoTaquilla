@@ -926,6 +926,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "butacas";
             this.Text = "butacas";
+            this.Load += new System.EventHandler(this.butacas_Load);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
