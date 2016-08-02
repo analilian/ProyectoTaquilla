@@ -49,10 +49,12 @@
             this.txt_buscarusuario = new System.Windows.Forms.TextBox();
             this.dgv_borrarusuario = new System.Windows.Forms.DataGridView();
             this.lbl_borrarusuario = new System.Windows.Forms.Label();
-            this.btn_regresar = new System.Windows.Forms.Button();
-            this.btn_cerrarsesion = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_buscarmod = new System.Windows.Forms.Button();
+            this.lbl_buscar = new System.Windows.Forms.Label();
+            this.txt_modificarbuscar = new System.Windows.Forms.TextBox();
+            this.dgv_modificar = new System.Windows.Forms.DataGridView();
             this.lbl_modempl = new System.Windows.Forms.Label();
             this.txt_modempl = new System.Windows.Forms.TextBox();
             this.btn_insertarmod = new System.Windows.Forms.Button();
@@ -62,11 +64,9 @@
             this.lbl_modnivel = new System.Windows.Forms.Label();
             this.lbl_modcon = new System.Windows.Forms.Label();
             this.lbl_modnombre = new System.Windows.Forms.Label();
-            this.dgv_modificar = new System.Windows.Forms.DataGridView();
-            this.txt_modificarbuscar = new System.Windows.Forms.TextBox();
-            this.lbl_buscar = new System.Windows.Forms.Label();
-            this.btn_buscarmod = new System.Windows.Forms.Button();
-            this.btn_modificar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_cerrarsesion = new System.Windows.Forms.Button();
             this.lbl_modificar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ingresarusuario)).BeginInit();
@@ -169,6 +169,7 @@
             this.txt_pasusuario.Name = "txt_pasusuario";
             this.txt_pasusuario.Size = new System.Drawing.Size(299, 20);
             this.txt_pasusuario.TabIndex = 32;
+            this.txt_pasusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pasusuario_KeyPress);
             // 
             // txt_nombreusuario
             // 
@@ -176,6 +177,7 @@
             this.txt_nombreusuario.Name = "txt_nombreusuario";
             this.txt_nombreusuario.Size = new System.Drawing.Size(299, 20);
             this.txt_nombreusuario.TabIndex = 31;
+            this.txt_nombreusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreusuario_KeyPress);
             // 
             // lbl_nivelusuario
             // 
@@ -293,28 +295,6 @@
             this.lbl_borrarusuario.Text = "BORRAR USUARIO ";
             this.lbl_borrarusuario.Click += new System.EventHandler(this.label3_Click);
             // 
-            // btn_regresar
-            // 
-            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.volver;
-            this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_regresar.Location = new System.Drawing.Point(3, 31);
-            this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(66, 48);
-            this.btn_regresar.TabIndex = 11;
-            this.btn_regresar.UseVisualStyleBackColor = true;
-            this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btn_cerrarsesion
-            // 
-            this.btn_cerrarsesion.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.btn_cerrarsesion.Location = new System.Drawing.Point(3, 2);
-            this.btn_cerrarsesion.Name = "btn_cerrarsesion";
-            this.btn_cerrarsesion.Size = new System.Drawing.Size(94, 23);
-            this.btn_cerrarsesion.TabIndex = 10;
-            this.btn_cerrarsesion.Text = "Cerrar Sesión";
-            this.btn_cerrarsesion.UseVisualStyleBackColor = true;
-            this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -340,95 +320,45 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Modificar Usuario";
             // 
-            // label1
+            // btn_modificar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(510, 54);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "MODIFICAR USUARIO";
+            this.btn_modificar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
+            this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_modificar.Location = new System.Drawing.Point(672, 112);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(42, 42);
+            this.btn_modificar.TabIndex = 51;
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // lbl_modempl
+            // btn_buscarmod
             // 
-            this.lbl_modempl.AutoSize = true;
-            this.lbl_modempl.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_modempl.Location = new System.Drawing.Point(490, 71);
-            this.lbl_modempl.Name = "lbl_modempl";
-            this.lbl_modempl.Size = new System.Drawing.Size(71, 16);
-            this.lbl_modempl.TabIndex = 46;
-            this.lbl_modempl.Text = "Empleado:";
+            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarmod.Location = new System.Drawing.Point(624, 112);
+            this.btn_buscarmod.Name = "btn_buscarmod";
+            this.btn_buscarmod.Size = new System.Drawing.Size(42, 42);
+            this.btn_buscarmod.TabIndex = 50;
+            this.btn_buscarmod.UseVisualStyleBackColor = true;
+            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
             // 
-            // txt_modempl
+            // lbl_buscar
             // 
-            this.txt_modempl.Location = new System.Drawing.Point(567, 70);
-            this.txt_modempl.Name = "txt_modempl";
-            this.txt_modempl.Size = new System.Drawing.Size(87, 20);
-            this.txt_modempl.TabIndex = 45;
+            this.lbl_buscar.AutoSize = true;
+            this.lbl_buscar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar.Location = new System.Drawing.Point(254, 126);
+            this.lbl_buscar.Name = "lbl_buscar";
+            this.lbl_buscar.Size = new System.Drawing.Size(52, 16);
+            this.lbl_buscar.TabIndex = 49;
+            this.lbl_buscar.Text = "Buscar:";
+            this.lbl_buscar.Click += new System.EventHandler(this.label2_Click);
             // 
-            // btn_insertarmod
+            // txt_modificarbuscar
             // 
-            this.btn_insertarmod.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
-            this.btn_insertarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_insertarmod.Location = new System.Drawing.Point(752, 25);
-            this.btn_insertarmod.Name = "btn_insertarmod";
-            this.btn_insertarmod.Size = new System.Drawing.Size(61, 62);
-            this.btn_insertarmod.TabIndex = 44;
-            this.btn_insertarmod.UseVisualStyleBackColor = true;
-            this.btn_insertarmod.Click += new System.EventHandler(this.btn_insertarmod_Click);
-            // 
-            // cbo_modnivel
-            // 
-            this.cbo_modnivel.FormattingEnabled = true;
-            this.cbo_modnivel.Location = new System.Drawing.Point(139, 133);
-            this.cbo_modnivel.Name = "cbo_modnivel";
-            this.cbo_modnivel.Size = new System.Drawing.Size(113, 21);
-            this.cbo_modnivel.TabIndex = 43;
-            // 
-            // txt_conmod
-            // 
-            this.txt_conmod.Location = new System.Drawing.Point(139, 103);
-            this.txt_conmod.Name = "txt_conmod";
-            this.txt_conmod.Size = new System.Drawing.Size(299, 20);
-            this.txt_conmod.TabIndex = 42;
-            // 
-            // txt_nommod
-            // 
-            this.txt_nommod.Location = new System.Drawing.Point(139, 74);
-            this.txt_nommod.Name = "txt_nommod";
-            this.txt_nommod.Size = new System.Drawing.Size(299, 20);
-            this.txt_nommod.TabIndex = 41;
-            // 
-            // lbl_modnivel
-            // 
-            this.lbl_modnivel.AutoSize = true;
-            this.lbl_modnivel.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_modnivel.Location = new System.Drawing.Point(22, 133);
-            this.lbl_modnivel.Name = "lbl_modnivel";
-            this.lbl_modnivel.Size = new System.Drawing.Size(104, 16);
-            this.lbl_modnivel.TabIndex = 40;
-            this.lbl_modnivel.Text = "Nivel de usuario:";
-            // 
-            // lbl_modcon
-            // 
-            this.lbl_modcon.AutoSize = true;
-            this.lbl_modcon.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_modcon.Location = new System.Drawing.Point(22, 107);
-            this.lbl_modcon.Name = "lbl_modcon";
-            this.lbl_modcon.Size = new System.Drawing.Size(82, 16);
-            this.lbl_modcon.TabIndex = 39;
-            this.lbl_modcon.Text = "Contraseña :";
-            // 
-            // lbl_modnombre
-            // 
-            this.lbl_modnombre.AutoSize = true;
-            this.lbl_modnombre.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_modnombre.Location = new System.Drawing.Point(22, 82);
-            this.lbl_modnombre.Name = "lbl_modnombre";
-            this.lbl_modnombre.Size = new System.Drawing.Size(59, 16);
-            this.lbl_modnombre.TabIndex = 38;
-            this.lbl_modnombre.Text = "Nombre:";
+            this.txt_modificarbuscar.Location = new System.Drawing.Point(315, 126);
+            this.txt_modificarbuscar.Name = "txt_modificarbuscar";
+            this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
+            this.txt_modificarbuscar.TabIndex = 48;
             // 
             // dgv_modificar
             // 
@@ -438,45 +368,120 @@
             this.dgv_modificar.Size = new System.Drawing.Size(792, 150);
             this.dgv_modificar.TabIndex = 47;
             // 
-            // txt_modificarbuscar
+            // lbl_modempl
             // 
-            this.txt_modificarbuscar.Location = new System.Drawing.Point(385, 134);
-            this.txt_modificarbuscar.Name = "txt_modificarbuscar";
-            this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
-            this.txt_modificarbuscar.TabIndex = 48;
+            this.lbl_modempl.AutoSize = true;
+            this.lbl_modempl.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_modempl.Location = new System.Drawing.Point(490, 60);
+            this.lbl_modempl.Name = "lbl_modempl";
+            this.lbl_modempl.Size = new System.Drawing.Size(71, 16);
+            this.lbl_modempl.TabIndex = 46;
+            this.lbl_modempl.Text = "Empleado:";
             // 
-            // lbl_buscar
+            // txt_modempl
             // 
-            this.lbl_buscar.AutoSize = true;
-            this.lbl_buscar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_buscar.Location = new System.Drawing.Point(324, 134);
-            this.lbl_buscar.Name = "lbl_buscar";
-            this.lbl_buscar.Size = new System.Drawing.Size(52, 16);
-            this.lbl_buscar.TabIndex = 49;
-            this.lbl_buscar.Text = "Buscar:";
-            this.lbl_buscar.Click += new System.EventHandler(this.label2_Click);
+            this.txt_modempl.Location = new System.Drawing.Point(567, 59);
+            this.txt_modempl.Name = "txt_modempl";
+            this.txt_modempl.Size = new System.Drawing.Size(87, 20);
+            this.txt_modempl.TabIndex = 45;
             // 
-            // btn_buscarmod
+            // btn_insertarmod
             // 
-            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
-            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarmod.Location = new System.Drawing.Point(690, 112);
-            this.btn_buscarmod.Name = "btn_buscarmod";
-            this.btn_buscarmod.Size = new System.Drawing.Size(42, 42);
-            this.btn_buscarmod.TabIndex = 50;
-            this.btn_buscarmod.UseVisualStyleBackColor = true;
-            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
+            this.btn_insertarmod.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
+            this.btn_insertarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_insertarmod.Location = new System.Drawing.Point(720, 92);
+            this.btn_insertarmod.Name = "btn_insertarmod";
+            this.btn_insertarmod.Size = new System.Drawing.Size(79, 59);
+            this.btn_insertarmod.TabIndex = 44;
+            this.btn_insertarmod.UseVisualStyleBackColor = true;
+            this.btn_insertarmod.Click += new System.EventHandler(this.btn_insertarmod_Click);
             // 
-            // btn_modificar
+            // cbo_modnivel
             // 
-            this.btn_modificar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
-            this.btn_modificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_modificar.Location = new System.Drawing.Point(738, 112);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(42, 42);
-            this.btn_modificar.TabIndex = 51;
-            this.btn_modificar.UseVisualStyleBackColor = true;
-            this.btn_modificar.Click += new System.EventHandler(this.button1_Click_1);
+            this.cbo_modnivel.FormattingEnabled = true;
+            this.cbo_modnivel.Location = new System.Drawing.Point(135, 125);
+            this.cbo_modnivel.Name = "cbo_modnivel";
+            this.cbo_modnivel.Size = new System.Drawing.Size(113, 21);
+            this.cbo_modnivel.TabIndex = 43;
+            // 
+            // txt_conmod
+            // 
+            this.txt_conmod.Location = new System.Drawing.Point(139, 92);
+            this.txt_conmod.Name = "txt_conmod";
+            this.txt_conmod.Size = new System.Drawing.Size(299, 20);
+            this.txt_conmod.TabIndex = 42;
+            this.txt_conmod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_conmod_KeyPress);
+            // 
+            // txt_nommod
+            // 
+            this.txt_nommod.Location = new System.Drawing.Point(139, 63);
+            this.txt_nommod.Name = "txt_nommod";
+            this.txt_nommod.Size = new System.Drawing.Size(299, 20);
+            this.txt_nommod.TabIndex = 41;
+            this.txt_nommod.TextChanged += new System.EventHandler(this.txt_nommod_TextChanged);
+            this.txt_nommod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nommod_KeyPress);
+            // 
+            // lbl_modnivel
+            // 
+            this.lbl_modnivel.AutoSize = true;
+            this.lbl_modnivel.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_modnivel.Location = new System.Drawing.Point(18, 125);
+            this.lbl_modnivel.Name = "lbl_modnivel";
+            this.lbl_modnivel.Size = new System.Drawing.Size(104, 16);
+            this.lbl_modnivel.TabIndex = 40;
+            this.lbl_modnivel.Text = "Nivel de usuario:";
+            // 
+            // lbl_modcon
+            // 
+            this.lbl_modcon.AutoSize = true;
+            this.lbl_modcon.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_modcon.Location = new System.Drawing.Point(22, 96);
+            this.lbl_modcon.Name = "lbl_modcon";
+            this.lbl_modcon.Size = new System.Drawing.Size(82, 16);
+            this.lbl_modcon.TabIndex = 39;
+            this.lbl_modcon.Text = "Contraseña :";
+            // 
+            // lbl_modnombre
+            // 
+            this.lbl_modnombre.AutoSize = true;
+            this.lbl_modnombre.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_modnombre.Location = new System.Drawing.Point(22, 71);
+            this.lbl_modnombre.Name = "lbl_modnombre";
+            this.lbl_modnombre.Size = new System.Drawing.Size(59, 16);
+            this.lbl_modnombre.TabIndex = 38;
+            this.lbl_modnombre.Text = "Nombre:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(174, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(510, 54);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "MODIFICAR USUARIO";
+            // 
+            // btn_regresar
+            // 
+            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.volver;
+            this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_regresar.Location = new System.Drawing.Point(3, 31);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(66, 48);
+            this.btn_regresar.TabIndex = 11;
+            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn_cerrarsesion
+            // 
+            this.btn_cerrarsesion.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_cerrarsesion.Location = new System.Drawing.Point(3, 2);
+            this.btn_cerrarsesion.Name = "btn_cerrarsesion";
+            this.btn_cerrarsesion.Size = new System.Drawing.Size(94, 23);
+            this.btn_cerrarsesion.TabIndex = 10;
+            this.btn_cerrarsesion.Text = "Cerrar Sesión";
+            this.btn_cerrarsesion.UseVisualStyleBackColor = true;
+            this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
             // usuario
             // 

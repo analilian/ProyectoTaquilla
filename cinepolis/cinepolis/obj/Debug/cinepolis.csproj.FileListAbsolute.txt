@@ -20,7 +20,6 @@ C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Form1.resources
-C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.gestionpeliculas.resources
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.mantenimiento.resources
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Properties.Resources.resources
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.reportes.resources
@@ -31,3 +30,10 @@ C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\c
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.exe
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.pdb
 C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.dll
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.pdfa.dll
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.xtra.dll
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.dll
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\Google.ProtocolBuffers.dll
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.xml
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.xml
