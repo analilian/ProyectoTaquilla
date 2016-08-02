@@ -44,6 +44,7 @@
             // 
             this.txt_usuario.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_usuario.Location = new System.Drawing.Point(128, 232);
+            this.txt_usuario.MaxLength = 100;
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(321, 20);
             this.txt_usuario.TabIndex = 0;
@@ -52,6 +53,7 @@
             // 
             this.txt_pass.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txt_pass.Location = new System.Drawing.Point(128, 258);
+            this.txt_pass.MaxLength = 20;
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '*';
             this.txt_pass.Size = new System.Drawing.Size(321, 20);

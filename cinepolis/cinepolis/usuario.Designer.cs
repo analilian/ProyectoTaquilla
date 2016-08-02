@@ -166,6 +166,7 @@
             // txt_pasusuario
             // 
             this.txt_pasusuario.Location = new System.Drawing.Point(123, 89);
+            this.txt_pasusuario.MaxLength = 20;
             this.txt_pasusuario.Name = "txt_pasusuario";
             this.txt_pasusuario.Size = new System.Drawing.Size(299, 20);
             this.txt_pasusuario.TabIndex = 32;
@@ -174,6 +175,7 @@
             // txt_nombreusuario
             // 
             this.txt_nombreusuario.Location = new System.Drawing.Point(123, 60);
+            this.txt_nombreusuario.MaxLength = 20;
             this.txt_nombreusuario.Name = "txt_nombreusuario";
             this.txt_nombreusuario.Size = new System.Drawing.Size(299, 20);
             this.txt_nombreusuario.TabIndex = 31;
@@ -272,6 +274,7 @@
             // txt_buscarusuario
             // 
             this.txt_buscarusuario.Location = new System.Drawing.Point(143, 83);
+            this.txt_buscarusuario.MaxLength = 100;
             this.txt_buscarusuario.Name = "txt_buscarusuario";
             this.txt_buscarusuario.Size = new System.Drawing.Size(299, 20);
             this.txt_buscarusuario.TabIndex = 36;
@@ -356,6 +359,7 @@
             // txt_modificarbuscar
             // 
             this.txt_modificarbuscar.Location = new System.Drawing.Point(315, 126);
+            this.txt_modificarbuscar.MaxLength = 20;
             this.txt_modificarbuscar.Name = "txt_modificarbuscar";
             this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
             this.txt_modificarbuscar.TabIndex = 48;
@@ -407,6 +411,7 @@
             // txt_conmod
             // 
             this.txt_conmod.Location = new System.Drawing.Point(139, 92);
+            this.txt_conmod.MaxLength = 20;
             this.txt_conmod.Name = "txt_conmod";
             this.txt_conmod.Size = new System.Drawing.Size(299, 20);
             this.txt_conmod.TabIndex = 42;
@@ -415,6 +420,7 @@
             // txt_nommod
             // 
             this.txt_nommod.Location = new System.Drawing.Point(139, 63);
+            this.txt_nommod.MaxLength = 20;
             this.txt_nommod.Name = "txt_nommod";
             this.txt_nommod.Size = new System.Drawing.Size(299, 20);
             this.txt_nommod.TabIndex = 41;

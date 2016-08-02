@@ -202,6 +202,7 @@
             // txt_mod_descrip
             // 
             this.txt_mod_descrip.Location = new System.Drawing.Point(499, 137);
+            this.txt_mod_descrip.MaxLength = 100;
             this.txt_mod_descrip.Multiline = true;
             this.txt_mod_descrip.Name = "txt_mod_descrip";
             this.txt_mod_descrip.Size = new System.Drawing.Size(151, 103);
@@ -341,6 +342,7 @@
             // txt_mod_nombre
             // 
             this.txt_mod_nombre.Location = new System.Drawing.Point(208, 52);
+            this.txt_mod_nombre.MaxLength = 20;
             this.txt_mod_nombre.Name = "txt_mod_nombre";
             this.txt_mod_nombre.Size = new System.Drawing.Size(151, 20);
             this.txt_mod_nombre.TabIndex = 58;
@@ -496,6 +498,7 @@
             // txt_descrip
             // 
             this.txt_descrip.Location = new System.Drawing.Point(490, 131);
+            this.txt_descrip.MaxLength = 100;
             this.txt_descrip.Multiline = true;
             this.txt_descrip.Name = "txt_descrip";
             this.txt_descrip.Size = new System.Drawing.Size(151, 99);
@@ -761,6 +764,7 @@
             // txt_buscar
             // 
             this.txt_buscar.Location = new System.Drawing.Point(227, 66);
+            this.txt_buscar.MaxLength = 100;
             this.txt_buscar.Name = "txt_buscar";
             this.txt_buscar.Size = new System.Drawing.Size(276, 20);
             this.txt_buscar.TabIndex = 20;
