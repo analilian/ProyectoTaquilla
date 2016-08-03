@@ -62,6 +62,24 @@
     <Compile Include="ayuda.Designer.cs">
       <DependentUpon>ayuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="categoria.Designer.cs">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cine.Designer.cs">
+      <DependentUpon>cine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clasificacion.Designer.cs">
+      <DependentUpon>clasificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="conexionymanipulacion.cs" />
     <Compile Include="empleado.cs">
       <SubType>Form</SubType>
@@ -74,6 +92,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
     </Compile>
     <Compile Include="mantenimiento.cs">
       <SubType>Form</SubType>
@@ -95,6 +119,12 @@
     <Compile Include="reportes.Designer.cs">
       <DependentUpon>reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="sala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sala.Designer.cs">
+      <DependentUpon>sala.cs</DependentUpon>
+    </Compile>
     <Compile Include="seleccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +140,23 @@
     <EmbeddedResource Include="ayuda.resx">
       <DependentUpon>ayuda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="categoria.resx">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cine.resx">
+      <DependentUpon>cine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clasificacion.resx">
+      <DependentUpon>clasificacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="empleado.resx">
       <DependentUpon>empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento.resx">
       <DependentUpon>mantenimiento.cs</DependentUpon>
@@ -134,6 +176,9 @@
     </Compile>
     <EmbeddedResource Include="reportes.resx">
       <DependentUpon>reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sala.resx">
+      <DependentUpon>sala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="seleccion.resx">
       <DependentUpon>seleccion.cs</DependentUpon>
@@ -210,6 +255,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Add-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

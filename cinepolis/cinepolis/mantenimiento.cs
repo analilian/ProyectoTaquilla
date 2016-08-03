@@ -240,5 +240,45 @@ namespace cinepolis
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_agregar_horario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Horario r = new Horario();
+            r.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            sala r = new sala();
+            r.ShowDialog();
+        }
+
+        private void btn_agregar_clasificacion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            clasificacion r = new clasificacion();
+            r.ShowDialog();
+        }
+
+        private void btn_agregar_btn_agregar_categoria_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            categoria r = new categoria();
+            r.ShowDialog();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            cine r = new cine();
+            r.ShowDialog();
+        }
     }
 }

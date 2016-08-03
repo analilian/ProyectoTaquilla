@@ -17,7 +17,7 @@ namespace cinepolis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new usuario());
+            Application.Run(new Form1());
         }
     }
 }
