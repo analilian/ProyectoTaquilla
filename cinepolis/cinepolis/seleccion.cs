@@ -61,5 +61,12 @@ namespace cinepolis
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            empleado r = new empleado();
+            r.ShowDialog();
+        }
     }
 }

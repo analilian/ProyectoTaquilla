@@ -53,3 +53,4 @@ C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\c
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+C:\Users\Walter\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.empleado.resources

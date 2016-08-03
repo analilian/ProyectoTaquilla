@@ -63,6 +63,12 @@
       <DependentUpon>ayuda.cs</DependentUpon>
     </Compile>
     <Compile Include="conexionymanipulacion.cs" />
+    <Compile Include="empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleado.Designer.cs">
+      <DependentUpon>empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="ayuda.resx">
       <DependentUpon>ayuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleado.resx">
+      <DependentUpon>empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
