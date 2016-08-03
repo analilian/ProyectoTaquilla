@@ -13,12 +13,13 @@ using System.Data;
 
 namespace cinepolis
 {
+    
     class conexionymanipulacion
     {
         MySqlConnection conexion;
         public void Conectar()
         {
-            conexion = new MySqlConnection("server=localhost; database=; Uid=root;pwd=;");
+            conexion = new MySqlConnection("server=localhost; database=bdcine; Uid=root;pwd=;");
             conexion.Open();
         }
         public void Desconectar()

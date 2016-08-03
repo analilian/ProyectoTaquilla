@@ -13,8 +13,8 @@ namespace cinepolis
     public partial class usuario : Form
     {
         conexionymanipulacion conect = new conexionymanipulacion();
-        String Stabla ="Usuarios";
-        String Squeery = "select* from Usuarios";
+        String Stabla ="usuarios";
+        String Squeery = "select* from usuarios";
  
 
 
@@ -53,10 +53,11 @@ namespace cinepolis
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (txt_pasusuario == txt_confirmar)
+            if (txt_pasusuario.Text == txt_confirmar.Text)
             {
                 conect.Conectar();
                 String Squery = "insert into  usuarios (nomusuario,contusuario,nivelusuario,pkidempleado) values('" + txt_nombreusuario.Text + "','" + txt_pasusuario.Text + "','" + cbo_nivelsusario.Text + "','" + txt_empleado.Text + "');";
+                conect.EjecutarQuery(Squery);
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_modificar, Squeery, Stabla);
@@ -108,7 +109,7 @@ namespace cinepolis
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squerys = ("Select* from usuarios where nomusuario='"+ txt_buscarusuario.Text + "%' or conusuario= '" + txt_buscarusuario.Text + "%' or pkidempleado ='" + txt_buscarusuario.Text + "%';" );
+            String Squerys = ("Select* from usuarios where  nomusuario like'"+ txt_buscarusuario.Text + "%' or contusuario like '" + txt_buscarusuario.Text + "%' or pkidempleado like '" + txt_buscarusuario.Text + "%';" );
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarusuario, Squerys, Stabla);
             conect.Desconectar();
@@ -123,7 +124,7 @@ namespace cinepolis
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squerys = ("Select* from usuarios where nomusuario='" + txt_modificarbuscar.Text + "%' or conusuario= '" + txt_modificarbuscar.Text + "%' or pkidempleado ='" + txt_modificarbuscar.Text + "%';");
+            String Squerys = ("Select* from usuarios where nomusuario like'" + txt_modificarbuscar.Text + "%' or contusuario like '" + txt_modificarbuscar.Text + "%' or pkidempleado like '" + txt_modificarbuscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_modificar, Squerys, Stabla);
             conect.Desconectar();
@@ -139,8 +140,10 @@ namespace cinepolis
 
         private void btn_insertarmod_Click(object sender, EventArgs e)
         {
+            String Codigo = this.dgv_modificar.CurrentRow.Cells[0].Value.ToString();
             conect.Conectar();
-            String Squery = "insert into  usuarios (nomusuario,contusuario,nivelusuario,pkidempleado) values('" + txt_nommod.Text + "','" + txt_conmod.Text + "','" + cbo_modnivel.Text + "','" + txt_modempl.Text + "');";
+            String Squery = "update usuarios set nomusuario ='"+txt_nommod.Text+"',contusuario='"+txt_conmod.Text+"' ,nivelusuario='"+cbo_modnivel.Text+"',pkidempleado ='"+txt_modempl.Text+"'where pkidusuario='"+Codigo+ "'";
+            conect.EjecutarQuery(Squery);
             conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
             conect.actualizargrid(dgv_modificar, Squeery, Stabla);
@@ -226,6 +229,11 @@ namespace cinepolis
         }
 
         private void dgv_modificar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }

@@ -344,6 +344,7 @@
             this.tabPage3.Size = new System.Drawing.Size(822, 310);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Modificar Usuario";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // btn_modificar
             // 
