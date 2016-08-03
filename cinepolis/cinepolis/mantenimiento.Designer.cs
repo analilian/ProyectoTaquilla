@@ -98,6 +98,10 @@
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
+            this.btn_buscarmod = new System.Windows.Forms.Button();
+            this.lbl_buscar = new System.Windows.Forms.Label();
+            this.txt_modificarbuscar = new System.Windows.Forms.TextBox();
+            this.dgv_insertar = new System.Windows.Forms.DataGridView();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).BeginInit();
@@ -107,12 +111,16 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.btn_buscarmod);
+            this.tabPage2.Controls.Add(this.lbl_buscar);
+            this.tabPage2.Controls.Add(this.txt_modificarbuscar);
             this.tabPage2.Controls.Add(this.pic_mod_portada);
             this.tabPage2.Controls.Add(this.btn_portada1);
             this.tabPage2.Controls.Add(this.dgv_modificar_pelicula);
@@ -167,6 +175,7 @@
             this.btn_portada1.Size = new System.Drawing.Size(82, 55);
             this.btn_portada1.TabIndex = 78;
             this.btn_portada1.UseVisualStyleBackColor = true;
+            this.btn_portada1.Click += new System.EventHandler(this.btn_portada1_Click);
             // 
             // dgv_modificar_pelicula
             // 
@@ -183,21 +192,23 @@
             // 
             this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
             this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(537, 258);
+            this.btn_actualizar.Location = new System.Drawing.Point(578, 263);
             this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(86, 65);
+            this.btn_actualizar.Size = new System.Drawing.Size(48, 48);
             this.btn_actualizar.TabIndex = 76;
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_extraer
             // 
-            this.btn_extraer.BackgroundImage = global::cinepolis.Properties.Resources.Button_Upload_icon;
+            this.btn_extraer.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
             this.btn_extraer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_extraer.Location = new System.Drawing.Point(259, 258);
+            this.btn_extraer.Location = new System.Drawing.Point(632, 263);
             this.btn_extraer.Name = "btn_extraer";
-            this.btn_extraer.Size = new System.Drawing.Size(84, 65);
+            this.btn_extraer.Size = new System.Drawing.Size(45, 50);
             this.btn_extraer.TabIndex = 75;
             this.btn_extraer.UseVisualStyleBackColor = true;
+            this.btn_extraer.Click += new System.EventHandler(this.btn_extraer_Click);
             // 
             // txt_mod_descrip
             // 
@@ -421,6 +432,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.dgv_insertar);
             this.tabPage1.Controls.Add(this.lbl_portadapeli);
             this.tabPage1.Controls.Add(this.pic_portada);
             this.tabPage1.Controls.Add(this.btn_portada);
@@ -461,15 +473,16 @@
             // 
             this.lbl_portadapeli.AutoSize = true;
             this.lbl_portadapeli.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_portadapeli.Location = new System.Drawing.Point(342, 347);
+            this.lbl_portadapeli.Location = new System.Drawing.Point(787, 213);
             this.lbl_portadapeli.Name = "lbl_portadapeli";
             this.lbl_portadapeli.Size = new System.Drawing.Size(78, 21);
             this.lbl_portadapeli.TabIndex = 81;
             this.lbl_portadapeli.Text = "Portada ";
+            this.lbl_portadapeli.Click += new System.EventHandler(this.lbl_portadapeli_Click);
             // 
             // pic_portada
             // 
-            this.pic_portada.Location = new System.Drawing.Point(199, 251);
+            this.pic_portada.Location = new System.Drawing.Point(662, 103);
             this.pic_portada.Name = "pic_portada";
             this.pic_portada.Size = new System.Drawing.Size(119, 127);
             this.pic_portada.TabIndex = 80;
@@ -479,21 +492,23 @@
             // 
             this.btn_portada.BackgroundImage = global::cinepolis.Properties.Resources.cine_1;
             this.btn_portada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_portada.Location = new System.Drawing.Point(336, 295);
+            this.btn_portada.Location = new System.Drawing.Point(799, 167);
             this.btn_portada.Name = "btn_portada";
-            this.btn_portada.Size = new System.Drawing.Size(93, 49);
+            this.btn_portada.Size = new System.Drawing.Size(54, 49);
             this.btn_portada.TabIndex = 53;
             this.btn_portada.UseVisualStyleBackColor = true;
+            this.btn_portada.Click += new System.EventHandler(this.btn_portada_Click);
             // 
             // btn_guardar
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(729, 101);
+            this.btn_guardar.Location = new System.Drawing.Point(763, 265);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 52;
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // txt_descrip
             // 
@@ -688,7 +703,7 @@
             // 
             this.lbl_portada.AutoSize = true;
             this.lbl_portada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_portada.Location = new System.Drawing.Point(6, 264);
+            this.lbl_portada.Location = new System.Drawing.Point(658, 72);
             this.lbl_portada.Name = "lbl_portada";
             this.lbl_portada.Size = new System.Drawing.Size(168, 21);
             this.lbl_portada.TabIndex = 26;
@@ -750,6 +765,7 @@
             this.btn_borrar.Size = new System.Drawing.Size(71, 52);
             this.btn_borrar.TabIndex = 22;
             this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // btn_buscar
             // 
@@ -760,6 +776,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(78, 52);
             this.btn_buscar.TabIndex = 21;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -830,6 +847,46 @@
             this.btn_cerrarsesion.UseVisualStyleBackColor = true;
             this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_buscarmod
+            // 
+            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarmod.Location = new System.Drawing.Point(530, 263);
+            this.btn_buscarmod.Name = "btn_buscarmod";
+            this.btn_buscarmod.Size = new System.Drawing.Size(42, 48);
+            this.btn_buscarmod.TabIndex = 82;
+            this.btn_buscarmod.UseVisualStyleBackColor = true;
+            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
+            // 
+            // lbl_buscar
+            // 
+            this.lbl_buscar.AutoSize = true;
+            this.lbl_buscar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar.Location = new System.Drawing.Point(150, 285);
+            this.lbl_buscar.Name = "lbl_buscar";
+            this.lbl_buscar.Size = new System.Drawing.Size(52, 16);
+            this.lbl_buscar.TabIndex = 81;
+            this.lbl_buscar.Text = "Buscar:";
+            // 
+            // txt_modificarbuscar
+            // 
+            this.txt_modificarbuscar.Location = new System.Drawing.Point(208, 281);
+            this.txt_modificarbuscar.MaxLength = 20;
+            this.txt_modificarbuscar.Name = "txt_modificarbuscar";
+            this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
+            this.txt_modificarbuscar.TabIndex = 80;
+            // 
+            // dgv_insertar
+            // 
+            this.dgv_insertar.AllowUserToAddRows = false;
+            this.dgv_insertar.AllowUserToDeleteRows = false;
+            this.dgv_insertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_insertar.Location = new System.Drawing.Point(23, 247);
+            this.dgv_insertar.Name = "dgv_insertar";
+            this.dgv_insertar.ReadOnly = true;
+            this.dgv_insertar.Size = new System.Drawing.Size(701, 131);
+            this.dgv_insertar.TabIndex = 82;
+            // 
             // mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -856,6 +913,7 @@
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -933,5 +991,9 @@
         private System.Windows.Forms.PictureBox pic_mod_portada;
         private System.Windows.Forms.PictureBox pic_portada;
         private System.Windows.Forms.Label lbl_portadapeli;
+        private System.Windows.Forms.Button btn_buscarmod;
+        private System.Windows.Forms.Label lbl_buscar;
+        private System.Windows.Forms.TextBox txt_modificarbuscar;
+        private System.Windows.Forms.DataGridView dgv_insertar;
     }
 }

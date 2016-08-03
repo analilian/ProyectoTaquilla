@@ -53,12 +53,19 @@ namespace cinepolis
 
         private void button3_Click(object sender, EventArgs e)
         {
-            conect.Conectar();
-            String Squery="insert into  usuarios (nomusuario,contusuario,nivelusuario,pkidempleado) values('"+txt_nombreusuario.Text+"','"+ txt_pasusuario.Text+"','"+ cbo_nivelsusario.Text+"','"+txt_empleado.Text+"');";
-            conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
-            conect.actualizargrid(dgv_modificar, Squeery, Stabla);
-            conect.Desconectar();
+            if (txt_pasusuario == txt_confirmar)
+            {
+                conect.Conectar();
+                String Squery = "insert into  usuarios (nomusuario,contusuario,nivelusuario,pkidempleado) values('" + txt_nombreusuario.Text + "','" + txt_pasusuario.Text + "','" + cbo_nivelsusario.Text + "','" + txt_empleado.Text + "');";
+                conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
+                conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
+                conect.actualizargrid(dgv_modificar, Squeery, Stabla);
+                conect.Desconectar();
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas no coinciden");
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -211,6 +218,16 @@ namespace cinepolis
                 e.Handled = true;
                 MessageBox.Show("Este campo no puede llevar simbolos", "validacion de letras", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void txt_modificarbuscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_modificar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

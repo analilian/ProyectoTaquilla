@@ -31,6 +31,8 @@
             this.lbl_mantenimientodeusuario = new System.Windows.Forms.Label();
             this.lbl_modificar = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_confirmar = new System.Windows.Forms.TextBox();
             this.lbl_uempleado = new System.Windows.Forms.Label();
             this.txt_empleado = new System.Windows.Forms.TextBox();
             this.btn_agregarusuario = new System.Windows.Forms.Button();
@@ -100,6 +102,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.txt_confirmar);
             this.tabPage1.Controls.Add(this.lbl_uempleado);
             this.tabPage1.Controls.Add(this.txt_empleado);
             this.tabPage1.Controls.Add(this.btn_agregarusuario);
@@ -118,11 +122,29 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ingresar Usuario";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(228, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 16);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Confirmar:";
+            // 
+            // txt_confirmar
+            // 
+            this.txt_confirmar.Location = new System.Drawing.Point(305, 93);
+            this.txt_confirmar.MaxLength = 20;
+            this.txt_confirmar.Name = "txt_confirmar";
+            this.txt_confirmar.Size = new System.Drawing.Size(106, 20);
+            this.txt_confirmar.TabIndex = 38;
+            // 
             // lbl_uempleado
             // 
             this.lbl_uempleado.AutoSize = true;
             this.lbl_uempleado.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_uempleado.Location = new System.Drawing.Point(474, 89);
+            this.lbl_uempleado.Location = new System.Drawing.Point(494, 61);
             this.lbl_uempleado.Name = "lbl_uempleado";
             this.lbl_uempleado.Size = new System.Drawing.Size(71, 16);
             this.lbl_uempleado.TabIndex = 37;
@@ -130,7 +152,7 @@
             // 
             // txt_empleado
             // 
-            this.txt_empleado.Location = new System.Drawing.Point(551, 89);
+            this.txt_empleado.Location = new System.Drawing.Point(571, 60);
             this.txt_empleado.Name = "txt_empleado";
             this.txt_empleado.Size = new System.Drawing.Size(87, 20);
             this.txt_empleado.TabIndex = 36;
@@ -158,23 +180,23 @@
             // cbo_nivelsusario
             // 
             this.cbo_nivelsusario.FormattingEnabled = true;
-            this.cbo_nivelsusario.Location = new System.Drawing.Point(123, 119);
+            this.cbo_nivelsusario.Location = new System.Drawing.Point(116, 128);
             this.cbo_nivelsusario.Name = "cbo_nivelsusario";
             this.cbo_nivelsusario.Size = new System.Drawing.Size(113, 21);
             this.cbo_nivelsusario.TabIndex = 33;
             // 
             // txt_pasusuario
             // 
-            this.txt_pasusuario.Location = new System.Drawing.Point(123, 89);
+            this.txt_pasusuario.Location = new System.Drawing.Point(115, 92);
             this.txt_pasusuario.MaxLength = 20;
             this.txt_pasusuario.Name = "txt_pasusuario";
-            this.txt_pasusuario.Size = new System.Drawing.Size(299, 20);
+            this.txt_pasusuario.Size = new System.Drawing.Size(103, 20);
             this.txt_pasusuario.TabIndex = 32;
             this.txt_pasusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pasusuario_KeyPress);
             // 
             // txt_nombreusuario
             // 
-            this.txt_nombreusuario.Location = new System.Drawing.Point(123, 60);
+            this.txt_nombreusuario.Location = new System.Drawing.Point(116, 60);
             this.txt_nombreusuario.MaxLength = 20;
             this.txt_nombreusuario.Name = "txt_nombreusuario";
             this.txt_nombreusuario.Size = new System.Drawing.Size(299, 20);
@@ -185,7 +207,7 @@
             // 
             this.lbl_nivelusuario.AutoSize = true;
             this.lbl_nivelusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nivelusuario.Location = new System.Drawing.Point(6, 119);
+            this.lbl_nivelusuario.Location = new System.Drawing.Point(6, 128);
             this.lbl_nivelusuario.Name = "lbl_nivelusuario";
             this.lbl_nivelusuario.Size = new System.Drawing.Size(104, 16);
             this.lbl_nivelusuario.TabIndex = 30;
@@ -363,6 +385,7 @@
             this.txt_modificarbuscar.Name = "txt_modificarbuscar";
             this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
             this.txt_modificarbuscar.TabIndex = 48;
+            this.txt_modificarbuscar.TextChanged += new System.EventHandler(this.txt_modificarbuscar_TextChanged);
             // 
             // dgv_modificar
             // 
@@ -371,6 +394,7 @@
             this.dgv_modificar.Name = "dgv_modificar";
             this.dgv_modificar.Size = new System.Drawing.Size(792, 150);
             this.dgv_modificar.TabIndex = 47;
+            this.dgv_modificar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_modificar_CellContentClick);
             // 
             // lbl_modempl
             // 
@@ -558,5 +582,7 @@
         private System.Windows.Forms.TextBox txt_modificarbuscar;
         private System.Windows.Forms.Button btn_buscarmod;
         private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_confirmar;
     }
 }
