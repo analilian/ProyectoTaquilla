@@ -35,6 +35,7 @@
             this.btn_reportes = new System.Windows.Forms.Button();
             this.btn_mantenimientocine = new System.Windows.Forms.Button();
             this.btn_ayuda = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +88,7 @@
             // 
             this.btn_reportes.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
             this.btn_reportes.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reportes.Location = new System.Drawing.Point(508, 106);
+            this.btn_reportes.Location = new System.Drawing.Point(615, 106);
             this.btn_reportes.Name = "btn_reportes";
             this.btn_reportes.Size = new System.Drawing.Size(257, 146);
             this.btn_reportes.TabIndex = 5;
@@ -99,7 +100,7 @@
             // 
             this.btn_mantenimientocine.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
             this.btn_mantenimientocine.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mantenimientocine.Location = new System.Drawing.Point(150, 106);
+            this.btn_mantenimientocine.Location = new System.Drawing.Point(58, 106);
             this.btn_mantenimientocine.Name = "btn_mantenimientocine";
             this.btn_mantenimientocine.Size = new System.Drawing.Size(257, 146);
             this.btn_mantenimientocine.TabIndex = 4;
@@ -120,12 +121,25 @@
             this.btn_ayuda.UseVisualStyleBackColor = false;
             this.btn_ayuda.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.button1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(333, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(257, 146);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "MANTENIMIENTO DE EMPLEADO";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // seleccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(923, 358);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_usuario);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.btn_cerrarsesion);
@@ -151,5 +165,6 @@
         private System.Windows.Forms.Button btn_cerrarsesion;
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.Button btn_usuario;
+        private System.Windows.Forms.Button button1;
     }
 }

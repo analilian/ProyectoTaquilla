@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(butacas));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtprecio = new System.Windows.Forms.TextBox();
             this.btnIraPago = new System.Windows.Forms.Button();
             this.lblValorTotal = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -107,6 +107,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtprecio);
             this.groupBox3.Controls.Add(this.btnIraPago);
             this.groupBox3.Controls.Add(this.lblValorTotal);
             this.groupBox3.Controls.Add(this.lblTotal);
@@ -118,10 +119,19 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pago";
             // 
+            // txtprecio
+            // 
+            this.txtprecio.ForeColor = System.Drawing.Color.Yellow;
+            this.txtprecio.Location = new System.Drawing.Point(126, 60);
+            this.txtprecio.Name = "txtprecio";
+            this.txtprecio.Size = new System.Drawing.Size(100, 20);
+            this.txtprecio.TabIndex = 9;
+            this.txtprecio.TextChanged += new System.EventHandler(this.txtprecio_TextChanged);
+            // 
             // btnIraPago
             // 
             this.btnIraPago.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIraPago.Location = new System.Drawing.Point(91, 68);
+            this.btnIraPago.Location = new System.Drawing.Point(32, 60);
             this.btnIraPago.Name = "btnIraPago";
             this.btnIraPago.Size = new System.Drawing.Size(75, 23);
             this.btnIraPago.TabIndex = 8;
@@ -137,6 +147,7 @@
             this.lblValorTotal.Size = new System.Drawing.Size(45, 13);
             this.lblValorTotal.TabIndex = 7;
             this.lblValorTotal.Text = "Q.00.00";
+            this.lblValorTotal.Click += new System.EventHandler(this.lblValorTotal_Click);
             // 
             // lblTotal
             // 
@@ -366,7 +377,7 @@
             // chkE9
             // 
             this.chkE9.AutoSize = true;
-            this.chkE9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE9.BackgroundImage")));
+            this.chkE9.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE9.Location = new System.Drawing.Point(505, 312);
             this.chkE9.Name = "chkE9";
@@ -374,11 +385,12 @@
             this.chkE9.TabIndex = 45;
             this.chkE9.Text = " \r\n E9    ";
             this.chkE9.UseVisualStyleBackColor = true;
+            this.chkE9.CheckedChanged += new System.EventHandler(this.chkE9_CheckedChanged);
             // 
             // chkE8
             // 
             this.chkE8.AutoSize = true;
-            this.chkE8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE8.BackgroundImage")));
+            this.chkE8.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE8.Location = new System.Drawing.Point(445, 312);
             this.chkE8.Name = "chkE8";
@@ -386,11 +398,12 @@
             this.chkE8.TabIndex = 44;
             this.chkE8.Text = " \r\n E8    ";
             this.chkE8.UseVisualStyleBackColor = true;
+            this.chkE8.CheckedChanged += new System.EventHandler(this.chkE8_CheckedChanged);
             // 
             // chkE7
             // 
             this.chkE7.AutoSize = true;
-            this.chkE7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE7.BackgroundImage")));
+            this.chkE7.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE7.Location = new System.Drawing.Point(385, 312);
             this.chkE7.Name = "chkE7";
@@ -398,11 +411,12 @@
             this.chkE7.TabIndex = 43;
             this.chkE7.Text = " \r\n E7    ";
             this.chkE7.UseVisualStyleBackColor = true;
+            this.chkE7.CheckedChanged += new System.EventHandler(this.chkE7_CheckedChanged);
             // 
             // chkE6
             // 
             this.chkE6.AutoSize = true;
-            this.chkE6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE6.BackgroundImage")));
+            this.chkE6.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE6.Location = new System.Drawing.Point(325, 312);
             this.chkE6.Name = "chkE6";
@@ -410,11 +424,12 @@
             this.chkE6.TabIndex = 42;
             this.chkE6.Text = " \r\n E6    ";
             this.chkE6.UseVisualStyleBackColor = true;
+            this.chkE6.CheckedChanged += new System.EventHandler(this.chkE6_CheckedChanged);
             // 
             // chkE5
             // 
             this.chkE5.AutoSize = true;
-            this.chkE5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE5.BackgroundImage")));
+            this.chkE5.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE5.Location = new System.Drawing.Point(265, 312);
             this.chkE5.Name = "chkE5";
@@ -422,11 +437,12 @@
             this.chkE5.TabIndex = 41;
             this.chkE5.Text = " \r\n E5    ";
             this.chkE5.UseVisualStyleBackColor = true;
+            this.chkE5.CheckedChanged += new System.EventHandler(this.chkE5_CheckedChanged);
             // 
             // chkE4
             // 
             this.chkE4.AutoSize = true;
-            this.chkE4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE4.BackgroundImage")));
+            this.chkE4.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE4.Location = new System.Drawing.Point(205, 312);
             this.chkE4.Name = "chkE4";
@@ -434,11 +450,12 @@
             this.chkE4.TabIndex = 40;
             this.chkE4.Text = " \r\n E4    ";
             this.chkE4.UseVisualStyleBackColor = true;
+            this.chkE4.CheckedChanged += new System.EventHandler(this.chkE4_CheckedChanged);
             // 
             // chkE3
             // 
             this.chkE3.AutoSize = true;
-            this.chkE3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE3.BackgroundImage")));
+            this.chkE3.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE3.Location = new System.Drawing.Point(145, 312);
             this.chkE3.Name = "chkE3";
@@ -446,11 +463,12 @@
             this.chkE3.TabIndex = 39;
             this.chkE3.Text = " \r\n E3    ";
             this.chkE3.UseVisualStyleBackColor = true;
+            this.chkE3.CheckedChanged += new System.EventHandler(this.chkE3_CheckedChanged);
             // 
             // chkE2
             // 
             this.chkE2.AutoSize = true;
-            this.chkE2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE2.BackgroundImage")));
+            this.chkE2.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE2.Location = new System.Drawing.Point(85, 312);
             this.chkE2.Name = "chkE2";
@@ -458,11 +476,12 @@
             this.chkE2.TabIndex = 38;
             this.chkE2.Text = " \r\n E2    ";
             this.chkE2.UseVisualStyleBackColor = true;
+            this.chkE2.CheckedChanged += new System.EventHandler(this.chkE2_CheckedChanged);
             // 
             // chkE1
             // 
             this.chkE1.AutoSize = true;
-            this.chkE1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkE1.BackgroundImage")));
+            this.chkE1.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkE1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkE1.Location = new System.Drawing.Point(25, 312);
             this.chkE1.Name = "chkE1";
@@ -470,11 +489,12 @@
             this.chkE1.TabIndex = 37;
             this.chkE1.Text = " \r\n E1    ";
             this.chkE1.UseVisualStyleBackColor = true;
+            this.chkE1.CheckedChanged += new System.EventHandler(this.chkE1_CheckedChanged);
             // 
             // chkD9
             // 
             this.chkD9.AutoSize = true;
-            this.chkD9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD9.BackgroundImage")));
+            this.chkD9.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD9.Location = new System.Drawing.Point(505, 265);
             this.chkD9.Name = "chkD9";
@@ -482,11 +502,12 @@
             this.chkD9.TabIndex = 36;
             this.chkD9.Text = " \r\n D9    ";
             this.chkD9.UseVisualStyleBackColor = true;
+            this.chkD9.CheckedChanged += new System.EventHandler(this.chkD9_CheckedChanged);
             // 
             // chkD8
             // 
             this.chkD8.AutoSize = true;
-            this.chkD8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD8.BackgroundImage")));
+            this.chkD8.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD8.Location = new System.Drawing.Point(445, 265);
             this.chkD8.Name = "chkD8";
@@ -494,11 +515,12 @@
             this.chkD8.TabIndex = 35;
             this.chkD8.Text = " \r\n D8    ";
             this.chkD8.UseVisualStyleBackColor = true;
+            this.chkD8.CheckedChanged += new System.EventHandler(this.chkD8_CheckedChanged);
             // 
             // chkD7
             // 
             this.chkD7.AutoSize = true;
-            this.chkD7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD7.BackgroundImage")));
+            this.chkD7.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD7.Location = new System.Drawing.Point(385, 265);
             this.chkD7.Name = "chkD7";
@@ -506,11 +528,12 @@
             this.chkD7.TabIndex = 34;
             this.chkD7.Text = " \r\n D7    ";
             this.chkD7.UseVisualStyleBackColor = true;
+            this.chkD7.CheckedChanged += new System.EventHandler(this.chkD7_CheckedChanged);
             // 
             // chkD6
             // 
             this.chkD6.AutoSize = true;
-            this.chkD6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD6.BackgroundImage")));
+            this.chkD6.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD6.Location = new System.Drawing.Point(325, 265);
             this.chkD6.Name = "chkD6";
@@ -518,11 +541,12 @@
             this.chkD6.TabIndex = 33;
             this.chkD6.Text = " \r\n D6    ";
             this.chkD6.UseVisualStyleBackColor = true;
+            this.chkD6.CheckedChanged += new System.EventHandler(this.chkD6_CheckedChanged);
             // 
             // chkD5
             // 
             this.chkD5.AutoSize = true;
-            this.chkD5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD5.BackgroundImage")));
+            this.chkD5.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD5.Location = new System.Drawing.Point(265, 265);
             this.chkD5.Name = "chkD5";
@@ -530,11 +554,12 @@
             this.chkD5.TabIndex = 32;
             this.chkD5.Text = " \r\n D5    ";
             this.chkD5.UseVisualStyleBackColor = true;
+            this.chkD5.CheckedChanged += new System.EventHandler(this.chkD5_CheckedChanged);
             // 
             // chkD4
             // 
             this.chkD4.AutoSize = true;
-            this.chkD4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD4.BackgroundImage")));
+            this.chkD4.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD4.Location = new System.Drawing.Point(205, 265);
             this.chkD4.Name = "chkD4";
@@ -542,11 +567,12 @@
             this.chkD4.TabIndex = 31;
             this.chkD4.Text = " \r\n D4    ";
             this.chkD4.UseVisualStyleBackColor = true;
+            this.chkD4.CheckedChanged += new System.EventHandler(this.chkD4_CheckedChanged);
             // 
             // chkD3
             // 
             this.chkD3.AutoSize = true;
-            this.chkD3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD3.BackgroundImage")));
+            this.chkD3.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD3.Location = new System.Drawing.Point(145, 265);
             this.chkD3.Name = "chkD3";
@@ -554,11 +580,12 @@
             this.chkD3.TabIndex = 30;
             this.chkD3.Text = " \r\n D3    ";
             this.chkD3.UseVisualStyleBackColor = true;
+            this.chkD3.CheckedChanged += new System.EventHandler(this.chkD3_CheckedChanged);
             // 
             // chkD2
             // 
             this.chkD2.AutoSize = true;
-            this.chkD2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD2.BackgroundImage")));
+            this.chkD2.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD2.Location = new System.Drawing.Point(85, 265);
             this.chkD2.Name = "chkD2";
@@ -566,11 +593,12 @@
             this.chkD2.TabIndex = 29;
             this.chkD2.Text = " \r\n D2    ";
             this.chkD2.UseVisualStyleBackColor = true;
+            this.chkD2.CheckedChanged += new System.EventHandler(this.chkD2_CheckedChanged);
             // 
             // chkD1
             // 
             this.chkD1.AutoSize = true;
-            this.chkD1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkD1.BackgroundImage")));
+            this.chkD1.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkD1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkD1.Location = new System.Drawing.Point(25, 265);
             this.chkD1.Name = "chkD1";
@@ -578,11 +606,12 @@
             this.chkD1.TabIndex = 28;
             this.chkD1.Text = " \r\n D1    ";
             this.chkD1.UseVisualStyleBackColor = true;
+            this.chkD1.CheckedChanged += new System.EventHandler(this.chkD1_CheckedChanged);
             // 
             // chkC9
             // 
             this.chkC9.AutoSize = true;
-            this.chkC9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC9.BackgroundImage")));
+            this.chkC9.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC9.Location = new System.Drawing.Point(505, 218);
             this.chkC9.Name = "chkC9";
@@ -590,11 +619,12 @@
             this.chkC9.TabIndex = 27;
             this.chkC9.Text = " \r\n C9    ";
             this.chkC9.UseVisualStyleBackColor = true;
+            this.chkC9.CheckedChanged += new System.EventHandler(this.chkC9_CheckedChanged);
             // 
             // chkC8
             // 
             this.chkC8.AutoSize = true;
-            this.chkC8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC8.BackgroundImage")));
+            this.chkC8.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC8.Location = new System.Drawing.Point(445, 218);
             this.chkC8.Name = "chkC8";
@@ -602,11 +632,12 @@
             this.chkC8.TabIndex = 26;
             this.chkC8.Text = " \r\n C8    ";
             this.chkC8.UseVisualStyleBackColor = true;
+            this.chkC8.CheckedChanged += new System.EventHandler(this.chkC8_CheckedChanged);
             // 
             // chkC7
             // 
             this.chkC7.AutoSize = true;
-            this.chkC7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC7.BackgroundImage")));
+            this.chkC7.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC7.Location = new System.Drawing.Point(385, 218);
             this.chkC7.Name = "chkC7";
@@ -614,11 +645,12 @@
             this.chkC7.TabIndex = 25;
             this.chkC7.Text = " \r\n C7    ";
             this.chkC7.UseVisualStyleBackColor = true;
+            this.chkC7.CheckedChanged += new System.EventHandler(this.chkC7_CheckedChanged);
             // 
             // chkC6
             // 
             this.chkC6.AutoSize = true;
-            this.chkC6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC6.BackgroundImage")));
+            this.chkC6.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC6.Location = new System.Drawing.Point(325, 218);
             this.chkC6.Name = "chkC6";
@@ -626,11 +658,12 @@
             this.chkC6.TabIndex = 24;
             this.chkC6.Text = " \r\n C6    ";
             this.chkC6.UseVisualStyleBackColor = true;
+            this.chkC6.CheckedChanged += new System.EventHandler(this.chkC6_CheckedChanged);
             // 
             // chkC5
             // 
             this.chkC5.AutoSize = true;
-            this.chkC5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC5.BackgroundImage")));
+            this.chkC5.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC5.Location = new System.Drawing.Point(265, 218);
             this.chkC5.Name = "chkC5";
@@ -638,11 +671,12 @@
             this.chkC5.TabIndex = 23;
             this.chkC5.Text = " \r\n C5    ";
             this.chkC5.UseVisualStyleBackColor = true;
+            this.chkC5.CheckedChanged += new System.EventHandler(this.chkC5_CheckedChanged);
             // 
             // chkC4
             // 
             this.chkC4.AutoSize = true;
-            this.chkC4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC4.BackgroundImage")));
+            this.chkC4.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC4.Location = new System.Drawing.Point(205, 218);
             this.chkC4.Name = "chkC4";
@@ -650,11 +684,12 @@
             this.chkC4.TabIndex = 22;
             this.chkC4.Text = " \r\n C4    ";
             this.chkC4.UseVisualStyleBackColor = true;
+            this.chkC4.CheckedChanged += new System.EventHandler(this.chkC4_CheckedChanged);
             // 
             // chkC3
             // 
             this.chkC3.AutoSize = true;
-            this.chkC3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC3.BackgroundImage")));
+            this.chkC3.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC3.Location = new System.Drawing.Point(145, 218);
             this.chkC3.Name = "chkC3";
@@ -662,11 +697,12 @@
             this.chkC3.TabIndex = 21;
             this.chkC3.Text = " \r\n C3    ";
             this.chkC3.UseVisualStyleBackColor = true;
+            this.chkC3.CheckedChanged += new System.EventHandler(this.chkC3_CheckedChanged);
             // 
             // chkC2
             // 
             this.chkC2.AutoSize = true;
-            this.chkC2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC2.BackgroundImage")));
+            this.chkC2.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC2.Location = new System.Drawing.Point(85, 218);
             this.chkC2.Name = "chkC2";
@@ -674,11 +710,12 @@
             this.chkC2.TabIndex = 20;
             this.chkC2.Text = " \r\n C2    ";
             this.chkC2.UseVisualStyleBackColor = true;
+            this.chkC2.CheckedChanged += new System.EventHandler(this.chkC2_CheckedChanged);
             // 
             // chkC1
             // 
             this.chkC1.AutoSize = true;
-            this.chkC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkC1.BackgroundImage")));
+            this.chkC1.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkC1.Location = new System.Drawing.Point(25, 218);
             this.chkC1.Name = "chkC1";
@@ -686,11 +723,12 @@
             this.chkC1.TabIndex = 19;
             this.chkC1.Text = " \r\n C1    ";
             this.chkC1.UseVisualStyleBackColor = true;
+            this.chkC1.CheckedChanged += new System.EventHandler(this.chkC1_CheckedChanged);
             // 
             // chkB9
             // 
             this.chkB9.AutoSize = true;
-            this.chkB9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB9.BackgroundImage")));
+            this.chkB9.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB9.Location = new System.Drawing.Point(505, 167);
             this.chkB9.Name = "chkB9";
@@ -698,11 +736,12 @@
             this.chkB9.TabIndex = 18;
             this.chkB9.Text = " \r\n B9    ";
             this.chkB9.UseVisualStyleBackColor = true;
+            this.chkB9.CheckedChanged += new System.EventHandler(this.chkB9_CheckedChanged);
             // 
             // chkB8
             // 
             this.chkB8.AutoSize = true;
-            this.chkB8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB8.BackgroundImage")));
+            this.chkB8.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB8.Location = new System.Drawing.Point(445, 167);
             this.chkB8.Name = "chkB8";
@@ -710,11 +749,12 @@
             this.chkB8.TabIndex = 17;
             this.chkB8.Text = " \r\n B8    ";
             this.chkB8.UseVisualStyleBackColor = true;
+            this.chkB8.CheckedChanged += new System.EventHandler(this.chkB8_CheckedChanged);
             // 
             // chkB7
             // 
             this.chkB7.AutoSize = true;
-            this.chkB7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB7.BackgroundImage")));
+            this.chkB7.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB7.Location = new System.Drawing.Point(385, 167);
             this.chkB7.Name = "chkB7";
@@ -722,11 +762,12 @@
             this.chkB7.TabIndex = 16;
             this.chkB7.Text = " \r\n B7    ";
             this.chkB7.UseVisualStyleBackColor = true;
+            this.chkB7.CheckedChanged += new System.EventHandler(this.chkB7_CheckedChanged);
             // 
             // chkB6
             // 
             this.chkB6.AutoSize = true;
-            this.chkB6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB6.BackgroundImage")));
+            this.chkB6.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB6.Location = new System.Drawing.Point(325, 167);
             this.chkB6.Name = "chkB6";
@@ -734,11 +775,12 @@
             this.chkB6.TabIndex = 15;
             this.chkB6.Text = " \r\n B6    ";
             this.chkB6.UseVisualStyleBackColor = true;
+            this.chkB6.CheckedChanged += new System.EventHandler(this.chkB6_CheckedChanged);
             // 
             // chkB5
             // 
             this.chkB5.AutoSize = true;
-            this.chkB5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB5.BackgroundImage")));
+            this.chkB5.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB5.Location = new System.Drawing.Point(265, 167);
             this.chkB5.Name = "chkB5";
@@ -746,11 +788,12 @@
             this.chkB5.TabIndex = 14;
             this.chkB5.Text = " \r\n B5    ";
             this.chkB5.UseVisualStyleBackColor = true;
+            this.chkB5.CheckedChanged += new System.EventHandler(this.chkB5_CheckedChanged);
             // 
             // chkB4
             // 
             this.chkB4.AutoSize = true;
-            this.chkB4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB4.BackgroundImage")));
+            this.chkB4.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB4.Location = new System.Drawing.Point(205, 167);
             this.chkB4.Name = "chkB4";
@@ -758,11 +801,12 @@
             this.chkB4.TabIndex = 13;
             this.chkB4.Text = " \r\n B4    ";
             this.chkB4.UseVisualStyleBackColor = true;
+            this.chkB4.CheckedChanged += new System.EventHandler(this.chkB4_CheckedChanged);
             // 
             // chkB3
             // 
             this.chkB3.AutoSize = true;
-            this.chkB3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB3.BackgroundImage")));
+            this.chkB3.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB3.Location = new System.Drawing.Point(145, 167);
             this.chkB3.Name = "chkB3";
@@ -770,11 +814,12 @@
             this.chkB3.TabIndex = 12;
             this.chkB3.Text = " \r\n B3    ";
             this.chkB3.UseVisualStyleBackColor = true;
+            this.chkB3.CheckedChanged += new System.EventHandler(this.chkB3_CheckedChanged);
             // 
             // chkB2
             // 
             this.chkB2.AutoSize = true;
-            this.chkB2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB2.BackgroundImage")));
+            this.chkB2.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB2.Location = new System.Drawing.Point(85, 167);
             this.chkB2.Name = "chkB2";
@@ -782,11 +827,12 @@
             this.chkB2.TabIndex = 11;
             this.chkB2.Text = " \r\n B2    ";
             this.chkB2.UseVisualStyleBackColor = true;
+            this.chkB2.CheckedChanged += new System.EventHandler(this.chkB2_CheckedChanged);
             // 
             // chkB1
             // 
             this.chkB1.AutoSize = true;
-            this.chkB1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkB1.BackgroundImage")));
+            this.chkB1.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkB1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkB1.Location = new System.Drawing.Point(25, 167);
             this.chkB1.Name = "chkB1";
@@ -794,11 +840,12 @@
             this.chkB1.TabIndex = 10;
             this.chkB1.Text = " \r\n B1    ";
             this.chkB1.UseVisualStyleBackColor = true;
+            this.chkB1.CheckedChanged += new System.EventHandler(this.chkB1_CheckedChanged);
             // 
             // chkA9
             // 
             this.chkA9.AutoSize = true;
-            this.chkA9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA9.BackgroundImage")));
+            this.chkA9.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA9.Location = new System.Drawing.Point(505, 119);
             this.chkA9.Name = "chkA9";
@@ -806,11 +853,12 @@
             this.chkA9.TabIndex = 9;
             this.chkA9.Text = " \r\n A9    ";
             this.chkA9.UseVisualStyleBackColor = true;
+            this.chkA9.CheckedChanged += new System.EventHandler(this.chkA9_CheckedChanged);
             // 
             // chkA8
             // 
             this.chkA8.AutoSize = true;
-            this.chkA8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA8.BackgroundImage")));
+            this.chkA8.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA8.Location = new System.Drawing.Point(445, 119);
             this.chkA8.Name = "chkA8";
@@ -818,11 +866,12 @@
             this.chkA8.TabIndex = 8;
             this.chkA8.Text = " \r\n A8    ";
             this.chkA8.UseVisualStyleBackColor = true;
+            this.chkA8.CheckedChanged += new System.EventHandler(this.chkA8_CheckedChanged);
             // 
             // chkA7
             // 
             this.chkA7.AutoSize = true;
-            this.chkA7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA7.BackgroundImage")));
+            this.chkA7.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA7.Location = new System.Drawing.Point(385, 119);
             this.chkA7.Name = "chkA7";
@@ -830,11 +879,12 @@
             this.chkA7.TabIndex = 7;
             this.chkA7.Text = " \r\n A7    ";
             this.chkA7.UseVisualStyleBackColor = true;
+            this.chkA7.CheckedChanged += new System.EventHandler(this.chkA7_CheckedChanged);
             // 
             // chkA6
             // 
             this.chkA6.AutoSize = true;
-            this.chkA6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA6.BackgroundImage")));
+            this.chkA6.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA6.Location = new System.Drawing.Point(325, 119);
             this.chkA6.Name = "chkA6";
@@ -842,11 +892,12 @@
             this.chkA6.TabIndex = 6;
             this.chkA6.Text = " \r\n A6    ";
             this.chkA6.UseVisualStyleBackColor = true;
+            this.chkA6.CheckedChanged += new System.EventHandler(this.chkA6_CheckedChanged);
             // 
             // chkA5
             // 
             this.chkA5.AutoSize = true;
-            this.chkA5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA5.BackgroundImage")));
+            this.chkA5.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA5.Location = new System.Drawing.Point(265, 119);
             this.chkA5.Name = "chkA5";
@@ -854,11 +905,12 @@
             this.chkA5.TabIndex = 5;
             this.chkA5.Text = " \r\n A5    ";
             this.chkA5.UseVisualStyleBackColor = true;
+            this.chkA5.CheckedChanged += new System.EventHandler(this.chkA5_CheckedChanged);
             // 
             // chkA4
             // 
             this.chkA4.AutoSize = true;
-            this.chkA4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA4.BackgroundImage")));
+            this.chkA4.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA4.Location = new System.Drawing.Point(205, 119);
             this.chkA4.Name = "chkA4";
@@ -866,11 +918,12 @@
             this.chkA4.TabIndex = 4;
             this.chkA4.Text = " \r\n A4    ";
             this.chkA4.UseVisualStyleBackColor = true;
+            this.chkA4.CheckedChanged += new System.EventHandler(this.chkA4_CheckedChanged);
             // 
             // chkA3
             // 
             this.chkA3.AutoSize = true;
-            this.chkA3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA3.BackgroundImage")));
+            this.chkA3.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA3.Location = new System.Drawing.Point(145, 119);
             this.chkA3.Name = "chkA3";
@@ -878,11 +931,12 @@
             this.chkA3.TabIndex = 3;
             this.chkA3.Text = " \r\n A3    ";
             this.chkA3.UseVisualStyleBackColor = true;
+            this.chkA3.CheckedChanged += new System.EventHandler(this.chkA3_CheckedChanged);
             // 
             // chkA2
             // 
             this.chkA2.AutoSize = true;
-            this.chkA2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA2.BackgroundImage")));
+            this.chkA2.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA2.Location = new System.Drawing.Point(85, 119);
             this.chkA2.Name = "chkA2";
@@ -890,6 +944,7 @@
             this.chkA2.TabIndex = 2;
             this.chkA2.Text = " \r\n A2    ";
             this.chkA2.UseVisualStyleBackColor = true;
+            this.chkA2.CheckedChanged += new System.EventHandler(this.chkA2_CheckedChanged);
             // 
             // picPantalla
             // 
@@ -903,7 +958,7 @@
             // chkA1
             // 
             this.chkA1.AutoSize = true;
-            this.chkA1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chkA1.BackgroundImage")));
+            this.chkA1.BackgroundImage = global::proyectotaquilla.Properties.Resources.gris;
             this.chkA1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.chkA1.Location = new System.Drawing.Point(25, 119);
             this.chkA1.Name = "chkA1";
@@ -911,6 +966,7 @@
             this.chkA1.TabIndex = 0;
             this.chkA1.Text = " \r\n A1    ";
             this.chkA1.UseVisualStyleBackColor = true;
+            this.chkA1.CheckedChanged += new System.EventHandler(this.chkA1_CheckedChanged);
             // 
             // butacas
             // 
@@ -1008,6 +1064,7 @@
         private System.Windows.Forms.CheckBox chkA2;
         private System.Windows.Forms.PictureBox picPantalla;
         private System.Windows.Forms.CheckBox chkA1;
+        private System.Windows.Forms.TextBox txtprecio;
 
     }
 }
