@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_buscarmod = new System.Windows.Forms.Button();
             this.lbl_buscar = new System.Windows.Forms.Label();
             this.txt_modificarbuscar = new System.Windows.Forms.TextBox();
             this.dgv_modificar_pelicula = new System.Windows.Forms.DataGridView();
@@ -57,8 +58,20 @@
             this.lbl_mod_portada = new System.Windows.Forms.Label();
             this.lbl_mod_nombre = new System.Windows.Forms.Label();
             this.lbl_mod = new System.Windows.Forms.Label();
+            this.pic_mod_portada = new System.Windows.Forms.PictureBox();
+            this.btn_portada1 = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_extraer = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_agregar_btn_agregar_categoria = new System.Windows.Forms.Button();
+            this.btn_agregar_clasificacion = new System.Windows.Forms.Button();
+            this.btn_agregar_horario = new System.Windows.Forms.Button();
             this.dgv_insertar = new System.Windows.Forms.DataGridView();
+            this.pic_portada = new System.Windows.Forms.PictureBox();
+            this.btn_portada = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
             this.txt_descrip = new System.Windows.Forms.TextBox();
             this.cbo_fecha = new System.Windows.Forms.ComboBox();
             this.cbo_cine = new System.Windows.Forms.ComboBox();
@@ -85,39 +98,26 @@
             this.lbl_agregar = new System.Windows.Forms.Label();
             this.tbc_mantenimiento_cine = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_borrar = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_buscar_pelicula = new System.Windows.Forms.DataGridView();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_regresar = new System.Windows.Forms.Button();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_agregar_btn_agregar_categoria = new System.Windows.Forms.Button();
-            this.btn_agregar_clasificacion = new System.Windows.Forms.Button();
-            this.btn_agregar_horario = new System.Windows.Forms.Button();
-            this.pic_portada = new System.Windows.Forms.PictureBox();
-            this.btn_portada = new System.Windows.Forms.Button();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.btn_buscarmod = new System.Windows.Forms.Button();
-            this.pic_mod_portada = new System.Windows.Forms.PictureBox();
-            this.btn_portada1 = new System.Windows.Forms.Button();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_extraer = new System.Windows.Forms.Button();
-            this.btn_borrar = new System.Windows.Forms.Button();
-            this.btn_buscar = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_portada)).BeginInit();
             this.tbc_mantenimiento_cine.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_portada)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -163,6 +163,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar Película";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // btn_buscarmod
+            // 
+            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarmod.Location = new System.Drawing.Point(530, 277);
+            this.btn_buscarmod.Name = "btn_buscarmod";
+            this.btn_buscarmod.Size = new System.Drawing.Size(42, 48);
+            this.btn_buscarmod.TabIndex = 82;
+            this.toolTip1.SetToolTip(this.btn_buscarmod, "buscar");
+            this.btn_buscarmod.UseVisualStyleBackColor = true;
+            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
             // 
             // lbl_buscar
             // 
@@ -412,6 +424,50 @@
             this.lbl_mod.TabIndex = 17;
             this.lbl_mod.Text = "MODIFICAR PELÍCULA";
             // 
+            // pic_mod_portada
+            // 
+            this.pic_mod_portada.Location = new System.Drawing.Point(695, 92);
+            this.pic_mod_portada.Name = "pic_mod_portada";
+            this.pic_mod_portada.Size = new System.Drawing.Size(136, 158);
+            this.pic_mod_portada.TabIndex = 79;
+            this.pic_mod_portada.TabStop = false;
+            // 
+            // btn_portada1
+            // 
+            this.btn_portada1.BackgroundImage = global::cinepolis.Properties.Resources.cine_1;
+            this.btn_portada1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_portada1.Location = new System.Drawing.Point(726, 272);
+            this.btn_portada1.Name = "btn_portada1";
+            this.btn_portada1.Size = new System.Drawing.Size(82, 55);
+            this.btn_portada1.TabIndex = 78;
+            this.toolTip1.SetToolTip(this.btn_portada1, "Importar imagen");
+            this.btn_portada1.UseVisualStyleBackColor = true;
+            this.btn_portada1.Click += new System.EventHandler(this.btn_portada1_Click);
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
+            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_actualizar.Location = new System.Drawing.Point(578, 277);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(48, 48);
+            this.btn_actualizar.TabIndex = 76;
+            this.toolTip1.SetToolTip(this.btn_actualizar, "actualizar");
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btn_extraer
+            // 
+            this.btn_extraer.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
+            this.btn_extraer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_extraer.Location = new System.Drawing.Point(632, 277);
+            this.btn_extraer.Name = "btn_extraer";
+            this.btn_extraer.Size = new System.Drawing.Size(45, 50);
+            this.btn_extraer.TabIndex = 75;
+            this.toolTip1.SetToolTip(this.btn_extraer, "Reguardar");
+            this.btn_extraer.UseVisualStyleBackColor = true;
+            this.btn_extraer.Click += new System.EventHandler(this.btn_extraer_Click);
+            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -456,6 +512,66 @@
             this.tabPage1.Text = "Agregar Película";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(298, 128);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(31, 24);
+            this.button2.TabIndex = 86;
+            this.toolTip1.SetToolTip(this.button2, "Agregar Sala");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(610, 72);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 24);
+            this.button1.TabIndex = 85;
+            this.toolTip1.SetToolTip(this.button1, "Agregar Cine");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // btn_agregar_btn_agregar_categoria
+            // 
+            this.btn_agregar_btn_agregar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_btn_agregar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_btn_agregar_categoria.Location = new System.Drawing.Point(609, 44);
+            this.btn_agregar_btn_agregar_categoria.Name = "btn_agregar_btn_agregar_categoria";
+            this.btn_agregar_btn_agregar_categoria.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_btn_agregar_categoria.TabIndex = 84;
+            this.toolTip1.SetToolTip(this.btn_agregar_btn_agregar_categoria, "Agregar Categoria");
+            this.btn_agregar_btn_agregar_categoria.UseVisualStyleBackColor = true;
+            this.btn_agregar_btn_agregar_categoria.Click += new System.EventHandler(this.btn_agregar_btn_agregar_categoria_Click);
+            // 
+            // btn_agregar_clasificacion
+            // 
+            this.btn_agregar_clasificacion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_clasificacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_clasificacion.Location = new System.Drawing.Point(298, 206);
+            this.btn_agregar_clasificacion.Name = "btn_agregar_clasificacion";
+            this.btn_agregar_clasificacion.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_clasificacion.TabIndex = 83;
+            this.toolTip1.SetToolTip(this.btn_agregar_clasificacion, "Agregar Clasificacion");
+            this.btn_agregar_clasificacion.UseVisualStyleBackColor = true;
+            this.btn_agregar_clasificacion.Click += new System.EventHandler(this.btn_agregar_clasificacion_Click);
+            // 
+            // btn_agregar_horario
+            // 
+            this.btn_agregar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_horario.Location = new System.Drawing.Point(298, 71);
+            this.btn_agregar_horario.Name = "btn_agregar_horario";
+            this.btn_agregar_horario.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_horario.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.btn_agregar_horario, "Agregar Horario");
+            this.btn_agregar_horario.UseVisualStyleBackColor = true;
+            this.btn_agregar_horario.Click += new System.EventHandler(this.btn_agregar_horario_Click);
+            // 
             // dgv_insertar
             // 
             this.dgv_insertar.AllowUserToAddRows = false;
@@ -466,6 +582,40 @@
             this.dgv_insertar.ReadOnly = true;
             this.dgv_insertar.Size = new System.Drawing.Size(701, 131);
             this.dgv_insertar.TabIndex = 82;
+            // 
+            // pic_portada
+            // 
+            this.pic_portada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pic_portada.Location = new System.Drawing.Point(715, 66);
+            this.pic_portada.Name = "pic_portada";
+            this.pic_portada.Size = new System.Drawing.Size(119, 127);
+            this.pic_portada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_portada.TabIndex = 80;
+            this.pic_portada.TabStop = false;
+            // 
+            // btn_portada
+            // 
+            this.btn_portada.BackgroundImage = global::cinepolis.Properties.Resources.cine_1;
+            this.btn_portada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_portada.Location = new System.Drawing.Point(736, 199);
+            this.btn_portada.Name = "btn_portada";
+            this.btn_portada.Size = new System.Drawing.Size(87, 33);
+            this.btn_portada.TabIndex = 53;
+            this.toolTip1.SetToolTip(this.btn_portada, "Importar imagen");
+            this.btn_portada.UseVisualStyleBackColor = true;
+            this.btn_portada.Click += new System.EventHandler(this.btn_portada_Click);
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
+            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_guardar.Location = new System.Drawing.Point(763, 265);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(90, 73);
+            this.btn_guardar.TabIndex = 52;
+            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // txt_descrip
             // 
@@ -713,224 +863,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Borrar Película";
             // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Location = new System.Drawing.Point(227, 66);
-            this.txt_buscar.MaxLength = 100;
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(276, 20);
-            this.txt_buscar.TabIndex = 20;
-            // 
-            // lbl_codigo_buscar
-            // 
-            this.lbl_codigo_buscar.AutoSize = true;
-            this.lbl_codigo_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo_buscar.Location = new System.Drawing.Point(57, 65);
-            this.lbl_codigo_buscar.Name = "lbl_codigo_buscar";
-            this.lbl_codigo_buscar.Size = new System.Drawing.Size(154, 21);
-            this.lbl_codigo_buscar.TabIndex = 19;
-            this.lbl_codigo_buscar.Text = "Codigo Busqueda:";
-            // 
-            // dgv_buscar_pelicula
-            // 
-            this.dgv_buscar_pelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_buscar_pelicula.Location = new System.Drawing.Point(16, 138);
-            this.dgv_buscar_pelicula.Name = "dgv_buscar_pelicula";
-            this.dgv_buscar_pelicula.Size = new System.Drawing.Size(825, 228);
-            this.dgv_buscar_pelicula.TabIndex = 0;
-            // 
-            // lbl_titulo_mantenimiento_cine
-            // 
-            this.lbl_titulo_mantenimiento_cine.AutoSize = true;
-            this.lbl_titulo_mantenimiento_cine.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(269, 9);
-            this.lbl_titulo_mantenimiento_cine.Name = "lbl_titulo_mantenimiento_cine";
-            this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(387, 36);
-            this.lbl_titulo_mantenimiento_cine.TabIndex = 1;
-            this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE CINE ";
-            // 
-            // pic_logo
-            // 
-            this.pic_logo.BackgroundImage = global::cinepolis.Properties.Resources._13672487_10208834486171149_1624040466_n;
-            this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_logo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pic_logo.Location = new System.Drawing.Point(794, 9);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(94, 72);
-            this.pic_logo.TabIndex = 11;
-            this.pic_logo.TabStop = false;
-            // 
-            // btn_regresar
-            // 
-            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.volver;
-            this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_regresar.Location = new System.Drawing.Point(12, 41);
-            this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(57, 40);
-            this.btn_regresar.TabIndex = 9;
-            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
-            this.btn_regresar.UseVisualStyleBackColor = true;
-            this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btn_cerrarsesion
-            // 
-            this.btn_cerrarsesion.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.btn_cerrarsesion.Location = new System.Drawing.Point(12, 12);
-            this.btn_cerrarsesion.Name = "btn_cerrarsesion";
-            this.btn_cerrarsesion.Size = new System.Drawing.Size(94, 23);
-            this.btn_cerrarsesion.TabIndex = 2;
-            this.btn_cerrarsesion.Text = "Cerrar Sesión";
-            this.btn_cerrarsesion.UseVisualStyleBackColor = true;
-            this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(298, 128);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 24);
-            this.button2.TabIndex = 86;
-            this.toolTip1.SetToolTip(this.button2, "Agregar Sala");
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(610, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 24);
-            this.button1.TabIndex = 85;
-            this.toolTip1.SetToolTip(this.button1, "Agregar Cine");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // btn_agregar_btn_agregar_categoria
-            // 
-            this.btn_agregar_btn_agregar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.btn_agregar_btn_agregar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_btn_agregar_categoria.Location = new System.Drawing.Point(609, 44);
-            this.btn_agregar_btn_agregar_categoria.Name = "btn_agregar_btn_agregar_categoria";
-            this.btn_agregar_btn_agregar_categoria.Size = new System.Drawing.Size(31, 24);
-            this.btn_agregar_btn_agregar_categoria.TabIndex = 84;
-            this.toolTip1.SetToolTip(this.btn_agregar_btn_agregar_categoria, "Agregar Categoria");
-            this.btn_agregar_btn_agregar_categoria.UseVisualStyleBackColor = true;
-            this.btn_agregar_btn_agregar_categoria.Click += new System.EventHandler(this.btn_agregar_btn_agregar_categoria_Click);
-            // 
-            // btn_agregar_clasificacion
-            // 
-            this.btn_agregar_clasificacion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.btn_agregar_clasificacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_clasificacion.Location = new System.Drawing.Point(298, 206);
-            this.btn_agregar_clasificacion.Name = "btn_agregar_clasificacion";
-            this.btn_agregar_clasificacion.Size = new System.Drawing.Size(31, 24);
-            this.btn_agregar_clasificacion.TabIndex = 83;
-            this.toolTip1.SetToolTip(this.btn_agregar_clasificacion, "Agregar Clasificacion");
-            this.btn_agregar_clasificacion.UseVisualStyleBackColor = true;
-            this.btn_agregar_clasificacion.Click += new System.EventHandler(this.btn_agregar_clasificacion_Click);
-            // 
-            // btn_agregar_horario
-            // 
-            this.btn_agregar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.btn_agregar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_horario.Location = new System.Drawing.Point(298, 71);
-            this.btn_agregar_horario.Name = "btn_agregar_horario";
-            this.btn_agregar_horario.Size = new System.Drawing.Size(31, 24);
-            this.btn_agregar_horario.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.btn_agregar_horario, "Agregar Horario");
-            this.btn_agregar_horario.UseVisualStyleBackColor = true;
-            this.btn_agregar_horario.Click += new System.EventHandler(this.btn_agregar_horario_Click);
-            // 
-            // pic_portada
-            // 
-            this.pic_portada.Location = new System.Drawing.Point(715, 66);
-            this.pic_portada.Name = "pic_portada";
-            this.pic_portada.Size = new System.Drawing.Size(119, 127);
-            this.pic_portada.TabIndex = 80;
-            this.pic_portada.TabStop = false;
-            // 
-            // btn_portada
-            // 
-            this.btn_portada.BackgroundImage = global::cinepolis.Properties.Resources.cine_1;
-            this.btn_portada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_portada.Location = new System.Drawing.Point(736, 199);
-            this.btn_portada.Name = "btn_portada";
-            this.btn_portada.Size = new System.Drawing.Size(87, 33);
-            this.btn_portada.TabIndex = 53;
-            this.toolTip1.SetToolTip(this.btn_portada, "Importar imagen");
-            this.btn_portada.UseVisualStyleBackColor = true;
-            this.btn_portada.Click += new System.EventHandler(this.btn_portada_Click);
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
-            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(763, 265);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(90, 73);
-            this.btn_guardar.TabIndex = 52;
-            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
-            // 
-            // btn_buscarmod
-            // 
-            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
-            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarmod.Location = new System.Drawing.Point(530, 277);
-            this.btn_buscarmod.Name = "btn_buscarmod";
-            this.btn_buscarmod.Size = new System.Drawing.Size(42, 48);
-            this.btn_buscarmod.TabIndex = 82;
-            this.toolTip1.SetToolTip(this.btn_buscarmod, "buscar");
-            this.btn_buscarmod.UseVisualStyleBackColor = true;
-            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
-            // 
-            // pic_mod_portada
-            // 
-            this.pic_mod_portada.Location = new System.Drawing.Point(695, 92);
-            this.pic_mod_portada.Name = "pic_mod_portada";
-            this.pic_mod_portada.Size = new System.Drawing.Size(136, 158);
-            this.pic_mod_portada.TabIndex = 79;
-            this.pic_mod_portada.TabStop = false;
-            // 
-            // btn_portada1
-            // 
-            this.btn_portada1.BackgroundImage = global::cinepolis.Properties.Resources.cine_1;
-            this.btn_portada1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_portada1.Location = new System.Drawing.Point(726, 272);
-            this.btn_portada1.Name = "btn_portada1";
-            this.btn_portada1.Size = new System.Drawing.Size(82, 55);
-            this.btn_portada1.TabIndex = 78;
-            this.toolTip1.SetToolTip(this.btn_portada1, "Importar imagen");
-            this.btn_portada1.UseVisualStyleBackColor = true;
-            this.btn_portada1.Click += new System.EventHandler(this.btn_portada1_Click);
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
-            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(578, 277);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(48, 48);
-            this.btn_actualizar.TabIndex = 76;
-            this.toolTip1.SetToolTip(this.btn_actualizar, "actualizar");
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
-            // 
-            // btn_extraer
-            // 
-            this.btn_extraer.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
-            this.btn_extraer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_extraer.Location = new System.Drawing.Point(632, 277);
-            this.btn_extraer.Name = "btn_extraer";
-            this.btn_extraer.Size = new System.Drawing.Size(45, 50);
-            this.btn_extraer.TabIndex = 75;
-            this.toolTip1.SetToolTip(this.btn_extraer, "Reguardar");
-            this.btn_extraer.UseVisualStyleBackColor = true;
-            this.btn_extraer.Click += new System.EventHandler(this.btn_extraer_Click);
-            // 
             // btn_borrar
             // 
             this.btn_borrar.BackgroundImage = global::cinepolis.Properties.Resources.borrar;
@@ -955,6 +887,79 @@
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
+            // txt_buscar
+            // 
+            this.txt_buscar.Location = new System.Drawing.Point(227, 66);
+            this.txt_buscar.MaxLength = 100;
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(276, 20);
+            this.txt_buscar.TabIndex = 20;
+            // 
+            // lbl_codigo_buscar
+            // 
+            this.lbl_codigo_buscar.AutoSize = true;
+            this.lbl_codigo_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigo_buscar.Location = new System.Drawing.Point(57, 65);
+            this.lbl_codigo_buscar.Name = "lbl_codigo_buscar";
+            this.lbl_codigo_buscar.Size = new System.Drawing.Size(154, 21);
+            this.lbl_codigo_buscar.TabIndex = 19;
+            this.lbl_codigo_buscar.Text = "Codigo Busqueda:";
+            // 
+            // dgv_buscar_pelicula
+            // 
+            this.dgv_buscar_pelicula.AllowUserToAddRows = false;
+            this.dgv_buscar_pelicula.AllowUserToDeleteRows = false;
+            this.dgv_buscar_pelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_buscar_pelicula.Location = new System.Drawing.Point(16, 138);
+            this.dgv_buscar_pelicula.Name = "dgv_buscar_pelicula";
+            this.dgv_buscar_pelicula.ReadOnly = true;
+            this.dgv_buscar_pelicula.Size = new System.Drawing.Size(825, 228);
+            this.dgv_buscar_pelicula.TabIndex = 0;
+            // 
+            // lbl_titulo_mantenimiento_cine
+            // 
+            this.lbl_titulo_mantenimiento_cine.AutoSize = true;
+            this.lbl_titulo_mantenimiento_cine.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(269, 9);
+            this.lbl_titulo_mantenimiento_cine.Name = "lbl_titulo_mantenimiento_cine";
+            this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(387, 36);
+            this.lbl_titulo_mantenimiento_cine.TabIndex = 1;
+            this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE CINE ";
+            // 
+            // btn_regresar
+            // 
+            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.volver;
+            this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_regresar.Location = new System.Drawing.Point(12, 41);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(57, 40);
+            this.btn_regresar.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
+            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.BackgroundImage = global::cinepolis.Properties.Resources._13672487_10208834486171149_1624040466_n;
+            this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pic_logo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pic_logo.Location = new System.Drawing.Point(794, 9);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(94, 72);
+            this.pic_logo.TabIndex = 11;
+            this.pic_logo.TabStop = false;
+            // 
+            // btn_cerrarsesion
+            // 
+            this.btn_cerrarsesion.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_cerrarsesion.Location = new System.Drawing.Point(12, 12);
+            this.btn_cerrarsesion.Name = "btn_cerrarsesion";
+            this.btn_cerrarsesion.Size = new System.Drawing.Size(94, 23);
+            this.btn_cerrarsesion.TabIndex = 2;
+            this.btn_cerrarsesion.Text = "Cerrar Sesión";
+            this.btn_cerrarsesion.UseVisualStyleBackColor = true;
+            this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
+            // 
             // mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -972,16 +977,16 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_portada)).EndInit();
             this.tbc_mantenimiento_cine.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_portada)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

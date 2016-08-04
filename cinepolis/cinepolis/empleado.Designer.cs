@@ -34,28 +34,32 @@
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbl_agregar = new System.Windows.Forms.Label();
-            this.lbl_nombre = new System.Windows.Forms.Label();
-            this.txt_nombre1 = new System.Windows.Forms.TextBox();
-            this.txt_nombre2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.txt_fecha_nac = new System.Windows.Forms.TextBox();
+            this.lbl_cine = new System.Windows.Forms.Label();
+            this.cbo_puesto = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_nit = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_dpi = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_direccion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txt_apellido2 = new System.Windows.Forms.TextBox();
             this.txt_apellido1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_direccion = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_dpi = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_nit = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbo_puesto = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt_telefono = new System.Windows.Forms.TextBox();
-            this.txt_fecha_nac = new System.Windows.Forms.TextBox();
-            this.btn_guardar = new System.Windows.Forms.Button();
-            this.lbl_mod = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_nombre2 = new System.Windows.Forms.TextBox();
+            this.txt_nombre1 = new System.Windows.Forms.TextBox();
+            this.lbl_nombre = new System.Windows.Forms.Label();
+            this.lbl_agregar = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_buscarmod = new System.Windows.Forms.Button();
+            this.lbl_buscar = new System.Windows.Forms.Label();
+            this.txt_modificarbuscar = new System.Windows.Forms.TextBox();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_mod_guardar = new System.Windows.Forms.Button();
+            this.dgv_emplados_modificar = new System.Windows.Forms.DataGridView();
             this.txt_mod_fecha_nac = new System.Windows.Forms.TextBox();
             this.cbo_mod_puesto = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -72,25 +76,23 @@
             this.txt_mod_nombre2 = new System.Windows.Forms.TextBox();
             this.txt_mod_nombre1 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dgv_emplados_modificar = new System.Windows.Forms.DataGridView();
-            this.btn_buscarmod = new System.Windows.Forms.Button();
-            this.lbl_buscar = new System.Windows.Forms.Label();
-            this.txt_modificarbuscar = new System.Windows.Forms.TextBox();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_mod_guardar = new System.Windows.Forms.Button();
+            this.lbl_mod = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btn_borrar = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
-            this.dgv_buscar_pelicula = new System.Windows.Forms.DataGridView();
+            this.dgv_buscar_empleado = new System.Windows.Forms.DataGridView();
+            this.cbo_cine = new System.Windows.Forms.ComboBox();
+            this.cbo_mod_cine = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_emplados_modificar)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_empleado)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_regresar
@@ -151,10 +153,10 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.cbo_cine);
             this.tabPage1.Controls.Add(this.btn_guardar);
             this.tabPage1.Controls.Add(this.txt_fecha_nac);
-            this.tabPage1.Controls.Add(this.txt_telefono);
-            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.lbl_cine);
             this.tabPage1.Controls.Add(this.cbo_puesto);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
@@ -177,11 +179,190 @@
             this.tabPage1.Size = new System.Drawing.Size(868, 358);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ingresar empleado";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
+            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_guardar.Location = new System.Drawing.Point(733, 264);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(90, 73);
+            this.btn_guardar.TabIndex = 53;
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
+            // 
+            // txt_fecha_nac
+            // 
+            this.txt_fecha_nac.Location = new System.Drawing.Point(619, 147);
+            this.txt_fecha_nac.Name = "txt_fecha_nac";
+            this.txt_fecha_nac.Size = new System.Drawing.Size(160, 20);
+            this.txt_fecha_nac.TabIndex = 50;
+            // 
+            // lbl_cine
+            // 
+            this.lbl_cine.AutoSize = true;
+            this.lbl_cine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cine.Location = new System.Drawing.Point(432, 176);
+            this.lbl_cine.Name = "lbl_cine";
+            this.lbl_cine.Size = new System.Drawing.Size(50, 21);
+            this.lbl_cine.TabIndex = 48;
+            this.lbl_cine.Text = "Cine:";
+            // 
+            // cbo_puesto
+            // 
+            this.cbo_puesto.FormattingEnabled = true;
+            this.cbo_puesto.Location = new System.Drawing.Point(515, 111);
+            this.cbo_puesto.Name = "cbo_puesto";
+            this.cbo_puesto.Size = new System.Drawing.Size(308, 21);
+            this.cbo_puesto.TabIndex = 47;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(432, 112);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 21);
+            this.label6.TabIndex = 46;
+            this.label6.Text = "Puesto:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(432, 146);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(181, 21);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Fecha de nacimiento:";
+            // 
+            // txt_nit
+            // 
+            this.txt_nit.Location = new System.Drawing.Point(515, 81);
+            this.txt_nit.Name = "txt_nit";
+            this.txt_nit.Size = new System.Drawing.Size(308, 20);
+            this.txt_nit.TabIndex = 44;
+            this.txt_nit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nit_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(432, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 21);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "NIT:";
+            // 
+            // txt_dpi
+            // 
+            this.txt_dpi.Location = new System.Drawing.Point(515, 49);
+            this.txt_dpi.Name = "txt_dpi";
+            this.txt_dpi.Size = new System.Drawing.Size(308, 20);
+            this.txt_dpi.TabIndex = 42;
+            this.txt_dpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dpi_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(432, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 21);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "DPI:";
+            // 
+            // txt_direccion
+            // 
+            this.txt_direccion.Location = new System.Drawing.Point(99, 114);
+            this.txt_direccion.MaxLength = 20;
+            this.txt_direccion.Multiline = true;
+            this.txt_direccion.Name = "txt_direccion";
+            this.txt_direccion.Size = new System.Drawing.Size(308, 83);
+            this.txt_direccion.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 21);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Dirección:";
+            // 
+            // txt_apellido2
+            // 
+            this.txt_apellido2.Location = new System.Drawing.Point(256, 78);
+            this.txt_apellido2.Name = "txt_apellido2";
+            this.txt_apellido2.Size = new System.Drawing.Size(151, 20);
+            this.txt_apellido2.TabIndex = 38;
+            this.txt_apellido2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido2_KeyPress);
+            // 
+            // txt_apellido1
+            // 
+            this.txt_apellido1.Location = new System.Drawing.Point(99, 78);
+            this.txt_apellido1.MaxLength = 20;
+            this.txt_apellido1.Name = "txt_apellido1";
+            this.txt_apellido1.Size = new System.Drawing.Size(151, 20);
+            this.txt_apellido1.TabIndex = 37;
+            this.txt_apellido1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido1_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 21);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Apellido:";
+            // 
+            // txt_nombre2
+            // 
+            this.txt_nombre2.Location = new System.Drawing.Point(256, 52);
+            this.txt_nombre2.MaxLength = 20;
+            this.txt_nombre2.Name = "txt_nombre2";
+            this.txt_nombre2.Size = new System.Drawing.Size(151, 20);
+            this.txt_nombre2.TabIndex = 35;
+            this.txt_nombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre2_KeyPress);
+            // 
+            // txt_nombre1
+            // 
+            this.txt_nombre1.Location = new System.Drawing.Point(99, 52);
+            this.txt_nombre1.MaxLength = 20;
+            this.txt_nombre1.Name = "txt_nombre1";
+            this.txt_nombre1.Size = new System.Drawing.Size(151, 20);
+            this.txt_nombre1.TabIndex = 34;
+            this.txt_nombre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre1_KeyPress);
+            // 
+            // lbl_nombre
+            // 
+            this.lbl_nombre.AutoSize = true;
+            this.lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre.Location = new System.Drawing.Point(16, 49);
+            this.lbl_nombre.Name = "lbl_nombre";
+            this.lbl_nombre.Size = new System.Drawing.Size(77, 21);
+            this.lbl_nombre.TabIndex = 26;
+            this.lbl_nombre.Text = "Nombre:";
+            // 
+            // lbl_agregar
+            // 
+            this.lbl_agregar.AutoSize = true;
+            this.lbl_agregar.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_agregar.Location = new System.Drawing.Point(287, 3);
+            this.lbl_agregar.Name = "lbl_agregar";
+            this.lbl_agregar.Size = new System.Drawing.Size(326, 36);
+            this.lbl_agregar.TabIndex = 15;
+            this.lbl_agregar.Text = "AGREGAR EMPLEADO";
             // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.cbo_mod_cine);
+            this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.btn_buscarmod);
             this.tabPage2.Controls.Add(this.lbl_buscar);
             this.tabPage2.Controls.Add(this.txt_modificarbuscar);
@@ -212,202 +393,68 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar empleado";
             // 
-            // lbl_agregar
+            // btn_buscarmod
             // 
-            this.lbl_agregar.AutoSize = true;
-            this.lbl_agregar.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_agregar.Location = new System.Drawing.Point(287, 3);
-            this.lbl_agregar.Name = "lbl_agregar";
-            this.lbl_agregar.Size = new System.Drawing.Size(326, 36);
-            this.lbl_agregar.TabIndex = 15;
-            this.lbl_agregar.Text = "AGREGAR EMPLEADO";
+            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarmod.Location = new System.Drawing.Point(471, 224);
+            this.btn_buscarmod.Name = "btn_buscarmod";
+            this.btn_buscarmod.Size = new System.Drawing.Size(42, 48);
+            this.btn_buscarmod.TabIndex = 87;
+            this.btn_buscarmod.UseVisualStyleBackColor = true;
+            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
             // 
-            // lbl_nombre
+            // lbl_buscar
             // 
-            this.lbl_nombre.AutoSize = true;
-            this.lbl_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombre.Location = new System.Drawing.Point(16, 49);
-            this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(77, 21);
-            this.lbl_nombre.TabIndex = 26;
-            this.lbl_nombre.Text = "Nombre:";
+            this.lbl_buscar.AutoSize = true;
+            this.lbl_buscar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar.Location = new System.Drawing.Point(91, 246);
+            this.lbl_buscar.Name = "lbl_buscar";
+            this.lbl_buscar.Size = new System.Drawing.Size(52, 16);
+            this.lbl_buscar.TabIndex = 86;
+            this.lbl_buscar.Text = "Buscar:";
             // 
-            // txt_nombre1
+            // txt_modificarbuscar
             // 
-            this.txt_nombre1.Location = new System.Drawing.Point(99, 52);
-            this.txt_nombre1.MaxLength = 20;
-            this.txt_nombre1.Name = "txt_nombre1";
-            this.txt_nombre1.Size = new System.Drawing.Size(151, 20);
-            this.txt_nombre1.TabIndex = 34;
-            this.txt_nombre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre1_KeyPress);
+            this.txt_modificarbuscar.Location = new System.Drawing.Point(149, 246);
+            this.txt_modificarbuscar.MaxLength = 20;
+            this.txt_modificarbuscar.Name = "txt_modificarbuscar";
+            this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
+            this.txt_modificarbuscar.TabIndex = 85;
             // 
-            // txt_nombre2
+            // btn_actualizar
             // 
-            this.txt_nombre2.Location = new System.Drawing.Point(256, 52);
-            this.txt_nombre2.MaxLength = 20;
-            this.txt_nombre2.Name = "txt_nombre2";
-            this.txt_nombre2.Size = new System.Drawing.Size(151, 20);
-            this.txt_nombre2.TabIndex = 35;
-            this.txt_nombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombre2_KeyPress);
+            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
+            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_actualizar.Location = new System.Drawing.Point(519, 224);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(48, 48);
+            this.btn_actualizar.TabIndex = 84;
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
-            // label1
+            // btn_mod_guardar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 21);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Apellido:";
+            this.btn_mod_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
+            this.btn_mod_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_mod_guardar.Location = new System.Drawing.Point(573, 224);
+            this.btn_mod_guardar.Name = "btn_mod_guardar";
+            this.btn_mod_guardar.Size = new System.Drawing.Size(45, 50);
+            this.btn_mod_guardar.TabIndex = 83;
+            this.btn_mod_guardar.UseVisualStyleBackColor = true;
+            this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
             // 
-            // txt_apellido2
+            // dgv_emplados_modificar
             // 
-            this.txt_apellido2.Location = new System.Drawing.Point(256, 78);
-            this.txt_apellido2.Name = "txt_apellido2";
-            this.txt_apellido2.Size = new System.Drawing.Size(151, 20);
-            this.txt_apellido2.TabIndex = 38;
-            this.txt_apellido2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido2_KeyPress);
-            // 
-            // txt_apellido1
-            // 
-            this.txt_apellido1.Location = new System.Drawing.Point(99, 78);
-            this.txt_apellido1.MaxLength = 20;
-            this.txt_apellido1.Name = "txt_apellido1";
-            this.txt_apellido1.Size = new System.Drawing.Size(151, 20);
-            this.txt_apellido1.TabIndex = 37;
-            this.txt_apellido1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellido1_KeyPress);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 21);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Dirección:";
-            // 
-            // txt_direccion
-            // 
-            this.txt_direccion.Location = new System.Drawing.Point(99, 114);
-            this.txt_direccion.MaxLength = 20;
-            this.txt_direccion.Multiline = true;
-            this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.Size = new System.Drawing.Size(308, 83);
-            this.txt_direccion.TabIndex = 40;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(432, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 21);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "DPI:";
-            // 
-            // txt_dpi
-            // 
-            this.txt_dpi.Location = new System.Drawing.Point(515, 49);
-            this.txt_dpi.Name = "txt_dpi";
-            this.txt_dpi.Size = new System.Drawing.Size(308, 20);
-            this.txt_dpi.TabIndex = 42;
-            this.txt_dpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_dpi_KeyPress);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(432, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 21);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "NIT:";
-            // 
-            // txt_nit
-            // 
-            this.txt_nit.Location = new System.Drawing.Point(515, 81);
-            this.txt_nit.Name = "txt_nit";
-            this.txt_nit.Size = new System.Drawing.Size(308, 20);
-            this.txt_nit.TabIndex = 44;
-            this.txt_nit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nit_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(432, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(181, 21);
-            this.label5.TabIndex = 45;
-            this.label5.Text = "Fecha de nacimiento:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(432, 112);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 21);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "Puesto:";
-            // 
-            // cbo_puesto
-            // 
-            this.cbo_puesto.FormattingEnabled = true;
-            this.cbo_puesto.Location = new System.Drawing.Point(515, 111);
-            this.cbo_puesto.Name = "cbo_puesto";
-            this.cbo_puesto.Size = new System.Drawing.Size(308, 21);
-            this.cbo_puesto.TabIndex = 47;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(432, 145);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 21);
-            this.label7.TabIndex = 48;
-            this.label7.Text = "Teléfono:";
-            // 
-            // txt_telefono
-            // 
-            this.txt_telefono.Location = new System.Drawing.Point(515, 148);
-            this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(308, 20);
-            this.txt_telefono.TabIndex = 49;
-            this.txt_telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefono_KeyPress);
-            // 
-            // txt_fecha_nac
-            // 
-            this.txt_fecha_nac.Location = new System.Drawing.Point(619, 177);
-            this.txt_fecha_nac.Name = "txt_fecha_nac";
-            this.txt_fecha_nac.Size = new System.Drawing.Size(160, 20);
-            this.txt_fecha_nac.TabIndex = 50;
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
-            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(733, 264);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(90, 73);
-            this.btn_guardar.TabIndex = 53;
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            // 
-            // lbl_mod
-            // 
-            this.lbl_mod.AutoSize = true;
-            this.lbl_mod.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod.Location = new System.Drawing.Point(240, 14);
-            this.lbl_mod.Name = "lbl_mod";
-            this.lbl_mod.Size = new System.Drawing.Size(351, 36);
-            this.lbl_mod.TabIndex = 18;
-            this.lbl_mod.Text = "MODIFICAR EMPLEADO";
+            this.dgv_emplados_modificar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_emplados_modificar.Location = new System.Drawing.Point(6, 277);
+            this.dgv_emplados_modificar.Name = "dgv_emplados_modificar";
+            this.dgv_emplados_modificar.Size = new System.Drawing.Size(845, 185);
+            this.dgv_emplados_modificar.TabIndex = 72;
             // 
             // txt_mod_fecha_nac
             // 
-            this.txt_mod_fecha_nac.Location = new System.Drawing.Point(647, 168);
+            this.txt_mod_fecha_nac.Location = new System.Drawing.Point(647, 161);
             this.txt_mod_fecha_nac.Name = "txt_mod_fecha_nac";
             this.txt_mod_fecha_nac.Size = new System.Drawing.Size(160, 20);
             this.txt_mod_fecha_nac.TabIndex = 71;
@@ -434,7 +481,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(460, 165);
+            this.label10.Location = new System.Drawing.Point(460, 158);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(181, 21);
             this.label10.TabIndex = 66;
@@ -554,61 +601,15 @@
             this.label15.TabIndex = 54;
             this.label15.Text = "Nombre:";
             // 
-            // dgv_emplados_modificar
+            // lbl_mod
             // 
-            this.dgv_emplados_modificar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_emplados_modificar.Location = new System.Drawing.Point(6, 277);
-            this.dgv_emplados_modificar.Name = "dgv_emplados_modificar";
-            this.dgv_emplados_modificar.Size = new System.Drawing.Size(845, 185);
-            this.dgv_emplados_modificar.TabIndex = 72;
-            // 
-            // btn_buscarmod
-            // 
-            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
-            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarmod.Location = new System.Drawing.Point(471, 224);
-            this.btn_buscarmod.Name = "btn_buscarmod";
-            this.btn_buscarmod.Size = new System.Drawing.Size(42, 48);
-            this.btn_buscarmod.TabIndex = 87;
-            this.btn_buscarmod.UseVisualStyleBackColor = true;
-            // 
-            // lbl_buscar
-            // 
-            this.lbl_buscar.AutoSize = true;
-            this.lbl_buscar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_buscar.Location = new System.Drawing.Point(91, 246);
-            this.lbl_buscar.Name = "lbl_buscar";
-            this.lbl_buscar.Size = new System.Drawing.Size(52, 16);
-            this.lbl_buscar.TabIndex = 86;
-            this.lbl_buscar.Text = "Buscar:";
-            // 
-            // txt_modificarbuscar
-            // 
-            this.txt_modificarbuscar.Location = new System.Drawing.Point(149, 246);
-            this.txt_modificarbuscar.MaxLength = 20;
-            this.txt_modificarbuscar.Name = "txt_modificarbuscar";
-            this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
-            this.txt_modificarbuscar.TabIndex = 85;
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
-            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(519, 224);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(48, 48);
-            this.btn_actualizar.TabIndex = 84;
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            // 
-            // btn_mod_guardar
-            // 
-            this.btn_mod_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
-            this.btn_mod_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_mod_guardar.Location = new System.Drawing.Point(573, 224);
-            this.btn_mod_guardar.Name = "btn_mod_guardar";
-            this.btn_mod_guardar.Size = new System.Drawing.Size(45, 50);
-            this.btn_mod_guardar.TabIndex = 83;
-            this.btn_mod_guardar.UseVisualStyleBackColor = true;
+            this.lbl_mod.AutoSize = true;
+            this.lbl_mod.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod.Location = new System.Drawing.Point(240, 14);
+            this.lbl_mod.Name = "lbl_mod";
+            this.lbl_mod.Size = new System.Drawing.Size(351, 36);
+            this.lbl_mod.TabIndex = 18;
+            this.lbl_mod.Text = "MODIFICAR EMPLEADO";
             // 
             // tabPage3
             // 
@@ -617,7 +618,7 @@
             this.tabPage3.Controls.Add(this.btn_buscar);
             this.tabPage3.Controls.Add(this.txt_buscar);
             this.tabPage3.Controls.Add(this.lbl_codigo_buscar);
-            this.tabPage3.Controls.Add(this.dgv_buscar_pelicula);
+            this.tabPage3.Controls.Add(this.dgv_buscar_empleado);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -634,6 +635,7 @@
             this.btn_borrar.Size = new System.Drawing.Size(71, 52);
             this.btn_borrar.TabIndex = 27;
             this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // btn_buscar
             // 
@@ -644,6 +646,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(78, 52);
             this.btn_buscar.TabIndex = 26;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -663,13 +666,39 @@
             this.lbl_codigo_buscar.TabIndex = 24;
             this.lbl_codigo_buscar.Text = "Codigo Busqueda:";
             // 
-            // dgv_buscar_pelicula
+            // dgv_buscar_empleado
             // 
-            this.dgv_buscar_pelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_buscar_pelicula.Location = new System.Drawing.Point(22, 116);
-            this.dgv_buscar_pelicula.Name = "dgv_buscar_pelicula";
-            this.dgv_buscar_pelicula.Size = new System.Drawing.Size(825, 228);
-            this.dgv_buscar_pelicula.TabIndex = 23;
+            this.dgv_buscar_empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_buscar_empleado.Location = new System.Drawing.Point(22, 116);
+            this.dgv_buscar_empleado.Name = "dgv_buscar_empleado";
+            this.dgv_buscar_empleado.Size = new System.Drawing.Size(825, 228);
+            this.dgv_buscar_empleado.TabIndex = 23;
+            // 
+            // cbo_cine
+            // 
+            this.cbo_cine.FormattingEnabled = true;
+            this.cbo_cine.Location = new System.Drawing.Point(515, 175);
+            this.cbo_cine.Name = "cbo_cine";
+            this.cbo_cine.Size = new System.Drawing.Size(308, 21);
+            this.cbo_cine.TabIndex = 54;
+            // 
+            // cbo_mod_cine
+            // 
+            this.cbo_mod_cine.FormattingEnabled = true;
+            this.cbo_mod_cine.Location = new System.Drawing.Point(543, 192);
+            this.cbo_mod_cine.Name = "cbo_mod_cine";
+            this.cbo_mod_cine.Size = new System.Drawing.Size(257, 21);
+            this.cbo_mod_cine.TabIndex = 89;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(460, 193);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 21);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "Cine:";
             // 
             // empleado
             // 
@@ -685,6 +714,7 @@
             this.Controls.Add(this.btn_cerrarsesion);
             this.Name = "empleado";
             this.Text = "empleado";
+            this.Load += new System.EventHandler(this.empleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -694,7 +724,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_emplados_modificar)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_empleado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -719,8 +749,7 @@
         private System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_fecha_nac;
-        private System.Windows.Forms.TextBox txt_telefono;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbl_cine;
         private System.Windows.Forms.ComboBox cbo_puesto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -757,6 +786,9 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label lbl_codigo_buscar;
-        private System.Windows.Forms.DataGridView dgv_buscar_pelicula;
+        private System.Windows.Forms.DataGridView dgv_buscar_empleado;
+        private System.Windows.Forms.ComboBox cbo_cine;
+        private System.Windows.Forms.ComboBox cbo_mod_cine;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -37,6 +37,9 @@
             this.txt_horario_inicio = new System.Windows.Forms.TextBox();
             this.dgv_mostrar_peliculas = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lbl_buscar = new System.Windows.Forms.Label();
+            this.btn_buscarmod = new System.Windows.Forms.Button();
+            this.txt_buscarmod = new System.Windows.Forms.TextBox();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_mod_guardar = new System.Windows.Forms.Button();
             this.lbl_mod_horafin = new System.Windows.Forms.Label();
@@ -97,6 +100,7 @@
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 60;
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // lbl_horariofin
             // 
@@ -145,6 +149,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.lbl_buscar);
+            this.tabPage2.Controls.Add(this.btn_buscarmod);
+            this.tabPage2.Controls.Add(this.txt_buscarmod);
             this.tabPage2.Controls.Add(this.btn_actualizar);
             this.tabPage2.Controls.Add(this.btn_mod_guardar);
             this.tabPage2.Controls.Add(this.lbl_mod_horafin);
@@ -159,25 +166,57 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar Horario";
             // 
+            // lbl_buscar
+            // 
+            this.lbl_buscar.AutoSize = true;
+            this.lbl_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar.Location = new System.Drawing.Point(74, 84);
+            this.lbl_buscar.Name = "lbl_buscar";
+            this.lbl_buscar.Size = new System.Drawing.Size(65, 21);
+            this.lbl_buscar.TabIndex = 88;
+            this.lbl_buscar.Text = "Buscar:";
+            this.lbl_buscar.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btn_buscarmod
+            // 
+            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarmod.Location = new System.Drawing.Point(378, 62);
+            this.btn_buscarmod.Name = "btn_buscarmod";
+            this.btn_buscarmod.Size = new System.Drawing.Size(85, 57);
+            this.btn_buscarmod.TabIndex = 87;
+            this.btn_buscarmod.UseVisualStyleBackColor = true;
+            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
+            // 
+            // txt_buscarmod
+            // 
+            this.txt_buscarmod.Location = new System.Drawing.Point(145, 84);
+            this.txt_buscarmod.MaxLength = 100;
+            this.txt_buscarmod.Name = "txt_buscarmod";
+            this.txt_buscarmod.Size = new System.Drawing.Size(178, 20);
+            this.txt_buscarmod.TabIndex = 86;
+            // 
             // btn_actualizar
             // 
             this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
             this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(212, 57);
+            this.btn_actualizar.Location = new System.Drawing.Point(469, 62);
             this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(84, 73);
+            this.btn_actualizar.Size = new System.Drawing.Size(66, 57);
             this.btn_actualizar.TabIndex = 85;
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_mod_guardar
             // 
             this.btn_mod_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
             this.btn_mod_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_mod_guardar.Location = new System.Drawing.Point(414, 57);
+            this.btn_mod_guardar.Location = new System.Drawing.Point(553, 62);
             this.btn_mod_guardar.Name = "btn_mod_guardar";
-            this.btn_mod_guardar.Size = new System.Drawing.Size(90, 73);
+            this.btn_mod_guardar.Size = new System.Drawing.Size(59, 57);
             this.btn_mod_guardar.TabIndex = 66;
             this.btn_mod_guardar.UseVisualStyleBackColor = true;
+            this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
             // 
             // lbl_mod_horafin
             // 
@@ -202,7 +241,7 @@
             // txt_mod_horafin
             // 
             this.txt_mod_horafin.Location = new System.Drawing.Point(484, 14);
-            this.txt_mod_horafin.MaxLength = 20;
+            this.txt_mod_horafin.MaxLength = 100;
             this.txt_mod_horafin.Name = "txt_mod_horafin";
             this.txt_mod_horafin.Size = new System.Drawing.Size(151, 20);
             this.txt_mod_horafin.TabIndex = 63;
@@ -210,10 +249,11 @@
             // txt_mod_horainicio
             // 
             this.txt_mod_horainicio.Location = new System.Drawing.Point(145, 14);
-            this.txt_mod_horainicio.MaxLength = 20;
+            this.txt_mod_horainicio.MaxLength = 100;
             this.txt_mod_horainicio.Name = "txt_mod_horainicio";
             this.txt_mod_horainicio.Size = new System.Drawing.Size(151, 20);
             this.txt_mod_horainicio.TabIndex = 62;
+            this.txt_mod_horainicio.TextChanged += new System.EventHandler(this.txt_mod_horainicio_TextChanged);
             // 
             // dgv_mod_horario
             // 
@@ -247,6 +287,7 @@
             this.btn_borrar.Size = new System.Drawing.Size(71, 52);
             this.btn_borrar.TabIndex = 60;
             this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // btn_buscar
             // 
@@ -257,6 +298,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(78, 52);
             this.btn_buscar.TabIndex = 59;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -320,6 +362,7 @@
             this.Name = "Horario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Horario";
+            this.Load += new System.EventHandler(this.Horario_Load);
             this.tbc_horario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -339,7 +382,6 @@
 
         private System.Windows.Forms.TabControl tbc_horario;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Label lbl_horariofin;
         private System.Windows.Forms.Label lbl_horainicio;
         private System.Windows.Forms.TextBox txt_hora_final;
@@ -361,5 +403,9 @@
         private System.Windows.Forms.DataGridView dgv_borrar_horario;
         private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.Label lbl_titulo_mantenimiento_cine;
+        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Label lbl_buscar;
+        private System.Windows.Forms.Button btn_buscarmod;
+        private System.Windows.Forms.TextBox txt_buscarmod;
     }
 }

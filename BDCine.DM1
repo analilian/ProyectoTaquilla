@@ -31,7 +31,7 @@ VersionId,Version_ID,Copyright,Global_User_ID,Row_Time_Stamp
 
 Diagram
 DiagramId,Version_ID,VersionId,LastUpdate,CreateDate,ActiveModel,ActiveSubmodel,VSplitterPosition,X,Y,Width,Height,DiagramNameId,AuthorId,CompanyId,VersionNoId,CopyrightStringId,DefinitionId,UnificationOptionId,FileNameId,CopyrightYearStringId,DiagramName,CodePage,SignatureGUID,ReleaseName,Flags,Global_User_ID,Row_Time_Stamp
-1,1,800,08/03/2016 13:24:55G,07/23/2016 16:57:54G,1,1,180,0,0,0,0,83,84,85,86,85,0,87,286,0,cinepolis.DM1,1252,NULL,NULL,0,1,0
+1,1,800,08/03/2016 20:53:17G,07/23/2016 16:57:54G,2,1,180,0,0,0,0,83,84,85,86,85,0,87,286,0,cinepolis.DM1,1252,NULL,NULL,0,1,0
 
 Model
 DiagramId,ModelId,Model_ID,ModelType,PlatformId,NamePrefix,SpaceHandling,CaseHandling,GenPrimaryKey,GenAlternateKey,GenInversionEntry,GenForeignKey,Notation,ModelNameId,RowOverhead,TableOverhead,IndexOverhead,BlobOverhead,BlobBlockSize,Global_User_ID,Row_Time_Stamp
@@ -102,8 +102,8 @@ SubmodelLink_ID,Model_ID,Parent_ID,Child_ID,UltimateParent_ID,NodeLevel,IsBottom
 
 DiagramDisplay
 DiagramId,ModelId,SubmodelId,DiagramDisplay_ID,Submodel_ID,PlatformId,Animate,ZoomFactor,HviewSize,VviewSize,HorizontalScrollPosition,VerticalScrollPosition,PageOrientation,PageSize,DisplayFormat,EntityDisplayInfo,ViewDisplayFormat,ViewDisplayInfo,Shadow,CompleteRoleName,ShowVerbs,ShowCardinality,MethodologyId,StraightRelLine,PageBoundary,ShowViewRelationship,ShowView,HideTrigger,Global_User_ID,Row_Time_Stamp,ShowSchemaObjEdge,ShowSchemaObj,SchemaObjDisplayFormat,ShowRelationshipName,ShowLogicalRelationshipName,ShowTriggerLabel,ShowShape,ShowShapeEdge,ShowShapeName,ShowShapeEdgeName,ShowShapeEdgeVerbs,TransformationDisplayFormat
-1,2,1,3,3,0,0,9097,0,0,-145,630,1,1,9,3264,1,0,1,0,1,1,0,0,0,0,0,1,776,0,1,6,7,0,0,0,0,0,1,0,1,10
-1,1,1,1,1,0,0,9097,0,0,-157,705,1,1,8,3264,1,0,1,0,1,1,0,0,0,0,0,1,23,0,1,6,7,0,0,0,0,0,1,0,1,10
+1,2,1,3,3,0,0,7944,0,0,-230,745,1,1,9,3264,1,0,1,0,1,1,0,0,0,0,0,1,776,0,1,6,7,0,0,0,0,0,1,0,1,10
+1,1,1,1,1,0,0,7677,0,0,-281,756,1,1,8,3264,1,0,1,0,1,1,0,0,0,0,0,1,23,0,1,6,7,0,0,0,0,0,1,0,1,10
 1,3,1,4,4,0,0,9097,0,0,-145,630,1,1,9,3264,1,0,1,0,1,1,0,0,0,0,0,1,1314,0,1,6,7,0,0,0,0,0,1,0,1,10
 
 GridDisplay
@@ -522,10 +522,10 @@ DiagramId,ModelId,EntityId,Entity_ID,Model_ID,EntityNameId,TableNameId,Definitio
 1,1,10,10,1,228,228,0,0,0,0,0,0,0,0,0,258,0
 1,1,11,11,1,253,253,0,0,0,0,0,0,0,0,0,273,0
 1,1,12,12,1,212,212,0,0,0,0,0,0,0,0,0,286,0
-1,1,14,14,1,189,189,0,0,0,0,0,0,0,0,0,332,0
+1,1,14,14,1,291,291,0,0,0,0,0,0,0,0,0,332,0
 1,1,15,15,1,244,244,0,0,0,0,0,0,0,0,0,348,0
 1,1,16,16,1,229,229,0,0,0,0,0,0,0,0,0,369,0
-1,1,17,17,1,185,185,0,0,0,0,0,0,0,0,0,374,0
+1,1,17,17,1,292,292,0,0,0,0,0,0,0,0,0,374,0
 1,1,18,18,1,243,243,0,0,0,0,0,0,0,0,0,379,0
 1,1,20,20,1,266,266,0,0,0,0,0,0,0,0,0,451,0
 1,1,21,21,1,247,247,0,0,0,0,0,0,0,0,0,463,0
@@ -703,7 +703,7 @@ DiagramId,ModelId,EntityId,AttributeId,Attribute_ID,Entity_ID,UserDatatypeId,Rul
 1,2,5,19,181,35,0,0,0,0,283,283,0,0,0,0,152,1,100,-1,N,1,1,5,0,0,1,0,0,0,0,0,0,101,0,0,0,0,0,0,935,0
 1,2,22,1,229,48,0,0,0,0,250,250,0,0,0,0,170,0,18,0,N,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1100,0
 1,2,22,2,230,48,0,0,0,0,215,215,0,0,215,0,170,1,18,0,N,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1101,0
-1,1,14,1,72,14,0,0,0,0,190,190,0,0,0,0,17,0,-2,-1,N,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,337,0
+1,1,14,1,72,14,0,0,0,0,190,190,0,0,0,0,17,0,-2,-1,Y,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,337,0
 1,2,22,3,231,48,0,0,0,0,245,245,0,0,245,0,170,1,18,0,N,0,0,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1102,0
 1,1,14,2,73,14,0,0,0,0,191,191,0,0,0,0,152,0,10,-1,N,1,1,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,338,0
 1,1,14,3,74,14,0,0,0,0,197,197,0,0,197,197,17,1,-2,-1,N,0,0,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,342,0
@@ -748,7 +748,7 @@ DiagramId,ModelId,EntityId,AttributeId,Attribute_ID,Entity_ID,UserDatatypeId,Rul
 1,2,25,1,239,51,0,0,0,0,270,270,0,0,0,0,170,0,18,0,N,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1137,0
 1,2,25,2,240,51,0,0,0,0,271,271,0,0,0,0,27,1,-2,-1,N,1,1,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1138,0
 1,2,25,3,241,51,0,0,0,0,272,272,0,0,0,0,27,1,-2,-1,N,1,1,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1139,0
-1,1,17,1,97,17,0,0,0,0,186,186,0,0,0,0,17,0,-2,-1,N,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,439,0
+1,1,17,1,97,17,0,0,0,0,186,186,0,0,0,0,17,0,-2,-1,Y,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,439,0
 1,1,17,2,98,17,0,0,0,0,284,187,0,0,0,0,152,0,20,-1,N,1,1,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,441,0
 1,1,17,3,99,17,0,0,0,0,188,188,0,0,0,0,152,0,20,-1,N,1,1,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,442,0
 1,1,17,4,101,17,0,0,0,0,202,202,0,0,202,202,17,1,-2,-1,N,0,0,5,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,449,0
@@ -1510,99 +1510,99 @@ Lineage_Stream_Display_ID,Lineage_Stream_ID,Submodel_ID,DesiredRoutingStyle,Pare
 
 SmallString
 String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
-220,ape2cliente,0,0,0
-1,Main,0,0,0
-221,dircliente,0,0,0
-2,Diagram specific data dictionary.,0,0,0
 222,correocliente,0,0,0
-3,Logical,0,0,0
 223,pkidfactura,0,0,0
-4,Main Model,0,0,0
+1,Main,0,0,0
 224,fechafactura,0,0,0
-5,Data Movement Rules,0,0,0
+2,Diagram specific data dictionary.,0,0,0
+3,Logical,0,0,0
 226,pkidtarjeta,0,0,0
-7,Y,0,0,0
+4,Main Model,0,0,0
+5,Data Movement Rules,0,0,0
 228,Tarjetas,0,0,0
 229,Facturas,0,0,0
+7,Y,0,0,0
 231,pkidformapago,0,0,0
 232,nomformapago,0,0,0
 233,descformapago,0,0,0
 234,Idiomas,0,0,0
 235,pkididioma,0,0,0
-16,CH,0,0,0
 236,nomidioma,0,0,0
-17,INT,0,0,0
 237,descidioma,0,0,0
-18,id_ubicacion,0,0,0
 238,pkiddetallefact,0,0,0
+16,CH,0,0,0
 239,cantidaddetallefact,0,0,0
-20,direccion,0,0,0
+17,INT,0,0,0
 240,AsignacionAsientos,0,0,0
-21,id_cliente,0,0,0
+18,id_ubicacion,0,0,0
 241,pkidasignacion,0,0,0
 242,DetalleFacturas,0,0,0
+20,direccion,0,0,0
 243,FormaPagos,0,0,0
+21,id_cliente,0,0,0
 244,Telefonos,0,0,0
 245,pkidtelefono,0,0,0
 246,teltelefono,0,0,0
-27,D,0,0,0
 247,TelefonoEmpleados,0,0,0
 248,pkidtelemp,0,0,0
 249,TelefonoClientes,0,0,0
-30,id_empleado,0,0,0
+27,D,0,0,0
 250,pkidtelcliente,0,0,0
-31,dpi,0,0,0
 251,TelefonoCines,0,0,0
-32,nit,0,0,0
 252,pkidtelcine,0,0,0
-33,id_puesto,0,0,0
+30,id_empleado,0,0,0
 253,Clasificaciones,0,0,0
-34,DC,0,0,0
+31,dpi,0,0,0
 254,pkidclasificacion,0,0,0
+32,nit,0,0,0
 255,nomclasificacion,0,0,0
+33,id_puesto,0,0,0
 256,descclasificacion,0,0,0
-37,N,0,0,0
+34,DC,0,0,0
 257,TipoProyecciones,0,0,0
-38,P,0,0,0
 258,pkidproyeccion,0,0,0
-39,O,0,0,0
+37,N,0,0,0
 260,nomtproyecccion,0,0,0
+38,P,0,0,0
 261,pkidtarifas,0,0,0
-42,id_pelicula,0,0,0
+39,O,0,0,0
 262,costotarifa,0,0,0
-43,LBN,0,0,0
 263,ClasificacionEdades,0,0,0
 264,pkidedad,0,0,0
+42,id_pelicula,0,0,0
 265,nomedad,0,0,0
+43,LBN,0,0,0
 266,Categorias,0,0,0
 267,pkidcategorias,0,0,0
-48,tipo,0,0,0
 268,nomcategoria,0,0,0
 269,FechasCartelera,0,0,0
 270,pkidfcar,0,0,0
+48,tipo,0,0,0
 271,fechainicar,0,0,0
 272,fechafinalcar,0,0,0
 273,Horarios,0,0,0
-54,S,0,0,0
 274,pkidhorario,0,0,0
 275,DT,0,0,0
 276,horainiciohor,0,0,0
-57,I,0,0,0
+54,S,0,0,0
 277,horafinalhor,0,0,0
 279,pkidpelicula,0,0,0
+57,I,0,0,0
 280,nompelicula,0,0,0
 281,despelicula,0,0,0
 282,imagenpelicula,0,0,0
 283,vinculopelicula,0,0,0
-64,Z,0,0,0
 284,nomusuario,0,0,0
 285,nivelusuario,0,0,0
 286,BDCine.DM1,0,0,0
+64,Z,0,0,0
 287,Peliculas,0,0,0
 288,BDCINE,0,0,0
-69,M,0,0,0
 289,s,0,0,0
 290,roleusuario,0,0,0
+291,Butaca,0,0,0
+69,M,0,0,0
+292,Usuario,0,0,0
 74,sala,0,0,0
 75,id_sala,0,0,0
 82,cinepolis_DD,0,0,0
@@ -1686,6 +1686,8 @@ String_Id,Data,Overflow,ConstantString,Row_Time_Stamp
 217,nom1cliente,0,0,0
 218,nom2cliente,0,0,0
 219,ape1cliente,0,0,0
+220,ape2cliente,0,0,0
+221,dircliente,0,0,0
 
 LargeString
 String_Id,Data,Row_Time_Stamp
@@ -1846,8 +1848,8 @@ StringUsage_Id,UniqueObject_Id,StringUsageType_Id,String_Id,Row_Time_Stamp
 224,260,39,96,0
 225,275,39,97,0
 226,288,39,98,0
-228,332,1,189,0
-229,332,2,189,0
+228,332,1,291,0
+229,332,2,291,0
 230,337,14,190,0
 231,337,15,190,0
 232,338,14,191,0
@@ -1868,8 +1870,8 @@ StringUsage_Id,UniqueObject_Id,StringUsageType_Id,String_Id,Row_Time_Stamp
 263,368,15,216,0
 264,369,1,229,0
 265,369,2,229,0
-266,374,1,185,0
-267,374,2,185,0
+266,374,1,292,0
+267,374,2,292,0
 268,379,1,243,0
 269,379,2,243,0
 272,389,14,231,0
@@ -2646,7 +2648,7 @@ Identity_Value_ID,Table_Name,Column_Name,Next_Valid_Value,Global_User_ID,Row_Tim
 14,Bound_Dictionary_Object,Bound_Dictionary_Object_ID,1,0,0
 15,CheckConstraints,CheckConstraints_ID,1,0,0
 16,Circular_Layout,Circular_Layout_ID,5,0,0
-17,ColorDefault,ColorDefault_ID,250,0,0
+17,ColorDefault,ColorDefault_ID,253,0,0
 18,Column_Usage,Column_Usage_ID,1,0,0
 19,Components_Layout,Components_Layout_ID,5,0,0
 20,Configuration_Option,Configuration_Option_ID,1,0,0

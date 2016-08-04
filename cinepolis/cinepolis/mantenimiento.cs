@@ -16,16 +16,17 @@ namespace cinepolis
     {
         MySqlCommand comand;
         conexionymanipulacion con = new conexionymanipulacion();
-        String Stabla = "Peliculas";
-        MySqlConnection conexion = new MySqlConnection("server=localhost; database=; Uid=root;pwd=;");
+        String Stabla = "pelicula";
+        MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopia ; Uid=root;pwd=;");
         string imgLoc;
-        String Squeery = "select* from peliculas";
+        String Squeery = "select * from pelicula";
         public mantenimiento()
         {
+            
+            InitializeComponent();
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
-            InitializeComponent();
 
         }
 
@@ -127,7 +128,7 @@ namespace cinepolis
             FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
             img = br.ReadBytes((int)fs.Length);
-            string sql = "Insert Into peliculas (nompelicula,despelicula,imagenpelicula,vinculopelicula,pkidsala,pkididioma,pkidproyeccion,pkidclasificacion,pkidcategorias,pkidcine,pkidfcar)values('" + txt_nombre1.Text + "','" + txt_descrip.Text + "',@img'" + txt_trailer.Text + "','" + cbo_sala.Text + "','" + cbo_idioma.Text + "','" + cbo_proyeccion.Text + "','" + cbo_clasificacion.Text + "','" + cbo_categoria.Text + "','" + cbo_cine.Text + "','" + cbo_fecha.Text + "')";
+            string sql = "Insert Into pelicula (nompelicula,despelicula,imagenpelicula,vinculopelicula,pkidsala,pkididioma,pkidproyeccion,pkidclasificacion,pkidcategorias,pkidcine,pkidfcar)values('" + txt_nombre1.Text + "','" + txt_descrip.Text + "',@img'" + txt_trailer.Text + "','" + cbo_sala.Text + "','" + cbo_idioma.Text + "','" + cbo_proyeccion.Text + "','" + cbo_clasificacion.Text + "','" + cbo_categoria.Text + "','" + cbo_cine.Text + "','" + cbo_fecha.Text + "')";
             if (conexion.State != ConnectionState.Open)
                 conexion.Open();
             comand = new MySqlCommand(sql, conexion);
@@ -144,7 +145,7 @@ namespace cinepolis
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
             con.Conectar();
-            String Squerys = ("Select* from usuarios where nompelicula='" + txt_modificarbuscar.Text + "%' or despelicula= '" + txt_modificarbuscar.Text + "%' or vinculopelicula ='" + txt_modificarbuscar.Text + "%'or pkidsala ='" + txt_modificarbuscar.Text + "%'or pkididioma ='" + txt_modificarbuscar.Text + "%'or pkidproyeccion ='" + txt_modificarbuscar.Text + "%'or pkidclasificacion ='" + txt_modificarbuscar.Text + "%'or pkidcategoria ='" + txt_modificarbuscar.Text + "%'or pkidcine ='" + txt_modificarbuscar.Text + "%'or pkidfcar ='" + txt_modificarbuscar.Text + "%';");
+            String Squerys = ("Select* from pelicula where nompelicula='" + txt_modificarbuscar.Text + "%' or despelicula= '" + txt_modificarbuscar.Text + "%' or vinculopelicula ='" + txt_modificarbuscar.Text + "%'or pkidsala ='" + txt_modificarbuscar.Text + "%'or pkididioma ='" + txt_modificarbuscar.Text + "%'or pkidproyeccion ='" + txt_modificarbuscar.Text + "%'or pkidclasificacion ='" + txt_modificarbuscar.Text + "%'or pkidcategoria ='" + txt_modificarbuscar.Text + "%'or pkidcine ='" + txt_modificarbuscar.Text + "%'or pkidfcar ='" + txt_modificarbuscar.Text + "%';");
             con.buscarquery(Squerys);
             con.actualizargrid(dgv_modificar_pelicula, Squerys, Stabla);
             con.Desconectar();
@@ -170,7 +171,7 @@ namespace cinepolis
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             con.Conectar();
-            String Squerys = ("Select* from usuarios where nompelicula='" + txt_buscar.Text + "%' or despelicula= '" + txt_buscar.Text + "%' or vinculopelicula ='" + txt_buscar.Text + "%'or pkidsala ='" + txt_buscar.Text + "%'or pkididioma ='" + txt_buscar.Text + "%'or pkidproyeccion ='" + txt_buscar.Text + "%'or pkidclasificacion ='" + txt_buscar.Text + "%'or pkidcategoria ='" + txt_buscar.Text + "%'or pkidcine ='" + txt_buscar.Text + "%'or pkidfcar ='" + txt_buscar.Text + "%';");
+            String Squerys = ("Select* from pelicula where nompelicula='" + txt_buscar.Text + "%' or despelicula= '" + txt_buscar.Text + "%' or vinculopelicula ='" + txt_buscar.Text + "%'or pkidsala ='" + txt_buscar.Text + "%'or pkididioma ='" + txt_buscar.Text + "%'or pkidproyeccion ='" + txt_buscar.Text + "%'or pkidclasificacion ='" + txt_buscar.Text + "%'or pkidcategoria ='" + txt_buscar.Text + "%'or pkidcine ='" + txt_buscar.Text + "%'or pkidfcar ='" + txt_buscar.Text + "%';");
             con.buscarquery(Squerys);
             con.actualizargrid(dgv_modificar_pelicula, Squerys, Stabla);
             con.Desconectar();
@@ -183,7 +184,7 @@ namespace cinepolis
             if (Vresultado == DialogResult.Yes)
             {
                 con.Conectar();
-                String Squerys = "delete from  peliculas  where pkidpelicula = '" + SCelda + "';";
+                String Squerys = "delete from  pelicula  where pkidpelicula = '" + SCelda + "';";
                 con.EjecutarQuery(Squerys);
                con.actualizargrid(dgv_insertar, Squeery, Stabla);
                 con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
@@ -203,7 +204,7 @@ namespace cinepolis
             FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
             img = br.ReadBytes((int)fs.Length);
-            string sql = "Insert Into peliculas (nompelicula,despelicula,imagenpelicula,vinculopelicula,pkidsala,pkididioma,pkidproyeccion,pkidclasificacion,pkidcategorias,pkidcine,pkidfcar)values('" + txt_mod_nombre.Text+ "','" + txt_mod_descrip.Text + "',@img'" + txt_mod_trailer.Text + "','" + cbo_mod_sala.Text + "','" + cbo_mod_idioma.Text + "','" + cbo_mod_proyeccion.Text + "','" + cbo_mod_clasificacion.Text + "','" + cbo_mod_categoria.Text + "','" + cbo_mod_cine.Text + "','" + cbo_mod_fecha.Text + "')";
+            string sql = "Insert Into pelicula (nompelicula,despelicula,imagenpelicula,vinculopelicula,pkidsala,pkididioma,pkidproyeccion,pkidclasificacion,pkidcategorias,pkidcine,pkidfcar)values('" + txt_mod_nombre.Text+ "','" + txt_mod_descrip.Text + "',@img'" + txt_mod_trailer.Text + "','" + cbo_mod_sala.Text + "','" + cbo_mod_idioma.Text + "','" + cbo_mod_proyeccion.Text + "','" + cbo_mod_clasificacion.Text + "','" + cbo_mod_categoria.Text + "','" + cbo_mod_cine.Text + "','" + cbo_mod_fecha.Text + "')";
             if (conexion.State != ConnectionState.Open)
                 conexion.Open();
             comand = new MySqlCommand(sql, conexion);

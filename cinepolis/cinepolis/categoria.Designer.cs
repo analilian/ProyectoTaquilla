@@ -39,7 +39,6 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_mod_guardar = new System.Windows.Forms.Button();
             this.txt_mod_categoria = new System.Windows.Forms.Label();
-            this.txt_mod_categoriaa = new System.Windows.Forms.TextBox();
             this.dgv_mod_categoria = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btn_borrar = new System.Windows.Forms.Button();
@@ -48,6 +47,10 @@
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_borrar_categoria = new System.Windows.Forms.DataGridView();
             this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_buscarmod = new System.Windows.Forms.Button();
+            this.txt_buscarmod = new System.Windows.Forms.TextBox();
+            this.label_busquedamod = new System.Windows.Forms.Label();
+            this.txt_mod_categoriaa = new System.Windows.Forms.TextBox();
             this.tbc_categoria.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).BeginInit();
@@ -101,6 +104,7 @@
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 60;
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // lbl_categoria
             // 
@@ -131,6 +135,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.btn_buscarmod);
+            this.tabPage2.Controls.Add(this.txt_buscarmod);
+            this.tabPage2.Controls.Add(this.label_busquedamod);
             this.tabPage2.Controls.Add(this.btn_actualizar);
             this.tabPage2.Controls.Add(this.btn_mod_guardar);
             this.tabPage2.Controls.Add(this.txt_mod_categoria);
@@ -147,11 +154,12 @@
             // 
             this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
             this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(451, 21);
+            this.btn_actualizar.Location = new System.Drawing.Point(502, 21);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(84, 73);
             this.btn_actualizar.TabIndex = 85;
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_mod_guardar
             // 
@@ -162,24 +170,17 @@
             this.btn_mod_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_mod_guardar.TabIndex = 66;
             this.btn_mod_guardar.UseVisualStyleBackColor = true;
+            this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
             // 
             // txt_mod_categoria
             // 
             this.txt_mod_categoria.AutoSize = true;
             this.txt_mod_categoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mod_categoria.Location = new System.Drawing.Point(40, 45);
+            this.txt_mod_categoria.Location = new System.Drawing.Point(78, 47);
             this.txt_mod_categoria.Name = "txt_mod_categoria";
             this.txt_mod_categoria.Size = new System.Drawing.Size(95, 21);
             this.txt_mod_categoria.TabIndex = 64;
             this.txt_mod_categoria.Text = "Categoria:";
-            // 
-            // txt_mod_categoriaa
-            // 
-            this.txt_mod_categoriaa.Location = new System.Drawing.Point(165, 48);
-            this.txt_mod_categoriaa.MaxLength = 20;
-            this.txt_mod_categoriaa.Name = "txt_mod_categoriaa";
-            this.txt_mod_categoriaa.Size = new System.Drawing.Size(151, 20);
-            this.txt_mod_categoriaa.TabIndex = 62;
             // 
             // dgv_mod_categoria
             // 
@@ -203,6 +204,7 @@
             this.tabPage3.Size = new System.Drawing.Size(713, 322);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Borrar Categoria";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // btn_borrar
             // 
@@ -213,6 +215,7 @@
             this.btn_borrar.Size = new System.Drawing.Size(71, 52);
             this.btn_borrar.TabIndex = 60;
             this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // btn_buscar
             // 
@@ -223,6 +226,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(78, 52);
             this.btn_buscar.TabIndex = 59;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
@@ -264,6 +268,43 @@
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
+            // btn_buscarmod
+            // 
+            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscarmod.Location = new System.Drawing.Point(373, 89);
+            this.btn_buscarmod.Name = "btn_buscarmod";
+            this.btn_buscarmod.Size = new System.Drawing.Size(53, 37);
+            this.btn_buscarmod.TabIndex = 88;
+            this.btn_buscarmod.UseVisualStyleBackColor = true;
+            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
+            // 
+            // txt_buscarmod
+            // 
+            this.txt_buscarmod.Location = new System.Drawing.Point(176, 98);
+            this.txt_buscarmod.MaxLength = 100;
+            this.txt_buscarmod.Name = "txt_buscarmod";
+            this.txt_buscarmod.Size = new System.Drawing.Size(178, 20);
+            this.txt_buscarmod.TabIndex = 87;
+            // 
+            // label_busquedamod
+            // 
+            this.label_busquedamod.AutoSize = true;
+            this.label_busquedamod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_busquedamod.Location = new System.Drawing.Point(78, 97);
+            this.label_busquedamod.Name = "label_busquedamod";
+            this.label_busquedamod.Size = new System.Drawing.Size(92, 21);
+            this.label_busquedamod.TabIndex = 86;
+            this.label_busquedamod.Text = "Busqueda:";
+            // 
+            // txt_mod_categoriaa
+            // 
+            this.txt_mod_categoriaa.Location = new System.Drawing.Point(176, 47);
+            this.txt_mod_categoriaa.MaxLength = 20;
+            this.txt_mod_categoriaa.Name = "txt_mod_categoriaa";
+            this.txt_mod_categoriaa.Size = new System.Drawing.Size(151, 20);
+            this.txt_mod_categoriaa.TabIndex = 62;
+            // 
             // categoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,6 +315,7 @@
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.lbl_titulo_mantenimiento_cine);
             this.Name = "categoria";
+            this.Load += new System.EventHandler(this.categoria_Load);
             this.tbc_categoria.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -302,7 +344,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btn_mod_guardar;
         private System.Windows.Forms.Label txt_mod_categoria;
-        private System.Windows.Forms.TextBox txt_mod_categoriaa;
         private System.Windows.Forms.DataGridView dgv_mod_categoria;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.TabPage tabPage3;
@@ -311,5 +352,9 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label lbl_codigo_buscar;
+        private System.Windows.Forms.Button btn_buscarmod;
+        private System.Windows.Forms.TextBox txt_buscarmod;
+        private System.Windows.Forms.Label label_busquedamod;
+        private System.Windows.Forms.TextBox txt_mod_categoriaa;
     }
 }

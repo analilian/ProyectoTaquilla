@@ -31,13 +31,13 @@
             this.tbc_clasificacion = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.lbl_clasificacion = new System.Windows.Forms.Label();
-            this.txt_clasificacion = new System.Windows.Forms.TextBox();
-            this.dgv_clasificacion = new System.Windows.Forms.DataGridView();
+            this.lbl_sala = new System.Windows.Forms.Label();
+            this.txt_sala = new System.Windows.Forms.TextBox();
+            this.dgv_sala = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dgv_mod_clasificacion = new System.Windows.Forms.DataGridView();
+            this.lbl_mod = new System.Windows.Forms.Label();
+            this.txt_mod = new System.Windows.Forms.TextBox();
+            this.dgv_modsala = new System.Windows.Forms.DataGridView();
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_mod_guardar = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -45,16 +45,19 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
-            this.dgv_borrar_categoria = new System.Windows.Forms.DataGridView();
+            this.dgv_borrarsala = new System.Windows.Forms.DataGridView();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txt_buscmod = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tbc_clasificacion.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_clasificacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_sala)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mod_clasificacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_modsala)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_borrar_categoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_borrarsala)).BeginInit();
             this.SuspendLayout();
             // 
             // tbc_clasificacion
@@ -62,23 +65,24 @@
             this.tbc_clasificacion.Controls.Add(this.tabPage1);
             this.tbc_clasificacion.Controls.Add(this.tabPage2);
             this.tbc_clasificacion.Controls.Add(this.tabPage3);
-            this.tbc_clasificacion.Location = new System.Drawing.Point(5, 92);
+            this.tbc_clasificacion.Location = new System.Drawing.Point(2, 92);
             this.tbc_clasificacion.Name = "tbc_clasificacion";
             this.tbc_clasificacion.SelectedIndex = 0;
-            this.tbc_clasificacion.Size = new System.Drawing.Size(721, 348);
+            this.tbc_clasificacion.Size = new System.Drawing.Size(724, 348);
             this.tbc_clasificacion.TabIndex = 65;
+            this.tbc_clasificacion.SelectedIndexChanged += new System.EventHandler(this.tbc_clasificacion_SelectedIndexChanged);
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabPage1.Controls.Add(this.btn_guardar);
-            this.tabPage1.Controls.Add(this.lbl_clasificacion);
-            this.tabPage1.Controls.Add(this.txt_clasificacion);
-            this.tabPage1.Controls.Add(this.dgv_clasificacion);
+            this.tabPage1.Controls.Add(this.lbl_sala);
+            this.tabPage1.Controls.Add(this.txt_sala);
+            this.tabPage1.Controls.Add(this.dgv_sala);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(713, 322);
+            this.tabPage1.Size = new System.Drawing.Size(716, 322);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Agregar Sala";
             // 
@@ -91,83 +95,89 @@
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 60;
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
-            // lbl_clasificacion
+            // lbl_sala
             // 
-            this.lbl_clasificacion.AutoSize = true;
-            this.lbl_clasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clasificacion.Location = new System.Drawing.Point(17, 23);
-            this.lbl_clasificacion.Name = "lbl_clasificacion";
-            this.lbl_clasificacion.Size = new System.Drawing.Size(77, 21);
-            this.lbl_clasificacion.TabIndex = 58;
-            this.lbl_clasificacion.Text = "Nombre:";
+            this.lbl_sala.AutoSize = true;
+            this.lbl_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sala.Location = new System.Drawing.Point(56, 73);
+            this.lbl_sala.Name = "lbl_sala";
+            this.lbl_sala.Size = new System.Drawing.Size(77, 21);
+            this.lbl_sala.TabIndex = 58;
+            this.lbl_sala.Text = "Nombre:";
             // 
-            // txt_clasificacion
+            // txt_sala
             // 
-            this.txt_clasificacion.Location = new System.Drawing.Point(142, 26);
-            this.txt_clasificacion.MaxLength = 20;
-            this.txt_clasificacion.Name = "txt_clasificacion";
-            this.txt_clasificacion.Size = new System.Drawing.Size(288, 20);
-            this.txt_clasificacion.TabIndex = 56;
+            this.txt_sala.Location = new System.Drawing.Point(153, 76);
+            this.txt_sala.MaxLength = 20;
+            this.txt_sala.Name = "txt_sala";
+            this.txt_sala.Size = new System.Drawing.Size(288, 20);
+            this.txt_sala.TabIndex = 56;
             // 
-            // dgv_clasificacion
+            // dgv_sala
             // 
-            this.dgv_clasificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_clasificacion.Location = new System.Drawing.Point(12, 136);
-            this.dgv_clasificacion.Name = "dgv_clasificacion";
-            this.dgv_clasificacion.Size = new System.Drawing.Size(690, 180);
-            this.dgv_clasificacion.TabIndex = 55;
+            this.dgv_sala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_sala.Location = new System.Drawing.Point(12, 136);
+            this.dgv_sala.Name = "dgv_sala";
+            this.dgv_sala.Size = new System.Drawing.Size(690, 180);
+            this.dgv_sala.TabIndex = 55;
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.dgv_mod_clasificacion);
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.txt_buscmod);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.lbl_mod);
+            this.tabPage2.Controls.Add(this.txt_mod);
+            this.tabPage2.Controls.Add(this.dgv_modsala);
             this.tabPage2.Controls.Add(this.btn_actualizar);
             this.tabPage2.Controls.Add(this.btn_mod_guardar);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(713, 322);
+            this.tabPage2.Size = new System.Drawing.Size(716, 322);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar Sala";
             // 
-            // label2
+            // lbl_mod
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 21);
-            this.label2.TabIndex = 87;
-            this.label2.Text = "Nombre:";
+            this.lbl_mod.AutoSize = true;
+            this.lbl_mod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mod.Location = new System.Drawing.Point(20, 30);
+            this.lbl_mod.Name = "lbl_mod";
+            this.lbl_mod.Size = new System.Drawing.Size(77, 21);
+            this.lbl_mod.TabIndex = 87;
+            this.lbl_mod.Text = "Nombre:";
             // 
-            // textBox2
+            // txt_mod
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 33);
-            this.textBox2.MaxLength = 20;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(288, 20);
-            this.textBox2.TabIndex = 86;
+            this.txt_mod.Location = new System.Drawing.Point(145, 33);
+            this.txt_mod.MaxLength = 20;
+            this.txt_mod.Name = "txt_mod";
+            this.txt_mod.Size = new System.Drawing.Size(288, 20);
+            this.txt_mod.TabIndex = 86;
+            this.txt_mod.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // dgv_mod_clasificacion
+            // dgv_modsala
             // 
-            this.dgv_mod_clasificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_mod_clasificacion.Location = new System.Drawing.Point(24, 136);
-            this.dgv_mod_clasificacion.Name = "dgv_mod_clasificacion";
-            this.dgv_mod_clasificacion.Size = new System.Drawing.Size(635, 180);
-            this.dgv_mod_clasificacion.TabIndex = 61;
+            this.dgv_modsala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_modsala.Location = new System.Drawing.Point(24, 136);
+            this.dgv_modsala.Name = "dgv_modsala";
+            this.dgv_modsala.Size = new System.Drawing.Size(635, 180);
+            this.dgv_modsala.TabIndex = 61;
             // 
             // btn_actualizar
             // 
             this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
             this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(451, 21);
+            this.btn_actualizar.Location = new System.Drawing.Point(502, 21);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(84, 73);
             this.btn_actualizar.TabIndex = 85;
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_mod_guardar
             // 
@@ -178,6 +188,7 @@
             this.btn_mod_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_mod_guardar.TabIndex = 66;
             this.btn_mod_guardar.UseVisualStyleBackColor = true;
+            this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
             // 
             // tabPage3
             // 
@@ -186,13 +197,14 @@
             this.tabPage3.Controls.Add(this.btn_buscar);
             this.tabPage3.Controls.Add(this.txt_buscar);
             this.tabPage3.Controls.Add(this.lbl_codigo_buscar);
-            this.tabPage3.Controls.Add(this.dgv_borrar_categoria);
+            this.tabPage3.Controls.Add(this.dgv_borrarsala);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(713, 322);
+            this.tabPage3.Size = new System.Drawing.Size(716, 322);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Borrar Sala";
+            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // btn_borrar
             // 
@@ -203,45 +215,49 @@
             this.btn_borrar.Size = new System.Drawing.Size(71, 52);
             this.btn_borrar.TabIndex = 60;
             this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // btn_buscar
             // 
             this.btn_buscar.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar.Location = new System.Drawing.Point(418, 16);
+            this.btn_buscar.Location = new System.Drawing.Point(415, 16);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(78, 52);
+            this.btn_buscar.Size = new System.Drawing.Size(81, 52);
             this.btn_buscar.TabIndex = 59;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // txt_buscar
             // 
-            this.txt_buscar.Location = new System.Drawing.Point(185, 33);
+            this.txt_buscar.Location = new System.Drawing.Point(182, 33);
             this.txt_buscar.MaxLength = 100;
             this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(178, 20);
+            this.txt_buscar.Size = new System.Drawing.Size(181, 20);
             this.txt_buscar.TabIndex = 58;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             // 
             // lbl_codigo_buscar
             // 
             this.lbl_codigo_buscar.AutoSize = true;
             this.lbl_codigo_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo_buscar.Location = new System.Drawing.Point(15, 32);
+            this.lbl_codigo_buscar.Location = new System.Drawing.Point(87, 30);
             this.lbl_codigo_buscar.Name = "lbl_codigo_buscar";
-            this.lbl_codigo_buscar.Size = new System.Drawing.Size(154, 21);
+            this.lbl_codigo_buscar.Size = new System.Drawing.Size(92, 21);
             this.lbl_codigo_buscar.TabIndex = 57;
-            this.lbl_codigo_buscar.Text = "Codigo Busqueda:";
+            this.lbl_codigo_buscar.Text = "Busqueda:";
+            this.lbl_codigo_buscar.Click += new System.EventHandler(this.lbl_codigo_buscar_Click);
             // 
-            // dgv_borrar_categoria
+            // dgv_borrarsala
             // 
-            this.dgv_borrar_categoria.AllowUserToAddRows = false;
-            this.dgv_borrar_categoria.AllowUserToDeleteRows = false;
-            this.dgv_borrar_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_borrar_categoria.Location = new System.Drawing.Point(6, 77);
-            this.dgv_borrar_categoria.Name = "dgv_borrar_categoria";
-            this.dgv_borrar_categoria.ReadOnly = true;
-            this.dgv_borrar_categoria.Size = new System.Drawing.Size(696, 238);
-            this.dgv_borrar_categoria.TabIndex = 56;
+            this.dgv_borrarsala.AllowUserToAddRows = false;
+            this.dgv_borrarsala.AllowUserToDeleteRows = false;
+            this.dgv_borrarsala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_borrarsala.Location = new System.Drawing.Point(6, 77);
+            this.dgv_borrarsala.Name = "dgv_borrarsala";
+            this.dgv_borrarsala.ReadOnly = true;
+            this.dgv_borrarsala.Size = new System.Drawing.Size(696, 238);
+            this.dgv_borrarsala.TabIndex = 56;
             // 
             // lbl_titulo_mantenimiento_cine
             // 
@@ -252,6 +268,7 @@
             this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(379, 36);
             this.lbl_titulo_mantenimiento_cine.TabIndex = 63;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE SALA";
+            this.lbl_titulo_mantenimiento_cine.Click += new System.EventHandler(this.lbl_titulo_mantenimiento_cine_Click);
             // 
             // btn_regresar
             // 
@@ -263,6 +280,35 @@
             this.btn_regresar.TabIndex = 64;
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(346, 73);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 45);
+            this.button1.TabIndex = 90;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txt_buscmod
+            // 
+            this.txt_buscmod.Location = new System.Drawing.Point(145, 86);
+            this.txt_buscmod.MaxLength = 100;
+            this.txt_buscmod.Name = "txt_buscmod";
+            this.txt_buscmod.Size = new System.Drawing.Size(181, 20);
+            this.txt_buscmod.TabIndex = 89;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 21);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Busqueda:";
             // 
             // sala
             // 
@@ -276,16 +322,17 @@
             this.Name = "sala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sala";
+            this.Load += new System.EventHandler(this.sala_Load);
             this.tbc_clasificacion.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_clasificacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_sala)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mod_clasificacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_modsala)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_borrar_categoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_borrarsala)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,13 +343,13 @@
         private System.Windows.Forms.TabControl tbc_clasificacion;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.Label lbl_clasificacion;
-        private System.Windows.Forms.TextBox txt_clasificacion;
-        private System.Windows.Forms.DataGridView dgv_clasificacion;
+        private System.Windows.Forms.Label lbl_sala;
+        private System.Windows.Forms.TextBox txt_sala;
+        private System.Windows.Forms.DataGridView dgv_sala;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dgv_mod_clasificacion;
+        private System.Windows.Forms.Label lbl_mod;
+        private System.Windows.Forms.TextBox txt_mod;
+        private System.Windows.Forms.DataGridView dgv_modsala;
         private System.Windows.Forms.Button btn_actualizar;
         private System.Windows.Forms.Button btn_mod_guardar;
         private System.Windows.Forms.TabPage tabPage3;
@@ -310,8 +357,11 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label lbl_codigo_buscar;
-        private System.Windows.Forms.DataGridView dgv_borrar_categoria;
+        private System.Windows.Forms.DataGridView dgv_borrarsala;
         private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.Label lbl_titulo_mantenimiento_cine;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_buscmod;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_confirmar = new System.Windows.Forms.TextBox();
             this.lbl_uempleado = new System.Windows.Forms.Label();
-            this.txt_empleado = new System.Windows.Forms.TextBox();
             this.btn_agregarusuario = new System.Windows.Forms.Button();
             this.dgv_ingresarusuario = new System.Windows.Forms.DataGridView();
             this.cbo_nivelsusario = new System.Windows.Forms.ComboBox();
@@ -69,6 +68,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
+            this.lbl_confmod = new System.Windows.Forms.Label();
+            this.txt_confmod = new System.Windows.Forms.TextBox();
+            this.cbo_elegirempleado = new System.Windows.Forms.ComboBox();
             this.lbl_modificar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ingresarusuario)).BeginInit();
@@ -102,10 +104,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.cbo_elegirempleado);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.txt_confirmar);
             this.tabPage1.Controls.Add(this.lbl_uempleado);
-            this.tabPage1.Controls.Add(this.txt_empleado);
             this.tabPage1.Controls.Add(this.btn_agregarusuario);
             this.tabPage1.Controls.Add(this.dgv_ingresarusuario);
             this.tabPage1.Controls.Add(this.cbo_nivelsusario);
@@ -137,6 +139,7 @@
             this.txt_confirmar.Location = new System.Drawing.Point(305, 93);
             this.txt_confirmar.MaxLength = 20;
             this.txt_confirmar.Name = "txt_confirmar";
+            this.txt_confirmar.PasswordChar = '*';
             this.txt_confirmar.Size = new System.Drawing.Size(106, 20);
             this.txt_confirmar.TabIndex = 38;
             // 
@@ -149,13 +152,6 @@
             this.lbl_uempleado.Size = new System.Drawing.Size(71, 16);
             this.lbl_uempleado.TabIndex = 37;
             this.lbl_uempleado.Text = "Empleado:";
-            // 
-            // txt_empleado
-            // 
-            this.txt_empleado.Location = new System.Drawing.Point(571, 60);
-            this.txt_empleado.Name = "txt_empleado";
-            this.txt_empleado.Size = new System.Drawing.Size(87, 20);
-            this.txt_empleado.TabIndex = 36;
             // 
             // btn_agregarusuario
             // 
@@ -190,6 +186,7 @@
             this.txt_pasusuario.Location = new System.Drawing.Point(115, 92);
             this.txt_pasusuario.MaxLength = 20;
             this.txt_pasusuario.Name = "txt_pasusuario";
+            this.txt_pasusuario.PasswordChar = '*';
             this.txt_pasusuario.Size = new System.Drawing.Size(103, 20);
             this.txt_pasusuario.TabIndex = 32;
             this.txt_pasusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pasusuario_KeyPress);
@@ -207,18 +204,18 @@
             // 
             this.lbl_nivelusuario.AutoSize = true;
             this.lbl_nivelusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nivelusuario.Location = new System.Drawing.Point(6, 128);
+            this.lbl_nivelusuario.Location = new System.Drawing.Point(73, 129);
             this.lbl_nivelusuario.Name = "lbl_nivelusuario";
-            this.lbl_nivelusuario.Size = new System.Drawing.Size(104, 16);
+            this.lbl_nivelusuario.Size = new System.Drawing.Size(37, 16);
             this.lbl_nivelusuario.TabIndex = 30;
-            this.lbl_nivelusuario.Text = "Nivel de usuario:";
+            this.lbl_nivelusuario.Text = "Role:";
             this.lbl_nivelusuario.Click += new System.EventHandler(this.label4_Click);
             // 
             // lbl_passusuario
             // 
             this.lbl_passusuario.AutoSize = true;
             this.lbl_passusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_passusuario.Location = new System.Drawing.Point(6, 93);
+            this.lbl_passusuario.Location = new System.Drawing.Point(28, 94);
             this.lbl_passusuario.Name = "lbl_passusuario";
             this.lbl_passusuario.Size = new System.Drawing.Size(82, 16);
             this.lbl_passusuario.TabIndex = 29;
@@ -229,7 +226,7 @@
             // 
             this.lbl_nombreusuario.AutoSize = true;
             this.lbl_nombreusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombreusuario.Location = new System.Drawing.Point(6, 68);
+            this.lbl_nombreusuario.Location = new System.Drawing.Point(51, 64);
             this.lbl_nombreusuario.Name = "lbl_nombreusuario";
             this.lbl_nombreusuario.Size = new System.Drawing.Size(59, 16);
             this.lbl_nombreusuario.TabIndex = 28;
@@ -323,6 +320,8 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage3.Controls.Add(this.lbl_confmod);
+            this.tabPage3.Controls.Add(this.txt_confmod);
             this.tabPage3.Controls.Add(this.btn_modificar);
             this.tabPage3.Controls.Add(this.btn_buscarmod);
             this.tabPage3.Controls.Add(this.lbl_buscar);
@@ -438,7 +437,7 @@
             this.txt_conmod.Location = new System.Drawing.Point(139, 92);
             this.txt_conmod.MaxLength = 20;
             this.txt_conmod.Name = "txt_conmod";
-            this.txt_conmod.Size = new System.Drawing.Size(299, 20);
+            this.txt_conmod.Size = new System.Drawing.Size(124, 20);
             this.txt_conmod.TabIndex = 42;
             this.txt_conmod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_conmod_KeyPress);
             // 
@@ -514,6 +513,36 @@
             this.btn_cerrarsesion.UseVisualStyleBackColor = true;
             this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
+            // lbl_confmod
+            // 
+            this.lbl_confmod.AutoSize = true;
+            this.lbl_confmod.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_confmod.Location = new System.Drawing.Point(280, 96);
+            this.lbl_confmod.Name = "lbl_confmod";
+            this.lbl_confmod.Size = new System.Drawing.Size(71, 16);
+            this.lbl_confmod.TabIndex = 53;
+            this.lbl_confmod.Text = "Confirmar:";
+            this.lbl_confmod.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // txt_confmod
+            // 
+            this.txt_confmod.Location = new System.Drawing.Point(357, 95);
+            this.txt_confmod.MaxLength = 20;
+            this.txt_confmod.Name = "txt_confmod";
+            this.txt_confmod.PasswordChar = '*';
+            this.txt_confmod.Size = new System.Drawing.Size(106, 20);
+            this.txt_confmod.TabIndex = 52;
+            this.txt_confmod.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // cbo_elegirempleado
+            // 
+            this.cbo_elegirempleado.FormattingEnabled = true;
+            this.cbo_elegirempleado.Location = new System.Drawing.Point(560, 56);
+            this.cbo_elegirempleado.Name = "cbo_elegirempleado";
+            this.cbo_elegirempleado.Size = new System.Drawing.Size(113, 21);
+            this.cbo_elegirempleado.TabIndex = 40;
+            this.cbo_elegirempleado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -566,7 +595,6 @@
         private System.Windows.Forms.TextBox txt_buscarusuario;
         private System.Windows.Forms.DataGridView dgv_borrarusuario;
         private System.Windows.Forms.Label lbl_uempleado;
-        private System.Windows.Forms.TextBox txt_empleado;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_modempl;
@@ -585,5 +613,8 @@
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_confirmar;
+        private System.Windows.Forms.Label lbl_confmod;
+        private System.Windows.Forms.TextBox txt_confmod;
+        private System.Windows.Forms.ComboBox cbo_elegirempleado;
     }
 }
