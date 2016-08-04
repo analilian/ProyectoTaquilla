@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_selecciondeventana = new System.Windows.Forms.Label();
             this.btn_usuario = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
@@ -36,6 +37,7 @@
             this.btn_mantenimientocine = new System.Windows.Forms.Button();
             this.btn_ayuda = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +61,7 @@
             this.btn_usuario.Name = "btn_usuario";
             this.btn_usuario.Size = new System.Drawing.Size(30, 30);
             this.btn_usuario.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.btn_usuario, "Configuracion de usuario");
             this.btn_usuario.UseVisualStyleBackColor = false;
             this.btn_usuario.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -118,6 +121,7 @@
             this.btn_ayuda.Name = "btn_ayuda";
             this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
             this.btn_ayuda.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btn_ayuda, "Ayuda");
             this.btn_ayuda.UseVisualStyleBackColor = false;
             this.btn_ayuda.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -166,5 +170,6 @@
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.Button btn_usuario;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

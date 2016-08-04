@@ -49,11 +49,9 @@
             this.cbo_mod_sala = new System.Windows.Forms.ComboBox();
             this.lbl_mod_sala = new System.Windows.Forms.Label();
             this.txt_mod_trailer = new System.Windows.Forms.TextBox();
-            this.cbo_mod_hora = new System.Windows.Forms.ComboBox();
             this.txt_mod_nombre = new System.Windows.Forms.TextBox();
             this.lbl_mod_trailer = new System.Windows.Forms.Label();
             this.lbl_mod_descrip = new System.Windows.Forms.Label();
-            this.lbl_mod_hora = new System.Windows.Forms.Label();
             this.lbl_mod_fecha = new System.Windows.Forms.Label();
             this.lbl_mod_portada = new System.Windows.Forms.Label();
             this.lbl_mod_nombre = new System.Windows.Forms.Label();
@@ -87,11 +85,9 @@
             this.cbo_sala = new System.Windows.Forms.ComboBox();
             this.lbl_sala = new System.Windows.Forms.Label();
             this.txt_trailer = new System.Windows.Forms.TextBox();
-            this.cbo_horarioinicio = new System.Windows.Forms.ComboBox();
             this.txt_nombre1 = new System.Windows.Forms.TextBox();
             this.lbl_trailer = new System.Windows.Forms.Label();
             this.lbl_descrip = new System.Windows.Forms.Label();
-            this.lbl_hora = new System.Windows.Forms.Label();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.lbl_portada = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
@@ -143,11 +139,9 @@
             this.tabPage2.Controls.Add(this.cbo_mod_sala);
             this.tabPage2.Controls.Add(this.lbl_mod_sala);
             this.tabPage2.Controls.Add(this.txt_mod_trailer);
-            this.tabPage2.Controls.Add(this.cbo_mod_hora);
             this.tabPage2.Controls.Add(this.txt_mod_nombre);
             this.tabPage2.Controls.Add(this.lbl_mod_trailer);
             this.tabPage2.Controls.Add(this.lbl_mod_descrip);
-            this.tabPage2.Controls.Add(this.lbl_mod_hora);
             this.tabPage2.Controls.Add(this.lbl_mod_fecha);
             this.tabPage2.Controls.Add(this.lbl_mod_portada);
             this.tabPage2.Controls.Add(this.lbl_mod_nombre);
@@ -283,6 +277,7 @@
             this.cbo_mod_proyeccion.Name = "cbo_mod_proyeccion";
             this.cbo_mod_proyeccion.Size = new System.Drawing.Size(151, 21);
             this.cbo_mod_proyeccion.TabIndex = 66;
+            this.cbo_mod_proyeccion.SelectedIndexChanged += new System.EventHandler(this.cbo_mod_proyeccion_SelectedIndexChanged);
             // 
             // lbl_mod_proyeccion
             // 
@@ -301,6 +296,7 @@
             this.cbo_mod_idioma.Name = "cbo_mod_idioma";
             this.cbo_mod_idioma.Size = new System.Drawing.Size(151, 21);
             this.cbo_mod_idioma.TabIndex = 64;
+            this.cbo_mod_idioma.SelectedIndexChanged += new System.EventHandler(this.cbo_mod_idioma_SelectedIndexChanged);
             // 
             // lbl_mod_idioma
             // 
@@ -337,14 +333,6 @@
             this.txt_mod_trailer.Size = new System.Drawing.Size(151, 20);
             this.txt_mod_trailer.TabIndex = 60;
             // 
-            // cbo_mod_hora
-            // 
-            this.cbo_mod_hora.FormattingEnabled = true;
-            this.cbo_mod_hora.Location = new System.Drawing.Point(208, 92);
-            this.cbo_mod_hora.Name = "cbo_mod_hora";
-            this.cbo_mod_hora.Size = new System.Drawing.Size(151, 21);
-            this.cbo_mod_hora.TabIndex = 59;
-            // 
             // txt_mod_nombre
             // 
             this.txt_mod_nombre.Location = new System.Drawing.Point(208, 66);
@@ -373,16 +361,6 @@
             this.lbl_mod_descrip.Size = new System.Drawing.Size(104, 21);
             this.lbl_mod_descrip.TabIndex = 56;
             this.lbl_mod_descrip.Text = "Descripción:";
-            // 
-            // lbl_mod_hora
-            // 
-            this.lbl_mod_hora.AutoSize = true;
-            this.lbl_mod_hora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_hora.Location = new System.Drawing.Point(15, 91);
-            this.lbl_mod_hora.Name = "lbl_mod_hora";
-            this.lbl_mod_hora.Size = new System.Drawing.Size(141, 21);
-            this.lbl_mod_hora.TabIndex = 55;
-            this.lbl_mod_hora.Text = "Horario de inicio :";
             // 
             // lbl_mod_fecha
             // 
@@ -495,11 +473,9 @@
             this.tabPage1.Controls.Add(this.cbo_sala);
             this.tabPage1.Controls.Add(this.lbl_sala);
             this.tabPage1.Controls.Add(this.txt_trailer);
-            this.tabPage1.Controls.Add(this.cbo_horarioinicio);
             this.tabPage1.Controls.Add(this.txt_nombre1);
             this.tabPage1.Controls.Add(this.lbl_trailer);
             this.tabPage1.Controls.Add(this.lbl_descrip);
-            this.tabPage1.Controls.Add(this.lbl_hora);
             this.tabPage1.Controls.Add(this.lbl_fecha);
             this.tabPage1.Controls.Add(this.lbl_portada);
             this.tabPage1.Controls.Add(this.lbl_nombre);
@@ -516,7 +492,7 @@
             // 
             this.button2.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(298, 128);
+            this.button2.Location = new System.Drawing.Point(298, 103);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(31, 24);
             this.button2.TabIndex = 86;
@@ -552,7 +528,7 @@
             // 
             this.btn_agregar_clasificacion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
             this.btn_agregar_clasificacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_clasificacion.Location = new System.Drawing.Point(298, 206);
+            this.btn_agregar_clasificacion.Location = new System.Drawing.Point(298, 181);
             this.btn_agregar_clasificacion.Name = "btn_agregar_clasificacion";
             this.btn_agregar_clasificacion.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_clasificacion.TabIndex = 83;
@@ -564,7 +540,7 @@
             // 
             this.btn_agregar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
             this.btn_agregar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_horario.Location = new System.Drawing.Point(298, 71);
+            this.btn_agregar_horario.Location = new System.Drawing.Point(609, 99);
             this.btn_agregar_horario.Name = "btn_agregar_horario";
             this.btn_agregar_horario.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_horario.TabIndex = 12;
@@ -585,7 +561,6 @@
             // 
             // pic_portada
             // 
-            this.pic_portada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pic_portada.Location = new System.Drawing.Point(715, 66);
             this.pic_portada.Name = "pic_portada";
             this.pic_portada.Size = new System.Drawing.Size(119, 127);
@@ -673,7 +648,7 @@
             // cbo_clasificacion
             // 
             this.cbo_clasificacion.FormattingEnabled = true;
-            this.cbo_clasificacion.Location = new System.Drawing.Point(141, 209);
+            this.cbo_clasificacion.Location = new System.Drawing.Point(141, 184);
             this.cbo_clasificacion.Name = "cbo_clasificacion";
             this.cbo_clasificacion.Size = new System.Drawing.Size(151, 21);
             this.cbo_clasificacion.TabIndex = 45;
@@ -682,7 +657,7 @@
             // 
             this.lbl_clasificacion.AutoSize = true;
             this.lbl_clasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clasificacion.Location = new System.Drawing.Point(11, 213);
+            this.lbl_clasificacion.Location = new System.Drawing.Point(11, 188);
             this.lbl_clasificacion.Name = "lbl_clasificacion";
             this.lbl_clasificacion.Size = new System.Drawing.Size(112, 21);
             this.lbl_clasificacion.TabIndex = 44;
@@ -691,7 +666,7 @@
             // cbo_proyeccion
             // 
             this.cbo_proyeccion.FormattingEnabled = true;
-            this.cbo_proyeccion.Location = new System.Drawing.Point(141, 182);
+            this.cbo_proyeccion.Location = new System.Drawing.Point(141, 157);
             this.cbo_proyeccion.Name = "cbo_proyeccion";
             this.cbo_proyeccion.Size = new System.Drawing.Size(151, 21);
             this.cbo_proyeccion.TabIndex = 43;
@@ -700,7 +675,7 @@
             // 
             this.lbl_proyeccion.AutoSize = true;
             this.lbl_proyeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_proyeccion.Location = new System.Drawing.Point(11, 183);
+            this.lbl_proyeccion.Location = new System.Drawing.Point(11, 158);
             this.lbl_proyeccion.Name = "lbl_proyeccion";
             this.lbl_proyeccion.Size = new System.Drawing.Size(99, 21);
             this.lbl_proyeccion.TabIndex = 42;
@@ -709,7 +684,7 @@
             // cbo_idioma
             // 
             this.cbo_idioma.FormattingEnabled = true;
-            this.cbo_idioma.Location = new System.Drawing.Point(141, 155);
+            this.cbo_idioma.Location = new System.Drawing.Point(141, 130);
             this.cbo_idioma.Name = "cbo_idioma";
             this.cbo_idioma.Size = new System.Drawing.Size(151, 21);
             this.cbo_idioma.TabIndex = 41;
@@ -718,7 +693,7 @@
             // 
             this.lbl_idioma.AutoSize = true;
             this.lbl_idioma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_idioma.Location = new System.Drawing.Point(11, 153);
+            this.lbl_idioma.Location = new System.Drawing.Point(11, 128);
             this.lbl_idioma.Name = "lbl_idioma";
             this.lbl_idioma.Size = new System.Drawing.Size(69, 21);
             this.lbl_idioma.TabIndex = 40;
@@ -727,7 +702,7 @@
             // cbo_sala
             // 
             this.cbo_sala.FormattingEnabled = true;
-            this.cbo_sala.Location = new System.Drawing.Point(141, 128);
+            this.cbo_sala.Location = new System.Drawing.Point(141, 103);
             this.cbo_sala.Name = "cbo_sala";
             this.cbo_sala.Size = new System.Drawing.Size(151, 21);
             this.cbo_sala.TabIndex = 39;
@@ -736,7 +711,7 @@
             // 
             this.lbl_sala.AutoSize = true;
             this.lbl_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sala.Location = new System.Drawing.Point(11, 128);
+            this.lbl_sala.Location = new System.Drawing.Point(11, 103);
             this.lbl_sala.Name = "lbl_sala";
             this.lbl_sala.Size = new System.Drawing.Size(47, 21);
             this.lbl_sala.TabIndex = 38;
@@ -744,18 +719,10 @@
             // 
             // txt_trailer
             // 
-            this.txt_trailer.Location = new System.Drawing.Point(141, 99);
+            this.txt_trailer.Location = new System.Drawing.Point(141, 74);
             this.txt_trailer.Name = "txt_trailer";
             this.txt_trailer.Size = new System.Drawing.Size(151, 20);
             this.txt_trailer.TabIndex = 37;
-            // 
-            // cbo_horarioinicio
-            // 
-            this.cbo_horarioinicio.FormattingEnabled = true;
-            this.cbo_horarioinicio.Location = new System.Drawing.Point(141, 72);
-            this.cbo_horarioinicio.Name = "cbo_horarioinicio";
-            this.cbo_horarioinicio.Size = new System.Drawing.Size(151, 21);
-            this.cbo_horarioinicio.TabIndex = 36;
             // 
             // txt_nombre1
             // 
@@ -770,7 +737,7 @@
             // 
             this.lbl_trailer.AutoSize = true;
             this.lbl_trailer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_trailer.Location = new System.Drawing.Point(11, 98);
+            this.lbl_trailer.Location = new System.Drawing.Point(11, 73);
             this.lbl_trailer.Name = "lbl_trailer";
             this.lbl_trailer.Size = new System.Drawing.Size(81, 21);
             this.lbl_trailer.TabIndex = 32;
@@ -785,16 +752,6 @@
             this.lbl_descrip.Size = new System.Drawing.Size(104, 21);
             this.lbl_descrip.TabIndex = 31;
             this.lbl_descrip.Text = "Descripción:";
-            // 
-            // lbl_hora
-            // 
-            this.lbl_hora.AutoSize = true;
-            this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.Location = new System.Drawing.Point(11, 71);
-            this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(73, 21);
-            this.lbl_hora.TabIndex = 29;
-            this.lbl_hora.Text = "Horario :";
             // 
             // lbl_fecha
             // 
@@ -907,12 +864,9 @@
             // 
             // dgv_buscar_pelicula
             // 
-            this.dgv_buscar_pelicula.AllowUserToAddRows = false;
-            this.dgv_buscar_pelicula.AllowUserToDeleteRows = false;
             this.dgv_buscar_pelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_buscar_pelicula.Location = new System.Drawing.Point(16, 138);
             this.dgv_buscar_pelicula.Name = "dgv_buscar_pelicula";
-            this.dgv_buscar_pelicula.ReadOnly = true;
             this.dgv_buscar_pelicula.Size = new System.Drawing.Size(825, 228);
             this.dgv_buscar_pelicula.TabIndex = 0;
             // 
@@ -1001,7 +955,6 @@
         private System.Windows.Forms.Label lbl_agregar;
         private System.Windows.Forms.Label lbl_mod;
         private System.Windows.Forms.Label lbl_descrip;
-        private System.Windows.Forms.Label lbl_hora;
         private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.Label lbl_portada;
         private System.Windows.Forms.Label lbl_nombre;
@@ -1026,7 +979,6 @@
         private System.Windows.Forms.ComboBox cbo_sala;
         private System.Windows.Forms.Label lbl_sala;
         private System.Windows.Forms.TextBox txt_trailer;
-        private System.Windows.Forms.ComboBox cbo_horarioinicio;
         private System.Windows.Forms.TextBox txt_nombre1;
         private System.Windows.Forms.TextBox txt_descrip;
         private System.Windows.Forms.TextBox txt_mod_descrip;
@@ -1044,11 +996,9 @@
         private System.Windows.Forms.ComboBox cbo_mod_sala;
         private System.Windows.Forms.Label lbl_mod_sala;
         private System.Windows.Forms.TextBox txt_mod_trailer;
-        private System.Windows.Forms.ComboBox cbo_mod_hora;
         private System.Windows.Forms.TextBox txt_mod_nombre;
         private System.Windows.Forms.Label lbl_mod_trailer;
         private System.Windows.Forms.Label lbl_mod_descrip;
-        private System.Windows.Forms.Label lbl_mod_hora;
         private System.Windows.Forms.Label lbl_mod_fecha;
         private System.Windows.Forms.Label lbl_mod_portada;
         private System.Windows.Forms.Label lbl_mod_nombre;
