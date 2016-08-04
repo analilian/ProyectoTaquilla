@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boletos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boletos.Designer.cs">
+      <DependentUpon>Boletos.cs</DependentUpon>
+    </Compile>
     <Compile Include="butacas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="sinopsis.Designer.cs">
       <DependentUpon>sinopsis.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Boletos.resx">
+      <DependentUpon>Boletos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="butacas.resx">
       <DependentUpon>butacas.cs</DependentUpon>
     </EmbeddedResource>
