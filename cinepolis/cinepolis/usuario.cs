@@ -16,7 +16,7 @@ namespace cinepolis
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla ="usuario";
         String Squeery = "select* from usuario";
-        
+        MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
 
 
 
@@ -277,7 +277,7 @@ namespace cinepolis
         {
             try
             {
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+              
                 string s = "select * from bdcinetopia.role";
               
                 micon.Open();
@@ -299,7 +299,7 @@ namespace cinepolis
         {
             try
             {
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+            
                 string s = "select * from bdcinetopia.empleado";
 
                 micon.Open();
@@ -307,7 +307,7 @@ namespace cinepolis
                 MySqlDataReader mdr = mcd.ExecuteReader();
                 while (mdr.Read())
                 {
-                    cbo_elegirempleado.Items.Add(mdr.GetString("nom1empleado"));
+                    cbo_elegirempleado.Items.Add(mdr.GetString("pkidempleado"));
                 }
                 micon.Close();
             }
@@ -321,5 +321,7 @@ namespace cinepolis
         {
 
         }
+
+      
     }
 }

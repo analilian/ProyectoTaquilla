@@ -31,6 +31,7 @@
             this.lbl_mantenimientodeusuario = new System.Windows.Forms.Label();
             this.lbl_modificar = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbo_elegirempleado = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_confirmar = new System.Windows.Forms.TextBox();
             this.lbl_uempleado = new System.Windows.Forms.Label();
@@ -51,6 +52,8 @@
             this.dgv_borrarusuario = new System.Windows.Forms.DataGridView();
             this.lbl_borrarusuario = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lbl_confmod = new System.Windows.Forms.Label();
+            this.txt_confmod = new System.Windows.Forms.TextBox();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_buscarmod = new System.Windows.Forms.Button();
             this.lbl_buscar = new System.Windows.Forms.Label();
@@ -68,9 +71,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
-            this.lbl_confmod = new System.Windows.Forms.Label();
-            this.txt_confmod = new System.Windows.Forms.TextBox();
-            this.cbo_elegirempleado = new System.Windows.Forms.ComboBox();
             this.lbl_modificar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ingresarusuario)).BeginInit();
@@ -123,6 +123,15 @@
             this.tabPage1.Size = new System.Drawing.Size(822, 310);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ingresar Usuario";
+            // 
+            // cbo_elegirempleado
+            // 
+            this.cbo_elegirempleado.FormattingEnabled = true;
+            this.cbo_elegirempleado.Location = new System.Drawing.Point(560, 56);
+            this.cbo_elegirempleado.Name = "cbo_elegirempleado";
+            this.cbo_elegirempleado.Size = new System.Drawing.Size(113, 21);
+            this.cbo_elegirempleado.TabIndex = 40;
+            this.cbo_elegirempleado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -345,6 +354,27 @@
             this.tabPage3.Text = "Modificar Usuario";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // lbl_confmod
+            // 
+            this.lbl_confmod.AutoSize = true;
+            this.lbl_confmod.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_confmod.Location = new System.Drawing.Point(280, 96);
+            this.lbl_confmod.Name = "lbl_confmod";
+            this.lbl_confmod.Size = new System.Drawing.Size(71, 16);
+            this.lbl_confmod.TabIndex = 53;
+            this.lbl_confmod.Text = "Confirmar:";
+            this.lbl_confmod.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // txt_confmod
+            // 
+            this.txt_confmod.Location = new System.Drawing.Point(357, 95);
+            this.txt_confmod.MaxLength = 20;
+            this.txt_confmod.Name = "txt_confmod";
+            this.txt_confmod.PasswordChar = '*';
+            this.txt_confmod.Size = new System.Drawing.Size(106, 20);
+            this.txt_confmod.TabIndex = 52;
+            this.txt_confmod.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // btn_modificar
             // 
             this.btn_modificar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
@@ -512,36 +542,6 @@
             this.btn_cerrarsesion.Text = "Cerrar Sesión";
             this.btn_cerrarsesion.UseVisualStyleBackColor = true;
             this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lbl_confmod
-            // 
-            this.lbl_confmod.AutoSize = true;
-            this.lbl_confmod.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_confmod.Location = new System.Drawing.Point(280, 96);
-            this.lbl_confmod.Name = "lbl_confmod";
-            this.lbl_confmod.Size = new System.Drawing.Size(71, 16);
-            this.lbl_confmod.TabIndex = 53;
-            this.lbl_confmod.Text = "Confirmar:";
-            this.lbl_confmod.Click += new System.EventHandler(this.label3_Click_1);
-            // 
-            // txt_confmod
-            // 
-            this.txt_confmod.Location = new System.Drawing.Point(357, 95);
-            this.txt_confmod.MaxLength = 20;
-            this.txt_confmod.Name = "txt_confmod";
-            this.txt_confmod.PasswordChar = '*';
-            this.txt_confmod.Size = new System.Drawing.Size(106, 20);
-            this.txt_confmod.TabIndex = 52;
-            this.txt_confmod.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // cbo_elegirempleado
-            // 
-            this.cbo_elegirempleado.FormattingEnabled = true;
-            this.cbo_elegirempleado.Location = new System.Drawing.Point(560, 56);
-            this.cbo_elegirempleado.Name = "cbo_elegirempleado";
-            this.cbo_elegirempleado.Size = new System.Drawing.Size(113, 21);
-            this.cbo_elegirempleado.TabIndex = 40;
-            this.cbo_elegirempleado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // usuario
             // 

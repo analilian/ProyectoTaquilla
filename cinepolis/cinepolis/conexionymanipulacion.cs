@@ -54,5 +54,6 @@ namespace cinepolis
             else
                 MessageBox.Show("Busqueda Realizada", "Musqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+      
     }
 }

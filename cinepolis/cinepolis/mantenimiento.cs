@@ -14,19 +14,33 @@ namespace cinepolis
 {
     public partial class mantenimiento : Form
     {
+        public bool Enabled { get; set; }
+        string usuario;
         MySqlCommand comand;
         conexionymanipulacion con = new conexionymanipulacion();
         String Stabla = "pelicula";
         MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopia ; Uid=root;pwd=;");
         string imgLoc;
         String Squeery = "select * from pelicula";
-        public mantenimiento()
+        public mantenimiento(string usu)
         {
-            
+
             InitializeComponent();
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            this.usuario = usu;
+            realizar();
+
+        }
+        public mantenimiento()
+        {
+
+            InitializeComponent();
+            con.actualizargrid(dgv_insertar, Squeery, Stabla);
+            con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
+            con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+
 
         }
 
@@ -155,16 +169,16 @@ namespace cinepolis
         {
             txt_mod_nombre.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[1].Value.ToString();
             txt_mod_descrip.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[2].Value.ToString();
-            pic_mod_portada.ImageLocation=this.dgv_modificar_pelicula.CurrentRow.Cells[3].Value.ToString();
-            txt_mod_trailer.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[4].Value.ToString();
-            cbo_mod_sala.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[5].Value.ToString();
-            cbo_mod_idioma.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[6].Value.ToString();
-            cbo_mod_proyeccion.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[7].Value.ToString();
-            cbo_mod_clasificacion.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[8].Value.ToString();
-            cbo_mod_categoria.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[9].Value.ToString();
-            cbo_mod_cine.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[10].Value.ToString();
-            cbo_mod_cine.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[11].Value.ToString();
-            cbo_mod_fecha.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[12].Value.ToString();
+            pic_mod_portada.ImageLocation = this.dgv_modificar_pelicula.CurrentRow.Cells[3].Value.ToString();
+            txt_mod_trailer.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[4].Value.ToString();
+            cbo_mod_sala.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[5].Value.ToString();
+            cbo_mod_idioma.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[6].Value.ToString();
+            cbo_mod_proyeccion.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[7].Value.ToString();
+            cbo_mod_clasificacion.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[8].Value.ToString();
+            cbo_mod_categoria.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[9].Value.ToString();
+            cbo_mod_cine.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[10].Value.ToString();
+            cbo_mod_cine.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[11].Value.ToString();
+            cbo_mod_fecha.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[12].Value.ToString();
 
         }
 
@@ -186,7 +200,7 @@ namespace cinepolis
                 con.Conectar();
                 String Squerys = "delete from  pelicula  where pkidpelicula = '" + SCelda + "';";
                 con.EjecutarQuery(Squerys);
-               con.actualizargrid(dgv_insertar, Squeery, Stabla);
+                con.actualizargrid(dgv_insertar, Squeery, Stabla);
                 con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
                 con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
                 con.Desconectar();
@@ -204,7 +218,7 @@ namespace cinepolis
             FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
             img = br.ReadBytes((int)fs.Length);
-            string sql = "Insert Into pelicula (nompelicula,despelicula,imagenpelicula,vinculopelicula,pkidsala,pkididioma,pkidproyeccion,pkidclasificacion,pkidcategorias,pkidcine,pkidfcar)values('" + txt_mod_nombre.Text+ "','" + txt_mod_descrip.Text + "',@img'" + txt_mod_trailer.Text + "','" + cbo_mod_sala.Text + "','" + cbo_mod_idioma.Text + "','" + cbo_mod_proyeccion.Text + "','" + cbo_mod_clasificacion.Text + "','" + cbo_mod_categoria.Text + "','" + cbo_mod_cine.Text + "','" + cbo_mod_fecha.Text + "')";
+            string sql = "Insert Into pelicula (nompelicula,despelicula,imagenpelicula,vinculopelicula,pkidsala,pkididioma,pkidproyeccion,pkidclasificacion,pkidcategorias,pkidcine,pkidfcar)values('" + txt_mod_nombre.Text + "','" + txt_mod_descrip.Text + "',@img'" + txt_mod_trailer.Text + "','" + cbo_mod_sala.Text + "','" + cbo_mod_idioma.Text + "','" + cbo_mod_proyeccion.Text + "','" + cbo_mod_clasificacion.Text + "','" + cbo_mod_categoria.Text + "','" + cbo_mod_cine.Text + "','" + cbo_mod_fecha.Text + "')";
             if (conexion.State != ConnectionState.Open)
                 conexion.Open();
             comand = new MySqlCommand(sql, conexion);
@@ -280,6 +294,31 @@ namespace cinepolis
             this.Hide();
             cine r = new cine();
             r.ShowDialog();
+        }
+        public static MySqlConnection ObtenerConexion()
+        {
+            MySqlConnection Conn = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+            Conn.Open();
+            return Conn;
+
+        }
+        private void realizar()
+        {
+            int resultado = -1;
+            MySqlConnection conexion = ObtenerConexion();
+            MySqlCommand comando = new MySqlCommand(string.Format("Select nomusuario ,pkidrole From usuario Where nomusuario = '{0}' and pkidrole  = 1", usuario), conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                resultado = 50;
+            }
+            conexion.Close();
+
+            if (resultado < 0)
+            {
+                btn_regresar.Enabled = false;
+
+            }
         }
     }
 }

@@ -12,9 +12,16 @@ namespace cinepolis
 {
     public partial class seleccion : Form
     {
+        string usuario;
+        public seleccion(string usu)
+        {
+            InitializeComponent();
+            this.usuario=usu;
+        }
         public seleccion()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
