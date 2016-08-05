@@ -34,8 +34,6 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_horariofin = new System.Windows.Forms.Label();
             this.lbl_horainicio = new System.Windows.Forms.Label();
-            this.txt_hora_final = new System.Windows.Forms.TextBox();
-            this.txt_horario_inicio = new System.Windows.Forms.TextBox();
             this.dgv_mostrar_peliculas = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lbl_buscar = new System.Windows.Forms.Label();
@@ -57,6 +55,8 @@
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txt_horario_inicio = new System.Windows.Forms.TextBox();
+            this.txt_hora_final = new System.Windows.Forms.TextBox();
             this.tbc_horario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_peliculas)).BeginInit();
@@ -80,11 +80,11 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.txt_hora_final);
+            this.tabPage1.Controls.Add(this.txt_horario_inicio);
             this.tabPage1.Controls.Add(this.btn_guardar);
             this.tabPage1.Controls.Add(this.lbl_horariofin);
             this.tabPage1.Controls.Add(this.lbl_horainicio);
-            this.tabPage1.Controls.Add(this.txt_hora_final);
-            this.tabPage1.Controls.Add(this.txt_horario_inicio);
             this.tabPage1.Controls.Add(this.dgv_mostrar_peliculas);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -124,22 +124,6 @@
             this.lbl_horainicio.Size = new System.Drawing.Size(119, 21);
             this.lbl_horainicio.TabIndex = 58;
             this.lbl_horainicio.Text = "Hora de inicio:";
-            // 
-            // txt_hora_final
-            // 
-            this.txt_hora_final.Location = new System.Drawing.Point(472, 14);
-            this.txt_hora_final.MaxLength = 20;
-            this.txt_hora_final.Name = "txt_hora_final";
-            this.txt_hora_final.Size = new System.Drawing.Size(151, 20);
-            this.txt_hora_final.TabIndex = 57;
-            // 
-            // txt_horario_inicio
-            // 
-            this.txt_horario_inicio.Location = new System.Drawing.Point(133, 14);
-            this.txt_horario_inicio.MaxLength = 20;
-            this.txt_horario_inicio.Name = "txt_horario_inicio";
-            this.txt_horario_inicio.Size = new System.Drawing.Size(151, 20);
-            this.txt_horario_inicio.TabIndex = 56;
             // 
             // dgv_mostrar_peliculas
             // 
@@ -368,6 +352,20 @@
             this.lbl_titulo_mantenimiento_cine.TabIndex = 57;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE HORARIO";
             // 
+            // txt_horario_inicio
+            // 
+            this.txt_horario_inicio.Location = new System.Drawing.Point(133, 14);
+            this.txt_horario_inicio.Name = "txt_horario_inicio";
+            this.txt_horario_inicio.Size = new System.Drawing.Size(148, 20);
+            this.txt_horario_inicio.TabIndex = 61;
+            // 
+            // txt_hora_final
+            // 
+            this.txt_hora_final.Location = new System.Drawing.Point(462, 11);
+            this.txt_hora_final.Name = "txt_hora_final";
+            this.txt_hora_final.Size = new System.Drawing.Size(148, 20);
+            this.txt_hora_final.TabIndex = 62;
+            // 
             // Horario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,8 +400,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label lbl_horariofin;
         private System.Windows.Forms.Label lbl_horainicio;
-        private System.Windows.Forms.TextBox txt_hora_final;
-        private System.Windows.Forms.TextBox txt_horario_inicio;
         private System.Windows.Forms.DataGridView dgv_mostrar_peliculas;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btn_actualizar;
@@ -426,5 +422,7 @@
         private System.Windows.Forms.Button btn_buscarmod;
         private System.Windows.Forms.TextBox txt_buscarmod;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox txt_hora_final;
+        private System.Windows.Forms.TextBox txt_horario_inicio;
     }
 }

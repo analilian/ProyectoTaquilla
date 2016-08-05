@@ -15,6 +15,7 @@ namespace cinepolis
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "empleado";
         String Squeery = "select * from empleado";
+        string Sfecha1;
         public empleado()
         {
             InitializeComponent();
@@ -277,7 +278,7 @@ namespace cinepolis
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squery = "insert into  empleado (nom1empleado,nom2empleado,ape1empleado,ape2empleado,dirempleado,dpiempleado,nitempleado,fechanacempleado,pkidcine,pkidpuesto) values('" + txt_nombre1.Text + "','" + txt_nombre2.Text + "','" + txt_apellido1.Text + "','" + txt_apellido2.Text + "','" + txt_direccion.Text + "','" + txt_dpi.Text + "','" + txt_nit.Text + "','" + txt_fecha_nac.Text + "','" + cbo_cine.Text + "','" + cbo_puesto.Text + "');";
+            String Squery = "insert into  empleado (nom1empleado,nom2empleado,ape1empleado,ape2empleado,dirempleado,dpiempleado,nitempleado,fechanacempleado,pkidcine,pkidpuesto) values('" + txt_nombre1.Text + "','" + txt_nombre2.Text + "','" + txt_apellido1.Text + "','" + txt_apellido2.Text + "','" + txt_direccion.Text + "','" + txt_dpi.Text + "','" + txt_nit.Text + "','" + this.dtp_fecha_nac.Text + "','" + cbo_cine.Text + "','" + cbo_puesto.Text + "');";
             conect.EjecutarQuery(Squery);
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
             conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
@@ -306,6 +307,8 @@ namespace cinepolis
 
         }
 
+        
+
         public void limpiaringreso()
         {
             txt_nombre1.Clear();
@@ -316,7 +319,6 @@ namespace cinepolis
             txt_dpi.Clear();
             txt_nit.Clear();
             cbo_puesto.ResetText();
-            txt_fecha_nac.Clear();
             cbo_cine.ResetText();
         }
 
@@ -384,6 +386,12 @@ namespace cinepolis
         private void empleado_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            //Sfecha1 = dtp_fecha_nac.Value.Date.ToString();
         }
     }
 }

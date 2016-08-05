@@ -37,7 +37,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cbo_cine = new System.Windows.Forms.ComboBox();
             this.btn_guardar = new System.Windows.Forms.Button();
-            this.txt_fecha_nac = new System.Windows.Forms.TextBox();
             this.lbl_cine = new System.Windows.Forms.Label();
             this.cbo_puesto = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -88,6 +87,8 @@
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_buscar_empleado = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dtp_fecha_nac = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -156,9 +157,9 @@
             // 
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.dtp_fecha_nac);
             this.tabPage1.Controls.Add(this.cbo_cine);
             this.tabPage1.Controls.Add(this.btn_guardar);
-            this.tabPage1.Controls.Add(this.txt_fecha_nac);
             this.tabPage1.Controls.Add(this.lbl_cine);
             this.tabPage1.Controls.Add(this.cbo_puesto);
             this.tabPage1.Controls.Add(this.label6);
@@ -187,7 +188,7 @@
             // cbo_cine
             // 
             this.cbo_cine.FormattingEnabled = true;
-            this.cbo_cine.Location = new System.Drawing.Point(515, 175);
+            this.cbo_cine.Location = new System.Drawing.Point(515, 142);
             this.cbo_cine.Name = "cbo_cine";
             this.cbo_cine.Size = new System.Drawing.Size(308, 21);
             this.cbo_cine.TabIndex = 54;
@@ -204,18 +205,11 @@
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
-            // txt_fecha_nac
-            // 
-            this.txt_fecha_nac.Location = new System.Drawing.Point(619, 147);
-            this.txt_fecha_nac.Name = "txt_fecha_nac";
-            this.txt_fecha_nac.Size = new System.Drawing.Size(160, 20);
-            this.txt_fecha_nac.TabIndex = 50;
-            // 
             // lbl_cine
             // 
             this.lbl_cine.AutoSize = true;
             this.lbl_cine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cine.Location = new System.Drawing.Point(432, 176);
+            this.lbl_cine.Location = new System.Drawing.Point(432, 143);
             this.lbl_cine.Name = "lbl_cine";
             this.lbl_cine.Size = new System.Drawing.Size(50, 21);
             this.lbl_cine.TabIndex = 48;
@@ -243,7 +237,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(432, 146);
+            this.label5.Location = new System.Drawing.Point(432, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(181, 21);
             this.label5.TabIndex = 45;
@@ -373,6 +367,7 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.dateTimePicker1);
             this.tabPage2.Controls.Add(this.cbo_mod_cine);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.btn_buscarmod);
@@ -491,7 +486,7 @@
             // 
             // txt_mod_fecha_nac
             // 
-            this.txt_mod_fecha_nac.Location = new System.Drawing.Point(647, 161);
+            this.txt_mod_fecha_nac.Location = new System.Drawing.Point(640, 242);
             this.txt_mod_fecha_nac.Name = "txt_mod_fecha_nac";
             this.txt_mod_fecha_nac.Size = new System.Drawing.Size(160, 20);
             this.txt_mod_fecha_nac.TabIndex = 71;
@@ -717,6 +712,25 @@
             this.dgv_buscar_empleado.Size = new System.Drawing.Size(825, 228);
             this.dgv_buscar_empleado.TabIndex = 23;
             // 
+            // dtp_fecha_nac
+            // 
+            this.dtp_fecha_nac.CustomFormat = "yyyy--MM--dd";
+            this.dtp_fecha_nac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_fecha_nac.Location = new System.Drawing.Point(619, 176);
+            this.dtp_fecha_nac.Name = "dtp_fecha_nac";
+            this.dtp_fecha_nac.Size = new System.Drawing.Size(105, 20);
+            this.dtp_fecha_nac.TabIndex = 55;
+            this.dtp_fecha_nac.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy--MM--dd";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(640, 159);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(105, 20);
+            this.dateTimePicker1.TabIndex = 90;
+            // 
             // empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,7 +779,6 @@
         private System.Windows.Forms.TextBox txt_nombre1;
         private System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_fecha_nac;
         private System.Windows.Forms.Label lbl_cine;
         private System.Windows.Forms.ComboBox cbo_puesto;
         private System.Windows.Forms.Label label6;
@@ -808,5 +821,7 @@
         private System.Windows.Forms.ComboBox cbo_mod_cine;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DateTimePicker dtp_fecha_nac;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
