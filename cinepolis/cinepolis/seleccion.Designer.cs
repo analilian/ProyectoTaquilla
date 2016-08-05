@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lbl_selecciondeventana = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_usuario = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
             this.btn_reportes = new System.Windows.Forms.Button();
             this.btn_mantenimientocine = new System.Windows.Forms.Button();
             this.btn_ayuda = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,13 +51,25 @@
             this.lbl_selecciondeventana.TabIndex = 2;
             this.lbl_selecciondeventana.Text = "SELECCIÓN DE VENTANA ";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.button1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(333, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(257, 146);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "MANTENIMIENTO DE EMPLEADO";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // btn_usuario
             // 
             this.btn_usuario.BackColor = System.Drawing.Color.Transparent;
-            this.btn_usuario.BackgroundImage = global::cinepolis.Properties.Resources.usuario_2;
+            this.btn_usuario.BackgroundImage = global::cinepolis.Properties.Resources.User_Clients_icon;
             this.btn_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_usuario.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_usuario.Location = new System.Drawing.Point(892, 329);
+            this.btn_usuario.Location = new System.Drawing.Point(890, 324);
             this.btn_usuario.Name = "btn_usuario";
             this.btn_usuario.Size = new System.Drawing.Size(30, 30);
             this.btn_usuario.TabIndex = 12;
@@ -117,25 +129,13 @@
             this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
             this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ayuda.Location = new System.Drawing.Point(0, 329);
+            this.btn_ayuda.Location = new System.Drawing.Point(3, 325);
             this.btn_ayuda.Name = "btn_ayuda";
             this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
             this.btn_ayuda.TabIndex = 3;
             this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
             this.btn_ayuda.UseVisualStyleBackColor = false;
             this.btn_ayuda.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(333, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(257, 146);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "MANTENIMIENTO DE EMPLEADO";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // seleccion
             // 

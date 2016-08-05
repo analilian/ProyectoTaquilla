@@ -160,7 +160,7 @@
             // 
             // btn_buscarmod
             // 
-            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscarmod.Location = new System.Drawing.Point(530, 277);
             this.btn_buscarmod.Name = "btn_buscarmod";
@@ -413,7 +413,7 @@
             // 
             // btn_portada1
             // 
-            this.btn_portada1.BackgroundImage = global::cinepolis.Properties.Resources.cine_1;
+            this.btn_portada1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Upload_icon;
             this.btn_portada1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_portada1.Location = new System.Drawing.Point(726, 272);
             this.btn_portada1.Name = "btn_portada1";
@@ -425,7 +425,7 @@
             // 
             // btn_actualizar
             // 
-            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
+            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon1;
             this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_actualizar.Location = new System.Drawing.Point(578, 277);
             this.btn_actualizar.Name = "btn_actualizar";
@@ -437,7 +437,7 @@
             // 
             // btn_extraer
             // 
-            this.btn_extraer.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
+            this.btn_extraer.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_extraer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_extraer.Location = new System.Drawing.Point(632, 277);
             this.btn_extraer.Name = "btn_extraer";
@@ -572,7 +572,7 @@
             // 
             // btn_portada
             // 
-            this.btn_portada.BackgroundImage = global::cinepolis.Properties.Resources.cine_1;
+            this.btn_portada.BackgroundImage = global::cinepolis.Properties.Resources.Button_Upload_icon;
             this.btn_portada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_portada.Location = new System.Drawing.Point(736, 199);
             this.btn_portada.Name = "btn_portada";
@@ -584,7 +584,7 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
+            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_guardar.Location = new System.Drawing.Point(763, 265);
             this.btn_guardar.Name = "btn_guardar";
@@ -824,7 +824,7 @@
             // 
             // btn_borrar
             // 
-            this.btn_borrar.BackgroundImage = global::cinepolis.Properties.Resources.borrar;
+            this.btn_borrar.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_borrar.Location = new System.Drawing.Point(696, 37);
             this.btn_borrar.Name = "btn_borrar";
@@ -836,7 +836,7 @@
             // 
             // btn_buscar
             // 
-            this.btn_buscar.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscar.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscar.Location = new System.Drawing.Point(546, 37);
             this.btn_buscar.Name = "btn_buscar";
@@ -888,7 +888,7 @@
             // 
             // btn_regresar
             // 
-            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.volver;
+            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Previous_icon;
             this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_regresar.Location = new System.Drawing.Point(12, 41);
             this.btn_regresar.Name = "btn_regresar";

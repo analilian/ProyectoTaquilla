@@ -143,6 +143,36 @@ namespace cinepolis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Previous_icon {
+            get {
+                object obj = ResourceManager.GetObject("Button-Previous-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Refresh_icon {
+            get {
+                object obj = ResourceManager.GetObject("Button-Refresh-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Refresh_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Button-Refresh-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Upload_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Upload-icon", resourceCulture);
@@ -156,6 +186,16 @@ namespace cinepolis.Properties {
         internal static System.Drawing.Bitmap cine_1 {
             get {
                 object obj = ResourceManager.GetObject("cine 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap File_Delete_icon {
+            get {
+                object obj = ResourceManager.GetObject("File-Delete-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +263,26 @@ namespace cinepolis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Save_icon {
+            get {
+                object obj = ResourceManager.GetObject("Save-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Clients_icon {
+            get {
+                object obj = ResourceManager.GetObject("User-Clients-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap usuario_1 {
             get {
                 object obj = ResourceManager.GetObject("usuario 1", resourceCulture);
@@ -246,6 +306,16 @@ namespace cinepolis.Properties {
         internal static System.Drawing.Bitmap volver {
             get {
                 object obj = ResourceManager.GetObject("volver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Zoom_icon {
+            get {
+                object obj = ResourceManager.GetObject("Zoom-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

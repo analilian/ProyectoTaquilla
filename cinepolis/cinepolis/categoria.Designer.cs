@@ -40,19 +40,19 @@
             this.btn_buscarmod = new System.Windows.Forms.Button();
             this.txt_buscarmod = new System.Windows.Forms.TextBox();
             this.label_busquedamod = new System.Windows.Forms.Label();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_mod_guardar = new System.Windows.Forms.Button();
             this.txt_mod_categoria = new System.Windows.Forms.Label();
             this.txt_mod_categoriaa = new System.Windows.Forms.TextBox();
             this.dgv_mod_categoria = new System.Windows.Forms.DataGridView();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_mod_guardar = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btn_borrar = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_borrar_categoria = new System.Windows.Forms.DataGridView();
-            this.btn_regresar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_regresar = new System.Windows.Forms.Button();
             this.tbc_categoria.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).BeginInit();
@@ -99,14 +99,15 @@
             // 
             // btn_guardar
             // 
-            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
+            this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_guardar.Location = new System.Drawing.Point(513, 23);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 60;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
-            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.UseVisualStyleBackColor = false;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // lbl_categoria
@@ -144,11 +145,11 @@
             this.tabPage2.Controls.Add(this.btn_buscarmod);
             this.tabPage2.Controls.Add(this.txt_buscarmod);
             this.tabPage2.Controls.Add(this.label_busquedamod);
-            this.tabPage2.Controls.Add(this.btn_actualizar);
-            this.tabPage2.Controls.Add(this.btn_mod_guardar);
             this.tabPage2.Controls.Add(this.txt_mod_categoria);
             this.tabPage2.Controls.Add(this.txt_mod_categoriaa);
             this.tabPage2.Controls.Add(this.dgv_mod_categoria);
+            this.tabPage2.Controls.Add(this.btn_actualizar);
+            this.tabPage2.Controls.Add(this.btn_mod_guardar);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -158,7 +159,7 @@
             // 
             // btn_buscarmod
             // 
-            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscarmod.Location = new System.Drawing.Point(373, 89);
             this.btn_buscarmod.Name = "btn_buscarmod";
@@ -185,30 +186,6 @@
             this.label_busquedamod.Size = new System.Drawing.Size(92, 21);
             this.label_busquedamod.TabIndex = 86;
             this.label_busquedamod.Text = "Busqueda:";
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.actualizarr;
-            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(502, 21);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(84, 73);
-            this.btn_actualizar.TabIndex = 85;
-            this.toolTip1.SetToolTip(this.btn_actualizar, "actualizar");
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
-            // 
-            // btn_mod_guardar
-            // 
-            this.btn_mod_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
-            this.btn_mod_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_mod_guardar.Location = new System.Drawing.Point(592, 21);
-            this.btn_mod_guardar.Name = "btn_mod_guardar";
-            this.btn_mod_guardar.Size = new System.Drawing.Size(90, 73);
-            this.btn_mod_guardar.TabIndex = 66;
-            this.toolTip1.SetToolTip(this.btn_mod_guardar, "Reguardar");
-            this.btn_mod_guardar.UseVisualStyleBackColor = true;
-            this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
             // 
             // txt_mod_categoria
             // 
@@ -239,6 +216,30 @@
             this.dgv_mod_categoria.Size = new System.Drawing.Size(635, 180);
             this.dgv_mod_categoria.TabIndex = 61;
             // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_actualizar.Location = new System.Drawing.Point(502, 21);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(84, 73);
+            this.btn_actualizar.TabIndex = 85;
+            this.toolTip1.SetToolTip(this.btn_actualizar, "actualizar");
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
+            // 
+            // btn_mod_guardar
+            // 
+            this.btn_mod_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
+            this.btn_mod_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_mod_guardar.Location = new System.Drawing.Point(592, 21);
+            this.btn_mod_guardar.Name = "btn_mod_guardar";
+            this.btn_mod_guardar.Size = new System.Drawing.Size(90, 73);
+            this.btn_mod_guardar.TabIndex = 66;
+            this.toolTip1.SetToolTip(this.btn_mod_guardar, "Reguardar");
+            this.btn_mod_guardar.UseVisualStyleBackColor = true;
+            this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -257,7 +258,7 @@
             // 
             // btn_borrar
             // 
-            this.btn_borrar.BackgroundImage = global::cinepolis.Properties.Resources.borrar;
+            this.btn_borrar.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_borrar.Location = new System.Drawing.Point(558, 16);
             this.btn_borrar.Name = "btn_borrar";
@@ -269,7 +270,7 @@
             // 
             // btn_buscar
             // 
-            this.btn_buscar.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.btn_buscar.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscar.Location = new System.Drawing.Point(418, 16);
             this.btn_buscar.Name = "btn_buscar";
@@ -301,6 +302,7 @@
             // 
             this.dgv_borrar_categoria.AllowUserToAddRows = false;
             this.dgv_borrar_categoria.AllowUserToDeleteRows = false;
+            this.dgv_borrar_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_borrar_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_borrar_categoria.Location = new System.Drawing.Point(6, 77);
             this.dgv_borrar_categoria.Name = "dgv_borrar_categoria";
@@ -310,7 +312,7 @@
             // 
             // btn_regresar
             // 
-            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.volver;
+            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Previous_icon;
             this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_regresar.Location = new System.Drawing.Point(12, 12);
             this.btn_regresar.Name = "btn_regresar";

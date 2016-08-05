@@ -97,7 +97,7 @@
             // 
             // btn_regresar
             // 
-            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.volver;
+            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Previous_icon;
             this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_regresar.Location = new System.Drawing.Point(12, 38);
             this.btn_regresar.Name = "btn_regresar";
