@@ -487,8 +487,10 @@
             this.txt_conmod.Location = new System.Drawing.Point(139, 92);
             this.txt_conmod.MaxLength = 20;
             this.txt_conmod.Name = "txt_conmod";
+            this.txt_conmod.PasswordChar = '*';
             this.txt_conmod.Size = new System.Drawing.Size(124, 20);
             this.txt_conmod.TabIndex = 42;
+            this.txt_conmod.TextChanged += new System.EventHandler(this.txt_conmod_TextChanged);
             this.txt_conmod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_conmod_KeyPress);
             // 
             // txt_nommod

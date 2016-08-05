@@ -13,6 +13,7 @@ namespace cinepolis
 {
     public partial class usuario : Form
     {
+        encriptado encrip = new encriptado();
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla ="usuario";
         String Squeery = "select* from usuario";
@@ -71,7 +72,7 @@ namespace cinepolis
                 if (cbo_nivelsusario.Text == "administrativo")
                 {
                     admin = 1;
-                    String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + txt_pasusuario.Text + "','" + admin + "','" + cbo_elegirempleado.Text + "');";
+                    String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + admin + "','" + cbo_elegirempleado.Text + "');";
                     conect.EjecutarQuery(Squery);
                     limpiaringresar();
                 }
@@ -79,7 +80,7 @@ namespace cinepolis
                 {
                 
                     admin = 2;
-                    String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + txt_pasusuario.Text + "','" + admin + "','" + cbo_elegirempleado.Text + "');";
+                    String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + admin + "','" + cbo_elegirempleado.Text + "');";
                     conect.EjecutarQuery(Squery);
                     limpiaringresar();
                 }
@@ -137,7 +138,7 @@ namespace cinepolis
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squerys = ("Select* from usuario where  nomusuario like'"+ txt_buscarusuario.Text + "%' or contusuario like '" + txt_buscarusuario.Text + "%' or pkidempleado like '" + txt_buscarusuario.Text + "%'or pkidrole like '" + txt_buscarusuario.Text + "%';");
+            String Squerys = ("Select* from usuario where  nomusuario like'"+ txt_buscarusuario.Text +  "%' or pkidempleado like '" + txt_buscarusuario.Text + "%'or pkidrole like '" + txt_buscarusuario.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarusuario, Squerys, Stabla);
             conect.Desconectar();
@@ -153,7 +154,7 @@ namespace cinepolis
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squerys = ("Select* from usuario where nomusuario like'" + txt_modificarbuscar.Text + "%' or contusuario like '" + txt_modificarbuscar.Text + "%' or pkidempleado like '" + txt_modificarbuscar.Text + "%or pkidrole like '" + txt_modificarbuscar.Text + "%';");
+            String Squerys = ("Select* from usuario where nomusuario like'" + txt_modificarbuscar.Text + "%' or pkidempleado like '" + txt_modificarbuscar.Text + "%' or pkidrole like '" + txt_modificarbuscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_modificar, Squerys, Stabla);
             conect.Desconectar();
@@ -163,7 +164,7 @@ namespace cinepolis
         private void button1_Click_1(object sender, EventArgs e)
         {
             txt_nommod.Text= this.dgv_modificar.CurrentRow.Cells[1].Value.ToString();
-            txt_conmod.Text = this.dgv_modificar.CurrentRow.Cells[2].Value.ToString();
+            txt_conmod.Text = encrip.DecryptKey(this.dgv_modificar.CurrentRow.Cells[2].Value.ToString()); ;
             cbo_modnivel.Text = this.dgv_modificar.CurrentRow.Cells[3].Value.ToString();
           txt_modempl.Text= this.dgv_modificar.CurrentRow.Cells[4].Value.ToString();
         }
@@ -183,7 +184,7 @@ namespace cinepolis
             conect.Conectar();
             if (txt_conmod.Text == txt_confmod.Text)
             {
-                String Squery = "update usuario set nomusuario ='" + txt_nommod.Text + "',contusuario='" + txt_conmod.Text + "' ,pkidrole='" + cbo_modnivel.Text + "',pkidempleado ='" + txt_modempl.Text + "'where pkidusuario='" + Codigo + "'";
+                String Squery = "update usuario set nomusuario ='" + txt_nommod.Text + "',contusuario='" + encrip.EncryptKey(txt_conmod.Text) + "' ,pkidrole='" + cbo_modnivel.Text + "',pkidempleado ='" + txt_modempl.Text + "'where pkidusuario='" + Codigo + "'";
                 conect.EjecutarQuery(Squery);
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
@@ -345,6 +346,9 @@ namespace cinepolis
 
         }
 
-      
+        private void txt_conmod_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

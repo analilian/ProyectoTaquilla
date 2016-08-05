@@ -13,6 +13,8 @@ namespace cinepolis
 {
     public partial class Form1 : Form
     {
+        encriptado encrip = new encriptado();
+
         public Form1()
         {
             InitializeComponent();
@@ -53,12 +55,12 @@ namespace cinepolis
                 resultado = 50;
             }
             conexion.Close();
-            if (revisar(txt_usuario.Text, txt_pass.Text) > 0)
+            if (revisar(txt_usuario.Text, encrip.EncryptKey(txt_pass.Text)) > 0)
             {
                 if (resultado > 0)
                 {
                     this.Hide();
-                  seleccion a = new seleccion(txt_usuario.Text);
+                    seleccion a = new seleccion(txt_usuario.Text);
                     a.ShowDialog();
 
 
@@ -82,3 +84,4 @@ namespace cinepolis
         }
     }
 }
+

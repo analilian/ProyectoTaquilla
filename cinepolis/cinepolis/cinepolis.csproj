@@ -87,6 +87,7 @@
     <Compile Include="empleado.Designer.cs">
       <DependentUpon>empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="encriptado.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
