@@ -53,6 +53,14 @@ namespace cinepolis
 
         }
 
+        public void limpiaringresar()
+        {
+            txt_nombreusuario.Clear();
+            txt_pasusuario.Clear();
+            txt_confirmar.Clear();
+            cbo_nivelsusario.ResetText();
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (txt_pasusuario.Text == txt_confirmar.Text)
@@ -65,6 +73,7 @@ namespace cinepolis
                     admin = 1;
                     String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + txt_pasusuario.Text + "','" + admin + "','" + cbo_elegirempleado.Text + "');";
                     conect.EjecutarQuery(Squery);
+                    limpiaringresar();
                 }
                 else
                 {
@@ -72,6 +81,7 @@ namespace cinepolis
                     admin = 2;
                     String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + txt_pasusuario.Text + "','" + admin + "','" + cbo_elegirempleado.Text + "');";
                     conect.EjecutarQuery(Squery);
+                    limpiaringresar();
                 }
 
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
@@ -83,6 +93,7 @@ namespace cinepolis
             {
                 MessageBox.Show("Las contraseñas no coinciden");
             }
+            
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -130,6 +141,7 @@ namespace cinepolis
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarusuario, Squerys, Stabla);
             conect.Desconectar();
+            txt_buscarusuario.Clear();
 
         }
 
@@ -145,6 +157,7 @@ namespace cinepolis
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_modificar, Squerys, Stabla);
             conect.Desconectar();
+            txt_modificarbuscar.Clear();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -154,6 +167,15 @@ namespace cinepolis
             cbo_modnivel.Text = this.dgv_modificar.CurrentRow.Cells[3].Value.ToString();
           txt_modempl.Text= this.dgv_modificar.CurrentRow.Cells[4].Value.ToString();
         }
+
+        public void limpiarmod()
+        {
+            txt_nommod.Clear();
+            txt_conmod.Clear();
+            txt_confmod.Clear();
+            cbo_modnivel.ResetText();
+            txt_modempl.Clear();
+        } 
 
         private void btn_insertarmod_Click(object sender, EventArgs e)
         {
@@ -167,6 +189,7 @@ namespace cinepolis
                 conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_modificar, Squeery, Stabla);
                 conect.Desconectar();
+                limpiarmod();
             }
             else
             {

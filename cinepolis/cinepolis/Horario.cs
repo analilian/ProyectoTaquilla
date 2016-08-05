@@ -41,6 +41,8 @@ namespace cinepolis
             conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
             conect.Desconectar();
+            txt_horario_inicio.Clear();
+            txt_hora_final.Clear();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,6 +63,7 @@ namespace cinepolis
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_mod_horario, Squerys, Stabla);
             conect.Desconectar();
+            txt_buscarmod.Clear();
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -81,6 +84,8 @@ namespace cinepolis
             conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
             conect.Desconectar();
+            txt_mod_horainicio.Clear();
+            txt_mod_horafin.Clear();
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)

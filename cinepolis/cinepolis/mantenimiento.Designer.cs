@@ -192,6 +192,7 @@
             // 
             this.dgv_modificar_pelicula.AllowUserToAddRows = false;
             this.dgv_modificar_pelicula.AllowUserToDeleteRows = false;
+            this.dgv_modificar_pelicula.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_modificar_pelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_modificar_pelicula.Location = new System.Drawing.Point(19, 343);
             this.dgv_modificar_pelicula.Name = "dgv_modificar_pelicula";
@@ -552,6 +553,7 @@
             // 
             this.dgv_insertar.AllowUserToAddRows = false;
             this.dgv_insertar.AllowUserToDeleteRows = false;
+            this.dgv_insertar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_insertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_insertar.Location = new System.Drawing.Point(23, 247);
             this.dgv_insertar.Name = "dgv_insertar";
@@ -864,9 +866,13 @@
             // 
             // dgv_buscar_pelicula
             // 
+            this.dgv_buscar_pelicula.AllowUserToAddRows = false;
+            this.dgv_buscar_pelicula.AllowUserToDeleteRows = false;
+            this.dgv_buscar_pelicula.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_buscar_pelicula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_buscar_pelicula.Location = new System.Drawing.Point(16, 138);
             this.dgv_buscar_pelicula.Name = "dgv_buscar_pelicula";
+            this.dgv_buscar_pelicula.ReadOnly = true;
             this.dgv_buscar_pelicula.Size = new System.Drawing.Size(825, 228);
             this.dgv_buscar_pelicula.TabIndex = 0;
             // 

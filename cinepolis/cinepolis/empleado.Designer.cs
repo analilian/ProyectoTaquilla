@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbo_cine = new System.Windows.Forms.ComboBox();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.txt_fecha_nac = new System.Windows.Forms.TextBox();
             this.lbl_cine = new System.Windows.Forms.Label();
@@ -54,6 +56,8 @@
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.lbl_agregar = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbo_mod_cine = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btn_buscarmod = new System.Windows.Forms.Button();
             this.lbl_buscar = new System.Windows.Forms.Label();
             this.txt_modificarbuscar = new System.Windows.Forms.TextBox();
@@ -83,9 +87,7 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_buscar_empleado = new System.Windows.Forms.DataGridView();
-            this.cbo_cine = new System.Windows.Forms.ComboBox();
-            this.cbo_mod_cine = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -103,6 +105,7 @@
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(57, 40);
             this.btn_regresar.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
@@ -181,6 +184,14 @@
             this.tabPage1.Text = "Ingresar empleado";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // cbo_cine
+            // 
+            this.cbo_cine.FormattingEnabled = true;
+            this.cbo_cine.Location = new System.Drawing.Point(515, 175);
+            this.cbo_cine.Name = "cbo_cine";
+            this.cbo_cine.Size = new System.Drawing.Size(308, 21);
+            this.cbo_cine.TabIndex = 54;
+            // 
             // btn_guardar
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.guardar;
@@ -189,6 +200,7 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 53;
+            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
@@ -393,6 +405,24 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar empleado";
             // 
+            // cbo_mod_cine
+            // 
+            this.cbo_mod_cine.FormattingEnabled = true;
+            this.cbo_mod_cine.Location = new System.Drawing.Point(543, 192);
+            this.cbo_mod_cine.Name = "cbo_mod_cine";
+            this.cbo_mod_cine.Size = new System.Drawing.Size(257, 21);
+            this.cbo_mod_cine.TabIndex = 89;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(460, 193);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 21);
+            this.label7.TabIndex = 88;
+            this.label7.Text = "Cine:";
+            // 
             // btn_buscarmod
             // 
             this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
@@ -401,6 +431,7 @@
             this.btn_buscarmod.Name = "btn_buscarmod";
             this.btn_buscarmod.Size = new System.Drawing.Size(42, 48);
             this.btn_buscarmod.TabIndex = 87;
+            this.toolTip1.SetToolTip(this.btn_buscarmod, "Buscar");
             this.btn_buscarmod.UseVisualStyleBackColor = true;
             this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
             // 
@@ -430,6 +461,7 @@
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(48, 48);
             this.btn_actualizar.TabIndex = 84;
+            this.toolTip1.SetToolTip(this.btn_actualizar, "Actualizar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
@@ -441,14 +473,19 @@
             this.btn_mod_guardar.Name = "btn_mod_guardar";
             this.btn_mod_guardar.Size = new System.Drawing.Size(45, 50);
             this.btn_mod_guardar.TabIndex = 83;
+            this.toolTip1.SetToolTip(this.btn_mod_guardar, "Reguardar");
             this.btn_mod_guardar.UseVisualStyleBackColor = true;
             this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
             // 
             // dgv_emplados_modificar
             // 
+            this.dgv_emplados_modificar.AllowUserToAddRows = false;
+            this.dgv_emplados_modificar.AllowUserToDeleteRows = false;
+            this.dgv_emplados_modificar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_emplados_modificar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_emplados_modificar.Location = new System.Drawing.Point(6, 277);
             this.dgv_emplados_modificar.Name = "dgv_emplados_modificar";
+            this.dgv_emplados_modificar.ReadOnly = true;
             this.dgv_emplados_modificar.Size = new System.Drawing.Size(845, 185);
             this.dgv_emplados_modificar.TabIndex = 72;
             // 
@@ -634,6 +671,7 @@
             this.btn_borrar.Name = "btn_borrar";
             this.btn_borrar.Size = new System.Drawing.Size(71, 52);
             this.btn_borrar.TabIndex = 27;
+            this.toolTip1.SetToolTip(this.btn_borrar, "Eliminar");
             this.btn_borrar.UseVisualStyleBackColor = true;
             this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
@@ -645,6 +683,7 @@
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(78, 52);
             this.btn_buscar.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.btn_buscar, "Buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -668,37 +707,15 @@
             // 
             // dgv_buscar_empleado
             // 
+            this.dgv_buscar_empleado.AllowUserToAddRows = false;
+            this.dgv_buscar_empleado.AllowUserToDeleteRows = false;
+            this.dgv_buscar_empleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_buscar_empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_buscar_empleado.Location = new System.Drawing.Point(22, 116);
             this.dgv_buscar_empleado.Name = "dgv_buscar_empleado";
+            this.dgv_buscar_empleado.ReadOnly = true;
             this.dgv_buscar_empleado.Size = new System.Drawing.Size(825, 228);
             this.dgv_buscar_empleado.TabIndex = 23;
-            // 
-            // cbo_cine
-            // 
-            this.cbo_cine.FormattingEnabled = true;
-            this.cbo_cine.Location = new System.Drawing.Point(515, 175);
-            this.cbo_cine.Name = "cbo_cine";
-            this.cbo_cine.Size = new System.Drawing.Size(308, 21);
-            this.cbo_cine.TabIndex = 54;
-            // 
-            // cbo_mod_cine
-            // 
-            this.cbo_mod_cine.FormattingEnabled = true;
-            this.cbo_mod_cine.Location = new System.Drawing.Point(543, 192);
-            this.cbo_mod_cine.Name = "cbo_mod_cine";
-            this.cbo_mod_cine.Size = new System.Drawing.Size(257, 21);
-            this.cbo_mod_cine.TabIndex = 89;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(460, 193);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 21);
-            this.label7.TabIndex = 88;
-            this.label7.Text = "Cine:";
             // 
             // empleado
             // 
@@ -790,5 +807,6 @@
         private System.Windows.Forms.ComboBox cbo_cine;
         private System.Windows.Forms.ComboBox cbo_mod_cine;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

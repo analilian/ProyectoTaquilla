@@ -282,6 +282,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
             conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
             conect.Desconectar();
+            limpiaringreso();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -305,6 +306,34 @@ namespace cinepolis
 
         }
 
+        public void limpiaringreso()
+        {
+            txt_nombre1.Clear();
+            txt_nombre2.Clear();
+            txt_apellido1.Clear();
+            txt_apellido2.Clear();
+            txt_direccion.Clear();
+            txt_dpi.Clear();
+            txt_nit.Clear();
+            cbo_puesto.ResetText();
+            txt_fecha_nac.Clear();
+            cbo_cine.ResetText();
+        }
+
+        public void limpiarmod()
+        {
+            txt_mod_nombre1.Clear();
+            txt_mod_nombre2.Clear();
+            txt_mod_apellido1.Clear();
+            txt_mod_apellido2.Clear();
+            txt_mod_direccion.Clear();
+            txt_mod_dpi.Clear();
+            txt_mod_nit.Clear();
+            cbo_mod_puesto.ResetText();
+            txt_mod_fecha_nac.Clear();
+            cbo_mod_cine.ResetText();
+        }
+
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
             String Codigo = this.dgv_emplados_modificar.CurrentRow.Cells[0].Value.ToString();
@@ -314,24 +343,27 @@ namespace cinepolis
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
             conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
             conect.Desconectar();
+            limpiarmod();
         }
 
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squerys = ("Select* from empleado where  nom1empleado like'" + txt_modificarbuscar.Text + "%';");
+            String Squerys = ("Select* from empleado where  nom1empleado like'" + txt_modificarbuscar.Text + "%'or nom2empleado like'" + txt_modificarbuscar.Text + "%'or ape1empleado like'" + txt_modificarbuscar.Text + "%' or ape2empleado like'" + txt_modificarbuscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_emplados_modificar, Squerys, Stabla);
             conect.Desconectar();
+            txt_modificarbuscar.Clear();
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squerys = ("Select* from empleado where  nom1empleado like'" + txt_modificarbuscar.Text + "%';");
+            String Squerys = ("Select* from empleado where  nom1empleado like'" + txt_buscar.Text + "%'or nom2empleado like'" + txt_buscar.Text + "%'or ape1empleado like'" + txt_buscar.Text + "%' or ape2empleado like'" + txt_buscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_buscar_empleado, Squerys, Stabla);
             conect.Desconectar();
+            txt_buscar.Clear();
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)

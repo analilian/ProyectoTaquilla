@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_mantenimientodeusuario = new System.Windows.Forms.Label();
             this.lbl_modificar = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -71,6 +72,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lbl_modificar.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ingresarusuario)).BeginInit();
@@ -170,14 +172,19 @@
             this.btn_agregarusuario.Name = "btn_agregarusuario";
             this.btn_agregarusuario.Size = new System.Drawing.Size(96, 89);
             this.btn_agregarusuario.TabIndex = 35;
+            this.toolTip1.SetToolTip(this.btn_agregarusuario, "Guardar");
             this.btn_agregarusuario.UseVisualStyleBackColor = true;
             this.btn_agregarusuario.Click += new System.EventHandler(this.button3_Click);
             // 
             // dgv_ingresarusuario
             // 
+            this.dgv_ingresarusuario.AllowUserToAddRows = false;
+            this.dgv_ingresarusuario.AllowUserToDeleteRows = false;
+            this.dgv_ingresarusuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ingresarusuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ingresarusuario.Location = new System.Drawing.Point(9, 154);
             this.dgv_ingresarusuario.Name = "dgv_ingresarusuario";
+            this.dgv_ingresarusuario.ReadOnly = true;
             this.dgv_ingresarusuario.Size = new System.Drawing.Size(792, 150);
             this.dgv_ingresarusuario.TabIndex = 34;
             this.dgv_ingresarusuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_empleados_CellContentClick);
@@ -275,6 +282,7 @@
             this.btn_eleminarusuario.Name = "btn_eleminarusuario";
             this.btn_eleminarusuario.Size = new System.Drawing.Size(75, 57);
             this.btn_eleminarusuario.TabIndex = 39;
+            this.toolTip1.SetToolTip(this.btn_eleminarusuario, "Eliminar");
             this.btn_eleminarusuario.UseVisualStyleBackColor = true;
             this.btn_eleminarusuario.Click += new System.EventHandler(this.btn_eleminarusuario_Click);
             // 
@@ -286,6 +294,7 @@
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(80, 56);
             this.btn_buscar.TabIndex = 38;
+            this.toolTip1.SetToolTip(this.btn_buscar, "Buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -309,9 +318,13 @@
             // 
             // dgv_borrarusuario
             // 
+            this.dgv_borrarusuario.AllowUserToAddRows = false;
+            this.dgv_borrarusuario.AllowUserToDeleteRows = false;
+            this.dgv_borrarusuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_borrarusuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_borrarusuario.Location = new System.Drawing.Point(6, 143);
             this.dgv_borrarusuario.Name = "dgv_borrarusuario";
+            this.dgv_borrarusuario.ReadOnly = true;
             this.dgv_borrarusuario.Size = new System.Drawing.Size(792, 150);
             this.dgv_borrarusuario.TabIndex = 35;
             // 
@@ -383,6 +396,7 @@
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(42, 42);
             this.btn_modificar.TabIndex = 51;
+            this.toolTip1.SetToolTip(this.btn_modificar, "Actualizar");
             this.btn_modificar.UseVisualStyleBackColor = true;
             this.btn_modificar.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -394,6 +408,7 @@
             this.btn_buscarmod.Name = "btn_buscarmod";
             this.btn_buscarmod.Size = new System.Drawing.Size(42, 42);
             this.btn_buscarmod.TabIndex = 50;
+            this.toolTip1.SetToolTip(this.btn_buscarmod, "Buscar");
             this.btn_buscarmod.UseVisualStyleBackColor = true;
             this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
             // 
@@ -419,9 +434,13 @@
             // 
             // dgv_modificar
             // 
+            this.dgv_modificar.AllowUserToAddRows = false;
+            this.dgv_modificar.AllowUserToDeleteRows = false;
+            this.dgv_modificar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_modificar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_modificar.Location = new System.Drawing.Point(21, 157);
             this.dgv_modificar.Name = "dgv_modificar";
+            this.dgv_modificar.ReadOnly = true;
             this.dgv_modificar.Size = new System.Drawing.Size(792, 150);
             this.dgv_modificar.TabIndex = 47;
             this.dgv_modificar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_modificar_CellContentClick);
@@ -451,6 +470,7 @@
             this.btn_insertarmod.Name = "btn_insertarmod";
             this.btn_insertarmod.Size = new System.Drawing.Size(79, 59);
             this.btn_insertarmod.TabIndex = 44;
+            this.toolTip1.SetToolTip(this.btn_insertarmod, "Reguardar");
             this.btn_insertarmod.UseVisualStyleBackColor = true;
             this.btn_insertarmod.Click += new System.EventHandler(this.btn_insertarmod_Click);
             // 
@@ -529,6 +549,7 @@
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(66, 48);
             this.btn_regresar.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -616,5 +637,6 @@
         private System.Windows.Forms.Label lbl_confmod;
         private System.Windows.Forms.TextBox txt_confmod;
         private System.Windows.Forms.ComboBox cbo_elegirempleado;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

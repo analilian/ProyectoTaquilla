@@ -61,7 +61,7 @@
             this.btn_usuario.Name = "btn_usuario";
             this.btn_usuario.Size = new System.Drawing.Size(30, 30);
             this.btn_usuario.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.btn_usuario, "Configuracion de usuario");
+            this.toolTip1.SetToolTip(this.btn_usuario, "Configuracion de Usuario");
             this.btn_usuario.UseVisualStyleBackColor = false;
             this.btn_usuario.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -121,7 +121,7 @@
             this.btn_ayuda.Name = "btn_ayuda";
             this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
             this.btn_ayuda.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btn_ayuda, "Ayuda");
+            this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
             this.btn_ayuda.UseVisualStyleBackColor = false;
             this.btn_ayuda.Click += new System.EventHandler(this.button1_Click);
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbc_clasificacion = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -35,6 +36,9 @@
             this.txt_sala = new System.Windows.Forms.TextBox();
             this.dgv_sala = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txt_buscmod = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbl_mod = new System.Windows.Forms.Label();
             this.txt_mod = new System.Windows.Forms.TextBox();
             this.dgv_modsala = new System.Windows.Forms.DataGridView();
@@ -48,9 +52,7 @@
             this.dgv_borrarsala = new System.Windows.Forms.DataGridView();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txt_buscmod = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tbc_clasificacion.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sala)).BeginInit();
@@ -94,6 +96,7 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 60;
+            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
@@ -117,9 +120,13 @@
             // 
             // dgv_sala
             // 
+            this.dgv_sala.AllowUserToAddRows = false;
+            this.dgv_sala.AllowUserToDeleteRows = false;
+            this.dgv_sala.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_sala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_sala.Location = new System.Drawing.Point(12, 136);
             this.dgv_sala.Name = "dgv_sala";
+            this.dgv_sala.ReadOnly = true;
             this.dgv_sala.Size = new System.Drawing.Size(690, 180);
             this.dgv_sala.TabIndex = 55;
             // 
@@ -140,6 +147,36 @@
             this.tabPage2.Size = new System.Drawing.Size(716, 322);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar Sala";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(346, 73);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 45);
+            this.button1.TabIndex = 90;
+            this.toolTip1.SetToolTip(this.button1, "Buscar");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txt_buscmod
+            // 
+            this.txt_buscmod.Location = new System.Drawing.Point(145, 86);
+            this.txt_buscmod.MaxLength = 100;
+            this.txt_buscmod.Name = "txt_buscmod";
+            this.txt_buscmod.Size = new System.Drawing.Size(181, 20);
+            this.txt_buscmod.TabIndex = 89;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 21);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Busqueda:";
             // 
             // lbl_mod
             // 
@@ -162,9 +199,13 @@
             // 
             // dgv_modsala
             // 
+            this.dgv_modsala.AllowUserToAddRows = false;
+            this.dgv_modsala.AllowUserToDeleteRows = false;
+            this.dgv_modsala.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_modsala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_modsala.Location = new System.Drawing.Point(24, 136);
             this.dgv_modsala.Name = "dgv_modsala";
+            this.dgv_modsala.ReadOnly = true;
             this.dgv_modsala.Size = new System.Drawing.Size(635, 180);
             this.dgv_modsala.TabIndex = 61;
             // 
@@ -176,6 +217,7 @@
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(84, 73);
             this.btn_actualizar.TabIndex = 85;
+            this.toolTip1.SetToolTip(this.btn_actualizar, "Actualizar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
@@ -187,6 +229,7 @@
             this.btn_mod_guardar.Name = "btn_mod_guardar";
             this.btn_mod_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_mod_guardar.TabIndex = 66;
+            this.toolTip1.SetToolTip(this.btn_mod_guardar, "Reguardar");
             this.btn_mod_guardar.UseVisualStyleBackColor = true;
             this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
             // 
@@ -214,6 +257,7 @@
             this.btn_borrar.Name = "btn_borrar";
             this.btn_borrar.Size = new System.Drawing.Size(71, 52);
             this.btn_borrar.TabIndex = 60;
+            this.toolTip1.SetToolTip(this.btn_borrar, "Borrar");
             this.btn_borrar.UseVisualStyleBackColor = true;
             this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
@@ -225,6 +269,7 @@
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(81, 52);
             this.btn_buscar.TabIndex = 59;
+            this.toolTip1.SetToolTip(this.btn_buscar, "Buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -252,6 +297,7 @@
             // 
             this.dgv_borrarsala.AllowUserToAddRows = false;
             this.dgv_borrarsala.AllowUserToDeleteRows = false;
+            this.dgv_borrarsala.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_borrarsala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_borrarsala.Location = new System.Drawing.Point(6, 77);
             this.dgv_borrarsala.Name = "dgv_borrarsala";
@@ -278,37 +324,9 @@
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(57, 40);
             this.btn_regresar.TabIndex = 64;
+            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.buscar;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(346, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 45);
-            this.button1.TabIndex = 90;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txt_buscmod
-            // 
-            this.txt_buscmod.Location = new System.Drawing.Point(145, 86);
-            this.txt_buscmod.MaxLength = 100;
-            this.txt_buscmod.Name = "txt_buscmod";
-            this.txt_buscmod.Size = new System.Drawing.Size(181, 20);
-            this.txt_buscmod.TabIndex = 89;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 21);
-            this.label1.TabIndex = 88;
-            this.label1.Text = "Busqueda:";
             // 
             // sala
             // 
@@ -363,5 +381,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_buscmod;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

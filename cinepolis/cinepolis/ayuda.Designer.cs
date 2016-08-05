@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_pruebascroll = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // lbl_pruebascroll
@@ -50,6 +52,7 @@
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(56, 37);
             this.btn_regresar.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -86,5 +89,6 @@
         private System.Windows.Forms.Label lbl_pruebascroll;
         private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.Button btn_cerrarsesion;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbc_horario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             this.dgv_borrar_horario = new System.Windows.Forms.DataGridView();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tbc_horario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_peliculas)).BeginInit();
@@ -99,6 +101,7 @@
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 60;
+            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
@@ -140,9 +143,13 @@
             // 
             // dgv_mostrar_peliculas
             // 
+            this.dgv_mostrar_peliculas.AllowUserToAddRows = false;
+            this.dgv_mostrar_peliculas.AllowUserToDeleteRows = false;
+            this.dgv_mostrar_peliculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_mostrar_peliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_mostrar_peliculas.Location = new System.Drawing.Point(12, 136);
             this.dgv_mostrar_peliculas.Name = "dgv_mostrar_peliculas";
+            this.dgv_mostrar_peliculas.ReadOnly = true;
             this.dgv_mostrar_peliculas.Size = new System.Drawing.Size(690, 180);
             this.dgv_mostrar_peliculas.TabIndex = 55;
             // 
@@ -185,6 +192,7 @@
             this.btn_buscarmod.Name = "btn_buscarmod";
             this.btn_buscarmod.Size = new System.Drawing.Size(85, 57);
             this.btn_buscarmod.TabIndex = 87;
+            this.toolTip1.SetToolTip(this.btn_buscarmod, "Buscar");
             this.btn_buscarmod.UseVisualStyleBackColor = true;
             this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
             // 
@@ -204,6 +212,7 @@
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(66, 57);
             this.btn_actualizar.TabIndex = 85;
+            this.toolTip1.SetToolTip(this.btn_actualizar, "Actualizar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
@@ -215,6 +224,7 @@
             this.btn_mod_guardar.Name = "btn_mod_guardar";
             this.btn_mod_guardar.Size = new System.Drawing.Size(59, 57);
             this.btn_mod_guardar.TabIndex = 66;
+            this.toolTip1.SetToolTip(this.btn_mod_guardar, "Reguardar");
             this.btn_mod_guardar.UseVisualStyleBackColor = true;
             this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
             // 
@@ -257,9 +267,13 @@
             // 
             // dgv_mod_horario
             // 
+            this.dgv_mod_horario.AllowUserToAddRows = false;
+            this.dgv_mod_horario.AllowUserToDeleteRows = false;
+            this.dgv_mod_horario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_mod_horario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_mod_horario.Location = new System.Drawing.Point(24, 136);
             this.dgv_mod_horario.Name = "dgv_mod_horario";
+            this.dgv_mod_horario.ReadOnly = true;
             this.dgv_mod_horario.Size = new System.Drawing.Size(635, 180);
             this.dgv_mod_horario.TabIndex = 61;
             // 
@@ -286,6 +300,7 @@
             this.btn_borrar.Name = "btn_borrar";
             this.btn_borrar.Size = new System.Drawing.Size(71, 52);
             this.btn_borrar.TabIndex = 60;
+            this.toolTip1.SetToolTip(this.btn_borrar, "Eliminar");
             this.btn_borrar.UseVisualStyleBackColor = true;
             this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
@@ -297,6 +312,7 @@
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(78, 52);
             this.btn_buscar.TabIndex = 59;
+            this.toolTip1.SetToolTip(this.btn_buscar, "Buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
@@ -322,6 +338,7 @@
             // 
             this.dgv_borrar_horario.AllowUserToAddRows = false;
             this.dgv_borrar_horario.AllowUserToDeleteRows = false;
+            this.dgv_borrar_horario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_borrar_horario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_borrar_horario.Location = new System.Drawing.Point(6, 77);
             this.dgv_borrar_horario.Name = "dgv_borrar_horario";
@@ -337,6 +354,7 @@
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(57, 40);
             this.btn_regresar.TabIndex = 58;
+            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
@@ -407,5 +425,6 @@
         private System.Windows.Forms.Label lbl_buscar;
         private System.Windows.Forms.Button btn_buscarmod;
         private System.Windows.Forms.TextBox txt_buscarmod;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

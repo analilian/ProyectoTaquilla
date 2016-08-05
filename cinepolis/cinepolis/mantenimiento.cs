@@ -75,6 +75,36 @@ namespace cinepolis
 
         }
 
+        public void limpiaringreso()
+        {
+            txt_nombre1.Clear();
+            txt_trailer.Clear();
+            cbo_sala.ResetText();
+            cbo_idioma.ResetText();
+            cbo_proyeccion.ResetText();
+            cbo_clasificacion.ResetText();
+            cbo_categoria.ResetText();
+            cbo_cine.ResetText();
+            cbo_fecha.ResetText();
+            txt_descrip.Clear();
+            pic_portada.Image = null;
+        }
+
+        public void limpiarmod()
+        {
+            txt_mod_nombre.Clear();
+            txt_mod_trailer.Clear();
+            cbo_mod_sala.ResetText();
+            cbo_mod_idioma.ResetText();
+            cbo_mod_proyeccion.ResetText();
+            cbo_mod_clasificacion.ResetText();
+            cbo_mod_categoria.ResetText();
+            cbo_mod_cine.ResetText();
+            cbo_mod_fecha.ResetText();
+            txt_mod_descrip.Clear();
+            pic_mod_portada.Image = null;
+        }
+
         private void txt_nombre1_TextChanged(object sender, EventArgs e)
         {
 
@@ -151,6 +181,7 @@ namespace cinepolis
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            limpiaringreso();
         }
 
         private void btn_buscarmod_Click(object sender, EventArgs e)
@@ -160,6 +191,7 @@ namespace cinepolis
             con.buscarquery(Squerys);
             con.actualizargrid(dgv_modificar_pelicula, Squerys, Stabla);
             con.Desconectar();
+            txt_modificarbuscar.Clear();
         }
 
         string codigo;
@@ -188,6 +220,7 @@ namespace cinepolis
             con.buscarquery(Squerys);
             con.actualizargrid(dgv_buscar_pelicula, Squerys, Stabla);
             con.Desconectar();
+            txt_buscar.Clear();
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
@@ -228,6 +261,7 @@ namespace cinepolis
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            limpiarmod();
         }
 
         private void btn_portada1_Click(object sender, EventArgs e)

@@ -49,6 +49,8 @@ namespace cinepolis
             conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
             conect.Desconectar();
+            txt_clasificacion.Clear();
+            txt_descrip_clasificacion.Clear();
         }
 
         private void clasificacion_Load(object sender, EventArgs e)
@@ -73,6 +75,7 @@ namespace cinepolis
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_mod_clasificacion, Squerys, Stabla);
             conect.Desconectar();
+            txt_modbuscar.Clear();
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -91,6 +94,8 @@ namespace cinepolis
             conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
             conect.Desconectar();
+            txt_mod_clasificacion.Clear();
+            txt_mod_descrip_clasificacion.Clear();
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -100,6 +105,7 @@ namespace cinepolis
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarclasificacion, Squerys, Stabla);
             conect.Desconectar();
+            txt_buscar.Clear();
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
