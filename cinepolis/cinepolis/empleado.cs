@@ -300,7 +300,7 @@ namespace cinepolis
             txt_mod_direccion.Text = this.dgv_emplados_modificar.CurrentRow.Cells[5].Value.ToString();
             txt_mod_dpi.Text = this.dgv_emplados_modificar.CurrentRow.Cells[6].Value.ToString();
             txt_mod_nit.Text = this.dgv_emplados_modificar.CurrentRow.Cells[7].Value.ToString();
-            txt_mod_fecha_nac.Text = this.dgv_emplados_modificar.CurrentRow.Cells[8].Value.ToString();
+            this.dtp_mod_fecha_nac.Text = this.dgv_emplados_modificar.CurrentRow.Cells[8].Value.ToString();
             cbo_mod_cine.Text = this.dgv_emplados_modificar.CurrentRow.Cells[9].Value.ToString();
             cbo_mod_puesto.Text = this.dgv_emplados_modificar.CurrentRow.Cells[10].Value.ToString();
 
@@ -332,7 +332,7 @@ namespace cinepolis
             txt_mod_dpi.Clear();
             txt_mod_nit.Clear();
             cbo_mod_puesto.ResetText();
-            txt_mod_fecha_nac.Clear();
+            
             cbo_mod_cine.ResetText();
         }
 
@@ -340,7 +340,7 @@ namespace cinepolis
         {
             String Codigo = this.dgv_emplados_modificar.CurrentRow.Cells[0].Value.ToString();
             conect.Conectar();
-            String Squery = "update empleado set  nom1empleado ='" + txt_mod_nombre1.Text + "', nom2empleado ='" + txt_mod_nombre2.Text + "',ape1empleado ='" + txt_mod_apellido1.Text + "',ape2empleado ='" + txt_mod_apellido2.Text + "',dirempleado ='" + txt_mod_direccion.Text + "',dpiempleado ='" + txt_mod_dpi.Text + "',nitempleado ='" + txt_mod_nit.Text + "',fechanacempleado ='" + txt_mod_fecha_nac.Text + "',pkidcine ='" + cbo_mod_cine.Text + "',pkidpuesto ='" + cbo_mod_puesto.Text + "' where pkidempleado ='" + Codigo + "'";
+            String Squery = "update empleado set  nom1empleado ='" + txt_mod_nombre1.Text + "', nom2empleado ='" + txt_mod_nombre2.Text + "',ape1empleado ='" + txt_mod_apellido1.Text + "',ape2empleado ='" + txt_mod_apellido2.Text + "',dirempleado ='" + txt_mod_direccion.Text + "',dpiempleado ='" + txt_mod_dpi.Text + "',nitempleado ='" + txt_mod_nit.Text + "',fechanacempleado ='" + this.dtp_mod_fecha_nac.Text + "',pkidcine ='" + cbo_mod_cine.Text + "',pkidpuesto ='" + cbo_mod_puesto.Text + "' where pkidempleado ='" + Codigo + "'";
             conect.EjecutarQuery(Squery);
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
             conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);

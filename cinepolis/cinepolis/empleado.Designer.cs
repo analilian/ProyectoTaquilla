@@ -35,6 +35,7 @@
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dtp_fecha_nac = new System.Windows.Forms.DateTimePicker();
             this.cbo_cine = new System.Windows.Forms.ComboBox();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_cine = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.lbl_agregar = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dtp_mod_fecha_nac = new System.Windows.Forms.DateTimePicker();
             this.cbo_mod_cine = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_buscarmod = new System.Windows.Forms.Button();
@@ -63,7 +65,6 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_mod_guardar = new System.Windows.Forms.Button();
             this.dgv_emplados_modificar = new System.Windows.Forms.DataGridView();
-            this.txt_mod_fecha_nac = new System.Windows.Forms.TextBox();
             this.cbo_mod_puesto = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -87,8 +88,6 @@
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_buscar_empleado = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dtp_fecha_nac = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -184,6 +183,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ingresar empleado";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // dtp_fecha_nac
+            // 
+            this.dtp_fecha_nac.CustomFormat = "yyyy--MM--dd";
+            this.dtp_fecha_nac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_fecha_nac.Location = new System.Drawing.Point(619, 176);
+            this.dtp_fecha_nac.Name = "dtp_fecha_nac";
+            this.dtp_fecha_nac.Size = new System.Drawing.Size(105, 20);
+            this.dtp_fecha_nac.TabIndex = 55;
+            this.dtp_fecha_nac.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // cbo_cine
             // 
@@ -367,7 +376,7 @@
             // 
             this.tabPage2.AutoScroll = true;
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage2.Controls.Add(this.dateTimePicker1);
+            this.tabPage2.Controls.Add(this.dtp_mod_fecha_nac);
             this.tabPage2.Controls.Add(this.cbo_mod_cine);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.btn_buscarmod);
@@ -376,7 +385,6 @@
             this.tabPage2.Controls.Add(this.btn_actualizar);
             this.tabPage2.Controls.Add(this.btn_mod_guardar);
             this.tabPage2.Controls.Add(this.dgv_emplados_modificar);
-            this.tabPage2.Controls.Add(this.txt_mod_fecha_nac);
             this.tabPage2.Controls.Add(this.cbo_mod_puesto);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label10);
@@ -399,6 +407,15 @@
             this.tabPage2.Size = new System.Drawing.Size(868, 358);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar empleado";
+            // 
+            // dtp_mod_fecha_nac
+            // 
+            this.dtp_mod_fecha_nac.CustomFormat = "yyyy--MM--dd";
+            this.dtp_mod_fecha_nac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_mod_fecha_nac.Location = new System.Drawing.Point(640, 159);
+            this.dtp_mod_fecha_nac.Name = "dtp_mod_fecha_nac";
+            this.dtp_mod_fecha_nac.Size = new System.Drawing.Size(105, 20);
+            this.dtp_mod_fecha_nac.TabIndex = 90;
             // 
             // cbo_mod_cine
             // 
@@ -483,13 +500,6 @@
             this.dgv_emplados_modificar.ReadOnly = true;
             this.dgv_emplados_modificar.Size = new System.Drawing.Size(845, 185);
             this.dgv_emplados_modificar.TabIndex = 72;
-            // 
-            // txt_mod_fecha_nac
-            // 
-            this.txt_mod_fecha_nac.Location = new System.Drawing.Point(640, 242);
-            this.txt_mod_fecha_nac.Name = "txt_mod_fecha_nac";
-            this.txt_mod_fecha_nac.Size = new System.Drawing.Size(160, 20);
-            this.txt_mod_fecha_nac.TabIndex = 71;
             // 
             // cbo_mod_puesto
             // 
@@ -712,25 +722,6 @@
             this.dgv_buscar_empleado.Size = new System.Drawing.Size(825, 228);
             this.dgv_buscar_empleado.TabIndex = 23;
             // 
-            // dtp_fecha_nac
-            // 
-            this.dtp_fecha_nac.CustomFormat = "yyyy--MM--dd";
-            this.dtp_fecha_nac.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_fecha_nac.Location = new System.Drawing.Point(619, 176);
-            this.dtp_fecha_nac.Name = "dtp_fecha_nac";
-            this.dtp_fecha_nac.Size = new System.Drawing.Size(105, 20);
-            this.dtp_fecha_nac.TabIndex = 55;
-            this.dtp_fecha_nac.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "yyyy--MM--dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(640, 159);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(105, 20);
-            this.dateTimePicker1.TabIndex = 90;
-            // 
             // empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -789,7 +780,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.DataGridView dgv_emplados_modificar;
-        private System.Windows.Forms.TextBox txt_mod_fecha_nac;
         private System.Windows.Forms.ComboBox cbo_mod_puesto;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -822,6 +812,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DateTimePicker dtp_fecha_nac;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_mod_fecha_nac;
     }
 }
