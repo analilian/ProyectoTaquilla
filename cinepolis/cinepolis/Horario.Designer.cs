@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tbc_horario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_hora_final = new System.Windows.Forms.TextBox();
+            this.txt_horario_inicio = new System.Windows.Forms.TextBox();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_horariofin = new System.Windows.Forms.Label();
             this.lbl_horainicio = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txt_horario_inicio = new System.Windows.Forms.TextBox();
-            this.txt_hora_final = new System.Windows.Forms.TextBox();
             this.tbc_horario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_peliculas)).BeginInit();
@@ -92,6 +92,21 @@
             this.tabPage1.Size = new System.Drawing.Size(713, 322);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Agregar Horario";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // txt_hora_final
+            // 
+            this.txt_hora_final.Location = new System.Drawing.Point(462, 11);
+            this.txt_hora_final.Name = "txt_hora_final";
+            this.txt_hora_final.Size = new System.Drawing.Size(148, 20);
+            this.txt_hora_final.TabIndex = 62;
+            // 
+            // txt_horario_inicio
+            // 
+            this.txt_horario_inicio.Location = new System.Drawing.Point(133, 14);
+            this.txt_horario_inicio.Name = "txt_horario_inicio";
+            this.txt_horario_inicio.Size = new System.Drawing.Size(148, 20);
+            this.txt_horario_inicio.TabIndex = 61;
             // 
             // btn_guardar
             // 
@@ -351,20 +366,6 @@
             this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(445, 36);
             this.lbl_titulo_mantenimiento_cine.TabIndex = 57;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE HORARIO";
-            // 
-            // txt_horario_inicio
-            // 
-            this.txt_horario_inicio.Location = new System.Drawing.Point(133, 14);
-            this.txt_horario_inicio.Name = "txt_horario_inicio";
-            this.txt_horario_inicio.Size = new System.Drawing.Size(148, 20);
-            this.txt_horario_inicio.TabIndex = 61;
-            // 
-            // txt_hora_final
-            // 
-            this.txt_hora_final.Location = new System.Drawing.Point(462, 11);
-            this.txt_hora_final.Name = "txt_hora_final";
-            this.txt_hora_final.Size = new System.Drawing.Size(148, 20);
-            this.txt_hora_final.TabIndex = 62;
             // 
             // Horario
             // 

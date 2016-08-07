@@ -145,6 +145,7 @@
             // 
             this.dgv_clasificacion.AllowUserToAddRows = false;
             this.dgv_clasificacion.AllowUserToDeleteRows = false;
+            this.dgv_clasificacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_clasificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_clasificacion.Location = new System.Drawing.Point(12, 136);
             this.dgv_clasificacion.Name = "dgv_clasificacion";
@@ -243,6 +244,7 @@
             // 
             this.dgv_mod_clasificacion.AllowUserToAddRows = false;
             this.dgv_mod_clasificacion.AllowUserToDeleteRows = false;
+            this.dgv_mod_clasificacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_mod_clasificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_mod_clasificacion.Location = new System.Drawing.Point(24, 136);
             this.dgv_mod_clasificacion.Name = "dgv_mod_clasificacion";
@@ -335,6 +337,7 @@
             // 
             this.dgv_borrar_categoria.AllowUserToAddRows = false;
             this.dgv_borrar_categoria.AllowUserToDeleteRows = false;
+            this.dgv_borrar_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_borrar_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_borrar_categoria.Location = new System.Drawing.Point(6, 77);
             this.dgv_borrar_categoria.Name = "dgv_borrar_categoria";

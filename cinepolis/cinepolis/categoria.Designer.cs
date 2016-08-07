@@ -96,6 +96,7 @@
             this.tabPage1.Size = new System.Drawing.Size(713, 322);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Agregar Categoria";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btn_guardar
             // 
@@ -132,6 +133,7 @@
             // 
             this.dgv_categoria.AllowUserToAddRows = false;
             this.dgv_categoria.AllowUserToDeleteRows = false;
+            this.dgv_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_categoria.Location = new System.Drawing.Point(12, 136);
             this.dgv_categoria.Name = "dgv_categoria";
@@ -209,6 +211,7 @@
             // 
             this.dgv_mod_categoria.AllowUserToAddRows = false;
             this.dgv_mod_categoria.AllowUserToDeleteRows = false;
+            this.dgv_mod_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_mod_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_mod_categoria.Location = new System.Drawing.Point(24, 136);
             this.dgv_mod_categoria.Name = "dgv_mod_categoria";

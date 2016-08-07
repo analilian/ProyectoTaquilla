@@ -22,6 +22,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
+            nombre_columna();
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -40,6 +41,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_horario_inicio.Clear();
             txt_hora_final.Clear();
@@ -62,6 +64,7 @@ namespace cinepolis
             String Squerys = ("Select* from horario where  horainiciohor like'" + txt_buscarmod.Text + "%' or horafinalhor like '" + txt_buscarmod.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_mod_horario, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscarmod.Clear();
         }
@@ -83,6 +86,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_mod_horainicio.Clear();
             txt_mod_horafin.Clear();
@@ -94,6 +98,7 @@ namespace cinepolis
             String Squerys = ("Select * from horario where  horainiciohor like'" + txt_buscar.Text + "%' or horafinalhor like '" + txt_buscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrar_horario, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
         }
 
@@ -109,6 +114,7 @@ namespace cinepolis
                 conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
                 conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
+                nombre_columna();
                 conect.Desconectar();
 
             }
@@ -120,6 +126,24 @@ namespace cinepolis
 
         private void txt_mod_horainicio_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void nombre_columna()
+        {
+            this.dgv_mostrar_peliculas.Columns[0].HeaderText = "No";
+            this.dgv_mostrar_peliculas.Columns[1].HeaderText = "Hora De Inicio";
+            this.dgv_mostrar_peliculas.Columns[2].HeaderText = "Hora De Finalizacion";
+            this.dgv_mod_horario.Columns[0].HeaderText = "No";
+            this.dgv_mod_horario.Columns[1].HeaderText = "Hora De Inicio";
+            this.dgv_mod_horario.Columns[2].HeaderText = "Hora De Finalizacion";
+            this.dgv_borrar_horario.Columns[0].HeaderText = "No";
+            this.dgv_borrar_horario.Columns[1].HeaderText = "Hora De Inicio";
+            this.dgv_borrar_horario.Columns[2].HeaderText = "Hora De Finalizacion";
 
         }
     }

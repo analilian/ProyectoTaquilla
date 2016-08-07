@@ -28,6 +28,7 @@ namespace cinepolis
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            nombre_columna();
             this.usuario = g;
             realizar();
         }
@@ -37,6 +38,7 @@ namespace cinepolis
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            nombre_columna();
           
 
         }
@@ -181,6 +183,7 @@ namespace cinepolis
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            nombre_columna();
             limpiaringreso();
         }
 
@@ -190,6 +193,7 @@ namespace cinepolis
             String Squerys = ("Select * from pelicula where nompelicula like'" + txt_modificarbuscar.Text + "%' or despelicula like '" + txt_modificarbuscar.Text + "%' or vinculopelicula like'" + txt_modificarbuscar.Text + "%'or pkidsala like'" + txt_modificarbuscar.Text + "%'or pkididioma like'" + txt_modificarbuscar.Text + "%'or pkidproyeccion like'" + txt_modificarbuscar.Text + "%'or pkidclasificacion like'" + txt_modificarbuscar.Text + "%'or pkidcategorias like'" + txt_modificarbuscar.Text + "%'or pkidcine like'" + txt_modificarbuscar.Text + "%'or pkidfcar like'" + txt_modificarbuscar.Text + "%';");
             con.buscarquery(Squerys);
             con.actualizargrid(dgv_modificar_pelicula, Squerys, Stabla);
+            nombre_columna();
             con.Desconectar();
             txt_modificarbuscar.Clear();
         }
@@ -219,6 +223,7 @@ namespace cinepolis
             String Squerys = ("Select* from Pelicula where nompelicula like'" + txt_buscar.Text + "%' or despelicula like '" + txt_buscar.Text + "%' or vinculopelicula like'" + txt_buscar.Text + "%'or pkidsala like'" + txt_buscar.Text + "%'or pkididioma like'" + txt_buscar.Text + "%'or pkidproyeccion like'" + txt_buscar.Text + "%'or pkidclasificacion like'" + txt_buscar.Text + "%'or pkidcategorias like'" + txt_buscar.Text + "%'or pkidcine like'" + txt_buscar.Text + "%'or pkidfcar like'" + txt_buscar.Text + "%';");
             con.buscarquery(Squerys);
             con.actualizargrid(dgv_buscar_pelicula, Squerys, Stabla);
+            nombre_columna();
             con.Desconectar();
             txt_buscar.Clear();
         }
@@ -235,6 +240,7 @@ namespace cinepolis
                con.actualizargrid(dgv_insertar, Squeery, Stabla);
                 con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
                 con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+                nombre_columna();
                 con.Desconectar();
 
             }
@@ -261,6 +267,7 @@ namespace cinepolis
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            nombre_columna();
             limpiarmod();
         }
 
@@ -374,6 +381,60 @@ namespace cinepolis
         }
 
         private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void nombre_columna()
+        {
+            this.dgv_insertar.Columns[0].HeaderText = "No";
+            this.dgv_insertar.Columns[1].HeaderText = "Nombre";
+            this.dgv_insertar.Columns[2].HeaderText = "Descripcion";
+            this.dgv_insertar.Columns[3].HeaderText = "Portada";
+            this.dgv_insertar.Columns[4].HeaderText = "Vinculo";
+            this.dgv_insertar.Columns[5].HeaderText = "Sala";
+            this.dgv_insertar.Columns[6].HeaderText = "Idioma";
+            this.dgv_insertar.Columns[7].HeaderText = "Proyeccion";
+            this.dgv_insertar.Columns[8].HeaderText = "Clasificacion";
+            this.dgv_insertar.Columns[9].HeaderText = "Categorias";
+            this.dgv_insertar.Columns[10].HeaderText = "Cine";
+            this.dgv_insertar.Columns[11].HeaderText = "Fecha en Cartelera";
+            this.dgv_buscar_pelicula.Columns[0].HeaderText = "No";
+            this.dgv_buscar_pelicula.Columns[1].HeaderText = "Nombre";
+            this.dgv_buscar_pelicula.Columns[2].HeaderText = "Descripcion";
+            this.dgv_buscar_pelicula.Columns[3].HeaderText = "Portada";
+            this.dgv_buscar_pelicula.Columns[4].HeaderText = "Vinculo";
+            this.dgv_buscar_pelicula.Columns[5].HeaderText = "Sala";
+            this.dgv_buscar_pelicula.Columns[6].HeaderText = "Idioma";
+            this.dgv_buscar_pelicula.Columns[7].HeaderText = "Proyeccion";
+            this.dgv_buscar_pelicula.Columns[8].HeaderText = "Clasificacion";
+            this.dgv_buscar_pelicula.Columns[9].HeaderText = "Categorias";
+            this.dgv_buscar_pelicula.Columns[10].HeaderText = "Cine";
+            this.dgv_buscar_pelicula.Columns[11].HeaderText = "Fecha en Cartelera";
+            this.dgv_modificar_pelicula.Columns[0].HeaderText = "No";
+            this.dgv_modificar_pelicula.Columns[1].HeaderText = "Nombre";
+            this.dgv_modificar_pelicula.Columns[2].HeaderText = "Descripcion";
+            this.dgv_modificar_pelicula.Columns[3].HeaderText = "Portada";
+            this.dgv_modificar_pelicula.Columns[4].HeaderText = "Vinculo";
+            this.dgv_modificar_pelicula.Columns[5].HeaderText = "Sala";
+            this.dgv_modificar_pelicula.Columns[6].HeaderText = "Idioma";
+            this.dgv_modificar_pelicula.Columns[7].HeaderText = "Proyeccion";
+            this.dgv_modificar_pelicula.Columns[8].HeaderText = "Clasificacion";
+            this.dgv_modificar_pelicula.Columns[9].HeaderText = "Categorias";
+            this.dgv_modificar_pelicula.Columns[10].HeaderText = "Cine";
+            this.dgv_modificar_pelicula.Columns[11].HeaderText = "Fecha en Cartelera";
+        }
+
+        private void cbo_relacion_pelicula_cine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_agregar_relacion4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbo_relacion_pelicula_hora1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

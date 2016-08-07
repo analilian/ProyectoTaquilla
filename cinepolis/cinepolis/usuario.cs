@@ -27,6 +27,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_ingresarusuario,Squeery, Stabla);
             conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
             conect.actualizargrid(dgv_modificar, Squeery, Stabla);
+            nombre_columna();
         }
         
 
@@ -88,6 +89,7 @@ namespace cinepolis
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_modificar, Squeery, Stabla);
+                nombre_columna();
                 conect.Desconectar();
             }
             else
@@ -125,6 +127,7 @@ namespace cinepolis
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_modificar, Squeery, Stabla);
+                nombre_columna();
                 conect.Desconectar();
 
             }
@@ -141,6 +144,7 @@ namespace cinepolis
             String Squerys = ("Select* from usuario where  nomusuario like'"+ txt_buscarusuario.Text +  "%' or pkidempleado like '" + txt_buscarusuario.Text + "%'or pkidrole like '" + txt_buscarusuario.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarusuario, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscarusuario.Clear();
 
@@ -157,6 +161,7 @@ namespace cinepolis
             String Squerys = ("Select* from usuario where nomusuario like'" + txt_modificarbuscar.Text + "%' or pkidempleado like '" + txt_modificarbuscar.Text + "%' or pkidrole like '" + txt_modificarbuscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_modificar, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_modificarbuscar.Clear();
         }
@@ -189,6 +194,7 @@ namespace cinepolis
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_modificar, Squeery, Stabla);
+                nombre_columna();
                 conect.Desconectar();
                 limpiarmod();
             }
@@ -348,6 +354,25 @@ namespace cinepolis
 
         private void txt_conmod_TextChanged(object sender, EventArgs e)
         {
+
+        }
+        public void nombre_columna()
+        {
+           this.dgv_ingresarusuario.Columns[0].HeaderText = "No";
+            this.dgv_ingresarusuario.Columns[1].HeaderText = "Usuario";
+            this.dgv_ingresarusuario.Columns[3].HeaderText = "Empleado";
+            this.dgv_ingresarusuario.Columns[4].HeaderText = "Role";
+            this.dgv_ingresarusuario.Columns[2].Visible = false;
+            this.dgv_modificar.Columns[0].HeaderText = "No";
+            this.dgv_modificar.Columns[1].HeaderText = "Usuario";
+            this.dgv_modificar.Columns[3].HeaderText = "Empleado";
+            this.dgv_modificar.Columns[4].HeaderText = "Role";
+            this.dgv_modificar.Columns[2].Visible = false;
+            this.dgv_borrarusuario.Columns[0].HeaderText = "No";
+            this.dgv_borrarusuario.Columns[1].HeaderText = "Usuario";
+            this.dgv_borrarusuario.Columns[3].HeaderText = "Empleado";
+            this.dgv_borrarusuario.Columns[4].HeaderText = "Role";
+            this.dgv_borrarusuario.Columns[2].Visible = false;
 
         }
     }

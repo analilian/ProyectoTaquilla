@@ -21,6 +21,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+            nombre_columna();
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_clasificacion.Clear();
             txt_descrip_clasificacion.Clear();
@@ -57,6 +59,7 @@ namespace cinepolis
             String Squerys = ("Select* from cine where  nomcine like'" + txt_buscarmod.Text + "%' or direccine like '" + txt_buscarmod.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_mod_clasificacion, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscarmod.Clear();
         }
@@ -82,6 +85,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_nommod.Clear();
             txt_dirmod.Clear();
@@ -94,6 +98,7 @@ namespace cinepolis
             String Squerys = ("Select* from cine where  nomcine like'" + txt_buscar.Text + "%' or direccine like '" + txt_buscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrar_categoria, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscar.Clear();
         }
@@ -111,6 +116,7 @@ namespace cinepolis
                     conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+                    nombre_columna();
                     conect.Desconectar();
 
                 }
@@ -119,6 +125,18 @@ namespace cinepolis
                     return;
                 }
             }
+        }
+        public void nombre_columna()
+        {
+            this.dgv_clasificacion.Columns[0].HeaderText = "No";
+            this.dgv_clasificacion.Columns[1].HeaderText = "Cine";
+            this.dgv_clasificacion.Columns[2].HeaderText = "Direccion";
+            this.dgv_mod_clasificacion.Columns[0].HeaderText = "No";
+            this.dgv_mod_clasificacion.Columns[1].HeaderText = "Cine";
+            this.dgv_mod_clasificacion.Columns[2].HeaderText = "Direccion";
+            this.dgv_borrar_categoria.Columns[0].HeaderText = "No";
+            this.dgv_borrar_categoria.Columns[1].HeaderText = "Cine";
+            this.dgv_borrar_categoria.Columns[2].HeaderText = "Direccion";
         }
     }
 }

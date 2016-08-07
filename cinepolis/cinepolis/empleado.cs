@@ -21,6 +21,7 @@ namespace cinepolis
             InitializeComponent();
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
             conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
+            nombre_columna();
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -282,6 +283,7 @@ namespace cinepolis
             conect.EjecutarQuery(Squery);
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
             conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             limpiaringreso();
         }
@@ -344,6 +346,7 @@ namespace cinepolis
             conect.EjecutarQuery(Squery);
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
             conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             limpiarmod();
         }
@@ -354,6 +357,7 @@ namespace cinepolis
             String Squerys = ("Select* from empleado where  nom1empleado like'" + txt_modificarbuscar.Text + "%'or nom2empleado like'" + txt_modificarbuscar.Text + "%'or ape1empleado like'" + txt_modificarbuscar.Text + "%' or ape2empleado like'" + txt_modificarbuscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_emplados_modificar, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_modificarbuscar.Clear();
         }
@@ -379,6 +383,7 @@ namespace cinepolis
                 conect.EjecutarQuery(Squerys);
                 conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
                 conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
+                nombre_columna();
                 conect.Desconectar();
             }
         }
@@ -389,6 +394,32 @@ namespace cinepolis
         }
 
 
+        public void nombre_columna()
+        {
+            this.dgv_buscar_empleado.Columns[0].HeaderText = "No";
+            this.dgv_buscar_empleado.Columns[1].HeaderText = "Primer Nombre";
+            this.dgv_buscar_empleado.Columns[2].HeaderText = "Segundo Nombre";
+            this.dgv_buscar_empleado.Columns[3].HeaderText = "Primer Apellido";
+            this.dgv_buscar_empleado.Columns[4].HeaderText = "Segundo Apellido";
+            this.dgv_buscar_empleado.Columns[5].HeaderText = "Direccion";
+            this.dgv_buscar_empleado.Columns[6].HeaderText = "Dpi";
+            this.dgv_buscar_empleado.Columns[7].HeaderText = "Nit";
+            this.dgv_buscar_empleado.Columns[8].HeaderText = "Fecha Nacimiento";
+            this.dgv_buscar_empleado.Columns[9].HeaderText = "Cine";
+            this.dgv_buscar_empleado.Columns[10].HeaderText = "Puesto";
+            this.dgv_emplados_modificar.Columns[0].HeaderText = "No";
+            this.dgv_emplados_modificar.Columns[1].HeaderText = "Primer Nombre";
+            this.dgv_emplados_modificar.Columns[2].HeaderText = "Segundo Nombre";
+            this.dgv_emplados_modificar.Columns[3].HeaderText = "Primer Apellido";
+            this.dgv_emplados_modificar.Columns[4].HeaderText = "Segundo Apellido";
+            this.dgv_emplados_modificar.Columns[5].HeaderText = "Direccion";
+            this.dgv_emplados_modificar.Columns[6].HeaderText = "Dpi";
+            this.dgv_emplados_modificar.Columns[7].HeaderText = "Nit";
+            this.dgv_emplados_modificar.Columns[8].HeaderText = "Fecha Nacimiento";
+            this.dgv_emplados_modificar.Columns[9].HeaderText = "Cine";
+            this.dgv_emplados_modificar.Columns[10].HeaderText = "Puesto";
+
+        }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             //Sfecha1 = dtp_fecha_nac.Value.Date.ToString();

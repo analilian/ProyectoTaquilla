@@ -21,6 +21,7 @@ namespace cinepolis
                conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
+            nombre_columna();
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -48,6 +49,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_clasificacion.Clear();
             txt_descrip_clasificacion.Clear();
@@ -74,6 +76,7 @@ namespace cinepolis
             String Squerys = ("Select * from clasificacion where  nomclasificacion like'" + txt_modbuscar.Text + "%' or descclasificacion like '" + txt_modbuscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_mod_clasificacion, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_modbuscar.Clear();
         }
@@ -93,6 +96,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_mod_clasificacion.Clear();
             txt_mod_descrip_clasificacion.Clear();
@@ -104,6 +108,7 @@ namespace cinepolis
             String Squerys = ("Select * from clasificacion where  nomclasificacion like'" + txt_buscar.Text + "%' or descclasificacion like '" + txt_buscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarclasificacion, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscar.Clear();
         }
@@ -120,6 +125,7 @@ namespace cinepolis
                 conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                 conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
+                nombre_columna();
                 conect.Desconectar();
 
             }
@@ -127,6 +133,23 @@ namespace cinepolis
             {
                 return;
             }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void nombre_columna()
+        {
+            this.dgv_clasificacion.Columns[0].HeaderText = "No";
+            this.dgv_clasificacion.Columns[1].HeaderText = "Clasificacion";
+            this.dgv_clasificacion.Columns[2].HeaderText = "Descripcion";
+            this.dgv_borrarclasificacion.Columns[0].HeaderText = "No";
+            this.dgv_mod_clasificacion.Columns[1].HeaderText = "Clasificacion";
+            this.dgv_mod_clasificacion.Columns[2].HeaderText = "Descripcion";
+            this.dgv_borrarclasificacion.Columns[0].HeaderText = "No";
+            this.dgv_borrarclasificacion.Columns[1].HeaderText = "Clasificacion";
+            this.dgv_borrarclasificacion.Columns[2].HeaderText = "Descripcion";
         }
     }
 }

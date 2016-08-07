@@ -21,6 +21,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_categoria, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+            nombre_columna();
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -39,6 +40,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_categoria, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_categoria.Clear();
         }
@@ -54,6 +56,7 @@ namespace cinepolis
             String Squerys = ("Select * from categoria where  nomcategoria like'" + txt_buscarmod.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_mod_categoria, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscarmod.Clear();
         }
@@ -69,6 +72,7 @@ namespace cinepolis
             String Squerys = ("Select* from categoria where  nomcategoria like'" + txt_buscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrar_categoria, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscar.Clear();
 
@@ -83,6 +87,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_categoria, Squeery, Stabla);
             conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
             conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_mod_categoriaa.Clear();
         }
@@ -99,6 +104,7 @@ namespace cinepolis
                 conect.actualizargrid(dgv_categoria, Squeery, Stabla);
                 conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+                nombre_columna();
                 conect.Desconectar();
 
             }
@@ -109,6 +115,24 @@ namespace cinepolis
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void nombre_columna()
+        {
+            this.dgv_categoria.Columns[0].HeaderText = "No";
+            this.dgv_categoria.Columns[1].HeaderText = "Categoria";
+          
+            this.dgv_borrar_categoria.Columns[0].HeaderText = "No";
+            this.dgv_borrar_categoria.Columns[1].HeaderText = "Categoria";
+          
+                this.dgv_mod_categoria.Columns[0].HeaderText = "No";
+            this.dgv_mod_categoria.Columns[1].HeaderText = "Categoria";
+        
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }

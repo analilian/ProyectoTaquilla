@@ -23,6 +23,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
             conect.actualizargrid(dgv_modsala, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+            nombre_columna();
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -37,10 +38,12 @@ namespace cinepolis
 
             string scodigo = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
             conect.Conectar();
-            String Squery = "insert into  sala (nomsala, pkidcine) values('" + txt_sala.Text + "','"+ scodigo +"' );";
+            String Squery = "insert into  sala (nomsala, pkidcine) values('" + txt_sala.Text + "','" + scodigo + "' );";
             conect.EjecutarQuery(Squery);
             conect.actualizargrid(dgv_modsala, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+            conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_sala.Clear();
         }
@@ -81,6 +84,7 @@ namespace cinepolis
             String Squerys = ("Select * from sala where  nomsala like'" + txt_buscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarsala, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscar.Clear();
         }
@@ -91,6 +95,7 @@ namespace cinepolis
             String Squerys = ("Select * from sala where  nomsala like'" + txt_buscmod.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_modsala, Squerys, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_buscmod.Clear();
 
@@ -110,6 +115,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
             conect.actualizargrid(dgv_modsala, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+            nombre_columna();
             conect.Desconectar();
             txt_mod.Clear();
         }
@@ -126,6 +132,7 @@ namespace cinepolis
                 conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
                 conect.actualizargrid(dgv_modsala, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+                nombre_columna();
                 conect.Desconectar();
 
             }
@@ -137,6 +144,19 @@ namespace cinepolis
 
         private void lbl_titulo_mantenimiento_cine_Click(object sender, EventArgs e)
         {
+
+        }
+        public void nombre_columna()
+        {
+            this.dgv_sala.Columns[0].HeaderText = "No";
+            this.dgv_sala.Columns[1].HeaderText = "Nombre de sala";
+            this.dgv_sala.Columns[2].HeaderText = "Cine";
+            this.dgv_modsala.Columns[0].HeaderText = "No";
+            this.dgv_modsala.Columns[1].HeaderText = "Nombre De Sala";
+            this.dgv_modsala.Columns[2].HeaderText = "Cine";
+            this.dgv_borrarsala.Columns[0].HeaderText = "No";
+            this.dgv_borrarsala.Columns[1].HeaderText = "Nombre De Sala";
+            this.dgv_borrarsala.Columns[2].HeaderText = "Cine";
 
         }
     }
