@@ -35,7 +35,7 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-
+            try { 
             string scodigo = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
             conect.Conectar();
             String Squery = "insert into  sala (nomsala, pkidcine) values('" + txt_sala.Text + "','" + scodigo + "' );";
@@ -46,7 +46,14 @@ namespace cinepolis
             nombre_columna();
             conect.Desconectar();
             txt_sala.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Insercion sobre Tabla Sala");
+            }
         }
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -80,13 +87,20 @@ namespace cinepolis
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            conect.Conectar();
+           try{
+               conect.Conectar();
             String Squerys = ("Select * from sala where  nomsala like'" + txt_buscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarsala, Squerys, Stabla);
             nombre_columna();
             conect.Desconectar();
             txt_buscar.Clear();
+           }
+           catch (Exception ex)
+           {
+               MessageBox.Show(ex.Message + ex.TargetSite);
+               MessageBox.Show("Error en la Busqueda sobre Tabla sala");
+           }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -108,7 +122,8 @@ namespace cinepolis
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            String Codigo = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
+            try {
+                String Codigo = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
             conect.Conectar();
             String Squery = "update sala set  nomsala ='" + txt_mod.Text + "'where pkidsala ='" + Codigo + "'";
             conect.EjecutarQuery(Squery);
@@ -118,28 +133,43 @@ namespace cinepolis
             nombre_columna();
             conect.Desconectar();
             txt_mod.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Actualicaion sobre Tabla sala");
+            }
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
-            String SCelda = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
-            var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (Vresultado == DialogResult.Yes)
+            try
             {
-                conect.Conectar();
-                String Squerys = "delete from  sala where pkidsalas = '" + SCelda + "';";
-                conect.EjecutarQuery(Squerys);
-                conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
-                conect.actualizargrid(dgv_modsala, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
+                String SCelda = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
+                var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Vresultado == DialogResult.Yes)
+                {
+                    conect.Conectar();
+                    String Squerys = "delete from  sala where pkidsalas = '" + SCelda + "';";
+                    conect.EjecutarQuery(Squerys);
+                    conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
+                    conect.actualizargrid(dgv_modsala, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
 
+                }
+                else
+                {
+                    return;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return;
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Eliminacion sobre Tabla sala");
             }
+            
         }
 
         private void lbl_titulo_mantenimiento_cine_Click(object sender, EventArgs e)

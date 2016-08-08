@@ -33,17 +33,23 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-
-            conect.Conectar();
-            String Squery = "insert into  categoria (nomcategoria) values('" + txt_categoria.Text + "');";
-            conect.EjecutarQuery(Squery);
-            conect.actualizargrid(dgv_categoria, Squeery, Stabla);
-            conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_categoria.Clear();
+            try
+            {
+                conect.Conectar();
+                String Squery = "insert into  categoria (nomcategoria) values('" + txt_categoria.Text + "');";
+                conect.EjecutarQuery(Squery);
+                conect.actualizargrid(dgv_categoria, Squeery, Stabla);
+                conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
+                conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+                nombre_columna();
+                conect.Desconectar();
+                txt_categoria.Clear();
+            }catch(Exception ex){
+ MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error al Guardar el nombre de la Categoria");
+            }
         }
+
 
         private void categoria_Load(object sender, EventArgs e)
         {
@@ -52,13 +58,22 @@ namespace cinepolis
 
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
-            conect.Conectar();
-            String Squerys = ("Select * from categoria where  nomcategoria like'" + txt_buscarmod.Text + "%';");
-            conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_mod_categoria, Squerys, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_buscarmod.Clear();
+            try
+            {
+                conect.Conectar();
+                String Squerys = ("Select * from categoria where  nomcategoria like'" + txt_buscarmod.Text + "%';");
+                conect.buscarquery(Squerys);
+                conect.actualizargrid(dgv_mod_categoria, Squerys, Stabla);
+                nombre_columna();
+                conect.Desconectar();
+                txt_buscarmod.Clear();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error al buscar la categoria");
+            }
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -80,37 +95,55 @@ namespace cinepolis
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            String Codigo = this.dgv_mod_categoria.CurrentRow.Cells[0].Value.ToString();
-            conect.Conectar();
-            String Squery = "update categoria set  nomcategoria ='" + txt_mod_categoriaa.Text +  "'where pkidcategorias ='" + Codigo + "'";
-            conect.EjecutarQuery(Squery);
-            conect.actualizargrid(dgv_categoria, Squeery, Stabla);
-            conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_mod_categoriaa.Clear();
-        }
-
-        private void btn_borrar_Click(object sender, EventArgs e)
-        {
-            String SCelda = this.dgv_borrar_categoria.CurrentRow.Cells[0].Value.ToString();
-            var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (Vresultado == DialogResult.Yes)
+            try
             {
+                String Codigo = this.dgv_mod_categoria.CurrentRow.Cells[0].Value.ToString();
                 conect.Conectar();
-                String Squerys = "delete from  categoria where pkidcategorias = '" + SCelda + "';";
-                conect.EjecutarQuery(Squerys);
+                String Squery = "update categoria set  nomcategoria ='" + txt_mod_categoriaa.Text + "'where pkidcategorias ='" + Codigo + "'";
+                conect.EjecutarQuery(Squery);
                 conect.actualizargrid(dgv_categoria, Squeery, Stabla);
                 conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
-
+                txt_mod_categoriaa.Clear();
             }
-            else
+            catch (Exception ex)
             {
-                return;
+
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Actualizacion de Categoria");
+            }
+        }
+
+        private void btn_borrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String SCelda = this.dgv_borrar_categoria.CurrentRow.Cells[0].Value.ToString();
+                var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Vresultado == DialogResult.Yes)
+                {
+                    conect.Conectar();
+                    String Squerys = "delete from  categoria where pkidcategorias = '" + SCelda + "';";
+                    conect.EjecutarQuery(Squerys);
+                    conect.actualizargrid(dgv_categoria, Squeery, Stabla);
+                    conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error al Borrar la Categoria");
+
             }
         }
 

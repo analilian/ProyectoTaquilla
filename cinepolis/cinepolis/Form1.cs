@@ -26,10 +26,11 @@ namespace cinepolis
         }
         public static MySqlConnection ObtenerConexion()
         {
-            MySqlConnection Conn = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
-            Conn.Open();
-            return Conn;
-
+           
+                MySqlConnection Conn = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                Conn.Open();
+                return Conn;
+       
         }
         private static int revisar(string f, string g)
         {

@@ -43,7 +43,9 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            conect.Conectar();
+            try
+            {
+                conect.Conectar();
             String Squery = "insert into  clasificacion ( nomclasificacion, descclasificacion ) values('" + txt_clasificacion.Text + "','"+txt_descrip_clasificacion.Text+"');";
             conect.EjecutarQuery(Squery);
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
@@ -53,6 +55,12 @@ namespace cinepolis
             conect.Desconectar();
             txt_clasificacion.Clear();
             txt_descrip_clasificacion.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Insercion sobre Tabla clasificacion");
+            }
         }
 
         private void clasificacion_Load(object sender, EventArgs e)
@@ -72,13 +80,21 @@ namespace cinepolis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            conect.Conectar();
-            String Squerys = ("Select * from clasificacion where  nomclasificacion like'" + txt_modbuscar.Text + "%' or descclasificacion like '" + txt_modbuscar.Text + "%';");
-            conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_mod_clasificacion, Squerys, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_modbuscar.Clear();
+            try
+            {
+                conect.Conectar();
+                String Squerys = ("Select * from clasificacion where  nomclasificacion like'" + txt_modbuscar.Text + "%' or descclasificacion like '" + txt_modbuscar.Text + "%';");
+                conect.buscarquery(Squerys);
+                conect.actualizargrid(dgv_mod_clasificacion, Squerys, Stabla);
+                nombre_columna();
+                conect.Desconectar();
+                txt_modbuscar.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Busqueda sobre Tabla clasificacion");
+            } 
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -89,7 +105,8 @@ namespace cinepolis
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            String Codigo = this.dgv_mod_clasificacion.CurrentRow.Cells[0].Value.ToString();
+          try{
+              String Codigo = this.dgv_mod_clasificacion.CurrentRow.Cells[0].Value.ToString();
           conect.Conectar();
             String Squery = "update clasificacion set  nomclasificacion ='" + txt_mod_clasificacion.Text + "',descclasificacion ='" +txt_mod_descrip_clasificacion.Text + "'where pkidclasificacion ='" + Codigo + "'";
             conect.EjecutarQuery(Squery);
@@ -100,6 +117,12 @@ namespace cinepolis
             conect.Desconectar();
             txt_mod_clasificacion.Clear();
             txt_mod_descrip_clasificacion.Clear();
+          }
+          catch (Exception ex)
+          {
+              MessageBox.Show(ex.Message + ex.TargetSite);
+              MessageBox.Show("Error en la Actualizacion sobre Tabla clasificacion");
+          }
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -115,7 +138,8 @@ namespace cinepolis
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
-            String SCelda = this.dgv_borrarclasificacion.CurrentRow.Cells[0].Value.ToString();
+           try{
+               String SCelda = this.dgv_borrarclasificacion.CurrentRow.Cells[0].Value.ToString();
             var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Vresultado == DialogResult.Yes)
             {
@@ -133,6 +157,12 @@ namespace cinepolis
             {
                 return;
             }
+           }
+           catch (Exception ex)
+           {
+               MessageBox.Show(ex.Message + ex.TargetSite);
+               MessageBox.Show("Error en la Actualizacion sobre Tabla clasificacion");
+           }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
