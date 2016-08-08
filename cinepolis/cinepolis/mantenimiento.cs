@@ -22,6 +22,7 @@ namespace cinepolis
         MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root;pwd=;");
         string imgLoc;
         String Squeery = "select* from pelicula";
+        const string MySqlConnecionString = "server=localhost; database=bdcinetopia; Uid=root;pwd=;";
         public mantenimiento(string g)
         {
             InitializeComponent();
@@ -207,12 +208,15 @@ namespace cinepolis
 
         string codigo;
 
+       
+
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             codigo = this.dgv_modificar_pelicula.CurrentRow.Cells[0].Value.ToString();
             txt_mod_nombre.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[1].Value.ToString();
             txt_mod_descrip.Text=this.dgv_modificar_pelicula.CurrentRow.Cells[2].Value.ToString();
             pic_mod_portada.ImageLocation = this.dgv_modificar_pelicula.CurrentRow.Cells[3].Value.ToString();
+          
             txt_mod_trailer.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[4].Value.ToString();
             cbo_mod_sala.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[5].Value.ToString();
             cbo_mod_idioma.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[6].Value.ToString();
@@ -221,7 +225,7 @@ namespace cinepolis
             cbo_mod_categoria.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[9].Value.ToString();
             cbo_mod_cine.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[10].Value.ToString();
             cbo_mod_fecha.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[11].Value.ToString();
-
+            
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)

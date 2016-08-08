@@ -66,6 +66,7 @@
             this.btn_agregar_btn_agregar_categoria = new System.Windows.Forms.Button();
             this.btn_agregar_clasificacion = new System.Windows.Forms.Button();
             this.btn_agregar_horario = new System.Windows.Forms.Button();
+            this.dgv_insertar = new System.Windows.Forms.DataGridView();
             this.pic_portada = new System.Windows.Forms.PictureBox();
             this.btn_portada = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -98,43 +99,42 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_buscar_pelicula = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btn_agregar_relacion4 = new System.Windows.Forms.Button();
+            this.cbo_relacion_pelicula_proyeccion1 = new System.Windows.Forms.ComboBox();
+            this.lbl_relacion_proyeccion = new System.Windows.Forms.Label();
+            this.btn_agregar_relacion3 = new System.Windows.Forms.Button();
+            this.btn_agregar_relacion2 = new System.Windows.Forms.Button();
+            this.btn_agregar_relacion1 = new System.Windows.Forms.Button();
+            this.dgv_relacion_pelicula_hora = new System.Windows.Forms.DataGridView();
+            this.cbo_relacion_pelicula_cine1 = new System.Windows.Forms.ComboBox();
+            this.lbl_relacion_cine1 = new System.Windows.Forms.Label();
+            this.cbo_relacion_pelicula_hora1 = new System.Windows.Forms.ComboBox();
+            this.cbo_relacion_pelicula_sala1 = new System.Windows.Forms.ComboBox();
+            this.cbo_relacion_pelicula_sala = new System.Windows.Forms.ComboBox();
+            this.lbl_relacion_Hora1 = new System.Windows.Forms.Label();
+            this.lbl_relacion_sala1 = new System.Windows.Forms.Label();
+            this.lbl_relacion_pelicula1 = new System.Windows.Forms.Label();
+            this.lbl_relacion1 = new System.Windows.Forms.Label();
+            this.lbl_titulo_ralacion = new System.Windows.Forms.Label();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_regresar = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
-            this.dgv_insertar = new System.Windows.Forms.DataGridView();
-            this.lbl_titulo_ralacion = new System.Windows.Forms.Label();
-            this.lbl_relacion1 = new System.Windows.Forms.Label();
-            this.lbl_relacion_pelicula1 = new System.Windows.Forms.Label();
-            this.lbl_relacion_sala1 = new System.Windows.Forms.Label();
-            this.lbl_relacion_Hora1 = new System.Windows.Forms.Label();
-            this.cbo_relacion_pelicula_sala = new System.Windows.Forms.ComboBox();
-            this.cbo_relacion_pelicula_sala1 = new System.Windows.Forms.ComboBox();
-            this.cbo_relacion_pelicula_hora1 = new System.Windows.Forms.ComboBox();
-            this.lbl_relacion_cine1 = new System.Windows.Forms.Label();
-            this.cbo_relacion_pelicula_cine1 = new System.Windows.Forms.ComboBox();
-            this.dgv_relacion_pelicula_hora = new System.Windows.Forms.DataGridView();
-            this.btn_agregar_relacion1 = new System.Windows.Forms.Button();
-            this.btn_agregar_relacion2 = new System.Windows.Forms.Button();
-            this.btn_agregar_relacion3 = new System.Windows.Forms.Button();
-            this.lbl_relacion_proyeccion = new System.Windows.Forms.Label();
-            this.cbo_relacion_pelicula_proyeccion1 = new System.Windows.Forms.ComboBox();
-            this.btn_agregar_relacion4 = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_portada)).BeginInit();
             this.tbc_mantenimiento_cine.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_relacion_pelicula_hora)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_relacion_pelicula_hora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -194,10 +194,10 @@
             // lbl_buscar
             // 
             this.lbl_buscar.AutoSize = true;
-            this.lbl_buscar.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_buscar.Location = new System.Drawing.Point(150, 299);
             this.lbl_buscar.Name = "lbl_buscar";
-            this.lbl_buscar.Size = new System.Drawing.Size(52, 16);
+            this.lbl_buscar.Size = new System.Drawing.Size(53, 16);
             this.lbl_buscar.TabIndex = 81;
             this.lbl_buscar.Text = "Buscar:";
             // 
@@ -426,6 +426,8 @@
             // 
             // pic_mod_portada
             // 
+            this.pic_mod_portada.ErrorImage = global::cinepolis.Properties.Resources.fondo_cine;
+            this.pic_mod_portada.InitialImage = global::cinepolis.Properties.Resources.fondo_cine;
             this.pic_mod_portada.Location = new System.Drawing.Point(695, 92);
             this.pic_mod_portada.Name = "pic_mod_portada";
             this.pic_mod_portada.Size = new System.Drawing.Size(136, 158);
@@ -569,6 +571,18 @@
             this.toolTip1.SetToolTip(this.btn_agregar_horario, "Agregar Horario");
             this.btn_agregar_horario.UseVisualStyleBackColor = true;
             this.btn_agregar_horario.Click += new System.EventHandler(this.btn_agregar_horario_Click);
+            // 
+            // dgv_insertar
+            // 
+            this.dgv_insertar.AllowUserToAddRows = false;
+            this.dgv_insertar.AllowUserToDeleteRows = false;
+            this.dgv_insertar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_insertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_insertar.Location = new System.Drawing.Point(23, 247);
+            this.dgv_insertar.Name = "dgv_insertar";
+            this.dgv_insertar.ReadOnly = true;
+            this.dgv_insertar.Size = new System.Drawing.Size(701, 131);
+            this.dgv_insertar.TabIndex = 82;
             // 
             // pic_portada
             // 
@@ -886,6 +900,216 @@
             this.dgv_buscar_pelicula.Size = new System.Drawing.Size(825, 228);
             this.dgv_buscar_pelicula.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.AutoScroll = true;
+            this.tabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.btn_agregar_relacion4);
+            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_proyeccion1);
+            this.tabPage4.Controls.Add(this.lbl_relacion_proyeccion);
+            this.tabPage4.Controls.Add(this.btn_agregar_relacion3);
+            this.tabPage4.Controls.Add(this.btn_agregar_relacion2);
+            this.tabPage4.Controls.Add(this.btn_agregar_relacion1);
+            this.tabPage4.Controls.Add(this.dgv_relacion_pelicula_hora);
+            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_cine1);
+            this.tabPage4.Controls.Add(this.lbl_relacion_cine1);
+            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_hora1);
+            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_sala1);
+            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_sala);
+            this.tabPage4.Controls.Add(this.lbl_relacion_Hora1);
+            this.tabPage4.Controls.Add(this.lbl_relacion_sala1);
+            this.tabPage4.Controls.Add(this.lbl_relacion_pelicula1);
+            this.tabPage4.Controls.Add(this.lbl_relacion1);
+            this.tabPage4.Controls.Add(this.lbl_titulo_ralacion);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(868, 384);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Relación de películas";
+            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(637, 138);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 73);
+            this.button3.TabIndex = 97;
+            this.toolTip1.SetToolTip(this.button3, "Guardar");
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btn_agregar_relacion4
+            // 
+            this.btn_agregar_relacion4.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_relacion4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_relacion4.Location = new System.Drawing.Point(483, 135);
+            this.btn_agregar_relacion4.Name = "btn_agregar_relacion4";
+            this.btn_agregar_relacion4.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_relacion4.TabIndex = 96;
+            this.toolTip1.SetToolTip(this.btn_agregar_relacion4, "Agregar relacion Pelicula - Cine");
+            this.btn_agregar_relacion4.UseVisualStyleBackColor = true;
+            this.btn_agregar_relacion4.Click += new System.EventHandler(this.btn_agregar_relacion4_Click);
+            // 
+            // cbo_relacion_pelicula_proyeccion1
+            // 
+            this.cbo_relacion_pelicula_proyeccion1.FormattingEnabled = true;
+            this.cbo_relacion_pelicula_proyeccion1.Location = new System.Drawing.Point(356, 138);
+            this.cbo_relacion_pelicula_proyeccion1.Name = "cbo_relacion_pelicula_proyeccion1";
+            this.cbo_relacion_pelicula_proyeccion1.Size = new System.Drawing.Size(121, 21);
+            this.cbo_relacion_pelicula_proyeccion1.TabIndex = 94;
+            // 
+            // lbl_relacion_proyeccion
+            // 
+            this.lbl_relacion_proyeccion.AutoSize = true;
+            this.lbl_relacion_proyeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_relacion_proyeccion.Location = new System.Drawing.Point(251, 135);
+            this.lbl_relacion_proyeccion.Name = "lbl_relacion_proyeccion";
+            this.lbl_relacion_proyeccion.Size = new System.Drawing.Size(99, 21);
+            this.lbl_relacion_proyeccion.TabIndex = 92;
+            this.lbl_relacion_proyeccion.Text = "Proyección:";
+            // 
+            // btn_agregar_relacion3
+            // 
+            this.btn_agregar_relacion3.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_relacion3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_relacion3.Location = new System.Drawing.Point(189, 86);
+            this.btn_agregar_relacion3.Name = "btn_agregar_relacion3";
+            this.btn_agregar_relacion3.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_relacion3.TabIndex = 89;
+            this.toolTip1.SetToolTip(this.btn_agregar_relacion3, "Agregar relacion Pelicula - Cine");
+            this.btn_agregar_relacion3.UseVisualStyleBackColor = true;
+            // 
+            // btn_agregar_relacion2
+            // 
+            this.btn_agregar_relacion2.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_relacion2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_relacion2.Location = new System.Drawing.Point(790, 86);
+            this.btn_agregar_relacion2.Name = "btn_agregar_relacion2";
+            this.btn_agregar_relacion2.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_relacion2.TabIndex = 88;
+            this.toolTip1.SetToolTip(this.btn_agregar_relacion2, "Agregar relacion Pelicula - Horario");
+            this.btn_agregar_relacion2.UseVisualStyleBackColor = true;
+            // 
+            // btn_agregar_relacion1
+            // 
+            this.btn_agregar_relacion1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_relacion1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_relacion1.Location = new System.Drawing.Point(483, 89);
+            this.btn_agregar_relacion1.Name = "btn_agregar_relacion1";
+            this.btn_agregar_relacion1.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_relacion1.TabIndex = 87;
+            this.toolTip1.SetToolTip(this.btn_agregar_relacion1, "Agregar relacion Pelicula - Sala");
+            this.btn_agregar_relacion1.UseVisualStyleBackColor = true;
+            // 
+            // dgv_relacion_pelicula_hora
+            // 
+            this.dgv_relacion_pelicula_hora.AllowUserToAddRows = false;
+            this.dgv_relacion_pelicula_hora.AllowUserToDeleteRows = false;
+            this.dgv_relacion_pelicula_hora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_relacion_pelicula_hora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_relacion_pelicula_hora.Location = new System.Drawing.Point(36, 232);
+            this.dgv_relacion_pelicula_hora.Name = "dgv_relacion_pelicula_hora";
+            this.dgv_relacion_pelicula_hora.ReadOnly = true;
+            this.dgv_relacion_pelicula_hora.Size = new System.Drawing.Size(800, 124);
+            this.dgv_relacion_pelicula_hora.TabIndex = 42;
+            // 
+            // cbo_relacion_pelicula_cine1
+            // 
+            this.cbo_relacion_pelicula_cine1.FormattingEnabled = true;
+            this.cbo_relacion_pelicula_cine1.Location = new System.Drawing.Point(62, 89);
+            this.cbo_relacion_pelicula_cine1.Name = "cbo_relacion_pelicula_cine1";
+            this.cbo_relacion_pelicula_cine1.Size = new System.Drawing.Size(121, 21);
+            this.cbo_relacion_pelicula_cine1.TabIndex = 41;
+            // 
+            // lbl_relacion_cine1
+            // 
+            this.lbl_relacion_cine1.AutoSize = true;
+            this.lbl_relacion_cine1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_relacion_cine1.Location = new System.Drawing.Point(6, 89);
+            this.lbl_relacion_cine1.Name = "lbl_relacion_cine1";
+            this.lbl_relacion_cine1.Size = new System.Drawing.Size(50, 21);
+            this.lbl_relacion_cine1.TabIndex = 39;
+            this.lbl_relacion_cine1.Text = "Cine:";
+            // 
+            // cbo_relacion_pelicula_hora1
+            // 
+            this.cbo_relacion_pelicula_hora1.FormattingEnabled = true;
+            this.cbo_relacion_pelicula_hora1.Location = new System.Drawing.Point(663, 89);
+            this.cbo_relacion_pelicula_hora1.Name = "cbo_relacion_pelicula_hora1";
+            this.cbo_relacion_pelicula_hora1.Size = new System.Drawing.Size(121, 21);
+            this.cbo_relacion_pelicula_hora1.TabIndex = 35;
+            this.cbo_relacion_pelicula_hora1.SelectedIndexChanged += new System.EventHandler(this.cbo_relacion_pelicula_hora1_SelectedIndexChanged);
+            // 
+            // cbo_relacion_pelicula_sala1
+            // 
+            this.cbo_relacion_pelicula_sala1.FormattingEnabled = true;
+            this.cbo_relacion_pelicula_sala1.Location = new System.Drawing.Point(356, 89);
+            this.cbo_relacion_pelicula_sala1.Name = "cbo_relacion_pelicula_sala1";
+            this.cbo_relacion_pelicula_sala1.Size = new System.Drawing.Size(121, 21);
+            this.cbo_relacion_pelicula_sala1.TabIndex = 33;
+            this.cbo_relacion_pelicula_sala1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // cbo_relacion_pelicula_sala
+            // 
+            this.cbo_relacion_pelicula_sala.FormattingEnabled = true;
+            this.cbo_relacion_pelicula_sala.Location = new System.Drawing.Point(111, 28);
+            this.cbo_relacion_pelicula_sala.Name = "cbo_relacion_pelicula_sala";
+            this.cbo_relacion_pelicula_sala.Size = new System.Drawing.Size(284, 21);
+            this.cbo_relacion_pelicula_sala.TabIndex = 32;
+            // 
+            // lbl_relacion_Hora1
+            // 
+            this.lbl_relacion_Hora1.AutoSize = true;
+            this.lbl_relacion_Hora1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_relacion_Hora1.Location = new System.Drawing.Point(588, 86);
+            this.lbl_relacion_Hora1.Name = "lbl_relacion_Hora1";
+            this.lbl_relacion_Hora1.Size = new System.Drawing.Size(69, 21);
+            this.lbl_relacion_Hora1.TabIndex = 31;
+            this.lbl_relacion_Hora1.Text = "Horario:";
+            // 
+            // lbl_relacion_sala1
+            // 
+            this.lbl_relacion_sala1.AutoSize = true;
+            this.lbl_relacion_sala1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_relacion_sala1.Location = new System.Drawing.Point(303, 86);
+            this.lbl_relacion_sala1.Name = "lbl_relacion_sala1";
+            this.lbl_relacion_sala1.Size = new System.Drawing.Size(47, 21);
+            this.lbl_relacion_sala1.TabIndex = 28;
+            this.lbl_relacion_sala1.Text = "Sala:";
+            // 
+            // lbl_relacion_pelicula1
+            // 
+            this.lbl_relacion_pelicula1.AutoSize = true;
+            this.lbl_relacion_pelicula1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_relacion_pelicula1.Location = new System.Drawing.Point(32, 25);
+            this.lbl_relacion_pelicula1.Name = "lbl_relacion_pelicula1";
+            this.lbl_relacion_pelicula1.Size = new System.Drawing.Size(73, 21);
+            this.lbl_relacion_pelicula1.TabIndex = 27;
+            this.lbl_relacion_pelicula1.Text = "Pelicula:";
+            // 
+            // lbl_relacion1
+            // 
+            this.lbl_relacion1.AutoSize = true;
+            this.lbl_relacion1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_relacion1.Location = new System.Drawing.Point(6, -33);
+            this.lbl_relacion1.Name = "lbl_relacion1";
+            this.lbl_relacion1.Size = new System.Drawing.Size(115, 21);
+            this.lbl_relacion1.TabIndex = 26;
+            this.lbl_relacion1.Text = "Pelicula - Sala";
+            // 
+            // lbl_titulo_ralacion
+            // 
+            this.lbl_titulo_ralacion.AutoSize = true;
+            this.lbl_titulo_ralacion.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo_ralacion.Location = new System.Drawing.Point(299, -85);
+            this.lbl_titulo_ralacion.Name = "lbl_titulo_ralacion";
+            this.lbl_titulo_ralacion.Size = new System.Drawing.Size(296, 36);
+            this.lbl_titulo_ralacion.TabIndex = 18;
+            this.lbl_titulo_ralacion.Text = "CREAR RELACIONES";
+            // 
             // lbl_titulo_mantenimiento_cine
             // 
             this.lbl_titulo_mantenimiento_cine.AutoSize = true;
@@ -930,228 +1154,6 @@
             this.btn_cerrarsesion.UseVisualStyleBackColor = true;
             this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dgv_insertar
-            // 
-            this.dgv_insertar.AllowUserToAddRows = false;
-            this.dgv_insertar.AllowUserToDeleteRows = false;
-            this.dgv_insertar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_insertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_insertar.Location = new System.Drawing.Point(23, 247);
-            this.dgv_insertar.Name = "dgv_insertar";
-            this.dgv_insertar.ReadOnly = true;
-            this.dgv_insertar.Size = new System.Drawing.Size(701, 131);
-            this.dgv_insertar.TabIndex = 82;
-            // 
-            // lbl_titulo_ralacion
-            // 
-            this.lbl_titulo_ralacion.AutoSize = true;
-            this.lbl_titulo_ralacion.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo_ralacion.Location = new System.Drawing.Point(299, -85);
-            this.lbl_titulo_ralacion.Name = "lbl_titulo_ralacion";
-            this.lbl_titulo_ralacion.Size = new System.Drawing.Size(296, 36);
-            this.lbl_titulo_ralacion.TabIndex = 18;
-            this.lbl_titulo_ralacion.Text = "CREAR RELACIONES";
-            // 
-            // lbl_relacion1
-            // 
-            this.lbl_relacion1.AutoSize = true;
-            this.lbl_relacion1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion1.Location = new System.Drawing.Point(6, -33);
-            this.lbl_relacion1.Name = "lbl_relacion1";
-            this.lbl_relacion1.Size = new System.Drawing.Size(115, 21);
-            this.lbl_relacion1.TabIndex = 26;
-            this.lbl_relacion1.Text = "Pelicula - Sala";
-            // 
-            // lbl_relacion_pelicula1
-            // 
-            this.lbl_relacion_pelicula1.AutoSize = true;
-            this.lbl_relacion_pelicula1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_pelicula1.Location = new System.Drawing.Point(32, 25);
-            this.lbl_relacion_pelicula1.Name = "lbl_relacion_pelicula1";
-            this.lbl_relacion_pelicula1.Size = new System.Drawing.Size(73, 21);
-            this.lbl_relacion_pelicula1.TabIndex = 27;
-            this.lbl_relacion_pelicula1.Text = "Pelicula:";
-            // 
-            // lbl_relacion_sala1
-            // 
-            this.lbl_relacion_sala1.AutoSize = true;
-            this.lbl_relacion_sala1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_sala1.Location = new System.Drawing.Point(303, 86);
-            this.lbl_relacion_sala1.Name = "lbl_relacion_sala1";
-            this.lbl_relacion_sala1.Size = new System.Drawing.Size(47, 21);
-            this.lbl_relacion_sala1.TabIndex = 28;
-            this.lbl_relacion_sala1.Text = "Sala:";
-            // 
-            // lbl_relacion_Hora1
-            // 
-            this.lbl_relacion_Hora1.AutoSize = true;
-            this.lbl_relacion_Hora1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_Hora1.Location = new System.Drawing.Point(588, 86);
-            this.lbl_relacion_Hora1.Name = "lbl_relacion_Hora1";
-            this.lbl_relacion_Hora1.Size = new System.Drawing.Size(69, 21);
-            this.lbl_relacion_Hora1.TabIndex = 31;
-            this.lbl_relacion_Hora1.Text = "Horario:";
-            // 
-            // cbo_relacion_pelicula_sala
-            // 
-            this.cbo_relacion_pelicula_sala.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_sala.Location = new System.Drawing.Point(111, 28);
-            this.cbo_relacion_pelicula_sala.Name = "cbo_relacion_pelicula_sala";
-            this.cbo_relacion_pelicula_sala.Size = new System.Drawing.Size(284, 21);
-            this.cbo_relacion_pelicula_sala.TabIndex = 32;
-            // 
-            // cbo_relacion_pelicula_sala1
-            // 
-            this.cbo_relacion_pelicula_sala1.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_sala1.Location = new System.Drawing.Point(356, 89);
-            this.cbo_relacion_pelicula_sala1.Name = "cbo_relacion_pelicula_sala1";
-            this.cbo_relacion_pelicula_sala1.Size = new System.Drawing.Size(121, 21);
-            this.cbo_relacion_pelicula_sala1.TabIndex = 33;
-            this.cbo_relacion_pelicula_sala1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
-            // cbo_relacion_pelicula_hora1
-            // 
-            this.cbo_relacion_pelicula_hora1.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_hora1.Location = new System.Drawing.Point(663, 89);
-            this.cbo_relacion_pelicula_hora1.Name = "cbo_relacion_pelicula_hora1";
-            this.cbo_relacion_pelicula_hora1.Size = new System.Drawing.Size(121, 21);
-            this.cbo_relacion_pelicula_hora1.TabIndex = 35;
-            this.cbo_relacion_pelicula_hora1.SelectedIndexChanged += new System.EventHandler(this.cbo_relacion_pelicula_hora1_SelectedIndexChanged);
-            // 
-            // lbl_relacion_cine1
-            // 
-            this.lbl_relacion_cine1.AutoSize = true;
-            this.lbl_relacion_cine1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_cine1.Location = new System.Drawing.Point(6, 89);
-            this.lbl_relacion_cine1.Name = "lbl_relacion_cine1";
-            this.lbl_relacion_cine1.Size = new System.Drawing.Size(50, 21);
-            this.lbl_relacion_cine1.TabIndex = 39;
-            this.lbl_relacion_cine1.Text = "Cine:";
-            // 
-            // cbo_relacion_pelicula_cine1
-            // 
-            this.cbo_relacion_pelicula_cine1.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_cine1.Location = new System.Drawing.Point(62, 89);
-            this.cbo_relacion_pelicula_cine1.Name = "cbo_relacion_pelicula_cine1";
-            this.cbo_relacion_pelicula_cine1.Size = new System.Drawing.Size(121, 21);
-            this.cbo_relacion_pelicula_cine1.TabIndex = 41;
-            // 
-            // dgv_relacion_pelicula_hora
-            // 
-            this.dgv_relacion_pelicula_hora.AllowUserToAddRows = false;
-            this.dgv_relacion_pelicula_hora.AllowUserToDeleteRows = false;
-            this.dgv_relacion_pelicula_hora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_relacion_pelicula_hora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_relacion_pelicula_hora.Location = new System.Drawing.Point(36, 232);
-            this.dgv_relacion_pelicula_hora.Name = "dgv_relacion_pelicula_hora";
-            this.dgv_relacion_pelicula_hora.ReadOnly = true;
-            this.dgv_relacion_pelicula_hora.Size = new System.Drawing.Size(800, 124);
-            this.dgv_relacion_pelicula_hora.TabIndex = 42;
-            // 
-            // btn_agregar_relacion1
-            // 
-            this.btn_agregar_relacion1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.btn_agregar_relacion1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_relacion1.Location = new System.Drawing.Point(483, 89);
-            this.btn_agregar_relacion1.Name = "btn_agregar_relacion1";
-            this.btn_agregar_relacion1.Size = new System.Drawing.Size(31, 24);
-            this.btn_agregar_relacion1.TabIndex = 87;
-            this.toolTip1.SetToolTip(this.btn_agregar_relacion1, "Agregar relacion Pelicula - Sala");
-            this.btn_agregar_relacion1.UseVisualStyleBackColor = true;
-            // 
-            // btn_agregar_relacion2
-            // 
-            this.btn_agregar_relacion2.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.btn_agregar_relacion2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_relacion2.Location = new System.Drawing.Point(790, 86);
-            this.btn_agregar_relacion2.Name = "btn_agregar_relacion2";
-            this.btn_agregar_relacion2.Size = new System.Drawing.Size(31, 24);
-            this.btn_agregar_relacion2.TabIndex = 88;
-            this.toolTip1.SetToolTip(this.btn_agregar_relacion2, "Agregar relacion Pelicula - Horario");
-            this.btn_agregar_relacion2.UseVisualStyleBackColor = true;
-            // 
-            // btn_agregar_relacion3
-            // 
-            this.btn_agregar_relacion3.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.btn_agregar_relacion3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_relacion3.Location = new System.Drawing.Point(189, 86);
-            this.btn_agregar_relacion3.Name = "btn_agregar_relacion3";
-            this.btn_agregar_relacion3.Size = new System.Drawing.Size(31, 24);
-            this.btn_agregar_relacion3.TabIndex = 89;
-            this.toolTip1.SetToolTip(this.btn_agregar_relacion3, "Agregar relacion Pelicula - Cine");
-            this.btn_agregar_relacion3.UseVisualStyleBackColor = true;
-            // 
-            // lbl_relacion_proyeccion
-            // 
-            this.lbl_relacion_proyeccion.AutoSize = true;
-            this.lbl_relacion_proyeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_proyeccion.Location = new System.Drawing.Point(251, 135);
-            this.lbl_relacion_proyeccion.Name = "lbl_relacion_proyeccion";
-            this.lbl_relacion_proyeccion.Size = new System.Drawing.Size(99, 21);
-            this.lbl_relacion_proyeccion.TabIndex = 92;
-            this.lbl_relacion_proyeccion.Text = "Proyección:";
-            // 
-            // cbo_relacion_pelicula_proyeccion1
-            // 
-            this.cbo_relacion_pelicula_proyeccion1.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_proyeccion1.Location = new System.Drawing.Point(356, 138);
-            this.cbo_relacion_pelicula_proyeccion1.Name = "cbo_relacion_pelicula_proyeccion1";
-            this.cbo_relacion_pelicula_proyeccion1.Size = new System.Drawing.Size(121, 21);
-            this.cbo_relacion_pelicula_proyeccion1.TabIndex = 94;
-            // 
-            // btn_agregar_relacion4
-            // 
-            this.btn_agregar_relacion4.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.btn_agregar_relacion4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_relacion4.Location = new System.Drawing.Point(483, 135);
-            this.btn_agregar_relacion4.Name = "btn_agregar_relacion4";
-            this.btn_agregar_relacion4.Size = new System.Drawing.Size(31, 24);
-            this.btn_agregar_relacion4.TabIndex = 96;
-            this.toolTip1.SetToolTip(this.btn_agregar_relacion4, "Agregar relacion Pelicula - Cine");
-            this.btn_agregar_relacion4.UseVisualStyleBackColor = true;
-            this.btn_agregar_relacion4.Click += new System.EventHandler(this.btn_agregar_relacion4_Click);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.AutoScroll = true;
-            this.tabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.btn_agregar_relacion4);
-            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_proyeccion1);
-            this.tabPage4.Controls.Add(this.lbl_relacion_proyeccion);
-            this.tabPage4.Controls.Add(this.btn_agregar_relacion3);
-            this.tabPage4.Controls.Add(this.btn_agregar_relacion2);
-            this.tabPage4.Controls.Add(this.btn_agregar_relacion1);
-            this.tabPage4.Controls.Add(this.dgv_relacion_pelicula_hora);
-            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_cine1);
-            this.tabPage4.Controls.Add(this.lbl_relacion_cine1);
-            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_hora1);
-            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_sala1);
-            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_sala);
-            this.tabPage4.Controls.Add(this.lbl_relacion_Hora1);
-            this.tabPage4.Controls.Add(this.lbl_relacion_sala1);
-            this.tabPage4.Controls.Add(this.lbl_relacion_pelicula1);
-            this.tabPage4.Controls.Add(this.lbl_relacion1);
-            this.tabPage4.Controls.Add(this.lbl_titulo_ralacion);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(868, 384);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Relación de películas";
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(637, 138);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 73);
-            this.button3.TabIndex = 97;
-            this.toolTip1.SetToolTip(this.button3, "Guardar");
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1172,16 +1174,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_portada)).EndInit();
             this.tbc_mantenimiento_cine.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_relacion_pelicula_hora)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_relacion_pelicula_hora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
