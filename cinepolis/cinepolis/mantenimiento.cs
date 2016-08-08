@@ -74,7 +74,14 @@ namespace cinepolis
 
         private void mantenimiento_Load(object sender, EventArgs e)
         {
-
+            cb4();
+            cb5();
+            cb6();
+            cb7();
+            cb8();
+            cb9();
+            cb10();
+            cb11();
         }
 
         public void limpiaringreso()
@@ -438,5 +445,195 @@ namespace cinepolis
         {
 
         }
+
+
+        private void cb4()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.sala";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_sala.Items.Add(mdr.GetString("nomsala"));
+                    cbo_mod_sala.Items.Add(mdr.GetString("nomsala"));
+                    cbo_relacion_pelicula_sala1.Items.Add(mdr.GetString("nomsala"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb5()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.idioma";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_idioma.Items.Add(mdr.GetString("nomidioma"));
+                    cbo_mod_idioma.Items.Add(mdr.GetString("nomidioma"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb6()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.tipoproyeccion";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_proyeccion.Items.Add(mdr.GetString("nomtproyecccion"));
+                    cbo_mod_proyeccion.Items.Add(mdr.GetString("nomtproyecccion"));
+                    cbo_relacion_pelicula_proyeccion1.Items.Add(mdr.GetString("nomtproyecccion"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb7()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.clasificacionedad";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_clasificacion.Items.Add(mdr.GetString("nomedad"));
+                    cbo_mod_clasificacion.Items.Add(mdr.GetString("nomedad"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb8()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.categoria";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_categoria.Items.Add(mdr.GetString("nomcategoria"));
+                    cbo_mod_categoria.Items.Add(mdr.GetString("nomcategoria"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb9()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.cine";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_cine.Items.Add(mdr.GetString("nomcine"));
+                    cbo_mod_cine.Items.Add(mdr.GetString("nomcine"));
+                    cbo_relacion_pelicula_cine1.Items.Add(mdr.GetString("nomcine"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb10()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.horario";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_relacion_pelicula_hora1.Items.Add(mdr.GetString("horainiciohor"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void cb11()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.pelicula";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_relacion_pelicula_sala.Items.Add(mdr.GetString("nompelicula"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace cinepolis
 {
@@ -16,6 +17,8 @@ namespace cinepolis
         String Stabla = "empleado";
         String Squeery = "select * from empleado";
         string Sfecha1;
+        MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root;pwd=;");
+
         public empleado()
         {
             InitializeComponent();
@@ -425,7 +428,8 @@ namespace cinepolis
 
         private void empleado_Load(object sender, EventArgs e)
         {
-
+            cb12();
+            cb13();
         }
 
 
@@ -459,5 +463,53 @@ namespace cinepolis
         {
             //Sfecha1 = dtp_fecha_nac.Value.Date.ToString();
         }
+
+
+        private void cb12()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.puesto";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_puesto.Items.Add(mdr.GetString("nompuesto"));
+                    cbo_mod_puesto.Items.Add(mdr.GetString("nompuesto"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb13()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.cine";
+
+                conexion.Open();
+                MySqlCommand mcd = new MySqlCommand(s, conexion);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_cine.Items.Add(mdr.GetString("nomcine"));
+                    cbo_mod_cine.Items.Add(mdr.GetString("nomcine"));
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

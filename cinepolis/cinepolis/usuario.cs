@@ -108,6 +108,7 @@ namespace cinepolis
         {
             cb1();
             cb2();
+            cb3();
         }
 
         private void dgv_empleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -338,6 +339,27 @@ namespace cinepolis
                 while (mdr.Read())
                 {
                     cbo_elegirempleado.Items.Add(mdr.GetString("pkidempleado"));
+                }
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void cb3()
+        {
+            try
+            {
+
+                string s = "select * from bdcinetopia.role";
+
+                micon.Open();
+                MySqlCommand mcd = new MySqlCommand(s, micon);
+                MySqlDataReader mdr = mcd.ExecuteReader();
+                while (mdr.Read())
+                {
+                    cbo_modnivel.Items.Add(mdr.GetString("role"));
                 }
                 micon.Close();
             }
