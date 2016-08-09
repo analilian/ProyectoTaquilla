@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lDescripcion.Text" xml:space="preserve">
+  <data name="label1.Text" xml:space="preserve">
     <value>Un año después de engañar al FBI y ganar la adulación del
  público con sus espectáculos de magia al estilo Robin Hood,
  los Cuatro Jinetes reaparecen en una actuación con la
@@ -129,7 +129,7 @@ cometer un asalto aún más peligroso. Su única esperanza es
 llevar a cabo un último truco sin precedentes para limpiar sus
  nombres y revelar la mente maestra detrás de todo.</value>
   </data>
-  <data name="sfLink.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="axShockwaveFlash1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0

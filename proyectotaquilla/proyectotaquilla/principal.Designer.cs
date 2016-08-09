@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.ltitulo = new System.Windows.Forms.Label();
-            this.letiqueta1 = new System.Windows.Forms.Label();
-            this.cbRegion = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbo_region = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbComplejo = new System.Windows.Forms.ComboBox();
-            this.btnvercartelera = new System.Windows.Forms.Button();
+            this.bvercartelera = new System.Windows.Forms.Button();
             this.pBfoto2 = new System.Windows.Forms.PictureBox();
             this.pBfoto1 = new System.Windows.Forms.PictureBox();
             this.pBfoto3 = new System.Windows.Forms.PictureBox();
@@ -60,26 +60,23 @@
             this.ltitulo.TabIndex = 0;
             this.ltitulo.Text = "Cinetopia";
             // 
-            // letiqueta1
+            // label1
             // 
-            this.letiqueta1.AutoSize = true;
-            this.letiqueta1.Location = new System.Drawing.Point(248, 139);
-            this.letiqueta1.Name = "letiqueta1";
-            this.letiqueta1.Size = new System.Drawing.Size(333, 21);
-            this.letiqueta1.TabIndex = 2;
-            this.letiqueta1.Text = "Compra tus entradas facil y rapidamente";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(248, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(333, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Compra tus entradas facil y rapidamente";
             // 
-            // cbRegion
+            // cbo_region
             // 
-            this.cbRegion.FormattingEnabled = true;
-            this.cbRegion.Items.AddRange(new object[] {
-            "Zacapa, Guatemala",
-            "Santa Rosa, Guatemala",
-            "Guatemala, Guatemala"});
-            this.cbRegion.Location = new System.Drawing.Point(197, 403);
-            this.cbRegion.Name = "cbRegion";
-            this.cbRegion.Size = new System.Drawing.Size(210, 29);
-            this.cbRegion.TabIndex = 3;
+            this.cbo_region.FormattingEnabled = true;
+            this.cbo_region.Location = new System.Drawing.Point(197, 403);
+            this.cbo_region.Name = "cbo_region";
+            this.cbo_region.Size = new System.Drawing.Size(210, 29);
+            this.cbo_region.TabIndex = 3;
+            this.cbo_region.SelectedIndexChanged += new System.EventHandler(this.cbo_region_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -102,27 +99,22 @@
             // cbComplejo
             // 
             this.cbComplejo.FormattingEnabled = true;
-            this.cbComplejo.Items.AddRange(new object[] {
-            "Miraflores",
-            "Oakland Mall",
-            "Cayala ",
-            "Santa Clara"});
             this.cbComplejo.Location = new System.Drawing.Point(611, 403);
             this.cbComplejo.Name = "cbComplejo";
             this.cbComplejo.Size = new System.Drawing.Size(214, 29);
             this.cbComplejo.TabIndex = 6;
             // 
-            // btnvercartelera
+            // bvercartelera
             // 
-            this.btnvercartelera.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnvercartelera.ForeColor = System.Drawing.Color.White;
-            this.btnvercartelera.Location = new System.Drawing.Point(336, 450);
-            this.btnvercartelera.Name = "btnvercartelera";
-            this.btnvercartelera.Size = new System.Drawing.Size(185, 34);
-            this.btnvercartelera.TabIndex = 7;
-            this.btnvercartelera.Text = "Ver Cartelera";
-            this.btnvercartelera.UseVisualStyleBackColor = false;
-            this.btnvercartelera.Click += new System.EventHandler(this.bvercartelera_Click);
+            this.bvercartelera.BackColor = System.Drawing.Color.Silver;
+            this.bvercartelera.ForeColor = System.Drawing.Color.Black;
+            this.bvercartelera.Location = new System.Drawing.Point(336, 450);
+            this.bvercartelera.Name = "bvercartelera";
+            this.bvercartelera.Size = new System.Drawing.Size(185, 34);
+            this.bvercartelera.TabIndex = 7;
+            this.bvercartelera.Text = "Ver Cartelera";
+            this.bvercartelera.UseVisualStyleBackColor = false;
+            this.bvercartelera.Click += new System.EventHandler(this.bvercartelera_Click);
             // 
             // pBfoto2
             // 
@@ -188,12 +180,12 @@
             this.Controls.Add(this.pBfoto4);
             this.Controls.Add(this.pBfoto3);
             this.Controls.Add(this.pBfoto2);
-            this.Controls.Add(this.btnvercartelera);
+            this.Controls.Add(this.bvercartelera);
             this.Controls.Add(this.cbComplejo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbRegion);
-            this.Controls.Add(this.letiqueta1);
+            this.Controls.Add(this.cbo_region);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pBfoto1);
             this.Controls.Add(this.ltitulo);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,12 +207,12 @@
 
         private System.Windows.Forms.Label ltitulo;
         private System.Windows.Forms.PictureBox pBfoto1;
-        private System.Windows.Forms.Label letiqueta1;
-        private System.Windows.Forms.ComboBox cbRegion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbo_region;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbComplejo;
-        private System.Windows.Forms.Button btnvercartelera;
+        private System.Windows.Forms.Button bvercartelera;
         private System.Windows.Forms.PictureBox pBfoto2;
         private System.Windows.Forms.PictureBox pBfoto3;
         private System.Windows.Forms.PictureBox pBfoto4;

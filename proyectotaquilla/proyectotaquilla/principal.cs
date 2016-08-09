@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace proyectotaquilla
 {
+
     public partial class FPrincipal : Form
     {
+
+        conexionn conect = new conexionn();
+
+        MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopiaa; Uid=root; pwd=;");
+
         public FPrincipal()
         {
             InitializeComponent();
@@ -29,6 +37,10 @@ namespace proyectotaquilla
         private void FPrincipal_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            cbr();
+           // cbr2();
+
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -58,5 +70,59 @@ namespace proyectotaquilla
 
             }
         }
+
+        private void cbr()
+        {
+
+            string s = "select * from bdcinetopiaa.region";
+
+            conexion.Open();
+
+            MySqlCommand mcd = new MySqlCommand(s, conexion);
+            MySqlDataReader mdr = mcd.ExecuteReader();
+
+            while (mdr.Read())
+            {
+                cbo_region.Items.Add(mdr.GetString("nombreregion"));
+            }
+
+            
+            conexion.Close();
+
+        }
+
+        private void cbo_region_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selected = cbo_region.SelectedItem.ToString();
+            cbComplejo.Items.Clear();
+
+            cbr2(selected);
+
+
+        }
+
+        private void cbr2(string sel)
+        {
+
+            // Object selectedItem = cbo_region.SelectedItem;
+
+            string d = "select * from cine,region where nombreregion='" + sel + "' && pk_idregion=pkidregion";
+
+            conexion.Open();
+
+            MySqlCommand mcd = new MySqlCommand(d, conexion);
+            MySqlDataReader mdr = mcd.ExecuteReader();
+
+            while (mdr.Read())
+            {
+                cbComplejo.Items.Add(mdr.GetString("nomcine"));
+             
+            }
+            cbComplejo.ResetText();
+            conexion.Close();
+            
+        }
+
+       
     }
 }
