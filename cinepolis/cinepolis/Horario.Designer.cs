@@ -112,7 +112,7 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(294, 57);
+            this.btn_guardar.Location = new System.Drawing.Point(304, 57);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(90, 73);
             this.btn_guardar.TabIndex = 60;

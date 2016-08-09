@@ -35,22 +35,30 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            try { 
-            string scodigo = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
-            conect.Conectar();
-            String Squery = "insert into  sala (nomsala, pkidcine) values('" + txt_sala.Text + "','" + scodigo + "' );";
-            conect.EjecutarQuery(Squery);
-            conect.actualizargrid(dgv_modsala, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_sala.Clear();
-            }
-            catch (Exception ex)
+            if (txt_sala.Text == "")
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Insercion sobre Tabla Sala");
+                MessageBox.Show("Llene los campos por favor");
+            }
+            else
+            {
+                try
+                {
+                    string scodigo = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
+                    conect.Conectar();
+                    String Squery = "insert into  sala (nomsala, pkidcine) values('" + txt_sala.Text + "','" + scodigo + "' );";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_modsala, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_sala.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Insercion sobre Tabla Sala");
+                }
             }
         }
 
@@ -122,22 +130,30 @@ namespace cinepolis
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            try {
-                String Codigo = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
-            conect.Conectar();
-            String Squery = "update sala set  nomsala ='" + txt_mod.Text + "'where pkidsala ='" + Codigo + "'";
-            conect.EjecutarQuery(Squery);
-            conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
-            conect.actualizargrid(dgv_modsala, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_mod.Clear();
-            }
-            catch (Exception ex)
+            if (txt_mod.Text == "")
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Actualicaion sobre Tabla sala");
+                MessageBox.Show("Llene todos los campos por favor");
+            }
+            else
+            {
+                try
+                {
+                    String Codigo = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
+                    conect.Conectar();
+                    String Squery = "update sala set  nomsala ='" + txt_mod.Text + "'where pkidsala ='" + Codigo + "'";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
+                    conect.actualizargrid(dgv_modsala, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_mod.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Actualicaion sobre Tabla sala");
+                }
             }
         }
 
@@ -150,7 +166,7 @@ namespace cinepolis
                 if (Vresultado == DialogResult.Yes)
                 {
                     conect.Conectar();
-                    String Squerys = "delete from  sala where pkidsalas = '" + SCelda + "';";
+                    String Squerys = "delete from  sala where pkidsala = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
                     conect.actualizargrid(dgv_modsala, Squeery, Stabla);

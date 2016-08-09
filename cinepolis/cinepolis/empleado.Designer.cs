@@ -255,6 +255,7 @@
             // txt_nit
             // 
             this.txt_nit.Location = new System.Drawing.Point(515, 81);
+            this.txt_nit.MaxLength = 10;
             this.txt_nit.Name = "txt_nit";
             this.txt_nit.Size = new System.Drawing.Size(308, 20);
             this.txt_nit.TabIndex = 44;
@@ -273,6 +274,7 @@
             // txt_dpi
             // 
             this.txt_dpi.Location = new System.Drawing.Point(515, 49);
+            this.txt_dpi.MaxLength = 13;
             this.txt_dpi.Name = "txt_dpi";
             this.txt_dpi.Size = new System.Drawing.Size(308, 20);
             this.txt_dpi.TabIndex = 42;
@@ -532,6 +534,7 @@
             // txt_mod_nit
             // 
             this.txt_mod_nit.Location = new System.Drawing.Point(543, 95);
+            this.txt_mod_nit.MaxLength = 10;
             this.txt_mod_nit.Name = "txt_mod_nit";
             this.txt_mod_nit.Size = new System.Drawing.Size(264, 20);
             this.txt_mod_nit.TabIndex = 65;
@@ -550,6 +553,7 @@
             // txt_mod_dpi
             // 
             this.txt_mod_dpi.Location = new System.Drawing.Point(543, 63);
+            this.txt_mod_dpi.MaxLength = 13;
             this.txt_mod_dpi.Name = "txt_mod_dpi";
             this.txt_mod_dpi.Size = new System.Drawing.Size(264, 20);
             this.txt_mod_dpi.TabIndex = 63;
@@ -568,7 +572,7 @@
             // txt_mod_direccion
             // 
             this.txt_mod_direccion.Location = new System.Drawing.Point(119, 128);
-            this.txt_mod_direccion.MaxLength = 20;
+            this.txt_mod_direccion.MaxLength = 100;
             this.txt_mod_direccion.Multiline = true;
             this.txt_mod_direccion.Name = "txt_mod_direccion";
             this.txt_mod_direccion.Size = new System.Drawing.Size(308, 86);

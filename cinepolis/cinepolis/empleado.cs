@@ -281,20 +281,30 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            try { 
-            conect.Conectar();
-            String Squery = "insert into  empleado (nom1empleado,nom2empleado,ape1empleado,ape2empleado,dirempleado,dpiempleado,nitempleado,fechanacempleado,pkidcine,pkidpuesto) values('" + txt_nombre1.Text + "','" + txt_nombre2.Text + "','" + txt_apellido1.Text + "','" + txt_apellido2.Text + "','" + txt_direccion.Text + "','" + txt_dpi.Text + "','" + txt_nit.Text + "','" + this.dtp_fecha_nac.Text + "','" + cbo_cine.Text + "','" + cbo_puesto.Text + "');";
-            conect.EjecutarQuery(Squery);
-            conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
-            conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            limpiaringreso();
-            }
-            catch (Exception ex)
+            string convpuesto = cbo_puesto.SelectedValue.ToString();
+            string convcine = cbo_cine.SelectedValue.ToString();
+            if (txt_nombre1.Text == "" || txt_nombre2.Text == "" || txt_apellido1.Text == "" || txt_apellido2.Text == "" || txt_direccion.Text == "" || txt_dpi.Text == "" || txt_nit.Text == "" || cbo_puesto.Text == "" || cbo_cine.Text == "")
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Insercion sobre Tabla empleado");
+                MessageBox.Show("Llene todos los campos por favor");
+            }
+            else
+            {
+                try
+                {
+                    conect.Conectar();
+                    String Squery = "insert into  empleado (nom1empleado,nom2empleado,ape1empleado,ape2empleado,dirempleado,dpiempleado,nitempleado,fechanacempleado,pkidcine,pkidpuesto) values('" + txt_nombre1.Text + "','" + txt_nombre2.Text + "','" + txt_apellido1.Text + "','" + txt_apellido2.Text + "','" + txt_direccion.Text + "','" + txt_dpi.Text + "','" + txt_nit.Text + "','" + this.dtp_fecha_nac.Text + "','" + convcine + "','" + convpuesto + "');";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
+                    conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    limpiaringreso();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Insercion sobre Tabla empleado");
+                }
             }
         }
 
@@ -350,21 +360,33 @@ namespace cinepolis
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            try {
-                String Codigo = this.dgv_emplados_modificar.CurrentRow.Cells[0].Value.ToString();
-            conect.Conectar();
-            String Squery = "update empleado set  nom1empleado ='" + txt_mod_nombre1.Text + "', nom2empleado ='" + txt_mod_nombre2.Text + "',ape1empleado ='" + txt_mod_apellido1.Text + "',ape2empleado ='" + txt_mod_apellido2.Text + "',dirempleado ='" + txt_mod_direccion.Text + "',dpiempleado ='" + txt_mod_dpi.Text + "',nitempleado ='" + txt_mod_nit.Text + "',fechanacempleado ='" + this.dtp_mod_fecha_nac.Text + "',pkidcine ='" + cbo_mod_cine.Text + "',pkidpuesto ='" + cbo_mod_puesto.Text + "' where pkidempleado ='" + Codigo + "'";
-            conect.EjecutarQuery(Squery);
-            conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
-            conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            limpiarmod();
-            }
-            catch (Exception ex)
+            string convpuestomod = cbo_mod_puesto.SelectedValue.ToString();
+            string convcinemod = cbo_mod_cine.SelectedValue.ToString();
+
+            if (txt_mod_nombre1.Text == "" || txt_mod_nombre2.Text == "" || txt_mod_apellido1.Text == "" || txt_mod_apellido2.Text == "" || txt_mod_direccion.Text == "" || txt_mod_dpi.Text == "" || txt_mod_nit.Text == "" || cbo_mod_puesto.Text == "" || cbo_mod_cine.Text == "")
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Actualizacion sobre Tabla empleado");
+                MessageBox.Show("Llene todos los campos por favor");
+            }
+            else
+            {
+
+                try
+                {
+                    String Codigo = this.dgv_emplados_modificar.CurrentRow.Cells[0].Value.ToString();
+                    conect.Conectar();
+                    String Squery = "update empleado set  nom1empleado ='" + txt_mod_nombre1.Text + "', nom2empleado ='" + txt_mod_nombre2.Text + "',ape1empleado ='" + txt_mod_apellido1.Text + "',ape2empleado ='" + txt_mod_apellido2.Text + "',dirempleado ='" + txt_mod_direccion.Text + "',dpiempleado ='" + txt_mod_dpi.Text + "',nitempleado ='" + txt_mod_nit.Text + "',fechanacempleado ='" + this.dtp_mod_fecha_nac.Text + "',pkidcine ='" + convcinemod + "',pkidpuesto ='" + convpuestomod + "' where pkidempleado ='" + Codigo + "'";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
+                    conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    limpiarmod();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Actualizacion sobre Tabla empleado");
+                }
             }
         }
 
@@ -430,6 +452,8 @@ namespace cinepolis
         {
             cb12();
             cb13();
+            cb14();
+            cb15();
         }
 
 
@@ -465,45 +489,55 @@ namespace cinepolis
         }
 
 
-        private void cb12()
+        public void cb12()
         {
             try
             {
-
-                string s = "select * from bdcinetopia.puesto";
-
-                conexion.Open();
-                MySqlCommand mcd = new MySqlCommand(s, conexion);
-                MySqlDataReader mdr = mcd.ExecuteReader();
-                while (mdr.Read())
-                {
-                    cbo_puesto.Items.Add(mdr.GetString("nompuesto"));
-                    cbo_mod_puesto.Items.Add(mdr.GetString("nompuesto"));
-                }
-                conexion.Close();
+                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+            //se realiza la conexión a la base de datos
+            micon.Open();
+            //se inicia un DataSet
+            DataSet ds = new DataSet();
+            //se indica la consulta en sql
+            String Query = "select pkidpuesto, nompuesto from puesto;";
+            MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+            //se indica con quu tabla se llena
+            dad.Fill(ds, "Puesto");
+            cbo_puesto.DataSource = ds.Tables[0].DefaultView;
+            //indicamos el valor de los miembros
+            cbo_puesto.ValueMember = ("pkidpuesto");
+            //se indica el valor a desplegar en el combobox
+            cbo_puesto.DisplayMember = ("nompuesto");
+            micon.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private void cb13()
         {
             try
             {
 
-                string s = "select * from bdcinetopia.cine";
-
-                conexion.Open();
-                MySqlCommand mcd = new MySqlCommand(s, conexion);
-                MySqlDataReader mdr = mcd.ExecuteReader();
-                while (mdr.Read())
-                {
-                    cbo_cine.Items.Add(mdr.GetString("nomcine"));
-                    cbo_mod_cine.Items.Add(mdr.GetString("nomcine"));
-                }
-                conexion.Close();
+                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pkidcine, nomcine from cine;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "cine");
+                cbo_cine.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_cine.ValueMember = ("pkidcine");
+                //se indica el valor a desplegar en el combobox
+                cbo_cine.DisplayMember = ("nomcine");
+                micon.Close();
             }
             catch (Exception ex)
             {
@@ -511,5 +545,61 @@ namespace cinepolis
             }
         }
 
+
+        public void cb14()
+        {
+            try
+            {
+                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pkidpuesto, nompuesto from puesto;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Puesto");
+                cbo_mod_puesto.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_mod_puesto.ValueMember = ("pkidpuesto");
+                //se indica el valor a desplegar en el combobox
+                cbo_mod_puesto.DisplayMember = ("nompuesto");
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void cb15()
+        {
+            try
+            {
+
+                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pkidcine, nomcine from cine;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "cine");
+                cbo_mod_cine.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_mod_cine.ValueMember = ("pkidcine");
+                //se indica el valor a desplegar en el combobox
+                cbo_mod_cine.DisplayMember = ("nomcine");
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

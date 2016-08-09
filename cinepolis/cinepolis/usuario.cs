@@ -65,36 +65,47 @@ namespace cinepolis
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (txt_pasusuario.Text == txt_confirmar.Text)
-            {
-                int admin ;
-      
-                conect.Conectar();
-                if (cbo_nivelsusario.Text == "administrativo")
-                {
-                    admin = 1;
-                    String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + admin + "','" + cbo_elegirempleado.Text + "');";
-                    conect.EjecutarQuery(Squery);
-                    limpiaringresar();
-                }
-                else
-                {
-                
-                    admin = 2;
-                    String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + admin + "','" + cbo_elegirempleado.Text + "');";
-                    conect.EjecutarQuery(Squery);
-                    limpiaringresar();
-                }
+            string convrole = cbo_nivelsusario.SelectedValue.ToString();
 
-                conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
-                conect.actualizargrid(dgv_modificar, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
+            if (txt_nombreusuario.Text == "" || txt_pasusuario.Text == "" || txt_confirmar.Text == "" || cbo_nivelsusario.Text == "")
+            {
+                MessageBox.Show("Llene todos los campos por favor");
             }
             else
             {
-                MessageBox.Show("Las contraseñas no coinciden");
+
+                if (txt_pasusuario.Text == txt_confirmar.Text)
+                {
+
+                    
+
+                    conect.Conectar();
+                    if (cbo_nivelsusario.Text == "administrativo")
+                    {
+                        
+                        String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + cbo_elegirempleado.Text + "');";
+                        conect.EjecutarQuery(Squery);
+                        limpiaringresar();
+                    }
+                    else
+                    {
+
+                        
+                        String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + cbo_elegirempleado.Text + "');";
+                        conect.EjecutarQuery(Squery);
+                        limpiaringresar();
+                    }
+
+                    conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
+                    conect.actualizargrid(dgv_modificar, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden");
+                }
             }
             
         }
@@ -186,22 +197,32 @@ namespace cinepolis
 
         private void btn_insertarmod_Click(object sender, EventArgs e)
         {
-            String Codigo = this.dgv_modificar.CurrentRow.Cells[0].Value.ToString();
-            conect.Conectar();
-            if (txt_conmod.Text == txt_confmod.Text)
+            string convrolemod = cbo_modnivel.SelectedValue.ToString();
+
+            if (txt_nommod.Text == "" || txt_conmod.Text=="" || txt_confmod.Text=="" || cbo_modnivel.Text=="" )
             {
-                String Squery = "update usuario set nomusuario ='" + txt_nommod.Text + "',contusuario='" + encrip.EncryptKey(txt_conmod.Text) + "' ,pkidrole='" + cbo_modnivel.Text + "',pkidempleado ='" + txt_modempl.Text + "'where pkidusuario='" + Codigo + "'";
-                conect.EjecutarQuery(Squery);
-                conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
-                conect.actualizargrid(dgv_modificar, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
-                limpiarmod();
+                MessageBox.Show("Llene todos los campos por favor");
             }
             else
             {
-                MessageBox.Show("Las contraseñas no coinciden");
+
+                String Codigo = this.dgv_modificar.CurrentRow.Cells[0].Value.ToString();
+                conect.Conectar();
+                if (txt_conmod.Text == txt_confmod.Text)
+                {
+                    String Squery = "update usuario set nomusuario ='" + txt_nommod.Text + "',contusuario='" + encrip.EncryptKey(txt_conmod.Text) + "' ,pkidrole='" + convrolemod + "',pkidempleado ='" + txt_modempl.Text + "'where pkidusuario='" + Codigo + "'";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
+                    conect.actualizargrid(dgv_modificar, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    limpiarmod();
+                }
+                else
+                {
+                    MessageBox.Show("Las contraseñas no coinciden");
+                }
             }
         }
 
@@ -308,16 +329,22 @@ namespace cinepolis
         {
             try
             {
-              
-                string s = "select * from bdcinetopia.role";
-              
+
+                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                //se realiza la conexión a la base de datos
                 micon.Open();
-                MySqlCommand mcd = new MySqlCommand(s, micon);
-                MySqlDataReader mdr = mcd.ExecuteReader();
-                while (mdr.Read())
-                {
-                    cbo_nivelsusario.Items.Add(mdr.GetString("role"));
-                }
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pkidrole, role from role;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Role");
+                cbo_nivelsusario.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_nivelsusario.ValueMember = ("pkidrole");
+                //se indica el valor a desplegar en el combobox
+                cbo_nivelsusario.DisplayMember = ("role");
                 micon.Close();
             }
             catch (Exception ex)
@@ -352,15 +379,21 @@ namespace cinepolis
             try
             {
 
-                string s = "select * from bdcinetopia.role";
-
+                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                //se realiza la conexión a la base de datos
                 micon.Open();
-                MySqlCommand mcd = new MySqlCommand(s, micon);
-                MySqlDataReader mdr = mcd.ExecuteReader();
-                while (mdr.Read())
-                {
-                    cbo_modnivel.Items.Add(mdr.GetString("role"));
-                }
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pkidrole, role from role;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Role");
+                cbo_modnivel.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_modnivel.ValueMember = ("pkidrole");
+                //se indica el valor a desplegar en el combobox
+                cbo_modnivel.DisplayMember = ("role");
                 micon.Close();
             }
             catch (Exception ex)

@@ -34,23 +34,30 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            try
+            if (txt_horario_inicio.Text == "" || txt_hora_final.Text == "")
             {
-                conect.Conectar();
-                String Squery = "insert into  horario (horainiciohor,horafinalhor) values('" + txt_horario_inicio.Text + "','" + txt_hora_final.Text + "');";
-                conect.EjecutarQuery(Squery);
-                conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
-                conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
-                txt_horario_inicio.Clear();
-                txt_hora_final.Clear();
+                MessageBox.Show("Llene los campos por favor");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Insercion sobre Tabla horario");
+                try
+                {
+                    conect.Conectar();
+                    String Squery = "insert into  horario (horainiciohor,horafinalhor) values('" + txt_horario_inicio.Text + "','" + txt_hora_final.Text + "');";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
+                    conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_horario_inicio.Clear();
+                    txt_hora_final.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Insercion sobre Tabla horario");
+                }
             }
         }
 
@@ -93,23 +100,31 @@ namespace cinepolis
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            try { 
-                String Codigo = this.dgv_mod_horario.CurrentRow.Cells[0].Value.ToString();
-            conect.Conectar();
-            String Squery = "update horario set horainiciohor = '" + txt_mod_horainicio.Text + "',horafinalhor ='" + txt_mod_horafin.Text +"'where pkidhorario ='" + Codigo + "'";
-            conect.EjecutarQuery(Squery);
-            conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
-            conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_mod_horainicio.Clear();
-            txt_mod_horafin.Clear();
-            }
-            catch (Exception ex)
+            if (txt_mod_horainicio.Text == "" || txt_mod_horafin.Text == "")
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Actualizacion sobre Tabla horario");
+                MessageBox.Show("Llene todos los campos por favor");
+            }
+            else
+            {
+                try
+                {
+                    String Codigo = this.dgv_mod_horario.CurrentRow.Cells[0].Value.ToString();
+                    conect.Conectar();
+                    String Squery = "update horario set horainiciohor = '" + txt_mod_horainicio.Text + "',horafinalhor ='" + txt_mod_horafin.Text + "'where pkidhorario ='" + Codigo + "'";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
+                    conect.actualizargrid(dgv_mod_horario, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_mod_horainicio.Clear();
+                    txt_mod_horafin.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Actualizacion sobre Tabla horario");
+                }
             }
         }
 

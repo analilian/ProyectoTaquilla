@@ -34,7 +34,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_categoria = new System.Windows.Forms.Label();
-            this.txt_categoria = new System.Windows.Forms.TextBox();
+            this.txt_nom_categ = new System.Windows.Forms.TextBox();
             this.dgv_categoria = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn_buscarmod = new System.Windows.Forms.Button();
@@ -88,7 +88,7 @@
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabPage1.Controls.Add(this.btn_guardar);
             this.tabPage1.Controls.Add(this.lbl_categoria);
-            this.tabPage1.Controls.Add(this.txt_categoria);
+            this.tabPage1.Controls.Add(this.txt_nom_categ);
             this.tabPage1.Controls.Add(this.dgv_categoria);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -121,13 +121,13 @@
             this.lbl_categoria.TabIndex = 58;
             this.lbl_categoria.Text = "Categoria:";
             // 
-            // txt_categoria
+            // txt_nom_categ
             // 
-            this.txt_categoria.Location = new System.Drawing.Point(189, 65);
-            this.txt_categoria.MaxLength = 20;
-            this.txt_categoria.Name = "txt_categoria";
-            this.txt_categoria.Size = new System.Drawing.Size(151, 20);
-            this.txt_categoria.TabIndex = 56;
+            this.txt_nom_categ.Location = new System.Drawing.Point(189, 65);
+            this.txt_nom_categ.MaxLength = 20;
+            this.txt_nom_categ.Name = "txt_nom_categ";
+            this.txt_nom_categ.Size = new System.Drawing.Size(151, 20);
+            this.txt_nom_categ.TabIndex = 56;
             // 
             // dgv_categoria
             // 
@@ -359,7 +359,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Label lbl_categoria;
-        private System.Windows.Forms.TextBox txt_categoria;
+        private System.Windows.Forms.TextBox txt_nom_categ;
         private System.Windows.Forms.DataGridView dgv_categoria;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btn_mod_guardar;

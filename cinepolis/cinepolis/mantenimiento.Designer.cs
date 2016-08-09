@@ -431,6 +431,7 @@
             this.pic_mod_portada.Location = new System.Drawing.Point(695, 92);
             this.pic_mod_portada.Name = "pic_mod_portada";
             this.pic_mod_portada.Size = new System.Drawing.Size(136, 158);
+            this.pic_mod_portada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_mod_portada.TabIndex = 79;
             this.pic_mod_portada.TabStop = false;
             // 
@@ -664,7 +665,7 @@
             // 
             this.lbl_categoria.AutoSize = true;
             this.lbl_categoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_categoria.Location = new System.Drawing.Point(356, 46);
+            this.lbl_categoria.Location = new System.Drawing.Point(11, 184);
             this.lbl_categoria.Name = "lbl_categoria";
             this.lbl_categoria.Size = new System.Drawing.Size(95, 21);
             this.lbl_categoria.TabIndex = 46;
@@ -682,7 +683,7 @@
             // 
             this.lbl_clasificacion.AutoSize = true;
             this.lbl_clasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clasificacion.Location = new System.Drawing.Point(11, 188);
+            this.lbl_clasificacion.Location = new System.Drawing.Point(327, 47);
             this.lbl_clasificacion.Name = "lbl_clasificacion";
             this.lbl_clasificacion.Size = new System.Drawing.Size(112, 21);
             this.lbl_clasificacion.TabIndex = 44;

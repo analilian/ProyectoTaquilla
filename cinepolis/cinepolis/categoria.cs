@@ -33,20 +33,28 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            try
+            if (txt_nom_categ.Text=="")
             {
-                conect.Conectar();
-                String Squery = "insert into  categoria (nomcategoria) values('" + txt_categoria.Text + "');";
-                conect.EjecutarQuery(Squery);
-                conect.actualizargrid(dgv_categoria, Squeery, Stabla);
-                conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
-                txt_categoria.Clear();
-            }catch(Exception ex){
- MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error al Guardar el nombre de la Categoria");
+                MessageBox.Show("Llene los campos por favor");
+            }
+            else
+            {
+
+                try
+                {
+                    conect.Conectar();
+                    String Squery = "insert into  categoria (nomcategoria) values('" + txt_nom_categ.Text + "');";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_categoria, Squeery, Stabla);
+                    conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_nom_categ.Clear();
+                } catch (Exception ex) {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error al Guardar el nombre de la Categoria");
+                }
             }
         }
 
@@ -95,24 +103,32 @@ namespace cinepolis
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            try
+            if (txt_mod_categoriaa.Text=="")
             {
-                String Codigo = this.dgv_mod_categoria.CurrentRow.Cells[0].Value.ToString();
-                conect.Conectar();
-                String Squery = "update categoria set  nomcategoria ='" + txt_mod_categoriaa.Text + "'where pkidcategorias ='" + Codigo + "'";
-                conect.EjecutarQuery(Squery);
-                conect.actualizargrid(dgv_categoria, Squeery, Stabla);
-                conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
-                txt_mod_categoriaa.Clear();
+                MessageBox.Show("Llene los campos por favor");
             }
-            catch (Exception ex)
+            else
             {
 
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Actualizacion de Categoria");
+                try
+                {
+                    String Codigo = this.dgv_mod_categoria.CurrentRow.Cells[0].Value.ToString();
+                    conect.Conectar();
+                    String Squery = "update categoria set  nomcategoria ='" + txt_mod_categoriaa.Text + "'where pkidcategorias ='" + Codigo + "'";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_categoria, Squeery, Stabla);
+                    conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_mod_categoriaa.Clear();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Actualizacion de Categoria");
+                }
             }
         }
 

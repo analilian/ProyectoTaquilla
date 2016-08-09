@@ -38,23 +38,31 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            try
+            if (txt_clasificacion.Text=="" || txt_descrip_clasificacion.Text=="")
             {
-                conect.Conectar();
-                String Squery = "insert into  cine (nomcine,direccine) values('" + txt_clasificacion.Text + "','" + txt_descrip_clasificacion.Text + "');";
-                conect.EjecutarQuery(Squery);
-                conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
-                conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
-                txt_clasificacion.Clear();
-                txt_descrip_clasificacion.Clear();
+                MessageBox.Show("Llene los campos por favor");
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Tabla de cine");
+
+                try
+                {
+                    conect.Conectar();
+                    String Squery = "insert into  cine (nomcine,direccine) values('" + txt_clasificacion.Text + "','" + txt_descrip_clasificacion.Text + "');";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
+                    conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_clasificacion.Clear();
+                    txt_descrip_clasificacion.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Tabla de cine");
+                }
             }
         }
 
@@ -91,25 +99,33 @@ namespace cinepolis
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            try
+            if (txt_nommod.Text=="" || txt_dirmod.Text=="")
             {
-                String Codigo = this.
-                    dgv_mod_clasificacion.CurrentRow.Cells[0].Value.ToString();
-                conect.Conectar();
-                String Squery = "update cine set  nomcine ='" + txt_nommod.Text + "', direccine ='" + txt_dirmod.Text + "'where pkidcine ='" + Codigo + "'";
-                conect.EjecutarQuery(Squery);
-                conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
-                conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
-                txt_nommod.Clear();
-                txt_dirmod.Clear();
-            }  
-            catch (Exception ex)
+                MessageBox.Show("Llene los campos por favor");
+            }
+            else
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Actualizacion en la Tabla Cine");
+
+                try
+                {
+                    String Codigo = this.
+                        dgv_mod_clasificacion.CurrentRow.Cells[0].Value.ToString();
+                    conect.Conectar();
+                    String Squery = "update cine set  nomcine ='" + txt_nommod.Text + "', direccine ='" + txt_dirmod.Text + "'where pkidcine ='" + Codigo + "'";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
+                    conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
+                    conect.actualizargrid(dgv_borrar_categoria, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_nommod.Clear();
+                    txt_dirmod.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Actualizacion en la Tabla Cine");
+                }
             }
 
         }
