@@ -228,7 +228,9 @@ namespace cinepolis
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            codigo = this.dgv_modificar_pelicula.CurrentRow.Cells[0].Value.ToString();
+            try
+            {
+                codigo = this.dgv_modificar_pelicula.CurrentRow.Cells[0].Value.ToString();
             txt_mod_nombre.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[1].Value.ToString();
             txt_mod_descrip.Text=this.dgv_modificar_pelicula.CurrentRow.Cells[2].Value.ToString();
         
@@ -239,8 +241,33 @@ namespace cinepolis
             cbo_mod_clasificacion.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[6].Value.ToString();
             cbo_mod_categoria.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[7].Value.ToString();
             cbo_mod_fecha.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[8].Value.ToString();
-          
-            
+            conexion.Open();
+           
+                string sql = "Select imagenpelicula from pelicula where pk_idpelicula ='" + codigo + "'";
+
+               MySqlCommand command = new MySqlCommand(sql, conexion);
+                MySqlDataReader reader = command.ExecuteReader();
+                reader.Read();
+
+                byte[] img = (byte[])(reader[0]);
+                if (img == null)
+                {
+                    pic_mod_portada.Image = null;
+                }
+                else
+                {
+                    MemoryStream ms = new MemoryStream(img);
+                    pic_mod_portada.Image = Image.FromStream(ms);
+
+                }
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
