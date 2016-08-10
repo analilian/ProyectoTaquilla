@@ -110,7 +110,7 @@ namespace cinepolis
                 {
                     String Codigo = this.dgv_mod_horario.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update horario set horainiciohor = '" + txt_mod_horainicio.Text + "',horafinalhor ='" + txt_mod_horafin.Text + "'where pkidhorario ='" + Codigo + "'";
+                    String Squery = "update horario set horainiciohor = '" + txt_mod_horainicio.Text + "',horafinalhor ='" + txt_mod_horafin.Text + "'where pk_idhorario ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
                     conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);
@@ -155,7 +155,7 @@ namespace cinepolis
                 if (Vresultado == DialogResult.Yes)
                 {
                     conect.Conectar();
-                    String Squerys = "delete from  horario where pkidhorario = '" + SCelda + "';";
+                    String Squerys = "delete from  horario where pk_idhorario = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     conect.actualizargrid(dgv_mostrar_peliculas, Squeery, Stabla);
                     conect.actualizargrid(dgv_borrar_horario, Squeery, Stabla);

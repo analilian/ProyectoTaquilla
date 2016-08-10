@@ -114,7 +114,7 @@ namespace cinepolis
                 {
                     String Codigo = this.dgv_mod_categoria.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update categoria set  nomcategoria ='" + txt_mod_categoriaa.Text + "'where pkidcategorias ='" + Codigo + "'";
+                    String Squery = "update categoria set  nomcategoria ='" + txt_mod_categoriaa.Text + "'where pk_idcategorias ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_categoria, Squeery, Stabla);
                     conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);
@@ -141,7 +141,7 @@ namespace cinepolis
                 if (Vresultado == DialogResult.Yes)
                 {
                     conect.Conectar();
-                    String Squerys = "delete from  categoria where pkidcategorias = '" + SCelda + "';";
+                    String Squerys = "delete from  categoria where pk_idcategorias = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     conect.actualizargrid(dgv_categoria, Squeery, Stabla);
                     conect.actualizargrid(dgv_mod_categoria, Squeery, Stabla);

@@ -48,7 +48,7 @@ namespace cinepolis
                 try
                 {
                     conect.Conectar();
-                    String Squery = "insert into  cine (nomcine,direccine) values('" + txt_clasificacion.Text + "','" + txt_descrip_clasificacion.Text + "');";
+                    String Squery = "insert into  cine (nomcine,direccine,pk_idregion) values('" + txt_clasificacion.Text + "','" + txt_descrip_clasificacion.Text + "','" + cbo_cine.Text + "');";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
@@ -111,7 +111,7 @@ namespace cinepolis
                     String Codigo = this.
                         dgv_mod_clasificacion.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update cine set  nomcine ='" + txt_nommod.Text + "', direccine ='" + txt_dirmod.Text + "'where pkidcine ='" + Codigo + "'";
+                    String Squery = "update cine set  nomcine ='" + txt_nommod.Text + "', direccine ='" + txt_dirmod.Text + "', pk_idregion ='" + cbo_region.Text + "'where pk_idcine ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
@@ -157,7 +157,7 @@ namespace cinepolis
                 if (Vresultado == DialogResult.Yes)
                 {
                     conect.Conectar();
-                    String Squerys = "delete from  cine where pkidcine = '" + SCelda + "';";
+                    String Squerys = "delete from  cine where pk_idcine = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
@@ -184,12 +184,26 @@ namespace cinepolis
             this.dgv_clasificacion.Columns[0].HeaderText = "No";
             this.dgv_clasificacion.Columns[1].HeaderText = "Cine";
             this.dgv_clasificacion.Columns[2].HeaderText = "Direccion";
+            this.dgv_clasificacion.Columns[3].HeaderText = "Region";
             this.dgv_mod_clasificacion.Columns[0].HeaderText = "No";
             this.dgv_mod_clasificacion.Columns[1].HeaderText = "Cine";
             this.dgv_mod_clasificacion.Columns[2].HeaderText = "Direccion";
+            this.dgv_mod_clasificacion.Columns[3].HeaderText = "Region";
             this.dgv_borrar_categoria.Columns[0].HeaderText = "No";
             this.dgv_borrar_categoria.Columns[1].HeaderText = "Cine";
             this.dgv_borrar_categoria.Columns[2].HeaderText = "Direccion";
+            this.dgv_borrar_categoria.Columns[3].HeaderText = "DRegion";
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_titulo_mantenimiento_cine_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

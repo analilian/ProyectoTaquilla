@@ -36,18 +36,11 @@
             this.dgv_modificar_pelicula = new System.Windows.Forms.DataGridView();
             this.txt_mod_descrip = new System.Windows.Forms.TextBox();
             this.cbo_mod_fecha = new System.Windows.Forms.ComboBox();
-            this.cbo_mod_cine = new System.Windows.Forms.ComboBox();
-            this.lbl_mod_cine = new System.Windows.Forms.Label();
             this.cbo_mod_categoria = new System.Windows.Forms.ComboBox();
             this.lbl_mod_categoria = new System.Windows.Forms.Label();
-            this.cbo_mod_clasificacion = new System.Windows.Forms.ComboBox();
             this.lbl_mod_clasificacion = new System.Windows.Forms.Label();
-            this.cbo_mod_proyeccion = new System.Windows.Forms.ComboBox();
-            this.lbl_mod_proyeccion = new System.Windows.Forms.Label();
             this.cbo_mod_idioma = new System.Windows.Forms.ComboBox();
             this.lbl_mod_idioma = new System.Windows.Forms.Label();
-            this.cbo_mod_sala = new System.Windows.Forms.ComboBox();
-            this.lbl_mod_sala = new System.Windows.Forms.Label();
             this.txt_mod_trailer = new System.Windows.Forms.TextBox();
             this.txt_mod_nombre = new System.Windows.Forms.TextBox();
             this.lbl_mod_trailer = new System.Windows.Forms.Label();
@@ -61,8 +54,6 @@
             this.btn_actualizar = new System.Windows.Forms.Button();
             this.btn_extraer = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btn_agregar_btn_agregar_categoria = new System.Windows.Forms.Button();
             this.btn_agregar_clasificacion = new System.Windows.Forms.Button();
             this.btn_agregar_horario = new System.Windows.Forms.Button();
@@ -72,18 +63,12 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.txt_descrip = new System.Windows.Forms.TextBox();
             this.cbo_fecha = new System.Windows.Forms.ComboBox();
-            this.cbo_cine = new System.Windows.Forms.ComboBox();
-            this.lbl_cine = new System.Windows.Forms.Label();
             this.cbo_categoria = new System.Windows.Forms.ComboBox();
             this.lbl_categoria = new System.Windows.Forms.Label();
             this.cbo_clasificacion = new System.Windows.Forms.ComboBox();
             this.lbl_clasificacion = new System.Windows.Forms.Label();
-            this.cbo_proyeccion = new System.Windows.Forms.ComboBox();
-            this.lbl_proyeccion = new System.Windows.Forms.Label();
             this.cbo_idioma = new System.Windows.Forms.ComboBox();
             this.lbl_idioma = new System.Windows.Forms.Label();
-            this.cbo_sala = new System.Windows.Forms.ComboBox();
-            this.lbl_sala = new System.Windows.Forms.Label();
             this.txt_trailer = new System.Windows.Forms.TextBox();
             this.txt_nombre1 = new System.Windows.Forms.TextBox();
             this.lbl_trailer = new System.Windows.Forms.Label();
@@ -123,6 +108,7 @@
             this.btn_regresar = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
+            this.cbo_mod_clasificacion = new System.Windows.Forms.ComboBox();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).BeginInit();
@@ -147,18 +133,12 @@
             this.tabPage2.Controls.Add(this.dgv_modificar_pelicula);
             this.tabPage2.Controls.Add(this.txt_mod_descrip);
             this.tabPage2.Controls.Add(this.cbo_mod_fecha);
-            this.tabPage2.Controls.Add(this.cbo_mod_cine);
-            this.tabPage2.Controls.Add(this.lbl_mod_cine);
             this.tabPage2.Controls.Add(this.cbo_mod_categoria);
             this.tabPage2.Controls.Add(this.lbl_mod_categoria);
             this.tabPage2.Controls.Add(this.cbo_mod_clasificacion);
             this.tabPage2.Controls.Add(this.lbl_mod_clasificacion);
-            this.tabPage2.Controls.Add(this.cbo_mod_proyeccion);
-            this.tabPage2.Controls.Add(this.lbl_mod_proyeccion);
             this.tabPage2.Controls.Add(this.cbo_mod_idioma);
             this.tabPage2.Controls.Add(this.lbl_mod_idioma);
-            this.tabPage2.Controls.Add(this.cbo_mod_sala);
-            this.tabPage2.Controls.Add(this.lbl_mod_sala);
             this.tabPage2.Controls.Add(this.txt_mod_trailer);
             this.tabPage2.Controls.Add(this.txt_mod_nombre);
             this.tabPage2.Controls.Add(this.lbl_mod_trailer);
@@ -195,7 +175,7 @@
             // 
             this.lbl_buscar.AutoSize = true;
             this.lbl_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_buscar.Location = new System.Drawing.Point(150, 299);
+            this.lbl_buscar.Location = new System.Drawing.Point(68, 221);
             this.lbl_buscar.Name = "lbl_buscar";
             this.lbl_buscar.Size = new System.Drawing.Size(53, 16);
             this.lbl_buscar.TabIndex = 81;
@@ -203,7 +183,7 @@
             // 
             // txt_modificarbuscar
             // 
-            this.txt_modificarbuscar.Location = new System.Drawing.Point(208, 295);
+            this.txt_modificarbuscar.Location = new System.Drawing.Point(138, 220);
             this.txt_modificarbuscar.MaxLength = 20;
             this.txt_modificarbuscar.Name = "txt_modificarbuscar";
             this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
@@ -223,7 +203,7 @@
             // 
             // txt_mod_descrip
             // 
-            this.txt_mod_descrip.Location = new System.Drawing.Point(499, 151);
+            this.txt_mod_descrip.Location = new System.Drawing.Point(499, 121);
             this.txt_mod_descrip.MaxLength = 100;
             this.txt_mod_descrip.Multiline = true;
             this.txt_mod_descrip.Name = "txt_mod_descrip";
@@ -233,28 +213,10 @@
             // cbo_mod_fecha
             // 
             this.cbo_mod_fecha.FormattingEnabled = true;
-            this.cbo_mod_fecha.Location = new System.Drawing.Point(498, 119);
+            this.cbo_mod_fecha.Location = new System.Drawing.Point(499, 92);
             this.cbo_mod_fecha.Name = "cbo_mod_fecha";
             this.cbo_mod_fecha.Size = new System.Drawing.Size(151, 21);
             this.cbo_mod_fecha.TabIndex = 73;
-            // 
-            // cbo_mod_cine
-            // 
-            this.cbo_mod_cine.FormattingEnabled = true;
-            this.cbo_mod_cine.Location = new System.Drawing.Point(498, 91);
-            this.cbo_mod_cine.Name = "cbo_mod_cine";
-            this.cbo_mod_cine.Size = new System.Drawing.Size(151, 21);
-            this.cbo_mod_cine.TabIndex = 72;
-            // 
-            // lbl_mod_cine
-            // 
-            this.lbl_mod_cine.AutoSize = true;
-            this.lbl_mod_cine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_cine.Location = new System.Drawing.Point(398, 91);
-            this.lbl_mod_cine.Name = "lbl_mod_cine";
-            this.lbl_mod_cine.Size = new System.Drawing.Size(50, 21);
-            this.lbl_mod_cine.TabIndex = 71;
-            this.lbl_mod_cine.Text = "Cine:";
             // 
             // cbo_mod_categoria
             // 
@@ -274,47 +236,20 @@
             this.lbl_mod_categoria.TabIndex = 69;
             this.lbl_mod_categoria.Text = "Categoria:";
             // 
-            // cbo_mod_clasificacion
-            // 
-            this.cbo_mod_clasificacion.FormattingEnabled = true;
-            this.cbo_mod_clasificacion.Location = new System.Drawing.Point(208, 229);
-            this.cbo_mod_clasificacion.Name = "cbo_mod_clasificacion";
-            this.cbo_mod_clasificacion.Size = new System.Drawing.Size(151, 21);
-            this.cbo_mod_clasificacion.TabIndex = 68;
-            // 
             // lbl_mod_clasificacion
             // 
             this.lbl_mod_clasificacion.AutoSize = true;
             this.lbl_mod_clasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_clasificacion.Location = new System.Drawing.Point(15, 233);
+            this.lbl_mod_clasificacion.Location = new System.Drawing.Point(67, 151);
             this.lbl_mod_clasificacion.Name = "lbl_mod_clasificacion";
             this.lbl_mod_clasificacion.Size = new System.Drawing.Size(112, 21);
             this.lbl_mod_clasificacion.TabIndex = 67;
             this.lbl_mod_clasificacion.Text = "Clasificación:";
             // 
-            // cbo_mod_proyeccion
-            // 
-            this.cbo_mod_proyeccion.FormattingEnabled = true;
-            this.cbo_mod_proyeccion.Location = new System.Drawing.Point(208, 202);
-            this.cbo_mod_proyeccion.Name = "cbo_mod_proyeccion";
-            this.cbo_mod_proyeccion.Size = new System.Drawing.Size(151, 21);
-            this.cbo_mod_proyeccion.TabIndex = 66;
-            this.cbo_mod_proyeccion.SelectedIndexChanged += new System.EventHandler(this.cbo_mod_proyeccion_SelectedIndexChanged);
-            // 
-            // lbl_mod_proyeccion
-            // 
-            this.lbl_mod_proyeccion.AutoSize = true;
-            this.lbl_mod_proyeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_proyeccion.Location = new System.Drawing.Point(15, 203);
-            this.lbl_mod_proyeccion.Name = "lbl_mod_proyeccion";
-            this.lbl_mod_proyeccion.Size = new System.Drawing.Size(99, 21);
-            this.lbl_mod_proyeccion.TabIndex = 65;
-            this.lbl_mod_proyeccion.Text = "Proyección:";
-            // 
             // cbo_mod_idioma
             // 
             this.cbo_mod_idioma.FormattingEnabled = true;
-            this.cbo_mod_idioma.Location = new System.Drawing.Point(208, 175);
+            this.cbo_mod_idioma.Location = new System.Drawing.Point(208, 124);
             this.cbo_mod_idioma.Name = "cbo_mod_idioma";
             this.cbo_mod_idioma.Size = new System.Drawing.Size(151, 21);
             this.cbo_mod_idioma.TabIndex = 64;
@@ -324,33 +259,15 @@
             // 
             this.lbl_mod_idioma.AutoSize = true;
             this.lbl_mod_idioma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_idioma.Location = new System.Drawing.Point(15, 173);
+            this.lbl_mod_idioma.Location = new System.Drawing.Point(110, 124);
             this.lbl_mod_idioma.Name = "lbl_mod_idioma";
             this.lbl_mod_idioma.Size = new System.Drawing.Size(69, 21);
             this.lbl_mod_idioma.TabIndex = 63;
             this.lbl_mod_idioma.Text = "Idioma:";
             // 
-            // cbo_mod_sala
-            // 
-            this.cbo_mod_sala.FormattingEnabled = true;
-            this.cbo_mod_sala.Location = new System.Drawing.Point(208, 148);
-            this.cbo_mod_sala.Name = "cbo_mod_sala";
-            this.cbo_mod_sala.Size = new System.Drawing.Size(151, 21);
-            this.cbo_mod_sala.TabIndex = 62;
-            // 
-            // lbl_mod_sala
-            // 
-            this.lbl_mod_sala.AutoSize = true;
-            this.lbl_mod_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_sala.Location = new System.Drawing.Point(15, 148);
-            this.lbl_mod_sala.Name = "lbl_mod_sala";
-            this.lbl_mod_sala.Size = new System.Drawing.Size(47, 21);
-            this.lbl_mod_sala.TabIndex = 61;
-            this.lbl_mod_sala.Text = "Sala:";
-            // 
             // txt_mod_trailer
             // 
-            this.txt_mod_trailer.Location = new System.Drawing.Point(208, 119);
+            this.txt_mod_trailer.Location = new System.Drawing.Point(208, 95);
             this.txt_mod_trailer.Name = "txt_mod_trailer";
             this.txt_mod_trailer.Size = new System.Drawing.Size(151, 20);
             this.txt_mod_trailer.TabIndex = 60;
@@ -362,13 +279,14 @@
             this.txt_mod_nombre.Name = "txt_mod_nombre";
             this.txt_mod_nombre.Size = new System.Drawing.Size(151, 20);
             this.txt_mod_nombre.TabIndex = 58;
+            this.txt_mod_nombre.TextChanged += new System.EventHandler(this.txt_mod_nombre_TextChanged);
             this.txt_mod_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_mod_nombre_KeyPress);
             // 
             // lbl_mod_trailer
             // 
             this.lbl_mod_trailer.AutoSize = true;
             this.lbl_mod_trailer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_trailer.Location = new System.Drawing.Point(15, 118);
+            this.lbl_mod_trailer.Location = new System.Drawing.Point(98, 95);
             this.lbl_mod_trailer.Name = "lbl_mod_trailer";
             this.lbl_mod_trailer.Size = new System.Drawing.Size(81, 21);
             this.lbl_mod_trailer.TabIndex = 57;
@@ -378,7 +296,7 @@
             // 
             this.lbl_mod_descrip.AutoSize = true;
             this.lbl_mod_descrip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_descrip.Location = new System.Drawing.Point(398, 148);
+            this.lbl_mod_descrip.Location = new System.Drawing.Point(389, 121);
             this.lbl_mod_descrip.Name = "lbl_mod_descrip";
             this.lbl_mod_descrip.Size = new System.Drawing.Size(104, 21);
             this.lbl_mod_descrip.TabIndex = 56;
@@ -388,7 +306,7 @@
             // 
             this.lbl_mod_fecha.AutoSize = true;
             this.lbl_mod_fecha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_fecha.Location = new System.Drawing.Point(398, 119);
+            this.lbl_mod_fecha.Location = new System.Drawing.Point(422, 92);
             this.lbl_mod_fecha.Name = "lbl_mod_fecha";
             this.lbl_mod_fecha.Size = new System.Drawing.Size(71, 21);
             this.lbl_mod_fecha.TabIndex = 54;
@@ -408,7 +326,7 @@
             // 
             this.lbl_mod_nombre.AutoSize = true;
             this.lbl_mod_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_nombre.Location = new System.Drawing.Point(15, 66);
+            this.lbl_mod_nombre.Location = new System.Drawing.Point(98, 65);
             this.lbl_mod_nombre.Name = "lbl_mod_nombre";
             this.lbl_mod_nombre.Size = new System.Drawing.Size(77, 21);
             this.lbl_mod_nombre.TabIndex = 52;
@@ -474,8 +392,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btn_agregar_btn_agregar_categoria);
             this.tabPage1.Controls.Add(this.btn_agregar_clasificacion);
             this.tabPage1.Controls.Add(this.btn_agregar_horario);
@@ -485,18 +401,12 @@
             this.tabPage1.Controls.Add(this.btn_guardar);
             this.tabPage1.Controls.Add(this.txt_descrip);
             this.tabPage1.Controls.Add(this.cbo_fecha);
-            this.tabPage1.Controls.Add(this.cbo_cine);
-            this.tabPage1.Controls.Add(this.lbl_cine);
             this.tabPage1.Controls.Add(this.cbo_categoria);
             this.tabPage1.Controls.Add(this.lbl_categoria);
             this.tabPage1.Controls.Add(this.cbo_clasificacion);
             this.tabPage1.Controls.Add(this.lbl_clasificacion);
-            this.tabPage1.Controls.Add(this.cbo_proyeccion);
-            this.tabPage1.Controls.Add(this.lbl_proyeccion);
             this.tabPage1.Controls.Add(this.cbo_idioma);
             this.tabPage1.Controls.Add(this.lbl_idioma);
-            this.tabPage1.Controls.Add(this.cbo_sala);
-            this.tabPage1.Controls.Add(this.lbl_sala);
             this.tabPage1.Controls.Add(this.txt_trailer);
             this.tabPage1.Controls.Add(this.txt_nombre1);
             this.tabPage1.Controls.Add(this.lbl_trailer);
@@ -512,30 +422,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Agregar Película";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(298, 103);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(31, 24);
-            this.button2.TabIndex = 86;
-            this.toolTip1.SetToolTip(this.button2, "Agregar Sala");
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(610, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 24);
-            this.button1.TabIndex = 85;
-            this.toolTip1.SetToolTip(this.button1, "Agregar Cine");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // btn_agregar_btn_agregar_categoria
             // 
@@ -553,7 +439,7 @@
             // 
             this.btn_agregar_clasificacion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
             this.btn_agregar_clasificacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_clasificacion.Location = new System.Drawing.Point(298, 181);
+            this.btn_agregar_clasificacion.Location = new System.Drawing.Point(298, 133);
             this.btn_agregar_clasificacion.Name = "btn_agregar_clasificacion";
             this.btn_agregar_clasificacion.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_clasificacion.TabIndex = 83;
@@ -565,7 +451,7 @@
             // 
             this.btn_agregar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
             this.btn_agregar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregar_horario.Location = new System.Drawing.Point(609, 99);
+            this.btn_agregar_horario.Location = new System.Drawing.Point(614, 76);
             this.btn_agregar_horario.Name = "btn_agregar_horario";
             this.btn_agregar_horario.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_horario.TabIndex = 12;
@@ -620,7 +506,7 @@
             // 
             // txt_descrip
             // 
-            this.txt_descrip.Location = new System.Drawing.Point(457, 131);
+            this.txt_descrip.Location = new System.Drawing.Point(457, 109);
             this.txt_descrip.MaxLength = 100;
             this.txt_descrip.Multiline = true;
             this.txt_descrip.Name = "txt_descrip";
@@ -630,28 +516,10 @@
             // cbo_fecha
             // 
             this.cbo_fecha.FormattingEnabled = true;
-            this.cbo_fecha.Location = new System.Drawing.Point(456, 99);
+            this.cbo_fecha.Location = new System.Drawing.Point(457, 76);
             this.cbo_fecha.Name = "cbo_fecha";
             this.cbo_fecha.Size = new System.Drawing.Size(151, 21);
             this.cbo_fecha.TabIndex = 50;
-            // 
-            // cbo_cine
-            // 
-            this.cbo_cine.FormattingEnabled = true;
-            this.cbo_cine.Location = new System.Drawing.Point(456, 71);
-            this.cbo_cine.Name = "cbo_cine";
-            this.cbo_cine.Size = new System.Drawing.Size(151, 21);
-            this.cbo_cine.TabIndex = 49;
-            // 
-            // lbl_cine
-            // 
-            this.lbl_cine.AutoSize = true;
-            this.lbl_cine.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cine.Location = new System.Drawing.Point(389, 71);
-            this.lbl_cine.Name = "lbl_cine";
-            this.lbl_cine.Size = new System.Drawing.Size(50, 21);
-            this.lbl_cine.TabIndex = 48;
-            this.lbl_cine.Text = "Cine:";
             // 
             // cbo_categoria
             // 
@@ -665,7 +533,7 @@
             // 
             this.lbl_categoria.AutoSize = true;
             this.lbl_categoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_categoria.Location = new System.Drawing.Point(11, 184);
+            this.lbl_categoria.Location = new System.Drawing.Point(344, 39);
             this.lbl_categoria.Name = "lbl_categoria";
             this.lbl_categoria.Size = new System.Drawing.Size(95, 21);
             this.lbl_categoria.TabIndex = 46;
@@ -674,7 +542,7 @@
             // cbo_clasificacion
             // 
             this.cbo_clasificacion.FormattingEnabled = true;
-            this.cbo_clasificacion.Location = new System.Drawing.Point(141, 184);
+            this.cbo_clasificacion.Location = new System.Drawing.Point(141, 134);
             this.cbo_clasificacion.Name = "cbo_clasificacion";
             this.cbo_clasificacion.Size = new System.Drawing.Size(151, 21);
             this.cbo_clasificacion.TabIndex = 45;
@@ -683,34 +551,16 @@
             // 
             this.lbl_clasificacion.AutoSize = true;
             this.lbl_clasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_clasificacion.Location = new System.Drawing.Point(327, 47);
+            this.lbl_clasificacion.Location = new System.Drawing.Point(3, 131);
             this.lbl_clasificacion.Name = "lbl_clasificacion";
             this.lbl_clasificacion.Size = new System.Drawing.Size(112, 21);
             this.lbl_clasificacion.TabIndex = 44;
             this.lbl_clasificacion.Text = "Clasificación:";
             // 
-            // cbo_proyeccion
-            // 
-            this.cbo_proyeccion.FormattingEnabled = true;
-            this.cbo_proyeccion.Location = new System.Drawing.Point(141, 157);
-            this.cbo_proyeccion.Name = "cbo_proyeccion";
-            this.cbo_proyeccion.Size = new System.Drawing.Size(151, 21);
-            this.cbo_proyeccion.TabIndex = 43;
-            // 
-            // lbl_proyeccion
-            // 
-            this.lbl_proyeccion.AutoSize = true;
-            this.lbl_proyeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_proyeccion.Location = new System.Drawing.Point(11, 158);
-            this.lbl_proyeccion.Name = "lbl_proyeccion";
-            this.lbl_proyeccion.Size = new System.Drawing.Size(99, 21);
-            this.lbl_proyeccion.TabIndex = 42;
-            this.lbl_proyeccion.Text = "Proyección:";
-            // 
             // cbo_idioma
             // 
             this.cbo_idioma.FormattingEnabled = true;
-            this.cbo_idioma.Location = new System.Drawing.Point(141, 130);
+            this.cbo_idioma.Location = new System.Drawing.Point(141, 106);
             this.cbo_idioma.Name = "cbo_idioma";
             this.cbo_idioma.Size = new System.Drawing.Size(151, 21);
             this.cbo_idioma.TabIndex = 41;
@@ -719,29 +569,11 @@
             // 
             this.lbl_idioma.AutoSize = true;
             this.lbl_idioma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_idioma.Location = new System.Drawing.Point(11, 128);
+            this.lbl_idioma.Location = new System.Drawing.Point(11, 106);
             this.lbl_idioma.Name = "lbl_idioma";
             this.lbl_idioma.Size = new System.Drawing.Size(69, 21);
             this.lbl_idioma.TabIndex = 40;
             this.lbl_idioma.Text = "Idioma:";
-            // 
-            // cbo_sala
-            // 
-            this.cbo_sala.FormattingEnabled = true;
-            this.cbo_sala.Location = new System.Drawing.Point(141, 103);
-            this.cbo_sala.Name = "cbo_sala";
-            this.cbo_sala.Size = new System.Drawing.Size(151, 21);
-            this.cbo_sala.TabIndex = 39;
-            // 
-            // lbl_sala
-            // 
-            this.lbl_sala.AutoSize = true;
-            this.lbl_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sala.Location = new System.Drawing.Point(11, 103);
-            this.lbl_sala.Name = "lbl_sala";
-            this.lbl_sala.Size = new System.Drawing.Size(47, 21);
-            this.lbl_sala.TabIndex = 38;
-            this.lbl_sala.Text = "Sala:";
             // 
             // txt_trailer
             // 
@@ -773,7 +605,7 @@
             // 
             this.lbl_descrip.AutoSize = true;
             this.lbl_descrip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_descrip.Location = new System.Drawing.Point(356, 128);
+            this.lbl_descrip.Location = new System.Drawing.Point(358, 107);
             this.lbl_descrip.Name = "lbl_descrip";
             this.lbl_descrip.Size = new System.Drawing.Size(104, 21);
             this.lbl_descrip.TabIndex = 31;
@@ -783,7 +615,7 @@
             // 
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha.Location = new System.Drawing.Point(368, 103);
+            this.lbl_fecha.Location = new System.Drawing.Point(368, 79);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(71, 21);
             this.lbl_fecha.TabIndex = 28;
@@ -1155,6 +987,14 @@
             this.btn_cerrarsesion.UseVisualStyleBackColor = true;
             this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cbo_mod_clasificacion
+            // 
+            this.cbo_mod_clasificacion.FormattingEnabled = true;
+            this.cbo_mod_clasificacion.Location = new System.Drawing.Point(208, 151);
+            this.cbo_mod_clasificacion.Name = "cbo_mod_clasificacion";
+            this.cbo_mod_clasificacion.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_clasificacion.TabIndex = 68;
+            // 
             // mantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1210,35 +1050,22 @@
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.Label lbl_trailer;
         private System.Windows.Forms.ComboBox cbo_fecha;
-        private System.Windows.Forms.ComboBox cbo_cine;
-        private System.Windows.Forms.Label lbl_cine;
         private System.Windows.Forms.ComboBox cbo_categoria;
         private System.Windows.Forms.Label lbl_categoria;
         private System.Windows.Forms.ComboBox cbo_clasificacion;
         private System.Windows.Forms.Label lbl_clasificacion;
-        private System.Windows.Forms.ComboBox cbo_proyeccion;
-        private System.Windows.Forms.Label lbl_proyeccion;
         private System.Windows.Forms.ComboBox cbo_idioma;
         private System.Windows.Forms.Label lbl_idioma;
-        private System.Windows.Forms.ComboBox cbo_sala;
-        private System.Windows.Forms.Label lbl_sala;
         private System.Windows.Forms.TextBox txt_trailer;
         private System.Windows.Forms.TextBox txt_nombre1;
         private System.Windows.Forms.TextBox txt_descrip;
         private System.Windows.Forms.TextBox txt_mod_descrip;
         private System.Windows.Forms.ComboBox cbo_mod_fecha;
-        private System.Windows.Forms.ComboBox cbo_mod_cine;
-        private System.Windows.Forms.Label lbl_mod_cine;
         private System.Windows.Forms.ComboBox cbo_mod_categoria;
         private System.Windows.Forms.Label lbl_mod_categoria;
-        private System.Windows.Forms.ComboBox cbo_mod_clasificacion;
         private System.Windows.Forms.Label lbl_mod_clasificacion;
-        private System.Windows.Forms.ComboBox cbo_mod_proyeccion;
-        private System.Windows.Forms.Label lbl_mod_proyeccion;
         private System.Windows.Forms.ComboBox cbo_mod_idioma;
         private System.Windows.Forms.Label lbl_mod_idioma;
-        private System.Windows.Forms.ComboBox cbo_mod_sala;
-        private System.Windows.Forms.Label lbl_mod_sala;
         private System.Windows.Forms.TextBox txt_mod_trailer;
         private System.Windows.Forms.TextBox txt_mod_nombre;
         private System.Windows.Forms.Label lbl_mod_trailer;
@@ -1264,8 +1091,6 @@
         private System.Windows.Forms.Button btn_agregar_btn_agregar_categoria;
         private System.Windows.Forms.Button btn_agregar_clasificacion;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgv_insertar;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btn_agregar_relacion4;
@@ -1286,5 +1111,6 @@
         private System.Windows.Forms.Label lbl_relacion1;
         private System.Windows.Forms.Label lbl_titulo_ralacion;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cbo_mod_clasificacion;
     }
 }

@@ -139,3 +139,28 @@ C:\Users\Ana Lilian\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\De
 C:\Users\Ana Lilian\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
 C:\Users\Ana Lilian\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
 C:\Users\Ana Lilian\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe.config
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.exe
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.pdb
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.pdb
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.dll
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\Google.ProtocolBuffers.dll
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.xml
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.xml
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.categoria.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.cine.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.clasificacion.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.empleado.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Form1.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Horario.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.mantenimiento.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Properties.Resources.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.reportes.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.sala.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache

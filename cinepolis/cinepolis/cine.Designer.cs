@@ -57,6 +57,10 @@
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbo_cine = new System.Windows.Forms.ComboBox();
+            this.cbo_region = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tbc_clasificacion.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clasificacion)).BeginInit();
@@ -80,6 +84,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.cbo_cine);
+            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.lbl_descrip_clasificacion);
             this.tabPage1.Controls.Add(this.txt_descrip_clasificacion);
             this.tabPage1.Controls.Add(this.btn_guardar);
@@ -156,6 +162,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.cbo_region);
             this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.txt_buscarmod);
             this.tabPage2.Controls.Add(this.lbl_buscarmod);
@@ -178,7 +186,7 @@
             // 
             this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(452, 86);
+            this.button1.Location = new System.Drawing.Point(453, 150);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(59, 44);
             this.button1.TabIndex = 92;
@@ -188,7 +196,7 @@
             // 
             // txt_buscarmod
             // 
-            this.txt_buscarmod.Location = new System.Drawing.Point(255, 99);
+            this.txt_buscarmod.Location = new System.Drawing.Point(255, 163);
             this.txt_buscarmod.MaxLength = 100;
             this.txt_buscarmod.Name = "txt_buscarmod";
             this.txt_buscarmod.Size = new System.Drawing.Size(178, 20);
@@ -198,7 +206,7 @@
             // 
             this.lbl_buscarmod.AutoSize = true;
             this.lbl_buscarmod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_buscarmod.Location = new System.Drawing.Point(184, 96);
+            this.lbl_buscarmod.Location = new System.Drawing.Point(184, 160);
             this.lbl_buscarmod.Name = "lbl_buscarmod";
             this.lbl_buscarmod.Size = new System.Drawing.Size(65, 21);
             this.lbl_buscarmod.TabIndex = 90;
@@ -246,10 +254,10 @@
             this.dgv_mod_clasificacion.AllowUserToDeleteRows = false;
             this.dgv_mod_clasificacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_mod_clasificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_mod_clasificacion.Location = new System.Drawing.Point(24, 136);
+            this.dgv_mod_clasificacion.Location = new System.Drawing.Point(24, 200);
             this.dgv_mod_clasificacion.Name = "dgv_mod_clasificacion";
             this.dgv_mod_clasificacion.ReadOnly = true;
-            this.dgv_mod_clasificacion.Size = new System.Drawing.Size(635, 180);
+            this.dgv_mod_clasificacion.Size = new System.Drawing.Size(635, 116);
             this.dgv_mod_clasificacion.TabIndex = 61;
             // 
             // btn_actualizar
@@ -354,6 +362,7 @@
             this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(379, 36);
             this.lbl_titulo_mantenimiento_cine.TabIndex = 60;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE CINE";
+            this.lbl_titulo_mantenimiento_cine.Click += new System.EventHandler(this.lbl_titulo_mantenimiento_cine_Click);
             // 
             // btn_regresar
             // 
@@ -366,6 +375,43 @@
             this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 75);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 21);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "Region:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // cbo_cine
+            // 
+            this.cbo_cine.FormattingEnabled = true;
+            this.cbo_cine.Location = new System.Drawing.Point(142, 78);
+            this.cbo_cine.Name = "cbo_cine";
+            this.cbo_cine.Size = new System.Drawing.Size(191, 21);
+            this.cbo_cine.TabIndex = 64;
+            // 
+            // cbo_region
+            // 
+            this.cbo_region.FormattingEnabled = true;
+            this.cbo_region.Location = new System.Drawing.Point(145, 85);
+            this.cbo_region.Name = "cbo_region";
+            this.cbo_region.Size = new System.Drawing.Size(191, 21);
+            this.cbo_region.TabIndex = 93;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(39, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 21);
+            this.label4.TabIndex = 94;
+            this.label4.Text = "Region:";
             // 
             // cine
             // 
@@ -424,5 +470,9 @@
         private System.Windows.Forms.TextBox txt_buscarmod;
         private System.Windows.Forms.Label lbl_buscarmod;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbo_cine;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbo_region;
     }
 }

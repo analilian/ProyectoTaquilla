@@ -45,7 +45,7 @@ namespace cinepolis
                 {
                     string scodigo = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "insert into  sala (nomsala, pkidcine) values('" + txt_sala.Text + "','" + scodigo + "' );";
+                    String Squery = "insert into  sala (nomsala) values('" + txt_sala.Text + ");";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_modsala, Squeery, Stabla);
                     conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
@@ -140,7 +140,7 @@ namespace cinepolis
                 {
                     String Codigo = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update sala set  nomsala ='" + txt_mod.Text + "'where pkidsala ='" + Codigo + "'";
+                    String Squery = "update sala set  nomsala ='" + txt_mod.Text + "'where pk_idsala ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
                     conect.actualizargrid(dgv_modsala, Squeery, Stabla);
@@ -166,7 +166,7 @@ namespace cinepolis
                 if (Vresultado == DialogResult.Yes)
                 {
                     conect.Conectar();
-                    String Squerys = "delete from  sala where pkidsala = '" + SCelda + "';";
+                    String Squerys = "delete from  sala where pk_idsala = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
                     conect.actualizargrid(dgv_modsala, Squeery, Stabla);
@@ -196,13 +196,18 @@ namespace cinepolis
         {
             this.dgv_sala.Columns[0].HeaderText = "No";
             this.dgv_sala.Columns[1].HeaderText = "Nombre de sala";
-            this.dgv_sala.Columns[2].HeaderText = "Cine";
+        
             this.dgv_modsala.Columns[0].HeaderText = "No";
             this.dgv_modsala.Columns[1].HeaderText = "Nombre De Sala";
-            this.dgv_modsala.Columns[2].HeaderText = "Cine";
+  
             this.dgv_borrarsala.Columns[0].HeaderText = "No";
             this.dgv_borrarsala.Columns[1].HeaderText = "Nombre De Sala";
-            this.dgv_borrarsala.Columns[2].HeaderText = "Cine";
+      
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
         }
     }

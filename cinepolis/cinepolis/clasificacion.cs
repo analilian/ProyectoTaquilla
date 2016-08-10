@@ -124,7 +124,7 @@ namespace cinepolis
                 try {
                     String Codigo = this.dgv_mod_clasificacion.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update clasificacion set  nomclasificacion ='" + txt_mod_clasificacion.Text + "',descclasificacion ='" + txt_mod_descrip_clasificacion.Text + "'where pkidclasificacion ='" + Codigo + "'";
+                    String Squery = "update clasificacion set  nomclasificacion ='" + txt_mod_clasificacion.Text + "',descclasificacion ='" + txt_mod_descrip_clasificacion.Text + "'where pk_idclasificacion ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
@@ -161,7 +161,7 @@ namespace cinepolis
             if (Vresultado == DialogResult.Yes)
             {
                 conect.Conectar();
-                String Squerys = "delete from  clasificacion where pkidclasificacion = '" + SCelda + "';";
+                String Squerys = "delete from  clasificacion where pk_idclasificacion = '" + SCelda + "';";
                 conect.EjecutarQuery(Squerys);
                 conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                 conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);

@@ -49,7 +49,7 @@ namespace cinepolis
         {
             int resultado = -1;
             MySqlConnection conexion = ObtenerConexion();
-            MySqlCommand comando = new MySqlCommand(string.Format("Select nomusuario ,pkidrole From usuario Where nomusuario = '{0}' and pkidrole  = 1", txt_usuario.Text), conexion);
+            MySqlCommand comando = new MySqlCommand(string.Format("Select nomusuario ,pk_idrole From usuario Where nomusuario = '{0}' and pk_idrole  = 1", txt_usuario.Text), conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {

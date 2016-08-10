@@ -83,7 +83,7 @@ namespace cinepolis
                     if (cbo_nivelsusario.Text == "administrativo")
                     {
                         
-                        String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + cbo_elegirempleado.Text + "');";
+                        String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + cbo_elegirempleado.Text + "');";
                         conect.EjecutarQuery(Squery);
                         limpiaringresar();
                     }
@@ -91,7 +91,7 @@ namespace cinepolis
                     {
 
                         
-                        String Squery = "insert into  usuario (nomusuario,contusuario,pkidrole,pkidempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + cbo_elegirempleado.Text + "');";
+                        String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + cbo_elegirempleado.Text + "');";
                         conect.EjecutarQuery(Squery);
                         limpiaringresar();
                     }
@@ -134,7 +134,7 @@ namespace cinepolis
             if (Vresultado == DialogResult.Yes)
             {
                 conect.Conectar();
-                String Squerys = "delete from  usuario where pkidusuario = '" + SCelda + "';";
+                String Squerys = "delete from  usuario where pk_idusuario = '" + SCelda + "';";
                 conect.EjecutarQuery(Squerys);
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                 conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
@@ -153,7 +153,7 @@ namespace cinepolis
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squerys = ("Select* from usuario where  nomusuario like'"+ txt_buscarusuario.Text +  "%' or pkidempleado like '" + txt_buscarusuario.Text + "%'or pkidrole like '" + txt_buscarusuario.Text + "%';");
+            String Squerys = ("Select* from usuario where  nomusuario like'"+ txt_buscarusuario.Text +  "%' or pk_idempleado like '" + txt_buscarusuario.Text + "%'or pk_idrole like '" + txt_buscarusuario.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_borrarusuario, Squerys, Stabla);
             nombre_columna();
@@ -170,7 +170,7 @@ namespace cinepolis
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
             conect.Conectar();
-            String Squerys = ("Select* from usuario where nomusuario like'" + txt_modificarbuscar.Text + "%' or pkidempleado like '" + txt_modificarbuscar.Text + "%' or pkidrole like '" + txt_modificarbuscar.Text + "%';");
+            String Squerys = ("Select* from usuario where nomusuario like'" + txt_modificarbuscar.Text + "%' or pk_idempleado like '" + txt_modificarbuscar.Text + "%' or pk_idrole like '" + txt_modificarbuscar.Text + "%';");
             conect.buscarquery(Squerys);
             conect.actualizargrid(dgv_modificar, Squerys, Stabla);
             nombre_columna();
@@ -210,7 +210,7 @@ namespace cinepolis
                 conect.Conectar();
                 if (txt_conmod.Text == txt_confmod.Text)
                 {
-                    String Squery = "update usuario set nomusuario ='" + txt_nommod.Text + "',contusuario='" + encrip.EncryptKey(txt_conmod.Text) + "' ,pkidrole='" + convrolemod + "',pkidempleado ='" + txt_modempl.Text + "'where pkidusuario='" + Codigo + "'";
+                    String Squery = "update usuario set nomusuario ='" + txt_nommod.Text + "',contusuario='" + encrip.EncryptKey(txt_conmod.Text) + "' ,pk_idrole='" + convrolemod + "',pk_idempleado ='" + txt_modempl.Text + "'where pk_idusuario='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                     conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
@@ -336,13 +336,13 @@ namespace cinepolis
                 //se inicia un DataSet
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
-                String Query = "select pkidrole, role from role;";
+                String Query = "select pk_idrole, role from role;";
                 MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "Role");
                 cbo_nivelsusario.DataSource = ds.Tables[0].DefaultView;
                 //indicamos el valor de los miembros
-                cbo_nivelsusario.ValueMember = ("pkidrole");
+                cbo_nivelsusario.ValueMember = ("pk_idrole");
                 //se indica el valor a desplegar en el combobox
                 cbo_nivelsusario.DisplayMember = ("role");
                 micon.Close();
@@ -365,7 +365,7 @@ namespace cinepolis
                 MySqlDataReader mdr = mcd.ExecuteReader();
                 while (mdr.Read())
                 {
-                    cbo_elegirempleado.Items.Add(mdr.GetString("pkidempleado"));
+                    cbo_elegirempleado.Items.Add(mdr.GetString("pk_idempleado"));
                 }
                 micon.Close();
             }
@@ -385,13 +385,13 @@ namespace cinepolis
                 //se inicia un DataSet
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
-                String Query = "select pkidrole, role from role;";
+                String Query = "select pk_idrole, role from role;";
                 MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "Role");
                 cbo_modnivel.DataSource = ds.Tables[0].DefaultView;
                 //indicamos el valor de los miembros
-                cbo_modnivel.ValueMember = ("pkidrole");
+                cbo_modnivel.ValueMember = ("pk_idrole");
                 //se indica el valor a desplegar en el combobox
                 cbo_modnivel.DisplayMember = ("role");
                 micon.Close();

@@ -16,7 +16,7 @@ namespace cinepolis
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "empleado";
         String Squeery = "select * from empleado";
-        string Sfecha1;
+       
         MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root;pwd=;");
 
         public empleado()
@@ -292,7 +292,7 @@ namespace cinepolis
                 try
                 {
                     conect.Conectar();
-                    String Squery = "insert into  empleado (nom1empleado,nom2empleado,ape1empleado,ape2empleado,dirempleado,dpiempleado,nitempleado,fechanacempleado,pkidcine,pkidpuesto) values('" + txt_nombre1.Text + "','" + txt_nombre2.Text + "','" + txt_apellido1.Text + "','" + txt_apellido2.Text + "','" + txt_direccion.Text + "','" + txt_dpi.Text + "','" + txt_nit.Text + "','" + this.dtp_fecha_nac.Text + "','" + convcine + "','" + convpuesto + "');";
+                    String Squery = "insert into  empleado (nom1empleado,nom2empleado,ape1empleado,ape2empleado,dirempleado,dpiempleado,nitempleado,fechanacempleado,pk_idcine,pk_idpuesto) values('" + txt_nombre1.Text + "','" + txt_nombre2.Text + "','" + txt_apellido1.Text + "','" + txt_apellido2.Text + "','" + txt_direccion.Text + "','" + txt_dpi.Text + "','" + txt_nit.Text + "','" + this.dtp_fecha_nac.Text + "','" + convcine + "','" + convpuesto + "');";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
                     conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
@@ -374,7 +374,7 @@ namespace cinepolis
                 {
                     String Codigo = this.dgv_emplados_modificar.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update empleado set  nom1empleado ='" + txt_mod_nombre1.Text + "', nom2empleado ='" + txt_mod_nombre2.Text + "',ape1empleado ='" + txt_mod_apellido1.Text + "',ape2empleado ='" + txt_mod_apellido2.Text + "',dirempleado ='" + txt_mod_direccion.Text + "',dpiempleado ='" + txt_mod_dpi.Text + "',nitempleado ='" + txt_mod_nit.Text + "',fechanacempleado ='" + this.dtp_mod_fecha_nac.Text + "',pkidcine ='" + convcinemod + "',pkidpuesto ='" + convpuestomod + "' where pkidempleado ='" + Codigo + "'";
+                    String Squery = "update empleado set  nom1empleado ='" + txt_mod_nombre1.Text + "', nom2empleado ='" + txt_mod_nombre2.Text + "',ape1empleado ='" + txt_mod_apellido1.Text + "',ape2empleado ='" + txt_mod_apellido2.Text + "',dirempleado ='" + txt_mod_direccion.Text + "',dpiempleado ='" + txt_mod_dpi.Text + "',nitempleado ='" + txt_mod_nit.Text + "',fechanacempleado ='" + this.dtp_mod_fecha_nac.Text + "',pk_idcine ='" + convcinemod + "',pk_idpuesto ='" + convpuestomod + "' where pk_idempleado ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
                     conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
@@ -433,7 +433,7 @@ namespace cinepolis
             if (Vresultado == DialogResult.Yes)
             {
                 conect.Conectar();
-                String Squerys = "delete from  empleado where pkidempleado = '" + SCelda + "';";
+                String Squerys = "delete from  empleado where pk_idempleado = '" + SCelda + "';";
                 conect.EjecutarQuery(Squerys);
                 conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
                 conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
@@ -499,13 +499,13 @@ namespace cinepolis
             //se inicia un DataSet
             DataSet ds = new DataSet();
             //se indica la consulta en sql
-            String Query = "select pkidpuesto, nompuesto from puesto;";
+            String Query = "select pk_idpuesto, nompuesto from puesto;";
             MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
             //se indica con quu tabla se llena
             dad.Fill(ds, "Puesto");
             cbo_puesto.DataSource = ds.Tables[0].DefaultView;
             //indicamos el valor de los miembros
-            cbo_puesto.ValueMember = ("pkidpuesto");
+            cbo_puesto.ValueMember = ("pk_idpuesto");
             //se indica el valor a desplegar en el combobox
             cbo_puesto.DisplayMember = ("nompuesto");
             micon.Close();
@@ -528,13 +528,13 @@ namespace cinepolis
                 //se inicia un DataSet
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
-                String Query = "select pkidcine, nomcine from cine;";
+                String Query = "select pk_idcine, nomcine from cine;";
                 MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "cine");
                 cbo_cine.DataSource = ds.Tables[0].DefaultView;
                 //indicamos el valor de los miembros
-                cbo_cine.ValueMember = ("pkidcine");
+                cbo_cine.ValueMember = ("pk_idcine");
                 //se indica el valor a desplegar en el combobox
                 cbo_cine.DisplayMember = ("nomcine");
                 micon.Close();
@@ -556,13 +556,13 @@ namespace cinepolis
                 //se inicia un DataSet
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
-                String Query = "select pkidpuesto, nompuesto from puesto;";
+                String Query = "select pk_idpuesto, nompuesto from puesto;";
                 MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "Puesto");
                 cbo_mod_puesto.DataSource = ds.Tables[0].DefaultView;
                 //indicamos el valor de los miembros
-                cbo_mod_puesto.ValueMember = ("pkidpuesto");
+                cbo_mod_puesto.ValueMember = ("pk_idpuesto");
                 //se indica el valor a desplegar en el combobox
                 cbo_mod_puesto.DisplayMember = ("nompuesto");
                 micon.Close();
@@ -585,13 +585,13 @@ namespace cinepolis
                 //se inicia un DataSet
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
-                String Query = "select pkidcine, nomcine from cine;";
+                String Query = "select pk_idcine, nomcine from cine;";
                 MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "cine");
                 cbo_mod_cine.DataSource = ds.Tables[0].DefaultView;
                 //indicamos el valor de los miembros
-                cbo_mod_cine.ValueMember = ("pkidcine");
+                cbo_mod_cine.ValueMember = ("pk_idcine");
                 //se indica el valor a desplegar en el combobox
                 cbo_mod_cine.DisplayMember = ("nomcine");
                 micon.Close();
