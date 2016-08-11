@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+//programadores: walter y rodrigo
 namespace cinepolis
 {
     public partial class sala : Form
@@ -18,13 +19,11 @@ namespace cinepolis
         String Stabla1 = "cine";
         String Squeery = "select * from sala";
         String Squeery1 = "select * from cine";
-        string sdireccion = "localhost";
-        string susuario = "root";
-        string spass = "";
+    
         public sala()
         {
             InitializeComponent();
-            conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
+            conect.actualizargrid(dgv_sala, Squeery, Stabla);
             conect.actualizargrid(dgv_modsala, Squeery, Stabla);
             conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
             nombre_columna();
@@ -51,12 +50,12 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "insert into  sala (nomsala) values('" + txt_sala.Text + "');";
                     conect.EjecutarQuery(Squery);
-                    MySqlConnection conex = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                
 
                     //----------------------sirve para obtener el dato de una columna de una tabla
                     DataTable dt = new DataTable();
                     String sQuery = "SELECT pk_idsala FROM sala WHERE nomsala= '"+ txt_sala.Text + "'";
-                    MySqlCommand comando = new MySqlCommand(sQuery, conex);
+                    MySqlCommand comando = new MySqlCommand(sQuery, conect.rutaconectada());
                     MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
                     adaptador.Fill(dt);
                     DataRow fila = dt.Rows[0];

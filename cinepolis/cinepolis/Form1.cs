@@ -15,7 +15,7 @@ namespace cinepolis
     {
         
         encriptado encrip = new encriptado();
-
+        conexionymanipulacion conect = new conexionymanipulacion();
         public Form1()
         {
             InitializeComponent();
@@ -25,41 +25,33 @@ namespace cinepolis
         {
 
         }
-        public static MySqlConnection ObtenerConexion()
-        {
-            string sdireccion = "localhost";
-            string susuario = "root";
-            string spass = "";
-
-            MySqlConnection Conn = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
-            Conn.Open();
-                return Conn;
        
-        }
         private static int revisar(string f, string g)
         {
             int resultado = -1;
-            MySqlConnection conexion = ObtenerConexion();
-            MySqlCommand comando = new MySqlCommand(string.Format("Select nomusuario ,contusuario From usuario Where nomusuario = '{0}' and contusuario ='{1}'", f, g), conexion);
+            conexionymanipulacion conect = new conexionymanipulacion();
+            conect.Conectar();
+            MySqlCommand comando = new MySqlCommand(string.Format("Select nomusuario ,contusuario From usuario Where nomusuario = '{0}' and contusuario ='{1}'", f, g), conect.rutaconectada());
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
                 resultado = 50;
             }
-            conexion.Close();
+            conect.Desconectar();
             return resultado;
         }
         private void button1_Click(object sender, EventArgs e)
         {
             int resultado = -1;
-            MySqlConnection conexion = ObtenerConexion();
-            MySqlCommand comando = new MySqlCommand(string.Format("Select nomusuario ,pk_idrole From usuario Where nomusuario = '{0}' and pk_idrole  = 1", txt_usuario.Text), conexion);
+            conexionymanipulacion conect = new conexionymanipulacion();
+            conect.Conectar();
+            MySqlCommand comando = new MySqlCommand(string.Format("Select nomusuario ,pk_idrole From usuario Where nomusuario = '{0}' and pk_idrole  = 1", txt_usuario.Text), conect.rutaconectada());
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
                 resultado = 50;
             }
-            conexion.Close();
+            conect.Desconectar();
             if (revisar(txt_usuario.Text, encrip.EncryptKey(txt_pass.Text)) > 0)
             {
                 if (resultado > 0)

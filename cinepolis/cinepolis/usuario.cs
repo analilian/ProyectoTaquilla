@@ -17,10 +17,7 @@ namespace cinepolis
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla ="usuario";
         String Squeery = "select* from usuario";
-        MySqlConnection micon = new MySqlConnection("server = localhost; database=bdcinetopia; Uid=root;pwd=;");
-        string sdireccion = "localhost";
-        string susuario = "root";
-        string spass = "";
+
 
 
         public usuario()
@@ -333,14 +330,12 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
-                //se realiza la conexión a la base de datos
-                micon.Open();
+                conect.Conectar();
                 //se inicia un DataSet
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
                 String Query = "select pk_idrole, role from role;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, conect.Ruta());
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "Role");
                 cbo_nivelsusario.DataSource = ds.Tables[0].DefaultView;
@@ -348,7 +343,7 @@ namespace cinepolis
                 cbo_nivelsusario.ValueMember = ("pk_idrole");
                 //se indica el valor a desplegar en el combobox
                 cbo_nivelsusario.DisplayMember = ("role");
-                micon.Close();
+                conect.Desconectar();
             }
             catch (Exception ex)
             {
@@ -361,14 +356,14 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                conect.Conectar();
                 //se realiza la conexión a la base de datos
-                micon.Open();
+                
                 //se inicia un DataSet
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
                 String Query = "select pk_idempleado, nom1empleado from empleado;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, conect.Ruta());
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "Empleado");
                 cbo_elegirempleado.DataSource = ds.Tables[0].DefaultView;
@@ -376,7 +371,7 @@ namespace cinepolis
                 cbo_elegirempleado.ValueMember = ("pk_idempleado");
                 //se indica el valor a desplegar en el combobox
                 cbo_elegirempleado.DisplayMember = ("nom1empleado");
-                micon.Close();
+                
             }
             catch (Exception ex)
             {
@@ -388,14 +383,12 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
-                //se realiza la conexión a la base de datos
-                micon.Open();
+                conect.Conectar();
                 //se inicia un DataSet
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
                 String Query = "select pk_idrole, role from role;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, conect.Ruta());
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "Role");
                 cbo_modnivel.DataSource = ds.Tables[0].DefaultView;
@@ -403,7 +396,7 @@ namespace cinepolis
                 cbo_modnivel.ValueMember = ("pk_idrole");
                 //se indica el valor a desplegar en el combobox
                 cbo_modnivel.DisplayMember = ("role");
-                micon.Close();
+                conect.Desconectar();
             }
             catch (Exception ex)
             {
@@ -437,6 +430,11 @@ namespace cinepolis
             this.dgv_borrarusuario.Columns[3].HeaderText = "Empleado";
             this.dgv_borrarusuario.Columns[4].HeaderText = "Role";
             this.dgv_borrarusuario.Columns[2].Visible = false;
+
+        }
+
+        private void lbl_mantenimientodeusuario_Click(object sender, EventArgs e)
+        {
 
         }
     }

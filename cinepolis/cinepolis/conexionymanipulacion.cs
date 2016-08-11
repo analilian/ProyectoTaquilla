@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Drawing;
-using System.Data;
 
+//programador:Rodrigo Sifontes
 
 
 namespace cinepolis
@@ -16,15 +17,26 @@ namespace cinepolis
     
     class conexionymanipulacion
     {
-        string sdireccion = "localhost";
-        string susuario = "root";
-        string spass = "";
 
+        string connect = "server=localhost; database= bdcinetopia; Uid= root  ;pwd= ;";
         MySqlConnection conexion;
+        
         public void Conectar()
         {
-            conexion = new MySqlConnection("server='"+ sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+            conexion = new MySqlConnection(connect);
             conexion.Open();
+           
+        }
+        public MySqlConnection rutaconectada()
+        {
+            conexion = new MySqlConnection(connect);
+            conexion.Open();
+            return conexion;
+        }
+        public string Ruta ()
+        {
+            return connect;
+           
         }
         public void Desconectar()
         {

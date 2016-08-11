@@ -16,9 +16,7 @@ namespace cinepolis
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "cine";
         String Squeery = "select* from cine";
-        string sdireccion = "localhost";
-        string susuario = "root";
-        string spass = "";
+    
 
         public cine()
         {
@@ -226,14 +224,11 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
-                //se realiza la conexión a la base de datos
-                micon.Open();
-                //se inicia un DataSet
+                conect.Conectar();
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
                 String Query = "select pk_idregion, nombreregion from region;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query,conect.rutaconectada());
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "Region");
                 cbo_cine_region.DataSource = ds.Tables[0].DefaultView;
@@ -241,7 +236,7 @@ namespace cinepolis
                 cbo_cine_region.ValueMember = ("pk_idregion");
                 //se indica el valor a desplegar en el combobox
                 cbo_cine_region.DisplayMember = ("nombreregion");
-                micon.Close();
+                conect.Desconectar();
             }
             catch (Exception ex)
             {
@@ -256,14 +251,11 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
-                //se realiza la conexión a la base de datos
-                micon.Open();
-                //se inicia un DataSet
+                conect.Conectar();
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
                 String Query = "select pk_idregion, nombreregion from region;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query,conect.rutaconectada());
                 //se indica con quu tabla se llena
                 dad.Fill(ds, "Region");
                 cbo_region_mod.DataSource = ds.Tables[0].DefaultView;
@@ -271,7 +263,7 @@ namespace cinepolis
                 cbo_region_mod.ValueMember = ("pk_idregion");
                 //se indica el valor a desplegar en el combobox
                 cbo_region_mod.DisplayMember = ("nombreregion");
-                micon.Close();
+                conect.Desconectar();
             }
             catch (Exception ex)
             {

@@ -216,3 +216,4 @@ C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis
 C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
 C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
 C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.fecha.resources

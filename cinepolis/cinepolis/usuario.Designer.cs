@@ -91,6 +91,7 @@
             this.lbl_mantenimientodeusuario.Size = new System.Drawing.Size(736, 54);
             this.lbl_mantenimientodeusuario.TabIndex = 12;
             this.lbl_mantenimientodeusuario.Text = "MANTENIMIENTO DE USUARIO ";
+            this.lbl_mantenimientodeusuario.Click += new System.EventHandler(this.lbl_mantenimientodeusuario_Click);
             // 
             // lbl_modificar
             // 

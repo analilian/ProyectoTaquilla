@@ -140,6 +140,7 @@
             this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(469, 36);
             this.lbl_titulo_mantenimiento_cine.TabIndex = 13;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE EMPLEADO";
+            this.lbl_titulo_mantenimiento_cine.Click += new System.EventHandler(this.lbl_titulo_mantenimiento_cine_Click);
             // 
             // tabControl1
             // 
