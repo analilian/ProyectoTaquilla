@@ -164,28 +164,55 @@ E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.sala.reso
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe.config
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.exe
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.pdb
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.pdb
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.dll
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\Google.ProtocolBuffers.dll
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.xml
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.xml
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.categoria.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.cine.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.clasificacion.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.empleado.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Form1.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Horario.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.mantenimiento.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Properties.Resources.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.reportes.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.sala.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
-C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+F:\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe.config
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.exe
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.pdb
+F:\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe
+F:\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.pdb
+F:\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.dll
+F:\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\Google.ProtocolBuffers.dll
+F:\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.xml
+F:\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.xml
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.categoria.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.cine.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.clasificacion.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.empleado.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Form1.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Horario.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.mantenimiento.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Properties.Resources.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.reportes.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.sala.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+F:\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.fecha.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe.config
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.exe
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.pdb
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.exe
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\cinepolis.pdb
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.dll
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\Google.ProtocolBuffers.dll
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.xml
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.xml
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.categoria.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.cine.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.clasificacion.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.empleado.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.fecha.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Form1.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Horario.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.mantenimiento.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Properties.Resources.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.reportes.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.sala.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.seleccion.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
+C:\Users\Walter\Desktop\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache

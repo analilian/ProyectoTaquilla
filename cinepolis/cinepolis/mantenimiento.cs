@@ -19,9 +19,14 @@ namespace cinepolis
         MySqlCommand comand;
         conexionymanipulacion con = new conexionymanipulacion();
         String Stabla = "Pelicula";
+        string sdireccion = "localhost";
+        string susuario = "root";
+        string spass = "";
+
         MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root;pwd=;");
         string imgLoc;
         String Squeery = "select* from pelicula";
+        
         const string MySqlConnecionString = "server=localhost; database=bdcinetopia; Uid=root;pwd=;";
         public mantenimiento(string g)
         {
@@ -29,6 +34,9 @@ namespace cinepolis
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            
+
+
             nombre_columna();
             this.usuario = g;
             realizar();
@@ -63,6 +71,24 @@ namespace cinepolis
             r.ShowDialog();
         }
 
+
+        private void carga_dgv_cinessala() // VISTA DE DATAGRID DE LISTA DE EMPLEADOS
+        {
+            conexion.Open();
+
+            MySqlCommand peticion_dgv = new MySqlCommand("select a.pk_idcinesal, b.nomsala, c.nomcine from cinessala a, sala b, cine c where a.pk_idcine=c.pk_idcine and a.pk_idsala=b.pk_idsala ORDER BY `c`.`nomcine` ASC", conexion);
+
+            MySqlDataAdapter conn = new MySqlDataAdapter(peticion_dgv);
+            DataSet ds = new DataSet();
+            conn.Fill(ds);
+
+
+            dgv_relacion_pelicula_hora.DataSource = ds.Tables[0];
+            conexion.Close();
+
+        }
+
+
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -77,14 +103,17 @@ namespace cinepolis
         {
             cb1();
             cb2();
-        
+            cb4();
+            cb3();
             cb5();
-           
+            cb6();
             cb7();
-          
+            cb8();
+            cb9();
             cb10();
             cb11();
-           
+            cb12();
+            carga_dgv_cinessala();
         }
 
         public void limpiaringreso()
@@ -231,21 +260,21 @@ namespace cinepolis
             try
             {
                 codigo = this.dgv_modificar_pelicula.CurrentRow.Cells[0].Value.ToString();
-            txt_mod_nombre.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[1].Value.ToString();
-            txt_mod_descrip.Text=this.dgv_modificar_pelicula.CurrentRow.Cells[2].Value.ToString();
-        
-          
-            txt_mod_trailer.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[4].Value.ToString();
-           
-            cbo_mod_idioma.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[5].Value.ToString();
-            cbo_mod_clasificacion.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[6].Value.ToString();
-            cbo_mod_categoria.Text= this.dgv_modificar_pelicula.CurrentRow.Cells[7].Value.ToString();
-            cbo_mod_fecha.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[8].Value.ToString();
-            conexion.Open();
-           
+                txt_mod_nombre.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[1].Value.ToString();
+                txt_mod_descrip.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[2].Value.ToString();
+
+
+                txt_mod_trailer.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[4].Value.ToString();
+
+                cbo_mod_idioma.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[5].Value.ToString();
+                cbo_mod_clasificacion.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[6].Value.ToString();
+                cbo_mod_categoria.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[7].Value.ToString();
+                cbo_mod_fecha.Text = this.dgv_modificar_pelicula.CurrentRow.Cells[8].Value.ToString();
+                conexion.Open();
+
                 string sql = "Select imagenpelicula from pelicula where pk_idpelicula ='" + codigo + "'";
 
-               MySqlCommand command = new MySqlCommand(sql, conexion);
+                MySqlCommand command = new MySqlCommand(sql, conexion);
                 MySqlDataReader reader = command.ExecuteReader();
                 reader.Read();
 
@@ -267,6 +296,7 @@ namespace cinepolis
                 conexion.Close();
                 MessageBox.Show(ex.Message);
             }
+
 
         }
 
@@ -373,7 +403,7 @@ namespace cinepolis
         private void btn_agregar_horario_Click(object sender, EventArgs e)
         {
             this.Hide();
-             Horario r = new Horario();
+             fecha r = new fecha();
             r.ShowDialog();
         }
 
@@ -500,12 +530,12 @@ namespace cinepolis
 
         }
 
-
+        
         private void cb1()
         {
             try
             {
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';"); ;
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -535,7 +565,7 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -558,17 +588,72 @@ namespace cinepolis
             }
         }
 
-       
-        
+        private void cb3()
+        {
+            try
+            {
 
- 
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idcine, nomcine from cine;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Cine");
+                cbo_relacion_pelicula_cine1.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_pelicula_cine1.ValueMember = ("pk_idcine");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_pelicula_cine1.DisplayMember = ("nomcine");
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void cb4()
+        {
+            try
+            {
+                //string portal = "portales";
+                string portal = cbo_relacion_pelicula_cine1.Text;
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select a.pk_idcinesal, b.nomsala from cinessala a, sala b, cine c where a.pk_idcine=c.pk_idcine and a.pk_idsala=b.pk_idsala and c.nomcine= '"+ portal +"';";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Sala");
+                cbo_relacion_pelicula_sala1.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_pelicula_sala1.ValueMember = ("pk_idcinesal");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_pelicula_sala1.DisplayMember = ("nomsala");
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
 
         private void cb5()
         {
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -592,13 +677,42 @@ namespace cinepolis
         }
 
 
+        private void cb6()
+        {
+            try
+            {
+
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idproyeccion, nomtproyecccion from tipoproyeccion;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Proyeccion");
+                cbo_relacion_pelicula_proyeccion1.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_pelicula_proyeccion1.ValueMember = ("pk_idproyeccion");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_pelicula_proyeccion1.DisplayMember = ("nomtproyecccion");
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
 
         private void cb7()
         {
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -623,13 +737,70 @@ namespace cinepolis
 
 
 
+        private void cb8()
+        {
+            try
+            {
+
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idhorario, horainiciohor from horario;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Horario");
+                cbo_relacion_pelicula_hora1.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_pelicula_hora1.ValueMember = ("pk_idhorario");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_pelicula_hora1.DisplayMember = ("horainiciohor");
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void cb9()
+        {
+            try
+            {
+
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idpelicula, nompelicula from pelicula;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Pelicula");
+                cbo_relacion_pelicula.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_pelicula.ValueMember = ("pk_idpelicula");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_pelicula.DisplayMember = ("nompelicula");
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
         private void cb10()
         {
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -657,7 +828,7 @@ namespace cinepolis
         {
             try
             {
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -684,6 +855,76 @@ namespace cinepolis
         private void txt_mod_nombre_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void cb12()
+        {
+            try
+            {
+
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                //se realiza la conexión a la base de datos
+                micon.Open();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idfcar, fechainicar from fechascartelera;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Fecha");
+                cbo_fecha.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_fecha.ValueMember = ("pk_idfcar");
+                //se indica el valor a desplegar en el combobox
+                cbo_fecha.DisplayMember = ("fechainicar");
+                micon.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string pelicula_ralacion = cbo_relacion_pelicula.SelectedValue.ToString();
+            string sala_cine = this.dgv_relacion_pelicula_hora.CurrentRow.Cells[0].Value.ToString();
+            string proyeccion_relaci = cbo_relacion_pelicula_proyeccion1.SelectedValue.ToString();
+            string horario_relaci = cbo_relacion_pelicula_hora1.SelectedValue.ToString();
+
+
+            con.Conectar();
+            String Squery = "insert into cartelerapelicula (pk_idcinesal, pk_idpelicula, pk_idhorario, pk_idproyeccion) values('" + sala_cine + "', '" + pelicula_ralacion + "', '" + horario_relaci + "','" + proyeccion_relaci + "');";
+            con.EjecutarQuery(Squery);
+            MySqlConnection conex = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+            con.actualizargrid(dgv_insertar, Squeery, Stabla);
+            con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
+            con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+            nombre_columna();
+            con.Desconectar();
+        }
+
+        private void btn_agregar_relacion1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            sala r = new sala();
+            r.ShowDialog();
+        }
+
+        private void btn_agregar_relacion3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            cine r = new cine();
+            r.ShowDialog();
+        }
+
+        private void btn_agregar_relacion2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Horario r = new Horario();
+            r.ShowDialog();
         }
     }
 }

@@ -16,10 +16,14 @@ namespace cinepolis
     
     class conexionymanipulacion
     {
+        string sdireccion = "localhost";
+        string susuario = "root";
+        string spass = "";
+
         MySqlConnection conexion;
         public void Conectar()
         {
-            conexion = new MySqlConnection("server=localhost; database= bdcinetopia; Uid=root;pwd=;");
+            conexion = new MySqlConnection("server='"+ sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
             conexion.Open();
         }
         public void Desconectar()

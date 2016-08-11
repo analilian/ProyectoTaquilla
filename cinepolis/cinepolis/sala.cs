@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace cinepolis
 {
@@ -17,6 +18,9 @@ namespace cinepolis
         String Stabla1 = "cine";
         String Squeery = "select * from sala";
         String Squeery1 = "select * from cine";
+        string sdireccion = "localhost";
+        string susuario = "root";
+        string spass = "";
         public sala()
         {
             InitializeComponent();
@@ -45,8 +49,24 @@ namespace cinepolis
                 {
                     string scodigo = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "insert into  sala (nomsala) values('" + txt_sala.Text + ");";
+                    String Squery = "insert into  sala (nomsala) values('" + txt_sala.Text + "');";
                     conect.EjecutarQuery(Squery);
+                    MySqlConnection conex = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+
+                    //----------------------sirve para obtener el dato de una columna de una tabla
+                    DataTable dt = new DataTable();
+                    String sQuery = "SELECT pk_idsala FROM sala WHERE nomsala= '"+ txt_sala.Text + "'";
+                    MySqlCommand comando = new MySqlCommand(sQuery, conex);
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                    adaptador.Fill(dt);
+                    DataRow fila = dt.Rows[0];
+                    string sid = Convert.ToString(fila[0]);
+                    //MessageBox.Show(sid);
+
+                    //------inserta en tabla intermedia cinessala-------------------------------
+                    String Squery1 = "insert into  cinessala (pk_idcine,pk_idsala) values('" + scodigo + "','"+ sid +"');";
+                    conect.EjecutarQuery(Squery1);
+                    //------Actualizar datagrid------------------------
                     conect.actualizargrid(dgv_modsala, Squeery, Stabla);
                     conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
                     conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);

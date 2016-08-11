@@ -14,6 +14,10 @@ namespace cinepolis
     public partial class empleado : Form
     {
         conexionymanipulacion conect = new conexionymanipulacion();
+        string sdireccion = "localhost";
+        string susuario = "root";
+        string spass = "";
+
         String Stabla = "empleado";
         String Squeery = "select * from empleado";
        
@@ -493,9 +497,9 @@ namespace cinepolis
         {
             try
             {
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
-            //se realiza la conexión a la base de datos
-            micon.Open();
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                //se realiza la conexión a la base de datos
+                micon.Open();
             //se inicia un DataSet
             DataSet ds = new DataSet();
             //se indica la consulta en sql
@@ -522,7 +526,7 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -550,7 +554,7 @@ namespace cinepolis
         {
             try
             {
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -579,7 +583,7 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet

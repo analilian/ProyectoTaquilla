@@ -38,6 +38,7 @@
             this.cbo_mod_fecha = new System.Windows.Forms.ComboBox();
             this.cbo_mod_categoria = new System.Windows.Forms.ComboBox();
             this.lbl_mod_categoria = new System.Windows.Forms.Label();
+            this.cbo_mod_clasificacion = new System.Windows.Forms.ComboBox();
             this.lbl_mod_clasificacion = new System.Windows.Forms.Label();
             this.cbo_mod_idioma = new System.Windows.Forms.ComboBox();
             this.lbl_mod_idioma = new System.Windows.Forms.Label();
@@ -85,7 +86,7 @@
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_buscar_pelicula = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_relacion_pelicula = new System.Windows.Forms.Button();
             this.btn_agregar_relacion4 = new System.Windows.Forms.Button();
             this.cbo_relacion_pelicula_proyeccion1 = new System.Windows.Forms.ComboBox();
             this.lbl_relacion_proyeccion = new System.Windows.Forms.Label();
@@ -97,7 +98,7 @@
             this.lbl_relacion_cine1 = new System.Windows.Forms.Label();
             this.cbo_relacion_pelicula_hora1 = new System.Windows.Forms.ComboBox();
             this.cbo_relacion_pelicula_sala1 = new System.Windows.Forms.ComboBox();
-            this.cbo_relacion_pelicula_sala = new System.Windows.Forms.ComboBox();
+            this.cbo_relacion_pelicula = new System.Windows.Forms.ComboBox();
             this.lbl_relacion_Hora1 = new System.Windows.Forms.Label();
             this.lbl_relacion_sala1 = new System.Windows.Forms.Label();
             this.lbl_relacion_pelicula1 = new System.Windows.Forms.Label();
@@ -108,7 +109,6 @@
             this.btn_regresar = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
-            this.cbo_mod_clasificacion = new System.Windows.Forms.ComboBox();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).BeginInit();
@@ -235,6 +235,14 @@
             this.lbl_mod_categoria.Size = new System.Drawing.Size(95, 21);
             this.lbl_mod_categoria.TabIndex = 69;
             this.lbl_mod_categoria.Text = "Categoria:";
+            // 
+            // cbo_mod_clasificacion
+            // 
+            this.cbo_mod_clasificacion.FormattingEnabled = true;
+            this.cbo_mod_clasificacion.Location = new System.Drawing.Point(208, 151);
+            this.cbo_mod_clasificacion.Name = "cbo_mod_clasificacion";
+            this.cbo_mod_clasificacion.Size = new System.Drawing.Size(151, 21);
+            this.cbo_mod_clasificacion.TabIndex = 68;
             // 
             // lbl_mod_clasificacion
             // 
@@ -455,7 +463,7 @@
             this.btn_agregar_horario.Name = "btn_agregar_horario";
             this.btn_agregar_horario.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_horario.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.btn_agregar_horario, "Agregar Horario");
+            this.toolTip1.SetToolTip(this.btn_agregar_horario, "Agregar Fecha");
             this.btn_agregar_horario.UseVisualStyleBackColor = true;
             this.btn_agregar_horario.Click += new System.EventHandler(this.btn_agregar_horario_Click);
             // 
@@ -737,7 +745,7 @@
             // 
             this.tabPage4.AutoScroll = true;
             this.tabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.btn_relacion_pelicula);
             this.tabPage4.Controls.Add(this.btn_agregar_relacion4);
             this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_proyeccion1);
             this.tabPage4.Controls.Add(this.lbl_relacion_proyeccion);
@@ -749,7 +757,7 @@
             this.tabPage4.Controls.Add(this.lbl_relacion_cine1);
             this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_hora1);
             this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_sala1);
-            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_sala);
+            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula);
             this.tabPage4.Controls.Add(this.lbl_relacion_Hora1);
             this.tabPage4.Controls.Add(this.lbl_relacion_sala1);
             this.tabPage4.Controls.Add(this.lbl_relacion_pelicula1);
@@ -763,16 +771,17 @@
             this.tabPage4.Text = "Relación de películas";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // button3
+            // btn_relacion_pelicula
             // 
-            this.button3.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(637, 138);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 73);
-            this.button3.TabIndex = 97;
-            this.toolTip1.SetToolTip(this.button3, "Guardar");
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_relacion_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
+            this.btn_relacion_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_relacion_pelicula.Location = new System.Drawing.Point(637, 138);
+            this.btn_relacion_pelicula.Name = "btn_relacion_pelicula";
+            this.btn_relacion_pelicula.Size = new System.Drawing.Size(90, 73);
+            this.btn_relacion_pelicula.TabIndex = 97;
+            this.toolTip1.SetToolTip(this.btn_relacion_pelicula, "Guardar");
+            this.btn_relacion_pelicula.UseVisualStyleBackColor = true;
+            this.btn_relacion_pelicula.Click += new System.EventHandler(this.button3_Click);
             // 
             // btn_agregar_relacion4
             // 
@@ -814,6 +823,7 @@
             this.btn_agregar_relacion3.TabIndex = 89;
             this.toolTip1.SetToolTip(this.btn_agregar_relacion3, "Agregar relacion Pelicula - Cine");
             this.btn_agregar_relacion3.UseVisualStyleBackColor = true;
+            this.btn_agregar_relacion3.Click += new System.EventHandler(this.btn_agregar_relacion3_Click);
             // 
             // btn_agregar_relacion2
             // 
@@ -825,6 +835,7 @@
             this.btn_agregar_relacion2.TabIndex = 88;
             this.toolTip1.SetToolTip(this.btn_agregar_relacion2, "Agregar relacion Pelicula - Horario");
             this.btn_agregar_relacion2.UseVisualStyleBackColor = true;
+            this.btn_agregar_relacion2.Click += new System.EventHandler(this.btn_agregar_relacion2_Click);
             // 
             // btn_agregar_relacion1
             // 
@@ -836,6 +847,7 @@
             this.btn_agregar_relacion1.TabIndex = 87;
             this.toolTip1.SetToolTip(this.btn_agregar_relacion1, "Agregar relacion Pelicula - Sala");
             this.btn_agregar_relacion1.UseVisualStyleBackColor = true;
+            this.btn_agregar_relacion1.Click += new System.EventHandler(this.btn_agregar_relacion1_Click);
             // 
             // dgv_relacion_pelicula_hora
             // 
@@ -851,6 +863,7 @@
             // 
             // cbo_relacion_pelicula_cine1
             // 
+            this.cbo_relacion_pelicula_cine1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_relacion_pelicula_cine1.FormattingEnabled = true;
             this.cbo_relacion_pelicula_cine1.Location = new System.Drawing.Point(62, 89);
             this.cbo_relacion_pelicula_cine1.Name = "cbo_relacion_pelicula_cine1";
@@ -885,13 +898,13 @@
             this.cbo_relacion_pelicula_sala1.TabIndex = 33;
             this.cbo_relacion_pelicula_sala1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // cbo_relacion_pelicula_sala
+            // cbo_relacion_pelicula
             // 
-            this.cbo_relacion_pelicula_sala.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_sala.Location = new System.Drawing.Point(111, 28);
-            this.cbo_relacion_pelicula_sala.Name = "cbo_relacion_pelicula_sala";
-            this.cbo_relacion_pelicula_sala.Size = new System.Drawing.Size(284, 21);
-            this.cbo_relacion_pelicula_sala.TabIndex = 32;
+            this.cbo_relacion_pelicula.FormattingEnabled = true;
+            this.cbo_relacion_pelicula.Location = new System.Drawing.Point(111, 28);
+            this.cbo_relacion_pelicula.Name = "cbo_relacion_pelicula";
+            this.cbo_relacion_pelicula.Size = new System.Drawing.Size(284, 21);
+            this.cbo_relacion_pelicula.TabIndex = 32;
             // 
             // lbl_relacion_Hora1
             // 
@@ -986,14 +999,6 @@
             this.btn_cerrarsesion.Text = "Cerrar Sesión";
             this.btn_cerrarsesion.UseVisualStyleBackColor = true;
             this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cbo_mod_clasificacion
-            // 
-            this.cbo_mod_clasificacion.FormattingEnabled = true;
-            this.cbo_mod_clasificacion.Location = new System.Drawing.Point(208, 151);
-            this.cbo_mod_clasificacion.Name = "cbo_mod_clasificacion";
-            this.cbo_mod_clasificacion.Size = new System.Drawing.Size(151, 21);
-            this.cbo_mod_clasificacion.TabIndex = 68;
             // 
             // mantenimiento
             // 
@@ -1104,13 +1109,13 @@
         private System.Windows.Forms.Label lbl_relacion_cine1;
         private System.Windows.Forms.ComboBox cbo_relacion_pelicula_hora1;
         private System.Windows.Forms.ComboBox cbo_relacion_pelicula_sala1;
-        private System.Windows.Forms.ComboBox cbo_relacion_pelicula_sala;
+        private System.Windows.Forms.ComboBox cbo_relacion_pelicula;
         private System.Windows.Forms.Label lbl_relacion_Hora1;
         private System.Windows.Forms.Label lbl_relacion_sala1;
         private System.Windows.Forms.Label lbl_relacion_pelicula1;
         private System.Windows.Forms.Label lbl_relacion1;
         private System.Windows.Forms.Label lbl_titulo_ralacion;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_relacion_pelicula;
         private System.Windows.Forms.ComboBox cbo_mod_clasificacion;
     }
 }

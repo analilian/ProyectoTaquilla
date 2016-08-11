@@ -17,8 +17,10 @@ namespace cinepolis
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla ="usuario";
         String Squeery = "select* from usuario";
-        MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
-
+        MySqlConnection micon = new MySqlConnection("server = localhost; database=bdcinetopia; Uid=root;pwd=;");
+        string sdireccion = "localhost";
+        string susuario = "root";
+        string spass = "";
 
 
         public usuario()
@@ -66,6 +68,7 @@ namespace cinepolis
         private void button3_Click(object sender, EventArgs e)
         {
             string convrole = cbo_nivelsusario.SelectedValue.ToString();
+            string convemp = cbo_elegirempleado.SelectedValue.ToString();
 
             if (txt_nombreusuario.Text == "" || txt_pasusuario.Text == "" || txt_confirmar.Text == "" || cbo_nivelsusario.Text == "")
             {
@@ -83,7 +86,7 @@ namespace cinepolis
                     if (cbo_nivelsusario.Text == "administrativo")
                     {
                         
-                        String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + cbo_elegirempleado.Text + "');";
+                        String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + convemp + "');";
                         conect.EjecutarQuery(Squery);
                         limpiaringresar();
                     }
@@ -91,7 +94,7 @@ namespace cinepolis
                     {
 
                         
-                        String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + cbo_elegirempleado.Text + "');";
+                        String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + convemp + "');";
                         conect.EjecutarQuery(Squery);
                         limpiaringresar();
                     }
@@ -330,7 +333,7 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet
@@ -357,16 +360,22 @@ namespace cinepolis
         {
             try
             {
-            
-                string s = "select * from bdcinetopia.empleado";
 
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+                //se realiza la conexión a la base de datos
                 micon.Open();
-                MySqlCommand mcd = new MySqlCommand(s, micon);
-                MySqlDataReader mdr = mcd.ExecuteReader();
-                while (mdr.Read())
-                {
-                    cbo_elegirempleado.Items.Add(mdr.GetString("pk_idempleado"));
-                }
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idempleado, nom1empleado from empleado;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, micon);
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Empleado");
+                cbo_elegirempleado.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_elegirempleado.ValueMember = ("pk_idempleado");
+                //se indica el valor a desplegar en el combobox
+                cbo_elegirempleado.DisplayMember = ("nom1empleado");
                 micon.Close();
             }
             catch (Exception ex)
@@ -379,7 +388,7 @@ namespace cinepolis
             try
             {
 
-                MySqlConnection micon = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+                MySqlConnection micon = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
                 //se realiza la conexión a la base de datos
                 micon.Open();
                 //se inicia un DataSet

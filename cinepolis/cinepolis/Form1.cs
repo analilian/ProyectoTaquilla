@@ -13,22 +13,26 @@ namespace cinepolis
 {
     public partial class Form1 : Form
     {
+        
         encriptado encrip = new encriptado();
 
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
         public static MySqlConnection ObtenerConexion()
         {
-           
-                MySqlConnection Conn = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
-                Conn.Open();
+            string sdireccion = "localhost";
+            string susuario = "root";
+            string spass = "";
+
+            MySqlConnection Conn = new MySqlConnection("server='" + sdireccion + "'; database= bdcinetopia; Uid= '" + susuario + "' ;pwd=  '" + spass + "';");
+            Conn.Open();
                 return Conn;
        
         }
