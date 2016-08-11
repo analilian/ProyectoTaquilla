@@ -183,6 +183,7 @@
             this.btnHor4.Size = new System.Drawing.Size(60, 48);
             this.btnHor4.TabIndex = 22;
             this.btnHor4.UseVisualStyleBackColor = false;
+            this.btnHor4.Click += new System.EventHandler(this.btnHor4_Click);
             // 
             // btnHor5
             // 
@@ -194,6 +195,7 @@
             this.btnHor5.Size = new System.Drawing.Size(60, 48);
             this.btnHor5.TabIndex = 23;
             this.btnHor5.UseVisualStyleBackColor = false;
+            this.btnHor5.Click += new System.EventHandler(this.btnHor5_Click);
             // 
             // btnHor6
             // 
@@ -205,6 +207,7 @@
             this.btnHor6.Size = new System.Drawing.Size(62, 48);
             this.btnHor6.TabIndex = 24;
             this.btnHor6.UseVisualStyleBackColor = false;
+            this.btnHor6.Click += new System.EventHandler(this.btnHor6_Click);
             // 
             // btnHor11
             // 
@@ -216,6 +219,7 @@
             this.btnHor11.Size = new System.Drawing.Size(59, 48);
             this.btnHor11.TabIndex = 29;
             this.btnHor11.UseVisualStyleBackColor = false;
+            this.btnHor11.Click += new System.EventHandler(this.btnHor11_Click);
             // 
             // groupBox1
             // 
@@ -386,6 +390,7 @@
             this.btnHor8.Size = new System.Drawing.Size(62, 48);
             this.btnHor8.TabIndex = 36;
             this.btnHor8.UseVisualStyleBackColor = false;
+            this.btnHor8.Click += new System.EventHandler(this.btnHor8_Click);
             // 
             // btnHor9
             // 
@@ -397,6 +402,7 @@
             this.btnHor9.Size = new System.Drawing.Size(62, 48);
             this.btnHor9.TabIndex = 37;
             this.btnHor9.UseVisualStyleBackColor = false;
+            this.btnHor9.Click += new System.EventHandler(this.btnHor9_Click);
             // 
             // btnHor14
             // 
@@ -408,6 +414,7 @@
             this.btnHor14.Size = new System.Drawing.Size(58, 48);
             this.btnHor14.TabIndex = 38;
             this.btnHor14.UseVisualStyleBackColor = false;
+            this.btnHor14.Click += new System.EventHandler(this.btnHor14_Click);
             // 
             // btnHor10
             // 
@@ -419,6 +426,7 @@
             this.btnHor10.Size = new System.Drawing.Size(62, 48);
             this.btnHor10.TabIndex = 39;
             this.btnHor10.UseVisualStyleBackColor = false;
+            this.btnHor10.Click += new System.EventHandler(this.btnHor10_Click);
             // 
             // btnHor15
             // 
@@ -430,6 +438,7 @@
             this.btnHor15.Size = new System.Drawing.Size(67, 48);
             this.btnHor15.TabIndex = 40;
             this.btnHor15.UseVisualStyleBackColor = false;
+            this.btnHor15.Click += new System.EventHandler(this.btnHor15_Click);
             // 
             // btnHor12
             // 
@@ -441,6 +450,7 @@
             this.btnHor12.Size = new System.Drawing.Size(59, 48);
             this.btnHor12.TabIndex = 41;
             this.btnHor12.UseVisualStyleBackColor = false;
+            this.btnHor12.Click += new System.EventHandler(this.btnHor12_Click);
             // 
             // btnHor13
             // 
@@ -452,6 +462,7 @@
             this.btnHor13.Size = new System.Drawing.Size(59, 48);
             this.btnHor13.TabIndex = 42;
             this.btnHor13.UseVisualStyleBackColor = false;
+            this.btnHor13.Click += new System.EventHandler(this.btnHor13_Click);
             // 
             // lbltitulo1
             // 

@@ -148,8 +148,14 @@
   <data name="reloj" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\reloj.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mas1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="proyeccion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\proyeccion (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,22 +166,22 @@
   <data name="reloj1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\reloj.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="proyeccion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\proyeccion (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="proyeccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\proyeccion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="calendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\calendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gris" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="proyeccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\proyeccion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="foto4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\foto4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menos1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

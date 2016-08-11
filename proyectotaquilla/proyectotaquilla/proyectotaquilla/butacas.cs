@@ -12,7 +12,7 @@ namespace proyectotaquilla
 {
     public partial class butacas : Form
     {
-        public butacas()
+        public butacas(int cantidad,int totalpago)
         {
             InitializeComponent();
         }
@@ -42,27 +42,7 @@ namespace proyectotaquilla
         public void tipo_de_boleto()
         {
            
-            if (rbdAdulto.Checked)
-            {
-                precio = 37;
-                lblValorTotal.Text = precio.ToString();
-            }
-            else
-                if (rbdNiño.Checked)
-                {
-
-                    precio = 27;
-                    lblValorTotal.Text = precio.ToString();
-                }
-                else
-                    if (rdbTerceraEdad.Checked) { 
-                        precio = 25;
-                        lblValorTotal.Text = precio.ToString();
-                    }
-                    else {
-                        precio = 0; 
-                    }
-
+           
             
         }
         private void chkA1_CheckedChanged(object sender, EventArgs e)
@@ -705,9 +685,7 @@ namespace proyectotaquilla
 
         private void txtprecio_TextChanged(object sender, EventArgs e)
         {
-            double precio = 200;
-            precio = Convert.ToInt32(txtprecio.Text);
-            precio = double.Parse(txtprecio.Text);
+         
         }
     }
 }

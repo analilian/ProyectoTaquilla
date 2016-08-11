@@ -29,17 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtprecio = new System.Windows.Forms.TextBox();
             this.btnIraPago = new System.Windows.Forms.Button();
             this.lblValorTotal = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.grpPrecioyTipo = new System.Windows.Forms.GroupBox();
-            this.rdbTerceraEdad = new System.Windows.Forms.RadioButton();
-            this.lblPrecioTercera = new System.Windows.Forms.Label();
-            this.rbdNiño = new System.Windows.Forms.RadioButton();
-            this.lblPrecioNiño = new System.Windows.Forms.Label();
-            this.rbdAdulto = new System.Windows.Forms.RadioButton();
-            this.lblPrecioAdulto = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblSeleccionado = new System.Windows.Forms.Label();
             this.picDesocupado = new System.Windows.Forms.PictureBox();
@@ -96,7 +88,6 @@
             this.picPantalla = new System.Windows.Forms.PictureBox();
             this.chkA1 = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
-            this.grpPrecioyTipo.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDesocupado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRojo)).BeginInit();
@@ -107,31 +98,21 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtprecio);
             this.groupBox3.Controls.Add(this.btnIraPago);
             this.groupBox3.Controls.Add(this.lblValorTotal);
             this.groupBox3.Controls.Add(this.lblTotal);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox3.Location = new System.Drawing.Point(668, 236);
+            this.groupBox3.Location = new System.Drawing.Point(634, 289);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(249, 122);
+            this.groupBox3.Size = new System.Drawing.Size(305, 76);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pago";
             // 
-            // txtprecio
-            // 
-            this.txtprecio.ForeColor = System.Drawing.Color.Yellow;
-            this.txtprecio.Location = new System.Drawing.Point(126, 60);
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(100, 20);
-            this.txtprecio.TabIndex = 9;
-            this.txtprecio.TextChanged += new System.EventHandler(this.txtprecio_TextChanged);
-            // 
             // btnIraPago
             // 
             this.btnIraPago.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIraPago.Location = new System.Drawing.Point(32, 60);
+            this.btnIraPago.Location = new System.Drawing.Point(224, 31);
             this.btnIraPago.Name = "btnIraPago";
             this.btnIraPago.Size = new System.Drawing.Size(75, 23);
             this.btnIraPago.TabIndex = 8;
@@ -142,7 +123,7 @@
             // lblValorTotal
             // 
             this.lblValorTotal.AutoSize = true;
-            this.lblValorTotal.Location = new System.Drawing.Point(148, 31);
+            this.lblValorTotal.Location = new System.Drawing.Point(123, 32);
             this.lblValorTotal.Name = "lblValorTotal";
             this.lblValorTotal.Size = new System.Drawing.Size(45, 13);
             this.lblValorTotal.TabIndex = 7;
@@ -152,87 +133,11 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(55, 31);
+            this.lblTotal.Location = new System.Drawing.Point(30, 32);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(31, 13);
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Total";
-            // 
-            // grpPrecioyTipo
-            // 
-            this.grpPrecioyTipo.Controls.Add(this.rdbTerceraEdad);
-            this.grpPrecioyTipo.Controls.Add(this.lblPrecioTercera);
-            this.grpPrecioyTipo.Controls.Add(this.rbdNiño);
-            this.grpPrecioyTipo.Controls.Add(this.lblPrecioNiño);
-            this.grpPrecioyTipo.Controls.Add(this.rbdAdulto);
-            this.grpPrecioyTipo.Controls.Add(this.lblPrecioAdulto);
-            this.grpPrecioyTipo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpPrecioyTipo.Location = new System.Drawing.Point(668, 30);
-            this.grpPrecioyTipo.Name = "grpPrecioyTipo";
-            this.grpPrecioyTipo.Size = new System.Drawing.Size(249, 169);
-            this.grpPrecioyTipo.TabIndex = 10;
-            this.grpPrecioyTipo.TabStop = false;
-            this.grpPrecioyTipo.Text = "Precio y Tipo de Boleto";
-            // 
-            // rdbTerceraEdad
-            // 
-            this.rdbTerceraEdad.AutoSize = true;
-            this.rdbTerceraEdad.Location = new System.Drawing.Point(25, 113);
-            this.rdbTerceraEdad.Name = "rdbTerceraEdad";
-            this.rdbTerceraEdad.Size = new System.Drawing.Size(90, 17);
-            this.rdbTerceraEdad.TabIndex = 5;
-            this.rdbTerceraEdad.TabStop = true;
-            this.rdbTerceraEdad.Text = "Tercera Edad";
-            this.rdbTerceraEdad.UseVisualStyleBackColor = true;
-            // 
-            // lblPrecioTercera
-            // 
-            this.lblPrecioTercera.AutoSize = true;
-            this.lblPrecioTercera.Location = new System.Drawing.Point(168, 117);
-            this.lblPrecioTercera.Name = "lblPrecioTercera";
-            this.lblPrecioTercera.Size = new System.Drawing.Size(30, 13);
-            this.lblPrecioTercera.TabIndex = 4;
-            this.lblPrecioTercera.Text = "Q.25";
-            // 
-            // rbdNiño
-            // 
-            this.rbdNiño.AutoSize = true;
-            this.rbdNiño.Location = new System.Drawing.Point(25, 76);
-            this.rbdNiño.Name = "rbdNiño";
-            this.rbdNiño.Size = new System.Drawing.Size(55, 17);
-            this.rbdNiño.TabIndex = 3;
-            this.rbdNiño.TabStop = true;
-            this.rbdNiño.Text = "Niños ";
-            this.rbdNiño.UseVisualStyleBackColor = true;
-            // 
-            // lblPrecioNiño
-            // 
-            this.lblPrecioNiño.AutoSize = true;
-            this.lblPrecioNiño.Location = new System.Drawing.Point(168, 80);
-            this.lblPrecioNiño.Name = "lblPrecioNiño";
-            this.lblPrecioNiño.Size = new System.Drawing.Size(30, 13);
-            this.lblPrecioNiño.TabIndex = 2;
-            this.lblPrecioNiño.Text = "Q.27";
-            // 
-            // rbdAdulto
-            // 
-            this.rbdAdulto.AutoSize = true;
-            this.rbdAdulto.Location = new System.Drawing.Point(25, 36);
-            this.rbdAdulto.Name = "rbdAdulto";
-            this.rbdAdulto.Size = new System.Drawing.Size(63, 17);
-            this.rbdAdulto.TabIndex = 1;
-            this.rbdAdulto.TabStop = true;
-            this.rbdAdulto.Text = "Adultos ";
-            this.rbdAdulto.UseVisualStyleBackColor = true;
-            // 
-            // lblPrecioAdulto
-            // 
-            this.lblPrecioAdulto.AutoSize = true;
-            this.lblPrecioAdulto.Location = new System.Drawing.Point(168, 40);
-            this.lblPrecioAdulto.Name = "lblPrecioAdulto";
-            this.lblPrecioAdulto.Size = new System.Drawing.Size(30, 13);
-            this.lblPrecioAdulto.TabIndex = 0;
-            this.lblPrecioAdulto.Text = "Q.37";
             // 
             // groupBox4
             // 
@@ -244,9 +149,9 @@
             this.groupBox4.Controls.Add(this.picSeleccionado);
             this.groupBox4.Controls.Add(this.lblOcupado);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox4.Location = new System.Drawing.Point(145, 372);
+            this.groupBox4.Location = new System.Drawing.Point(631, 13);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(470, 73);
+            this.groupBox4.Size = new System.Drawing.Size(308, 138);
             this.groupBox4.TabIndex = 9;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Especificacion";
@@ -254,7 +159,7 @@
             // lblSeleccionado
             // 
             this.lblSeleccionado.AutoSize = true;
-            this.lblSeleccionado.Location = new System.Drawing.Point(294, 45);
+            this.lblSeleccionado.Location = new System.Drawing.Point(87, 101);
             this.lblSeleccionado.Name = "lblSeleccionado";
             this.lblSeleccionado.Size = new System.Drawing.Size(72, 13);
             this.lblSeleccionado.TabIndex = 9;
@@ -276,7 +181,7 @@
             this.picRojo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picRojo.Location = new System.Drawing.Point(79, 30);
             this.picRojo.Name = "picRojo";
-            this.picRojo.Size = new System.Drawing.Size(31, 30);
+            this.picRojo.Size = new System.Drawing.Size(44, 30);
             this.picRojo.TabIndex = 7;
             this.picRojo.TabStop = false;
             // 
@@ -293,9 +198,9 @@
             // 
             this.picSeleccionado.BackgroundImage = global::proyectotaquilla.Properties.Resources.verde;
             this.picSeleccionado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picSeleccionado.Location = new System.Drawing.Point(372, 30);
+            this.picSeleccionado.Location = new System.Drawing.Point(177, 84);
             this.picSeleccionado.Name = "picSeleccionado";
-            this.picSeleccionado.Size = new System.Drawing.Size(31, 30);
+            this.picSeleccionado.Size = new System.Drawing.Size(38, 30);
             this.picSeleccionado.TabIndex = 5;
             this.picSeleccionado.TabStop = false;
             // 
@@ -973,17 +878,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1005, 456);
+            this.ClientSize = new System.Drawing.Size(990, 377);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.grpPrecioyTipo);
             this.Controls.Add(this.groupBox4);
             this.Name = "butacas";
             this.Text = "butacas";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.grpPrecioyTipo.ResumeLayout(false);
-            this.grpPrecioyTipo.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDesocupado)).EndInit();
@@ -1002,13 +904,6 @@
         private System.Windows.Forms.Button btnIraPago;
         private System.Windows.Forms.Label lblValorTotal;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.GroupBox grpPrecioyTipo;
-        private System.Windows.Forms.RadioButton rdbTerceraEdad;
-        private System.Windows.Forms.Label lblPrecioTercera;
-        private System.Windows.Forms.RadioButton rbdNiño;
-        private System.Windows.Forms.Label lblPrecioNiño;
-        private System.Windows.Forms.RadioButton rbdAdulto;
-        private System.Windows.Forms.Label lblPrecioAdulto;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblSeleccionado;
         private System.Windows.Forms.PictureBox picDesocupado;
@@ -1064,7 +959,6 @@
         private System.Windows.Forms.CheckBox chkA2;
         private System.Windows.Forms.PictureBox picPantalla;
         private System.Windows.Forms.CheckBox chkA1;
-        private System.Windows.Forms.TextBox txtprecio;
 
     }
 }

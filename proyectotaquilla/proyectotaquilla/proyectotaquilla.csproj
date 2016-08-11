@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boletos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boletos.Designer.cs">
+      <DependentUpon>Boletos.cs</DependentUpon>
+    </Compile>
     <Compile Include="butacas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="sinopsis.Designer.cs">
       <DependentUpon>sinopsis.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Boletos.resx">
+      <DependentUpon>Boletos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="butacas.resx">
       <DependentUpon>butacas.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +205,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

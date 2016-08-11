@@ -50,24 +50,30 @@ namespace proyectotaquilla
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            butacas butacas = new butacas();
+            boletos boletos = new boletos();
             this.Hide();
-            butacas.Show();
+            boletos.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
         }
         
         private void cartelera_Load(object sender, EventArgs e)
@@ -131,6 +137,83 @@ namespace proyectotaquilla
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnHor4_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor5_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor6_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor8_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor9_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor10_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor11_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor12_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor13_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor14_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
+        }
+
+        private void btnHor15_Click(object sender, EventArgs e)
+        {
+            boletos boletos = new boletos();
+            this.Hide();
+            boletos.Show();
         }
     }
 
