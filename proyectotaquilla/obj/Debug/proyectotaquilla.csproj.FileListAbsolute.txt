@@ -53,3 +53,21 @@ C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla
 C:\Users\Ana Lilian\Downloads\ProyectoTaquilla\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.GenerateResource.Cache
 =======
 >>>>>>> 1dbda8f4cbdec9c58824dedeb28726dcf95c062f
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\bin\Debug\proyectotaquilla.exe.config
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.ResolveComReference.cache
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.exe
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.pdb
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\bin\Debug\proyectotaquilla.exe
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\bin\Debug\proyectotaquilla.pdb
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\bin\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csprojResolveAssemblyReference.cache
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.butacas.resources
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.cartelera.resources
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.pago.resources
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.FPrincipal.resources
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.Properties.Resources.resources
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.sinopsis.resources
+C:\Users\Ana Lilian\Desktop\ProyectoTaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.GenerateResource.Cache

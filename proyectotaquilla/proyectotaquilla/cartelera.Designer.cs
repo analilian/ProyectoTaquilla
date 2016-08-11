@@ -28,91 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.letiqueta4 = new System.Windows.Forms.Label();
-            this.btnSinopsis1 = new System.Windows.Forms.Button();
-            this.btnSinopsis2 = new System.Windows.Forms.Button();
-            this.btnSinopsis3 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.btnHorario1 = new System.Windows.Forms.Button();
-            this.btnHorario2 = new System.Windows.Forms.Button();
-            this.btnHorario3 = new System.Windows.Forms.Button();
-            this.btnHorario4 = new System.Windows.Forms.Button();
-            this.btnHorario5 = new System.Windows.Forms.Button();
-            this.btnHorario6 = new System.Windows.Forms.Button();
-            this.btnHorario11 = new System.Windows.Forms.Button();
-            this.gBProyeccion = new System.Windows.Forms.GroupBox();
+            this.btnHor1 = new System.Windows.Forms.Button();
+            this.btnHor2 = new System.Windows.Forms.Button();
+            this.btnHor3 = new System.Windows.Forms.Button();
+            this.btnHor4 = new System.Windows.Forms.Button();
+            this.btnHor5 = new System.Windows.Forms.Button();
+            this.btnHor6 = new System.Windows.Forms.Button();
+            this.btnHor11 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbProyeccion = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.pBProyeccion = new System.Windows.Forms.PictureBox();
-            this.letiqueta5 = new System.Windows.Forms.Label();
-            this.pBCalendario = new System.Windows.Forms.PictureBox();
-            this.letiqueta3 = new System.Windows.Forms.Label();
-            this.pbHorario = new System.Windows.Forms.PictureBox();
-            this.letiqueta2 = new System.Windows.Forms.Label();
-            this.pBpelicula3 = new System.Windows.Forms.PictureBox();
-            this.pBpelicula2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pbImagen3 = new System.Windows.Forms.PictureBox();
+            this.pbImagen2 = new System.Windows.Forms.PictureBox();
             this.pbImagen1 = new System.Windows.Forms.PictureBox();
-            this.btnHorario7 = new System.Windows.Forms.Button();
-            this.btnHorario8 = new System.Windows.Forms.Button();
-            this.btnHorario9 = new System.Windows.Forms.Button();
-            this.btnHorario14 = new System.Windows.Forms.Button();
-            this.btnHorario10 = new System.Windows.Forms.Button();
-            this.btnHorario15 = new System.Windows.Forms.Button();
-            this.btnHorario12 = new System.Windows.Forms.Button();
-            this.btnHorario13 = new System.Windows.Forms.Button();
+            this.btnHor7 = new System.Windows.Forms.Button();
+            this.btnHor8 = new System.Windows.Forms.Button();
+            this.btnHor9 = new System.Windows.Forms.Button();
+            this.btnHor14 = new System.Windows.Forms.Button();
+            this.btnHor10 = new System.Windows.Forms.Button();
+            this.btnHor15 = new System.Windows.Forms.Button();
+            this.btnHor12 = new System.Windows.Forms.Button();
+            this.btnHor13 = new System.Windows.Forms.Button();
+            this.lbltitulo1 = new System.Windows.Forms.Label();
+            this.lbltitulo2 = new System.Windows.Forms.Label();
+            this.lbltitulo3 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            this.gBProyeccion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBProyeccion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCalendario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHorario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBpelicula3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBpelicula2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen1)).BeginInit();
             this.SuspendLayout();
             // 
-            // letiqueta4
+            // label1
             // 
-            this.letiqueta4.AutoSize = true;
-            this.letiqueta4.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.letiqueta4.Location = new System.Drawing.Point(432, 32);
-            this.letiqueta4.Name = "letiqueta4";
-            this.letiqueta4.Size = new System.Drawing.Size(151, 36);
-            this.letiqueta4.TabIndex = 3;
-            this.letiqueta4.Text = "Cartelera";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(349, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 36);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Cartelera";
             // 
-            // btnSinopsis1
+            // button4
             // 
-            this.btnSinopsis1.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnSinopsis1.Location = new System.Drawing.Point(519, 163);
-            this.btnSinopsis1.Name = "btnSinopsis1";
-            this.btnSinopsis1.Size = new System.Drawing.Size(113, 32);
-            this.btnSinopsis1.TabIndex = 7;
-            this.btnSinopsis1.Text = "Ver Sinopsis";
-            this.btnSinopsis1.UseVisualStyleBackColor = false;
-            this.btnSinopsis1.Click += new System.EventHandler(this.button4_Click);
+            this.button4.BackColor = System.Drawing.Color.DarkCyan;
+            this.button4.Location = new System.Drawing.Point(546, 158);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(113, 32);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Ver Sinopsis";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // btnSinopsis2
+            // button5
             // 
-            this.btnSinopsis2.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnSinopsis2.Location = new System.Drawing.Point(519, 315);
-            this.btnSinopsis2.Name = "btnSinopsis2";
-            this.btnSinopsis2.Size = new System.Drawing.Size(113, 32);
-            this.btnSinopsis2.TabIndex = 8;
-            this.btnSinopsis2.Text = "Ver Sinopsis";
-            this.btnSinopsis2.UseVisualStyleBackColor = false;
+            this.button5.BackColor = System.Drawing.Color.DarkCyan;
+            this.button5.Location = new System.Drawing.Point(546, 319);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(113, 32);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "Ver Sinopsis";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // btnSinopsis3
+            // button6
             // 
-            this.btnSinopsis3.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnSinopsis3.Location = new System.Drawing.Point(519, 468);
-            this.btnSinopsis3.Name = "btnSinopsis3";
-            this.btnSinopsis3.Size = new System.Drawing.Size(113, 32);
-            this.btnSinopsis3.TabIndex = 9;
-            this.btnSinopsis3.Text = "Ver Sinopsis";
-            this.btnSinopsis3.UseVisualStyleBackColor = false;
+            this.button6.BackColor = System.Drawing.Color.DarkCyan;
+            this.button6.Location = new System.Drawing.Point(546, 465);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(113, 32);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Ver Sinopsis";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // monthCalendar1
             // 
@@ -125,114 +130,105 @@
             // 
             // trackBar1
             // 
+            this.trackBar1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.trackBar1.Location = new System.Drawing.Point(12, 50);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(222, 45);
             this.trackBar1.TabIndex = 18;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // btnHorario1
+            // btnHor1
             // 
-            this.btnHorario1.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario1.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario1.Location = new System.Drawing.Point(438, 104);
-            this.btnHorario1.Name = "btnHorario1";
-            this.btnHorario1.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario1.TabIndex = 19;
-            this.btnHorario1.Text = "7:45";
-            this.btnHorario1.UseVisualStyleBackColor = false;
-            this.btnHorario1.Click += new System.EventHandler(this.button1_Click);
+            this.btnHor1.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor1.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor1.Location = new System.Drawing.Point(438, 104);
+            this.btnHor1.Name = "btnHor1";
+            this.btnHor1.Size = new System.Drawing.Size(62, 48);
+            this.btnHor1.TabIndex = 19;
+            this.btnHor1.UseVisualStyleBackColor = false;
+            this.btnHor1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnHorario2
+            // btnHor2
             // 
-            this.btnHorario2.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario2.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario2.Location = new System.Drawing.Point(489, 104);
-            this.btnHorario2.Name = "btnHorario2";
-            this.btnHorario2.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario2.TabIndex = 20;
-            this.btnHorario2.Text = "9:45";
-            this.btnHorario2.UseVisualStyleBackColor = false;
-            this.btnHorario2.Click += new System.EventHandler(this.btnHorario2_Click);
+            this.btnHor2.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor2.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor2.Location = new System.Drawing.Point(503, 104);
+            this.btnHor2.Name = "btnHor2";
+            this.btnHor2.Size = new System.Drawing.Size(62, 48);
+            this.btnHor2.TabIndex = 20;
+            this.btnHor2.UseVisualStyleBackColor = false;
+            this.btnHor2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnHorario3
+            // btnHor3
             // 
-            this.btnHorario3.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario3.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario3.Location = new System.Drawing.Point(540, 104);
-            this.btnHorario3.Name = "btnHorario3";
-            this.btnHorario3.Size = new System.Drawing.Size(56, 33);
-            this.btnHorario3.TabIndex = 21;
-            this.btnHorario3.Text = "10:45";
-            this.btnHorario3.UseVisualStyleBackColor = false;
-            this.btnHorario3.Click += new System.EventHandler(this.button3_Click);
+            this.btnHor3.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor3.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor3.Location = new System.Drawing.Point(571, 104);
+            this.btnHor3.Name = "btnHor3";
+            this.btnHor3.Size = new System.Drawing.Size(62, 48);
+            this.btnHor3.TabIndex = 21;
+            this.btnHor3.UseVisualStyleBackColor = false;
+            this.btnHor3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // btnHorario4
+            // btnHor4
             // 
-            this.btnHorario4.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario4.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario4.Location = new System.Drawing.Point(602, 104);
-            this.btnHorario4.Name = "btnHorario4";
-            this.btnHorario4.Size = new System.Drawing.Size(58, 33);
-            this.btnHorario4.TabIndex = 22;
-            this.btnHorario4.Text = "12:45";
-            this.btnHorario4.UseVisualStyleBackColor = false;
-            this.btnHorario4.Click += new System.EventHandler(this.btnHorario4_Click);
+            this.btnHor4.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor4.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor4.Location = new System.Drawing.Point(638, 104);
+            this.btnHor4.Name = "btnHor4";
+            this.btnHor4.Size = new System.Drawing.Size(60, 48);
+            this.btnHor4.TabIndex = 22;
+            this.btnHor4.UseVisualStyleBackColor = false;
             // 
-            // btnHorario5
+            // btnHor5
             // 
-            this.btnHorario5.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario5.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario5.Location = new System.Drawing.Point(666, 104);
-            this.btnHorario5.Name = "btnHorario5";
-            this.btnHorario5.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario5.TabIndex = 23;
-            this.btnHorario5.Text = "3:45";
-            this.btnHorario5.UseVisualStyleBackColor = false;
-            this.btnHorario5.Click += new System.EventHandler(this.btnHorario5_Click);
+            this.btnHor5.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor5.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor5.Location = new System.Drawing.Point(704, 104);
+            this.btnHor5.Name = "btnHor5";
+            this.btnHor5.Size = new System.Drawing.Size(60, 48);
+            this.btnHor5.TabIndex = 23;
+            this.btnHor5.UseVisualStyleBackColor = false;
             // 
-            // btnHorario6
+            // btnHor6
             // 
-            this.btnHorario6.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario6.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario6.Location = new System.Drawing.Point(438, 265);
-            this.btnHorario6.Name = "btnHorario6";
-            this.btnHorario6.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario6.TabIndex = 24;
-            this.btnHorario6.Text = "7:45";
-            this.btnHorario6.UseVisualStyleBackColor = false;
-            this.btnHorario6.Click += new System.EventHandler(this.btnHorario6_Click);
+            this.btnHor6.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor6.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor6.Location = new System.Drawing.Point(438, 265);
+            this.btnHor6.Name = "btnHor6";
+            this.btnHor6.Size = new System.Drawing.Size(62, 48);
+            this.btnHor6.TabIndex = 24;
+            this.btnHor6.UseVisualStyleBackColor = false;
             // 
-            // btnHorario11
+            // btnHor11
             // 
-            this.btnHorario11.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario11.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario11.Location = new System.Drawing.Point(438, 419);
-            this.btnHorario11.Name = "btnHorario11";
-            this.btnHorario11.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario11.TabIndex = 29;
-            this.btnHorario11.Text = "7:45";
-            this.btnHorario11.UseVisualStyleBackColor = false;
-            this.btnHorario11.Click += new System.EventHandler(this.btnHorario11_Click);
+            this.btnHor11.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor11.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor11.Location = new System.Drawing.Point(441, 411);
+            this.btnHor11.Name = "btnHor11";
+            this.btnHor11.Size = new System.Drawing.Size(59, 48);
+            this.btnHor11.TabIndex = 29;
+            this.btnHor11.UseVisualStyleBackColor = false;
             // 
-            // gBProyeccion
+            // groupBox1
             // 
-            this.gBProyeccion.Controls.Add(this.cbProyeccion);
-            this.gBProyeccion.Controls.Add(this.checkBox3);
-            this.gBProyeccion.Controls.Add(this.checkBox2);
-            this.gBProyeccion.Controls.Add(this.checkBox1);
-            this.gBProyeccion.Location = new System.Drawing.Point(12, 339);
-            this.gBProyeccion.Name = "gBProyeccion";
-            this.gBProyeccion.Size = new System.Drawing.Size(200, 143);
-            this.gBProyeccion.TabIndex = 34;
-            this.gBProyeccion.TabStop = false;
-            this.gBProyeccion.Text = "groupBox1";
+            this.groupBox1.Controls.Add(this.cbProyeccion);
+            this.groupBox1.Controls.Add(this.checkBox3);
+            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 339);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 143);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // cbProyeccion
             // 
@@ -274,91 +270,89 @@
             this.checkBox1.Text = "IMAX";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // pBProyeccion
+            // pictureBox6
             // 
-            this.pBProyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBProyeccion.Image = global::proyectotaquilla.Properties.Resources.proyeccion__2_;
-            this.pBProyeccion.Location = new System.Drawing.Point(12, 305);
-            this.pBProyeccion.Name = "pBProyeccion";
-            this.pBProyeccion.Size = new System.Drawing.Size(29, 31);
-            this.pBProyeccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBProyeccion.TabIndex = 17;
-            this.pBProyeccion.TabStop = false;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::proyectotaquilla.Properties.Resources.proyeccion__2_;
+            this.pictureBox6.Location = new System.Drawing.Point(12, 305);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 17;
+            this.pictureBox6.TabStop = false;
             // 
-            // letiqueta5
+            // label4
             // 
-            this.letiqueta5.AutoSize = true;
-            this.letiqueta5.ForeColor = System.Drawing.Color.Aqua;
-            this.letiqueta5.Image = global::proyectotaquilla.Properties.Resources.reloj;
-            this.letiqueta5.Location = new System.Drawing.Point(47, 315);
-            this.letiqueta5.Name = "letiqueta5";
-            this.letiqueta5.Size = new System.Drawing.Size(156, 21);
-            this.letiqueta5.TabIndex = 16;
-            this.letiqueta5.Text = "Tipo de Proyeccion";
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Aqua;
+            this.label4.Image = global::proyectotaquilla.Properties.Resources.reloj;
+            this.label4.Location = new System.Drawing.Point(47, 315);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 21);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Tipo de Proyeccion";
             // 
-            // pBCalendario
+            // pictureBox5
             // 
-            this.pBCalendario.BackgroundImage = global::proyectotaquilla.Properties.Resources.calendario;
-            this.pBCalendario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBCalendario.Location = new System.Drawing.Point(12, 98);
-            this.pBCalendario.Name = "pBCalendario";
-            this.pBCalendario.Size = new System.Drawing.Size(29, 29);
-            this.pBCalendario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBCalendario.TabIndex = 14;
-            this.pBCalendario.TabStop = false;
+            this.pictureBox5.BackgroundImage = global::proyectotaquilla.Properties.Resources.calendario;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 98);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 14;
+            this.pictureBox5.TabStop = false;
             // 
-            // letiqueta3
+            // label3
             // 
-            this.letiqueta3.AutoSize = true;
-            this.letiqueta3.ForeColor = System.Drawing.Color.Aqua;
-            this.letiqueta3.Image = global::proyectotaquilla.Properties.Resources.reloj;
-            this.letiqueta3.Location = new System.Drawing.Point(47, 102);
-            this.letiqueta3.Name = "letiqueta3";
-            this.letiqueta3.Size = new System.Drawing.Size(36, 21);
-            this.letiqueta3.TabIndex = 13;
-            this.letiqueta3.Text = "Dia";
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Aqua;
+            this.label3.Image = global::proyectotaquilla.Properties.Resources.reloj;
+            this.label3.Location = new System.Drawing.Point(47, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 21);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Dia";
             // 
-            // pbHorario
+            // pictureBox4
             // 
-            this.pbHorario.BackgroundImage = global::proyectotaquilla.Properties.Resources.reloj1;
-            this.pbHorario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbHorario.Location = new System.Drawing.Point(12, 16);
-            this.pbHorario.Name = "pbHorario";
-            this.pbHorario.Size = new System.Drawing.Size(29, 28);
-            this.pbHorario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbHorario.TabIndex = 12;
-            this.pbHorario.TabStop = false;
+            this.pictureBox4.BackgroundImage = global::proyectotaquilla.Properties.Resources.reloj1;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
             // 
-            // letiqueta2
+            // label2
             // 
-            this.letiqueta2.AutoSize = true;
-            this.letiqueta2.ForeColor = System.Drawing.Color.Aqua;
-            this.letiqueta2.Image = global::proyectotaquilla.Properties.Resources.reloj;
-            this.letiqueta2.Location = new System.Drawing.Point(47, 16);
-            this.letiqueta2.Name = "letiqueta2";
-            this.letiqueta2.Size = new System.Drawing.Size(65, 21);
-            this.letiqueta2.TabIndex = 11;
-            this.letiqueta2.Text = "Horario";
-            this.letiqueta2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Aqua;
+            this.label2.Image = global::proyectotaquilla.Properties.Resources.reloj;
+            this.label2.Location = new System.Drawing.Point(47, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Horario";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // pBpelicula3
+            // pbImagen3
             // 
-            this.pBpelicula3.BackgroundImage = global::proyectotaquilla.Properties.Resources.peli3;
-            this.pBpelicula3.Location = new System.Drawing.Point(288, 392);
-            this.pBpelicula3.Name = "pBpelicula3";
-            this.pBpelicula3.Size = new System.Drawing.Size(130, 143);
-            this.pBpelicula3.TabIndex = 2;
-            this.pBpelicula3.TabStop = false;
+            this.pbImagen3.Location = new System.Drawing.Point(288, 392);
+            this.pbImagen3.Name = "pbImagen3";
+            this.pbImagen3.Size = new System.Drawing.Size(130, 143);
+            this.pbImagen3.TabIndex = 2;
+            this.pbImagen3.TabStop = false;
             // 
-            // pBpelicula2
+            // pbImagen2
             // 
-            this.pBpelicula2.BackgroundImage = global::proyectotaquilla.Properties.Resources.peli2;
-            this.pBpelicula2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBpelicula2.Location = new System.Drawing.Point(288, 243);
-            this.pBpelicula2.Name = "pBpelicula2";
-            this.pBpelicula2.Size = new System.Drawing.Size(130, 143);
-            this.pBpelicula2.TabIndex = 1;
-            this.pBpelicula2.TabStop = false;
+            this.pbImagen2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImagen2.Location = new System.Drawing.Point(288, 243);
+            this.pbImagen2.Name = "pbImagen2";
+            this.pbImagen2.Size = new System.Drawing.Size(130, 143);
+            this.pbImagen2.TabIndex = 1;
+            this.pbImagen2.TabStop = false;
             // 
             // pbImagen1
             // 
@@ -370,109 +364,124 @@
             this.pbImagen1.TabIndex = 0;
             this.pbImagen1.TabStop = false;
             // 
-            // btnHorario7
+            // btnHor7
             // 
-            this.btnHorario7.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario7.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario7.Location = new System.Drawing.Point(489, 265);
-            this.btnHorario7.Name = "btnHorario7";
-            this.btnHorario7.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario7.TabIndex = 35;
-            this.btnHorario7.Text = "9:45";
-            this.btnHorario7.UseVisualStyleBackColor = false;
-            this.btnHorario7.Click += new System.EventHandler(this.btnHorario7_Click);
+            this.btnHor7.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor7.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor7.Location = new System.Drawing.Point(503, 265);
+            this.btnHor7.Name = "btnHor7";
+            this.btnHor7.Size = new System.Drawing.Size(62, 48);
+            this.btnHor7.TabIndex = 35;
+            this.btnHor7.UseVisualStyleBackColor = false;
+            this.btnHor7.Click += new System.EventHandler(this.button10_Click);
             // 
-            // btnHorario8
+            // btnHor8
             // 
-            this.btnHorario8.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario8.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario8.Location = new System.Drawing.Point(540, 265);
-            this.btnHorario8.Name = "btnHorario8";
-            this.btnHorario8.Size = new System.Drawing.Size(56, 33);
-            this.btnHorario8.TabIndex = 36;
-            this.btnHorario8.Text = "10:45";
-            this.btnHorario8.UseVisualStyleBackColor = false;
-            this.btnHorario8.Click += new System.EventHandler(this.btnHorario8_Click);
+            this.btnHor8.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor8.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor8.Location = new System.Drawing.Point(570, 265);
+            this.btnHor8.Name = "btnHor8";
+            this.btnHor8.Size = new System.Drawing.Size(62, 48);
+            this.btnHor8.TabIndex = 36;
+            this.btnHor8.UseVisualStyleBackColor = false;
             // 
-            // btnHorario9
+            // btnHor9
             // 
-            this.btnHorario9.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario9.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario9.Location = new System.Drawing.Point(602, 265);
-            this.btnHorario9.Name = "btnHorario9";
-            this.btnHorario9.Size = new System.Drawing.Size(58, 33);
-            this.btnHorario9.TabIndex = 37;
-            this.btnHorario9.Text = "12:45";
-            this.btnHorario9.UseVisualStyleBackColor = false;
-            this.btnHorario9.Click += new System.EventHandler(this.btnHorario9_Click);
+            this.btnHor9.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor9.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor9.Location = new System.Drawing.Point(634, 265);
+            this.btnHor9.Name = "btnHor9";
+            this.btnHor9.Size = new System.Drawing.Size(62, 48);
+            this.btnHor9.TabIndex = 37;
+            this.btnHor9.UseVisualStyleBackColor = false;
             // 
-            // btnHorario14
+            // btnHor14
             // 
-            this.btnHorario14.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario14.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario14.Location = new System.Drawing.Point(602, 419);
-            this.btnHorario14.Name = "btnHorario14";
-            this.btnHorario14.Size = new System.Drawing.Size(58, 33);
-            this.btnHorario14.TabIndex = 38;
-            this.btnHorario14.Text = "12:45";
-            this.btnHorario14.UseVisualStyleBackColor = false;
-            this.btnHorario14.Click += new System.EventHandler(this.btnHorario14_Click);
+            this.btnHor14.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor14.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor14.Location = new System.Drawing.Point(633, 411);
+            this.btnHor14.Name = "btnHor14";
+            this.btnHor14.Size = new System.Drawing.Size(58, 48);
+            this.btnHor14.TabIndex = 38;
+            this.btnHor14.UseVisualStyleBackColor = false;
             // 
-            // btnHorario10
+            // btnHor10
             // 
-            this.btnHorario10.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario10.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario10.Location = new System.Drawing.Point(666, 265);
-            this.btnHorario10.Name = "btnHorario10";
-            this.btnHorario10.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario10.TabIndex = 39;
-            this.btnHorario10.Text = "3:45";
-            this.btnHorario10.UseVisualStyleBackColor = false;
-            this.btnHorario10.Click += new System.EventHandler(this.btnHorario10_Click);
+            this.btnHor10.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor10.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor10.Location = new System.Drawing.Point(702, 265);
+            this.btnHor10.Name = "btnHor10";
+            this.btnHor10.Size = new System.Drawing.Size(62, 48);
+            this.btnHor10.TabIndex = 39;
+            this.btnHor10.UseVisualStyleBackColor = false;
             // 
-            // btnHorario15
+            // btnHor15
             // 
-            this.btnHorario15.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario15.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario15.Location = new System.Drawing.Point(666, 419);
-            this.btnHorario15.Name = "btnHorario15";
-            this.btnHorario15.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario15.TabIndex = 40;
-            this.btnHorario15.Text = "3:45";
-            this.btnHorario15.UseVisualStyleBackColor = false;
-            this.btnHorario15.Click += new System.EventHandler(this.btnHorario15_Click);
+            this.btnHor15.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor15.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor15.Location = new System.Drawing.Point(697, 411);
+            this.btnHor15.Name = "btnHor15";
+            this.btnHor15.Size = new System.Drawing.Size(67, 48);
+            this.btnHor15.TabIndex = 40;
+            this.btnHor15.UseVisualStyleBackColor = false;
             // 
-            // btnHorario12
+            // btnHor12
             // 
-            this.btnHorario12.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario12.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario12.Location = new System.Drawing.Point(489, 419);
-            this.btnHorario12.Name = "btnHorario12";
-            this.btnHorario12.Size = new System.Drawing.Size(45, 33);
-            this.btnHorario12.TabIndex = 41;
-            this.btnHorario12.Text = "9:45";
-            this.btnHorario12.UseVisualStyleBackColor = false;
-            this.btnHorario12.Click += new System.EventHandler(this.btnHorario12_Click);
+            this.btnHor12.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor12.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor12.Location = new System.Drawing.Point(503, 411);
+            this.btnHor12.Name = "btnHor12";
+            this.btnHor12.Size = new System.Drawing.Size(59, 48);
+            this.btnHor12.TabIndex = 41;
+            this.btnHor12.UseVisualStyleBackColor = false;
             // 
-            // btnHorario13
+            // btnHor13
             // 
-            this.btnHorario13.BackColor = System.Drawing.Color.LightGray;
-            this.btnHorario13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHorario13.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHorario13.Location = new System.Drawing.Point(540, 419);
-            this.btnHorario13.Name = "btnHorario13";
-            this.btnHorario13.Size = new System.Drawing.Size(56, 33);
-            this.btnHorario13.TabIndex = 42;
-            this.btnHorario13.Text = "10:45";
-            this.btnHorario13.UseVisualStyleBackColor = false;
-            this.btnHorario13.Click += new System.EventHandler(this.btnHorario13_Click);
+            this.btnHor13.BackColor = System.Drawing.Color.LightGray;
+            this.btnHor13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHor13.ForeColor = System.Drawing.Color.DimGray;
+            this.btnHor13.Location = new System.Drawing.Point(568, 411);
+            this.btnHor13.Name = "btnHor13";
+            this.btnHor13.Size = new System.Drawing.Size(59, 48);
+            this.btnHor13.TabIndex = 42;
+            this.btnHor13.UseVisualStyleBackColor = false;
+            // 
+            // lbltitulo1
+            // 
+            this.lbltitulo1.AutoSize = true;
+            this.lbltitulo1.Location = new System.Drawing.Point(512, 67);
+            this.lbltitulo1.Name = "lbltitulo1";
+            this.lbltitulo1.Size = new System.Drawing.Size(0, 21);
+            this.lbltitulo1.TabIndex = 43;
+            // 
+            // lbltitulo2
+            // 
+            this.lbltitulo2.AutoSize = true;
+            this.lbltitulo2.Location = new System.Drawing.Point(542, 220);
+            this.lbltitulo2.Name = "lbltitulo2";
+            this.lbltitulo2.Size = new System.Drawing.Size(0, 21);
+            this.lbltitulo2.TabIndex = 44;
+            // 
+            // lbltitulo3
+            // 
+            this.lbltitulo3.AutoSize = true;
+            this.lbltitulo3.Location = new System.Drawing.Point(542, 366);
+            this.lbltitulo3.Name = "lbltitulo3";
+            this.lbltitulo3.Size = new System.Drawing.Size(0, 21);
+            this.lbltitulo3.TabIndex = 45;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // cartelera
             // 
@@ -480,36 +489,39 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(861, 572);
-            this.Controls.Add(this.btnHorario13);
-            this.Controls.Add(this.btnHorario12);
-            this.Controls.Add(this.btnHorario15);
-            this.Controls.Add(this.btnHorario10);
-            this.Controls.Add(this.btnHorario14);
-            this.Controls.Add(this.btnHorario9);
-            this.Controls.Add(this.btnHorario8);
-            this.Controls.Add(this.btnHorario7);
-            this.Controls.Add(this.gBProyeccion);
-            this.Controls.Add(this.btnHorario11);
-            this.Controls.Add(this.btnHorario6);
-            this.Controls.Add(this.btnHorario5);
-            this.Controls.Add(this.btnHorario4);
-            this.Controls.Add(this.btnHorario3);
-            this.Controls.Add(this.btnHorario2);
-            this.Controls.Add(this.btnHorario1);
+            this.Controls.Add(this.lbltitulo3);
+            this.Controls.Add(this.lbltitulo2);
+            this.Controls.Add(this.lbltitulo1);
+            this.Controls.Add(this.btnHor13);
+            this.Controls.Add(this.btnHor12);
+            this.Controls.Add(this.btnHor15);
+            this.Controls.Add(this.btnHor10);
+            this.Controls.Add(this.btnHor14);
+            this.Controls.Add(this.btnHor9);
+            this.Controls.Add(this.btnHor8);
+            this.Controls.Add(this.btnHor7);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnHor11);
+            this.Controls.Add(this.btnHor6);
+            this.Controls.Add(this.btnHor5);
+            this.Controls.Add(this.btnHor4);
+            this.Controls.Add(this.btnHor3);
+            this.Controls.Add(this.btnHor2);
+            this.Controls.Add(this.btnHor1);
             this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.pBProyeccion);
-            this.Controls.Add(this.letiqueta5);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.pBCalendario);
-            this.Controls.Add(this.letiqueta3);
-            this.Controls.Add(this.pbHorario);
-            this.Controls.Add(this.letiqueta2);
-            this.Controls.Add(this.btnSinopsis3);
-            this.Controls.Add(this.btnSinopsis2);
-            this.Controls.Add(this.btnSinopsis1);
-            this.Controls.Add(this.letiqueta4);
-            this.Controls.Add(this.pBpelicula3);
-            this.Controls.Add(this.pBpelicula2);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pbImagen3);
+            this.Controls.Add(this.pbImagen2);
             this.Controls.Add(this.pbImagen1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -518,13 +530,13 @@
             this.Text = "cartelera";
             this.Load += new System.EventHandler(this.cartelera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            this.gBProyeccion.ResumeLayout(false);
-            this.gBProyeccion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBProyeccion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCalendario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHorario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBpelicula3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBpelicula2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -534,39 +546,43 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbImagen1;
-        private System.Windows.Forms.PictureBox pBpelicula2;
-        private System.Windows.Forms.PictureBox pBpelicula3;
-        private System.Windows.Forms.Label letiqueta4;
-        private System.Windows.Forms.Button btnSinopsis1;
-        private System.Windows.Forms.Button btnSinopsis2;
-        private System.Windows.Forms.Button btnSinopsis3;
-        private System.Windows.Forms.Label letiqueta2;
-        private System.Windows.Forms.PictureBox pbHorario;
-        private System.Windows.Forms.Label letiqueta3;
-        private System.Windows.Forms.PictureBox pBCalendario;
+        private System.Windows.Forms.PictureBox pbImagen2;
+        private System.Windows.Forms.PictureBox pbImagen3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label letiqueta5;
-        private System.Windows.Forms.PictureBox pBProyeccion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Button btnHorario1;
-        private System.Windows.Forms.Button btnHorario2;
-        private System.Windows.Forms.Button btnHorario3;
-        private System.Windows.Forms.Button btnHorario4;
-        private System.Windows.Forms.Button btnHorario5;
-        private System.Windows.Forms.Button btnHorario6;
-        private System.Windows.Forms.Button btnHorario11;
-        private System.Windows.Forms.GroupBox gBProyeccion;
+        private System.Windows.Forms.Button btnHor1;
+        private System.Windows.Forms.Button btnHor2;
+        private System.Windows.Forms.Button btnHor3;
+        private System.Windows.Forms.Button btnHor4;
+        private System.Windows.Forms.Button btnHor5;
+        private System.Windows.Forms.Button btnHor6;
+        private System.Windows.Forms.Button btnHor11;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbProyeccion;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button btnHorario7;
-        private System.Windows.Forms.Button btnHorario8;
-        private System.Windows.Forms.Button btnHorario9;
-        private System.Windows.Forms.Button btnHorario14;
-        private System.Windows.Forms.Button btnHorario10;
-        private System.Windows.Forms.Button btnHorario15;
-        private System.Windows.Forms.Button btnHorario12;
-        private System.Windows.Forms.Button btnHorario13;
+        private System.Windows.Forms.Button btnHor7;
+        private System.Windows.Forms.Button btnHor8;
+        private System.Windows.Forms.Button btnHor9;
+        private System.Windows.Forms.Button btnHor14;
+        private System.Windows.Forms.Button btnHor10;
+        private System.Windows.Forms.Button btnHor15;
+        private System.Windows.Forms.Button btnHor12;
+        private System.Windows.Forms.Button btnHor13;
+        private System.Windows.Forms.Label lbltitulo1;
+        private System.Windows.Forms.Label lbltitulo2;
+        private System.Windows.Forms.Label lbltitulo3;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

@@ -29,7 +29,7 @@ namespace proyectotaquilla
         {
 
             string selecine = cbComplejo.SelectedItem.ToString();
-
+            
             cartelera carte = new cartelera(selecine);
             this.Hide();
             carte.Show();
@@ -41,7 +41,7 @@ namespace proyectotaquilla
         {
             timer1.Start();
             cbr();
-            // cbr2();
+           // cbr2();
 
 
         }
@@ -89,7 +89,7 @@ namespace proyectotaquilla
                 cbo_region.Items.Add(mdr.GetString("nombreregion"));
             }
 
-
+            
             conexion.Close();
 
         }
@@ -119,14 +119,14 @@ namespace proyectotaquilla
             while (mdr.Read())
             {
                 cbComplejo.Items.Add(mdr.GetString("nomcine"));
-
+             
             }
             cbComplejo.ResetText();
             conexion.Close();
-
+            
         }
 
-
+       
     }
 }
 
