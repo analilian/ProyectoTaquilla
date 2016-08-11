@@ -54,7 +54,7 @@
             this.letiqueta2 = new System.Windows.Forms.Label();
             this.pBpelicula3 = new System.Windows.Forms.PictureBox();
             this.pBpelicula2 = new System.Windows.Forms.PictureBox();
-            this.pBpelicula1 = new System.Windows.Forms.PictureBox();
+            this.pbImagen1 = new System.Windows.Forms.PictureBox();
             this.btnHorario7 = new System.Windows.Forms.Button();
             this.btnHorario8 = new System.Windows.Forms.Button();
             this.btnHorario9 = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbHorario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBpelicula3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBpelicula2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBpelicula1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen1)).BeginInit();
             this.SuspendLayout();
             // 
             // letiqueta4
@@ -360,16 +360,15 @@
             this.pBpelicula2.TabIndex = 1;
             this.pBpelicula2.TabStop = false;
             // 
-            // pBpelicula1
+            // pbImagen1
             // 
-            this.pBpelicula1.BackgroundImage = global::proyectotaquilla.Properties.Resources.peli1;
-            this.pBpelicula1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBpelicula1.Location = new System.Drawing.Point(288, 85);
-            this.pBpelicula1.Name = "pBpelicula1";
-            this.pBpelicula1.Size = new System.Drawing.Size(130, 143);
-            this.pBpelicula1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBpelicula1.TabIndex = 0;
-            this.pBpelicula1.TabStop = false;
+            this.pbImagen1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImagen1.Location = new System.Drawing.Point(288, 85);
+            this.pbImagen1.Name = "pbImagen1";
+            this.pbImagen1.Size = new System.Drawing.Size(130, 143);
+            this.pbImagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen1.TabIndex = 0;
+            this.pbImagen1.TabStop = false;
             // 
             // btnHorario7
             // 
@@ -511,12 +510,13 @@
             this.Controls.Add(this.letiqueta4);
             this.Controls.Add(this.pBpelicula3);
             this.Controls.Add(this.pBpelicula2);
-            this.Controls.Add(this.pBpelicula1);
+            this.Controls.Add(this.pbImagen1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "cartelera";
             this.Text = "cartelera";
+            this.Load += new System.EventHandler(this.cartelera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.gBProyeccion.ResumeLayout(false);
             this.gBProyeccion.PerformLayout();
@@ -525,7 +525,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbHorario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBpelicula3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBpelicula2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBpelicula1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,7 +533,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pBpelicula1;
+        private System.Windows.Forms.PictureBox pbImagen1;
         private System.Windows.Forms.PictureBox pBpelicula2;
         private System.Windows.Forms.PictureBox pBpelicula3;
         private System.Windows.Forms.Label letiqueta4;

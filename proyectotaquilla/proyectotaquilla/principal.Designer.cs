@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.ltitulo = new System.Windows.Forms.Label();
             this.letiqueta1 = new System.Windows.Forms.Label();
-            this.cbRegion = new System.Windows.Forms.ComboBox();
+            this.cbo_region = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbComplejo = new System.Windows.Forms.ComboBox();
@@ -69,17 +69,13 @@
             this.letiqueta1.TabIndex = 2;
             this.letiqueta1.Text = "Compra tus entradas facil y rapidamente";
             // 
-            // cbRegion
+            // cbo_region
             // 
-            this.cbRegion.FormattingEnabled = true;
-            this.cbRegion.Items.AddRange(new object[] {
-            "Zacapa, Guatemala",
-            "Santa Rosa, Guatemala",
-            "Guatemala, Guatemala"});
-            this.cbRegion.Location = new System.Drawing.Point(197, 403);
-            this.cbRegion.Name = "cbRegion";
-            this.cbRegion.Size = new System.Drawing.Size(210, 29);
-            this.cbRegion.TabIndex = 3;
+            this.cbo_region.FormattingEnabled = true;
+            this.cbo_region.Location = new System.Drawing.Point(197, 403);
+            this.cbo_region.Name = "cbo_region";
+            this.cbo_region.Size = new System.Drawing.Size(210, 29);
+            this.cbo_region.TabIndex = 3;
             // 
             // label2
             // 
@@ -102,11 +98,6 @@
             // cbComplejo
             // 
             this.cbComplejo.FormattingEnabled = true;
-            this.cbComplejo.Items.AddRange(new object[] {
-            "Miraflores",
-            "Oakland Mall",
-            "Cayala ",
-            "Santa Clara"});
             this.cbComplejo.Location = new System.Drawing.Point(611, 403);
             this.cbComplejo.Name = "cbComplejo";
             this.cbComplejo.Size = new System.Drawing.Size(214, 29);
@@ -192,7 +183,7 @@
             this.Controls.Add(this.cbComplejo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbRegion);
+            this.Controls.Add(this.cbo_region);
             this.Controls.Add(this.letiqueta1);
             this.Controls.Add(this.pBfoto1);
             this.Controls.Add(this.ltitulo);
@@ -216,7 +207,7 @@
         private System.Windows.Forms.Label ltitulo;
         private System.Windows.Forms.PictureBox pBfoto1;
         private System.Windows.Forms.Label letiqueta1;
-        private System.Windows.Forms.ComboBox cbRegion;
+        private System.Windows.Forms.ComboBox cbo_region;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbComplejo;
