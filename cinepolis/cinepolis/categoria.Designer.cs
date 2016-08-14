@@ -36,30 +36,16 @@
             this.lbl_categoria = new System.Windows.Forms.Label();
             this.txt_nom_categ = new System.Windows.Forms.TextBox();
             this.dgv_categoria = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btn_buscarmod = new System.Windows.Forms.Button();
-            this.txt_buscarmod = new System.Windows.Forms.TextBox();
-            this.label_busquedamod = new System.Windows.Forms.Label();
-            this.txt_mod_categoria = new System.Windows.Forms.Label();
-            this.txt_mod_categoriaa = new System.Windows.Forms.TextBox();
-            this.dgv_mod_categoria = new System.Windows.Forms.DataGridView();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_mod_guardar = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btn_borrar = new System.Windows.Forms.Button();
-            this.btn_buscar = new System.Windows.Forms.Button();
-            this.txt_buscar = new System.Windows.Forms.TextBox();
-            this.lbl_codigo_buscar = new System.Windows.Forms.Label();
-            this.dgv_borrar_categoria = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_eliminar_categoria = new System.Windows.Forms.Button();
+            this.btn_buscar_categoria = new System.Windows.Forms.Button();
+            this.bttn_actualizar_categoria = new System.Windows.Forms.Button();
+            this.txt_buscarmod = new System.Windows.Forms.TextBox();
+            this.label_busquedamod = new System.Windows.Forms.Label();
             this.tbc_categoria.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mod_categoria)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_borrar_categoria)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_titulo_mantenimiento_cine
@@ -75,17 +61,20 @@
             // tbc_categoria
             // 
             this.tbc_categoria.Controls.Add(this.tabPage1);
-            this.tbc_categoria.Controls.Add(this.tabPage2);
-            this.tbc_categoria.Controls.Add(this.tabPage3);
-            this.tbc_categoria.Location = new System.Drawing.Point(12, 97);
+            this.tbc_categoria.Location = new System.Drawing.Point(5, 70);
             this.tbc_categoria.Name = "tbc_categoria";
             this.tbc_categoria.SelectedIndex = 0;
-            this.tbc_categoria.Size = new System.Drawing.Size(721, 348);
+            this.tbc_categoria.Size = new System.Drawing.Size(721, 375);
             this.tbc_categoria.TabIndex = 56;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.txt_buscarmod);
+            this.tabPage1.Controls.Add(this.label_busquedamod);
+            this.tabPage1.Controls.Add(this.btn_eliminar_categoria);
+            this.tabPage1.Controls.Add(this.btn_buscar_categoria);
+            this.tabPage1.Controls.Add(this.bttn_actualizar_categoria);
             this.tabPage1.Controls.Add(this.btn_guardar);
             this.tabPage1.Controls.Add(this.lbl_categoria);
             this.tabPage1.Controls.Add(this.txt_nom_categ);
@@ -93,9 +82,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(713, 322);
+            this.tabPage1.Size = new System.Drawing.Size(713, 349);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Agregar Categoria";
+            this.tabPage1.Text = "Mantenimiento de Categoria";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // btn_guardar
@@ -103,9 +92,9 @@
             this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(513, 23);
+            this.btn_guardar.Location = new System.Drawing.Point(574, 74);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(90, 73);
+            this.btn_guardar.Size = new System.Drawing.Size(61, 55);
             this.btn_guardar.TabIndex = 60;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = false;
@@ -115,7 +104,7 @@
             // 
             this.lbl_categoria.AutoSize = true;
             this.lbl_categoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_categoria.Location = new System.Drawing.Point(64, 62);
+            this.lbl_categoria.Location = new System.Drawing.Point(8, 28);
             this.lbl_categoria.Name = "lbl_categoria";
             this.lbl_categoria.Size = new System.Drawing.Size(95, 21);
             this.lbl_categoria.TabIndex = 58;
@@ -123,10 +112,10 @@
             // 
             // txt_nom_categ
             // 
-            this.txt_nom_categ.Location = new System.Drawing.Point(189, 65);
+            this.txt_nom_categ.Location = new System.Drawing.Point(133, 31);
             this.txt_nom_categ.MaxLength = 20;
             this.txt_nom_categ.Name = "txt_nom_categ";
-            this.txt_nom_categ.Size = new System.Drawing.Size(151, 20);
+            this.txt_nom_categ.Size = new System.Drawing.Size(196, 20);
             this.txt_nom_categ.TabIndex = 56;
             // 
             // dgv_categoria
@@ -138,180 +127,8 @@
             this.dgv_categoria.Location = new System.Drawing.Point(12, 136);
             this.dgv_categoria.Name = "dgv_categoria";
             this.dgv_categoria.ReadOnly = true;
-            this.dgv_categoria.Size = new System.Drawing.Size(690, 180);
+            this.dgv_categoria.Size = new System.Drawing.Size(690, 206);
             this.dgv_categoria.TabIndex = 55;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage2.Controls.Add(this.btn_buscarmod);
-            this.tabPage2.Controls.Add(this.txt_buscarmod);
-            this.tabPage2.Controls.Add(this.label_busquedamod);
-            this.tabPage2.Controls.Add(this.txt_mod_categoria);
-            this.tabPage2.Controls.Add(this.txt_mod_categoriaa);
-            this.tabPage2.Controls.Add(this.dgv_mod_categoria);
-            this.tabPage2.Controls.Add(this.btn_actualizar);
-            this.tabPage2.Controls.Add(this.btn_mod_guardar);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(713, 322);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Modificar Categoria";
-            // 
-            // btn_buscarmod
-            // 
-            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
-            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarmod.Location = new System.Drawing.Point(373, 89);
-            this.btn_buscarmod.Name = "btn_buscarmod";
-            this.btn_buscarmod.Size = new System.Drawing.Size(53, 37);
-            this.btn_buscarmod.TabIndex = 88;
-            this.toolTip1.SetToolTip(this.btn_buscarmod, "Buscar");
-            this.btn_buscarmod.UseVisualStyleBackColor = true;
-            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
-            // 
-            // txt_buscarmod
-            // 
-            this.txt_buscarmod.Location = new System.Drawing.Point(176, 98);
-            this.txt_buscarmod.MaxLength = 100;
-            this.txt_buscarmod.Name = "txt_buscarmod";
-            this.txt_buscarmod.Size = new System.Drawing.Size(178, 20);
-            this.txt_buscarmod.TabIndex = 87;
-            // 
-            // label_busquedamod
-            // 
-            this.label_busquedamod.AutoSize = true;
-            this.label_busquedamod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_busquedamod.Location = new System.Drawing.Point(78, 97);
-            this.label_busquedamod.Name = "label_busquedamod";
-            this.label_busquedamod.Size = new System.Drawing.Size(92, 21);
-            this.label_busquedamod.TabIndex = 86;
-            this.label_busquedamod.Text = "Busqueda:";
-            // 
-            // txt_mod_categoria
-            // 
-            this.txt_mod_categoria.AutoSize = true;
-            this.txt_mod_categoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mod_categoria.Location = new System.Drawing.Point(78, 47);
-            this.txt_mod_categoria.Name = "txt_mod_categoria";
-            this.txt_mod_categoria.Size = new System.Drawing.Size(95, 21);
-            this.txt_mod_categoria.TabIndex = 64;
-            this.txt_mod_categoria.Text = "Categoria:";
-            // 
-            // txt_mod_categoriaa
-            // 
-            this.txt_mod_categoriaa.Location = new System.Drawing.Point(176, 47);
-            this.txt_mod_categoriaa.MaxLength = 20;
-            this.txt_mod_categoriaa.Name = "txt_mod_categoriaa";
-            this.txt_mod_categoriaa.Size = new System.Drawing.Size(151, 20);
-            this.txt_mod_categoriaa.TabIndex = 62;
-            // 
-            // dgv_mod_categoria
-            // 
-            this.dgv_mod_categoria.AllowUserToAddRows = false;
-            this.dgv_mod_categoria.AllowUserToDeleteRows = false;
-            this.dgv_mod_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_mod_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_mod_categoria.Location = new System.Drawing.Point(24, 136);
-            this.dgv_mod_categoria.Name = "dgv_mod_categoria";
-            this.dgv_mod_categoria.ReadOnly = true;
-            this.dgv_mod_categoria.Size = new System.Drawing.Size(635, 180);
-            this.dgv_mod_categoria.TabIndex = 61;
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
-            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(502, 21);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(84, 73);
-            this.btn_actualizar.TabIndex = 85;
-            this.toolTip1.SetToolTip(this.btn_actualizar, "actualizar");
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
-            // 
-            // btn_mod_guardar
-            // 
-            this.btn_mod_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
-            this.btn_mod_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_mod_guardar.Location = new System.Drawing.Point(592, 21);
-            this.btn_mod_guardar.Name = "btn_mod_guardar";
-            this.btn_mod_guardar.Size = new System.Drawing.Size(90, 73);
-            this.btn_mod_guardar.TabIndex = 66;
-            this.toolTip1.SetToolTip(this.btn_mod_guardar, "Reguardar");
-            this.btn_mod_guardar.UseVisualStyleBackColor = true;
-            this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage3.Controls.Add(this.btn_borrar);
-            this.tabPage3.Controls.Add(this.btn_buscar);
-            this.tabPage3.Controls.Add(this.txt_buscar);
-            this.tabPage3.Controls.Add(this.lbl_codigo_buscar);
-            this.tabPage3.Controls.Add(this.dgv_borrar_categoria);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(713, 322);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Borrar Categoria";
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
-            // 
-            // btn_borrar
-            // 
-            this.btn_borrar.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
-            this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_borrar.Location = new System.Drawing.Point(558, 16);
-            this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Size = new System.Drawing.Size(71, 52);
-            this.btn_borrar.TabIndex = 60;
-            this.toolTip1.SetToolTip(this.btn_borrar, "Eliminar");
-            this.btn_borrar.UseVisualStyleBackColor = true;
-            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
-            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar.Location = new System.Drawing.Point(418, 16);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(78, 52);
-            this.btn_buscar.TabIndex = 59;
-            this.toolTip1.SetToolTip(this.btn_buscar, "Buscar");
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Location = new System.Drawing.Point(185, 33);
-            this.txt_buscar.MaxLength = 100;
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(178, 20);
-            this.txt_buscar.TabIndex = 58;
-            // 
-            // lbl_codigo_buscar
-            // 
-            this.lbl_codigo_buscar.AutoSize = true;
-            this.lbl_codigo_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo_buscar.Location = new System.Drawing.Point(15, 32);
-            this.lbl_codigo_buscar.Name = "lbl_codigo_buscar";
-            this.lbl_codigo_buscar.Size = new System.Drawing.Size(154, 21);
-            this.lbl_codigo_buscar.TabIndex = 57;
-            this.lbl_codigo_buscar.Text = "Codigo Busqueda:";
-            // 
-            // dgv_borrar_categoria
-            // 
-            this.dgv_borrar_categoria.AllowUserToAddRows = false;
-            this.dgv_borrar_categoria.AllowUserToDeleteRows = false;
-            this.dgv_borrar_categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_borrar_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_borrar_categoria.Location = new System.Drawing.Point(6, 77);
-            this.dgv_borrar_categoria.Name = "dgv_borrar_categoria";
-            this.dgv_borrar_categoria.ReadOnly = true;
-            this.dgv_borrar_categoria.Size = new System.Drawing.Size(696, 238);
-            this.dgv_borrar_categoria.TabIndex = 56;
             // 
             // btn_regresar
             // 
@@ -324,6 +141,60 @@
             this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // btn_eliminar_categoria
+            // 
+            this.btn_eliminar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
+            this.btn_eliminar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar_categoria.Location = new System.Drawing.Point(638, 74);
+            this.btn_eliminar_categoria.Name = "btn_eliminar_categoria";
+            this.btn_eliminar_categoria.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_categoria.TabIndex = 90;
+            this.toolTip1.SetToolTip(this.btn_eliminar_categoria, "Eliminar");
+            this.btn_eliminar_categoria.UseVisualStyleBackColor = true;
+            this.btn_eliminar_categoria.Click += new System.EventHandler(this.btn_eliminar_pelicula_Click);
+            // 
+            // btn_buscar_categoria
+            // 
+            this.btn_buscar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
+            this.btn_buscar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_categoria.Location = new System.Drawing.Point(446, 75);
+            this.btn_buscar_categoria.Name = "btn_buscar_categoria";
+            this.btn_buscar_categoria.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_categoria.TabIndex = 92;
+            this.toolTip1.SetToolTip(this.btn_buscar_categoria, "Buscar");
+            this.btn_buscar_categoria.UseVisualStyleBackColor = true;
+            this.btn_buscar_categoria.Click += new System.EventHandler(this.btn_buscar_pelicula_Click);
+            // 
+            // bttn_actualizar_categoria
+            // 
+            this.bttn_actualizar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.bttn_actualizar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttn_actualizar_categoria.Location = new System.Drawing.Point(510, 74);
+            this.bttn_actualizar_categoria.Name = "bttn_actualizar_categoria";
+            this.bttn_actualizar_categoria.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_categoria.TabIndex = 91;
+            this.toolTip1.SetToolTip(this.bttn_actualizar_categoria, "Actualizar");
+            this.bttn_actualizar_categoria.UseVisualStyleBackColor = true;
+            this.bttn_actualizar_categoria.Click += new System.EventHandler(this.bttn_actualizar_pelicula_Click);
+            // 
+            // txt_buscarmod
+            // 
+            this.txt_buscarmod.Location = new System.Drawing.Point(190, 91);
+            this.txt_buscarmod.MaxLength = 100;
+            this.txt_buscarmod.Name = "txt_buscarmod";
+            this.txt_buscarmod.Size = new System.Drawing.Size(229, 20);
+            this.txt_buscarmod.TabIndex = 94;
+            // 
+            // label_busquedamod
+            // 
+            this.label_busquedamod.AutoSize = true;
+            this.label_busquedamod.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_busquedamod.Location = new System.Drawing.Point(92, 90);
+            this.label_busquedamod.Name = "label_busquedamod";
+            this.label_busquedamod.Size = new System.Drawing.Size(92, 21);
+            this.label_busquedamod.TabIndex = 93;
+            this.label_busquedamod.Text = "Busqueda:";
             // 
             // categoria
             // 
@@ -340,12 +211,6 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mod_categoria)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_borrar_categoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,21 +226,11 @@
         private System.Windows.Forms.Label lbl_categoria;
         private System.Windows.Forms.TextBox txt_nom_categ;
         private System.Windows.Forms.DataGridView dgv_categoria;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btn_mod_guardar;
-        private System.Windows.Forms.Label txt_mod_categoria;
-        private System.Windows.Forms.DataGridView dgv_mod_categoria;
-        private System.Windows.Forms.Button btn_actualizar;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView dgv_borrar_categoria;
-        private System.Windows.Forms.Button btn_borrar;
-        private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.TextBox txt_buscar;
-        private System.Windows.Forms.Label lbl_codigo_buscar;
-        private System.Windows.Forms.Button btn_buscarmod;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btn_eliminar_categoria;
+        private System.Windows.Forms.Button btn_buscar_categoria;
+        private System.Windows.Forms.Button bttn_actualizar_categoria;
         private System.Windows.Forms.TextBox txt_buscarmod;
         private System.Windows.Forms.Label label_busquedamod;
-        private System.Windows.Forms.TextBox txt_mod_categoriaa;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

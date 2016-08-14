@@ -16,7 +16,8 @@ namespace cinepolis
         encriptado encrip = new encriptado();
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla ="usuario";
-        String Squeery = "select* from usuario";
+        String Squeery = "select a.pk_idusuario, a.nomusuario, a.contusuario, b.nom1empleado, c.role from usuario a, empleado b, role c where a.pk_idempleado=b.pk_idempleado and a.pk_idrole=c.pk_idrole";
+        Boolean binsert = true;
 
 
 
@@ -24,8 +25,6 @@ namespace cinepolis
         {
             InitializeComponent();
             conect.actualizargrid(dgv_ingresarusuario,Squeery, Stabla);
-            conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
-            conect.actualizargrid(dgv_modificar, Squeery, Stabla);
             nombre_columna();
         }
         
@@ -60,16 +59,39 @@ namespace cinepolis
             txt_pasusuario.Clear();
             txt_confirmar.Clear();
             cbo_nivelsusario.ResetText();
+            cbo_elegirempleado.ResetText();
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            if (binsert == true)
+            {
+                insert();
+                MessageBox.Show("insetar");
+            }
+            else
+            {
+                update();
+                
+                btn_buscar_usuario.Enabled = true;
+                btn_eliminar_usuario.Enabled = true;
+                MessageBox.Show("modificar");
+
+            }
+            
+            
+        }
+
+
+        private void insert()
         {
             string convrole = cbo_nivelsusario.SelectedValue.ToString();
             string convemp = cbo_elegirempleado.SelectedValue.ToString();
 
             if (txt_nombreusuario.Text == "" || txt_pasusuario.Text == "" || txt_confirmar.Text == "" || cbo_nivelsusario.Text == "")
             {
-                MessageBox.Show("Llene todos los campos por favor");
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
             }
             else
             {
@@ -77,12 +99,12 @@ namespace cinepolis
                 if (txt_pasusuario.Text == txt_confirmar.Text)
                 {
 
-                    
+
 
                     conect.Conectar();
                     if (cbo_nivelsusario.Text == "administrativo")
                     {
-                        
+
                         String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + convemp + "');";
                         conect.EjecutarQuery(Squery);
                         limpiaringresar();
@@ -90,24 +112,21 @@ namespace cinepolis
                     else
                     {
 
-                        
+
                         String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + convemp + "');";
                         conect.EjecutarQuery(Squery);
                         limpiaringresar();
                     }
 
                     conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
-                    conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
-                    conect.actualizargrid(dgv_modificar, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
                 }
                 else
                 {
-                    MessageBox.Show("Las contraseñas no coinciden");
+                    MessageBox.Show("Las contraseñas no coinsiden", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -119,7 +138,7 @@ namespace cinepolis
         {
             cb1();
             cb2();
-            cb3();
+            
         }
 
         private void dgv_empleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -129,16 +148,19 @@ namespace cinepolis
 
         private void btn_eleminarusuario_Click(object sender, EventArgs e)
         {
-            String SCelda = this.dgv_borrarusuario.CurrentRow.Cells[0].Value.ToString();
-            var Vresultado= MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            delete();             
+        }
+
+        private void delete()
+        {
+            String SCelda = this.dgv_ingresarusuario.CurrentRow.Cells[0].Value.ToString();
+            var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (Vresultado == DialogResult.Yes)
             {
                 conect.Conectar();
                 String Squerys = "delete from  usuario where pk_idusuario = '" + SCelda + "';";
                 conect.EjecutarQuery(Squerys);
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
-                conect.actualizargrid(dgv_modificar, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
 
@@ -147,18 +169,10 @@ namespace cinepolis
             {
                 return;
             }
-                
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            conect.Conectar();
-            String Squerys = ("Select* from usuario where  nomusuario like'"+ txt_buscarusuario.Text +  "%' or pk_idempleado like '" + txt_buscarusuario.Text + "%'or pk_idrole like '" + txt_buscarusuario.Text + "%';");
-            conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_borrarusuario, Squerys, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_buscarusuario.Clear();
 
         }
 
@@ -169,62 +183,79 @@ namespace cinepolis
 
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
+            buscar();
+        }
+
+        private void buscar()
+        {
             conect.Conectar();
-            String Squerys = ("Select* from usuario where nomusuario like'" + txt_modificarbuscar.Text + "%' or pk_idempleado like '" + txt_modificarbuscar.Text + "%' or pk_idrole like '" + txt_modificarbuscar.Text + "%';");
+            String Squerys = ("Select* from usuario where nomusuario like'" + txt_buscar_usuario.Text + "%' or pk_idempleado like '" + txt_buscar_usuario.Text + "%' or pk_idrole like '" + txt_buscar_usuario.Text + "%';");
             conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_modificar, Squerys, Stabla);
+            conect.actualizargrid(dgv_ingresarusuario, Squerys, Stabla);
             nombre_columna();
             conect.Desconectar();
-            txt_modificarbuscar.Clear();
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            txt_nommod.Text= this.dgv_modificar.CurrentRow.Cells[1].Value.ToString();
-            txt_conmod.Text = encrip.DecryptKey(this.dgv_modificar.CurrentRow.Cells[2].Value.ToString()); ;
-            cbo_modnivel.Text = this.dgv_modificar.CurrentRow.Cells[3].Value.ToString();
-          txt_modempl.Text= this.dgv_modificar.CurrentRow.Cells[4].Value.ToString();
+            cargardato_a_textbox();
         }
 
-        public void limpiarmod()
+        private void cargardato_a_textbox()
         {
-            txt_nommod.Clear();
-            txt_conmod.Clear();
-            txt_confmod.Clear();
-            cbo_modnivel.ResetText();
-            txt_modempl.Clear();
-        } 
+            binsert = false;
+            btn_buscar_usuario.Enabled = false;
+            btn_eliminar_usuario.Enabled = false;
+            txt_nombreusuario.Text = this.dgv_ingresarusuario.CurrentRow.Cells[1].Value.ToString();
+            txt_pasusuario.Text = encrip.DecryptKey(this.dgv_ingresarusuario.CurrentRow.Cells[2].Value.ToString()); ;
+            cbo_nivelsusario.Text = this.dgv_ingresarusuario.CurrentRow.Cells[4].Value.ToString();
+            cbo_elegirempleado.Text = this.dgv_ingresarusuario.CurrentRow.Cells[3].Value.ToString();
+        }
+
+       
 
         private void btn_insertarmod_Click(object sender, EventArgs e)
         {
-            string convrolemod = cbo_modnivel.SelectedValue.ToString();
+            update();
+        }
 
-            if (txt_nommod.Text == "" || txt_conmod.Text=="" || txt_confmod.Text=="" || cbo_modnivel.Text=="" )
+
+
+        private void update()
+        {
+            string convrolemod = cbo_nivelsusario.SelectedValue.ToString();
+            string convempmod = cbo_elegirempleado.SelectedValue.ToString();
+
+
+            if (txt_nombreusuario.Text == "" || txt_pasusuario.Text == "" || txt_confirmar.Text == "" || cbo_nivelsusario.Text == "" || cbo_elegirempleado.Text=="")
             {
-                MessageBox.Show("Llene todos los campos por favor");
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
 
-                String Codigo = this.dgv_modificar.CurrentRow.Cells[0].Value.ToString();
+                String Codigo = this.dgv_ingresarusuario.CurrentRow.Cells[0].Value.ToString();
                 conect.Conectar();
-                if (txt_conmod.Text == txt_confmod.Text)
+                if (txt_pasusuario.Text == txt_confirmar.Text)
                 {
-                    String Squery = "update usuario set nomusuario ='" + txt_nommod.Text + "',contusuario='" + encrip.EncryptKey(txt_conmod.Text) + "' ,pk_idrole='" + convrolemod + "',pk_idempleado ='" + txt_modempl.Text + "'where pk_idusuario='" + Codigo + "'";
+                    String Squery = "update usuario set nomusuario ='" + txt_nombreusuario.Text + "',contusuario='" + encrip.EncryptKey(txt_pasusuario.Text) + "' ,pk_idrole='" + convrolemod + "',pk_idempleado ='" + convempmod + "'where pk_idusuario='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
-                    conect.actualizargrid(dgv_borrarusuario, Squeery, Stabla);
-                    conect.actualizargrid(dgv_modificar, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
-                    limpiarmod();
+                    limpiaringresar();
+                    binsert = true;
                 }
                 else
                 {
-                    MessageBox.Show("Las contraseñas no coinciden");
+                    MessageBox.Show("Las contraseñas no coinciden", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
+
+
+
 
         private void txt_nombreusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -378,31 +409,7 @@ namespace cinepolis
                 MessageBox.Show(ex.Message);
             }
         }
-        private void cb3()
-        {
-            try
-            {
-
-                conect.Conectar();
-                //se inicia un DataSet
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idrole, role from role;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, conect.Ruta());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Role");
-                cbo_modnivel.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_modnivel.ValueMember = ("pk_idrole");
-                //se indica el valor a desplegar en el combobox
-                cbo_modnivel.DisplayMember = ("role");
-                conect.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+      
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -420,22 +427,27 @@ namespace cinepolis
             this.dgv_ingresarusuario.Columns[3].HeaderText = "Empleado";
             this.dgv_ingresarusuario.Columns[4].HeaderText = "Role";
             this.dgv_ingresarusuario.Columns[2].Visible = false;
-            this.dgv_modificar.Columns[0].HeaderText = "No";
-            this.dgv_modificar.Columns[1].HeaderText = "Usuario";
-            this.dgv_modificar.Columns[3].HeaderText = "Empleado";
-            this.dgv_modificar.Columns[4].HeaderText = "Role";
-            this.dgv_modificar.Columns[2].Visible = false;
-            this.dgv_borrarusuario.Columns[0].HeaderText = "No";
-            this.dgv_borrarusuario.Columns[1].HeaderText = "Usuario";
-            this.dgv_borrarusuario.Columns[3].HeaderText = "Empleado";
-            this.dgv_borrarusuario.Columns[4].HeaderText = "Role";
-            this.dgv_borrarusuario.Columns[2].Visible = false;
-
+        
         }
 
         private void lbl_mantenimientodeusuario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bttn_actualizar_usuario_Click(object sender, EventArgs e)
+        {
+            cargardato_a_textbox();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            delete();
+        }
+
+        private void btn_buscar_usuario_Click(object sender, EventArgs e)
+        {
+            buscar();
         }
     }
 }

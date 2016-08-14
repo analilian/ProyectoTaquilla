@@ -36,85 +36,72 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_horariofin = new System.Windows.Forms.Label();
             this.lbl_horainicio = new System.Windows.Forms.Label();
-            this.dgv_mostrar_peliculas = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbl_buscar = new System.Windows.Forms.Label();
-            this.btn_buscarmod = new System.Windows.Forms.Button();
-            this.txt_buscarmod = new System.Windows.Forms.TextBox();
-            this.btn_actualizar = new System.Windows.Forms.Button();
-            this.btn_mod_guardar = new System.Windows.Forms.Button();
-            this.lbl_mod_horafin = new System.Windows.Forms.Label();
-            this.txt_mod_hora_inicio = new System.Windows.Forms.Label();
-            this.txt_mod_horafin = new System.Windows.Forms.TextBox();
-            this.txt_mod_horainicio = new System.Windows.Forms.TextBox();
-            this.dgv_mod_horario = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btn_borrar = new System.Windows.Forms.Button();
-            this.btn_buscar = new System.Windows.Forms.Button();
-            this.txt_buscar = new System.Windows.Forms.TextBox();
-            this.lbl_codigo_buscar = new System.Windows.Forms.Label();
-            this.dgv_borrar_horario = new System.Windows.Forms.DataGridView();
+            this.dgv_mostrar_horario = new System.Windows.Forms.DataGridView();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_eliminar_horario = new System.Windows.Forms.Button();
+            this.btn_buscar_horario = new System.Windows.Forms.Button();
+            this.bttn_actualizar_horario = new System.Windows.Forms.Button();
+            this.lbl_buscar = new System.Windows.Forms.Label();
+            this.txt_buscarmod = new System.Windows.Forms.TextBox();
             this.tbc_horario.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_peliculas)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mod_horario)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_borrar_horario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_horario)).BeginInit();
             this.SuspendLayout();
             // 
             // tbc_horario
             // 
             this.tbc_horario.Controls.Add(this.tabPage1);
-            this.tbc_horario.Controls.Add(this.tabPage2);
-            this.tbc_horario.Controls.Add(this.tabPage3);
-            this.tbc_horario.Location = new System.Drawing.Point(12, 97);
+            this.tbc_horario.Location = new System.Drawing.Point(12, 70);
             this.tbc_horario.Name = "tbc_horario";
             this.tbc_horario.SelectedIndex = 0;
-            this.tbc_horario.Size = new System.Drawing.Size(721, 348);
+            this.tbc_horario.Size = new System.Drawing.Size(721, 375);
             this.tbc_horario.TabIndex = 59;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.lbl_buscar);
+            this.tabPage1.Controls.Add(this.txt_buscarmod);
+            this.tabPage1.Controls.Add(this.btn_eliminar_horario);
+            this.tabPage1.Controls.Add(this.btn_buscar_horario);
+            this.tabPage1.Controls.Add(this.bttn_actualizar_horario);
             this.tabPage1.Controls.Add(this.txt_hora_final);
             this.tabPage1.Controls.Add(this.txt_horario_inicio);
             this.tabPage1.Controls.Add(this.btn_guardar);
             this.tabPage1.Controls.Add(this.lbl_horariofin);
             this.tabPage1.Controls.Add(this.lbl_horainicio);
-            this.tabPage1.Controls.Add(this.dgv_mostrar_peliculas);
+            this.tabPage1.Controls.Add(this.dgv_mostrar_horario);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(713, 322);
+            this.tabPage1.Size = new System.Drawing.Size(713, 349);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Agregar Horario";
+            this.tabPage1.Text = "Mantenimiento de Horario";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // txt_hora_final
             // 
-            this.txt_hora_final.Location = new System.Drawing.Point(462, 11);
+            this.txt_hora_final.Location = new System.Drawing.Point(170, 54);
             this.txt_hora_final.Name = "txt_hora_final";
-            this.txt_hora_final.Size = new System.Drawing.Size(148, 20);
+            this.txt_hora_final.Size = new System.Drawing.Size(221, 20);
             this.txt_hora_final.TabIndex = 62;
             // 
             // txt_horario_inicio
             // 
-            this.txt_horario_inicio.Location = new System.Drawing.Point(133, 14);
+            this.txt_horario_inicio.Location = new System.Drawing.Point(168, 16);
             this.txt_horario_inicio.Name = "txt_horario_inicio";
-            this.txt_horario_inicio.Size = new System.Drawing.Size(148, 20);
+            this.txt_horario_inicio.Size = new System.Drawing.Size(221, 20);
             this.txt_horario_inicio.TabIndex = 61;
             // 
             // btn_guardar
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(304, 57);
+            this.btn_guardar.Location = new System.Drawing.Point(553, 73);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(90, 73);
+            this.btn_guardar.Size = new System.Drawing.Size(61, 56);
             this.btn_guardar.TabIndex = 60;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -124,7 +111,7 @@
             // 
             this.lbl_horariofin.AutoSize = true;
             this.lbl_horariofin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_horariofin.Location = new System.Drawing.Point(300, 11);
+            this.lbl_horariofin.Location = new System.Drawing.Point(8, 54);
             this.lbl_horariofin.Name = "lbl_horariofin";
             this.lbl_horariofin.Size = new System.Drawing.Size(166, 21);
             this.lbl_horariofin.TabIndex = 59;
@@ -134,216 +121,23 @@
             // 
             this.lbl_horainicio.AutoSize = true;
             this.lbl_horainicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_horainicio.Location = new System.Drawing.Point(8, 11);
+            this.lbl_horainicio.Location = new System.Drawing.Point(43, 13);
             this.lbl_horainicio.Name = "lbl_horainicio";
             this.lbl_horainicio.Size = new System.Drawing.Size(119, 21);
             this.lbl_horainicio.TabIndex = 58;
             this.lbl_horainicio.Text = "Hora de inicio:";
             // 
-            // dgv_mostrar_peliculas
+            // dgv_mostrar_horario
             // 
-            this.dgv_mostrar_peliculas.AllowUserToAddRows = false;
-            this.dgv_mostrar_peliculas.AllowUserToDeleteRows = false;
-            this.dgv_mostrar_peliculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_mostrar_peliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_mostrar_peliculas.Location = new System.Drawing.Point(12, 136);
-            this.dgv_mostrar_peliculas.Name = "dgv_mostrar_peliculas";
-            this.dgv_mostrar_peliculas.ReadOnly = true;
-            this.dgv_mostrar_peliculas.Size = new System.Drawing.Size(690, 180);
-            this.dgv_mostrar_peliculas.TabIndex = 55;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage2.Controls.Add(this.lbl_buscar);
-            this.tabPage2.Controls.Add(this.btn_buscarmod);
-            this.tabPage2.Controls.Add(this.txt_buscarmod);
-            this.tabPage2.Controls.Add(this.btn_actualizar);
-            this.tabPage2.Controls.Add(this.btn_mod_guardar);
-            this.tabPage2.Controls.Add(this.lbl_mod_horafin);
-            this.tabPage2.Controls.Add(this.txt_mod_hora_inicio);
-            this.tabPage2.Controls.Add(this.txt_mod_horafin);
-            this.tabPage2.Controls.Add(this.txt_mod_horainicio);
-            this.tabPage2.Controls.Add(this.dgv_mod_horario);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(713, 322);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Modificar Horario";
-            // 
-            // lbl_buscar
-            // 
-            this.lbl_buscar.AutoSize = true;
-            this.lbl_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_buscar.Location = new System.Drawing.Point(74, 84);
-            this.lbl_buscar.Name = "lbl_buscar";
-            this.lbl_buscar.Size = new System.Drawing.Size(65, 21);
-            this.lbl_buscar.TabIndex = 88;
-            this.lbl_buscar.Text = "Buscar:";
-            this.lbl_buscar.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btn_buscarmod
-            // 
-            this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
-            this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarmod.Location = new System.Drawing.Point(378, 62);
-            this.btn_buscarmod.Name = "btn_buscarmod";
-            this.btn_buscarmod.Size = new System.Drawing.Size(85, 57);
-            this.btn_buscarmod.TabIndex = 87;
-            this.toolTip1.SetToolTip(this.btn_buscarmod, "Buscar");
-            this.btn_buscarmod.UseVisualStyleBackColor = true;
-            this.btn_buscarmod.Click += new System.EventHandler(this.btn_buscarmod_Click);
-            // 
-            // txt_buscarmod
-            // 
-            this.txt_buscarmod.Location = new System.Drawing.Point(145, 84);
-            this.txt_buscarmod.MaxLength = 100;
-            this.txt_buscarmod.Name = "txt_buscarmod";
-            this.txt_buscarmod.Size = new System.Drawing.Size(178, 20);
-            this.txt_buscarmod.TabIndex = 86;
-            // 
-            // btn_actualizar
-            // 
-            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
-            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(469, 62);
-            this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(66, 57);
-            this.btn_actualizar.TabIndex = 85;
-            this.toolTip1.SetToolTip(this.btn_actualizar, "Actualizar");
-            this.btn_actualizar.UseVisualStyleBackColor = true;
-            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
-            // 
-            // btn_mod_guardar
-            // 
-            this.btn_mod_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
-            this.btn_mod_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_mod_guardar.Location = new System.Drawing.Point(553, 62);
-            this.btn_mod_guardar.Name = "btn_mod_guardar";
-            this.btn_mod_guardar.Size = new System.Drawing.Size(59, 57);
-            this.btn_mod_guardar.TabIndex = 66;
-            this.toolTip1.SetToolTip(this.btn_mod_guardar, "Reguardar");
-            this.btn_mod_guardar.UseVisualStyleBackColor = true;
-            this.btn_mod_guardar.Click += new System.EventHandler(this.btn_mod_guardar_Click);
-            // 
-            // lbl_mod_horafin
-            // 
-            this.lbl_mod_horafin.AutoSize = true;
-            this.lbl_mod_horafin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_horafin.Location = new System.Drawing.Point(312, 11);
-            this.lbl_mod_horafin.Name = "lbl_mod_horafin";
-            this.lbl_mod_horafin.Size = new System.Drawing.Size(166, 21);
-            this.lbl_mod_horafin.TabIndex = 65;
-            this.lbl_mod_horafin.Text = "Hora de finalización:";
-            // 
-            // txt_mod_hora_inicio
-            // 
-            this.txt_mod_hora_inicio.AutoSize = true;
-            this.txt_mod_hora_inicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mod_hora_inicio.Location = new System.Drawing.Point(20, 11);
-            this.txt_mod_hora_inicio.Name = "txt_mod_hora_inicio";
-            this.txt_mod_hora_inicio.Size = new System.Drawing.Size(119, 21);
-            this.txt_mod_hora_inicio.TabIndex = 64;
-            this.txt_mod_hora_inicio.Text = "Hora de inicio:";
-            // 
-            // txt_mod_horafin
-            // 
-            this.txt_mod_horafin.Location = new System.Drawing.Point(484, 14);
-            this.txt_mod_horafin.MaxLength = 100;
-            this.txt_mod_horafin.Name = "txt_mod_horafin";
-            this.txt_mod_horafin.Size = new System.Drawing.Size(151, 20);
-            this.txt_mod_horafin.TabIndex = 63;
-            // 
-            // txt_mod_horainicio
-            // 
-            this.txt_mod_horainicio.Location = new System.Drawing.Point(145, 14);
-            this.txt_mod_horainicio.MaxLength = 100;
-            this.txt_mod_horainicio.Name = "txt_mod_horainicio";
-            this.txt_mod_horainicio.Size = new System.Drawing.Size(151, 20);
-            this.txt_mod_horainicio.TabIndex = 62;
-            this.txt_mod_horainicio.TextChanged += new System.EventHandler(this.txt_mod_horainicio_TextChanged);
-            // 
-            // dgv_mod_horario
-            // 
-            this.dgv_mod_horario.AllowUserToAddRows = false;
-            this.dgv_mod_horario.AllowUserToDeleteRows = false;
-            this.dgv_mod_horario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_mod_horario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_mod_horario.Location = new System.Drawing.Point(24, 136);
-            this.dgv_mod_horario.Name = "dgv_mod_horario";
-            this.dgv_mod_horario.ReadOnly = true;
-            this.dgv_mod_horario.Size = new System.Drawing.Size(635, 180);
-            this.dgv_mod_horario.TabIndex = 61;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage3.Controls.Add(this.btn_borrar);
-            this.tabPage3.Controls.Add(this.btn_buscar);
-            this.tabPage3.Controls.Add(this.txt_buscar);
-            this.tabPage3.Controls.Add(this.lbl_codigo_buscar);
-            this.tabPage3.Controls.Add(this.dgv_borrar_horario);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(713, 322);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Borrar Horario";
-            // 
-            // btn_borrar
-            // 
-            this.btn_borrar.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
-            this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_borrar.Location = new System.Drawing.Point(558, 16);
-            this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Size = new System.Drawing.Size(71, 52);
-            this.btn_borrar.TabIndex = 60;
-            this.toolTip1.SetToolTip(this.btn_borrar, "Eliminar");
-            this.btn_borrar.UseVisualStyleBackColor = true;
-            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
-            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar.Location = new System.Drawing.Point(418, 16);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(78, 52);
-            this.btn_buscar.TabIndex = 59;
-            this.toolTip1.SetToolTip(this.btn_buscar, "Buscar");
-            this.btn_buscar.UseVisualStyleBackColor = true;
-            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Location = new System.Drawing.Point(185, 33);
-            this.txt_buscar.MaxLength = 100;
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(178, 20);
-            this.txt_buscar.TabIndex = 58;
-            // 
-            // lbl_codigo_buscar
-            // 
-            this.lbl_codigo_buscar.AutoSize = true;
-            this.lbl_codigo_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo_buscar.Location = new System.Drawing.Point(15, 32);
-            this.lbl_codigo_buscar.Name = "lbl_codigo_buscar";
-            this.lbl_codigo_buscar.Size = new System.Drawing.Size(154, 21);
-            this.lbl_codigo_buscar.TabIndex = 57;
-            this.lbl_codigo_buscar.Text = "Codigo Busqueda:";
-            // 
-            // dgv_borrar_horario
-            // 
-            this.dgv_borrar_horario.AllowUserToAddRows = false;
-            this.dgv_borrar_horario.AllowUserToDeleteRows = false;
-            this.dgv_borrar_horario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_borrar_horario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_borrar_horario.Location = new System.Drawing.Point(6, 77);
-            this.dgv_borrar_horario.Name = "dgv_borrar_horario";
-            this.dgv_borrar_horario.ReadOnly = true;
-            this.dgv_borrar_horario.Size = new System.Drawing.Size(696, 238);
-            this.dgv_borrar_horario.TabIndex = 56;
+            this.dgv_mostrar_horario.AllowUserToAddRows = false;
+            this.dgv_mostrar_horario.AllowUserToDeleteRows = false;
+            this.dgv_mostrar_horario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_mostrar_horario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_mostrar_horario.Location = new System.Drawing.Point(12, 136);
+            this.dgv_mostrar_horario.Name = "dgv_mostrar_horario";
+            this.dgv_mostrar_horario.ReadOnly = true;
+            this.dgv_mostrar_horario.Size = new System.Drawing.Size(690, 206);
+            this.dgv_mostrar_horario.TabIndex = 55;
             // 
             // btn_regresar
             // 
@@ -367,6 +161,60 @@
             this.lbl_titulo_mantenimiento_cine.TabIndex = 57;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE HORARIO";
             // 
+            // btn_eliminar_horario
+            // 
+            this.btn_eliminar_horario.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
+            this.btn_eliminar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar_horario.Location = new System.Drawing.Point(617, 72);
+            this.btn_eliminar_horario.Name = "btn_eliminar_horario";
+            this.btn_eliminar_horario.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_horario.TabIndex = 90;
+            this.toolTip1.SetToolTip(this.btn_eliminar_horario, "Eliminar");
+            this.btn_eliminar_horario.UseVisualStyleBackColor = true;
+            this.btn_eliminar_horario.Click += new System.EventHandler(this.btn_eliminar_horario_Click);
+            // 
+            // btn_buscar_horario
+            // 
+            this.btn_buscar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
+            this.btn_buscar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_horario.Location = new System.Drawing.Point(425, 73);
+            this.btn_buscar_horario.Name = "btn_buscar_horario";
+            this.btn_buscar_horario.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_horario.TabIndex = 92;
+            this.toolTip1.SetToolTip(this.btn_buscar_horario, "Buscar");
+            this.btn_buscar_horario.UseVisualStyleBackColor = true;
+            this.btn_buscar_horario.Click += new System.EventHandler(this.btn_buscar_horario_Click);
+            // 
+            // bttn_actualizar_horario
+            // 
+            this.bttn_actualizar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.bttn_actualizar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttn_actualizar_horario.Location = new System.Drawing.Point(489, 72);
+            this.bttn_actualizar_horario.Name = "bttn_actualizar_horario";
+            this.bttn_actualizar_horario.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_horario.TabIndex = 91;
+            this.toolTip1.SetToolTip(this.bttn_actualizar_horario, "Actualizar");
+            this.bttn_actualizar_horario.UseVisualStyleBackColor = true;
+            this.bttn_actualizar_horario.Click += new System.EventHandler(this.bttn_actualizar_pelicula_Click);
+            // 
+            // lbl_buscar
+            // 
+            this.lbl_buscar.AutoSize = true;
+            this.lbl_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar.Location = new System.Drawing.Point(20, 100);
+            this.lbl_buscar.Name = "lbl_buscar";
+            this.lbl_buscar.Size = new System.Drawing.Size(65, 21);
+            this.lbl_buscar.TabIndex = 94;
+            this.lbl_buscar.Text = "Buscar:";
+            // 
+            // txt_buscarmod
+            // 
+            this.txt_buscarmod.Location = new System.Drawing.Point(91, 100);
+            this.txt_buscarmod.MaxLength = 100;
+            this.txt_buscarmod.Name = "txt_buscarmod";
+            this.txt_buscarmod.Size = new System.Drawing.Size(300, 20);
+            this.txt_buscarmod.TabIndex = 93;
+            // 
             // Horario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,13 +231,7 @@
             this.tbc_horario.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_peliculas)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_mod_horario)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_borrar_horario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_horario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,29 +243,17 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label lbl_horariofin;
         private System.Windows.Forms.Label lbl_horainicio;
-        private System.Windows.Forms.DataGridView dgv_mostrar_peliculas;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btn_actualizar;
-        private System.Windows.Forms.Button btn_mod_guardar;
-        private System.Windows.Forms.Label lbl_mod_horafin;
-        private System.Windows.Forms.Label txt_mod_hora_inicio;
-        private System.Windows.Forms.TextBox txt_mod_horafin;
-        private System.Windows.Forms.TextBox txt_mod_horainicio;
-        private System.Windows.Forms.DataGridView dgv_mod_horario;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button btn_borrar;
-        private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.TextBox txt_buscar;
-        private System.Windows.Forms.Label lbl_codigo_buscar;
-        private System.Windows.Forms.DataGridView dgv_borrar_horario;
+        private System.Windows.Forms.DataGridView dgv_mostrar_horario;
         private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.Label lbl_titulo_mantenimiento_cine;
         private System.Windows.Forms.Button btn_guardar;
-        private System.Windows.Forms.Label lbl_buscar;
-        private System.Windows.Forms.Button btn_buscarmod;
-        private System.Windows.Forms.TextBox txt_buscarmod;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox txt_hora_final;
         private System.Windows.Forms.TextBox txt_horario_inicio;
+        private System.Windows.Forms.Button btn_eliminar_horario;
+        private System.Windows.Forms.Button btn_buscar_horario;
+        private System.Windows.Forms.Button bttn_actualizar_horario;
+        private System.Windows.Forms.Label lbl_buscar;
+        private System.Windows.Forms.TextBox txt_buscarmod;
     }
 }

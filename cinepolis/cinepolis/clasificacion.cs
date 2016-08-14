@@ -15,12 +15,11 @@ namespace cinepolis
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "clasificacion";
         String Squeery = "select* from clasificacion";
+        Boolean binsert = true;
         public clasificacion()
         {
             InitializeComponent();
-               conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
-            conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
+            conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             nombre_columna();
         }
 
@@ -43,9 +42,27 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            if (txt_clasificacion.Text=="" || txt_descrip_clasificacion.Text=="" )
+            if (binsert == true)
             {
-                MessageBox.Show("Llene los campos por favor");
+                insert();
+                MessageBox.Show("insetar");
+            }
+            else
+            {
+                update();
+                btn_eliminar_pelicula.Enabled = true;
+                btn_buscar_pelicula.Enabled = true;
+                MessageBox.Show("modificar");
+
+            }
+        }
+
+
+        private void insert()
+        {
+            if (txt_clasificacion.Text == "" || txt_descrip_clasificacion.Text == "")
+            {
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -57,8 +74,6 @@ namespace cinepolis
                     String Squery = "insert into  clasificacion ( nomclasificacion, descclasificacion ) values('" + txt_clasificacion.Text + "','" + txt_descrip_clasificacion.Text + "');";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
-                    conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
-                    conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
                     txt_clasificacion.Clear();
@@ -71,6 +86,7 @@ namespace cinepolis
                 }
             }
         }
+
 
         private void clasificacion_Load(object sender, EventArgs e)
         {
@@ -89,50 +105,40 @@ namespace cinepolis
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conect.Conectar();
-                String Squerys = ("Select * from clasificacion where  nomclasificacion like'" + txt_modbuscar.Text + "%' or descclasificacion like '" + txt_modbuscar.Text + "%';");
-                conect.buscarquery(Squerys);
-                conect.actualizargrid(dgv_mod_clasificacion, Squerys, Stabla);
-                nombre_columna();
-                conect.Desconectar();
-                txt_modbuscar.Clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Busqueda sobre Tabla clasificacion");
-            } 
+            
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            txt_mod_clasificacion.Text = this.dgv_mod_clasificacion.CurrentRow.Cells[1].Value.ToString();
-           txt_mod_descrip_clasificacion.Text = this.dgv_mod_clasificacion.CurrentRow.Cells[2].Value.ToString();
+           
         }
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            if (txt_mod_clasificacion.Text=="" || txt_mod_descrip_clasificacion.Text=="")
+           
+        }
+
+        private void update()
+        {
+            if (txt_clasificacion.Text == "" || txt_descrip_clasificacion.Text == "")
             {
-                MessageBox.Show("Llene los campos por favor");
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
 
-                try {
-                    String Codigo = this.dgv_mod_clasificacion.CurrentRow.Cells[0].Value.ToString();
+                try
+                {
+                    String Codigo = this.dgv_clasificacion.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update clasificacion set  nomclasificacion ='" + txt_mod_clasificacion.Text + "',descclasificacion ='" + txt_mod_descrip_clasificacion.Text + "'where pk_idclasificacion ='" + Codigo + "'";
+                    String Squery = "update clasificacion set  nomclasificacion ='" + txt_clasificacion.Text + "',descclasificacion ='" + txt_descrip_clasificacion.Text + "'where pk_idclasificacion ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
-                    conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
-                    conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
-                    txt_mod_clasificacion.Clear();
-                    txt_mod_descrip_clasificacion.Clear();
+                    txt_clasificacion.Clear();
+                    txt_descrip_clasificacion.Clear();
+                    binsert = true;
                 }
                 catch (Exception ex)
                 {
@@ -142,44 +148,44 @@ namespace cinepolis
             }
         }
 
+
+
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-            conect.Conectar();
-            String Squerys = ("Select * from clasificacion where  nomclasificacion like'" + txt_buscar.Text + "%' or descclasificacion like '" + txt_buscar.Text + "%';");
-            conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_borrarclasificacion, Squerys, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_buscar.Clear();
+            
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
-           try{
-               String SCelda = this.dgv_borrarclasificacion.CurrentRow.Cells[0].Value.ToString();
-            var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (Vresultado == DialogResult.Yes)
-            {
-                conect.Conectar();
-                String Squerys = "delete from  clasificacion where pk_idclasificacion = '" + SCelda + "';";
-                conect.EjecutarQuery(Squerys);
-                conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
-                conect.actualizargrid(dgv_mod_clasificacion, Squeery, Stabla);
-                conect.actualizargrid(dgv_borrarclasificacion, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
+          
+        }
 
-            }
-            else
+        private void delete()
+        {
+            try
             {
-                return;
+                String SCelda = this.dgv_clasificacion.CurrentRow.Cells[0].Value.ToString();
+                var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Vresultado == DialogResult.Yes)
+                {
+                    conect.Conectar();
+                    String Squerys = "delete from  clasificacion where pk_idclasificacion = '" + SCelda + "';";
+                    conect.EjecutarQuery(Squerys);
+                    conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+
+                }
+                else
+                {
+                    return;
+                }
             }
-           }
-           catch (Exception ex)
-           {
-               MessageBox.Show(ex.Message + ex.TargetSite);
-               MessageBox.Show("Error en la Actualizacion sobre Tabla clasificacion");
-           }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Actualizacion sobre Tabla clasificacion");
+            }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -191,12 +197,41 @@ namespace cinepolis
             this.dgv_clasificacion.Columns[0].HeaderText = "No";
             this.dgv_clasificacion.Columns[1].HeaderText = "Clasificacion";
             this.dgv_clasificacion.Columns[2].HeaderText = "Descripcion";
-            this.dgv_borrarclasificacion.Columns[0].HeaderText = "No";
-            this.dgv_mod_clasificacion.Columns[1].HeaderText = "Clasificacion";
-            this.dgv_mod_clasificacion.Columns[2].HeaderText = "Descripcion";
-            this.dgv_borrarclasificacion.Columns[0].HeaderText = "No";
-            this.dgv_borrarclasificacion.Columns[1].HeaderText = "Clasificacion";
-            this.dgv_borrarclasificacion.Columns[2].HeaderText = "Descripcion";
+
+        }
+
+        private void bttn_actualizar_pelicula_Click(object sender, EventArgs e)
+        {
+            binsert = false;
+            btn_eliminar_pelicula.Enabled = false;
+            btn_buscar_pelicula.Enabled = false;
+
+            txt_clasificacion.Text = this.dgv_clasificacion.CurrentRow.Cells[1].Value.ToString();
+            txt_descrip_clasificacion.Text = this.dgv_clasificacion.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void btn_buscar_pelicula_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conect.Conectar();
+                String Squerys = ("Select * from clasificacion where  nomclasificacion like'%" + txt_modbuscar.Text + "%' or descclasificacion like '%" + txt_modbuscar.Text + "%';");
+                conect.buscarquery(Squerys);
+                conect.actualizargrid(dgv_clasificacion, Squerys, Stabla);
+                nombre_columna();
+                conect.Desconectar();
+                txt_modbuscar.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Busqueda sobre Tabla clasificacion");
+            }
+        }
+
+        private void btn_eliminar_pelicula_Click(object sender, EventArgs e)
+        {
+            delete();
         }
     }
 }

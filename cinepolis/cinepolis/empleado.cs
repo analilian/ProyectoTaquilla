@@ -16,15 +16,16 @@ namespace cinepolis
         conexionymanipulacion conect = new conexionymanipulacion();
  
         String Stabla = "empleado";
-        String Squeery = "select * from empleado";
-       
-      
+        String Squeery = "select a.pk_idempleado, a.nom1empleado, a.nom2empleado, a.ape1empleado, a.ape2empleado, a.dirempleado, a.dpiempleado, a.nitempleado, a.fechanacempleado, b.nomcine, c.nompuesto from empleado a, cine b, puesto c where a.pk_idcine=b.pk_idcine and a.pk_idpuesto=c.pk_idpuesto ORDER BY `b`.`nomcine` ASC";
+        Boolean binsert = true;
+
+
+
 
         public empleado()
         {
             InitializeComponent();
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
-            conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
             nombre_columna();
         }
 
@@ -282,11 +283,29 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (binsert == true)
+            {
+                insert();
+                MessageBox.Show("insetar");
+            }
+            else
+            {
+                update();
+                btn_eliminar_Empleado.Enabled = true;
+                btn_buscar_empleado.Enabled = true;
+                MessageBox.Show("modificar");
+
+            }
+        }
+
+
+        private void insert()
+        {
             string convpuesto = cbo_puesto.SelectedValue.ToString();
             string convcine = cbo_cine.SelectedValue.ToString();
             if (txt_nombre1.Text == "" || txt_nombre2.Text == "" || txt_apellido1.Text == "" || txt_apellido2.Text == "" || txt_direccion.Text == "" || txt_dpi.Text == "" || txt_nit.Text == "" || cbo_puesto.Text == "" || cbo_cine.Text == "")
             {
-                MessageBox.Show("Llene todos los campos por favor");
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -296,7 +315,6 @@ namespace cinepolis
                     String Squery = "insert into  empleado (nom1empleado,nom2empleado,ape1empleado,ape2empleado,dirempleado,dpiempleado,nitempleado,fechanacempleado,pk_idcine,pk_idpuesto) values('" + txt_nombre1.Text + "','" + txt_nombre2.Text + "','" + txt_apellido1.Text + "','" + txt_apellido2.Text + "','" + txt_direccion.Text + "','" + txt_dpi.Text + "','" + txt_nit.Text + "','" + this.dtp_fecha_nac.Text + "','" + convcine + "','" + convpuesto + "');";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
-                    conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
                     limpiaringreso();
@@ -309,6 +327,7 @@ namespace cinepolis
             }
         }
 
+
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
@@ -316,16 +335,7 @@ namespace cinepolis
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            txt_mod_nombre1.Text = this.dgv_emplados_modificar.CurrentRow.Cells[1].Value.ToString();
-            txt_mod_nombre2.Text = this.dgv_emplados_modificar.CurrentRow.Cells[2].Value.ToString();
-            txt_mod_apellido1.Text = this.dgv_emplados_modificar.CurrentRow.Cells[3].Value.ToString();
-            txt_mod_apellido2.Text = this.dgv_emplados_modificar.CurrentRow.Cells[4].Value.ToString();
-            txt_mod_direccion.Text = this.dgv_emplados_modificar.CurrentRow.Cells[5].Value.ToString();
-            txt_mod_dpi.Text = this.dgv_emplados_modificar.CurrentRow.Cells[6].Value.ToString();
-            txt_mod_nit.Text = this.dgv_emplados_modificar.CurrentRow.Cells[7].Value.ToString();
-            this.dtp_mod_fecha_nac.Text = this.dgv_emplados_modificar.CurrentRow.Cells[8].Value.ToString();
-            cbo_mod_cine.Text = this.dgv_emplados_modificar.CurrentRow.Cells[9].Value.ToString();
-            cbo_mod_puesto.Text = this.dgv_emplados_modificar.CurrentRow.Cells[10].Value.ToString();
+            
 
 
         }
@@ -347,26 +357,22 @@ namespace cinepolis
 
         public void limpiarmod()
         {
-            txt_mod_nombre1.Clear();
-            txt_mod_nombre2.Clear();
-            txt_mod_apellido1.Clear();
-            txt_mod_apellido2.Clear();
-            txt_mod_direccion.Clear();
-            txt_mod_dpi.Clear();
-            txt_mod_nit.Clear();
-            cbo_mod_puesto.ResetText();
-            
-            cbo_mod_cine.ResetText();
+           
         }
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            string convpuestomod = cbo_mod_puesto.SelectedValue.ToString();
-            string convcinemod = cbo_mod_cine.SelectedValue.ToString();
+            
+        }
 
-            if (txt_mod_nombre1.Text == "" || txt_mod_nombre2.Text == "" || txt_mod_apellido1.Text == "" || txt_mod_apellido2.Text == "" || txt_mod_direccion.Text == "" || txt_mod_dpi.Text == "" || txt_mod_nit.Text == "" || cbo_mod_puesto.Text == "" || cbo_mod_cine.Text == "")
+        private void update()
+        {
+            string convpuestomod = cbo_puesto.SelectedValue.ToString();
+            string convcinemod = cbo_cine.SelectedValue.ToString();
+
+            if (txt_nombre1.Text == "" || txt_nombre2.Text == "" || txt_apellido1.Text == "" || txt_apellido2.Text == "" || txt_direccion.Text == "" || txt_dpi.Text == "" || txt_nit.Text == "" || cbo_puesto.Text == "" || cbo_cine.Text == "")
             {
-                MessageBox.Show("Llene todos los campos por favor");
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -375,13 +381,13 @@ namespace cinepolis
                 {
                     String Codigo = this.dgv_emplados_modificar.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update empleado set  nom1empleado ='" + txt_mod_nombre1.Text + "', nom2empleado ='" + txt_mod_nombre2.Text + "',ape1empleado ='" + txt_mod_apellido1.Text + "',ape2empleado ='" + txt_mod_apellido2.Text + "',dirempleado ='" + txt_mod_direccion.Text + "',dpiempleado ='" + txt_mod_dpi.Text + "',nitempleado ='" + txt_mod_nit.Text + "',fechanacempleado ='" + this.dtp_mod_fecha_nac.Text + "',pk_idcine ='" + convcinemod + "',pk_idpuesto ='" + convpuestomod + "' where pk_idempleado ='" + Codigo + "'";
+                    String Squery = "update empleado set  nom1empleado ='" + txt_nombre1.Text + "', nom2empleado ='" + txt_nombre2.Text + "',ape1empleado ='" + txt_apellido1.Text + "',ape2empleado ='" + txt_apellido2.Text + "',dirempleado ='" + txt_direccion.Text + "',dpiempleado ='" + txt_dpi.Text + "',nitempleado ='" + txt_nit.Text + "',fechanacempleado ='" + this.dtp_fecha_nac.Text + "',pk_idcine ='" + convcinemod + "',pk_idpuesto ='" + convpuestomod + "' where pk_idempleado ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
-                    conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
-                    limpiarmod();
+                    limpiaringreso();
+                    binsert = true;
                 }
                 catch (Exception ex)
                 {
@@ -391,86 +397,33 @@ namespace cinepolis
             }
         }
 
+
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
-           try{
-               conect.Conectar();
-            String Squerys = ("Select* from empleado where  nom1empleado like'" + txt_modificarbuscar.Text + "%'or nom2empleado like'" + txt_modificarbuscar.Text + "%'or ape1empleado like'" + txt_modificarbuscar.Text + "%' or ape2empleado like'" + txt_modificarbuscar.Text + "%';");
-            conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_emplados_modificar, Squerys, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_modificarbuscar.Clear();
-           }
-           catch (Exception ex)
-           {
-               MessageBox.Show(ex.Message + ex.TargetSite);
-               MessageBox.Show("Error en la Busqueda sobre Tabla empleado");
-           }
+          
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-           try{
-               conect.Conectar();
-            String Squerys = ("Select* from empleado where  nom1empleado like'" + txt_buscar.Text + "%'or nom2empleado like'" + txt_buscar.Text + "%'or ape1empleado like'" + txt_buscar.Text + "%' or ape2empleado like'" + txt_buscar.Text + "%';");
-            conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_buscar_empleado, Squerys, Stabla);
-            conect.Desconectar();
-            txt_buscar.Clear();
-           }
-           catch (Exception ex)
-           {
-               MessageBox.Show(ex.Message + ex.TargetSite);
-               MessageBox.Show("Error en la Busqueda sobre Tabla empleado");
-           }
+           
         }
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
-            try {
-                String SCelda = this.dgv_buscar_empleado.CurrentRow.Cells[0].Value.ToString();
-            var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (Vresultado == DialogResult.Yes)
-            {
-                conect.Conectar();
-                String Squerys = "delete from  empleado where pk_idempleado = '" + SCelda + "';";
-                conect.EjecutarQuery(Squerys);
-                conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
-                conect.actualizargrid(dgv_buscar_empleado, Squeery, Stabla);
-                nombre_columna();
-                conect.Desconectar();
-            }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.TargetSite);
-                MessageBox.Show("Error en la Eliminacion sobre Tabla empleado");
-            }
+            
         }
 
         private void empleado_Load(object sender, EventArgs e)
         {
             cb12();
             cb13();
-            cb14();
-            cb15();
+  
         }
 
 
         public void nombre_columna()
         {
-            this.dgv_buscar_empleado.Columns[0].HeaderText = "No";
-            this.dgv_buscar_empleado.Columns[1].HeaderText = "Primer Nombre";
-            this.dgv_buscar_empleado.Columns[2].HeaderText = "Segundo Nombre";
-            this.dgv_buscar_empleado.Columns[3].HeaderText = "Primer Apellido";
-            this.dgv_buscar_empleado.Columns[4].HeaderText = "Segundo Apellido";
-            this.dgv_buscar_empleado.Columns[5].HeaderText = "Direccion";
-            this.dgv_buscar_empleado.Columns[6].HeaderText = "Dpi";
-            this.dgv_buscar_empleado.Columns[7].HeaderText = "Nit";
-            this.dgv_buscar_empleado.Columns[8].HeaderText = "Fecha Nacimiento";
-            this.dgv_buscar_empleado.Columns[9].HeaderText = "Cine";
-            this.dgv_buscar_empleado.Columns[10].HeaderText = "Puesto";
+           
             this.dgv_emplados_modificar.Columns[0].HeaderText = "No";
             this.dgv_emplados_modificar.Columns[1].HeaderText = "Primer Nombre";
             this.dgv_emplados_modificar.Columns[2].HeaderText = "Segundo Nombre";
@@ -540,59 +493,80 @@ namespace cinepolis
         }
 
 
-        public void cb14()
-        {
-            try
-            {
-                conect.Conectar();
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idpuesto, nompuesto from puesto;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, conect.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Puesto");
-                cbo_mod_puesto.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_mod_puesto.ValueMember = ("pk_idpuesto");
-                //se indica el valor a desplegar en el combobox
-                cbo_mod_puesto.DisplayMember = ("nompuesto");
-                conect.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+       
 
 
-        private void cb15()
-        {
-            try
-            {
-
-                conect.Conectar();
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idcine, nomcine from cine;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, conect.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "cine");
-                cbo_mod_cine.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_mod_cine.ValueMember = ("pk_idcine");
-                //se indica el valor a desplegar en el combobox
-                cbo_mod_cine.DisplayMember = ("nomcine");
-                conect.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+       
 
         private void lbl_titulo_mantenimiento_cine_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void bttn_actualizar_pelicula_Click(object sender, EventArgs e)
+        {
+            binsert = false;
+            btn_eliminar_Empleado.Enabled = false;
+            btn_buscar_empleado.Enabled = false;
+
+            txt_nombre1.Text = this.dgv_emplados_modificar.CurrentRow.Cells[1].Value.ToString();
+            txt_nombre2.Text = this.dgv_emplados_modificar.CurrentRow.Cells[2].Value.ToString();
+            txt_apellido1.Text = this.dgv_emplados_modificar.CurrentRow.Cells[3].Value.ToString();
+            txt_apellido2.Text = this.dgv_emplados_modificar.CurrentRow.Cells[4].Value.ToString();
+            txt_direccion.Text = this.dgv_emplados_modificar.CurrentRow.Cells[5].Value.ToString();
+            txt_dpi.Text = this.dgv_emplados_modificar.CurrentRow.Cells[6].Value.ToString();
+            txt_nit.Text = this.dgv_emplados_modificar.CurrentRow.Cells[7].Value.ToString();
+            this.dtp_fecha_nac.Text = this.dgv_emplados_modificar.CurrentRow.Cells[8].Value.ToString();
+            cbo_cine.Text = this.dgv_emplados_modificar.CurrentRow.Cells[9].Value.ToString();
+            cbo_puesto.Text = this.dgv_emplados_modificar.CurrentRow.Cells[10].Value.ToString();
+        }
+
+        private void btn_eliminar_pelicula_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String SCelda = this.dgv_emplados_modificar.CurrentRow.Cells[0].Value.ToString();
+                var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (Vresultado == DialogResult.Yes)
+                {
+                    conect.Conectar();
+                    String Squerys = "delete from  empleado where pk_idempleado = '" + SCelda + "';";
+                    conect.EjecutarQuery(Squerys);
+                    conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
+                    nombre_columna();
+                    conect.Desconectar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Eliminacion sobre Tabla empleado");
+            }
+        }
+
+        private void btn_buscar_empleado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conect.Conectar();
+                String Squerys = ("Select* from empleado where  nom1empleado like'" + txt_buscar.Text + "%'or nom2empleado like'" + txt_buscar.Text + "%'or ape1empleado like'" + txt_buscar.Text + "%' or ape2empleado like'" + txt_buscar.Text + "%';");
+                conect.buscarquery(Squerys);
+                conect.actualizargrid(dgv_emplados_modificar, Squerys, Stabla);
+                conect.Desconectar();
+                txt_buscar.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.TargetSite);
+                MessageBox.Show("Error en la Busqueda sobre Tabla empleado");
+            }
+        }
+
+        private void btn_telefono_empleado_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            telefonoEmpleado r = new telefonoEmpleado();
+            r.ShowDialog();
         }
     }
 }

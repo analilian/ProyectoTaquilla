@@ -16,16 +16,17 @@ namespace cinepolis
     {
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "sala";
-        String Stabla1 = "cine";
+        String Stabla1 = "cinessala";
         String Squeery = "select * from sala";
-        String Squeery1 = "select * from cine";
+        String Squeery1 = "select b.nomcine, a.nomsala from sala a, cine b, cinessala c where c.pk_idcine=b.pk_idcine and c.pk_idsala=a.pk_idsala ORDER BY `b`.`nomcine` ASC";
+        
+        Boolean binsert = true;
     
         public sala()
         {
             InitializeComponent();
             conect.actualizargrid(dgv_sala, Squeery, Stabla);
-            conect.actualizargrid(dgv_modsala, Squeery, Stabla);
-            conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+            conect.actualizargrid(dgv_salacine, Squeery1, Stabla1);
             nombre_columna();
         }
 
@@ -38,9 +39,32 @@ namespace cinepolis
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+            if (binsert == true)
+            {
+                insert();
+                MessageBox.Show("insetar");
+                cb1();
+            }
+            else
+            {
+                update();
+                btn_buscar_sala.Enabled = true;
+                btn_eliminar_sala.Enabled = true;
+                MessageBox.Show("modificar");
+                cb1();
+
+            }
+
+            
+        }
+
+
+        private void insert()
+        {
             if (txt_sala.Text == "")
             {
-                MessageBox.Show("Llene los campos por favor");
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
             {
@@ -50,25 +74,26 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "insert into  sala (nomsala) values('" + txt_sala.Text + "');";
                     conect.EjecutarQuery(Squery);
-                
+
 
                     //----------------------sirve para obtener el dato de una columna de una tabla
-                    DataTable dt = new DataTable();
-                    String sQuery = "SELECT pk_idsala FROM sala WHERE nomsala= '"+ txt_sala.Text + "'";
-                    MySqlCommand comando = new MySqlCommand(sQuery, conect.rutaconectada());
-                    MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
-                    adaptador.Fill(dt);
-                    DataRow fila = dt.Rows[0];
-                    string sid = Convert.ToString(fila[0]);
+
+                    //DataTable dt = new DataTable();
+                    //String sQuery = "SELECT pk_idsala FROM sala WHERE nomsala= '"+ txt_sala.Text + "'";
+                    //MySqlCommand comando = new MySqlCommand(sQuery, conect.rutaconectada());
+                    //MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+                    //adaptador.Fill(dt);
+                    //DataRow fila = dt.Rows[0];
+                    //string sid = Convert.ToString(fila[0]);
                     //MessageBox.Show(sid);
 
                     //------inserta en tabla intermedia cinessala-------------------------------
-                    String Squery1 = "insert into  cinessala (pk_idcine,pk_idsala) values('" + scodigo + "','"+ sid +"');";
-                    conect.EjecutarQuery(Squery1);
+
+                    //String Squery1 = "insert into  cinessala (pk_idcine,pk_idsala) values('" + scodigo + "','"+ sid +"');";
+                    //conect.EjecutarQuery(Squery1);
+
                     //------Actualizar datagrid------------------------
-                    conect.actualizargrid(dgv_modsala, Squeery, Stabla);
-                    conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
-                    conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+                    conect.actualizargrid(dgv_sala, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
                     txt_sala.Clear();
@@ -89,7 +114,8 @@ namespace cinepolis
 
         private void sala_Load(object sender, EventArgs e)
         {
-
+            cb1();
+            cb2();
         }
 
         private void tbc_clasificacion_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,59 +140,57 @@ namespace cinepolis
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
-           try{
-               conect.Conectar();
-            String Squerys = ("Select * from sala where  nomsala like'" + txt_buscar.Text + "%';");
-            conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_borrarsala, Squerys, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_buscar.Clear();
-           }
-           catch (Exception ex)
-           {
-               MessageBox.Show(ex.Message + ex.TargetSite);
-               MessageBox.Show("Error en la Busqueda sobre Tabla sala");
-           }
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            conect.Conectar();
-            String Squerys = ("Select * from sala where  nomsala like'" + txt_buscmod.Text + "%';");
-            conect.buscarquery(Squerys);
-            conect.actualizargrid(dgv_modsala, Squerys, Stabla);
-            nombre_columna();
-            conect.Desconectar();
-            txt_buscmod.Clear();
+            
 
         }
 
+
+        private void buscar()
+        {
+            conect.Conectar();
+            String Squerys = ("Select * from sala where  nomsala like'" + txt_buscar_sala.Text + "%';");
+            conect.buscarquery(Squerys);
+            conect.actualizargrid(dgv_sala, Squerys, Stabla);
+            nombre_columna();
+            conect.Desconectar();
+            txt_buscar_sala.Clear();
+        } 
+
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
-            txt_mod.Text = this.dgv_modsala.CurrentRow.Cells[1].Value.ToString();
+            
         }
 
         private void btn_mod_guardar_Click(object sender, EventArgs e)
         {
-            if (txt_mod.Text == "")
+            update();
+        }
+
+
+        private void update()
+        {
+            if (txt_sala.Text == "")
             {
-                MessageBox.Show("Llene todos los campos por favor");
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 try
                 {
-                    String Codigo = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
+                    String Codigo = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
-                    String Squery = "update sala set  nomsala ='" + txt_mod.Text + "'where pk_idsala ='" + Codigo + "'";
+                    String Squery = "update sala set  nomsala ='" + txt_sala.Text + "'where pk_idsala ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
-                    conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
-                    conect.actualizargrid(dgv_modsala, Squeery, Stabla);
-                    conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+                    conect.actualizargrid(dgv_sala, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
-                    txt_mod.Clear();
+                    txt_sala.Clear();
+                    binsert = true;
                 }
                 catch (Exception ex)
                 {
@@ -178,18 +202,21 @@ namespace cinepolis
 
         private void btn_borrar_Click(object sender, EventArgs e)
         {
+            delete();
+        }
+
+        private void delete()
+        {
             try
             {
-                String SCelda = this.dgv_borrarsala.CurrentRow.Cells[0].Value.ToString();
+                String SCelda = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
                 var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (Vresultado == DialogResult.Yes)
                 {
                     conect.Conectar();
                     String Squerys = "delete from  sala where pk_idsala = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
-                    conect.actualizargrid(dgv_sala, Squeery1, Stabla1);
-                    conect.actualizargrid(dgv_modsala, Squeery, Stabla);
-                    conect.actualizargrid(dgv_borrarsala, Squeery, Stabla);
+                    conect.actualizargrid(dgv_sala, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
 
@@ -204,7 +231,7 @@ namespace cinepolis
                 MessageBox.Show(ex.Message + ex.TargetSite);
                 MessageBox.Show("Error en la Eliminacion sobre Tabla sala");
             }
-            
+
         }
 
         private void lbl_titulo_mantenimiento_cine_Click(object sender, EventArgs e)
@@ -215,19 +242,116 @@ namespace cinepolis
         {
             this.dgv_sala.Columns[0].HeaderText = "No";
             this.dgv_sala.Columns[1].HeaderText = "Nombre de sala";
-        
-            this.dgv_modsala.Columns[0].HeaderText = "No";
-            this.dgv_modsala.Columns[1].HeaderText = "Nombre De Sala";
-  
-            this.dgv_borrarsala.Columns[0].HeaderText = "No";
-            this.dgv_borrarsala.Columns[1].HeaderText = "Nombre De Sala";
-      
-
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_eliminar_sala_Click(object sender, EventArgs e)
+        {
+            delete();
+            cb1();
+        }
+
+        private void btn_actualizar_sala_Click(object sender, EventArgs e)
+        {
+            binsert = false;
+            btn_buscar_sala.Enabled = false;
+            btn_eliminar_sala.Enabled = false;
+            txt_sala.Text = this.dgv_sala.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void btn_buscar_sala_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+        private void cb1()
+        {
+            try
+            {
+
+                conect.Conectar();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idsala, nomsala from sala;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, conect.Ruta());
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Sala");
+                cbo_relacion_sala.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_sala.ValueMember = ("pk_idsala");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_sala.DisplayMember = ("nomsala");
+                conect.Desconectar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+        private void cb2()
+        {
+            try
+            {
+
+                conect.Conectar();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idcine, nomcine from cine;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, conect.Ruta());
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Cine");
+                cbo_relacion_cine.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_cine.ValueMember = ("pk_idcine");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_cine.DisplayMember = ("nomcine");
+                conect.Desconectar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string sala = cbo_relacion_sala.SelectedValue.ToString();
+            string cine = cbo_relacion_cine.SelectedValue.ToString();
+
+            if (cbo_relacion_cine.Text == "" || cbo_relacion_sala.Text=="")
+            {
+                MessageBox.Show("Llene todos los campos por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else
+            {
+                try
+                {
+                    string scodigo = this.dgv_sala.CurrentRow.Cells[0].Value.ToString();
+                    conect.Conectar();
+                    String Squery = "insert into  cinessala (pk_idcine, pk_idsala) values('" + cine + "', '" + sala + "');";
+                    conect.EjecutarQuery(Squery);
+                    conect.actualizargrid(dgv_sala, Squeery, Stabla);
+                    conect.actualizargrid(dgv_salacine, Squeery1, Stabla1);
+                    nombre_columna();
+                    conect.Desconectar();
+                    txt_sala.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.TargetSite);
+                    MessageBox.Show("Error en la Insercion sobre Tabla Sala");
+                }
+            }
         }
     }
 }
