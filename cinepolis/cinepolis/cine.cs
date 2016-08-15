@@ -17,20 +17,21 @@ namespace cinepolis
         String Stabla = "cine";
         String Squeery = "select a.pk_idcine, a.nomcine, a.direccin, b.nombreregion from cine a, region b where a.pk_idregion=b.pk_idregion ORDER BY `a`.`nomcine` ASC";
         Boolean binsert = true;
+        string usu;
+        
 
-
-
-        public cine()
+        public cine(string usuario)
         {
             InitializeComponent();
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             nombre_columna();
+            usu = usuario;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mantenimiento r = new mantenimiento();
+            mantenimiento r = new mantenimiento(usu);
             r.ShowDialog();
         }
 
@@ -73,7 +74,9 @@ namespace cinepolis
                 {
                     conect.Conectar();
                     String Squery = "insert into  cine (nomcine,direccin,pk_idregion) values('" + txt_nombre_cine.Text + "','" + txt_descrip_cine.Text + "','" + convregion + "');";
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego cine', NOW());";
                     conect.EjecutarQuery(Squery);
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -128,7 +131,9 @@ namespace cinepolis
                     String Codigo = this.dgv_clasificacion.CurrentRow.Cells[0].Value.ToString();
                     conect.Conectar();
                     String Squery = "update cine set  nomcine ='" + txt_nombre_cine.Text + "', direccin ='" + txt_descrip_cine.Text + "', pk_idregion ='" + convregionmod + "'where pk_idcine ='" + Codigo + "'";
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico cine', NOW());";
                     conect.EjecutarQuery(Squery);
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -166,7 +171,9 @@ namespace cinepolis
                 {
                     conect.Conectar();
                     String Squerys = "delete from  cine where pk_idcine = '" + SCelda + "';";
-                    conect.EjecutarQuery(Squerys);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','Elimino cine', NOW());";
+                    conect.EjecutarQuery(Query);
+                     conect.EjecutarQuery(Squerys);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -281,7 +288,7 @@ namespace cinepolis
         private void btn_telefono_empleado_Click(object sender, EventArgs e)
         {
             this.Hide();
-            telefonoEmpleado r = new telefonoEmpleado();
+            telefonoEmpleado r = new telefonoEmpleado(usu);
             r.ShowDialog();
         }
     }

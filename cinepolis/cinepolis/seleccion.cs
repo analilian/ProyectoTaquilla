@@ -18,23 +18,19 @@ namespace cinepolis
             InitializeComponent();
             this.usuario=usu;
         }
-        public seleccion()
-        {
-            InitializeComponent();
-            
-        }
+     
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ayuda r = new ayuda();
+            ayuda r = new ayuda(usuario);
             r.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mantenimiento r = new mantenimiento();
+            mantenimiento r = new mantenimiento(usuario);
             r.ShowDialog();
         }
 
@@ -48,7 +44,7 @@ namespace cinepolis
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            reportes r = new reportes();
+            reportes r = new reportes(usuario);
             r.ShowDialog();
         }
 
@@ -60,7 +56,7 @@ namespace cinepolis
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            usuario r = new usuario();
+            usuario r = new usuario(usuario);
             r.ShowDialog();
         }
 
@@ -72,7 +68,14 @@ namespace cinepolis
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            empleado r = new empleado();
+            empleado r = new empleado(usuario);
+            r.ShowDialog();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+           Bitacora r = new Bitacora(usuario);
             r.ShowDialog();
         }
     }

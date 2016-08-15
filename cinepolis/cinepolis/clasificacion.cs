@@ -16,17 +16,19 @@ namespace cinepolis
         String Stabla = "clasificacion";
         String Squeery = "select* from clasificacion";
         Boolean binsert = true;
-        public clasificacion()
+        string usu;
+        public clasificacion(string usuario)
         {
             InitializeComponent();
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             nombre_columna();
+            usu = usuario;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mantenimiento r = new mantenimiento();
+            mantenimiento r = new mantenimiento(usu);
             r.ShowDialog();
         }
 
@@ -73,6 +75,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "insert into  clasificacion ( nomclasificacion, descclasificacion ) values('" + txt_clasificacion.Text + "','" + txt_descrip_clasificacion.Text + "');";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego clasificacion', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -133,6 +137,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "update clasificacion set  nomclasificacion ='" + txt_clasificacion.Text + "',descclasificacion ='" + txt_descrip_clasificacion.Text + "'where pk_idclasificacion ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico clasificacion', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -171,6 +177,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squerys = "delete from  clasificacion where pk_idclasificacion = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','elimino clasificaion', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();

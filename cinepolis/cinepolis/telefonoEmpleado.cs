@@ -13,7 +13,8 @@ namespace cinepolis
 {
     public partial class telefonoEmpleado : Form
     {
-        public telefonoEmpleado()
+        string usu;
+        public telefonoEmpleado(string usuario)
         {
             InitializeComponent();
             conect.actualizargrid(dgv_telefono, Squiery, Stabla);
@@ -21,7 +22,7 @@ namespace cinepolis
             conect.actualizargrid(dgv_tel_cine, Squeery1, Stabla);
             
             nombre_columna();
-         
+            usu = usuario;
         }
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "telefono";
@@ -71,6 +72,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "insert into  telefono (teltelefono) values('" + txt_nom_proy.Text + "');";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego telefono', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_telefono, Squiery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -100,6 +103,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "update telefono set  teltelefono ='" + txt_nom_proy.Text + "'where pk_idtelefono ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico telefono', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_telefono, Squiery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -146,6 +151,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squerys = "delete from  telefono where pk_idtelefono = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','borro telefono', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_telefono, Squiery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -194,7 +201,7 @@ namespace cinepolis
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mantenimiento r = new mantenimiento();
+            mantenimiento r = new mantenimiento(usu);
             r.ShowDialog();
         }
 
@@ -493,7 +500,7 @@ namespace cinepolis
         private void btn_regresar_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            seleccion r = new seleccion();
+            seleccion r = new seleccion(usu);
             r.ShowDialog();
         }
 

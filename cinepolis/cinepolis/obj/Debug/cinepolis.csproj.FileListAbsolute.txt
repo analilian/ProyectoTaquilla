@@ -276,3 +276,6 @@ C:\Users\Walter\Desktop\proyecto auditoria\cinepolisunioinsertupdatedelete\cinep
 C:\Users\Walter\Desktop\proyecto auditoria\cinepolisunioinsertupdatedelete\cinepolis\cinepolis\obj\Debug\cinepolis.telefonoEmpleado.resources
 C:\Users\Walter\Desktop\proyecto auditoria\cinepolisunioinsertupdatedelete\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
 C:\Users\Walter\Desktop\proyecto auditoria\cinepolisunioinsertupdatedelete\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.proyeccion.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.telefonoEmpleado.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Bitacora.resources

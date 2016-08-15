@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.lbl_selecciondeventana = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.btn_usuario = new System.Windows.Forms.Button();
+            this.btn_ayuda = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
             this.btn_reportes = new System.Windows.Forms.Button();
             this.btn_mantenimientocine = new System.Windows.Forms.Button();
-            this.btn_ayuda = new System.Windows.Forms.Button();
+            this.btn_bitacora = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,18 +51,6 @@
             this.lbl_selecciondeventana.Size = new System.Drawing.Size(624, 54);
             this.lbl_selecciondeventana.TabIndex = 2;
             this.lbl_selecciondeventana.Text = "SELECCIÓN DE VENTANA ";
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.button1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(333, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(257, 146);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "MANTENIMIENTO DE EMPLEADO";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btn_usuario
             // 
@@ -76,6 +65,32 @@
             this.toolTip1.SetToolTip(this.btn_usuario, "Configuracion de Usuario");
             this.btn_usuario.UseVisualStyleBackColor = false;
             this.btn_usuario.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // btn_ayuda
+            // 
+            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
+            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ayuda.Location = new System.Drawing.Point(3, 325);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
+            this.btn_ayuda.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
+            this.btn_ayuda.UseVisualStyleBackColor = false;
+            this.btn_ayuda.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.button1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(333, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(257, 146);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "MANTENIMIENTO DE EMPLEADO";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pic_logo
             // 
@@ -123,19 +138,16 @@
             this.btn_mantenimientocine.UseVisualStyleBackColor = true;
             this.btn_mantenimientocine.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btn_ayuda
+            // btn_bitacora
             // 
-            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
-            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ayuda.Location = new System.Drawing.Point(3, 325);
-            this.btn_ayuda.Name = "btn_ayuda";
-            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
-            this.btn_ayuda.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
-            this.btn_ayuda.UseVisualStyleBackColor = false;
-            this.btn_ayuda.Click += new System.EventHandler(this.button1_Click);
+            this.btn_bitacora.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
+            this.btn_bitacora.Location = new System.Drawing.Point(39, 333);
+            this.btn_bitacora.Name = "btn_bitacora";
+            this.btn_bitacora.Size = new System.Drawing.Size(94, 24);
+            this.btn_bitacora.TabIndex = 14;
+            this.btn_bitacora.Text = "Bitacora";
+            this.btn_bitacora.UseVisualStyleBackColor = true;
+            this.btn_bitacora.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // seleccion
             // 
@@ -143,6 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(923, 358);
+            this.Controls.Add(this.btn_bitacora);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_usuario);
             this.Controls.Add(this.pic_logo);
@@ -171,5 +184,6 @@
         private System.Windows.Forms.Button btn_usuario;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btn_bitacora;
     }
 }

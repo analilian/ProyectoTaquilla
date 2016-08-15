@@ -14,6 +14,7 @@ namespace cinepolis
 {
     public partial class sala : Form
     {
+        string usu;
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "sala";
         String Stabla1 = "cinessala";
@@ -22,18 +23,19 @@ namespace cinepolis
         
         Boolean binsert = true;
     
-        public sala()
+        public sala(string usuario)
         {
             InitializeComponent();
             conect.actualizargrid(dgv_sala, Squeery, Stabla);
             conect.actualizargrid(dgv_salacine, Squeery1, Stabla1);
             nombre_columna();
+            usu = usuario;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mantenimiento r = new mantenimiento();
+            mantenimiento r = new mantenimiento(usu);
             r.ShowDialog();
         }
 
@@ -74,7 +76,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "insert into  sala (nomsala) values('" + txt_sala.Text + "');";
                     conect.EjecutarQuery(Squery);
-
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego sala', NOW());";
+                    conect.EjecutarQuery(Query);
 
                     //----------------------sirve para obtener el dato de una columna de una tabla
 
@@ -186,6 +189,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "update sala set  nomsala ='" + txt_sala.Text + "'where pk_idsala ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico sala', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_sala, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -216,6 +221,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squerys = "delete from  sala where pk_idsala = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','borro sala', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_sala, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();

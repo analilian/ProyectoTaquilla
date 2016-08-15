@@ -59,7 +59,7 @@ namespace cinepolis
                     this.Hide();
                     seleccion a = new seleccion(txt_usuario.Text);
                     a.ShowDialog();
-
+                  
 
                 }
                 else
@@ -67,6 +67,7 @@ namespace cinepolis
                     this.Hide();
                     mantenimiento a = new mantenimiento(txt_usuario.Text);
                     a.ShowDialog();
+                   
                 }
             }
             else

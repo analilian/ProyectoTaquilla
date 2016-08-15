@@ -12,6 +12,7 @@ using MySql.Data.MySqlClient;
 using System.IO;
 using System.Security.Cryptography;
 using System.Runtime.InteropServices;
+//programador: rodrigo Sifontes
 
 namespace cinepolis
 {

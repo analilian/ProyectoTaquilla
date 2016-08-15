@@ -12,15 +12,17 @@ namespace cinepolis
 {
     public partial class reportes : Form
     {
-        public reportes()
+        string usu;
+        public reportes(string usuario)
         {
             InitializeComponent();
+            usu = usuario;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            seleccion r = new seleccion();
+            seleccion r = new seleccion(usu);
             r.ShowDialog();
         }
 
@@ -29,6 +31,11 @@ namespace cinepolis
             this.Hide();
             Form1 r = new Form1();
             r.ShowDialog();
+        }
+
+        private void reportes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

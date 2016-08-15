@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using System.Net;
+using System.Net.NetworkInformation;
 //programador:Rodrigo Sifontes
 
 
@@ -59,6 +60,23 @@ namespace cinepolis
             dg.DataSource = midataset;
             dg.DataMember = Stabla;
             this.Desconectar();
+
+        }
+        //se obtine ip del ordenador
+        public string ip()
+        {
+            IPHostEntry host;
+            string localIP="";
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    localIP = ip.ToString();
+                }
+            }
+           
+            return localIP;
 
         }
         public void buscarquery(String Squery)

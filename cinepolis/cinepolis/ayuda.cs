@@ -12,9 +12,11 @@ namespace cinepolis
 {
     public partial class ayuda : Form
     {
-        public ayuda()
+        string usu;
+        public ayuda(string usuario)
         {
             InitializeComponent();
+            usu = usuario;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -27,7 +29,7 @@ namespace cinepolis
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            seleccion r = new seleccion();
+            seleccion r = new seleccion(usu);
             r.ShowDialog();
         }
 

@@ -12,11 +12,13 @@ namespace cinepolis
 {
     public partial class proyeccion : Form
     {
-        public proyeccion()
+        string usu;
+        public proyeccion(string usuario)
         {
             InitializeComponent();
             conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
             nombre_columna();
+            usu = usuario;
         }
 
         conexionymanipulacion conect = new conexionymanipulacion();
@@ -56,6 +58,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "insert into  tipoproyeccion (nomtproyecccion) values('" + txt_nom_proy.Text + "');";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu+ "','" + conect.ip() + "','agrego proyeccion', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -85,6 +89,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "update tipoproyeccion set  nomtproyecccion ='" + txt_nom_proy.Text + "'where pk_idproyeccion ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico proyeccion', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -131,6 +137,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squerys = "delete from  tipoproyeccion where pk_idproyeccion = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','borro proyeccion', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -170,7 +178,7 @@ namespace cinepolis
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mantenimiento r = new mantenimiento();
+            mantenimiento r = new mantenimiento(usu);
             r.ShowDialog();
         }
 

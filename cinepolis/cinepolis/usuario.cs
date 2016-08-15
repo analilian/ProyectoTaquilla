@@ -18,14 +18,15 @@ namespace cinepolis
         String Stabla ="usuario";
         String Squeery = "select a.pk_idusuario, a.nomusuario, a.contusuario, b.nom1empleado, c.role from usuario a, empleado b, role c where a.pk_idempleado=b.pk_idempleado and a.pk_idrole=c.pk_idrole";
         Boolean binsert = true;
+        string usu;
 
 
-
-        public usuario()
+        public usuario(string usuario)
         {
             InitializeComponent();
             conect.actualizargrid(dgv_ingresarusuario,Squeery, Stabla);
             nombre_columna();
+            usu = usuario;
         }
         
 
@@ -44,7 +45,7 @@ namespace cinepolis
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            seleccion r = new seleccion();
+            seleccion r = new seleccion(usu);
             r.ShowDialog();
         }
 
@@ -106,7 +107,10 @@ namespace cinepolis
                     {
 
                         String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + convemp + "');";
+
                         conect.EjecutarQuery(Squery);
+                        String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego usuario', NOW());";
+                        conect.EjecutarQuery(Query);
                         limpiaringresar();
                     }
                     else
@@ -115,6 +119,8 @@ namespace cinepolis
 
                         String Squery = "insert into  usuario (nomusuario,contusuario,pk_idrole,pk_idempleado) values('" + txt_nombreusuario.Text + "','" + encrip.EncryptKey(txt_pasusuario.Text) + "','" + convrole + "','" + convemp + "');";
                         conect.EjecutarQuery(Squery);
+                        String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego usuario', NOW());";
+                        conect.EjecutarQuery(Query);
                         limpiaringresar();
                     }
 
@@ -160,6 +166,8 @@ namespace cinepolis
                 conect.Conectar();
                 String Squerys = "delete from  usuario where pk_idusuario = '" + SCelda + "';";
                 conect.EjecutarQuery(Squerys);
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','borro usuario', NOW());";
+                conect.EjecutarQuery(Query);
                 conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
@@ -241,6 +249,8 @@ namespace cinepolis
                 {
                     String Squery = "update usuario set nomusuario ='" + txt_nombreusuario.Text + "',contusuario='" + encrip.EncryptKey(txt_pasusuario.Text) + "' ,pk_idrole='" + convrolemod + "',pk_idempleado ='" + convempmod + "'where pk_idusuario='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico usuario', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();

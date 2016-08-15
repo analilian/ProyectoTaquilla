@@ -16,18 +16,20 @@ namespace cinepolis
         String Stabla = "categoria";
         String Squeery = "select* from categoria";
         Boolean binsert = true;
+        string usu;
 
-        public categoria()
+        public categoria(string usuario)
         {
             InitializeComponent();
             conect.actualizargrid(dgv_categoria, Squeery, Stabla);
             nombre_columna();
+            usu = usuario;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mantenimiento r = new mantenimiento();
+            mantenimiento r = new mantenimiento(usu);
             r.ShowDialog();
         }
 
@@ -62,7 +64,10 @@ namespace cinepolis
                 {
                     conect.Conectar();
                     String Squery = "insert into  categoria (nomcategoria) values('" + txt_nom_categ.Text + "');";
+
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego categoria', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_categoria, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -118,6 +123,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squery = "update categoria set  nomcategoria ='" + txt_nom_categ.Text + "'where pk_idcategorias ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico categoria', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_categoria, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -194,6 +201,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squerys = "delete from  categoria where pk_idcategorias = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','Elimino categoria', NOW());";
+                    conect.EjecutarQuery(Query);
                     conect.actualizargrid(dgv_categoria, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();

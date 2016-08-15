@@ -19,38 +19,21 @@ namespace cinepolis
         MySqlCommand comand;
         conexionymanipulacion con = new conexionymanipulacion();
         String Stabla = "Pelicula";
-        string sdireccion = "localhost";
-        string susuario = "root";
-        string spass = "";
-
-        
         string imgLoc;
         String Squeery = "select* from pelicula";
         
-        const string MySqlConnecionString = "server=localhost; database=bdcinetopia; Uid=root;pwd=;";
+       
         public mantenimiento(string g)
         {
             InitializeComponent();
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
-            
-
-
             nombre_columna();
             this.usuario = g;
             realizar();
         }
-        public mantenimiento()
-        {
-            InitializeComponent();
-            con.actualizargrid(dgv_insertar, Squeery, Stabla);
-            con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
-            con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
-            nombre_columna();
-          
-
-        }
+     
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
@@ -67,7 +50,7 @@ namespace cinepolis
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            seleccion r = new seleccion();
+            seleccion r = new seleccion(usuario);
             r.ShowDialog();
         }
 
@@ -230,6 +213,8 @@ namespace cinepolis
                 comand = new MySqlCommand(sql, con.rutaconectada());
                 comand.Parameters.Add(new MySqlParameter("@img", img));
                 int x = comand.ExecuteNonQuery();
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','agrego pelicula', NOW());";
+                con.EjecutarQuery(Query);
                 con.Desconectar();
                 MessageBox.Show(" Registro guardado");
                 con.actualizargrid(dgv_insertar, Squeery, Stabla);
@@ -320,7 +305,9 @@ namespace cinepolis
                 con.Conectar();
                 String Squerys = "delete from  pelicula  where pk_idpelicula = '" + SCelda + "';";
                 con.EjecutarQuery(Squerys);
-               con.actualizargrid(dgv_insertar, Squeery, Stabla);
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','elimino pelicula', NOW());";
+                con.EjecutarQuery(Query);
+                con.actualizargrid(dgv_insertar, Squeery, Stabla);
                 con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
                 con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
                 nombre_columna();
@@ -363,6 +350,8 @@ namespace cinepolis
                 comand.Parameters.Add(new MySqlParameter("@img", img));
                 int y = comand.ExecuteNonQuery();
                 MessageBox.Show(" Registro guardado");
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','modifico pelicula', NOW());";
+                con.EjecutarQuery(Query);
                 con.actualizargrid(dgv_insertar, Squeery, Stabla);
                 con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
                 con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
@@ -403,35 +392,35 @@ namespace cinepolis
         private void btn_agregar_horario_Click(object sender, EventArgs e)
         {
             this.Hide();
-             fecha r = new fecha();
+             fecha r = new fecha(usuario);
             r.ShowDialog();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            sala r = new sala();
+            sala r = new sala(usuario);
             r.ShowDialog();
         }
 
         private void btn_agregar_clasificacion_Click(object sender, EventArgs e)
         {
             this.Hide();
-            clasificacion r = new clasificacion();
+            clasificacion r = new clasificacion(usuario);
             r.ShowDialog();
         }
 
         private void btn_agregar_btn_agregar_categoria_Click(object sender, EventArgs e)
         {
             this.Hide();
-            categoria r = new categoria();
+            categoria r = new categoria(usuario);
             r.ShowDialog();
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             this.Hide();
-            cine r = new cine();
+            cine r = new cine(usuario);
             r.ShowDialog();
         }
 
@@ -861,6 +850,8 @@ namespace cinepolis
             con.Conectar();
             String Squery = "insert into cartelerapelicula (pk_idcinesal, pk_idpelicula, pk_idhorario, pk_idproyeccion) values('" + sala_cine + "', '" + pelicula_ralacion + "', '" + horario_relaci + "','" + proyeccion_relaci + "');";
             con.EjecutarQuery(Squery);
+            String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','agrego cartelera de pelicula', NOW());";
+            con.EjecutarQuery(Query);
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
@@ -871,21 +862,21 @@ namespace cinepolis
         private void btn_agregar_relacion1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            sala r = new sala();
+            sala r = new sala(usuario);
             r.ShowDialog();
         }
 
         private void btn_agregar_relacion3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            cine r = new cine();
+            cine r = new cine(usuario);
             r.ShowDialog();
         }
 
         private void btn_agregar_relacion2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Horario r = new Horario();
+            Horario r = new Horario(usuario);
             r.ShowDialog();
         }
     }

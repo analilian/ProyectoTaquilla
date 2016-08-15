@@ -12,12 +12,14 @@ namespace cinepolis
 {
     public partial class fecha : Form
     {
-        public fecha()
+        string usu;
+        public fecha(string usuario)
         {
             InitializeComponent();
             
             conect.actualizargrid(dgv_mostrar_fecha, Squeery, Stabla);
             nombre_columna();
+            usu = usuario;
         }
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "fechascartelera";
@@ -52,6 +54,8 @@ namespace cinepolis
                 conect.Conectar();
                 String Squery = "insert into  fechascartelera (fechainicar,fechafinalcar) values('" + this.dtp_fecha_inicio.Text + "','" + this.dtp_fecha_fin.Text + "');";
                 conect.EjecutarQuery(Squery);
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego fecha', NOW());";
+                conect.EjecutarQuery(Query);
                 conect.actualizargrid(dgv_mostrar_fecha, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
@@ -78,6 +82,8 @@ namespace cinepolis
                 conect.Conectar();
                 String Squery = "update fechascartelera set fechainicar = '" + this.dtp_fecha_inicio.Text + "',fechafinalcar ='" + this.dtp_fecha_fin.Text + "'where pk_idfcar ='" + Codigo + "'";
                 conect.EjecutarQuery(Squery);
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico fecha', NOW());";
+                conect.EjecutarQuery(Query);
                 conect.actualizargrid(dgv_mostrar_fecha, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
@@ -111,6 +117,8 @@ namespace cinepolis
                 conect.Conectar();
                 String Squerys = "delete from  fechascartelera where pk_idfcar = '" + sCelda + "';";
                 conect.EjecutarQuery(Squerys);
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','Elimino fecha', NOW());";
+                conect.EjecutarQuery(Query);
                 conect.actualizargrid(dgv_mostrar_fecha, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
@@ -125,7 +133,7 @@ namespace cinepolis
         private void btn_regresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mantenimiento r = new mantenimiento();
+            mantenimiento r = new mantenimiento(usu);
             r.ShowDialog();
         }
 
