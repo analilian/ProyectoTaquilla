@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+// programadores:walter recinos y rodrigo sifontes
+// inicio: 31/07/16 fin:13/08/2016
+
 
 namespace cinepolis
 {

@@ -11,17 +11,19 @@ using MySql.Data.MySqlClient;
 using System.Net;
 using System.Net.NetworkInformation;
 //programador:Rodrigo Sifontes
+//inicio 31/07/2016  fin: 14/08/2016
 
 
 namespace cinepolis
 {
-    
+    // reutlizacion de codigo
     class conexionymanipulacion
     {
 
         string connect = "server=localhost; database= bdcinetopia; Uid= root  ;pwd= ;";
         MySqlConnection conexion;
-        
+
+        //conexion
         public void Conectar()
         {
             conexion = new MySqlConnection(connect);
@@ -43,7 +45,7 @@ namespace cinepolis
         {
             conexion.Close();
         }
-
+        // ejecutar querys
         public void EjecutarQuery(String Query)
         {
             MySqlCommand comando = new MySqlCommand(Query, conexion);
@@ -51,6 +53,7 @@ namespace cinepolis
             if (Ifilasafectadas > 0)
                 MessageBox.Show("Operacion realizada con exitosamente");
         }
+        //actualizar y llenar los datagrid
      public void actualizargrid(DataGridView dg, String SQuery, String Stabla)
         {
             this.Conectar();
@@ -79,6 +82,7 @@ namespace cinepolis
             return localIP;
 
         }
+        // la opcion buscar dentro de un datagrid
         public void buscarquery(String Squery)
         {
             MySqlCommand Micomando = new MySqlCommand(Squery, conexion);

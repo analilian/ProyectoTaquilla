@@ -13,6 +13,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Runtime.InteropServices;
 //programador: rodrigo Sifontes
+// inicio : 05/08/16    fin:08/08/16  
 
 namespace cinepolis
 {
