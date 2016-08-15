@@ -17,12 +17,17 @@ namespace proyectotaquilla
         conexionn conect = new conexionn();
 
         MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+        public String nompeli;
+        public String com;
 
         public cartelera(string seleccion)
         {
             InitializeComponent();
+            //public string comp = seleccion;
             string complejo = seleccion;
+            com = complejo;
             llenado(complejo);
+
         }
 
 
@@ -31,6 +36,7 @@ namespace proyectotaquilla
             InitializeComponent();
 
         }
+
         private void Ejemplo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -75,18 +81,18 @@ namespace proyectotaquilla
             this.Hide();
             boletos.Show();
         }
-        
+
         private void cartelera_Load(object sender, EventArgs e)
         {
-            
+
         }
 
 
-        
+
         private void llenado(string comple)
         {
             //string s = "SELECT * FROM cinessala, cartelerapelicula, cine, pelicula,horario WHERE cinessala.pk_idcinesal = cartelerapelicula.pk_idcinesal AND cine.pk_idcine = cinessala.pk_idcine and cine.nomcine = '"+comple+"' and cartelerapelicula.pk_idpelicula = pelicula.pk_idpelicula and cartelerapelicula.pk_idhorario = horario.pk_idhorario group by(pelicula.nompelicula)";
-            string s = "SELECT p.nompelicula, p.imagenpelicula, p.pk_idfcar, cp.pk_idcinesal, cp.pk_idhorario, cp.pk_idproyeccion FROM cinessala cs, cartelerapelicula cp, cine c, pelicula p,horario h WHERE cs.pk_idcinesal = cp.pk_idcinesal AND c.pk_idcine = cs.pk_idcine and c.nomcine = '"+comple+"' and cp.pk_idpelicula = p.pk_idpelicula and cp.pk_idhorario = h.pk_idhorario group by(p.nompelicula)";
+            string s = "select p.nompelicula, p.despelicula, p.vinculopelicula, fc.fechainicar, fc.fechafinalcar, tp.nomtproyecccion, h.horainiciohor from cine c, cinessala cs, cartelerapelicula cp,pelicula p, fechascartelera fc, tipoproyeccion tp, horario h where c.nomcine = '" + comple + "' and c.pk_idcine = cs.pk_idcine and cs.pk_idcinesal = cp.pk_idcinesal and cp.pk_idpelicula = p.pk_idpelicula and cp.pk_idproyeccion = tp.pk_idproyeccion and cp.pk_idhorario = h.pk_idhorario and p.pk_idfcar = fc.pk_idfcar";
             conexion.Open();
 
             //MySqlCommand mcd = new MySqlCommand(s, conexion);
@@ -98,14 +104,31 @@ namespace proyectotaquilla
             adaptador.Fill(dt);
             DataRow fila = dt.Rows[0];
             string sid = Convert.ToString(fila[0]);
-            MessageBox.Show(sid);
+            nompeli=sid;
 
-            int idd = Convert.ToInt32(fila[2]);
-            string ss = Convert.ToString(idd);
-            MessageBox.Show(ss);
-            string sql1 = "select imagenpelicula from pelicula where pk_idpelicula='" + idd + "'";
-           
-            MySqlCommand command = new MySqlCommand(sql1,conexion);
+            MessageBox.Show(sid);
+            //MessageBox.Show(nompeli);
+
+            llNombre1.Text = sid;
+            if (sid != null)
+            {
+                llNombre2.Text = sid;
+            }
+            else
+            {
+                MessageBox.Show("No hay mas peliculas");
+            }
+
+            //llNombre1 = sid;
+
+            //int idd = Convert.ToInt32(fila[2]);
+            //string ss = Convert.ToString(idd);
+            //MessageBox.Show(ss);
+
+
+            string sql1 = "select p.imagenpelicula from cine c, cinessala cs, cartelerapelicula cp, pelicula p, fechascartelera fc, tipoproyeccion tp, horario h where c.nomcine = '"+comple+"' and c.pk_idcine = cs.pk_idcine and cs.pk_idcinesal = cp.pk_idcinesal and cp.pk_idpelicula = p.pk_idpelicula and cp.pk_idproyeccion = tp.pk_idproyeccion and cp.pk_idhorario = h.pk_idhorario and p.pk_idfcar = fc.pk_idfcar";
+
+            MySqlCommand command = new MySqlCommand(sql1, conexion);
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
             byte[] img = (byte[])(reader[0]);
@@ -214,6 +237,19 @@ namespace proyectotaquilla
             boletos boletos = new boletos();
             this.Hide();
             boletos.Show();
+        }
+
+        private void llNombre1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frm_Horarios horarios = new frm_Horarios(nompeli,com);
+            Hide();
+            horarios.Show();
+
+        }
+        
+        private void llNombre2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 

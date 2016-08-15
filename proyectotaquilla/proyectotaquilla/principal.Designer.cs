@@ -37,17 +37,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbComplejo = new System.Windows.Forms.ComboBox();
             this.bvercartelera = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pBfoto5 = new System.Windows.Forms.PictureBox();
+            this.pBfoto4 = new System.Windows.Forms.PictureBox();
+            this.pBfoto3 = new System.Windows.Forms.PictureBox();
             this.pBfoto2 = new System.Windows.Forms.PictureBox();
             this.pBfoto1 = new System.Windows.Forms.PictureBox();
-            this.pBfoto3 = new System.Windows.Forms.PictureBox();
-            this.pBfoto4 = new System.Windows.Forms.PictureBox();
-            this.pBfoto5 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pBfoto5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBfoto4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBfoto3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBfoto2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBfoto1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBfoto3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBfoto4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBfoto5)).BeginInit();
             this.SuspendLayout();
             // 
             // ltitulo
@@ -100,6 +100,7 @@
             // 
             // cbComplejo
             // 
+            this.cbComplejo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbComplejo.FormattingEnabled = true;
             this.cbComplejo.Location = new System.Drawing.Point(611, 403);
             this.cbComplejo.Name = "cbComplejo";
@@ -117,6 +118,41 @@
             this.bvercartelera.Text = "Ver Cartelera";
             this.bvercartelera.UseVisualStyleBackColor = false;
             this.bvercartelera.Click += new System.EventHandler(this.bvercartelera_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pBfoto5
+            // 
+            this.pBfoto5.Image = ((System.Drawing.Image)(resources.GetObject("pBfoto5.Image")));
+            this.pBfoto5.Location = new System.Drawing.Point(95, 188);
+            this.pBfoto5.Name = "pBfoto5";
+            this.pBfoto5.Size = new System.Drawing.Size(684, 173);
+            this.pBfoto5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBfoto5.TabIndex = 11;
+            this.pBfoto5.TabStop = false;
+            // 
+            // pBfoto4
+            // 
+            this.pBfoto4.Image = ((System.Drawing.Image)(resources.GetObject("pBfoto4.Image")));
+            this.pBfoto4.Location = new System.Drawing.Point(95, 188);
+            this.pBfoto4.Name = "pBfoto4";
+            this.pBfoto4.Size = new System.Drawing.Size(684, 173);
+            this.pBfoto4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBfoto4.TabIndex = 10;
+            this.pBfoto4.TabStop = false;
+            // 
+            // pBfoto3
+            // 
+            this.pBfoto3.Image = ((System.Drawing.Image)(resources.GetObject("pBfoto3.Image")));
+            this.pBfoto3.Location = new System.Drawing.Point(95, 188);
+            this.pBfoto3.Name = "pBfoto3";
+            this.pBfoto3.Size = new System.Drawing.Size(684, 173);
+            this.pBfoto3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBfoto3.TabIndex = 9;
+            this.pBfoto3.TabStop = false;
             // 
             // pBfoto2
             // 
@@ -136,41 +172,6 @@
             this.pBfoto1.Size = new System.Drawing.Size(202, 164);
             this.pBfoto1.TabIndex = 1;
             this.pBfoto1.TabStop = false;
-            // 
-            // pBfoto3
-            // 
-            this.pBfoto3.Image = ((System.Drawing.Image)(resources.GetObject("pBfoto3.Image")));
-            this.pBfoto3.Location = new System.Drawing.Point(95, 188);
-            this.pBfoto3.Name = "pBfoto3";
-            this.pBfoto3.Size = new System.Drawing.Size(684, 173);
-            this.pBfoto3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBfoto3.TabIndex = 9;
-            this.pBfoto3.TabStop = false;
-            // 
-            // pBfoto4
-            // 
-            this.pBfoto4.Image = ((System.Drawing.Image)(resources.GetObject("pBfoto4.Image")));
-            this.pBfoto4.Location = new System.Drawing.Point(95, 188);
-            this.pBfoto4.Name = "pBfoto4";
-            this.pBfoto4.Size = new System.Drawing.Size(684, 173);
-            this.pBfoto4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBfoto4.TabIndex = 10;
-            this.pBfoto4.TabStop = false;
-            // 
-            // pBfoto5
-            // 
-            this.pBfoto5.Image = ((System.Drawing.Image)(resources.GetObject("pBfoto5.Image")));
-            this.pBfoto5.Location = new System.Drawing.Point(95, 188);
-            this.pBfoto5.Name = "pBfoto5";
-            this.pBfoto5.Size = new System.Drawing.Size(684, 173);
-            this.pBfoto5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBfoto5.TabIndex = 11;
-            this.pBfoto5.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FPrincipal
             // 
@@ -195,11 +196,11 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FPrincipal";
             this.Load += new System.EventHandler(this.FPrincipal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pBfoto5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBfoto4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBfoto3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBfoto2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBfoto1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBfoto3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBfoto4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBfoto5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

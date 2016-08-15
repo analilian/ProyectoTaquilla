@@ -30,49 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.btnHor1 = new System.Windows.Forms.Button();
-            this.btnHor2 = new System.Windows.Forms.Button();
-            this.btnHor3 = new System.Windows.Forms.Button();
-            this.btnHor4 = new System.Windows.Forms.Button();
-            this.btnHor5 = new System.Windows.Forms.Button();
-            this.btnHor6 = new System.Windows.Forms.Button();
-            this.btnHor11 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbProyeccion = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pbImagen6 = new System.Windows.Forms.PictureBox();
+            this.pbImagen5 = new System.Windows.Forms.PictureBox();
+            this.pbImagen4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pbImagen3 = new System.Windows.Forms.PictureBox();
             this.pbImagen2 = new System.Windows.Forms.PictureBox();
             this.pbImagen1 = new System.Windows.Forms.PictureBox();
-            this.btnHor7 = new System.Windows.Forms.Button();
-            this.btnHor8 = new System.Windows.Forms.Button();
-            this.btnHor9 = new System.Windows.Forms.Button();
-            this.btnHor14 = new System.Windows.Forms.Button();
-            this.btnHor10 = new System.Windows.Forms.Button();
-            this.btnHor15 = new System.Windows.Forms.Button();
-            this.btnHor12 = new System.Windows.Forms.Button();
-            this.btnHor13 = new System.Windows.Forms.Button();
-            this.lbltitulo1 = new System.Windows.Forms.Label();
-            this.lbltitulo2 = new System.Windows.Forms.Label();
-            this.lbltitulo3 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.llNombre1 = new System.Windows.Forms.LinkLabel();
+            this.llNombre2 = new System.Windows.Forms.LinkLabel();
+            this.llNombre3 = new System.Windows.Forms.LinkLabel();
+            this.llNombre4 = new System.Windows.Forms.LinkLabel();
+            this.llNombre5 = new System.Windows.Forms.LinkLabel();
+            this.llNombre6 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen1)).BeginInit();
@@ -82,42 +68,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(349, 16);
+            this.label1.Location = new System.Drawing.Point(333, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 36);
             this.label1.TabIndex = 3;
             this.label1.Text = "Cartelera";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.DarkCyan;
-            this.button4.Location = new System.Drawing.Point(546, 158);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 32);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Ver Sinopsis";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DarkCyan;
-            this.button5.Location = new System.Drawing.Point(546, 319);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(113, 32);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Ver Sinopsis";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DarkCyan;
-            this.button6.Location = new System.Drawing.Point(546, 465);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(113, 32);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Ver Sinopsis";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // monthCalendar1
             // 
@@ -127,99 +82,6 @@
             this.monthCalendar1.Margin = new System.Windows.Forms.Padding(0);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 15;
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.trackBar1.Location = new System.Drawing.Point(12, 50);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(222, 45);
-            this.trackBar1.TabIndex = 18;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
-            // btnHor1
-            // 
-            this.btnHor1.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor1.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor1.Location = new System.Drawing.Point(438, 104);
-            this.btnHor1.Name = "btnHor1";
-            this.btnHor1.Size = new System.Drawing.Size(62, 48);
-            this.btnHor1.TabIndex = 19;
-            this.btnHor1.UseVisualStyleBackColor = false;
-            this.btnHor1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnHor2
-            // 
-            this.btnHor2.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor2.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor2.Location = new System.Drawing.Point(503, 104);
-            this.btnHor2.Name = "btnHor2";
-            this.btnHor2.Size = new System.Drawing.Size(62, 48);
-            this.btnHor2.TabIndex = 20;
-            this.btnHor2.UseVisualStyleBackColor = false;
-            this.btnHor2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnHor3
-            // 
-            this.btnHor3.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor3.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor3.Location = new System.Drawing.Point(571, 104);
-            this.btnHor3.Name = "btnHor3";
-            this.btnHor3.Size = new System.Drawing.Size(62, 48);
-            this.btnHor3.TabIndex = 21;
-            this.btnHor3.UseVisualStyleBackColor = false;
-            this.btnHor3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnHor4
-            // 
-            this.btnHor4.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor4.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor4.Location = new System.Drawing.Point(638, 104);
-            this.btnHor4.Name = "btnHor4";
-            this.btnHor4.Size = new System.Drawing.Size(60, 48);
-            this.btnHor4.TabIndex = 22;
-            this.btnHor4.UseVisualStyleBackColor = false;
-            this.btnHor4.Click += new System.EventHandler(this.btnHor4_Click);
-            // 
-            // btnHor5
-            // 
-            this.btnHor5.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor5.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor5.Location = new System.Drawing.Point(704, 104);
-            this.btnHor5.Name = "btnHor5";
-            this.btnHor5.Size = new System.Drawing.Size(60, 48);
-            this.btnHor5.TabIndex = 23;
-            this.btnHor5.UseVisualStyleBackColor = false;
-            this.btnHor5.Click += new System.EventHandler(this.btnHor5_Click);
-            // 
-            // btnHor6
-            // 
-            this.btnHor6.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor6.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor6.Location = new System.Drawing.Point(438, 265);
-            this.btnHor6.Name = "btnHor6";
-            this.btnHor6.Size = new System.Drawing.Size(62, 48);
-            this.btnHor6.TabIndex = 24;
-            this.btnHor6.UseVisualStyleBackColor = false;
-            this.btnHor6.Click += new System.EventHandler(this.btnHor6_Click);
-            // 
-            // btnHor11
-            // 
-            this.btnHor11.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor11.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor11.Location = new System.Drawing.Point(441, 411);
-            this.btnHor11.Name = "btnHor11";
-            this.btnHor11.Size = new System.Drawing.Size(59, 48);
-            this.btnHor11.TabIndex = 29;
-            this.btnHor11.UseVisualStyleBackColor = false;
-            this.btnHor11.Click += new System.EventHandler(this.btnHor11_Click);
             // 
             // groupBox1
             // 
@@ -274,6 +136,42 @@
             this.checkBox1.Text = "IMAX";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // pbImagen6
+            // 
+            this.pbImagen6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImagen6.Location = new System.Drawing.Point(719, 377);
+            this.pbImagen6.Name = "pbImagen6";
+            this.pbImagen6.Size = new System.Drawing.Size(130, 143);
+            this.pbImagen6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen6.TabIndex = 37;
+            this.pbImagen6.TabStop = false;
+            // 
+            // pbImagen5
+            // 
+            this.pbImagen5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImagen5.Location = new System.Drawing.Point(498, 377);
+            this.pbImagen5.Name = "pbImagen5";
+            this.pbImagen5.Size = new System.Drawing.Size(130, 143);
+            this.pbImagen5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen5.TabIndex = 36;
+            this.pbImagen5.TabStop = false;
+            // 
+            // pbImagen4
+            // 
+            this.pbImagen4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbImagen4.Location = new System.Drawing.Point(290, 377);
+            this.pbImagen4.Name = "pbImagen4";
+            this.pbImagen4.Size = new System.Drawing.Size(130, 143);
+            this.pbImagen4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen4.TabIndex = 35;
+            this.pbImagen4.TabStop = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -300,7 +198,7 @@
             // 
             this.pictureBox5.BackgroundImage = global::proyectotaquilla.Properties.Resources.calendario;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 98);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 94);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(29, 29);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -318,32 +216,9 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Dia";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::proyectotaquilla.Properties.Resources.reloj1;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Aqua;
-            this.label2.Image = global::proyectotaquilla.Properties.Resources.reloj;
-            this.label2.Location = new System.Drawing.Point(47, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 21);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Horario";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // pbImagen3
             // 
-            this.pbImagen3.Location = new System.Drawing.Point(288, 392);
+            this.pbImagen3.Location = new System.Drawing.Point(719, 155);
             this.pbImagen3.Name = "pbImagen3";
             this.pbImagen3.Size = new System.Drawing.Size(130, 143);
             this.pbImagen3.TabIndex = 2;
@@ -352,7 +227,7 @@
             // pbImagen2
             // 
             this.pbImagen2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen2.Location = new System.Drawing.Point(288, 243);
+            this.pbImagen2.Location = new System.Drawing.Point(498, 155);
             this.pbImagen2.Name = "pbImagen2";
             this.pbImagen2.Size = new System.Drawing.Size(130, 143);
             this.pbImagen2.TabIndex = 1;
@@ -361,138 +236,72 @@
             // pbImagen1
             // 
             this.pbImagen1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen1.Location = new System.Drawing.Point(288, 85);
+            this.pbImagen1.Location = new System.Drawing.Point(290, 155);
             this.pbImagen1.Name = "pbImagen1";
             this.pbImagen1.Size = new System.Drawing.Size(130, 143);
             this.pbImagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImagen1.TabIndex = 0;
             this.pbImagen1.TabStop = false;
             // 
-            // btnHor7
+            // llNombre1
             // 
-            this.btnHor7.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor7.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor7.Location = new System.Drawing.Point(503, 265);
-            this.btnHor7.Name = "btnHor7";
-            this.btnHor7.Size = new System.Drawing.Size(62, 48);
-            this.btnHor7.TabIndex = 35;
-            this.btnHor7.UseVisualStyleBackColor = false;
-            this.btnHor7.Click += new System.EventHandler(this.button10_Click);
+            this.llNombre1.AutoSize = true;
+            this.llNombre1.Location = new System.Drawing.Point(309, 131);
+            this.llNombre1.Name = "llNombre1";
+            this.llNombre1.Size = new System.Drawing.Size(0, 21);
+            this.llNombre1.TabIndex = 38;
+            this.llNombre1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llNombre1_LinkClicked);
             // 
-            // btnHor8
+            // llNombre2
             // 
-            this.btnHor8.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor8.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor8.Location = new System.Drawing.Point(570, 265);
-            this.btnHor8.Name = "btnHor8";
-            this.btnHor8.Size = new System.Drawing.Size(62, 48);
-            this.btnHor8.TabIndex = 36;
-            this.btnHor8.UseVisualStyleBackColor = false;
-            this.btnHor8.Click += new System.EventHandler(this.btnHor8_Click);
+            this.llNombre2.AutoSize = true;
+            this.llNombre2.Location = new System.Drawing.Point(524, 131);
+            this.llNombre2.Name = "llNombre2";
+            this.llNombre2.Size = new System.Drawing.Size(85, 21);
+            this.llNombre2.TabIndex = 39;
+            this.llNombre2.TabStop = true;
+            this.llNombre2.Text = "linkLabel1";
+            this.llNombre2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llNombre2_LinkClicked);
             // 
-            // btnHor9
+            // llNombre3
             // 
-            this.btnHor9.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor9.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor9.Location = new System.Drawing.Point(634, 265);
-            this.btnHor9.Name = "btnHor9";
-            this.btnHor9.Size = new System.Drawing.Size(62, 48);
-            this.btnHor9.TabIndex = 37;
-            this.btnHor9.UseVisualStyleBackColor = false;
-            this.btnHor9.Click += new System.EventHandler(this.btnHor9_Click);
+            this.llNombre3.AutoSize = true;
+            this.llNombre3.Location = new System.Drawing.Point(745, 131);
+            this.llNombre3.Name = "llNombre3";
+            this.llNombre3.Size = new System.Drawing.Size(85, 21);
+            this.llNombre3.TabIndex = 40;
+            this.llNombre3.TabStop = true;
+            this.llNombre3.Text = "linkLabel1";
             // 
-            // btnHor14
+            // llNombre4
             // 
-            this.btnHor14.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor14.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor14.Location = new System.Drawing.Point(633, 411);
-            this.btnHor14.Name = "btnHor14";
-            this.btnHor14.Size = new System.Drawing.Size(58, 48);
-            this.btnHor14.TabIndex = 38;
-            this.btnHor14.UseVisualStyleBackColor = false;
-            this.btnHor14.Click += new System.EventHandler(this.btnHor14_Click);
+            this.llNombre4.AutoSize = true;
+            this.llNombre4.Location = new System.Drawing.Point(309, 353);
+            this.llNombre4.Name = "llNombre4";
+            this.llNombre4.Size = new System.Drawing.Size(85, 21);
+            this.llNombre4.TabIndex = 41;
+            this.llNombre4.TabStop = true;
+            this.llNombre4.Text = "linkLabel1";
             // 
-            // btnHor10
+            // llNombre5
             // 
-            this.btnHor10.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor10.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor10.Location = new System.Drawing.Point(702, 265);
-            this.btnHor10.Name = "btnHor10";
-            this.btnHor10.Size = new System.Drawing.Size(62, 48);
-            this.btnHor10.TabIndex = 39;
-            this.btnHor10.UseVisualStyleBackColor = false;
-            this.btnHor10.Click += new System.EventHandler(this.btnHor10_Click);
+            this.llNombre5.AutoSize = true;
+            this.llNombre5.Location = new System.Drawing.Point(524, 353);
+            this.llNombre5.Name = "llNombre5";
+            this.llNombre5.Size = new System.Drawing.Size(85, 21);
+            this.llNombre5.TabIndex = 42;
+            this.llNombre5.TabStop = true;
+            this.llNombre5.Text = "linkLabel1";
             // 
-            // btnHor15
+            // llNombre6
             // 
-            this.btnHor15.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor15.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor15.Location = new System.Drawing.Point(697, 411);
-            this.btnHor15.Name = "btnHor15";
-            this.btnHor15.Size = new System.Drawing.Size(67, 48);
-            this.btnHor15.TabIndex = 40;
-            this.btnHor15.UseVisualStyleBackColor = false;
-            this.btnHor15.Click += new System.EventHandler(this.btnHor15_Click);
-            // 
-            // btnHor12
-            // 
-            this.btnHor12.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor12.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor12.Location = new System.Drawing.Point(503, 411);
-            this.btnHor12.Name = "btnHor12";
-            this.btnHor12.Size = new System.Drawing.Size(59, 48);
-            this.btnHor12.TabIndex = 41;
-            this.btnHor12.UseVisualStyleBackColor = false;
-            this.btnHor12.Click += new System.EventHandler(this.btnHor12_Click);
-            // 
-            // btnHor13
-            // 
-            this.btnHor13.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor13.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor13.Location = new System.Drawing.Point(568, 411);
-            this.btnHor13.Name = "btnHor13";
-            this.btnHor13.Size = new System.Drawing.Size(59, 48);
-            this.btnHor13.TabIndex = 42;
-            this.btnHor13.UseVisualStyleBackColor = false;
-            this.btnHor13.Click += new System.EventHandler(this.btnHor13_Click);
-            // 
-            // lbltitulo1
-            // 
-            this.lbltitulo1.AutoSize = true;
-            this.lbltitulo1.Location = new System.Drawing.Point(512, 67);
-            this.lbltitulo1.Name = "lbltitulo1";
-            this.lbltitulo1.Size = new System.Drawing.Size(0, 21);
-            this.lbltitulo1.TabIndex = 43;
-            // 
-            // lbltitulo2
-            // 
-            this.lbltitulo2.AutoSize = true;
-            this.lbltitulo2.Location = new System.Drawing.Point(542, 220);
-            this.lbltitulo2.Name = "lbltitulo2";
-            this.lbltitulo2.Size = new System.Drawing.Size(0, 21);
-            this.lbltitulo2.TabIndex = 44;
-            // 
-            // lbltitulo3
-            // 
-            this.lbltitulo3.AutoSize = true;
-            this.lbltitulo3.Location = new System.Drawing.Point(542, 366);
-            this.lbltitulo3.Name = "lbltitulo3";
-            this.lbltitulo3.Size = new System.Drawing.Size(0, 21);
-            this.lbltitulo3.TabIndex = 45;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.llNombre6.AutoSize = true;
+            this.llNombre6.Location = new System.Drawing.Point(745, 353);
+            this.llNombre6.Name = "llNombre6";
+            this.llNombre6.Size = new System.Drawing.Size(85, 21);
+            this.llNombre6.TabIndex = 43;
+            this.llNombre6.TabStop = true;
+            this.llNombre6.Text = "linkLabel1";
             // 
             // cartelera
             // 
@@ -500,36 +309,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(861, 572);
-            this.Controls.Add(this.lbltitulo3);
-            this.Controls.Add(this.lbltitulo2);
-            this.Controls.Add(this.lbltitulo1);
-            this.Controls.Add(this.btnHor13);
-            this.Controls.Add(this.btnHor12);
-            this.Controls.Add(this.btnHor15);
-            this.Controls.Add(this.btnHor10);
-            this.Controls.Add(this.btnHor14);
-            this.Controls.Add(this.btnHor9);
-            this.Controls.Add(this.btnHor8);
-            this.Controls.Add(this.btnHor7);
+            this.Controls.Add(this.llNombre6);
+            this.Controls.Add(this.llNombre5);
+            this.Controls.Add(this.llNombre4);
+            this.Controls.Add(this.llNombre3);
+            this.Controls.Add(this.llNombre2);
+            this.Controls.Add(this.llNombre1);
+            this.Controls.Add(this.pbImagen6);
+            this.Controls.Add(this.pbImagen5);
+            this.Controls.Add(this.pbImagen4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnHor11);
-            this.Controls.Add(this.btnHor6);
-            this.Controls.Add(this.btnHor5);
-            this.Controls.Add(this.btnHor4);
-            this.Controls.Add(this.btnHor3);
-            this.Controls.Add(this.btnHor2);
-            this.Controls.Add(this.btnHor1);
-            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbImagen3);
             this.Controls.Add(this.pbImagen2);
@@ -540,12 +334,13 @@
             this.Name = "cartelera";
             this.Text = "cartelera";
             this.Load += new System.EventHandler(this.cartelera_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen1)).EndInit();
@@ -560,40 +355,25 @@
         private System.Windows.Forms.PictureBox pbImagen2;
         private System.Windows.Forms.PictureBox pbImagen3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Button btnHor1;
-        private System.Windows.Forms.Button btnHor2;
-        private System.Windows.Forms.Button btnHor3;
-        private System.Windows.Forms.Button btnHor4;
-        private System.Windows.Forms.Button btnHor5;
-        private System.Windows.Forms.Button btnHor6;
-        private System.Windows.Forms.Button btnHor11;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbProyeccion;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button btnHor7;
-        private System.Windows.Forms.Button btnHor8;
-        private System.Windows.Forms.Button btnHor9;
-        private System.Windows.Forms.Button btnHor14;
-        private System.Windows.Forms.Button btnHor10;
-        private System.Windows.Forms.Button btnHor15;
-        private System.Windows.Forms.Button btnHor12;
-        private System.Windows.Forms.Button btnHor13;
-        private System.Windows.Forms.Label lbltitulo1;
-        private System.Windows.Forms.Label lbltitulo2;
-        private System.Windows.Forms.Label lbltitulo3;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.PictureBox pbImagen4;
+        private System.Windows.Forms.PictureBox pbImagen5;
+        private System.Windows.Forms.PictureBox pbImagen6;
+        private System.Windows.Forms.LinkLabel llNombre1;
+        private System.Windows.Forms.LinkLabel llNombre2;
+        private System.Windows.Forms.LinkLabel llNombre3;
+        private System.Windows.Forms.LinkLabel llNombre4;
+        private System.Windows.Forms.LinkLabel llNombre5;
+        private System.Windows.Forms.LinkLabel llNombre6;
     }
 }
