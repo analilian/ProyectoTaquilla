@@ -87,6 +87,9 @@ namespace proyectotaquilla
 
         }
 
+        //Nombre_del_programador:Ana Lilian
+        //Fecha de inicio: 13/08/2016
+        //Fecha finalizacion: 13/08/2016
 
 
         private void llenado(string comple)

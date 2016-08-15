@@ -73,6 +73,9 @@ namespace proyectotaquilla
 
             }
         }
+        //Nombre_del_programador:Ana Lilian
+        //Fecha de inicio: 11/08/2016
+        //Fecha finalizacion: 11/08/2016
 
         private void cbr()
         {
@@ -103,6 +106,10 @@ namespace proyectotaquilla
 
 
         }
+
+        //Nombre_del_programador:Ana Lilian
+        //Fecha de inicio: 11/08/2016
+        //Fecha finalizacion: 11/08/2016
 
         private void cbr2(string sel)
         {

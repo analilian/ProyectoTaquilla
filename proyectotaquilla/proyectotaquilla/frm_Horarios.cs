@@ -23,6 +23,10 @@ namespace proyectotaquilla
             InitializeComponent();
         }
 
+        //Nombre_del_programador:Ana Lilian
+        //Fecha de inicio: 15/08/2016
+        //Fecha finalizacion: 15/08/2016
+
         public frm_Horarios(string nombrepeli, string comple)
         {
             InitializeComponent();
@@ -37,6 +41,9 @@ namespace proyectotaquilla
 
         }
 
+        //Nombre_del_programador:Ana Lilian
+        //Fecha de inicio: 15/08/2016
+        //Fecha finalizacion: 15/08/2016
 
         private void llenadohorario(string nompelicula, string complejo)
         {
