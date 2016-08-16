@@ -134,6 +134,7 @@
             this.Controls.Add(this.btn_iniciosesion);
             this.Controls.Add(this.txt_pass);
             this.Controls.Add(this.txt_usuario);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);

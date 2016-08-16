@@ -231,6 +231,7 @@
             this.Controls.Add(this.lbl_clasificacion);
             this.Controls.Add(this.txt_descrip_clasificacion);
             this.Controls.Add(this.btn_guardar);
+            this.MaximizeBox = false;
             this.Name = "clasificacion";
             this.Text = "clasificacion";
             this.Load += new System.EventHandler(this.clasificacion_Load);

@@ -199,6 +199,7 @@
             this.Controls.Add(this.bttn_actualizar_proyeccion);
             this.Controls.Add(this.txt_nom_proy);
             this.Controls.Add(this.btn_guardar_proyeccion);
+            this.MaximizeBox = false;
             this.Name = "proyeccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "proyeccion";

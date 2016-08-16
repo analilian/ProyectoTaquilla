@@ -421,6 +421,7 @@
             this.Controls.Add(this.txt_nit);
             this.Controls.Add(this.txt_dpi);
             this.Controls.Add(this.label4);
+            this.MaximizeBox = false;
             this.Name = "empleado";
             this.Text = "empleado";
             this.Load += new System.EventHandler(this.empleado_Load);

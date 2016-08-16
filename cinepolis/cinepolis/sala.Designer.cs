@@ -325,6 +325,7 @@
             this.Controls.Add(this.tbc_clasificacion);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.lbl_titulo_mantenimiento_cine);
+            this.MaximizeBox = false;
             this.Name = "sala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sala";

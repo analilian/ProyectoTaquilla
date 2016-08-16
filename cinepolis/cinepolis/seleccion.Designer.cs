@@ -164,6 +164,7 @@
             this.Controls.Add(this.btn_mantenimientocine);
             this.Controls.Add(this.btn_ayuda);
             this.Controls.Add(this.lbl_selecciondeventana);
+            this.MaximizeBox = false;
             this.Name = "seleccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.seleccion_Load);

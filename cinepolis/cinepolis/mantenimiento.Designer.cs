@@ -1024,6 +1024,7 @@
             this.Controls.Add(this.btn_cerrarsesion);
             this.Controls.Add(this.lbl_titulo_mantenimiento_cine);
             this.Controls.Add(this.tbc_mantenimiento_cine);
+            this.MaximizeBox = false;
             this.Name = "mantenimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.mantenimiento_Load);

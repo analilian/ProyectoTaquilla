@@ -113,6 +113,7 @@
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.lbl_titulo_bitacora);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MaximizeBox = false;
             this.Name = "Bitacora";
             this.Text = "Bitacora";
             this.Load += new System.EventHandler(this.Bitacora_Load);

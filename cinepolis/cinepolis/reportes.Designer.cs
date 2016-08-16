@@ -144,6 +144,7 @@
             this.Controls.Add(this.btn_ganancias);
             this.Controls.Add(this.btn_peliculataquillera);
             this.Controls.Add(this.lbl_seleccionderepote);
+            this.MaximizeBox = false;
             this.Name = "reportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "reportes";

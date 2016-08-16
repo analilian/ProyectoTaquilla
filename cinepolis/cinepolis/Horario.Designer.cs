@@ -227,6 +227,7 @@
             this.Controls.Add(this.txt_hora_final);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.txt_horario_inicio);
+            this.MaximizeBox = false;
             this.Name = "Horario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Horario";

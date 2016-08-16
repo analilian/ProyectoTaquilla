@@ -270,6 +270,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_descrip_cine);
             this.Controls.Add(this.lbl_descrip_clasificacion);
+            this.MaximizeBox = false;
             this.Name = "cine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.cine_Load);

@@ -222,6 +222,7 @@
             this.Controls.Add(this.dtp_fecha_inicio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtp_fecha_fin);
+            this.MaximizeBox = false;
             this.Name = "fecha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.fecha_Load);

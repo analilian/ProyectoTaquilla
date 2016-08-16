@@ -208,6 +208,7 @@
             this.Controls.Add(this.txt_nom_categ);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.lbl_categoria);
+            this.MaximizeBox = false;
             this.Name = "categoria";
             this.Load += new System.EventHandler(this.categoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).EndInit();

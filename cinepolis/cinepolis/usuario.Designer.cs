@@ -321,6 +321,7 @@
             this.Controls.Add(this.btn_agregarusuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_uempleado);
+            this.MaximizeBox = false;
             this.Name = "usuario";
             this.Text = "usuario";
             this.Load += new System.EventHandler(this.usuario_Load);

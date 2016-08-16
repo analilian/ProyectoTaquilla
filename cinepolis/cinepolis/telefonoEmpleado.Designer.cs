@@ -529,6 +529,7 @@
             this.Controls.Add(this.lbl_titulo_mantenimiento_cine);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.tabControl1);
+            this.MaximizeBox = false;
             this.Name = "telefonoEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "telefonoEmpleado";
