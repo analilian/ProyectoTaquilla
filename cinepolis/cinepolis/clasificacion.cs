@@ -76,7 +76,7 @@ namespace cinepolis
                     String Squery = "insert into  clasificacion ( nomclasificacion, descclasificacion ) values('" + txt_clasificacion.Text + "','" + txt_descrip_clasificacion.Text + "');";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego clasificacion', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -138,7 +138,7 @@ namespace cinepolis
                     String Squery = "update clasificacion set  nomclasificacion ='" + txt_clasificacion.Text + "',descclasificacion ='" + txt_descrip_clasificacion.Text + "'where pk_idclasificacion ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico clasificacion', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -178,7 +178,7 @@ namespace cinepolis
                     String Squerys = "delete from  clasificacion where pk_idclasificacion = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','elimino clasificaion', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();

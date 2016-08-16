@@ -77,7 +77,7 @@ namespace cinepolis
                     String Squery = "insert into  sala (nomsala) values('" + txt_sala.Text + "');";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego sala', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
 
                     //----------------------sirve para obtener el dato de una columna de una tabla
 
@@ -190,7 +190,7 @@ namespace cinepolis
                     String Squery = "update sala set  nomsala ='" + txt_sala.Text + "'where pk_idsala ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico sala', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_sala, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -222,7 +222,7 @@ namespace cinepolis
                     String Squerys = "delete from  sala where pk_idsala = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','borro sala', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_sala, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();

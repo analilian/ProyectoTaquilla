@@ -59,7 +59,7 @@ namespace cinepolis
                     String Squery = "insert into  tipoproyeccion (nomtproyecccion) values('" + txt_nom_proy.Text + "');";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu+ "','" + conect.ip() + "','agrego proyeccion', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -90,7 +90,7 @@ namespace cinepolis
                     String Squery = "update tipoproyeccion set  nomtproyecccion ='" + txt_nom_proy.Text + "'where pk_idproyeccion ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico proyeccion', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -138,7 +138,7 @@ namespace cinepolis
                     String Squerys = "delete from  tipoproyeccion where pk_idproyeccion = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','borro proyeccion', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();

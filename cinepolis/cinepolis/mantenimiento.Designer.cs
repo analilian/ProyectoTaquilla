@@ -212,6 +212,7 @@
             // 
             // cbo_mod_fecha
             // 
+            this.cbo_mod_fecha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mod_fecha.FormattingEnabled = true;
             this.cbo_mod_fecha.Location = new System.Drawing.Point(499, 92);
             this.cbo_mod_fecha.Name = "cbo_mod_fecha";
@@ -220,6 +221,7 @@
             // 
             // cbo_mod_categoria
             // 
+            this.cbo_mod_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mod_categoria.FormattingEnabled = true;
             this.cbo_mod_categoria.Location = new System.Drawing.Point(499, 65);
             this.cbo_mod_categoria.Name = "cbo_mod_categoria";
@@ -238,6 +240,7 @@
             // 
             // cbo_mod_clasificacion
             // 
+            this.cbo_mod_clasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mod_clasificacion.FormattingEnabled = true;
             this.cbo_mod_clasificacion.Location = new System.Drawing.Point(208, 151);
             this.cbo_mod_clasificacion.Name = "cbo_mod_clasificacion";
@@ -256,6 +259,7 @@
             // 
             // cbo_mod_idioma
             // 
+            this.cbo_mod_idioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mod_idioma.FormattingEnabled = true;
             this.cbo_mod_idioma.Location = new System.Drawing.Point(208, 124);
             this.cbo_mod_idioma.Name = "cbo_mod_idioma";
@@ -523,6 +527,7 @@
             // 
             // cbo_fecha
             // 
+            this.cbo_fecha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_fecha.FormattingEnabled = true;
             this.cbo_fecha.Location = new System.Drawing.Point(457, 76);
             this.cbo_fecha.Name = "cbo_fecha";
@@ -531,6 +536,7 @@
             // 
             // cbo_categoria
             // 
+            this.cbo_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_categoria.FormattingEnabled = true;
             this.cbo_categoria.Location = new System.Drawing.Point(457, 45);
             this.cbo_categoria.Name = "cbo_categoria";
@@ -549,6 +555,7 @@
             // 
             // cbo_clasificacion
             // 
+            this.cbo_clasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_clasificacion.FormattingEnabled = true;
             this.cbo_clasificacion.Location = new System.Drawing.Point(141, 134);
             this.cbo_clasificacion.Name = "cbo_clasificacion";
@@ -567,6 +574,7 @@
             // 
             // cbo_idioma
             // 
+            this.cbo_idioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_idioma.FormattingEnabled = true;
             this.cbo_idioma.Location = new System.Drawing.Point(141, 106);
             this.cbo_idioma.Name = "cbo_idioma";
@@ -797,6 +805,7 @@
             // 
             // cbo_relacion_pelicula_proyeccion1
             // 
+            this.cbo_relacion_pelicula_proyeccion1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_relacion_pelicula_proyeccion1.FormattingEnabled = true;
             this.cbo_relacion_pelicula_proyeccion1.Location = new System.Drawing.Point(356, 138);
             this.cbo_relacion_pelicula_proyeccion1.Name = "cbo_relacion_pelicula_proyeccion1";
@@ -863,6 +872,7 @@
             // 
             // cbo_relacion_pelicula_cine1
             // 
+            this.cbo_relacion_pelicula_cine1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_relacion_pelicula_cine1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_relacion_pelicula_cine1.FormattingEnabled = true;
             this.cbo_relacion_pelicula_cine1.Location = new System.Drawing.Point(62, 89);
@@ -882,6 +892,7 @@
             // 
             // cbo_relacion_pelicula_hora1
             // 
+            this.cbo_relacion_pelicula_hora1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_relacion_pelicula_hora1.FormattingEnabled = true;
             this.cbo_relacion_pelicula_hora1.Location = new System.Drawing.Point(663, 89);
             this.cbo_relacion_pelicula_hora1.Name = "cbo_relacion_pelicula_hora1";
@@ -891,6 +902,7 @@
             // 
             // cbo_relacion_pelicula_sala1
             // 
+            this.cbo_relacion_pelicula_sala1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_relacion_pelicula_sala1.FormattingEnabled = true;
             this.cbo_relacion_pelicula_sala1.Location = new System.Drawing.Point(356, 89);
             this.cbo_relacion_pelicula_sala1.Name = "cbo_relacion_pelicula_sala1";
@@ -900,6 +912,7 @@
             // 
             // cbo_relacion_pelicula
             // 
+            this.cbo_relacion_pelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_relacion_pelicula.FormattingEnabled = true;
             this.cbo_relacion_pelicula.Location = new System.Drawing.Point(111, 28);
             this.cbo_relacion_pelicula.Name = "cbo_relacion_pelicula";

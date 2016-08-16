@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tbc_clasificacion = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txt_buscar_sala = new System.Windows.Forms.TextBox();
+            this.lbl_buscar_sala = new System.Windows.Forms.Label();
             this.btn_buscar_sala = new System.Windows.Forms.Button();
             this.btn_eliminar_sala = new System.Windows.Forms.Button();
             this.btn_actualizar_sala = new System.Windows.Forms.Button();
@@ -38,18 +40,16 @@
             this.lbl_sala = new System.Windows.Forms.Label();
             this.txt_sala = new System.Windows.Forms.TextBox();
             this.dgv_sala = new System.Windows.Forms.DataGridView();
+            this.tprelacion = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgv_salacine = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbo_relacion_sala = new System.Windows.Forms.ComboBox();
+            this.cbo_relacion_cine = new System.Windows.Forms.ComboBox();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txt_buscar_sala = new System.Windows.Forms.TextBox();
-            this.lbl_buscar_sala = new System.Windows.Forms.Label();
-            this.tprelacion = new System.Windows.Forms.TabPage();
-            this.cbo_relacion_cine = new System.Windows.Forms.ComboBox();
-            this.cbo_relacion_sala = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgv_salacine = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.tbc_clasificacion.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sala)).BeginInit();
@@ -87,6 +87,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Sala";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // txt_buscar_sala
+            // 
+            this.txt_buscar_sala.Location = new System.Drawing.Point(115, 106);
+            this.txt_buscar_sala.MaxLength = 100;
+            this.txt_buscar_sala.Name = "txt_buscar_sala";
+            this.txt_buscar_sala.Size = new System.Drawing.Size(288, 20);
+            this.txt_buscar_sala.TabIndex = 91;
+            // 
+            // lbl_buscar_sala
+            // 
+            this.lbl_buscar_sala.AutoSize = true;
+            this.lbl_buscar_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar_sala.Location = new System.Drawing.Point(8, 103);
+            this.lbl_buscar_sala.Name = "lbl_buscar_sala";
+            this.lbl_buscar_sala.Size = new System.Drawing.Size(92, 21);
+            this.lbl_buscar_sala.TabIndex = 90;
+            this.lbl_buscar_sala.Text = "Busqueda:";
             // 
             // btn_buscar_sala
             // 
@@ -166,6 +184,87 @@
             this.dgv_sala.Size = new System.Drawing.Size(690, 219);
             this.dgv_sala.TabIndex = 55;
             // 
+            // tprelacion
+            // 
+            this.tprelacion.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tprelacion.Controls.Add(this.button1);
+            this.tprelacion.Controls.Add(this.dgv_salacine);
+            this.tprelacion.Controls.Add(this.label2);
+            this.tprelacion.Controls.Add(this.label1);
+            this.tprelacion.Controls.Add(this.cbo_relacion_sala);
+            this.tprelacion.Controls.Add(this.cbo_relacion_cine);
+            this.tprelacion.Location = new System.Drawing.Point(4, 22);
+            this.tprelacion.Name = "tprelacion";
+            this.tprelacion.Padding = new System.Windows.Forms.Padding(3);
+            this.tprelacion.Size = new System.Drawing.Size(716, 361);
+            this.tprelacion.TabIndex = 1;
+            this.tprelacion.Text = "Relacionar Sala - Cine";
+            this.toolTip1.SetToolTip(this.tprelacion, "Agregar Sala al Cine");
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(536, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(61, 52);
+            this.button1.TabIndex = 66;
+            this.toolTip1.SetToolTip(this.button1, "Regresar");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // dgv_salacine
+            // 
+            this.dgv_salacine.AllowUserToAddRows = false;
+            this.dgv_salacine.AllowUserToDeleteRows = false;
+            this.dgv_salacine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_salacine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_salacine.Location = new System.Drawing.Point(6, 105);
+            this.dgv_salacine.Name = "dgv_salacine";
+            this.dgv_salacine.ReadOnly = true;
+            this.dgv_salacine.Size = new System.Drawing.Size(704, 250);
+            this.dgv_salacine.TabIndex = 61;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(219, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 21);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Sala:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 21);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Cine:";
+            // 
+            // cbo_relacion_sala
+            // 
+            this.cbo_relacion_sala.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_relacion_sala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_relacion_sala.FormattingEnabled = true;
+            this.cbo_relacion_sala.Location = new System.Drawing.Point(275, 40);
+            this.cbo_relacion_sala.Name = "cbo_relacion_sala";
+            this.cbo_relacion_sala.Size = new System.Drawing.Size(121, 21);
+            this.cbo_relacion_sala.TabIndex = 1;
+            // 
+            // cbo_relacion_cine
+            // 
+            this.cbo_relacion_cine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_relacion_cine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbo_relacion_cine.FormattingEnabled = true;
+            this.cbo_relacion_cine.Location = new System.Drawing.Point(77, 40);
+            this.cbo_relacion_cine.Name = "cbo_relacion_cine";
+            this.cbo_relacion_cine.Size = new System.Drawing.Size(121, 21);
+            this.cbo_relacion_cine.TabIndex = 0;
+            // 
             // lbl_titulo_mantenimiento_cine
             // 
             this.lbl_titulo_mantenimiento_cine.AutoSize = true;
@@ -188,103 +287,6 @@
             this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
-            // 
-            // txt_buscar_sala
-            // 
-            this.txt_buscar_sala.Location = new System.Drawing.Point(115, 106);
-            this.txt_buscar_sala.MaxLength = 100;
-            this.txt_buscar_sala.Name = "txt_buscar_sala";
-            this.txt_buscar_sala.Size = new System.Drawing.Size(288, 20);
-            this.txt_buscar_sala.TabIndex = 91;
-            // 
-            // lbl_buscar_sala
-            // 
-            this.lbl_buscar_sala.AutoSize = true;
-            this.lbl_buscar_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_buscar_sala.Location = new System.Drawing.Point(8, 103);
-            this.lbl_buscar_sala.Name = "lbl_buscar_sala";
-            this.lbl_buscar_sala.Size = new System.Drawing.Size(92, 21);
-            this.lbl_buscar_sala.TabIndex = 90;
-            this.lbl_buscar_sala.Text = "Busqueda:";
-            // 
-            // tprelacion
-            // 
-            this.tprelacion.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tprelacion.Controls.Add(this.button1);
-            this.tprelacion.Controls.Add(this.dgv_salacine);
-            this.tprelacion.Controls.Add(this.label2);
-            this.tprelacion.Controls.Add(this.label1);
-            this.tprelacion.Controls.Add(this.cbo_relacion_sala);
-            this.tprelacion.Controls.Add(this.cbo_relacion_cine);
-            this.tprelacion.Location = new System.Drawing.Point(4, 22);
-            this.tprelacion.Name = "tprelacion";
-            this.tprelacion.Padding = new System.Windows.Forms.Padding(3);
-            this.tprelacion.Size = new System.Drawing.Size(716, 361);
-            this.tprelacion.TabIndex = 1;
-            this.tprelacion.Text = "Relacionar Sala - Cine";
-            this.toolTip1.SetToolTip(this.tprelacion, "Agregar Sala al Cine");
-            // 
-            // cbo_relacion_cine
-            // 
-            this.cbo_relacion_cine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_relacion_cine.FormattingEnabled = true;
-            this.cbo_relacion_cine.Location = new System.Drawing.Point(77, 40);
-            this.cbo_relacion_cine.Name = "cbo_relacion_cine";
-            this.cbo_relacion_cine.Size = new System.Drawing.Size(121, 21);
-            this.cbo_relacion_cine.TabIndex = 0;
-            // 
-            // cbo_relacion_sala
-            // 
-            this.cbo_relacion_sala.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_relacion_sala.FormattingEnabled = true;
-            this.cbo_relacion_sala.Location = new System.Drawing.Point(275, 40);
-            this.cbo_relacion_sala.Name = "cbo_relacion_sala";
-            this.cbo_relacion_sala.Size = new System.Drawing.Size(121, 21);
-            this.cbo_relacion_sala.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 21);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Cine:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(219, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 21);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Sala:";
-            // 
-            // dgv_salacine
-            // 
-            this.dgv_salacine.AllowUserToAddRows = false;
-            this.dgv_salacine.AllowUserToDeleteRows = false;
-            this.dgv_salacine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_salacine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_salacine.Location = new System.Drawing.Point(6, 105);
-            this.dgv_salacine.Name = "dgv_salacine";
-            this.dgv_salacine.ReadOnly = true;
-            this.dgv_salacine.Size = new System.Drawing.Size(704, 250);
-            this.dgv_salacine.TabIndex = 61;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(536, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 52);
-            this.button1.TabIndex = 66;
-            this.toolTip1.SetToolTip(this.button1, "Regresar");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // sala
             // 

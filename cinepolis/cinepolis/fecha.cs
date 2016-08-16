@@ -55,7 +55,7 @@ namespace cinepolis
                 String Squery = "insert into  fechascartelera (fechainicar,fechafinalcar) values('" + this.dtp_fecha_inicio.Text + "','" + this.dtp_fecha_fin.Text + "');";
                 conect.EjecutarQuery(Squery);
                 String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego fecha', NOW());";
-                conect.EjecutarQuery(Query);
+                conect.EjecutarQuery1(Query);
                 conect.actualizargrid(dgv_mostrar_fecha, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
@@ -83,7 +83,7 @@ namespace cinepolis
                 String Squery = "update fechascartelera set fechainicar = '" + this.dtp_fecha_inicio.Text + "',fechafinalcar ='" + this.dtp_fecha_fin.Text + "'where pk_idfcar ='" + Codigo + "'";
                 conect.EjecutarQuery(Squery);
                 String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico fecha', NOW());";
-                conect.EjecutarQuery(Query);
+                conect.EjecutarQuery1(Query);
                 conect.actualizargrid(dgv_mostrar_fecha, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
@@ -118,7 +118,7 @@ namespace cinepolis
                 String Squerys = "delete from  fechascartelera where pk_idfcar = '" + sCelda + "';";
                 conect.EjecutarQuery(Squerys);
                 String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','Elimino fecha', NOW());";
-                conect.EjecutarQuery(Query);
+                conect.EjecutarQuery1(Query);
                 conect.actualizargrid(dgv_mostrar_fecha, Squeery, Stabla);
                 nombre_columna();
                 conect.Desconectar();
@@ -183,6 +183,11 @@ namespace cinepolis
         private void btn_eliminar_fecha_Click(object sender, EventArgs e)
         {
             delete();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

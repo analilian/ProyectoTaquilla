@@ -76,7 +76,7 @@ namespace cinepolis
                     String Squery = "insert into  cine (nomcine,direccin,pk_idregion) values('" + txt_nombre_cine.Text + "','" + txt_descrip_cine.Text + "','" + convregion + "');";
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego cine', NOW());";
                     conect.EjecutarQuery(Squery);
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -133,7 +133,7 @@ namespace cinepolis
                     String Squery = "update cine set  nomcine ='" + txt_nombre_cine.Text + "', direccin ='" + txt_descrip_cine.Text + "', pk_idregion ='" + convregionmod + "'where pk_idcine ='" + Codigo + "'";
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico cine', NOW());";
                     conect.EjecutarQuery(Squery);
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -172,7 +172,7 @@ namespace cinepolis
                     conect.Conectar();
                     String Squerys = "delete from  cine where pk_idcine = '" + SCelda + "';";
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','Elimino cine', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                      conect.EjecutarQuery(Squerys);
                     conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
                     nombre_columna();

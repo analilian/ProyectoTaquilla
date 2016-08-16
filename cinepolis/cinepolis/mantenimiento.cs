@@ -214,7 +214,7 @@ namespace cinepolis
                 comand.Parameters.Add(new MySqlParameter("@img", img));
                 int x = comand.ExecuteNonQuery();
                 String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','agrego pelicula', NOW());";
-                con.EjecutarQuery(Query);
+                con.EjecutarQuery1(Query);
                 con.Desconectar();
                 MessageBox.Show(" Registro guardado");
                 con.actualizargrid(dgv_insertar, Squeery, Stabla);
@@ -306,7 +306,7 @@ namespace cinepolis
                 String Squerys = "delete from  pelicula  where pk_idpelicula = '" + SCelda + "';";
                 con.EjecutarQuery(Squerys);
                 String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','elimino pelicula', NOW());";
-                con.EjecutarQuery(Query);
+                con.EjecutarQuery1(Query);
                 con.actualizargrid(dgv_insertar, Squeery, Stabla);
                 con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
                 con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
@@ -351,7 +351,7 @@ namespace cinepolis
                 int y = comand.ExecuteNonQuery();
                 MessageBox.Show(" Registro guardado");
                 String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','modifico pelicula', NOW());";
-                con.EjecutarQuery(Query);
+                con.EjecutarQuery1(Query);
                 con.actualizargrid(dgv_insertar, Squeery, Stabla);
                 con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
                 con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
@@ -477,7 +477,7 @@ namespace cinepolis
             this.dgv_insertar.Columns[5].HeaderText = "Idioma";
             this.dgv_insertar.Columns[6].HeaderText = "Clasificacion";
             this.dgv_insertar.Columns[7].HeaderText = "Categoria";
-
+            this.dgv_insertar.Columns[8].HeaderText = "Categoria";
             this.dgv_buscar_pelicula.Columns[0].HeaderText = "No";
             this.dgv_buscar_pelicula.Columns[1].HeaderText = "Nombre";
             this.dgv_buscar_pelicula.Columns[2].HeaderText = "Descripcion";
@@ -486,6 +486,7 @@ namespace cinepolis
             this.dgv_buscar_pelicula.Columns[5].HeaderText = "Idioma";
             this.dgv_buscar_pelicula.Columns[6].HeaderText = "Clasificacion";
             this.dgv_buscar_pelicula.Columns[7].HeaderText = "Categoria";
+            this.dgv_buscar_pelicula.Columns[8].HeaderText = "fecha";
 
             this.dgv_modificar_pelicula.Columns[0].HeaderText = "No";
             this.dgv_modificar_pelicula.Columns[1].HeaderText = "Nombre";
@@ -495,6 +496,7 @@ namespace cinepolis
             this.dgv_modificar_pelicula.Columns[5].HeaderText = "Idioma";
             this.dgv_modificar_pelicula.Columns[6].HeaderText = "Clasificacion";
             this.dgv_modificar_pelicula.Columns[7].HeaderText = "Categoria";
+            this.dgv_modificar_pelicula.Columns[8].HeaderText = "fecha ";
         }
           
 
@@ -851,7 +853,7 @@ namespace cinepolis
             String Squery = "insert into cartelerapelicula (pk_idcinesal, pk_idpelicula, pk_idhorario, pk_idproyeccion) values('" + sala_cine + "', '" + pelicula_ralacion + "', '" + horario_relaci + "','" + proyeccion_relaci + "');";
             con.EjecutarQuery(Squery);
             String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','agrego cartelera de pelicula', NOW());";
-            con.EjecutarQuery(Query);
+            con.EjecutarQuery1(Query);
             con.actualizargrid(dgv_insertar, Squeery, Stabla);
             con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);

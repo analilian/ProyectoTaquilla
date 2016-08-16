@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tbc_clasificacion = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_telefono_empleado = new System.Windows.Forms.Button();
             this.txt_buscarmod = new System.Windows.Forms.TextBox();
             this.lbl_buscarmod = new System.Windows.Forms.Label();
             this.btn_eliminar_pelicula = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btn_telefono_empleado = new System.Windows.Forms.Button();
             this.tbc_clasificacion.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clasificacion)).BeginInit();
@@ -86,6 +86,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Cine";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // btn_telefono_empleado
+            // 
+            this.btn_telefono_empleado.BackColor = System.Drawing.Color.Transparent;
+            this.btn_telefono_empleado.BackgroundImage = global::cinepolis.Properties.Resources.telefono;
+            this.btn_telefono_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_telefono_empleado.Location = new System.Drawing.Point(640, 76);
+            this.btn_telefono_empleado.Name = "btn_telefono_empleado";
+            this.btn_telefono_empleado.Size = new System.Drawing.Size(61, 55);
+            this.btn_telefono_empleado.TabIndex = 96;
+            this.toolTip1.SetToolTip(this.btn_telefono_empleado, "Agregar Telefono de Cine");
+            this.btn_telefono_empleado.UseVisualStyleBackColor = false;
+            this.btn_telefono_empleado.Click += new System.EventHandler(this.btn_telefono_empleado_Click);
             // 
             // txt_buscarmod
             // 
@@ -143,6 +156,7 @@
             // 
             // cbo_cine_region
             // 
+            this.cbo_cine_region.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_cine_region.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbo_cine_region.FormattingEnabled = true;
             this.cbo_cine_region.Location = new System.Drawing.Point(142, 59);
@@ -243,19 +257,6 @@
             this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
-            // 
-            // btn_telefono_empleado
-            // 
-            this.btn_telefono_empleado.BackColor = System.Drawing.Color.Transparent;
-            this.btn_telefono_empleado.BackgroundImage = global::cinepolis.Properties.Resources.telefono;
-            this.btn_telefono_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_telefono_empleado.Location = new System.Drawing.Point(640, 76);
-            this.btn_telefono_empleado.Name = "btn_telefono_empleado";
-            this.btn_telefono_empleado.Size = new System.Drawing.Size(61, 55);
-            this.btn_telefono_empleado.TabIndex = 96;
-            this.toolTip1.SetToolTip(this.btn_telefono_empleado, "Agregar Telefono de Cine");
-            this.btn_telefono_empleado.UseVisualStyleBackColor = false;
-            this.btn_telefono_empleado.Click += new System.EventHandler(this.btn_telefono_empleado_Click);
             // 
             // cine
             // 

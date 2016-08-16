@@ -56,18 +56,29 @@ namespace cinepolis
             {
                 if (resultado > 0)
                 {
+                    conect.Conectar();
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + txt_usuario.Text + "','" + conect.ip() + "','inicio sesion', NOW());";
+                    conect.EjecutarQuery1(Query);
+                    conect.Desconectar();
                     this.Hide();
                     seleccion a = new seleccion(txt_usuario.Text);
                     a.ShowDialog();
-                  
+                    
+       
 
                 }
                 else
                 {
+                    conect.Conectar();
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + txt_usuario.Text + "','" + conect.ip() + "','inicio sesion', NOW());";
+                    conect.EjecutarQuery1(Query);
+                    conect.Desconectar();
                     this.Hide();
                     mantenimiento a = new mantenimiento(txt_usuario.Text);
                     a.ShowDialog();
                    
+                 
+
                 }
             }
             else

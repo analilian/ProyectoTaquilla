@@ -30,6 +30,11 @@
         {
             this.tbc_horario = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lbl_buscar = new System.Windows.Forms.Label();
+            this.txt_buscarmod = new System.Windows.Forms.TextBox();
+            this.btn_eliminar_fecha = new System.Windows.Forms.Button();
+            this.btn_buscar_fecha = new System.Windows.Forms.Button();
+            this.bttn_actualizar_fecha = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtp_fecha_fin = new System.Windows.Forms.DateTimePicker();
@@ -38,11 +43,6 @@
             this.dgv_mostrar_fecha = new System.Windows.Forms.DataGridView();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_Fecha = new System.Windows.Forms.Label();
-            this.btn_eliminar_fecha = new System.Windows.Forms.Button();
-            this.btn_buscar_fecha = new System.Windows.Forms.Button();
-            this.bttn_actualizar_fecha = new System.Windows.Forms.Button();
-            this.lbl_buscar = new System.Windows.Forms.Label();
-            this.txt_buscarmod = new System.Windows.Forms.TextBox();
             this.tbc_horario.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_fecha)).BeginInit();
@@ -77,6 +77,58 @@
             this.tabPage1.Size = new System.Drawing.Size(713, 349);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Fecha";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // lbl_buscar
+            // 
+            this.lbl_buscar.AutoSize = true;
+            this.lbl_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_buscar.Location = new System.Drawing.Point(4, 113);
+            this.lbl_buscar.Name = "lbl_buscar";
+            this.lbl_buscar.Size = new System.Drawing.Size(65, 21);
+            this.lbl_buscar.TabIndex = 97;
+            this.lbl_buscar.Text = "Buscar:";
+            // 
+            // txt_buscarmod
+            // 
+            this.txt_buscarmod.Location = new System.Drawing.Point(75, 113);
+            this.txt_buscarmod.MaxLength = 100;
+            this.txt_buscarmod.Name = "txt_buscarmod";
+            this.txt_buscarmod.Size = new System.Drawing.Size(340, 20);
+            this.txt_buscarmod.TabIndex = 96;
+            // 
+            // btn_eliminar_fecha
+            // 
+            this.btn_eliminar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
+            this.btn_eliminar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar_fecha.Location = new System.Drawing.Point(635, 94);
+            this.btn_eliminar_fecha.Name = "btn_eliminar_fecha";
+            this.btn_eliminar_fecha.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_fecha.TabIndex = 93;
+            this.btn_eliminar_fecha.UseVisualStyleBackColor = true;
+            this.btn_eliminar_fecha.Click += new System.EventHandler(this.btn_eliminar_fecha_Click);
+            // 
+            // btn_buscar_fecha
+            // 
+            this.btn_buscar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
+            this.btn_buscar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_fecha.Location = new System.Drawing.Point(443, 95);
+            this.btn_buscar_fecha.Name = "btn_buscar_fecha";
+            this.btn_buscar_fecha.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_fecha.TabIndex = 95;
+            this.btn_buscar_fecha.UseVisualStyleBackColor = true;
+            this.btn_buscar_fecha.Click += new System.EventHandler(this.btn_buscar_fecha_Click);
+            // 
+            // bttn_actualizar_fecha
+            // 
+            this.bttn_actualizar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.bttn_actualizar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttn_actualizar_fecha.Location = new System.Drawing.Point(507, 94);
+            this.bttn_actualizar_fecha.Name = "bttn_actualizar_fecha";
+            this.bttn_actualizar_fecha.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_fecha.TabIndex = 94;
+            this.bttn_actualizar_fecha.UseVisualStyleBackColor = true;
+            this.bttn_actualizar_fecha.Click += new System.EventHandler(this.bttn_actualizar_pelicula_Click);
             // 
             // label3
             // 
@@ -159,57 +211,6 @@
             this.lbl_titulo_mantenimiento_Fecha.Size = new System.Drawing.Size(405, 36);
             this.lbl_titulo_mantenimiento_Fecha.TabIndex = 60;
             this.lbl_titulo_mantenimiento_Fecha.Text = "MANTENIMIENTO DE FECHA";
-            // 
-            // btn_eliminar_fecha
-            // 
-            this.btn_eliminar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
-            this.btn_eliminar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_fecha.Location = new System.Drawing.Point(635, 94);
-            this.btn_eliminar_fecha.Name = "btn_eliminar_fecha";
-            this.btn_eliminar_fecha.Size = new System.Drawing.Size(61, 55);
-            this.btn_eliminar_fecha.TabIndex = 93;
-            this.btn_eliminar_fecha.UseVisualStyleBackColor = true;
-            this.btn_eliminar_fecha.Click += new System.EventHandler(this.btn_eliminar_fecha_Click);
-            // 
-            // btn_buscar_fecha
-            // 
-            this.btn_buscar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
-            this.btn_buscar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_fecha.Location = new System.Drawing.Point(443, 95);
-            this.btn_buscar_fecha.Name = "btn_buscar_fecha";
-            this.btn_buscar_fecha.Size = new System.Drawing.Size(61, 55);
-            this.btn_buscar_fecha.TabIndex = 95;
-            this.btn_buscar_fecha.UseVisualStyleBackColor = true;
-            this.btn_buscar_fecha.Click += new System.EventHandler(this.btn_buscar_fecha_Click);
-            // 
-            // bttn_actualizar_fecha
-            // 
-            this.bttn_actualizar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
-            this.bttn_actualizar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_fecha.Location = new System.Drawing.Point(507, 94);
-            this.bttn_actualizar_fecha.Name = "bttn_actualizar_fecha";
-            this.bttn_actualizar_fecha.Size = new System.Drawing.Size(61, 56);
-            this.bttn_actualizar_fecha.TabIndex = 94;
-            this.bttn_actualizar_fecha.UseVisualStyleBackColor = true;
-            this.bttn_actualizar_fecha.Click += new System.EventHandler(this.bttn_actualizar_pelicula_Click);
-            // 
-            // lbl_buscar
-            // 
-            this.lbl_buscar.AutoSize = true;
-            this.lbl_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_buscar.Location = new System.Drawing.Point(4, 113);
-            this.lbl_buscar.Name = "lbl_buscar";
-            this.lbl_buscar.Size = new System.Drawing.Size(65, 21);
-            this.lbl_buscar.TabIndex = 97;
-            this.lbl_buscar.Text = "Buscar:";
-            // 
-            // txt_buscarmod
-            // 
-            this.txt_buscarmod.Location = new System.Drawing.Point(75, 113);
-            this.txt_buscarmod.MaxLength = 100;
-            this.txt_buscarmod.Name = "txt_buscarmod";
-            this.txt_buscarmod.Size = new System.Drawing.Size(340, 20);
-            this.txt_buscarmod.TabIndex = 96;
             // 
             // fecha
             // 

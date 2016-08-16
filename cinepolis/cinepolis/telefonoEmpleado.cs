@@ -104,7 +104,7 @@ namespace cinepolis
                     String Squery = "update telefono set  teltelefono ='" + txt_nom_proy.Text + "'where pk_idtelefono ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico telefono', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_telefono, Squiery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -152,7 +152,7 @@ namespace cinepolis
                     String Squerys = "delete from  telefono where pk_idtelefono = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','borro telefono', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_telefono, Squiery, Stabla);
                     nombre_columna();
                     conect.Desconectar();

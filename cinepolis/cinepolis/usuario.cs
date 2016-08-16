@@ -462,5 +462,10 @@ namespace cinepolis
         {
             buscar();
         }
+
+        private void cbo_nivelsusario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

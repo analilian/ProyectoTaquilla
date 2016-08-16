@@ -64,7 +64,7 @@ namespace cinepolis
                     String Squery = "insert into  horario (horainiciohor,horafinalhor) values('" + txt_horario_inicio.Text + "','" + txt_hora_final.Text + "');";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego horario', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_mostrar_horario, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -119,7 +119,7 @@ namespace cinepolis
                     String Squery = "update horario set horainiciohor = '" + txt_horario_inicio.Text + "',horafinalhor ='" + txt_hora_final.Text + "'where pk_idhorario ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico horario', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_mostrar_horario, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -156,6 +156,8 @@ namespace cinepolis
                     conect.Conectar();
                     String Squerys = "delete from  horario where pk_idhorario = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
+                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','elimino horario', NOW());";
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_mostrar_horario, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -206,8 +208,7 @@ namespace cinepolis
                 conect.Conectar();
                 String Squerys = ("Select* from horario where  horainiciohor like'" + txt_buscarmod.Text + "%' or horafinalhor like '" + txt_buscarmod.Text + "%';");
                 conect.buscarquery(Squerys);
-                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','elimino horario', NOW());";
-                conect.EjecutarQuery(Query);
+              
                 conect.actualizargrid(dgv_mostrar_horario, Squerys, Stabla);
                 nombre_columna();
                 conect.Desconectar();

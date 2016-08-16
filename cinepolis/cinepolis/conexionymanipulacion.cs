@@ -20,7 +20,7 @@ namespace cinepolis
     class conexionymanipulacion
     {
 
-        string connect = "server=localhost; database= bdcinetopia; Uid= root  ;pwd= ;";
+        string connect = "server=localhost; database= bdcinetopia; Uid=root  ;pwd= ;";
         MySqlConnection conexion;
 
         //conexion
@@ -53,8 +53,14 @@ namespace cinepolis
             if (Ifilasafectadas > 0)
                 MessageBox.Show("Operacion realizada con exitosamente");
         }
+        public void EjecutarQuery1(String Query)
+        {
+            MySqlCommand comando = new MySqlCommand(Query, conexion);
+            int Ifilasafectadas = comando.ExecuteNonQuery();
+   
+        }
         //actualizar y llenar los datagrid
-     public void actualizargrid(DataGridView dg, String SQuery, String Stabla)
+        public void actualizargrid(DataGridView dg, String SQuery, String Stabla)
         {
             this.Conectar();
             DataSet midataset = new DataSet();

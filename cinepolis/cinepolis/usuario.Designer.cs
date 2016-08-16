@@ -33,24 +33,24 @@
             this.btn_regresar = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lbl_nombreusuario = new System.Windows.Forms.Label();
-            this.lbl_passusuario = new System.Windows.Forms.Label();
-            this.lbl_nivelusuario = new System.Windows.Forms.Label();
-            this.txt_nombreusuario = new System.Windows.Forms.TextBox();
-            this.txt_pasusuario = new System.Windows.Forms.TextBox();
-            this.cbo_nivelsusario = new System.Windows.Forms.ComboBox();
-            this.dgv_ingresarusuario = new System.Windows.Forms.DataGridView();
             this.btn_agregarusuario = new System.Windows.Forms.Button();
-            this.lbl_uempleado = new System.Windows.Forms.Label();
-            this.txt_confirmar = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbo_elegirempleado = new System.Windows.Forms.ComboBox();
             this.bttn_actualizar_usuario = new System.Windows.Forms.Button();
             this.btn_buscar_usuario = new System.Windows.Forms.Button();
             this.btn_eliminar_usuario = new System.Windows.Forms.Button();
-            this.txt_buscar_usuario = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lbl_buscar_usuario = new System.Windows.Forms.Label();
+            this.txt_buscar_usuario = new System.Windows.Forms.TextBox();
+            this.txt_confirmar = new System.Windows.Forms.TextBox();
+            this.txt_pasusuario = new System.Windows.Forms.TextBox();
+            this.txt_nombreusuario = new System.Windows.Forms.TextBox();
+            this.cbo_elegirempleado = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_uempleado = new System.Windows.Forms.Label();
+            this.dgv_ingresarusuario = new System.Windows.Forms.DataGridView();
+            this.cbo_nivelsusario = new System.Windows.Forms.ComboBox();
+            this.lbl_nivelusuario = new System.Windows.Forms.Label();
+            this.lbl_passusuario = new System.Windows.Forms.Label();
+            this.lbl_nombreusuario = new System.Windows.Forms.Label();
             this.lbl_modificar = new System.Windows.Forms.TabControl();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ingresarusuario)).BeginInit();
@@ -91,105 +91,6 @@
             this.btn_cerrarsesion.UseVisualStyleBackColor = true;
             this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPage1.Controls.Add(this.lbl_buscar_usuario);
-            this.tabPage1.Controls.Add(this.txt_buscar_usuario);
-            this.tabPage1.Controls.Add(this.txt_confirmar);
-            this.tabPage1.Controls.Add(this.txt_pasusuario);
-            this.tabPage1.Controls.Add(this.txt_nombreusuario);
-            this.tabPage1.Controls.Add(this.btn_eliminar_usuario);
-            this.tabPage1.Controls.Add(this.btn_buscar_usuario);
-            this.tabPage1.Controls.Add(this.bttn_actualizar_usuario);
-            this.tabPage1.Controls.Add(this.cbo_elegirempleado);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.lbl_uempleado);
-            this.tabPage1.Controls.Add(this.btn_agregarusuario);
-            this.tabPage1.Controls.Add(this.dgv_ingresarusuario);
-            this.tabPage1.Controls.Add(this.cbo_nivelsusario);
-            this.tabPage1.Controls.Add(this.lbl_nivelusuario);
-            this.tabPage1.Controls.Add(this.lbl_passusuario);
-            this.tabPage1.Controls.Add(this.lbl_nombreusuario);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(822, 351);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Mantenimiento de Usuario";
-            // 
-            // lbl_nombreusuario
-            // 
-            this.lbl_nombreusuario.AutoSize = true;
-            this.lbl_nombreusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombreusuario.Location = new System.Drawing.Point(39, 18);
-            this.lbl_nombreusuario.Name = "lbl_nombreusuario";
-            this.lbl_nombreusuario.Size = new System.Drawing.Size(59, 16);
-            this.lbl_nombreusuario.TabIndex = 28;
-            this.lbl_nombreusuario.Text = "Nombre:";
-            // 
-            // lbl_passusuario
-            // 
-            this.lbl_passusuario.AutoSize = true;
-            this.lbl_passusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_passusuario.Location = new System.Drawing.Point(39, 51);
-            this.lbl_passusuario.Name = "lbl_passusuario";
-            this.lbl_passusuario.Size = new System.Drawing.Size(82, 16);
-            this.lbl_passusuario.TabIndex = 29;
-            this.lbl_passusuario.Text = "Contraseña :";
-            this.lbl_passusuario.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // lbl_nivelusuario
-            // 
-            this.lbl_nivelusuario.AutoSize = true;
-            this.lbl_nivelusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nivelusuario.Location = new System.Drawing.Point(451, 15);
-            this.lbl_nivelusuario.Name = "lbl_nivelusuario";
-            this.lbl_nivelusuario.Size = new System.Drawing.Size(37, 16);
-            this.lbl_nivelusuario.TabIndex = 30;
-            this.lbl_nivelusuario.Text = "Role:";
-            this.lbl_nivelusuario.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // txt_nombreusuario
-            // 
-            this.txt_nombreusuario.Location = new System.Drawing.Point(104, 14);
-            this.txt_nombreusuario.MaxLength = 20;
-            this.txt_nombreusuario.Name = "txt_nombreusuario";
-            this.txt_nombreusuario.Size = new System.Drawing.Size(314, 20);
-            this.txt_nombreusuario.TabIndex = 31;
-            this.txt_nombreusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreusuario_KeyPress);
-            // 
-            // txt_pasusuario
-            // 
-            this.txt_pasusuario.Location = new System.Drawing.Point(126, 49);
-            this.txt_pasusuario.MaxLength = 20;
-            this.txt_pasusuario.Name = "txt_pasusuario";
-            this.txt_pasusuario.PasswordChar = '*';
-            this.txt_pasusuario.Size = new System.Drawing.Size(292, 20);
-            this.txt_pasusuario.TabIndex = 32;
-            this.txt_pasusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pasusuario_KeyPress);
-            // 
-            // cbo_nivelsusario
-            // 
-            this.cbo_nivelsusario.FormattingEnabled = true;
-            this.cbo_nivelsusario.Location = new System.Drawing.Point(494, 14);
-            this.cbo_nivelsusario.Name = "cbo_nivelsusario";
-            this.cbo_nivelsusario.Size = new System.Drawing.Size(113, 21);
-            this.cbo_nivelsusario.TabIndex = 33;
-            // 
-            // dgv_ingresarusuario
-            // 
-            this.dgv_ingresarusuario.AllowUserToAddRows = false;
-            this.dgv_ingresarusuario.AllowUserToDeleteRows = false;
-            this.dgv_ingresarusuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_ingresarusuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ingresarusuario.Location = new System.Drawing.Point(12, 182);
-            this.dgv_ingresarusuario.Name = "dgv_ingresarusuario";
-            this.dgv_ingresarusuario.ReadOnly = true;
-            this.dgv_ingresarusuario.Size = new System.Drawing.Size(807, 163);
-            this.dgv_ingresarusuario.TabIndex = 34;
-            this.dgv_ingresarusuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_empleados_CellContentClick);
-            // 
             // btn_agregarusuario
             // 
             this.btn_agregarusuario.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
@@ -201,44 +102,6 @@
             this.toolTip1.SetToolTip(this.btn_agregarusuario, "Guardar");
             this.btn_agregarusuario.UseVisualStyleBackColor = true;
             this.btn_agregarusuario.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // lbl_uempleado
-            // 
-            this.lbl_uempleado.AutoSize = true;
-            this.lbl_uempleado.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_uempleado.Location = new System.Drawing.Point(625, 14);
-            this.lbl_uempleado.Name = "lbl_uempleado";
-            this.lbl_uempleado.Size = new System.Drawing.Size(71, 16);
-            this.lbl_uempleado.TabIndex = 37;
-            this.lbl_uempleado.Text = "Empleado:";
-            // 
-            // txt_confirmar
-            // 
-            this.txt_confirmar.Location = new System.Drawing.Point(126, 80);
-            this.txt_confirmar.MaxLength = 20;
-            this.txt_confirmar.Name = "txt_confirmar";
-            this.txt_confirmar.PasswordChar = '*';
-            this.txt_confirmar.Size = new System.Drawing.Size(292, 20);
-            this.txt_confirmar.TabIndex = 38;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 16);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Confirmar:";
-            // 
-            // cbo_elegirempleado
-            // 
-            this.cbo_elegirempleado.FormattingEnabled = true;
-            this.cbo_elegirempleado.Location = new System.Drawing.Point(702, 11);
-            this.cbo_elegirempleado.Name = "cbo_elegirempleado";
-            this.cbo_elegirempleado.Size = new System.Drawing.Size(97, 21);
-            this.cbo_elegirempleado.TabIndex = 40;
-            this.cbo_elegirempleado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // bttn_actualizar_usuario
             // 
@@ -276,14 +139,32 @@
             this.btn_eliminar_usuario.UseVisualStyleBackColor = true;
             this.btn_eliminar_usuario.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // txt_buscar_usuario
+            // tabPage1
             // 
-            this.txt_buscar_usuario.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txt_buscar_usuario.Location = new System.Drawing.Point(97, 141);
-            this.txt_buscar_usuario.MaxLength = 100;
-            this.txt_buscar_usuario.Name = "txt_buscar_usuario";
-            this.txt_buscar_usuario.Size = new System.Drawing.Size(391, 20);
-            this.txt_buscar_usuario.TabIndex = 54;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.lbl_buscar_usuario);
+            this.tabPage1.Controls.Add(this.txt_buscar_usuario);
+            this.tabPage1.Controls.Add(this.txt_confirmar);
+            this.tabPage1.Controls.Add(this.txt_pasusuario);
+            this.tabPage1.Controls.Add(this.txt_nombreusuario);
+            this.tabPage1.Controls.Add(this.btn_eliminar_usuario);
+            this.tabPage1.Controls.Add(this.btn_buscar_usuario);
+            this.tabPage1.Controls.Add(this.bttn_actualizar_usuario);
+            this.tabPage1.Controls.Add(this.cbo_elegirempleado);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.lbl_uempleado);
+            this.tabPage1.Controls.Add(this.btn_agregarusuario);
+            this.tabPage1.Controls.Add(this.dgv_ingresarusuario);
+            this.tabPage1.Controls.Add(this.cbo_nivelsusario);
+            this.tabPage1.Controls.Add(this.lbl_nivelusuario);
+            this.tabPage1.Controls.Add(this.lbl_passusuario);
+            this.tabPage1.Controls.Add(this.lbl_nombreusuario);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(822, 351);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Mantenimiento de Usuario";
             // 
             // lbl_buscar_usuario
             // 
@@ -294,6 +175,128 @@
             this.lbl_buscar_usuario.Size = new System.Drawing.Size(52, 16);
             this.lbl_buscar_usuario.TabIndex = 55;
             this.lbl_buscar_usuario.Text = "Buscar:";
+            // 
+            // txt_buscar_usuario
+            // 
+            this.txt_buscar_usuario.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txt_buscar_usuario.Location = new System.Drawing.Point(97, 141);
+            this.txt_buscar_usuario.MaxLength = 100;
+            this.txt_buscar_usuario.Name = "txt_buscar_usuario";
+            this.txt_buscar_usuario.Size = new System.Drawing.Size(391, 20);
+            this.txt_buscar_usuario.TabIndex = 54;
+            // 
+            // txt_confirmar
+            // 
+            this.txt_confirmar.Location = new System.Drawing.Point(126, 80);
+            this.txt_confirmar.MaxLength = 20;
+            this.txt_confirmar.Name = "txt_confirmar";
+            this.txt_confirmar.PasswordChar = '*';
+            this.txt_confirmar.Size = new System.Drawing.Size(292, 20);
+            this.txt_confirmar.TabIndex = 38;
+            // 
+            // txt_pasusuario
+            // 
+            this.txt_pasusuario.Location = new System.Drawing.Point(126, 49);
+            this.txt_pasusuario.MaxLength = 20;
+            this.txt_pasusuario.Name = "txt_pasusuario";
+            this.txt_pasusuario.PasswordChar = '*';
+            this.txt_pasusuario.Size = new System.Drawing.Size(292, 20);
+            this.txt_pasusuario.TabIndex = 32;
+            this.txt_pasusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pasusuario_KeyPress);
+            // 
+            // txt_nombreusuario
+            // 
+            this.txt_nombreusuario.Location = new System.Drawing.Point(104, 14);
+            this.txt_nombreusuario.MaxLength = 20;
+            this.txt_nombreusuario.Name = "txt_nombreusuario";
+            this.txt_nombreusuario.Size = new System.Drawing.Size(314, 20);
+            this.txt_nombreusuario.TabIndex = 31;
+            this.txt_nombreusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreusuario_KeyPress);
+            // 
+            // cbo_elegirempleado
+            // 
+            this.cbo_elegirempleado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_elegirempleado.FormattingEnabled = true;
+            this.cbo_elegirempleado.Location = new System.Drawing.Point(702, 11);
+            this.cbo_elegirempleado.Name = "cbo_elegirempleado";
+            this.cbo_elegirempleado.Size = new System.Drawing.Size(97, 21);
+            this.cbo_elegirempleado.TabIndex = 40;
+            this.cbo_elegirempleado.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(39, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 16);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Confirmar:";
+            // 
+            // lbl_uempleado
+            // 
+            this.lbl_uempleado.AutoSize = true;
+            this.lbl_uempleado.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_uempleado.Location = new System.Drawing.Point(625, 14);
+            this.lbl_uempleado.Name = "lbl_uempleado";
+            this.lbl_uempleado.Size = new System.Drawing.Size(71, 16);
+            this.lbl_uempleado.TabIndex = 37;
+            this.lbl_uempleado.Text = "Empleado:";
+            // 
+            // dgv_ingresarusuario
+            // 
+            this.dgv_ingresarusuario.AllowUserToAddRows = false;
+            this.dgv_ingresarusuario.AllowUserToDeleteRows = false;
+            this.dgv_ingresarusuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ingresarusuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ingresarusuario.Location = new System.Drawing.Point(12, 182);
+            this.dgv_ingresarusuario.Name = "dgv_ingresarusuario";
+            this.dgv_ingresarusuario.ReadOnly = true;
+            this.dgv_ingresarusuario.Size = new System.Drawing.Size(807, 163);
+            this.dgv_ingresarusuario.TabIndex = 34;
+            this.dgv_ingresarusuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_empleados_CellContentClick);
+            // 
+            // cbo_nivelsusario
+            // 
+            this.cbo_nivelsusario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_nivelsusario.FormattingEnabled = true;
+            this.cbo_nivelsusario.Location = new System.Drawing.Point(494, 14);
+            this.cbo_nivelsusario.Name = "cbo_nivelsusario";
+            this.cbo_nivelsusario.Size = new System.Drawing.Size(113, 21);
+            this.cbo_nivelsusario.TabIndex = 33;
+            this.cbo_nivelsusario.SelectedIndexChanged += new System.EventHandler(this.cbo_nivelsusario_SelectedIndexChanged);
+            // 
+            // lbl_nivelusuario
+            // 
+            this.lbl_nivelusuario.AutoSize = true;
+            this.lbl_nivelusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nivelusuario.Location = new System.Drawing.Point(451, 15);
+            this.lbl_nivelusuario.Name = "lbl_nivelusuario";
+            this.lbl_nivelusuario.Size = new System.Drawing.Size(37, 16);
+            this.lbl_nivelusuario.TabIndex = 30;
+            this.lbl_nivelusuario.Text = "Role:";
+            this.lbl_nivelusuario.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // lbl_passusuario
+            // 
+            this.lbl_passusuario.AutoSize = true;
+            this.lbl_passusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_passusuario.Location = new System.Drawing.Point(39, 51);
+            this.lbl_passusuario.Name = "lbl_passusuario";
+            this.lbl_passusuario.Size = new System.Drawing.Size(82, 16);
+            this.lbl_passusuario.TabIndex = 29;
+            this.lbl_passusuario.Text = "Contraseña :";
+            this.lbl_passusuario.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // lbl_nombreusuario
+            // 
+            this.lbl_nombreusuario.AutoSize = true;
+            this.lbl_nombreusuario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombreusuario.Location = new System.Drawing.Point(39, 18);
+            this.lbl_nombreusuario.Name = "lbl_nombreusuario";
+            this.lbl_nombreusuario.Size = new System.Drawing.Size(59, 16);
+            this.lbl_nombreusuario.TabIndex = 28;
+            this.lbl_nombreusuario.Text = "Nombre:";
             // 
             // lbl_modificar
             // 

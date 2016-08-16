@@ -317,7 +317,7 @@ namespace cinepolis
                     String Squery = "insert into  empleado (nom1empleado,nom2empleado,ape1empleado,ape2empleado,dirempleado,dpiempleado,nitempleado,fechanacempleado,pk_idcine,pk_idpuesto) values('" + txt_nombre1.Text + "','" + txt_nombre2.Text + "','" + txt_apellido1.Text + "','" + txt_apellido2.Text + "','" + txt_direccion.Text + "','" + txt_dpi.Text + "','" + txt_nit.Text + "','" + this.dtp_fecha_nac.Text + "','" + convcine + "','" + convpuesto + "');";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','agrego empleado', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -388,7 +388,7 @@ namespace cinepolis
                     String Squery = "update empleado set  nom1empleado ='" + txt_nombre1.Text + "', nom2empleado ='" + txt_nombre2.Text + "',ape1empleado ='" + txt_apellido1.Text + "',ape2empleado ='" + txt_apellido2.Text + "',dirempleado ='" + txt_direccion.Text + "',dpiempleado ='" + txt_dpi.Text + "',nitempleado ='" + txt_nit.Text + "',fechanacempleado ='" + this.dtp_fecha_nac.Text + "',pk_idcine ='" + convcinemod + "',pk_idpuesto ='" + convpuestomod + "' where pk_idempleado ='" + Codigo + "'";
                     conect.EjecutarQuery(Squery);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','modifico empleado', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
@@ -539,7 +539,7 @@ namespace cinepolis
                     String Squerys = "delete from  empleado where pk_idempleado = '" + SCelda + "';";
                     conect.EjecutarQuery(Squerys);
                     String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usu + "','" + conect.ip() + "','Elimino empelado', NOW());";
-                    conect.EjecutarQuery(Query);
+                    conect.EjecutarQuery1(Query);
                     conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
                     nombre_columna();
                     conect.Desconectar();
