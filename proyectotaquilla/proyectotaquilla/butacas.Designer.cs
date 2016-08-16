@@ -898,6 +898,7 @@
             this.lblasientos.Size = new System.Drawing.Size(13, 13);
             this.lblasientos.TabIndex = 7;
             this.lblasientos.Text = "0";
+            this.lblasientos.Click += new System.EventHandler(this.lblasientos_Click);
             // 
             // label2
             // 

@@ -699,79 +699,227 @@ namespace proyectotaquilla
 
         private void chkB6_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkB6.Checked)
+            if (chkB6.Checked == true)
             {
                 ParametroCantidad++;
                 chkB6.BackgroundImage = proyectotaquilla.Properties.Resources.verde;
 
+
+                if (comparar == ParametroCantidad)
+                {
+
+                    var respuesta = MessageBox.Show("Esta Satisfecho con su Eleccion?", " Eleccion de Asientos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        chkA1.Enabled = false; chkA2.Enabled = false; chkA3.Enabled = false; chkA4.Enabled = false; chkA5.Enabled = false; chkA6.Enabled = false; chkA7.Enabled = false; chkA8.Enabled = false; chkA9.Enabled = false; chkB1.Enabled = false; chkB2.Enabled = false; chkB3.Enabled = false; chkB4.Enabled = false; chkB5.Enabled = false; chkB6.Enabled = false; chkB7.Enabled = false; chkB8.Enabled = false; chkB9.Enabled = false; chkC1.Enabled = false; chkA2.Enabled = false; chkC3.Enabled = false; chkC4.Enabled = false; chkC5.Enabled = false; chkC6.Enabled = false; chkC7.Enabled = false; chkC8.Enabled = false; chkC9.Enabled = false;
+                        chkD1.Enabled = false; chkD2.Enabled = false; chkD3.Enabled = false; chkD4.Enabled = false; chkD5.Enabled = false; chkD6.Enabled = false; chkD7.Enabled = false; chkD8.Enabled = false; chkD9.Enabled = false; chkE1.Enabled = false; chkE2.Enabled = false; chkE3.Enabled = false; chkE4.Enabled = false; chkE5.Enabled = false; chkE6.Enabled = false; chkE7.Enabled = false; chkE8.Enabled = false; chkE9.Enabled = false;
+
+
+                    }
+                    else
+                        if (respuesta == DialogResult.No)
+                        {
+
+                            chkB6.Checked = false;
+
+                            chkB6.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+
+
+                            chkA1.Enabled = true; chkA2.Enabled = true; chkA3.Enabled = true; chkA4.Enabled = true; chkA5.Enabled = true; chkA6.Enabled = true; chkA7.Enabled = true; chkA8.Enabled = true; chkA9.Enabled = true; chkB1.Enabled = true; chkB2.Enabled = true; chkB3.Enabled = true; chkB4.Enabled = true; chkB5.Enabled = true; chkB6.Enabled = true; chkB7.Enabled = true; chkB8.Enabled = true; chkB9.Enabled = true; chkC1.Enabled = true; chkA2.Enabled = true; chkC3.Enabled = true; chkC4.Enabled = true; chkC5.Enabled = true; chkC6.Enabled = true; chkC7.Enabled = true; chkC8.Enabled = true; chkC9.Enabled = true;
+                            chkD1.Enabled = true; chkD2.Enabled = true; chkD3.Enabled = true; chkD4.Enabled = true; chkD5.Enabled = true; chkD6.Enabled = true; chkD7.Enabled = true; chkD8.Enabled = true; chkD9.Enabled = true; chkE1.Enabled = true; chkE2.Enabled = true; chkE3.Enabled = true; chkE4.Enabled = true; chkE5.Enabled = true; chkE6.Enabled = true; chkE7.Enabled = true; chkE8.Enabled = true; chkE9.Enabled = true;
+                        }
+                }
+
             }
+
             else
-            {
-                chkB6.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
-                ParametroCantidad--;
-            }
+                if (chkB6.Checked == false)
+                {
+                    ParametroCantidad = ParametroCantidad - 1;
+                    chkB6.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+                    MessageBox.Show("la cantidad actual es de: " + ParametroCantidad);
+
+                }
         }
 
         private void chkB7_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkB7.Checked)
+            if (chkB7.Checked == true)
             {
                 ParametroCantidad++;
-
                 chkB7.BackgroundImage = proyectotaquilla.Properties.Resources.verde;
 
+
+                if (comparar == ParametroCantidad)
+                {
+
+                    var respuesta = MessageBox.Show("Esta Satisfecho con su Eleccion?", " Eleccion de Asientos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        chkA1.Enabled = false; chkA2.Enabled = false; chkA3.Enabled = false; chkA4.Enabled = false; chkA5.Enabled = false; chkA6.Enabled = false; chkA7.Enabled = false; chkA8.Enabled = false; chkA9.Enabled = false; chkB1.Enabled = false; chkB2.Enabled = false; chkB3.Enabled = false; chkB4.Enabled = false; chkB5.Enabled = false; chkB6.Enabled = false; chkB7.Enabled = false; chkB8.Enabled = false; chkB9.Enabled = false; chkC1.Enabled = false; chkA2.Enabled = false; chkC3.Enabled = false; chkC4.Enabled = false; chkC5.Enabled = false; chkC6.Enabled = false; chkC7.Enabled = false; chkC8.Enabled = false; chkC9.Enabled = false;
+                        chkD1.Enabled = false; chkD2.Enabled = false; chkD3.Enabled = false; chkD4.Enabled = false; chkD5.Enabled = false; chkD6.Enabled = false; chkD7.Enabled = false; chkD8.Enabled = false; chkD9.Enabled = false; chkE1.Enabled = false; chkE2.Enabled = false; chkE3.Enabled = false; chkE4.Enabled = false; chkE5.Enabled = false; chkE6.Enabled = false; chkE7.Enabled = false; chkE8.Enabled = false; chkE9.Enabled = false;
+
+
+                    }
+                    else
+                        if (respuesta == DialogResult.No)
+                        {
+
+                            chkB7.Checked = false;
+
+                            chkB7.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+
+
+                            chkA1.Enabled = true; chkA2.Enabled = true; chkA3.Enabled = true; chkA4.Enabled = true; chkA5.Enabled = true; chkA6.Enabled = true; chkA7.Enabled = true; chkA8.Enabled = true; chkA9.Enabled = true; chkB1.Enabled = true; chkB2.Enabled = true; chkB3.Enabled = true; chkB4.Enabled = true; chkB5.Enabled = true; chkB6.Enabled = true; chkB7.Enabled = true; chkB8.Enabled = true; chkB9.Enabled = true; chkC1.Enabled = true; chkA2.Enabled = true; chkC3.Enabled = true; chkC4.Enabled = true; chkC5.Enabled = true; chkC6.Enabled = true; chkC7.Enabled = true; chkC8.Enabled = true; chkC9.Enabled = true;
+                            chkD1.Enabled = true; chkD2.Enabled = true; chkD3.Enabled = true; chkD4.Enabled = true; chkD5.Enabled = true; chkD6.Enabled = true; chkD7.Enabled = true; chkD8.Enabled = true; chkD9.Enabled = true; chkE1.Enabled = true; chkE2.Enabled = true; chkE3.Enabled = true; chkE4.Enabled = true; chkE5.Enabled = true; chkE6.Enabled = true; chkE7.Enabled = true; chkE8.Enabled = true; chkE9.Enabled = true;
+                        }
+                }
+
             }
+
             else
-            {
-                chkB7.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
-                ParametroCantidad--;
-            }
+                if (chkB7.Checked == false)
+                {
+                    ParametroCantidad = ParametroCantidad - 1;
+                    chkB7.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+                    MessageBox.Show("la cantidad actual es de: " + ParametroCantidad);
+
+                }
         }
 
         private void chkB8_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkB8.Checked)
+            if (chkB8.Checked == true)
             {
                 ParametroCantidad++;
-
                 chkB8.BackgroundImage = proyectotaquilla.Properties.Resources.verde;
 
+
+                if (comparar == ParametroCantidad)
+                {
+
+                    var respuesta = MessageBox.Show("Esta Satisfecho con su Eleccion?", " Eleccion de Asientos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        chkA1.Enabled = false; chkA2.Enabled = false; chkA3.Enabled = false; chkA4.Enabled = false; chkA5.Enabled = false; chkA6.Enabled = false; chkA7.Enabled = false; chkA8.Enabled = false; chkA9.Enabled = false; chkB1.Enabled = false; chkB2.Enabled = false; chkB3.Enabled = false; chkB4.Enabled = false; chkB5.Enabled = false; chkB6.Enabled = false; chkB7.Enabled = false; chkB8.Enabled = false; chkB9.Enabled = false; chkC1.Enabled = false; chkA2.Enabled = false; chkC3.Enabled = false; chkC4.Enabled = false; chkC5.Enabled = false; chkC6.Enabled = false; chkC7.Enabled = false; chkC8.Enabled = false; chkC9.Enabled = false;
+                        chkD1.Enabled = false; chkD2.Enabled = false; chkD3.Enabled = false; chkD4.Enabled = false; chkD5.Enabled = false; chkD6.Enabled = false; chkD7.Enabled = false; chkD8.Enabled = false; chkD9.Enabled = false; chkE1.Enabled = false; chkE2.Enabled = false; chkE3.Enabled = false; chkE4.Enabled = false; chkE5.Enabled = false; chkE6.Enabled = false; chkE7.Enabled = false; chkE8.Enabled = false; chkE9.Enabled = false;
+
+
+                    }
+                    else
+                        if (respuesta == DialogResult.No)
+                        {
+
+                            chkB8.Checked = false;
+
+                            chkB8.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+
+
+                            chkA1.Enabled = true; chkA2.Enabled = true; chkA3.Enabled = true; chkA4.Enabled = true; chkA5.Enabled = true; chkA6.Enabled = true; chkA7.Enabled = true; chkA8.Enabled = true; chkA9.Enabled = true; chkB1.Enabled = true; chkB2.Enabled = true; chkB3.Enabled = true; chkB4.Enabled = true; chkB5.Enabled = true; chkB6.Enabled = true; chkB7.Enabled = true; chkB8.Enabled = true; chkB9.Enabled = true; chkC1.Enabled = true; chkA2.Enabled = true; chkC3.Enabled = true; chkC4.Enabled = true; chkC5.Enabled = true; chkC6.Enabled = true; chkC7.Enabled = true; chkC8.Enabled = true; chkC9.Enabled = true;
+                            chkD1.Enabled = true; chkD2.Enabled = true; chkD3.Enabled = true; chkD4.Enabled = true; chkD5.Enabled = true; chkD6.Enabled = true; chkD7.Enabled = true; chkD8.Enabled = true; chkD9.Enabled = true; chkE1.Enabled = true; chkE2.Enabled = true; chkE3.Enabled = true; chkE4.Enabled = true; chkE5.Enabled = true; chkE6.Enabled = true; chkE7.Enabled = true; chkE8.Enabled = true; chkE9.Enabled = true;
+                        }
+                }
+
             }
+
             else
-            {
-                chkB8.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
-                ParametroCantidad--;
-            }
+                if (chkB8.Checked == false)
+                {
+                    ParametroCantidad = ParametroCantidad - 1;
+                    chkB8.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+                    MessageBox.Show("la cantidad actual es de: " + ParametroCantidad);
+
+                }
         }
 
         private void chkB9_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkB9.Checked)
+            if (chkB9.Checked == true)
             {
                 ParametroCantidad++;
                 chkB9.BackgroundImage = proyectotaquilla.Properties.Resources.verde;
 
+
+                if (comparar == ParametroCantidad)
+                {
+
+                    var respuesta = MessageBox.Show("Esta Satisfecho con su Eleccion?", " Eleccion de Asientos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        chkA1.Enabled = false; chkA2.Enabled = false; chkA3.Enabled = false; chkA4.Enabled = false; chkA5.Enabled = false; chkA6.Enabled = false; chkA7.Enabled = false; chkA8.Enabled = false; chkA9.Enabled = false; chkB1.Enabled = false; chkB2.Enabled = false; chkB3.Enabled = false; chkB4.Enabled = false; chkB5.Enabled = false; chkB6.Enabled = false; chkB7.Enabled = false; chkB8.Enabled = false; chkB9.Enabled = false; chkC1.Enabled = false; chkA2.Enabled = false; chkC3.Enabled = false; chkC4.Enabled = false; chkC5.Enabled = false; chkC6.Enabled = false; chkC7.Enabled = false; chkC8.Enabled = false; chkC9.Enabled = false;
+                        chkD1.Enabled = false; chkD2.Enabled = false; chkD3.Enabled = false; chkD4.Enabled = false; chkD5.Enabled = false; chkD6.Enabled = false; chkD7.Enabled = false; chkD8.Enabled = false; chkD9.Enabled = false; chkE1.Enabled = false; chkE2.Enabled = false; chkE3.Enabled = false; chkE4.Enabled = false; chkE5.Enabled = false; chkE6.Enabled = false; chkE7.Enabled = false; chkE8.Enabled = false; chkE9.Enabled = false;
+
+
+                    }
+                    else
+                        if (respuesta == DialogResult.No)
+                        {
+
+                            chkB9.Checked = false;
+
+                            chkB9.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+
+
+                            chkA1.Enabled = true; chkA2.Enabled = true; chkA3.Enabled = true; chkA4.Enabled = true; chkA5.Enabled = true; chkA6.Enabled = true; chkA7.Enabled = true; chkA8.Enabled = true; chkA9.Enabled = true; chkB1.Enabled = true; chkB2.Enabled = true; chkB3.Enabled = true; chkB4.Enabled = true; chkB5.Enabled = true; chkB6.Enabled = true; chkB7.Enabled = true; chkB8.Enabled = true; chkB9.Enabled = true; chkC1.Enabled = true; chkA2.Enabled = true; chkC3.Enabled = true; chkC4.Enabled = true; chkC5.Enabled = true; chkC6.Enabled = true; chkC7.Enabled = true; chkC8.Enabled = true; chkC9.Enabled = true;
+                            chkD1.Enabled = true; chkD2.Enabled = true; chkD3.Enabled = true; chkD4.Enabled = true; chkD5.Enabled = true; chkD6.Enabled = true; chkD7.Enabled = true; chkD8.Enabled = true; chkD9.Enabled = true; chkE1.Enabled = true; chkE2.Enabled = true; chkE3.Enabled = true; chkE4.Enabled = true; chkE5.Enabled = true; chkE6.Enabled = true; chkE7.Enabled = true; chkE8.Enabled = true; chkE9.Enabled = true;
+                        }
+                }
+
             }
+
             else
-            {
-                ParametroCantidad--;
-                chkB9.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
-            }
+                if (chkB9.Checked == false)
+                {
+                    ParametroCantidad = ParametroCantidad - 1;
+                    chkB9.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+                    MessageBox.Show("la cantidad actual es de: " + ParametroCantidad);
+
+                }
         }
 
         private void chkC1_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkC1.Checked)
+            if (chkC1.Checked == true)
             {
                 ParametroCantidad++;
                 chkC1.BackgroundImage = proyectotaquilla.Properties.Resources.verde;
 
+
+                if (comparar == ParametroCantidad)
+                {
+
+                    var respuesta = MessageBox.Show("Esta Satisfecho con su Eleccion?", " Eleccion de Asientos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        chkA1.Enabled = false; chkA2.Enabled = false; chkA3.Enabled = false; chkA4.Enabled = false; chkA5.Enabled = false; chkA6.Enabled = false; chkA7.Enabled = false; chkA8.Enabled = false; chkA9.Enabled = false; chkB1.Enabled = false; chkB2.Enabled = false; chkB3.Enabled = false; chkB4.Enabled = false; chkB5.Enabled = false; chkB6.Enabled = false; chkB7.Enabled = false; chkB8.Enabled = false; chkB9.Enabled = false; chkC1.Enabled = false; chkA2.Enabled = false; chkC3.Enabled = false; chkC4.Enabled = false; chkC5.Enabled = false; chkC6.Enabled = false; chkC7.Enabled = false; chkC8.Enabled = false; chkC9.Enabled = false;
+                        chkD1.Enabled = false; chkD2.Enabled = false; chkD3.Enabled = false; chkD4.Enabled = false; chkD5.Enabled = false; chkD6.Enabled = false; chkD7.Enabled = false; chkD8.Enabled = false; chkD9.Enabled = false; chkE1.Enabled = false; chkE2.Enabled = false; chkE3.Enabled = false; chkE4.Enabled = false; chkE5.Enabled = false; chkE6.Enabled = false; chkE7.Enabled = false; chkE8.Enabled = false; chkE9.Enabled = false;
+
+
+                    }
+                    else
+                        if (respuesta == DialogResult.No)
+                        {
+
+                            chkC1.Checked = false;
+
+                            chkC1.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+
+
+                            chkA1.Enabled = true; chkA2.Enabled = true; chkA3.Enabled = true; chkA4.Enabled = true; chkA5.Enabled = true; chkA6.Enabled = true; chkA7.Enabled = true; chkA8.Enabled = true; chkA9.Enabled = true; chkB1.Enabled = true; chkB2.Enabled = true; chkB3.Enabled = true; chkB4.Enabled = true; chkB5.Enabled = true; chkB6.Enabled = true; chkB7.Enabled = true; chkB8.Enabled = true; chkB9.Enabled = true; chkC1.Enabled = true; chkA2.Enabled = true; chkC3.Enabled = true; chkC4.Enabled = true; chkC5.Enabled = true; chkC6.Enabled = true; chkC7.Enabled = true; chkC8.Enabled = true; chkC9.Enabled = true;
+                            chkD1.Enabled = true; chkD2.Enabled = true; chkD3.Enabled = true; chkD4.Enabled = true; chkD5.Enabled = true; chkD6.Enabled = true; chkD7.Enabled = true; chkD8.Enabled = true; chkD9.Enabled = true; chkE1.Enabled = true; chkE2.Enabled = true; chkE3.Enabled = true; chkE4.Enabled = true; chkE5.Enabled = true; chkE6.Enabled = true; chkE7.Enabled = true; chkE8.Enabled = true; chkE9.Enabled = true;
+                        }
+                }
+
             }
+
             else
-            {
-                chkC1.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
-                ParametroCantidad--;
-            }
+                if (chkC1.Checked == false)
+                {
+                    ParametroCantidad = ParametroCantidad - 1;
+                    chkC1.BackgroundImage = proyectotaquilla.Properties.Resources.gris;
+                    MessageBox.Show("la cantidad actual es de: " + ParametroCantidad);
+
+                }
         }
 
         private void chkC2_CheckedChanged(object sender, EventArgs e)
@@ -1184,13 +1332,16 @@ namespace proyectotaquilla
 
         private void butacas_Load(object sender, EventArgs e)
         {
-           if (ParametroCantidad == comparar) {
-               MessageBox.Show("cantidad de boletos completada");
-           }
+            lblasientos.Text = comparar.ToString();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+        }
+
+        private void lblasientos_Click(object sender, EventArgs e)
+        {
+            lblasientos.Text = comparar.ToString();
         }
     }
 }
