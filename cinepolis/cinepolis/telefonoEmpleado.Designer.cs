@@ -83,10 +83,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(12, 82);
+            this.tabControl1.Location = new System.Drawing.Point(12, 58);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(651, 338);
+            this.tabControl1.Size = new System.Drawing.Size(651, 362);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -104,13 +104,13 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(643, 312);
+            this.tabPage1.Size = new System.Drawing.Size(643, 336);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Telefono";
             // 
             // txt_buscarmod
             // 
-            this.txt_buscarmod.Location = new System.Drawing.Point(149, 96);
+            this.txt_buscarmod.Location = new System.Drawing.Point(77, 139);
             this.txt_buscarmod.MaxLength = 100;
             this.txt_buscarmod.Name = "txt_buscarmod";
             this.txt_buscarmod.Size = new System.Drawing.Size(220, 20);
@@ -121,7 +121,7 @@
             // 
             this.lbl_codigo_buscar.AutoSize = true;
             this.lbl_codigo_buscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_codigo_buscar.Location = new System.Drawing.Point(78, 96);
+            this.lbl_codigo_buscar.Location = new System.Drawing.Point(6, 139);
             this.lbl_codigo_buscar.Name = "lbl_codigo_buscar";
             this.lbl_codigo_buscar.Size = new System.Drawing.Size(65, 21);
             this.lbl_codigo_buscar.TabIndex = 99;
@@ -131,7 +131,7 @@
             // 
             this.btn_eliminar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_proyeccion.Location = new System.Drawing.Point(571, 77);
+            this.btn_eliminar_proyeccion.Location = new System.Drawing.Point(576, 6);
             this.btn_eliminar_proyeccion.Name = "btn_eliminar_proyeccion";
             this.btn_eliminar_proyeccion.Size = new System.Drawing.Size(61, 55);
             this.btn_eliminar_proyeccion.TabIndex = 96;
@@ -142,7 +142,7 @@
             // 
             this.btn_buscar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_proyeccion.Location = new System.Drawing.Point(379, 78);
+            this.btn_buscar_proyeccion.Location = new System.Drawing.Point(384, 7);
             this.btn_buscar_proyeccion.Name = "btn_buscar_proyeccion";
             this.btn_buscar_proyeccion.Size = new System.Drawing.Size(61, 55);
             this.btn_buscar_proyeccion.TabIndex = 98;
@@ -153,7 +153,7 @@
             // 
             this.bttn_actualizar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.bttn_actualizar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_proyeccion.Location = new System.Drawing.Point(443, 77);
+            this.bttn_actualizar_proyeccion.Location = new System.Drawing.Point(448, 6);
             this.bttn_actualizar_proyeccion.Name = "bttn_actualizar_proyeccion";
             this.bttn_actualizar_proyeccion.Size = new System.Drawing.Size(61, 56);
             this.bttn_actualizar_proyeccion.TabIndex = 97;
@@ -165,7 +165,7 @@
             // 
             this.btn_guardar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar_proyeccion.Location = new System.Drawing.Point(508, 78);
+            this.btn_guardar_proyeccion.Location = new System.Drawing.Point(513, 7);
             this.btn_guardar_proyeccion.Name = "btn_guardar_proyeccion";
             this.btn_guardar_proyeccion.Size = new System.Drawing.Size(61, 55);
             this.btn_guardar_proyeccion.TabIndex = 95;
@@ -177,7 +177,7 @@
             // 
             this.lbl_Telefono.AutoSize = true;
             this.lbl_Telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Telefono.Location = new System.Drawing.Point(37, 31);
+            this.lbl_Telefono.Location = new System.Drawing.Point(6, 97);
             this.lbl_Telefono.Name = "lbl_Telefono";
             this.lbl_Telefono.Size = new System.Drawing.Size(80, 21);
             this.lbl_Telefono.TabIndex = 75;
@@ -189,7 +189,7 @@
             this.dgv_telefono.AllowUserToDeleteRows = false;
             this.dgv_telefono.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_telefono.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_telefono.Location = new System.Drawing.Point(6, 139);
+            this.dgv_telefono.Location = new System.Drawing.Point(3, 163);
             this.dgv_telefono.Name = "dgv_telefono";
             this.dgv_telefono.ReadOnly = true;
             this.dgv_telefono.Size = new System.Drawing.Size(626, 167);
@@ -197,7 +197,7 @@
             // 
             // txt_nom_proy
             // 
-            this.txt_nom_proy.Location = new System.Drawing.Point(120, 31);
+            this.txt_nom_proy.Location = new System.Drawing.Point(89, 97);
             this.txt_nom_proy.MaxLength = 8;
             this.txt_nom_proy.Name = "txt_nom_proy";
             this.txt_nom_proy.Size = new System.Drawing.Size(197, 20);

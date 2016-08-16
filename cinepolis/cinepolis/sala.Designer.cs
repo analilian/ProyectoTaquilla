@@ -110,7 +110,7 @@
             // 
             this.btn_buscar_sala.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_sala.Location = new System.Drawing.Point(443, 69);
+            this.btn_buscar_sala.Location = new System.Drawing.Point(451, 6);
             this.btn_buscar_sala.Name = "btn_buscar_sala";
             this.btn_buscar_sala.Size = new System.Drawing.Size(61, 52);
             this.btn_buscar_sala.TabIndex = 88;
@@ -122,7 +122,7 @@
             // 
             this.btn_eliminar_sala.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_sala.Location = new System.Drawing.Point(641, 69);
+            this.btn_eliminar_sala.Location = new System.Drawing.Point(649, 6);
             this.btn_eliminar_sala.Name = "btn_eliminar_sala";
             this.btn_eliminar_sala.Size = new System.Drawing.Size(61, 55);
             this.btn_eliminar_sala.TabIndex = 87;
@@ -134,7 +134,7 @@
             // 
             this.btn_actualizar_sala.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon1;
             this.btn_actualizar_sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar_sala.Location = new System.Drawing.Point(510, 69);
+            this.btn_actualizar_sala.Location = new System.Drawing.Point(518, 6);
             this.btn_actualizar_sala.Name = "btn_actualizar_sala";
             this.btn_actualizar_sala.Size = new System.Drawing.Size(61, 55);
             this.btn_actualizar_sala.TabIndex = 86;
@@ -146,7 +146,7 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(577, 69);
+            this.btn_guardar.Location = new System.Drawing.Point(585, 6);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(61, 55);
             this.btn_guardar.TabIndex = 60;
@@ -158,7 +158,7 @@
             // 
             this.lbl_sala.AutoSize = true;
             this.lbl_sala.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_sala.Location = new System.Drawing.Point(18, 25);
+            this.lbl_sala.Location = new System.Drawing.Point(8, 69);
             this.lbl_sala.Name = "lbl_sala";
             this.lbl_sala.Size = new System.Drawing.Size(77, 21);
             this.lbl_sala.TabIndex = 58;
@@ -166,7 +166,7 @@
             // 
             // txt_sala
             // 
-            this.txt_sala.Location = new System.Drawing.Point(115, 28);
+            this.txt_sala.Location = new System.Drawing.Point(105, 72);
             this.txt_sala.MaxLength = 20;
             this.txt_sala.Name = "txt_sala";
             this.txt_sala.Size = new System.Drawing.Size(288, 20);
@@ -269,7 +269,7 @@
             // 
             this.lbl_titulo_mantenimiento_cine.AutoSize = true;
             this.lbl_titulo_mantenimiento_cine.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(189, 11);
+            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(190, 7);
             this.lbl_titulo_mantenimiento_cine.Name = "lbl_titulo_mantenimiento_cine";
             this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(379, 36);
             this.lbl_titulo_mantenimiento_cine.TabIndex = 63;
