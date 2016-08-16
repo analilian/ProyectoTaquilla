@@ -25,6 +25,40 @@ namespace cinepolis
         {
 
         }
+
+
+        private static int validarusuario(string r)
+        {
+            conexionymanipulacion con = new conexionymanipulacion();
+            string cad1 = r;
+            int resp=0;
+            int resultado = 0;
+
+            DataTable dt = new DataTable();
+            String sQuery = "SELECT nomusuario FROM usuario WHERE nomusuario= '" + r + "'";
+            MySqlCommand comando = new MySqlCommand(sQuery, con.rutaconectada());
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            adaptador.Fill(dt);
+            DataRow fila = dt.Rows[0];
+            string cad2 = Convert.ToString(fila[0]);
+            resultado = cad2.CompareTo(cad1);
+
+            if(resultado == 0)
+            {
+                resp = 1;
+            }
+
+            return resp;
+
+        }
+
+
+
+
+
+
+
+
        
         private static int revisar(string f, string g)
         {
@@ -56,34 +90,53 @@ namespace cinepolis
             {
                 if (resultado > 0)
                 {
-                    conect.Conectar();
-                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + txt_usuario.Text + "','" + conect.ip() + "','inicio sesion', NOW());";
-                    conect.EjecutarQuery1(Query);
-                    conect.Desconectar();
-                    this.Hide();
-                    seleccion a = new seleccion(txt_usuario.Text);
-                    a.ShowDialog();
-                    
-       
+                    if (validarusuario(txt_usuario.Text) == 1)
+                    {
+                        conect.Conectar();
+                        String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + txt_usuario.Text + "','" + conect.ip() + "','inicio sesion', NOW());";
+                        conect.EjecutarQuery1(Query);
+                        conect.Desconectar();
+                        this.Hide();
+                        seleccion a = new seleccion(txt_usuario.Text);
+                        a.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("USUARIO O CONTRASEÑA INCORRECTA", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+
+
+
 
                 }
                 else
                 {
-                    conect.Conectar();
-                    String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + txt_usuario.Text + "','" + conect.ip() + "','inicio sesion', NOW());";
-                    conect.EjecutarQuery1(Query);
-                    conect.Desconectar();
-                    this.Hide();
-                    mantenimiento a = new mantenimiento(txt_usuario.Text);
-                    a.ShowDialog();
-                   
-                 
+                    if (validarusuario(txt_usuario.Text) == 1)
+                    {
+                        conect.Conectar();
+                        String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + txt_usuario.Text + "','" + conect.ip() + "','inicio sesion', NOW());";
+                        conect.EjecutarQuery1(Query);
+                        conect.Desconectar();
+                        this.Hide();
+                        mantenimiento a = new mantenimiento(txt_usuario.Text);
+                        a.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("USUARIO O CONTRASEÑA INCORRECTA", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+                    }
+
+
+
 
                 }
             }
             else
             {
-                MessageBox.Show(" USUARIO O CONTRASEÑA INCORRECTA");
+                MessageBox.Show("USUARIO O CONTRASEÑA INCORRECTA", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

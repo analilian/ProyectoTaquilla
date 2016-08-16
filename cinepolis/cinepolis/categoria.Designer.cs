@@ -108,7 +108,7 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_activar.Location = new System.Drawing.Point(342, 65);
+            this.btn_activar.Location = new System.Drawing.Point(344, 65);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
             this.btn_activar.TabIndex = 99;
@@ -120,7 +120,7 @@
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_desactivar.Location = new System.Drawing.Point(406, 65);
+            this.btn_desactivar.Location = new System.Drawing.Point(409, 65);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
             this.btn_desactivar.TabIndex = 100;
@@ -144,9 +144,9 @@
             // 
             this.btn_eliminar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_categoria.Location = new System.Drawing.Point(666, 75);
+            this.btn_eliminar_categoria.Location = new System.Drawing.Point(666, 65);
             this.btn_eliminar_categoria.Name = "btn_eliminar_categoria";
-            this.btn_eliminar_categoria.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_categoria.Size = new System.Drawing.Size(65, 65);
             this.btn_eliminar_categoria.TabIndex = 90;
             this.toolTip1.SetToolTip(this.btn_eliminar_categoria, "Eliminar");
             this.btn_eliminar_categoria.UseVisualStyleBackColor = true;
@@ -156,9 +156,9 @@
             // 
             this.btn_buscar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_categoria.Location = new System.Drawing.Point(474, 76);
+            this.btn_buscar_categoria.Location = new System.Drawing.Point(474, 66);
             this.btn_buscar_categoria.Name = "btn_buscar_categoria";
-            this.btn_buscar_categoria.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_categoria.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_categoria.TabIndex = 92;
             this.toolTip1.SetToolTip(this.btn_buscar_categoria, "Buscar");
             this.btn_buscar_categoria.UseVisualStyleBackColor = true;
@@ -168,9 +168,9 @@
             // 
             this.bttn_actualizar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.bttn_actualizar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_categoria.Location = new System.Drawing.Point(538, 75);
+            this.bttn_actualizar_categoria.Location = new System.Drawing.Point(538, 65);
             this.bttn_actualizar_categoria.Name = "bttn_actualizar_categoria";
-            this.bttn_actualizar_categoria.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_categoria.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_categoria.TabIndex = 91;
             this.toolTip1.SetToolTip(this.bttn_actualizar_categoria, "Actualizar");
             this.bttn_actualizar_categoria.UseVisualStyleBackColor = true;
@@ -181,9 +181,9 @@
             this.btn_guardar.BackColor = System.Drawing.Color.Transparent;
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(602, 75);
+            this.btn_guardar.Location = new System.Drawing.Point(602, 65);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(61, 55);
+            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar.TabIndex = 60;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = false;

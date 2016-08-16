@@ -138,9 +138,9 @@
             // 
             this.btn_buscar_sala.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_sala.Location = new System.Drawing.Point(451, 6);
+            this.btn_buscar_sala.Location = new System.Drawing.Point(455, 6);
             this.btn_buscar_sala.Name = "btn_buscar_sala";
-            this.btn_buscar_sala.Size = new System.Drawing.Size(61, 52);
+            this.btn_buscar_sala.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_sala.TabIndex = 88;
             this.toolTip1.SetToolTip(this.btn_buscar_sala, "Buscar");
             this.btn_buscar_sala.UseVisualStyleBackColor = true;
@@ -150,9 +150,9 @@
             // 
             this.btn_eliminar_sala.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_sala.Location = new System.Drawing.Point(649, 6);
+            this.btn_eliminar_sala.Location = new System.Drawing.Point(647, 6);
             this.btn_eliminar_sala.Name = "btn_eliminar_sala";
-            this.btn_eliminar_sala.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_sala.Size = new System.Drawing.Size(65, 65);
             this.btn_eliminar_sala.TabIndex = 87;
             this.toolTip1.SetToolTip(this.btn_eliminar_sala, "Borrar");
             this.btn_eliminar_sala.UseVisualStyleBackColor = true;
@@ -162,9 +162,9 @@
             // 
             this.btn_actualizar_sala.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon1;
             this.btn_actualizar_sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar_sala.Location = new System.Drawing.Point(518, 6);
+            this.btn_actualizar_sala.Location = new System.Drawing.Point(520, 6);
             this.btn_actualizar_sala.Name = "btn_actualizar_sala";
-            this.btn_actualizar_sala.Size = new System.Drawing.Size(61, 55);
+            this.btn_actualizar_sala.Size = new System.Drawing.Size(65, 65);
             this.btn_actualizar_sala.TabIndex = 86;
             this.toolTip1.SetToolTip(this.btn_actualizar_sala, "Actualizar");
             this.btn_actualizar_sala.UseVisualStyleBackColor = true;
@@ -174,9 +174,9 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(585, 6);
+            this.btn_guardar.Location = new System.Drawing.Point(584, 6);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(61, 55);
+            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar.TabIndex = 60;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;

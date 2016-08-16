@@ -68,9 +68,9 @@
             // 
             this.btn_eliminar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_fecha.Location = new System.Drawing.Point(667, 55);
+            this.btn_eliminar_fecha.Location = new System.Drawing.Point(662, 65);
             this.btn_eliminar_fecha.Name = "btn_eliminar_fecha";
-            this.btn_eliminar_fecha.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_fecha.Size = new System.Drawing.Size(65, 65);
             this.btn_eliminar_fecha.TabIndex = 93;
             this.btn_eliminar_fecha.UseVisualStyleBackColor = true;
             this.btn_eliminar_fecha.Click += new System.EventHandler(this.btn_eliminar_fecha_Click);
@@ -79,9 +79,9 @@
             // 
             this.btn_buscar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_fecha.Location = new System.Drawing.Point(475, 56);
+            this.btn_buscar_fecha.Location = new System.Drawing.Point(470, 66);
             this.btn_buscar_fecha.Name = "btn_buscar_fecha";
-            this.btn_buscar_fecha.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_fecha.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_fecha.TabIndex = 95;
             this.btn_buscar_fecha.UseVisualStyleBackColor = true;
             this.btn_buscar_fecha.Click += new System.EventHandler(this.btn_buscar_fecha_Click);
@@ -90,9 +90,9 @@
             // 
             this.bttn_actualizar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.bttn_actualizar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_fecha.Location = new System.Drawing.Point(539, 55);
+            this.bttn_actualizar_fecha.Location = new System.Drawing.Point(534, 65);
             this.bttn_actualizar_fecha.Name = "bttn_actualizar_fecha";
-            this.bttn_actualizar_fecha.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_fecha.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_fecha.TabIndex = 94;
             this.bttn_actualizar_fecha.UseVisualStyleBackColor = true;
             this.bttn_actualizar_fecha.Click += new System.EventHandler(this.bttn_actualizar_pelicula_Click);
@@ -139,9 +139,9 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(604, 54);
+            this.btn_guardar.Location = new System.Drawing.Point(599, 64);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(61, 56);
+            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar.TabIndex = 60;
             this.btn_guardar.UseVisualStyleBackColor = true;
             this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
@@ -173,7 +173,7 @@
             // 
             this.lbl_titulo_mantenimiento_Fecha.AutoSize = true;
             this.lbl_titulo_mantenimiento_Fecha.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo_mantenimiento_Fecha.Location = new System.Drawing.Point(131, 11);
+            this.lbl_titulo_mantenimiento_Fecha.Location = new System.Drawing.Point(164, 2);
             this.lbl_titulo_mantenimiento_Fecha.Name = "lbl_titulo_mantenimiento_Fecha";
             this.lbl_titulo_mantenimiento_Fecha.Size = new System.Drawing.Size(405, 36);
             this.lbl_titulo_mantenimiento_Fecha.TabIndex = 60;
@@ -183,7 +183,7 @@
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_desactivar.Location = new System.Drawing.Point(406, 45);
+            this.btn_desactivar.Location = new System.Drawing.Point(406, 66);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
             this.btn_desactivar.TabIndex = 102;
@@ -194,7 +194,7 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_activar.Location = new System.Drawing.Point(342, 45);
+            this.btn_activar.Location = new System.Drawing.Point(341, 66);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
             this.btn_activar.TabIndex = 101;

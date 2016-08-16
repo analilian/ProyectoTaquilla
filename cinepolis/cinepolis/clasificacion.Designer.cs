@@ -70,9 +70,9 @@
             // 
             this.btn_eliminar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_pelicula.Location = new System.Drawing.Point(659, 76);
+            this.btn_eliminar_pelicula.Location = new System.Drawing.Point(661, 66);
             this.btn_eliminar_pelicula.Name = "btn_eliminar_pelicula";
-            this.btn_eliminar_pelicula.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_pelicula.Size = new System.Drawing.Size(65, 65);
             this.btn_eliminar_pelicula.TabIndex = 90;
             this.toolTip1.SetToolTip(this.btn_eliminar_pelicula, "Eliminar");
             this.btn_eliminar_pelicula.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@
             // 
             this.btn_buscar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_pelicula.Location = new System.Drawing.Point(467, 77);
+            this.btn_buscar_pelicula.Location = new System.Drawing.Point(469, 67);
             this.btn_buscar_pelicula.Name = "btn_buscar_pelicula";
-            this.btn_buscar_pelicula.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_pelicula.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_pelicula.TabIndex = 92;
             this.toolTip1.SetToolTip(this.btn_buscar_pelicula, "Buscar");
             this.btn_buscar_pelicula.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@
             // 
             this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.bttn_actualizar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_pelicula.Location = new System.Drawing.Point(531, 76);
+            this.bttn_actualizar_pelicula.Location = new System.Drawing.Point(533, 66);
             this.bttn_actualizar_pelicula.Name = "bttn_actualizar_pelicula";
-            this.bttn_actualizar_pelicula.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_pelicula.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_pelicula.TabIndex = 91;
             this.toolTip1.SetToolTip(this.bttn_actualizar_pelicula, "Actualizar");
             this.bttn_actualizar_pelicula.UseVisualStyleBackColor = true;
@@ -125,9 +125,9 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(595, 78);
+            this.btn_guardar.Location = new System.Drawing.Point(597, 68);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(61, 55);
+            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar.TabIndex = 60;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -190,7 +190,7 @@
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_desactivar.Location = new System.Drawing.Point(397, 67);
+            this.btn_desactivar.Location = new System.Drawing.Point(405, 67);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
             this.btn_desactivar.TabIndex = 102;
@@ -202,7 +202,7 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_activar.Location = new System.Drawing.Point(333, 67);
+            this.btn_activar.Location = new System.Drawing.Point(341, 67);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
             this.btn_activar.TabIndex = 101;

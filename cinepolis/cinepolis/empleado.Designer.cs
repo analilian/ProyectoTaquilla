@@ -80,9 +80,9 @@
             this.btn_telefono_empleado.BackColor = System.Drawing.Color.Transparent;
             this.btn_telefono_empleado.BackgroundImage = global::cinepolis.Properties.Resources.telefono;
             this.btn_telefono_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_telefono_empleado.Location = new System.Drawing.Point(831, 59);
+            this.btn_telefono_empleado.Location = new System.Drawing.Point(831, 50);
             this.btn_telefono_empleado.Name = "btn_telefono_empleado";
-            this.btn_telefono_empleado.Size = new System.Drawing.Size(61, 55);
+            this.btn_telefono_empleado.Size = new System.Drawing.Size(65, 65);
             this.btn_telefono_empleado.TabIndex = 95;
             this.toolTip1.SetToolTip(this.btn_telefono_empleado, "Agregar Telefono de Empleado");
             this.btn_telefono_empleado.UseVisualStyleBackColor = false;
@@ -110,9 +110,9 @@
             // 
             this.btn_eliminar_Empleado.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_Empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_Empleado.Location = new System.Drawing.Point(769, 59);
+            this.btn_eliminar_Empleado.Location = new System.Drawing.Point(769, 50);
             this.btn_eliminar_Empleado.Name = "btn_eliminar_Empleado";
-            this.btn_eliminar_Empleado.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_Empleado.Size = new System.Drawing.Size(65, 65);
             this.btn_eliminar_Empleado.TabIndex = 90;
             this.toolTip1.SetToolTip(this.btn_eliminar_Empleado, "Eliminar");
             this.btn_eliminar_Empleado.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@
             // 
             this.btn_buscar_empleado.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_empleado.Location = new System.Drawing.Point(577, 60);
+            this.btn_buscar_empleado.Location = new System.Drawing.Point(577, 51);
             this.btn_buscar_empleado.Name = "btn_buscar_empleado";
-            this.btn_buscar_empleado.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_empleado.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_empleado.TabIndex = 92;
             this.toolTip1.SetToolTip(this.btn_buscar_empleado, "Buscar");
             this.btn_buscar_empleado.UseVisualStyleBackColor = true;
@@ -134,9 +134,9 @@
             // 
             this.bttn_actualizar_Empleado.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.bttn_actualizar_Empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_Empleado.Location = new System.Drawing.Point(641, 59);
+            this.bttn_actualizar_Empleado.Location = new System.Drawing.Point(641, 50);
             this.bttn_actualizar_Empleado.Name = "bttn_actualizar_Empleado";
-            this.bttn_actualizar_Empleado.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_Empleado.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_Empleado.TabIndex = 91;
             this.toolTip1.SetToolTip(this.bttn_actualizar_Empleado, "Actualizar");
             this.bttn_actualizar_Empleado.UseVisualStyleBackColor = true;
@@ -177,9 +177,9 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(706, 60);
+            this.btn_guardar.Location = new System.Drawing.Point(706, 51);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(61, 55);
+            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar.TabIndex = 53;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;

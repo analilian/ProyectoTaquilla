@@ -506,5 +506,25 @@ namespace cinepolis
             btn_eliminar_usuario.Enabled = true;
             btn_activar.Enabled = false;
         }
+
+        private void lbl_nombreusuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_uempleado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_buscar_usuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

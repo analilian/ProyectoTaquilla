@@ -116,7 +116,7 @@
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_desactivar.Location = new System.Drawing.Point(314, 6);
+            this.btn_desactivar.Location = new System.Drawing.Point(322, 6);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
             this.btn_desactivar.TabIndex = 102;
@@ -137,7 +137,7 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_activar.Location = new System.Drawing.Point(250, 6);
+            this.btn_activar.Location = new System.Drawing.Point(258, 6);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
             this.btn_activar.TabIndex = 101;
@@ -159,9 +159,9 @@
             // 
             this.btn_eliminar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_proyeccion.Location = new System.Drawing.Point(576, 6);
+            this.btn_eliminar_proyeccion.Location = new System.Drawing.Point(576, 5);
             this.btn_eliminar_proyeccion.Name = "btn_eliminar_proyeccion";
-            this.btn_eliminar_proyeccion.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.btn_eliminar_proyeccion.TabIndex = 96;
             this.toolTip1.SetToolTip(this.btn_eliminar_proyeccion, "Eliminar");
             this.btn_eliminar_proyeccion.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@
             // 
             this.btn_buscar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_proyeccion.Location = new System.Drawing.Point(384, 7);
+            this.btn_buscar_proyeccion.Location = new System.Drawing.Point(385, 6);
             this.btn_buscar_proyeccion.Name = "btn_buscar_proyeccion";
-            this.btn_buscar_proyeccion.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_proyeccion.TabIndex = 98;
             this.toolTip1.SetToolTip(this.btn_buscar_proyeccion, "Buscar");
             this.btn_buscar_proyeccion.UseVisualStyleBackColor = true;
@@ -181,9 +181,9 @@
             // 
             this.bttn_actualizar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.bttn_actualizar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_proyeccion.Location = new System.Drawing.Point(448, 6);
+            this.bttn_actualizar_proyeccion.Location = new System.Drawing.Point(449, 5);
             this.bttn_actualizar_proyeccion.Name = "bttn_actualizar_proyeccion";
-            this.bttn_actualizar_proyeccion.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_proyeccion.TabIndex = 97;
             this.toolTip1.SetToolTip(this.bttn_actualizar_proyeccion, "Actualizar");
             this.bttn_actualizar_proyeccion.UseVisualStyleBackColor = true;
@@ -193,9 +193,9 @@
             // 
             this.btn_guardar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar_proyeccion.Location = new System.Drawing.Point(513, 7);
+            this.btn_guardar_proyeccion.Location = new System.Drawing.Point(513, 6);
             this.btn_guardar_proyeccion.Name = "btn_guardar_proyeccion";
-            this.btn_guardar_proyeccion.Size = new System.Drawing.Size(61, 55);
+            this.btn_guardar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar_proyeccion.TabIndex = 95;
             this.toolTip1.SetToolTip(this.btn_guardar_proyeccion, "Guardar");
             this.btn_guardar_proyeccion.UseVisualStyleBackColor = true;

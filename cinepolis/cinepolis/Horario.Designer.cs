@@ -70,9 +70,9 @@
             // 
             this.btn_eliminar_horario.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_horario.Location = new System.Drawing.Point(672, 45);
+            this.btn_eliminar_horario.Location = new System.Drawing.Point(672, 46);
             this.btn_eliminar_horario.Name = "btn_eliminar_horario";
-            this.btn_eliminar_horario.Size = new System.Drawing.Size(61, 55);
+            this.btn_eliminar_horario.Size = new System.Drawing.Size(65, 65);
             this.btn_eliminar_horario.TabIndex = 90;
             this.toolTip1.SetToolTip(this.btn_eliminar_horario, "Eliminar");
             this.btn_eliminar_horario.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@
             // 
             this.btn_buscar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_horario.Location = new System.Drawing.Point(480, 46);
+            this.btn_buscar_horario.Location = new System.Drawing.Point(480, 47);
             this.btn_buscar_horario.Name = "btn_buscar_horario";
-            this.btn_buscar_horario.Size = new System.Drawing.Size(61, 55);
+            this.btn_buscar_horario.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_horario.TabIndex = 92;
             this.toolTip1.SetToolTip(this.btn_buscar_horario, "Buscar");
             this.btn_buscar_horario.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@
             // 
             this.bttn_actualizar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.bttn_actualizar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_horario.Location = new System.Drawing.Point(544, 45);
+            this.bttn_actualizar_horario.Location = new System.Drawing.Point(544, 46);
             this.bttn_actualizar_horario.Name = "bttn_actualizar_horario";
-            this.bttn_actualizar_horario.Size = new System.Drawing.Size(61, 56);
+            this.bttn_actualizar_horario.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_horario.TabIndex = 91;
             this.toolTip1.SetToolTip(this.bttn_actualizar_horario, "Actualizar");
             this.bttn_actualizar_horario.UseVisualStyleBackColor = true;
@@ -104,14 +104,14 @@
             // 
             // txt_hora_final
             // 
-            this.txt_hora_final.Location = new System.Drawing.Point(513, 126);
+            this.txt_hora_final.Location = new System.Drawing.Point(521, 142);
             this.txt_hora_final.Name = "txt_hora_final";
             this.txt_hora_final.Size = new System.Drawing.Size(221, 20);
             this.txt_hora_final.TabIndex = 62;
             // 
             // txt_horario_inicio
             // 
-            this.txt_horario_inicio.Location = new System.Drawing.Point(125, 126);
+            this.txt_horario_inicio.Location = new System.Drawing.Point(133, 142);
             this.txt_horario_inicio.Name = "txt_horario_inicio";
             this.txt_horario_inicio.Size = new System.Drawing.Size(221, 20);
             this.txt_horario_inicio.TabIndex = 61;
@@ -120,9 +120,9 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(608, 46);
+            this.btn_guardar.Location = new System.Drawing.Point(608, 47);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(61, 56);
+            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar.TabIndex = 60;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             // 
             this.lbl_horariofin.AutoSize = true;
             this.lbl_horariofin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_horariofin.Location = new System.Drawing.Point(351, 126);
+            this.lbl_horariofin.Location = new System.Drawing.Point(359, 142);
             this.lbl_horariofin.Name = "lbl_horariofin";
             this.lbl_horariofin.Size = new System.Drawing.Size(166, 21);
             this.lbl_horariofin.TabIndex = 59;
@@ -142,7 +142,7 @@
             // 
             this.lbl_horainicio.AutoSize = true;
             this.lbl_horainicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_horainicio.Location = new System.Drawing.Point(0, 123);
+            this.lbl_horainicio.Location = new System.Drawing.Point(8, 139);
             this.lbl_horainicio.Name = "lbl_horainicio";
             this.lbl_horainicio.Size = new System.Drawing.Size(119, 21);
             this.lbl_horainicio.TabIndex = 58;
@@ -186,7 +186,7 @@
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_desactivar.Location = new System.Drawing.Point(419, 40);
+            this.btn_desactivar.Location = new System.Drawing.Point(419, 48);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
             this.btn_desactivar.TabIndex = 102;
@@ -198,7 +198,7 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_activar.Location = new System.Drawing.Point(355, 40);
+            this.btn_activar.Location = new System.Drawing.Point(356, 48);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
             this.btn_activar.TabIndex = 101;
