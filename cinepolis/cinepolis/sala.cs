@@ -386,5 +386,11 @@ namespace cinepolis
             btn_eliminar_sala.Enabled = true;
             btn_activar.Enabled = false;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            conect.actualizargrid(dgv_sala, Squeery, Stabla);
+            conect.actualizargrid(dgv_salacine, Squeery1, Stabla1);
+        }
     }
 }

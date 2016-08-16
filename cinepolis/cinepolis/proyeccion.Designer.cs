@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txt_buscarmod = new System.Windows.Forms.TextBox();
             this.label_busquedamod = new System.Windows.Forms.Label();
             this.btn_eliminar_proyeccion = new System.Windows.Forms.Button();
@@ -41,6 +42,8 @@
             this.lbl_titulo_mantenimiento_proyeccion = new System.Windows.Forms.Label();
             this.btn_desactivar = new System.Windows.Forms.Button();
             this.btn_activar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proyeccion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +73,7 @@
             this.btn_eliminar_proyeccion.Name = "btn_eliminar_proyeccion";
             this.btn_eliminar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.btn_eliminar_proyeccion.TabIndex = 90;
+            this.toolTip1.SetToolTip(this.btn_eliminar_proyeccion, "Eliminar");
             this.btn_eliminar_proyeccion.UseVisualStyleBackColor = true;
             this.btn_eliminar_proyeccion.Click += new System.EventHandler(this.btn_eliminar_categoria_Click);
             // 
@@ -81,17 +85,19 @@
             this.btn_buscar_proyeccion.Name = "btn_buscar_proyeccion";
             this.btn_buscar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_proyeccion.TabIndex = 92;
+            this.toolTip1.SetToolTip(this.btn_buscar_proyeccion, "Buscar");
             this.btn_buscar_proyeccion.UseVisualStyleBackColor = true;
             this.btn_buscar_proyeccion.Click += new System.EventHandler(this.btn_buscar_categoria_Click);
             // 
             // bttn_actualizar_proyeccion
             // 
-            this.bttn_actualizar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.bttn_actualizar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
             this.bttn_actualizar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_proyeccion.Location = new System.Drawing.Point(533, 59);
             this.bttn_actualizar_proyeccion.Name = "bttn_actualizar_proyeccion";
             this.bttn_actualizar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_proyeccion.TabIndex = 91;
+            this.toolTip1.SetToolTip(this.bttn_actualizar_proyeccion, "Modificar");
             this.bttn_actualizar_proyeccion.UseVisualStyleBackColor = true;
             this.bttn_actualizar_proyeccion.Click += new System.EventHandler(this.bttn_actualizar_categoria_Click);
             // 
@@ -104,6 +110,7 @@
             this.btn_guardar_proyeccion.Name = "btn_guardar_proyeccion";
             this.btn_guardar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar_proyeccion.TabIndex = 60;
+            this.toolTip1.SetToolTip(this.btn_guardar_proyeccion, "Guardar");
             this.btn_guardar_proyeccion.UseVisualStyleBackColor = false;
             this.btn_guardar_proyeccion.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
@@ -145,6 +152,7 @@
             this.btn_regresar.Name = "btn_regresar";
             this.btn_regresar.Size = new System.Drawing.Size(57, 40);
             this.btn_regresar.TabIndex = 58;
+            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
@@ -166,6 +174,7 @@
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
             this.btn_desactivar.TabIndex = 102;
+            this.toolTip1.SetToolTip(this.btn_desactivar, "Desactivar Iconos y Campos");
             this.btn_desactivar.UseVisualStyleBackColor = true;
             this.btn_desactivar.Click += new System.EventHandler(this.btn_desactivar_Click);
             // 
@@ -177,8 +186,21 @@
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
             this.btn_activar.TabIndex = 101;
+            this.toolTip1.SetToolTip(this.btn_activar, "Activar Iconos y Campos");
             this.btn_activar.UseVisualStyleBackColor = true;
             this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(279, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 103;
+            this.toolTip1.SetToolTip(this.button1, "Actualizar");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // proyeccion
             // 
@@ -186,6 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(730, 446);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_desactivar);
             this.Controls.Add(this.btn_activar);
             this.Controls.Add(this.dgv_proyeccion);
@@ -224,5 +247,7 @@
         private System.Windows.Forms.Label lbl_titulo_mantenimiento_proyeccion;
         private System.Windows.Forms.Button btn_desactivar;
         private System.Windows.Forms.Button btn_activar;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -526,5 +526,10 @@ namespace cinepolis
         {
 
         }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            conect.actualizargrid(dgv_ingresarusuario, Squeery, Stabla);
+        }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tbc_clasificacion = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.btn_desactivar = new System.Windows.Forms.Button();
             this.txt_buscar_sala = new System.Windows.Forms.TextBox();
             this.btn_activar = new System.Windows.Forms.Button();
@@ -73,6 +74,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.btn_desactivar);
             this.tabPage1.Controls.Add(this.txt_buscar_sala);
             this.tabPage1.Controls.Add(this.btn_activar);
@@ -91,6 +93,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Sala";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon1;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(266, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(65, 65);
+            this.button2.TabIndex = 103;
+            this.toolTip1.SetToolTip(this.button2, "Actualizar");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_desactivar
             // 
@@ -160,13 +174,13 @@
             // 
             // btn_actualizar_sala
             // 
-            this.btn_actualizar_sala.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon1;
+            this.btn_actualizar_sala.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
             this.btn_actualizar_sala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_actualizar_sala.Location = new System.Drawing.Point(520, 6);
             this.btn_actualizar_sala.Name = "btn_actualizar_sala";
             this.btn_actualizar_sala.Size = new System.Drawing.Size(65, 65);
             this.btn_actualizar_sala.TabIndex = 86;
-            this.toolTip1.SetToolTip(this.btn_actualizar_sala, "Actualizar");
+            this.toolTip1.SetToolTip(this.btn_actualizar_sala, "Modificar");
             this.btn_actualizar_sala.UseVisualStyleBackColor = true;
             this.btn_actualizar_sala.Click += new System.EventHandler(this.btn_actualizar_sala_Click);
             // 
@@ -367,5 +381,6 @@
         private System.Windows.Forms.ComboBox cbo_relacion_cine;
         private System.Windows.Forms.Button btn_desactivar;
         private System.Windows.Forms.Button btn_activar;
+        private System.Windows.Forms.Button button2;
     }
 }

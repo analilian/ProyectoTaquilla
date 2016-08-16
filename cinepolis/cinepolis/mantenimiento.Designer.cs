@@ -163,9 +163,9 @@
             // 
             this.btn_buscarmod.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscarmod.Location = new System.Drawing.Point(530, 277);
+            this.btn_buscarmod.Location = new System.Drawing.Point(514, 272);
             this.btn_buscarmod.Name = "btn_buscarmod";
-            this.btn_buscarmod.Size = new System.Drawing.Size(42, 48);
+            this.btn_buscarmod.Size = new System.Drawing.Size(65, 65);
             this.btn_buscarmod.TabIndex = 82;
             this.toolTip1.SetToolTip(this.btn_buscarmod, "buscar");
             this.btn_buscarmod.UseVisualStyleBackColor = true;
@@ -369,9 +369,9 @@
             // 
             this.btn_portada1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Upload_icon;
             this.btn_portada1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_portada1.Location = new System.Drawing.Point(726, 272);
+            this.btn_portada1.Location = new System.Drawing.Point(727, 272);
             this.btn_portada1.Name = "btn_portada1";
-            this.btn_portada1.Size = new System.Drawing.Size(82, 55);
+            this.btn_portada1.Size = new System.Drawing.Size(65, 65);
             this.btn_portada1.TabIndex = 78;
             this.toolTip1.SetToolTip(this.btn_portada1, "Importar imagen");
             this.btn_portada1.UseVisualStyleBackColor = true;
@@ -379,11 +379,11 @@
             // 
             // btn_actualizar
             // 
-            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon1;
+            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
             this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_actualizar.Location = new System.Drawing.Point(578, 277);
+            this.btn_actualizar.Location = new System.Drawing.Point(585, 272);
             this.btn_actualizar.Name = "btn_actualizar";
-            this.btn_actualizar.Size = new System.Drawing.Size(48, 48);
+            this.btn_actualizar.Size = new System.Drawing.Size(65, 65);
             this.btn_actualizar.TabIndex = 76;
             this.toolTip1.SetToolTip(this.btn_actualizar, "actualizar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
@@ -393,9 +393,9 @@
             // 
             this.btn_extraer.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_extraer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_extraer.Location = new System.Drawing.Point(632, 277);
+            this.btn_extraer.Location = new System.Drawing.Point(656, 272);
             this.btn_extraer.Name = "btn_extraer";
-            this.btn_extraer.Size = new System.Drawing.Size(45, 50);
+            this.btn_extraer.Size = new System.Drawing.Size(65, 65);
             this.btn_extraer.TabIndex = 75;
             this.toolTip1.SetToolTip(this.btn_extraer, "Reguardar");
             this.btn_extraer.UseVisualStyleBackColor = true;
@@ -510,7 +510,7 @@
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_guardar.Location = new System.Drawing.Point(763, 265);
             this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(90, 73);
+            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
             this.btn_guardar.TabIndex = 52;
             this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
             this.btn_guardar.UseVisualStyleBackColor = true;
@@ -701,7 +701,7 @@
             this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_borrar.Location = new System.Drawing.Point(696, 37);
             this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Size = new System.Drawing.Size(71, 52);
+            this.btn_borrar.Size = new System.Drawing.Size(65, 65);
             this.btn_borrar.TabIndex = 22;
             this.toolTip1.SetToolTip(this.btn_borrar, "Borrar");
             this.btn_borrar.UseVisualStyleBackColor = true;
@@ -713,7 +713,7 @@
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscar.Location = new System.Drawing.Point(546, 37);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(78, 52);
+            this.btn_buscar.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar.TabIndex = 21;
             this.toolTip1.SetToolTip(this.btn_buscar, "buscar");
             this.btn_buscar.UseVisualStyleBackColor = true;
@@ -785,7 +785,7 @@
             this.btn_relacion_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_relacion_pelicula.Location = new System.Drawing.Point(637, 138);
             this.btn_relacion_pelicula.Name = "btn_relacion_pelicula";
-            this.btn_relacion_pelicula.Size = new System.Drawing.Size(90, 73);
+            this.btn_relacion_pelicula.Size = new System.Drawing.Size(65, 65);
             this.btn_relacion_pelicula.TabIndex = 97;
             this.toolTip1.SetToolTip(this.btn_relacion_pelicula, "Guardar");
             this.btn_relacion_pelicula.UseVisualStyleBackColor = true;

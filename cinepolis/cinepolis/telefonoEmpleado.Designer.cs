@@ -68,6 +68,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_telefono)).BeginInit();
@@ -94,6 +95,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btn_desactivar);
             this.tabPage1.Controls.Add(this.txt_buscarmod);
             this.tabPage1.Controls.Add(this.btn_activar);
@@ -185,7 +187,7 @@
             this.bttn_actualizar_proyeccion.Name = "bttn_actualizar_proyeccion";
             this.bttn_actualizar_proyeccion.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_proyeccion.TabIndex = 97;
-            this.toolTip1.SetToolTip(this.bttn_actualizar_proyeccion, "Actualizar");
+            this.toolTip1.SetToolTip(this.bttn_actualizar_proyeccion, "Modificar");
             this.bttn_actualizar_proyeccion.UseVisualStyleBackColor = true;
             this.bttn_actualizar_proyeccion.Click += new System.EventHandler(this.bttn_actualizar_proyeccion_Click);
             // 
@@ -520,6 +522,18 @@
             this.lbl_titulo_mantenimiento_cine.TabIndex = 56;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE TELÉFONO";
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(195, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 103;
+            this.toolTip1.SetToolTip(this.button1, "Actualizar");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // telefonoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,5 +607,6 @@
         private System.Windows.Forms.Button btn_eliminar_tel_cine;
         private System.Windows.Forms.Button btn_desactivar;
         private System.Windows.Forms.Button btn_activar;
+        private System.Windows.Forms.Button button1;
     }
 }

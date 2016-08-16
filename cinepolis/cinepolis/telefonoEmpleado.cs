@@ -576,8 +576,14 @@ namespace cinepolis
             btn_eliminar_proyeccion.Enabled = true;
             btn_activar.Enabled = false;
         }
-        //-----------------------------------------------------FIN LLENADO COMBOBOX---------------------------------------------------------------------------
 
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            conect.actualizargrid(dgv_telefono, Squiery, Stabla);
+            conect.actualizargrid(dgv_Tel_emp, Squeery, Stabla);
+            conect.actualizargrid(dgv_tel_cine, Squeery1, Stabla);
+        }
+        
 
 
 

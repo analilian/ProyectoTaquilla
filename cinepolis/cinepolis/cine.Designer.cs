@@ -48,6 +48,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_desactivar = new System.Windows.Forms.Button();
             this.btn_activar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clasificacion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,13 +109,13 @@
             // 
             // bttn_actualizar_pelicula
             // 
-            this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
             this.bttn_actualizar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_pelicula.Location = new System.Drawing.Point(470, 52);
             this.bttn_actualizar_pelicula.Name = "bttn_actualizar_pelicula";
             this.bttn_actualizar_pelicula.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_pelicula.TabIndex = 91;
-            this.toolTip1.SetToolTip(this.bttn_actualizar_pelicula, "Actualizar");
+            this.toolTip1.SetToolTip(this.bttn_actualizar_pelicula, "Modificar");
             this.bttn_actualizar_pelicula.UseVisualStyleBackColor = true;
             this.bttn_actualizar_pelicula.Click += new System.EventHandler(this.bttn_actualizar_pelicula_Click);
             // 
@@ -246,12 +247,25 @@
             this.btn_activar.UseVisualStyleBackColor = true;
             this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(215, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 103;
+            this.toolTip1.SetToolTip(this.button1, "Actualizar");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // cine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(730, 446);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_desactivar);
             this.Controls.Add(this.btn_activar);
             this.Controls.Add(this.dgv_clasificacion);
@@ -300,5 +314,6 @@
         private System.Windows.Forms.Button btn_telefono_empleado;
         private System.Windows.Forms.Button btn_desactivar;
         private System.Windows.Forms.Button btn_activar;
+        private System.Windows.Forms.Button button1;
     }
 }

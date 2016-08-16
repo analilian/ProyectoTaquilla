@@ -52,6 +52,7 @@
             this.lbl_nivelusuario = new System.Windows.Forms.Label();
             this.lbl_passusuario = new System.Windows.Forms.Label();
             this.lbl_nombreusuario = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ingresarusuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +94,7 @@
             // 
             this.btn_agregarusuario.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_agregarusuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_agregarusuario.Location = new System.Drawing.Point(720, 46);
+            this.btn_agregarusuario.Location = new System.Drawing.Point(723, 46);
             this.btn_agregarusuario.Name = "btn_agregarusuario";
             this.btn_agregarusuario.Size = new System.Drawing.Size(65, 65);
             this.btn_agregarusuario.TabIndex = 35;
@@ -105,11 +106,11 @@
             // 
             this.bttn_actualizar_usuario.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.bttn_actualizar_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_usuario.Location = new System.Drawing.Point(653, 45);
+            this.bttn_actualizar_usuario.Location = new System.Drawing.Point(660, 45);
             this.bttn_actualizar_usuario.Name = "bttn_actualizar_usuario";
             this.bttn_actualizar_usuario.Size = new System.Drawing.Size(65, 65);
             this.bttn_actualizar_usuario.TabIndex = 52;
-            this.toolTip1.SetToolTip(this.bttn_actualizar_usuario, "Actualizar");
+            this.toolTip1.SetToolTip(this.bttn_actualizar_usuario, "Modificar");
             this.bttn_actualizar_usuario.UseVisualStyleBackColor = true;
             this.bttn_actualizar_usuario.Click += new System.EventHandler(this.bttn_actualizar_usuario_Click);
             // 
@@ -117,7 +118,7 @@
             // 
             this.btn_buscar_usuario.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_usuario.Location = new System.Drawing.Point(586, 46);
+            this.btn_buscar_usuario.Location = new System.Drawing.Point(596, 46);
             this.btn_buscar_usuario.Name = "btn_buscar_usuario";
             this.btn_buscar_usuario.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar_usuario.TabIndex = 53;
@@ -141,7 +142,7 @@
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_desactivar.Location = new System.Drawing.Point(525, 46);
+            this.btn_desactivar.Location = new System.Drawing.Point(538, 46);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(59, 65);
             this.btn_desactivar.TabIndex = 102;
@@ -153,7 +154,7 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_activar.Location = new System.Drawing.Point(461, 46);
+            this.btn_activar.Location = new System.Drawing.Point(479, 46);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(59, 65);
             this.btn_activar.TabIndex = 101;
@@ -187,7 +188,7 @@
             this.txt_confirmar.MaxLength = 20;
             this.txt_confirmar.Name = "txt_confirmar";
             this.txt_confirmar.PasswordChar = '*';
-            this.txt_confirmar.Size = new System.Drawing.Size(312, 20);
+            this.txt_confirmar.Size = new System.Drawing.Size(300, 20);
             this.txt_confirmar.TabIndex = 38;
             // 
             // txt_pasusuario
@@ -196,7 +197,7 @@
             this.txt_pasusuario.MaxLength = 20;
             this.txt_pasusuario.Name = "txt_pasusuario";
             this.txt_pasusuario.PasswordChar = '*';
-            this.txt_pasusuario.Size = new System.Drawing.Size(292, 20);
+            this.txt_pasusuario.Size = new System.Drawing.Size(280, 20);
             this.txt_pasusuario.TabIndex = 32;
             this.txt_pasusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pasusuario_KeyPress);
             // 
@@ -205,7 +206,7 @@
             this.txt_nombreusuario.Location = new System.Drawing.Point(95, 107);
             this.txt_nombreusuario.MaxLength = 20;
             this.txt_nombreusuario.Name = "txt_nombreusuario";
-            this.txt_nombreusuario.Size = new System.Drawing.Size(326, 20);
+            this.txt_nombreusuario.Size = new System.Drawing.Size(314, 20);
             this.txt_nombreusuario.TabIndex = 31;
             this.txt_nombreusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreusuario_KeyPress);
             // 
@@ -297,12 +298,25 @@
             this.lbl_nombreusuario.Text = "Nombre:";
             this.lbl_nombreusuario.Click += new System.EventHandler(this.lbl_nombreusuario_Click);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(416, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 103;
+            this.toolTip1.SetToolTip(this.button1, "Actualizar");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_3);
+            // 
             // usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(854, 461);
+            this.ClientSize = new System.Drawing.Size(856, 461);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_desactivar);
             this.Controls.Add(this.btn_activar);
             this.Controls.Add(this.dgv_ingresarusuario);
@@ -360,5 +374,6 @@
         private System.Windows.Forms.Label lbl_nombreusuario;
         private System.Windows.Forms.Button btn_desactivar;
         private System.Windows.Forms.Button btn_activar;
+        private System.Windows.Forms.Button button1;
     }
 }

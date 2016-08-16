@@ -634,5 +634,10 @@ namespace cinepolis
             btn_telefono_empleado.Enabled = true;
             btn_activar.Enabled = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
+        }
     }
 }

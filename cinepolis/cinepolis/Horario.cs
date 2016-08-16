@@ -255,5 +255,10 @@ namespace cinepolis
             btn_eliminar_horario.Enabled = true;
             btn_activar.Enabled = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            conect.actualizargrid(dgv_mostrar_horario, Squeery, Stabla);
+        }
     }
 }

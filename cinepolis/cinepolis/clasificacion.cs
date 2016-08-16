@@ -271,5 +271,10 @@ namespace cinepolis
             btn_desactivar.Enabled = true;
             btn_activar.Enabled = false;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
+        }
     }
 }
