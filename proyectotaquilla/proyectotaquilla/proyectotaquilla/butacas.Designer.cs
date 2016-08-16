@@ -87,6 +87,9 @@
             this.chkA2 = new System.Windows.Forms.CheckBox();
             this.picPantalla = new System.Windows.Forms.PictureBox();
             this.chkA1 = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblasientos = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDesocupado)).BeginInit();
@@ -94,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picSeleccionado)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPantalla)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -269,6 +273,7 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleecione su Asicineto ";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label5
             // 
@@ -873,17 +878,49 @@
             this.chkA1.UseVisualStyleBackColor = true;
             this.chkA1.CheckedChanged += new System.EventHandler(this.chkA1_CheckedChanged);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblasientos);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox2.Location = new System.Drawing.Point(634, 188);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(305, 76);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Asientos";
+            // 
+            // lblasientos
+            // 
+            this.lblasientos.AutoSize = true;
+            this.lblasientos.Location = new System.Drawing.Point(155, 32);
+            this.lblasientos.Name = "lblasientos";
+            this.lblasientos.Size = new System.Drawing.Size(13, 13);
+            this.lblasientos.TabIndex = 7;
+            this.lblasientos.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Total de Asientos";
+            // 
             // butacas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(990, 377);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Name = "butacas";
             this.Text = "butacas";
+            this.Load += new System.EventHandler(this.butacas_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -894,6 +931,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPantalla)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -959,6 +998,9 @@
         private System.Windows.Forms.CheckBox chkA2;
         private System.Windows.Forms.PictureBox picPantalla;
         private System.Windows.Forms.CheckBox chkA1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblasientos;
+        private System.Windows.Forms.Label label2;
 
     }
 }

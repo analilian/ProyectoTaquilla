@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
-
+//----------------------------------Precio y Cantidad de Boletos por Roberto Portillo 0901-13-20332-------------------------
 namespace proyectotaquilla
 {
     public partial class boletos : Form
@@ -33,11 +33,11 @@ namespace proyectotaquilla
             PrecioTotal = TotalNiño + TotalAdulto;
             cantidadTotal = cantidadNiño + cantidadAdulto;
             butacas butacas = new butacas(cantidadTotal, PrecioTotal);
+        
             butacas.Show();
             this.Hide();
 
-
-
+           
             MessageBox.Show("total de boletos:  " + cantidadTotal);
             MessageBox.Show("total a Pagar:  " + PrecioTotal);
         }

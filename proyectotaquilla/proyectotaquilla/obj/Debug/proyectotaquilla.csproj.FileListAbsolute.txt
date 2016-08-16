@@ -168,3 +168,4 @@ C:\Users\Ana Lilian\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectot
 C:\Users\Ana Lilian\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.Properties.Resources.resources
 C:\Users\Ana Lilian\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.sinopsis.resources
 C:\Users\Ana Lilian\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.GenerateResource.Cache
+C:\Users\Roberto Carlos\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.frm_Horarios.resources
