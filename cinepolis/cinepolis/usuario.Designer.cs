@@ -37,6 +37,8 @@
             this.bttn_actualizar_usuario = new System.Windows.Forms.Button();
             this.btn_buscar_usuario = new System.Windows.Forms.Button();
             this.btn_eliminar_usuario = new System.Windows.Forms.Button();
+            this.btn_desactivar = new System.Windows.Forms.Button();
+            this.btn_activar = new System.Windows.Forms.Button();
             this.lbl_buscar_usuario = new System.Windows.Forms.Label();
             this.txt_buscar_usuario = new System.Windows.Forms.TextBox();
             this.txt_confirmar = new System.Windows.Forms.TextBox();
@@ -134,6 +136,30 @@
             this.toolTip1.SetToolTip(this.btn_eliminar_usuario, "Eliminar");
             this.btn_eliminar_usuario.UseVisualStyleBackColor = true;
             this.btn_eliminar_usuario.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // btn_desactivar
+            // 
+            this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
+            this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.Location = new System.Drawing.Point(520, 66);
+            this.btn_desactivar.Name = "btn_desactivar";
+            this.btn_desactivar.Size = new System.Drawing.Size(59, 65);
+            this.btn_desactivar.TabIndex = 102;
+            this.toolTip1.SetToolTip(this.btn_desactivar, "Desactivar Iconos y Celdas");
+            this.btn_desactivar.UseVisualStyleBackColor = true;
+            this.btn_desactivar.Click += new System.EventHandler(this.btn_desactivar_Click);
+            // 
+            // btn_activar
+            // 
+            this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
+            this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.Location = new System.Drawing.Point(456, 66);
+            this.btn_activar.Name = "btn_activar";
+            this.btn_activar.Size = new System.Drawing.Size(59, 65);
+            this.btn_activar.TabIndex = 101;
+            this.toolTip1.SetToolTip(this.btn_activar, "Activar Iconos y Celdas");
+            this.btn_activar.UseVisualStyleBackColor = true;
+            this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
             // 
             // lbl_buscar_usuario
             // 
@@ -273,6 +299,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(854, 461);
+            this.Controls.Add(this.btn_desactivar);
+            this.Controls.Add(this.btn_activar);
             this.Controls.Add(this.dgv_ingresarusuario);
             this.Controls.Add(this.lbl_buscar_usuario);
             this.Controls.Add(this.txt_buscar_usuario);
@@ -325,5 +353,7 @@
         private System.Windows.Forms.Label lbl_nivelusuario;
         private System.Windows.Forms.Label lbl_passusuario;
         private System.Windows.Forms.Label lbl_nombreusuario;
+        private System.Windows.Forms.Button btn_desactivar;
+        private System.Windows.Forms.Button btn_activar;
     }
 }

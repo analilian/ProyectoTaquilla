@@ -41,6 +41,8 @@
             this.dgv_mostrar_fecha = new System.Windows.Forms.DataGridView();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_Fecha = new System.Windows.Forms.Label();
+            this.btn_desactivar = new System.Windows.Forms.Button();
+            this.btn_activar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_mostrar_fecha)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,12 +179,36 @@
             this.lbl_titulo_mantenimiento_Fecha.TabIndex = 60;
             this.lbl_titulo_mantenimiento_Fecha.Text = "MANTENIMIENTO DE FECHA";
             // 
+            // btn_desactivar
+            // 
+            this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
+            this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.Location = new System.Drawing.Point(406, 45);
+            this.btn_desactivar.Name = "btn_desactivar";
+            this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
+            this.btn_desactivar.TabIndex = 102;
+            this.btn_desactivar.UseVisualStyleBackColor = true;
+            this.btn_desactivar.Click += new System.EventHandler(this.btn_desactivar_Click);
+            // 
+            // btn_activar
+            // 
+            this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
+            this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.Location = new System.Drawing.Point(342, 45);
+            this.btn_activar.Name = "btn_activar";
+            this.btn_activar.Size = new System.Drawing.Size(65, 65);
+            this.btn_activar.TabIndex = 101;
+            this.btn_activar.UseVisualStyleBackColor = true;
+            this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
+            // 
             // fecha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(730, 446);
+            this.Controls.Add(this.btn_desactivar);
+            this.Controls.Add(this.btn_activar);
             this.Controls.Add(this.dgv_mostrar_fecha);
             this.Controls.Add(this.lbl_buscar);
             this.Controls.Add(this.txt_buscarmod);
@@ -219,5 +245,7 @@
         private System.Windows.Forms.Button btn_eliminar_fecha;
         private System.Windows.Forms.Button btn_buscar_fecha;
         private System.Windows.Forms.Button bttn_actualizar_fecha;
+        private System.Windows.Forms.Button btn_desactivar;
+        private System.Windows.Forms.Button btn_activar;
     }
 }

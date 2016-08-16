@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tbc_clasificacion = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_desactivar = new System.Windows.Forms.Button();
             this.txt_buscar_sala = new System.Windows.Forms.TextBox();
+            this.btn_activar = new System.Windows.Forms.Button();
             this.lbl_buscar_sala = new System.Windows.Forms.Label();
             this.btn_buscar_sala = new System.Windows.Forms.Button();
             this.btn_eliminar_sala = new System.Windows.Forms.Button();
@@ -71,7 +73,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.btn_desactivar);
             this.tabPage1.Controls.Add(this.txt_buscar_sala);
+            this.tabPage1.Controls.Add(this.btn_activar);
             this.tabPage1.Controls.Add(this.lbl_buscar_sala);
             this.tabPage1.Controls.Add(this.btn_buscar_sala);
             this.tabPage1.Controls.Add(this.btn_eliminar_sala);
@@ -88,6 +92,18 @@
             this.tabPage1.Text = "Mantenimiento de Sala";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btn_desactivar
+            // 
+            this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
+            this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.Location = new System.Drawing.Point(392, 6);
+            this.btn_desactivar.Name = "btn_desactivar";
+            this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
+            this.btn_desactivar.TabIndex = 102;
+            this.toolTip1.SetToolTip(this.btn_desactivar, "Desactivar Iconos y Celdas");
+            this.btn_desactivar.UseVisualStyleBackColor = true;
+            this.btn_desactivar.Click += new System.EventHandler(this.btn_desactivar_Click);
+            // 
             // txt_buscar_sala
             // 
             this.txt_buscar_sala.Location = new System.Drawing.Point(115, 106);
@@ -95,6 +111,18 @@
             this.txt_buscar_sala.Name = "txt_buscar_sala";
             this.txt_buscar_sala.Size = new System.Drawing.Size(288, 20);
             this.txt_buscar_sala.TabIndex = 91;
+            // 
+            // btn_activar
+            // 
+            this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
+            this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.Location = new System.Drawing.Point(328, 6);
+            this.btn_activar.Name = "btn_activar";
+            this.btn_activar.Size = new System.Drawing.Size(65, 65);
+            this.btn_activar.TabIndex = 101;
+            this.toolTip1.SetToolTip(this.btn_activar, "Activar Iconos y Celdas");
+            this.btn_activar.UseVisualStyleBackColor = true;
+            this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
             // 
             // lbl_buscar_sala
             // 
@@ -336,5 +364,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbo_relacion_sala;
         private System.Windows.Forms.ComboBox cbo_relacion_cine;
+        private System.Windows.Forms.Button btn_desactivar;
+        private System.Windows.Forms.Button btn_activar;
     }
 }

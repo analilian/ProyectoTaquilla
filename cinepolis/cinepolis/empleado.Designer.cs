@@ -58,6 +58,8 @@
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_desactivar = new System.Windows.Forms.Button();
+            this.btn_activar = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_emplados_modificar)).BeginInit();
             this.SuspendLayout();
@@ -346,6 +348,30 @@
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
             // 
+            // btn_desactivar
+            // 
+            this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
+            this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.Location = new System.Drawing.Point(511, 48);
+            this.btn_desactivar.Name = "btn_desactivar";
+            this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
+            this.btn_desactivar.TabIndex = 102;
+            this.toolTip1.SetToolTip(this.btn_desactivar, "Desactivar Iconos y Celdas");
+            this.btn_desactivar.UseVisualStyleBackColor = true;
+            this.btn_desactivar.Click += new System.EventHandler(this.btn_desactivar_Click);
+            // 
+            // btn_activar
+            // 
+            this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
+            this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.Location = new System.Drawing.Point(447, 48);
+            this.btn_activar.Name = "btn_activar";
+            this.btn_activar.Size = new System.Drawing.Size(65, 65);
+            this.btn_activar.TabIndex = 101;
+            this.toolTip1.SetToolTip(this.btn_activar, "Activar Iconos y Celdas");
+            this.btn_activar.UseVisualStyleBackColor = true;
+            this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
+            // 
             // btn_cerrarsesion
             // 
             this.btn_cerrarsesion.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
@@ -364,6 +390,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(900, 515);
+            this.Controls.Add(this.btn_desactivar);
+            this.Controls.Add(this.btn_activar);
             this.Controls.Add(this.dgv_emplados_modificar);
             this.Controls.Add(this.txt_buscar);
             this.Controls.Add(this.btn_telefono_empleado);
@@ -434,5 +462,7 @@
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label lbl_codigo_buscar;
         private System.Windows.Forms.Button btn_telefono_empleado;
+        private System.Windows.Forms.Button btn_desactivar;
+        private System.Windows.Forms.Button btn_activar;
     }
 }

@@ -30,6 +30,12 @@ namespace cinepolis
             conect.actualizargrid(dgv_salacine, Squeery1, Stabla1);
             nombre_columna();
             usu = usuario;
+            txt_sala.Enabled = false;
+            btn_desactivar.Enabled = false;
+            btn_actualizar_sala.Enabled = false;
+            btn_guardar.Enabled = true;
+            btn_eliminar_sala.Enabled = false;
+            btn_activar.Enabled = true;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -359,6 +365,26 @@ namespace cinepolis
                     MessageBox.Show("Error en la Insercion sobre Tabla Sala");
                 }
             }
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            txt_sala.Enabled = false;
+            btn_desactivar.Enabled = false;
+            btn_actualizar_sala.Enabled = false;
+            btn_guardar.Enabled = true;
+            btn_eliminar_sala.Enabled = false;
+            btn_activar.Enabled = true;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            txt_sala.Enabled = true;
+            btn_desactivar.Enabled = true;
+            btn_actualizar_sala.Enabled = true;
+            btn_guardar.Enabled = true;
+            btn_eliminar_sala.Enabled = true;
+            btn_activar.Enabled = false;
         }
     }
 }

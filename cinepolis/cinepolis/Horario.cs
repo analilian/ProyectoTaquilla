@@ -24,6 +24,14 @@ namespace cinepolis
             conect.actualizargrid(dgv_mostrar_horario, Squeery, Stabla);
             nombre_columna();
             usu = usuario;
+
+            txt_horario_inicio.Enabled = false;
+            txt_hora_final.Enabled = false;
+            btn_desactivar.Enabled = false;
+            bttn_actualizar_horario.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_horario.Enabled = false;
+            btn_activar.Enabled = true;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -224,6 +232,28 @@ namespace cinepolis
         private void btn_eliminar_horario_Click(object sender, EventArgs e)
         {
             delete();
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            txt_horario_inicio.Enabled = false;
+            txt_hora_final.Enabled = false;
+            btn_desactivar.Enabled = false;
+            bttn_actualizar_horario.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_horario.Enabled = false;
+            btn_activar.Enabled = true;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            txt_horario_inicio.Enabled = true;
+            txt_hora_final.Enabled = true;
+            btn_desactivar.Enabled = true;
+            bttn_actualizar_horario.Enabled = true;
+            btn_guardar.Enabled = true;
+            btn_eliminar_horario.Enabled = true;
+            btn_activar.Enabled = false;
         }
     }
 }

@@ -143,6 +143,16 @@ namespace cinepolis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Close_icon {
+            get {
+                object obj = ResourceManager.GetObject("Button-Close-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Previous_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Previous-icon", resourceCulture);
@@ -196,6 +206,16 @@ namespace cinepolis.Properties {
         internal static System.Drawing.Bitmap File_Delete_icon {
             get {
                 object obj = ResourceManager.GetObject("File-Delete-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap File_New_icon {
+            get {
+                object obj = ResourceManager.GetObject("File-New-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

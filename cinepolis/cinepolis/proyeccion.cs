@@ -19,6 +19,13 @@ namespace cinepolis
             conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
             nombre_columna();
             usu = usuario;
+
+            txt_nom_proy.Enabled = false;
+            btn_desactivar.Enabled = false;
+            bttn_actualizar_proyeccion.Enabled = false;
+            btn_guardar_proyeccion.Enabled = false;
+            btn_eliminar_proyeccion.Enabled = false;
+            btn_activar.Enabled = true;
         }
 
         conexionymanipulacion conect = new conexionymanipulacion();
@@ -185,6 +192,26 @@ namespace cinepolis
         private void proyeccion_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            txt_nom_proy.Enabled = false;
+            btn_desactivar.Enabled = false;
+            bttn_actualizar_proyeccion.Enabled = false;
+            btn_guardar_proyeccion.Enabled = false;
+            btn_eliminar_proyeccion.Enabled = false;
+            btn_activar.Enabled = true;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            txt_nom_proy.Enabled = true;
+            btn_desactivar.Enabled = true;
+            bttn_actualizar_proyeccion.Enabled = true;
+            btn_guardar_proyeccion.Enabled = true;
+            btn_eliminar_proyeccion.Enabled = true;
+            btn_activar.Enabled = false;
         }
     }
 }

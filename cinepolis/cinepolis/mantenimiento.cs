@@ -507,7 +507,9 @@ namespace cinepolis
 
         private void btn_agregar_relacion4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            proyeccion r = new proyeccion(usuario);
+            r.ShowDialog();
         }
 
         private void cbo_relacion_pelicula_hora1_SelectedIndexChanged(object sender, EventArgs e)

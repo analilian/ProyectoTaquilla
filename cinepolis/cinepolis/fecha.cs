@@ -20,6 +20,15 @@ namespace cinepolis
             conect.actualizargrid(dgv_mostrar_fecha, Squeery, Stabla);
             nombre_columna();
             usu = usuario;
+
+
+            dtp_fecha_fin.Enabled = false;
+            dtp_fecha_inicio.Enabled = false;
+            bttn_actualizar_fecha.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_fecha.Enabled = false;
+            btn_desactivar.Enabled = false;
+            btn_activar.Enabled = true;
         }
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "fechascartelera";
@@ -188,6 +197,28 @@ namespace cinepolis
         private void tabPage1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            dtp_fecha_fin.Enabled = false;
+            dtp_fecha_inicio.Enabled = false;
+            bttn_actualizar_fecha.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_fecha.Enabled = false;
+            btn_desactivar.Enabled = false;
+            btn_activar.Enabled = true;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            dtp_fecha_fin.Enabled = true;
+            dtp_fecha_inicio.Enabled = true;
+            bttn_actualizar_fecha.Enabled = true;
+            btn_guardar.Enabled = true;
+            btn_eliminar_fecha.Enabled = true;
+            btn_desactivar.Enabled = true;
+            btn_activar.Enabled = false;
         }
     }
 }

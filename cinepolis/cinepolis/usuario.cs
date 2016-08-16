@@ -30,6 +30,17 @@ namespace cinepolis
             conect.actualizargrid(dgv_ingresarusuario,Squeery, Stabla);
             nombre_columna();
             usu = usuario;
+
+            txt_nombreusuario.Enabled = false;
+            txt_pasusuario.Enabled = false;
+            txt_confirmar.Enabled = false;
+            cbo_nivelsusario.Enabled = false;
+            cbo_elegirempleado.Enabled = false;
+            btn_desactivar.Enabled = false;
+            bttn_actualizar_usuario.Enabled = false;
+            btn_agregarusuario.Enabled = false;
+            btn_eliminar_usuario.Enabled = false;
+            btn_activar.Enabled = true;
         }
         
 
@@ -466,6 +477,34 @@ namespace cinepolis
         private void cbo_nivelsusario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            txt_nombreusuario.Enabled = false;
+            txt_pasusuario.Enabled = false;
+            txt_confirmar.Enabled = false;
+            cbo_nivelsusario.Enabled = false;
+            cbo_elegirempleado.Enabled = false;
+            btn_desactivar.Enabled = false;
+            bttn_actualizar_usuario.Enabled = false;
+            btn_agregarusuario.Enabled = false;
+            btn_eliminar_usuario.Enabled = false;
+            btn_activar.Enabled = true;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            txt_nombreusuario.Enabled = true;
+            txt_pasusuario.Enabled = true;
+            txt_confirmar.Enabled = true;
+            cbo_nivelsusario.Enabled = true;
+            cbo_elegirempleado.Enabled = true;
+            btn_desactivar.Enabled = true;
+            bttn_actualizar_usuario.Enabled = true;
+            btn_agregarusuario.Enabled = true;
+            btn_eliminar_usuario.Enabled = true;
+            btn_activar.Enabled = false;
         }
     }
 }

@@ -31,7 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_desactivar = new System.Windows.Forms.Button();
             this.txt_buscarmod = new System.Windows.Forms.TextBox();
+            this.btn_activar = new System.Windows.Forms.Button();
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.btn_eliminar_proyeccion = new System.Windows.Forms.Button();
             this.btn_buscar_proyeccion = new System.Windows.Forms.Button();
@@ -92,7 +94,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.btn_desactivar);
             this.tabPage1.Controls.Add(this.txt_buscarmod);
+            this.tabPage1.Controls.Add(this.btn_activar);
             this.tabPage1.Controls.Add(this.lbl_codigo_buscar);
             this.tabPage1.Controls.Add(this.btn_eliminar_proyeccion);
             this.tabPage1.Controls.Add(this.btn_buscar_proyeccion);
@@ -108,6 +112,18 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Telefono";
             // 
+            // btn_desactivar
+            // 
+            this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
+            this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.Location = new System.Drawing.Point(314, 6);
+            this.btn_desactivar.Name = "btn_desactivar";
+            this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
+            this.btn_desactivar.TabIndex = 102;
+            this.toolTip1.SetToolTip(this.btn_desactivar, "Desactivar Iconos y Celdas");
+            this.btn_desactivar.UseVisualStyleBackColor = true;
+            this.btn_desactivar.Click += new System.EventHandler(this.btn_desactivar_Click);
+            // 
             // txt_buscarmod
             // 
             this.txt_buscarmod.Location = new System.Drawing.Point(77, 139);
@@ -116,6 +132,18 @@
             this.txt_buscarmod.Size = new System.Drawing.Size(220, 20);
             this.txt_buscarmod.TabIndex = 100;
             this.txt_buscarmod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_buscarmod_KeyPress);
+            // 
+            // btn_activar
+            // 
+            this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
+            this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.Location = new System.Drawing.Point(250, 6);
+            this.btn_activar.Name = "btn_activar";
+            this.btn_activar.Size = new System.Drawing.Size(65, 65);
+            this.btn_activar.TabIndex = 101;
+            this.toolTip1.SetToolTip(this.btn_activar, "Activar Iconos y Celdas");
+            this.btn_activar.UseVisualStyleBackColor = true;
+            this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
             // 
             // lbl_codigo_buscar
             // 
@@ -218,7 +246,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(643, 312);
+            this.tabPage2.Size = new System.Drawing.Size(643, 336);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asignar telefono-Empleado";
             // 
@@ -310,7 +338,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(643, 312);
+            this.tabPage3.Size = new System.Drawing.Size(643, 336);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Asignar telefono-Cliente";
             // 
@@ -390,7 +418,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(643, 312);
+            this.tabPage4.Size = new System.Drawing.Size(643, 336);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Asignar telefono-Cine";
             // 
@@ -562,5 +590,7 @@
         private System.Windows.Forms.DataGridView dgv_tel_cine;
         private System.Windows.Forms.Button btn_eliminar_tel_emp;
         private System.Windows.Forms.Button btn_eliminar_tel_cine;
+        private System.Windows.Forms.Button btn_desactivar;
+        private System.Windows.Forms.Button btn_activar;
     }
 }

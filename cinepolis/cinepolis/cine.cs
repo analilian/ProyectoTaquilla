@@ -26,6 +26,16 @@ namespace cinepolis
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
             nombre_columna();
             usu = usuario;
+
+            txt_nombre_cine.Enabled = false;
+            txt_descrip_cine.Enabled = false;
+            cbo_cine_region.Enabled = false;
+            bttn_actualizar_pelicula.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_pelicula.Enabled = false;
+            btn_telefono_empleado.Enabled = false;
+            btn_desactivar.Enabled = false;
+            btn_activar.Enabled = true;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -290,6 +300,32 @@ namespace cinepolis
             this.Hide();
             telefonoEmpleado r = new telefonoEmpleado(usu);
             r.ShowDialog();
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            txt_nombre_cine.Enabled = false;
+            txt_descrip_cine.Enabled = false;
+            cbo_cine_region.Enabled = false;
+            bttn_actualizar_pelicula.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_pelicula.Enabled = false;
+            btn_telefono_empleado.Enabled = false;
+            btn_desactivar.Enabled = false;
+            btn_activar.Enabled = true;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            txt_nombre_cine.Enabled = true;
+            txt_descrip_cine.Enabled = true;
+            cbo_cine_region.Enabled = true;
+            bttn_actualizar_pelicula.Enabled = true;
+            btn_guardar.Enabled = true;
+            btn_eliminar_pelicula.Enabled = true;
+            btn_telefono_empleado.Enabled = true;
+            btn_activar.Enabled = false;
+            btn_desactivar.Enabled = true;
         }
     }
 }

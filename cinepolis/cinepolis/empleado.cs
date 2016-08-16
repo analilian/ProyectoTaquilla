@@ -29,6 +29,24 @@ namespace cinepolis
             conect.actualizargrid(dgv_emplados_modificar, Squeery, Stabla);
             nombre_columna();
             usu = usuario;
+
+
+            txt_nombre1.Enabled = false;
+            txt_nombre2.Enabled = false;
+            txt_apellido1.Enabled = false;
+            txt_apellido2.Enabled = false;
+            txt_direccion.Enabled = false;
+            txt_dpi.Enabled = false;
+            txt_nit.Enabled = false;
+            cbo_puesto.Enabled = false;
+            cbo_cine.Enabled = false;
+            dtp_fecha_nac.Enabled = false;
+            btn_desactivar.Enabled = false;
+            bttn_actualizar_Empleado.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_Empleado.Enabled = false;
+            btn_telefono_empleado.Enabled = false;
+            btn_activar.Enabled = true;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -575,6 +593,46 @@ namespace cinepolis
             this.Hide();
             telefonoEmpleado r = new telefonoEmpleado(usu);
             r.ShowDialog();
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            txt_nombre1.Enabled = false;
+            txt_nombre2.Enabled = false;
+            txt_apellido1.Enabled = false;
+            txt_apellido2.Enabled = false;
+            txt_direccion.Enabled = false;
+            txt_dpi.Enabled = false;
+            txt_nit.Enabled = false;
+            cbo_puesto.Enabled = false;
+            cbo_cine.Enabled = false;
+            dtp_fecha_nac.Enabled = false;
+            btn_desactivar.Enabled = false;
+            bttn_actualizar_Empleado.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_Empleado.Enabled = false;
+            btn_telefono_empleado.Enabled = false;
+            btn_activar.Enabled = true;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            txt_nombre1.Enabled = true;
+            txt_nombre2.Enabled = true;
+            txt_apellido1.Enabled = true;
+            txt_apellido2.Enabled = true;
+            txt_direccion.Enabled = true;
+            txt_dpi.Enabled = true;
+            txt_nit.Enabled = true;
+            cbo_puesto.Enabled = true;
+            cbo_cine.Enabled = true;
+            dtp_fecha_nac.Enabled = true;
+            btn_desactivar.Enabled = true;
+            bttn_actualizar_Empleado.Enabled = true;
+            btn_guardar.Enabled = true;
+            btn_eliminar_Empleado.Enabled = true;
+            btn_telefono_empleado.Enabled = true;
+            btn_activar.Enabled = false;
         }
     }
 }

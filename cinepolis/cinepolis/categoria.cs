@@ -24,6 +24,13 @@ namespace cinepolis
             conect.actualizargrid(dgv_categoria, Squeery, Stabla);
             nombre_columna();
             usu = usuario;
+
+            txt_nom_categ.Enabled = false;
+            bttn_actualizar_categoria.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_categoria.Enabled = false;
+            btn_activar.Enabled = true;
+            btn_desactivar.Enabled = false;
         }
 
         private void btn_regresar_Click(object sender, EventArgs e)
@@ -219,6 +226,26 @@ namespace cinepolis
                 MessageBox.Show("Error al Borrar la Categoria");
 
             }
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            txt_nom_categ.Enabled = false;
+            bttn_actualizar_categoria.Enabled = false;
+            btn_guardar.Enabled = false;
+            btn_eliminar_categoria.Enabled = false;
+            btn_activar.Enabled = true;
+            btn_desactivar.Enabled = false;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            txt_nom_categ.Enabled = true;
+            bttn_actualizar_categoria.Enabled = true;
+            btn_guardar.Enabled = true;
+            btn_eliminar_categoria.Enabled = true;
+            btn_desactivar.Enabled = true;
+            btn_activar.Enabled = false;
         }
     }
     }

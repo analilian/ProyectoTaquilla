@@ -39,6 +39,8 @@
             this.dgv_proyeccion = new System.Windows.Forms.DataGridView();
             this.btn_regresar = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_proyeccion = new System.Windows.Forms.Label();
+            this.btn_desactivar = new System.Windows.Forms.Button();
+            this.btn_activar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_proyeccion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,12 +158,36 @@
             this.lbl_titulo_mantenimiento_proyeccion.TabIndex = 57;
             this.lbl_titulo_mantenimiento_proyeccion.Text = "MANTENIMIENTO DE PROYECCIÓN";
             // 
+            // btn_desactivar
+            // 
+            this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
+            this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.Location = new System.Drawing.Point(396, 61);
+            this.btn_desactivar.Name = "btn_desactivar";
+            this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
+            this.btn_desactivar.TabIndex = 102;
+            this.btn_desactivar.UseVisualStyleBackColor = true;
+            this.btn_desactivar.Click += new System.EventHandler(this.btn_desactivar_Click);
+            // 
+            // btn_activar
+            // 
+            this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
+            this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.Location = new System.Drawing.Point(332, 61);
+            this.btn_activar.Name = "btn_activar";
+            this.btn_activar.Size = new System.Drawing.Size(65, 65);
+            this.btn_activar.TabIndex = 101;
+            this.btn_activar.UseVisualStyleBackColor = true;
+            this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
+            // 
             // proyeccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(730, 446);
+            this.Controls.Add(this.btn_desactivar);
+            this.Controls.Add(this.btn_activar);
             this.Controls.Add(this.dgv_proyeccion);
             this.Controls.Add(this.txt_buscarmod);
             this.Controls.Add(this.label_busquedamod);
@@ -195,5 +221,7 @@
         private System.Windows.Forms.DataGridView dgv_proyeccion;
         private System.Windows.Forms.Button btn_regresar;
         private System.Windows.Forms.Label lbl_titulo_mantenimiento_proyeccion;
+        private System.Windows.Forms.Button btn_desactivar;
+        private System.Windows.Forms.Button btn_activar;
     }
 }
