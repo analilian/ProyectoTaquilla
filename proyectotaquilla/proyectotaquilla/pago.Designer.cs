@@ -219,6 +219,7 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "pago";
             this.Text = "pago";
+            this.Load += new System.EventHandler(this.pago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

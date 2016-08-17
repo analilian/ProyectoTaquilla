@@ -227,6 +227,7 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Name = "boletos";
             this.Text = "boletos";
+            this.Load += new System.EventHandler(this.boletos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

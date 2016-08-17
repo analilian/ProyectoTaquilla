@@ -16,5 +16,10 @@ namespace proyectotaquilla
         {
             InitializeComponent();
         }
+
+        private void pago_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

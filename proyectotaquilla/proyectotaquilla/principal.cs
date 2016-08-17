@@ -18,7 +18,7 @@ namespace proyectotaquilla
 
         conexionn conect = new conexionn();
 
-        MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopia; Uid=root; pwd=;");
+        MySqlConnection conexion = new MySqlConnection("server=192.168.0.10; database=bdcinetopiaa; Uid=ana; pwd=1234;");
 
         public FPrincipal()
         {
@@ -29,8 +29,8 @@ namespace proyectotaquilla
         {
 
             string selecine = cbComplejo.SelectedItem.ToString();
-            
-            cartelera carte = new cartelera(selecine);
+            string seleregion = cbo_region.SelectedItem.ToString();
+            cartelera carte = new cartelera(seleregion, selecine);
             this.Hide();
             carte.Show();
 
@@ -80,7 +80,7 @@ namespace proyectotaquilla
         private void cbr()
         {
 
-            string s = "select * from bdcinetopia.region";
+            string s = "select * from bdcinetopiaa.region";
 
             conexion.Open();
 

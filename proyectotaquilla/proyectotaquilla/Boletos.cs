@@ -19,6 +19,13 @@ namespace proyectotaquilla
         {
             InitializeComponent();
         }
+
+        public boletos(string proyeccion)
+        {
+            String proy = proyeccion;
+            InitializeComponent();
+        }
+
         public int cantidadNiño = 0;
         public int cantidadAdulto = 0;
         public int cantidadTotal = 0;
@@ -26,7 +33,7 @@ namespace proyectotaquilla
         int TotalNiño = 0;
         int TotalAdulto = 0;
 
-        MySqlConnection conection = new MySqlConnection("server=localhost; database= bdcinetopia; Uid=root; pwd=;");
+        MySqlConnection conection = new MySqlConnection("server=192.168.0.10; database=bdcinetopiaa; Uid=ana; pwd=1234;");
    
         private void button1_Click(object sender, EventArgs e)
         {
@@ -210,6 +217,11 @@ namespace proyectotaquilla
 
                 conection.Close();
             }
+        }
+
+        private void boletos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

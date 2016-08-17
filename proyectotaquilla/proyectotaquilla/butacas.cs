@@ -21,6 +21,12 @@ namespace proyectotaquilla
 
         }
 
+        public butacas(string sregion,string tipocarpeli,string tipoproyeccion,string tipocinesala)
+        {
+            InitializeComponent();
+         //   this.comparar = cantidadTotal;
+
+        }
 
         int comparar = 0;
         

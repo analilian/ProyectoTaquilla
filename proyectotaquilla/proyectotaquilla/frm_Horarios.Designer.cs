@@ -28,70 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHor1 = new System.Windows.Forms.Button();
-            this.btnHor2 = new System.Windows.Forms.Button();
-            this.btnHor3 = new System.Windows.Forms.Button();
-            this.btnHor4 = new System.Windows.Forms.Button();
-            this.btnHor5 = new System.Windows.Forms.Button();
             this.lbltitulo1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.cbo_Horario = new System.Windows.Forms.ComboBox();
+            this.btn_seleboleto = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnHor1
-            // 
-            this.btnHor1.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor1.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor1.Location = new System.Drawing.Point(69, 103);
-            this.btnHor1.Name = "btnHor1";
-            this.btnHor1.Size = new System.Drawing.Size(70, 48);
-            this.btnHor1.TabIndex = 20;
-            this.btnHor1.UseVisualStyleBackColor = false;
-            this.btnHor1.Click += new System.EventHandler(this.btnHor1_Click);
-            // 
-            // btnHor2
-            // 
-            this.btnHor2.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor2.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor2.Location = new System.Drawing.Point(194, 103);
-            this.btnHor2.Name = "btnHor2";
-            this.btnHor2.Size = new System.Drawing.Size(71, 48);
-            this.btnHor2.TabIndex = 21;
-            this.btnHor2.UseVisualStyleBackColor = false;
-            // 
-            // btnHor3
-            // 
-            this.btnHor3.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor3.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor3.Location = new System.Drawing.Point(323, 103);
-            this.btnHor3.Name = "btnHor3";
-            this.btnHor3.Size = new System.Drawing.Size(70, 48);
-            this.btnHor3.TabIndex = 22;
-            this.btnHor3.UseVisualStyleBackColor = false;
-            // 
-            // btnHor4
-            // 
-            this.btnHor4.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor4.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor4.Location = new System.Drawing.Point(452, 103);
-            this.btnHor4.Name = "btnHor4";
-            this.btnHor4.Size = new System.Drawing.Size(69, 48);
-            this.btnHor4.TabIndex = 23;
-            this.btnHor4.UseVisualStyleBackColor = false;
-            // 
-            // btnHor5
-            // 
-            this.btnHor5.BackColor = System.Drawing.Color.LightGray;
-            this.btnHor5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHor5.ForeColor = System.Drawing.Color.DimGray;
-            this.btnHor5.Location = new System.Drawing.Point(587, 103);
-            this.btnHor5.Name = "btnHor5";
-            this.btnHor5.Size = new System.Drawing.Size(67, 48);
-            this.btnHor5.TabIndex = 24;
-            this.btnHor5.UseVisualStyleBackColor = false;
             // 
             // lbltitulo1
             // 
@@ -104,26 +45,44 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.DarkCyan;
-            this.button4.Location = new System.Drawing.Point(299, 192);
+            this.button4.Location = new System.Drawing.Point(135, 160);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(113, 32);
             this.button4.TabIndex = 45;
             this.button4.Text = "Ver Sinopsis";
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // cbo_Horario
+            // 
+            this.cbo_Horario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_Horario.FormattingEnabled = true;
+            this.cbo_Horario.Location = new System.Drawing.Point(104, 48);
+            this.cbo_Horario.Name = "cbo_Horario";
+            this.cbo_Horario.Size = new System.Drawing.Size(177, 29);
+            this.cbo_Horario.TabIndex = 46;
+            this.cbo_Horario.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btn_seleboleto
+            // 
+            this.btn_seleboleto.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_seleboleto.Location = new System.Drawing.Point(114, 110);
+            this.btn_seleboleto.Name = "btn_seleboleto";
+            this.btn_seleboleto.Size = new System.Drawing.Size(157, 32);
+            this.btn_seleboleto.TabIndex = 47;
+            this.btn_seleboleto.Text = "Reservar boletos";
+            this.btn_seleboleto.UseVisualStyleBackColor = false;
+            this.btn_seleboleto.Click += new System.EventHandler(this.btn_seleboleto_Click);
+            // 
             // frm_Horarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(723, 265);
+            this.ClientSize = new System.Drawing.Size(384, 253);
+            this.Controls.Add(this.btn_seleboleto);
+            this.Controls.Add(this.cbo_Horario);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.lbltitulo1);
-            this.Controls.Add(this.btnHor5);
-            this.Controls.Add(this.btnHor4);
-            this.Controls.Add(this.btnHor3);
-            this.Controls.Add(this.btnHor2);
-            this.Controls.Add(this.btnHor1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(5);
@@ -136,13 +95,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnHor1;
-        private System.Windows.Forms.Button btnHor2;
-        private System.Windows.Forms.Button btnHor3;
-        private System.Windows.Forms.Button btnHor4;
-        private System.Windows.Forms.Button btnHor5;
         private System.Windows.Forms.Label lbltitulo1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox cbo_Horario;
+        private System.Windows.Forms.Button btn_seleboleto;
     }
 }
