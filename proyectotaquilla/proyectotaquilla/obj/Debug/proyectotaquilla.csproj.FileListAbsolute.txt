@@ -191,3 +191,26 @@ C:\Users\Roberto Carlos\Documents\GitHub\con try\arreglar\proyectotaquilla\proye
 C:\Users\Roberto Carlos\Documents\GitHub\con try\arreglar\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.Properties.Resources.resources
 C:\Users\Roberto Carlos\Documents\GitHub\con try\arreglar\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.sinopsis.resources
 C:\Users\Roberto Carlos\Documents\GitHub\con try\arreglar\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.GenerateResource.Cache
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\bin\Debug\proyectotaquilla.exe.config
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.ResolveComReference.cache
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.exe
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.pdb
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\bin\Debug\proyectotaquilla.exe
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\bin\Debug\proyectotaquilla.pdb
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\bin\Debug\MySql.Data.dll
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\bin\Debug\Google.ProtocolBuffers.dll
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\bin\Debug\MySql.Data.xml
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\bin\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csprojResolveAssemblyReference.cache
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.boletos.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.butacas.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.cartelera.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.frm_Horarios.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.pago.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.FPrincipal.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.Properties.Resources.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.sinopsis.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\proyectotaquilla\proyectotaquilla\obj\Debug\proyectotaquilla.csproj.GenerateResource.Cache

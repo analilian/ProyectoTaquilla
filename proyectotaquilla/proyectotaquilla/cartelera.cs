@@ -16,7 +16,7 @@ namespace proyectotaquilla
     {
         conexionn conect = new conexionn();
 
-        MySqlConnection conexion = new MySqlConnection("server=192.168.0.10; database=bdcinetopiaa; Uid=ana; pwd=1234;");
+        MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopiaa; Uid=root; pwd=;");
         public String nompeli;
         public String com;
         public String proyeccion;
@@ -127,122 +127,146 @@ namespace proyectotaquilla
             string numerofilas = Convert.ToString(dt.Rows.Count);
             int numfilas = dt.Rows.Count;
             MessageBox.Show(numerofilas);
-
+            //programador:rodrigo Sifontes 17/08/2016 fin 17/08/2016
+            //ayuda con problema de llenado de peliculas
             object[] rowArray = new object[10];
-            
 
+            int r = numfilas;
+           
+            object[] rowArray1 = new object[10];
+            int j = 0;
             foreach (DataColumn dc in dt.Columns) 
             {
                 foreach (DataRow dtRow in dt.Rows)
                 {
-                    for (int y = 0; y <= numfilas; y++)
-                    {
+                 
 
                         ////int x = 0;
                         var nombpeli = dtRow[dc].ToString();
                     int x = 0;
                     rowArray[x] = dtRow[dc];
-                    MessageBox.Show(rowArray[x].ToString());
-                    panel1.Controls.Clear();
-
+                    rowArray1[j] = rowArray[x];
+                    j++;
                     
-                  //      int r = y;
-                        //rowArray[r] = dtRow[dc];
-                        panel1.Controls.Add(new LinkLabel()
-
-                        {
-                            
-                          Name = "llNombre" + y,
-                          Text = rowArray[x].ToString(),
-                          Left = y*100,
-                          Width =100
-                        });
-
-                    }
-
-                    ////}
-
-                    ////                if (numerofilas != null)
-                    ////                {
-                    ///                panel1.Controls.Clear();
-                    ////             for (int i = 0; i <= numfilas; i++)
-
-                    ///          {
-                    ///      string[] nomarreglo = dtRow[dc];
-                    ///    var nombrepeli = dtRow[dc].ToString();
-                    ///              panel1.Controls.Add(new LinkLabel()
-
-                    ////         {
-
-                    ////              Name = "llNombre" + i,
-                    ////          Text = nombpeli,
-                    ////      Left = i*100,
-                    ////  Width =100
-                    ////});
-
-                    ////}
-                    ////}
-
-                    ////if (numerofilas != null)
-                    ////{
-                    ////panel1.Controls.Clear();
-                    ////int i=0;
-                    ////for(int i = 0; i <= numfilas;i++)
-
-                    ////{
-                    //string[] nomarreglo = dtRow[dc];
-                    ////var nombrepeli = dtRow[dc].ToString();
-                    ////panel1.Controls.Add(new LinkLabel()
-
-                    ////{
-                    ////Name = "llNombre" + i,
-                    ////Text = rowArray[x].ToString(),
-                    ////Left = 100,
-                    ////Width = i*100
-                    ////});
 
 
-                    //// }
-                    ////}
-
-           //     }
-                //llNombre1.Text = nombpeli;
-         //   }
-
-                    //var nombrepeli = dtRow[dc].ToString();
-                    //string nombpeli = dtRow[dc].ToString();
-                    //MessageBox.Show(nombrepeli);
-                    //*LinkLabel llNombre1 = new System.Windows.Forms.LinkLabel();
-                    //llNombre1.Location = new System.Drawing.Point(300, 130);
-                    //llNombre1.Name = "Hola";
-                    //llNombre1.Size = new System.Drawing.Size(120, 21);
-                    //llNombre1.TabIndex = 0;
-                    //llNombre1.Text = nombrepeli;
-                    //Controls.Add(llNombre1);
-
-                    ////if (numerofilas != null)
-                     ////{
-                       //// panel1.Controls.Clear();
-                      ////  for (int i = 0; i <= numfilas; i++)
-                            
-                          ////  {
-                            //string[] nomarreglo = dtRow[dc];
-                            ////var nombpeli = dtRow[dc].ToString();
-                           //// panel1.Controls.Add(new LinkLabel()
-
-                               //// {
-
-                                   //// Name = "llNombre" + i,
-                                   //// Text = nombpeli,
-                                   //// Left = i * 100,
-                                  ////  Width = 100
-                               //// });
-                            
-                            ////}
-                     ////}
                 }
 
             }
+           
+            for (int c = 0; c < numfilas; c++)
+            {
+                panel1.Controls.Add(new LinkLabel()
+
+                {
+
+                    Name = "llNombre" + c,
+                    Text = rowArray1[c].ToString(),
+                    Left = c * 100,
+                    Width = 100
+                });
+                
+            }
+            //fin de solucion
+
+            /* for (int y = 0; y <= numfilas; y++)
+             {
+             //      int r = y;
+             //rowArray[r] = dtRow[dc];
+             MessageBox.Show(rowArray[x].ToString()+"asdf");
+             panel1.Controls.Add(new LinkLabel()
+
+             {
+
+               Name = "llNombre" + y,
+               Text = rowArray[x].ToString(),
+               Left = y*100,
+               Width =100
+             });
+
+         }*/
+
+            ////}
+
+            ////                if (numerofilas != null)
+            ////                {
+            ///                panel1.Controls.Clear();
+            ////             for (int i = 0; i <= numfilas; i++)
+
+            ///          {
+            ///      string[] nomarreglo = dtRow[dc];
+            ///    var nombrepeli = dtRow[dc].ToString();
+            ///              panel1.Controls.Add(new LinkLabel()
+
+            ////         {
+
+            ////              Name = "llNombre" + i,
+            ////          Text = nombpeli,
+            ////      Left = i*100,
+            ////  Width =100
+            ////});
+
+            ////}
+            ////}
+
+            ////if (numerofilas != null)
+            ////{
+            ////panel1.Controls.Clear();
+            ////int i=0;
+            ////for(int i = 0; i <= numfilas;i++)
+
+            ////{
+            //string[] nomarreglo = dtRow[dc];
+            ////var nombrepeli = dtRow[dc].ToString();
+            ////panel1.Controls.Add(new LinkLabel()
+
+            ////{
+            ////Name = "llNombre" + i,
+            ////Text = rowArray[x].ToString(),
+            ////Left = 100,
+            ////Width = i*100
+            ////});
+
+
+            //// }
+            ////}
+
+            //     }
+            //llNombre1.Text = nombpeli;
+            //   }
+
+            //var nombrepeli = dtRow[dc].ToString();
+            //string nombpeli = dtRow[dc].ToString();
+            //MessageBox.Show(nombrepeli);
+            //*LinkLabel llNombre1 = new System.Windows.Forms.LinkLabel();
+            //llNombre1.Location = new System.Drawing.Point(300, 130);
+            //llNombre1.Name = "Hola";
+            //llNombre1.Size = new System.Drawing.Size(120, 21);
+            //llNombre1.TabIndex = 0;
+            //llNombre1.Text = nombrepeli;
+            //Controls.Add(llNombre1);
+
+            ////if (numerofilas != null)
+            ////{
+            //// panel1.Controls.Clear();
+            ////  for (int i = 0; i <= numfilas; i++)
+
+            ////  {
+            //string[] nomarreglo = dtRow[dc];
+            ////var nombpeli = dtRow[dc].ToString();
+            //// panel1.Controls.Add(new LinkLabel()
+
+            //// {
+
+            //// Name = "llNombre" + i,
+            //// Text = nombpeli,
+            //// Left = i * 100,
+            ////  Width = 100
+            //// });
+
+            ////}
+            ////}
+
             string sql1 = "select p.imagenpelicula from cine c, cinessala cs, cartelerapelicula cp, pelicula p, fechascartelera fc, tipoproyeccion tp, horario h where c.nomcine = '" + comple + "' and c.pk_idcine = cs.pk_idcine and cs.pk_idcinesal = cp.pk_idcinesal and cp.pk_idpelicula = p.pk_idpelicula and cp.pk_idproyeccion = tp.pk_idproyeccion and cp.pk_idhorario = h.pk_idhorario and p.pk_idfcar = fc.pk_idfcar";
 
             MySqlCommand command = new MySqlCommand(sql1, conexion);

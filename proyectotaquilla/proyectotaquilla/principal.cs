@@ -18,7 +18,7 @@ namespace proyectotaquilla
 
         conexionn conect = new conexionn();
 
-        MySqlConnection conexion = new MySqlConnection("server=192.168.0.10; database=bdcinetopiaa; Uid=ana; pwd=1234;");
+        MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopiaa; Uid=root; pwd=;");
 
         public FPrincipal()
         {

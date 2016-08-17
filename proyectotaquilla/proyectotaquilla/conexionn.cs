@@ -14,7 +14,7 @@ namespace proyectotaquilla
         MySqlConnection conexion;
         public void Conectar()
         {
-            conexion = new MySqlConnection("server=192.168.0.10; database=bdcinetopiaa; Uid=ana; pwd=1234;");
+            conexion = new MySqlConnection("server=localhost; database=bdcinetopiaa; Uid=root; pwd=;");
             conexion.Open();
         }
         public void Desconectar()
