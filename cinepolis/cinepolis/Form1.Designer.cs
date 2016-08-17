@@ -36,6 +36,7 @@
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_usuario = new System.Windows.Forms.PictureBox();
             this.btn_iniciosesion = new System.Windows.Forms.Button();
+            this.btn_ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_usuario)).BeginInit();
             this.SuspendLayout();
@@ -120,12 +121,26 @@
             this.btn_iniciosesion.UseVisualStyleBackColor = true;
             this.btn_iniciosesion.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btn_ayuda
+            // 
+            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
+            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ayuda.Location = new System.Drawing.Point(0, 377);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
+            this.btn_ayuda.TabIndex = 8;
+            this.btn_ayuda.UseVisualStyleBackColor = false;
+            this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(556, 406);
+            this.Controls.Add(this.btn_ayuda);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.lbl_iniciosesion);
             this.Controls.Add(this.pic_usuario);
@@ -155,6 +170,7 @@
         private System.Windows.Forms.Label lbl_iniciosesion;
         private System.Windows.Forms.PictureBox pic_usuario;
         private System.Windows.Forms.PictureBox pic_logo;
+        private System.Windows.Forms.Button btn_ayuda;
     }
 }
 

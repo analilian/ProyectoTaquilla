@@ -115,11 +115,6 @@ namespace cinepolis
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
            
@@ -275,6 +270,14 @@ namespace cinepolis
         private void button1_Click_1(object sender, EventArgs e)
         {
             conect.actualizargrid(dgv_clasificacion, Squeery, Stabla);
+        }
+
+
+        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
+
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
         }
     }
 }

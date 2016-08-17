@@ -61,5 +61,12 @@ namespace cinepolis
             this.dgv_buscar.Columns[3].HeaderText = "Evento";
             this.dgv_buscar.Columns[4].HeaderText = "FEcha";
         }
+
+        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
+
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
+        }
     }
 }

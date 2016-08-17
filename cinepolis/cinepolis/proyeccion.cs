@@ -218,5 +218,13 @@ namespace cinepolis
         {
             conect.actualizargrid(dgv_proyeccion, Squeery, Stabla);
         }
+
+
+
+        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
+        }
     }
 }

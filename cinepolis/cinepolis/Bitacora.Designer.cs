@@ -34,6 +34,7 @@
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.lbl_buscar = new System.Windows.Forms.Label();
             this.dgv_buscar = new System.Windows.Forms.DataGridView();
+            this.btn_ayuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,12 +101,26 @@
             this.dgv_buscar.Size = new System.Drawing.Size(688, 212);
             this.dgv_buscar.TabIndex = 66;
             // 
+            // btn_ayuda
+            // 
+            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
+            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ayuda.Location = new System.Drawing.Point(3, 391);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
+            this.btn_ayuda.TabIndex = 67;
+            this.btn_ayuda.UseVisualStyleBackColor = false;
+            this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
+            // 
             // Bitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(797, 424);
+            this.Controls.Add(this.btn_ayuda);
             this.Controls.Add(this.dgv_buscar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.txt_buscar);
@@ -131,5 +146,6 @@
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label lbl_buscar;
         private System.Windows.Forms.DataGridView dgv_buscar;
+        private System.Windows.Forms.Button btn_ayuda;
     }
 }

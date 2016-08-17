@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_desactivar = new System.Windows.Forms.Button();
             this.txt_buscarmod = new System.Windows.Forms.TextBox();
             this.btn_activar = new System.Windows.Forms.Button();
@@ -67,8 +68,8 @@
             this.cbo_lista_num2 = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_ayuda = new System.Windows.Forms.Button();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_telefono)).BeginInit();
@@ -113,6 +114,18 @@
             this.tabPage1.Size = new System.Drawing.Size(643, 336);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Telefono";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(195, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 103;
+            this.toolTip1.SetToolTip(this.button1, "Actualizar");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // btn_desactivar
             // 
@@ -181,7 +194,7 @@
             // 
             // bttn_actualizar_proyeccion
             // 
-            this.bttn_actualizar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.bttn_actualizar_proyeccion.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
             this.bttn_actualizar_proyeccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_proyeccion.Location = new System.Drawing.Point(449, 5);
             this.bttn_actualizar_proyeccion.Name = "bttn_actualizar_proyeccion";
@@ -512,6 +525,20 @@
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click_1);
             // 
+            // btn_ayuda
+            // 
+            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
+            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ayuda.Location = new System.Drawing.Point(638, 1);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
+            this.btn_ayuda.TabIndex = 57;
+            this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
+            this.btn_ayuda.UseVisualStyleBackColor = false;
+            this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
+            // 
             // lbl_titulo_mantenimiento_cine
             // 
             this.lbl_titulo_mantenimiento_cine.AutoSize = true;
@@ -522,24 +549,13 @@
             this.lbl_titulo_mantenimiento_cine.TabIndex = 56;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE TELÉFONO";
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(195, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 65);
-            this.button1.TabIndex = 103;
-            this.toolTip1.SetToolTip(this.button1, "Actualizar");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
             // telefonoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(671, 432);
+            this.Controls.Add(this.btn_ayuda);
             this.Controls.Add(this.lbl_titulo_mantenimiento_cine);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.tabControl1);
@@ -608,5 +624,6 @@
         private System.Windows.Forms.Button btn_desactivar;
         private System.Windows.Forms.Button btn_activar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ayuda;
     }
 }

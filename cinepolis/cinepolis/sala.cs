@@ -152,12 +152,6 @@ namespace cinepolis
           
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
 
         private void buscar()
         {
@@ -391,6 +385,14 @@ namespace cinepolis
         {
             conect.actualizargrid(dgv_sala, Squeery, Stabla);
             conect.actualizargrid(dgv_salacine, Squeery1, Stabla1);
+        }
+
+
+        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
+
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
         }
     }
 }

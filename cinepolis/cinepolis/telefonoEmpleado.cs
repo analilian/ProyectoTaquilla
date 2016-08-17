@@ -468,11 +468,6 @@ namespace cinepolis
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btn_tel_cine_Click_1(object sender, EventArgs e)
         {
             string slista_numero2 = cbo_lista_num2.SelectedValue.ToString();
@@ -583,13 +578,12 @@ namespace cinepolis
             conect.actualizargrid(dgv_Tel_emp, Squeery, Stabla);
             conect.actualizargrid(dgv_tel_cine, Squeery1, Stabla);
         }
-        
 
 
-
-
-
-
-
+        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
+        }
     }
 }

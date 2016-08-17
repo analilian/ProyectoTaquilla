@@ -18,13 +18,14 @@ namespace cinepolis
             InitializeComponent();
             this.usuario=usu;
         }
-     
+
+
+        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ayuda r = new ayuda(usuario);
-            r.ShowDialog();
+            System.Windows.Forms.Help.ShowHelp(this,Application.StartupPath + @"/"+ayudacinetopiaadministrativa);
         }
 
         private void button2_Click(object sender, EventArgs e)
