@@ -65,6 +65,7 @@
             this.llNombre10 = new System.Windows.Forms.LinkLabel();
             this.llNombre11 = new System.Windows.Forms.LinkLabel();
             this.llNombre12 = new System.Windows.Forms.LinkLabel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -207,7 +208,7 @@
             // pbImagen2
             // 
             this.pbImagen2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen2.Location = new System.Drawing.Point(515, 136);
+            this.pbImagen2.Location = new System.Drawing.Point(437, 136);
             this.pbImagen2.Name = "pbImagen2";
             this.pbImagen2.Size = new System.Drawing.Size(130, 143);
             this.pbImagen2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -217,7 +218,7 @@
             // pbImagen3
             // 
             this.pbImagen3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen3.Location = new System.Drawing.Point(719, 136);
+            this.pbImagen3.Location = new System.Drawing.Point(573, 136);
             this.pbImagen3.Name = "pbImagen3";
             this.pbImagen3.Size = new System.Drawing.Size(130, 143);
             this.pbImagen3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -227,7 +228,7 @@
             // pbImagen5
             // 
             this.pbImagen5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen5.Location = new System.Drawing.Point(301, 365);
+            this.pbImagen5.Location = new System.Drawing.Point(301, 285);
             this.pbImagen5.Name = "pbImagen5";
             this.pbImagen5.Size = new System.Drawing.Size(130, 143);
             this.pbImagen5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,7 +238,7 @@
             // pbImagen6
             // 
             this.pbImagen6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen6.Location = new System.Drawing.Point(515, 365);
+            this.pbImagen6.Location = new System.Drawing.Point(437, 285);
             this.pbImagen6.Name = "pbImagen6";
             this.pbImagen6.Size = new System.Drawing.Size(130, 143);
             this.pbImagen6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -247,7 +248,7 @@
             // pbImagen7
             // 
             this.pbImagen7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen7.Location = new System.Drawing.Point(719, 365);
+            this.pbImagen7.Location = new System.Drawing.Point(573, 285);
             this.pbImagen7.Name = "pbImagen7";
             this.pbImagen7.Size = new System.Drawing.Size(130, 143);
             this.pbImagen7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,7 +258,7 @@
             // pbImagen9
             // 
             this.pbImagen9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen9.Location = new System.Drawing.Point(301, 586);
+            this.pbImagen9.Location = new System.Drawing.Point(301, 434);
             this.pbImagen9.Name = "pbImagen9";
             this.pbImagen9.Size = new System.Drawing.Size(130, 143);
             this.pbImagen9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -267,7 +268,7 @@
             // pbImagen10
             // 
             this.pbImagen10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen10.Location = new System.Drawing.Point(515, 586);
+            this.pbImagen10.Location = new System.Drawing.Point(437, 434);
             this.pbImagen10.Name = "pbImagen10";
             this.pbImagen10.Size = new System.Drawing.Size(130, 143);
             this.pbImagen10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,7 +278,7 @@
             // pbImagen11
             // 
             this.pbImagen11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen11.Location = new System.Drawing.Point(719, 586);
+            this.pbImagen11.Location = new System.Drawing.Point(573, 434);
             this.pbImagen11.Name = "pbImagen11";
             this.pbImagen11.Size = new System.Drawing.Size(130, 143);
             this.pbImagen11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -287,7 +288,7 @@
             // pbImagen8
             // 
             this.pbImagen8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen8.Location = new System.Drawing.Point(919, 365);
+            this.pbImagen8.Location = new System.Drawing.Point(709, 285);
             this.pbImagen8.Name = "pbImagen8";
             this.pbImagen8.Size = new System.Drawing.Size(130, 143);
             this.pbImagen8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -297,7 +298,7 @@
             // pbImagen14
             // 
             this.pbImagen14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen14.Location = new System.Drawing.Point(919, 586);
+            this.pbImagen14.Location = new System.Drawing.Point(709, 434);
             this.pbImagen14.Name = "pbImagen14";
             this.pbImagen14.Size = new System.Drawing.Size(130, 143);
             this.pbImagen14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +308,7 @@
             // pbImagen4
             // 
             this.pbImagen4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbImagen4.Location = new System.Drawing.Point(919, 136);
+            this.pbImagen4.Location = new System.Drawing.Point(709, 136);
             this.pbImagen4.Name = "pbImagen4";
             this.pbImagen4.Size = new System.Drawing.Size(130, 143);
             this.pbImagen4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -421,6 +422,14 @@
             this.llNombre12.Size = new System.Drawing.Size(0, 21);
             this.llNombre12.TabIndex = 63;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(65, 165);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(981, 446);
+            this.panel1.TabIndex = 64;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // cartelera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -429,6 +438,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1092, 741);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.llNombre12);
             this.Controls.Add(this.llNombre11);
             this.Controls.Add(this.llNombre10);
@@ -524,5 +534,6 @@
         private System.Windows.Forms.LinkLabel llNombre10;
         private System.Windows.Forms.LinkLabel llNombre11;
         private System.Windows.Forms.LinkLabel llNombre12;
+        private System.Windows.Forms.Panel panel1;
     }
 }

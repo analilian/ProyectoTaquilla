@@ -114,30 +114,100 @@ namespace proyectotaquilla
             MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
             adaptador.Fill(dt);
             DataRow fila = dt.Rows[0];
+  //          DataColumn dc= dt.Columns[0];
 
             //for (int i = 0; i <= 9; i++) { 
             //foreach(DataRow dt in comando) { 
-            string sid = Convert.ToString(fila[0]);
-            nompeli = sid;
             
             //MessageBox.Show(sid);
-            llNombre1.Text = sid;
-            llNombre2.Text = sid;
+            /////            llNombre1.Text = sid;
+            ////            llNombre2.Text = sid;
 
-//            }
+            //            }
             string numerofilas = Convert.ToString(dt.Rows.Count);
             int numfilas = dt.Rows.Count;
             MessageBox.Show(numerofilas);
 
-            foreach (DataRow dtRow in dt.Rows)
+            object[] rowArray = new object[10];
+            
+
+            foreach (DataColumn dc in dt.Columns) 
             {
-                foreach (DataColumn dc in dt.Columns)
+                foreach (DataRow dtRow in dt.Rows)
                 {
-                    var nombpeli = dtRow[dc].ToString();
+                    for (int y = 0; y <= numfilas; y++)
+                    {
+
+                        ////int x = 0;
+                        var nombpeli = dtRow[dc].ToString();
+                    int x = 0;
+                    rowArray[x] = dtRow[dc];
+                    MessageBox.Show(rowArray[x].ToString());
+                    panel1.Controls.Clear();
+
                     
-                }
+                  //      int r = y;
+                        //rowArray[r] = dtRow[dc];
+                        panel1.Controls.Add(new LinkLabel()
+
+                        {
+                            
+                          Name = "llNombre" + y,
+                          Text = rowArray[x].ToString(),
+                          Left = y*100,
+                          Width =100
+                        });
+
+                    }
+
+                    ////}
+
+                    ////                if (numerofilas != null)
+                    ////                {
+                    ///                panel1.Controls.Clear();
+                    ////             for (int i = 0; i <= numfilas; i++)
+
+                    ///          {
+                    ///      string[] nomarreglo = dtRow[dc];
+                    ///    var nombrepeli = dtRow[dc].ToString();
+                    ///              panel1.Controls.Add(new LinkLabel()
+
+                    ////         {
+
+                    ////              Name = "llNombre" + i,
+                    ////          Text = nombpeli,
+                    ////      Left = i*100,
+                    ////  Width =100
+                    ////});
+
+                    ////}
+                    ////}
+
+                    ////if (numerofilas != null)
+                    ////{
+                    ////panel1.Controls.Clear();
+                    ////int i=0;
+                    ////for(int i = 0; i <= numfilas;i++)
+
+                    ////{
+                    //string[] nomarreglo = dtRow[dc];
+                    ////var nombrepeli = dtRow[dc].ToString();
+                    ////panel1.Controls.Add(new LinkLabel()
+
+                    ////{
+                    ////Name = "llNombre" + i,
+                    ////Text = rowArray[x].ToString(),
+                    ////Left = 100,
+                    ////Width = i*100
+                    ////});
+
+
+                    //// }
+                    ////}
+
+           //     }
                 //llNombre1.Text = nombpeli;
-            }
+         //   }
 
                     //var nombrepeli = dtRow[dc].ToString();
                     //string nombpeli = dtRow[dc].ToString();
@@ -170,9 +240,9 @@ namespace proyectotaquilla
                             
                             ////}
                      ////}
-                ////}
+                }
 
-            ////}
+            }
             string sql1 = "select p.imagenpelicula from cine c, cinessala cs, cartelerapelicula cp, pelicula p, fechascartelera fc, tipoproyeccion tp, horario h where c.nomcine = '" + comple + "' and c.pk_idcine = cs.pk_idcine and cs.pk_idcinesal = cp.pk_idcinesal and cp.pk_idpelicula = p.pk_idpelicula and cp.pk_idproyeccion = tp.pk_idproyeccion and cp.pk_idhorario = h.pk_idhorario and p.pk_idfcar = fc.pk_idfcar";
 
             MySqlCommand command = new MySqlCommand(sql1, conexion);
@@ -308,6 +378,11 @@ namespace proyectotaquilla
 
             
            //boletos bolet = new boletos(proyeccion);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 
