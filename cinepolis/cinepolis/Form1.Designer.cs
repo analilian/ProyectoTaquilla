@@ -114,6 +114,8 @@
             // 
             this.btn_iniciosesion.BackgroundImage = global::cinepolis.Properties.Resources.inicio_de_sesion;
             this.btn_iniciosesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_iniciosesion.FlatAppearance.BorderSize = 0;
+            this.btn_iniciosesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_iniciosesion.Location = new System.Drawing.Point(173, 322);
             this.btn_iniciosesion.Name = "btn_iniciosesion";
             this.btn_iniciosesion.Size = new System.Drawing.Size(199, 48);
@@ -126,8 +128,10 @@
             this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
             this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
             this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.FlatAppearance.BorderSize = 0;
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ayuda.Location = new System.Drawing.Point(0, 377);
+            this.btn_ayuda.Location = new System.Drawing.Point(1, 374);
             this.btn_ayuda.Name = "btn_ayuda";
             this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
             this.btn_ayuda.TabIndex = 8;
@@ -152,6 +156,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "0";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_usuario)).EndInit();

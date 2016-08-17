@@ -72,6 +72,8 @@
             // 
             this.btn_eliminar_horario.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar_horario.FlatAppearance.BorderSize = 0;
+            this.btn_eliminar_horario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar_horario.Location = new System.Drawing.Point(672, 46);
             this.btn_eliminar_horario.Name = "btn_eliminar_horario";
             this.btn_eliminar_horario.Size = new System.Drawing.Size(65, 65);
@@ -84,6 +86,8 @@
             // 
             this.btn_buscar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_horario.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_horario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar_horario.Location = new System.Drawing.Point(480, 47);
             this.btn_buscar_horario.Name = "btn_buscar_horario";
             this.btn_buscar_horario.Size = new System.Drawing.Size(65, 65);
@@ -96,6 +100,8 @@
             // 
             this.bttn_actualizar_horario.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
             this.bttn_actualizar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttn_actualizar_horario.FlatAppearance.BorderSize = 0;
+            this.bttn_actualizar_horario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_actualizar_horario.Location = new System.Drawing.Point(544, 46);
             this.bttn_actualizar_horario.Name = "bttn_actualizar_horario";
             this.bttn_actualizar_horario.Size = new System.Drawing.Size(65, 65);
@@ -122,6 +128,8 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Location = new System.Drawing.Point(608, 47);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(65, 65);
@@ -166,9 +174,11 @@
             // 
             this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Previous_icon;
             this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_regresar.FlatAppearance.BorderSize = 0;
+            this.btn_regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regresar.Location = new System.Drawing.Point(12, 12);
             this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(57, 40);
+            this.btn_regresar.Size = new System.Drawing.Size(58, 50);
             this.btn_regresar.TabIndex = 58;
             this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
@@ -188,6 +198,8 @@
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.FlatAppearance.BorderSize = 0;
+            this.btn_desactivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_desactivar.Location = new System.Drawing.Point(419, 48);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
@@ -200,6 +212,8 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.FlatAppearance.BorderSize = 0;
+            this.btn_activar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_activar.Location = new System.Drawing.Point(356, 48);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
@@ -212,6 +226,8 @@
             // 
             this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(292, 48);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 65);
@@ -225,6 +241,8 @@
             this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
             this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
             this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.FlatAppearance.BorderSize = 0;
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ayuda.Location = new System.Drawing.Point(710, 0);
             this.btn_ayuda.Name = "btn_ayuda";

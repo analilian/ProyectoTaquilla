@@ -56,12 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ayuda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ayuda.Designer.cs">
-      <DependentUpon>ayuda.cs</DependentUpon>
-    </Compile>
     <Compile Include="Bitacora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +126,18 @@
     <Compile Include="proyeccion.Designer.cs">
       <DependentUpon>proyeccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Puesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Puesto.Designer.cs">
+      <DependentUpon>Puesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Region.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Region.Designer.cs">
+      <DependentUpon>Region.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,9 +168,6 @@
     <Compile Include="usuario.Designer.cs">
       <DependentUpon>usuario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ayuda.resx">
-      <DependentUpon>ayuda.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bitacora.resx">
       <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +210,12 @@
     </Compile>
     <EmbeddedResource Include="proyeccion.resx">
       <DependentUpon>proyeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Puesto.resx">
+      <DependentUpon>Puesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Region.resx">
+      <DependentUpon>Region.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes.resx">
       <DependentUpon>reportes.cs</DependentUpon>

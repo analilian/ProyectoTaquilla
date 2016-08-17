@@ -62,6 +62,7 @@
             this.btn_activar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_ayuda = new System.Windows.Forms.Button();
+            this.btn_agregar_clasificacion = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_emplados_modificar)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +83,8 @@
             this.btn_telefono_empleado.BackColor = System.Drawing.Color.Transparent;
             this.btn_telefono_empleado.BackgroundImage = global::cinepolis.Properties.Resources.telefono;
             this.btn_telefono_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_telefono_empleado.FlatAppearance.BorderSize = 0;
+            this.btn_telefono_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_telefono_empleado.Location = new System.Drawing.Point(831, 50);
             this.btn_telefono_empleado.Name = "btn_telefono_empleado";
             this.btn_telefono_empleado.Size = new System.Drawing.Size(65, 65);
@@ -112,6 +115,8 @@
             // 
             this.btn_eliminar_Empleado.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
             this.btn_eliminar_Empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar_Empleado.FlatAppearance.BorderSize = 0;
+            this.btn_eliminar_Empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar_Empleado.Location = new System.Drawing.Point(769, 50);
             this.btn_eliminar_Empleado.Name = "btn_eliminar_Empleado";
             this.btn_eliminar_Empleado.Size = new System.Drawing.Size(65, 65);
@@ -124,6 +129,8 @@
             // 
             this.btn_buscar_empleado.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
             this.btn_buscar_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_empleado.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar_empleado.Location = new System.Drawing.Point(577, 51);
             this.btn_buscar_empleado.Name = "btn_buscar_empleado";
             this.btn_buscar_empleado.Size = new System.Drawing.Size(65, 65);
@@ -136,6 +143,8 @@
             // 
             this.bttn_actualizar_Empleado.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
             this.bttn_actualizar_Empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttn_actualizar_Empleado.FlatAppearance.BorderSize = 0;
+            this.bttn_actualizar_Empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttn_actualizar_Empleado.Location = new System.Drawing.Point(641, 50);
             this.bttn_actualizar_Empleado.Name = "bttn_actualizar_Empleado";
             this.bttn_actualizar_Empleado.Size = new System.Drawing.Size(65, 65);
@@ -179,6 +188,8 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Location = new System.Drawing.Point(706, 51);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(65, 65);
@@ -342,9 +353,11 @@
             // 
             this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Previous_icon;
             this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_regresar.FlatAppearance.BorderSize = 0;
+            this.btn_regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_regresar.Location = new System.Drawing.Point(12, 41);
             this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(57, 40);
+            this.btn_regresar.Size = new System.Drawing.Size(57, 54);
             this.btn_regresar.TabIndex = 11;
             this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
             this.btn_regresar.UseVisualStyleBackColor = true;
@@ -354,6 +367,8 @@
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.FlatAppearance.BorderSize = 0;
+            this.btn_desactivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_desactivar.Location = new System.Drawing.Point(511, 48);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
@@ -366,6 +381,8 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.FlatAppearance.BorderSize = 0;
+            this.btn_activar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_activar.Location = new System.Drawing.Point(447, 48);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
@@ -378,6 +395,8 @@
             // 
             this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(384, 48);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 65);
@@ -391,6 +410,8 @@
             this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
             this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
             this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.FlatAppearance.BorderSize = 0;
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ayuda.Location = new System.Drawing.Point(869, 1);
             this.btn_ayuda.Name = "btn_ayuda";
@@ -399,6 +420,20 @@
             this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
             this.btn_ayuda.UseVisualStyleBackColor = false;
             this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
+            // 
+            // btn_agregar_clasificacion
+            // 
+            this.btn_agregar_clasificacion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_clasificacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_clasificacion.FlatAppearance.BorderSize = 0;
+            this.btn_agregar_clasificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar_clasificacion.Location = new System.Drawing.Point(831, 194);
+            this.btn_agregar_clasificacion.Name = "btn_agregar_clasificacion";
+            this.btn_agregar_clasificacion.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_clasificacion.TabIndex = 105;
+            this.toolTip1.SetToolTip(this.btn_agregar_clasificacion, "Agregar Clasificacion");
+            this.btn_agregar_clasificacion.UseVisualStyleBackColor = true;
+            this.btn_agregar_clasificacion.Click += new System.EventHandler(this.btn_agregar_clasificacion_Click);
             // 
             // btn_cerrarsesion
             // 
@@ -418,6 +453,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(900, 515);
+            this.Controls.Add(this.btn_agregar_clasificacion);
             this.Controls.Add(this.btn_ayuda);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_desactivar);
@@ -498,5 +534,6 @@
         private System.Windows.Forms.Button btn_activar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_ayuda;
+        private System.Windows.Forms.Button btn_agregar_clasificacion;
     }
 }

@@ -585,5 +585,10 @@ namespace cinepolis
         {
             System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
         }
+
+        private void btn_tel_cliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

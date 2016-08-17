@@ -334,6 +334,13 @@ namespace cinepolis
         {
             System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
         }
+
+        private void btn_agregar_clasificacion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Region r = new Region(usu);
+            r.ShowDialog();
+        }
     }
 }
 

@@ -648,5 +648,12 @@ namespace cinepolis
         {
             System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
         }
+
+        private void btn_agregar_clasificacion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Puesto p = new Puesto(usu);
+            p.ShowDialog();
+        }
     }
 }

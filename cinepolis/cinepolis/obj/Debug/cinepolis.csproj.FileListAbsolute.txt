@@ -44,7 +44,6 @@ C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\G
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.xml
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.xml
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
-C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.mantenimiento.resources
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.MDIParent1.resources
 C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Properties.Resources.resources
@@ -149,7 +148,6 @@ E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\Google.ProtocolBuff
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\itextsharp.xml
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\bin\Debug\MySql.Data.xml
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.csprojResolveAssemblyReference.cache
-E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.ayuda.resources
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.categoria.resources
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.cine.resources
 E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.clasificacion.resources
@@ -376,3 +374,9 @@ C:\Users\Walter\Desktop\proyecto auditoria\back ups\poy3 - menu ayuda\cinepolis\
 C:\Users\Walter\Desktop\proyecto auditoria\back ups\poy3 - menu ayuda\cinepolis\cinepolis\obj\Debug\cinepolis.telefonoEmpleado.resources
 C:\Users\Walter\Desktop\proyecto auditoria\back ups\poy3 - menu ayuda\cinepolis\cinepolis\obj\Debug\cinepolis.usuario.resources
 C:\Users\Walter\Desktop\proyecto auditoria\back ups\poy3 - menu ayuda\cinepolis\cinepolis\obj\Debug\cinepolis.csproj.GenerateResource.Cache
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Bitacora.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.fecha.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.proyeccion.resources
+E:\Escritorio\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.telefonoEmpleado.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Region.resources
+C:\Users\rodri\Documents\GitHub\ProyectoTaquilla\cinepolis\cinepolis\obj\Debug\cinepolis.Puesto.resources

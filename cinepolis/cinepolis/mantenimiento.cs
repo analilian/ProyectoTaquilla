@@ -883,5 +883,21 @@ namespace cinepolis
             Horario r = new Horario(usuario);
             r.ShowDialog();
         }
+
+        private void tbc_mantenimiento_cine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            con.Conectar();
+            String Squerys = ("Select* from cartelerapelicula where pk_ like'" + txt_buscar.Text + "%' or despelicula like '" + txt_buscar.Text + "%' or vinculopelicula like'" + txt_buscar.Text + "%'or pk_ididioma like'" + txt_buscar.Text + "%'or pk_idclasificacion like'" + txt_buscar.Text + "%'or pk_idcategorias like'" + txt_buscar.Text + "%';");
+            con.buscarquery(Squerys);
+            con.actualizargrid(dgv_buscar_pelicula, Squerys, Stabla);
+            nombre_columna();
+            con.Desconectar();
+            txt_buscar.Clear();
+        }
     }
 }

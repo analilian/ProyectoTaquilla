@@ -29,42 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btn_telefono_empleado = new System.Windows.Forms.Button();
             this.txt_buscarmod = new System.Windows.Forms.TextBox();
             this.lbl_buscarmod = new System.Windows.Forms.Label();
-            this.btn_eliminar_pelicula = new System.Windows.Forms.Button();
-            this.btn_buscar_pelicula = new System.Windows.Forms.Button();
-            this.bttn_actualizar_pelicula = new System.Windows.Forms.Button();
             this.cbo_cine_region = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_descrip_clasificacion = new System.Windows.Forms.Label();
             this.txt_descrip_cine = new System.Windows.Forms.TextBox();
-            this.btn_guardar = new System.Windows.Forms.Button();
             this.lbl_clasificacion = new System.Windows.Forms.Label();
             this.txt_nombre_cine = new System.Windows.Forms.TextBox();
             this.dgv_clasificacion = new System.Windows.Forms.DataGridView();
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
-            this.btn_regresar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_agregar_clasificacion = new System.Windows.Forms.Button();
+            this.btn_ayuda = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_desactivar = new System.Windows.Forms.Button();
             this.btn_activar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_ayuda = new System.Windows.Forms.Button();
+            this.btn_telefono_empleado = new System.Windows.Forms.Button();
+            this.btn_regresar = new System.Windows.Forms.Button();
+            this.btn_eliminar_pelicula = new System.Windows.Forms.Button();
+            this.btn_buscar_pelicula = new System.Windows.Forms.Button();
+            this.bttn_actualizar_pelicula = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_clasificacion)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_telefono_empleado
-            // 
-            this.btn_telefono_empleado.BackColor = System.Drawing.Color.Transparent;
-            this.btn_telefono_empleado.BackgroundImage = global::cinepolis.Properties.Resources.telefono;
-            this.btn_telefono_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_telefono_empleado.Location = new System.Drawing.Point(661, 51);
-            this.btn_telefono_empleado.Name = "btn_telefono_empleado";
-            this.btn_telefono_empleado.Size = new System.Drawing.Size(65, 65);
-            this.btn_telefono_empleado.TabIndex = 96;
-            this.toolTip1.SetToolTip(this.btn_telefono_empleado, "Agregar Telefono de Cine");
-            this.btn_telefono_empleado.UseVisualStyleBackColor = false;
-            this.btn_telefono_empleado.Click += new System.EventHandler(this.btn_telefono_empleado_Click);
             // 
             // txt_buscarmod
             // 
@@ -83,42 +71,6 @@
             this.lbl_buscarmod.Size = new System.Drawing.Size(65, 21);
             this.lbl_buscarmod.TabIndex = 93;
             this.lbl_buscarmod.Text = "Buscar:";
-            // 
-            // btn_eliminar_pelicula
-            // 
-            this.btn_eliminar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
-            this.btn_eliminar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_eliminar_pelicula.Location = new System.Drawing.Point(598, 52);
-            this.btn_eliminar_pelicula.Name = "btn_eliminar_pelicula";
-            this.btn_eliminar_pelicula.Size = new System.Drawing.Size(65, 65);
-            this.btn_eliminar_pelicula.TabIndex = 90;
-            this.toolTip1.SetToolTip(this.btn_eliminar_pelicula, "Eliminar");
-            this.btn_eliminar_pelicula.UseVisualStyleBackColor = true;
-            this.btn_eliminar_pelicula.Click += new System.EventHandler(this.btn_eliminar_pelicula_Click);
-            // 
-            // btn_buscar_pelicula
-            // 
-            this.btn_buscar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
-            this.btn_buscar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_pelicula.Location = new System.Drawing.Point(406, 53);
-            this.btn_buscar_pelicula.Name = "btn_buscar_pelicula";
-            this.btn_buscar_pelicula.Size = new System.Drawing.Size(65, 65);
-            this.btn_buscar_pelicula.TabIndex = 92;
-            this.toolTip1.SetToolTip(this.btn_buscar_pelicula, "Buscar");
-            this.btn_buscar_pelicula.UseVisualStyleBackColor = true;
-            this.btn_buscar_pelicula.Click += new System.EventHandler(this.btn_buscar_pelicula_Click);
-            // 
-            // bttn_actualizar_pelicula
-            // 
-            this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
-            this.bttn_actualizar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bttn_actualizar_pelicula.Location = new System.Drawing.Point(470, 52);
-            this.bttn_actualizar_pelicula.Name = "bttn_actualizar_pelicula";
-            this.bttn_actualizar_pelicula.Size = new System.Drawing.Size(65, 65);
-            this.bttn_actualizar_pelicula.TabIndex = 91;
-            this.toolTip1.SetToolTip(this.bttn_actualizar_pelicula, "Modificar");
-            this.bttn_actualizar_pelicula.UseVisualStyleBackColor = true;
-            this.bttn_actualizar_pelicula.Click += new System.EventHandler(this.bttn_actualizar_pelicula_Click);
             // 
             // cbo_cine_region
             // 
@@ -158,18 +110,6 @@
             this.txt_descrip_cine.Name = "txt_descrip_cine";
             this.txt_descrip_cine.Size = new System.Drawing.Size(288, 20);
             this.txt_descrip_cine.TabIndex = 61;
-            // 
-            // btn_guardar
-            // 
-            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
-            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_guardar.Location = new System.Drawing.Point(534, 53);
-            this.btn_guardar.Name = "btn_guardar";
-            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
-            this.btn_guardar.TabIndex = 60;
-            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
-            this.btn_guardar.UseVisualStyleBackColor = true;
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // lbl_clasificacion
             // 
@@ -212,22 +152,56 @@
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE CINE";
             this.lbl_titulo_mantenimiento_cine.Click += new System.EventHandler(this.lbl_titulo_mantenimiento_cine_Click);
             // 
-            // btn_regresar
+            // btn_agregar_clasificacion
             // 
-            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Previous_icon;
-            this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_regresar.Location = new System.Drawing.Point(5, 7);
-            this.btn_regresar.Name = "btn_regresar";
-            this.btn_regresar.Size = new System.Drawing.Size(57, 40);
-            this.btn_regresar.TabIndex = 61;
-            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
-            this.btn_regresar.UseVisualStyleBackColor = true;
-            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            this.btn_agregar_clasificacion.BackgroundImage = global::cinepolis.Properties.Resources.Button_Add_icon;
+            this.btn_agregar_clasificacion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_agregar_clasificacion.FlatAppearance.BorderSize = 0;
+            this.btn_agregar_clasificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_agregar_clasificacion.Location = new System.Drawing.Point(330, 175);
+            this.btn_agregar_clasificacion.Name = "btn_agregar_clasificacion";
+            this.btn_agregar_clasificacion.Size = new System.Drawing.Size(31, 24);
+            this.btn_agregar_clasificacion.TabIndex = 106;
+            this.toolTip1.SetToolTip(this.btn_agregar_clasificacion, "Agregar Clasificacion");
+            this.btn_agregar_clasificacion.UseVisualStyleBackColor = true;
+            this.btn_agregar_clasificacion.Click += new System.EventHandler(this.btn_agregar_clasificacion_Click);
+            // 
+            // btn_ayuda
+            // 
+            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
+            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.FlatAppearance.BorderSize = 0;
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ayuda.Location = new System.Drawing.Point(696, 4);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
+            this.btn_ayuda.TabIndex = 104;
+            this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
+            this.btn_ayuda.UseVisualStyleBackColor = false;
+            this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(215, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 103;
+            this.toolTip1.SetToolTip(this.button1, "Actualizar");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btn_desactivar
             // 
             this.btn_desactivar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Close_icon;
             this.btn_desactivar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_desactivar.FlatAppearance.BorderSize = 0;
+            this.btn_desactivar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_desactivar.Location = new System.Drawing.Point(341, 52);
             this.btn_desactivar.Name = "btn_desactivar";
             this.btn_desactivar.Size = new System.Drawing.Size(65, 65);
@@ -240,6 +214,8 @@
             // 
             this.btn_activar.BackgroundImage = global::cinepolis.Properties.Resources.File_New_icon;
             this.btn_activar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_activar.FlatAppearance.BorderSize = 0;
+            this.btn_activar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_activar.Location = new System.Drawing.Point(277, 52);
             this.btn_activar.Name = "btn_activar";
             this.btn_activar.Size = new System.Drawing.Size(65, 65);
@@ -248,31 +224,90 @@
             this.btn_activar.UseVisualStyleBackColor = true;
             this.btn_activar.Click += new System.EventHandler(this.btn_activar_Click);
             // 
-            // button1
+            // btn_telefono_empleado
             // 
-            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(215, 53);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 65);
-            this.button1.TabIndex = 103;
-            this.toolTip1.SetToolTip(this.button1, "Actualizar");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btn_telefono_empleado.BackColor = System.Drawing.Color.Transparent;
+            this.btn_telefono_empleado.BackgroundImage = global::cinepolis.Properties.Resources.telefono;
+            this.btn_telefono_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_telefono_empleado.FlatAppearance.BorderSize = 0;
+            this.btn_telefono_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_telefono_empleado.Location = new System.Drawing.Point(661, 51);
+            this.btn_telefono_empleado.Name = "btn_telefono_empleado";
+            this.btn_telefono_empleado.Size = new System.Drawing.Size(65, 65);
+            this.btn_telefono_empleado.TabIndex = 96;
+            this.toolTip1.SetToolTip(this.btn_telefono_empleado, "Agregar Telefono de Cine");
+            this.btn_telefono_empleado.UseVisualStyleBackColor = false;
+            this.btn_telefono_empleado.Click += new System.EventHandler(this.btn_telefono_empleado_Click);
             // 
-            // btn_ayuda
+            // btn_regresar
             // 
-            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
-            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ayuda.Location = new System.Drawing.Point(696, 4);
-            this.btn_ayuda.Name = "btn_ayuda";
-            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
-            this.btn_ayuda.TabIndex = 104;
-            this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
-            this.btn_ayuda.UseVisualStyleBackColor = false;
-            this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
+            this.btn_regresar.BackgroundImage = global::cinepolis.Properties.Resources.Button_Previous_icon;
+            this.btn_regresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_regresar.FlatAppearance.BorderSize = 0;
+            this.btn_regresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_regresar.Location = new System.Drawing.Point(5, 7);
+            this.btn_regresar.Name = "btn_regresar";
+            this.btn_regresar.Size = new System.Drawing.Size(57, 55);
+            this.btn_regresar.TabIndex = 61;
+            this.toolTip1.SetToolTip(this.btn_regresar, "Regresar");
+            this.btn_regresar.UseVisualStyleBackColor = true;
+            this.btn_regresar.Click += new System.EventHandler(this.btn_regresar_Click);
+            // 
+            // btn_eliminar_pelicula
+            // 
+            this.btn_eliminar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.File_Delete_icon;
+            this.btn_eliminar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar_pelicula.FlatAppearance.BorderSize = 0;
+            this.btn_eliminar_pelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminar_pelicula.Location = new System.Drawing.Point(598, 52);
+            this.btn_eliminar_pelicula.Name = "btn_eliminar_pelicula";
+            this.btn_eliminar_pelicula.Size = new System.Drawing.Size(65, 65);
+            this.btn_eliminar_pelicula.TabIndex = 90;
+            this.toolTip1.SetToolTip(this.btn_eliminar_pelicula, "Eliminar");
+            this.btn_eliminar_pelicula.UseVisualStyleBackColor = true;
+            this.btn_eliminar_pelicula.Click += new System.EventHandler(this.btn_eliminar_pelicula_Click);
+            // 
+            // btn_buscar_pelicula
+            // 
+            this.btn_buscar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Zoom_icon;
+            this.btn_buscar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_pelicula.FlatAppearance.BorderSize = 0;
+            this.btn_buscar_pelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar_pelicula.Location = new System.Drawing.Point(406, 53);
+            this.btn_buscar_pelicula.Name = "btn_buscar_pelicula";
+            this.btn_buscar_pelicula.Size = new System.Drawing.Size(65, 65);
+            this.btn_buscar_pelicula.TabIndex = 92;
+            this.toolTip1.SetToolTip(this.btn_buscar_pelicula, "Buscar");
+            this.btn_buscar_pelicula.UseVisualStyleBackColor = true;
+            this.btn_buscar_pelicula.Click += new System.EventHandler(this.btn_buscar_pelicula_Click);
+            // 
+            // bttn_actualizar_pelicula
+            // 
+            this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
+            this.bttn_actualizar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bttn_actualizar_pelicula.FlatAppearance.BorderSize = 0;
+            this.bttn_actualizar_pelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttn_actualizar_pelicula.Location = new System.Drawing.Point(470, 52);
+            this.bttn_actualizar_pelicula.Name = "bttn_actualizar_pelicula";
+            this.bttn_actualizar_pelicula.Size = new System.Drawing.Size(65, 65);
+            this.bttn_actualizar_pelicula.TabIndex = 91;
+            this.toolTip1.SetToolTip(this.bttn_actualizar_pelicula, "Modificar");
+            this.bttn_actualizar_pelicula.UseVisualStyleBackColor = true;
+            this.bttn_actualizar_pelicula.Click += new System.EventHandler(this.bttn_actualizar_pelicula_Click);
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
+            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Location = new System.Drawing.Point(534, 53);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(65, 65);
+            this.btn_guardar.TabIndex = 60;
+            this.toolTip1.SetToolTip(this.btn_guardar, "Guardar");
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // cine
             // 
@@ -280,6 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(730, 446);
+            this.Controls.Add(this.btn_agregar_clasificacion);
             this.Controls.Add(this.btn_ayuda);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_desactivar);
@@ -332,5 +368,6 @@
         private System.Windows.Forms.Button btn_activar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_ayuda;
+        private System.Windows.Forms.Button btn_agregar_clasificacion;
     }
 }
