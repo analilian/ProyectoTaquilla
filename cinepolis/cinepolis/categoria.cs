@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace cinepolis
 {
+
     public partial class categoria : Form
     {
         conexionymanipulacion conect = new conexionymanipulacion();

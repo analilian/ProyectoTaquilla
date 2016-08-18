@@ -53,6 +53,7 @@ namespace cinepolis
             if (Ifilasafectadas > 0)
                 MessageBox.Show("Operacion realizada con exitosamente");
         }
+
         public void EjecutarQuery1(String Query)
         {
             MySqlCommand comando = new MySqlCommand(Query, conexion);

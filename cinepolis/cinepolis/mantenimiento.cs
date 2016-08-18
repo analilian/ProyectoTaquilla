@@ -26,8 +26,7 @@ namespace cinepolis
         public mantenimiento(string g)
         {
             InitializeComponent();
-            con.actualizargrid(dgv_insertar, Squeery, Stabla);
-            con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
+           
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
             nombre_columna();
             this.usuario = g;
@@ -86,32 +85,18 @@ namespace cinepolis
         {
             cb1();
             cb2();
-            cb5();
+            cb4();
+            cb3();
+            cb16();
             cb6();
             cb7();
             cb8();
             cb9();
-            cb10();
-            cb11();
-            cb12();
-            cb18();
+        
             carga_dgv_cinessala();
         }
 
-        public void limpiaringreso()
-        {
-            txt_nombre1.Clear();
-            txt_trailer.Clear();
-          
-            cbo_idioma.ResetText();
-      
-            cbo_clasificacion.ResetText();
-            cbo_categoria.ResetText();
-            
-            cbo_fecha.ResetText();
-            txt_descrip.Clear();
-            pic_portada.Image = null;
-        }
+
 
         public void limpiarmod()
         {
@@ -167,62 +152,8 @@ namespace cinepolis
             }
         }
 
-        private void btn_portada_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OpenFileDialog dlg = new OpenFileDialog();
-                dlg.Filter = "JPG Files(*.jpg)|*.jpg|GIF Files(*.gif)|*.gif|All Files(*.*)|*.*";
-                dlg.Title = "Selecciones su foto de perfil";
-                if (dlg.ShowDialog() == DialogResult.OK)
-                {
-                    imgLoc = dlg.FileName.ToString();
-                    pic_portada.ImageLocation = imgLoc;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-     
-        private void btn_guardar_Click(object sender, EventArgs e)
-        {
-            
-            string convidioma = cbo_idioma.SelectedValue.ToString();
-            string convclacif = cbo_clasificacion.SelectedValue.ToString();
-            string convcategoria = cbo_categoria.SelectedValue.ToString();
-            
-
-
-            if (txt_nombre1.Text == "" || txt_trailer.Text == "" || cbo_idioma.Text == "" ||  cbo_clasificacion.Text == "" || cbo_categoria.Text == "" ||  cbo_fecha.Text == "" || txt_descrip.Text == "" || pic_portada.ImageLocation == null)
-            {
-                MessageBox.Show("Llene todos los campos por favor");
-            }
-            else
-            {
-
-                byte[] img = null;
-                FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
-                string sql = "Insert Into pelicula (nompelicula,despelicula,imagenpelicula,vinculopelicula,pk_ididioma,pk_idclasificacion,pk_idcategorias,pk_idfcar)values('" + txt_nombre1.Text + "','" + txt_descrip.Text + "',@img,'" + txt_trailer.Text + "','" + convidioma +  "','" + convclacif + "','" + convcategoria + "','" + cbo_fecha.Text + "')";
-                if (con.rutaconectada().State != ConnectionState.Open)
-                    con.Conectar();
-                comand = new MySqlCommand(sql, con.rutaconectada());
-                comand.Parameters.Add(new MySqlParameter("@img", img));
-                int x = comand.ExecuteNonQuery();
-                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','agrego pelicula', NOW());";
-                con.EjecutarQuery1(Query);
-                con.Desconectar();
-                MessageBox.Show(" Registro guardado");
-                con.actualizargrid(dgv_insertar, Squeery, Stabla);
-                con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
-                con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
-                nombre_columna();
-                limpiaringreso();
-            }
-        }
+   
+       
 
         private void btn_buscarmod_Click(object sender, EventArgs e)
         {
@@ -241,6 +172,7 @@ namespace cinepolis
 
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
+            int ri = 0;
             try
             {
                 codigo = this.dgv_modificar_pelicula.CurrentRow.Cells[0].Value.ToString();
@@ -273,6 +205,7 @@ namespace cinepolis
                     pic_mod_portada.Image = Image.FromStream(ms);
 
                 }
+                ñl = ri;
                 con.Desconectar();
             }
             catch (Exception ex)
@@ -280,56 +213,24 @@ namespace cinepolis
                 con.Desconectar();
                 MessageBox.Show(ex.Message);
             }
-
-
-        }
-
-        private void btn_buscar_Click(object sender, EventArgs e)
-        {
-            con.Conectar();
-            String Squerys = ("Select* from Pelicula where nompelicula like'" + txt_buscar.Text + "%' or despelicula like '" + txt_buscar.Text + "%' or vinculopelicula like'" + txt_buscar.Text + "%'or pk_ididioma like'"   + txt_buscar.Text + "%'or pk_idclasificacion like'" + txt_buscar.Text + "%'or pk_idcategorias like'" + txt_buscar.Text + "%';");
-            con.buscarquery(Squerys);
-            con.actualizargrid(dgv_buscar_pelicula, Squerys, Stabla);
-            nombre_columna();
-            con.Desconectar();
-            txt_buscar.Clear();
-        }
-
-        private void btn_borrar_Click(object sender, EventArgs e)
-        {
-            String SCelda = this.dgv_buscar_pelicula.CurrentRow.Cells[0].Value.ToString();
-            var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (Vresultado == DialogResult.Yes)
-            {
-                con.Conectar();
-                String Squerys = "delete from  pelicula  where pk_idpelicula = '" + SCelda + "';";
-                con.EjecutarQuery(Squerys);
-                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','elimino pelicula', NOW());";
-                con.EjecutarQuery1(Query);
-                con.actualizargrid(dgv_insertar, Squeery, Stabla);
-                con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
-                con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
-                nombre_columna();
-                con.Desconectar();
-
-            }
-            else
-            {
-                return;
-            }
-        }
-
-        private void btn_extraer_Click(object sender, EventArgs e)
-        {
-        
-            string convidiomamod = cbo_mod_idioma.SelectedValue.ToString();
             
+
+        }
+
+     
+      
+
+        public void modificar()
+        {
+            int ri = 1;
+            string convidiomamod = cbo_mod_idioma.SelectedValue.ToString();
+
             string convcategoriamod = cbo_mod_categoria.SelectedValue.ToString();
             string convclacifmod = cbo_mod_clasificacion.SelectedValue.ToString();
-         
 
 
-            if (txt_mod_nombre.Text == "" || txt_mod_trailer.Text == "" || cbo_mod_idioma.Text == "" ||  cbo_mod_categoria.Text == "" || cbo_mod_fecha.Text == "" || txt_mod_descrip.Text == "" || pic_mod_portada.ImageLocation == null)
+
+            if (txt_mod_nombre.Text == "" || txt_mod_trailer.Text == "" || cbo_mod_idioma.Text == "" || cbo_mod_categoria.Text == "" || cbo_mod_fecha.Text == "" || txt_mod_descrip.Text == "" || pic_mod_portada.ImageLocation == null)
             {
                 MessageBox.Show("Llene todos los campos por favor");
             }
@@ -340,8 +241,8 @@ namespace cinepolis
                 FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 img = br.ReadBytes((int)fs.Length);
- 
-                String sql = "update pelicula set nompelicula ='" + txt_mod_nombre.Text + "',despelicula='" + txt_mod_descrip.Text + "' ,imagenpelicula= @img ,vinculopelicula ='" + txt_mod_trailer.Text +  "',pk_ididioma ='" + convidiomamod +  "',pk_idclasificacion ='" + convclacifmod + "' ,pk_idcategorias='" + convcategoriamod +  "',pk_idfcar = '" + cbo_mod_fecha.Text +"'  where pk_idpelicula='" + codigo + "'";
+
+                String sql = "update pelicula set nompelicula ='" + txt_mod_nombre.Text + "',despelicula='" + txt_mod_descrip.Text + "' ,imagenpelicula= @img ,vinculopelicula ='" + txt_mod_trailer.Text + "',pk_ididioma ='" + convidiomamod + "',pk_idclasificacion ='" + convclacifmod + "' ,pk_idcategorias='" + convcategoriamod + "',pk_idfcar = '" + cbo_mod_fecha.Text + "'  where pk_idpelicula='" + codigo + "'";
 
                 if (con.rutaconectada().State != ConnectionState.Open)
                     con.Conectar();
@@ -351,12 +252,68 @@ namespace cinepolis
                 MessageBox.Show(" Registro guardado");
                 String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','modifico pelicula', NOW());";
                 con.EjecutarQuery1(Query);
-                con.actualizargrid(dgv_insertar, Squeery, Stabla);
-                con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
+        
                 con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
                 nombre_columna();
                 limpiarmod();
+                ñl = ri;
+             
+                
             }
+
+        }
+        public void insertar()
+        {
+            string convidioma = cbo_mod_idioma.SelectedValue.ToString();
+            string convclacif = cbo_mod_clasificacion.SelectedValue.ToString();
+            string convcategoria =cbo_mod_categoria.SelectedValue.ToString();
+
+
+
+            if (txt_mod_nombre.Text == "" || txt_mod_trailer.Text == "" || cbo_mod_idioma.Text == "" || cbo_mod_clasificacion.Text == "" || cbo_mod_categoria.Text == "" || cbo_mod_fecha.Text == "" || txt_mod_descrip.Text == "" || pic_mod_portada.ImageLocation == null)
+            {
+                MessageBox.Show("Llene todos los campos por favor");
+            }
+            else
+            {
+
+                byte[] img = null;
+                FileStream fs = new FileStream(imgLoc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+                string sql = "Insert Into pelicula (nompelicula,despelicula,imagenpelicula,vinculopelicula,pk_ididioma,pk_idclasificacion,pk_idcategorias,pk_idfcar)values('" + txt_mod_nombre.Text + "','" + txt_mod_descrip.Text + "',@img,'" + txt_mod_trailer.Text + "','" + convidioma + "','" + convclacif + "','" + convcategoria + "','" + cbo_mod_fecha.Text + "')";
+                if (con.rutaconectada().State != ConnectionState.Open)
+                    con.Conectar();
+                comand = new MySqlCommand(sql, con.rutaconectada());
+                comand.Parameters.Add(new MySqlParameter("@img", img));
+                int x = comand.ExecuteNonQuery();
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','agrego pelicula', NOW());";
+                con.EjecutarQuery1(Query);
+                con.Desconectar();
+                MessageBox.Show(" Registro guardado");
+               
+                con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+                nombre_columna();
+                limpiarmod();
+                ñl = 1;
+               
+            }
+         
+
+        }
+        int ñl = 1;
+        private void btn_extraer_Click(object sender, EventArgs e)
+        {
+            
+            if(ñl==1)
+            {
+                insertar();
+            }
+            else
+            {
+                modificar();
+            }
+         
         }
 
         private void btn_portada1_Click(object sender, EventArgs e)
@@ -468,24 +425,8 @@ namespace cinepolis
         }
         public void nombre_columna()
         {
-            this.dgv_insertar.Columns[0].HeaderText = "No";
-            this.dgv_insertar.Columns[1].HeaderText = "Nombre";
-            this.dgv_insertar.Columns[2].HeaderText = "Descripcion";
-            this.dgv_insertar.Columns[3].HeaderText = "Portada";
-            this.dgv_insertar.Columns[4].HeaderText = "Vinculo";
-            this.dgv_insertar.Columns[5].HeaderText = "Idioma";
-            this.dgv_insertar.Columns[6].HeaderText = "Clasificacion";
-            this.dgv_insertar.Columns[7].HeaderText = "Categoria";
-            this.dgv_insertar.Columns[8].HeaderText = "Categoria";
-            this.dgv_buscar_pelicula.Columns[0].HeaderText = "No";
-            this.dgv_buscar_pelicula.Columns[1].HeaderText = "Nombre";
-            this.dgv_buscar_pelicula.Columns[2].HeaderText = "Descripcion";
-            this.dgv_buscar_pelicula.Columns[3].HeaderText = "Portada";
-            this.dgv_buscar_pelicula.Columns[4].HeaderText = "Vinculo";
-            this.dgv_buscar_pelicula.Columns[5].HeaderText = "Idioma";
-            this.dgv_buscar_pelicula.Columns[6].HeaderText = "Clasificacion";
-            this.dgv_buscar_pelicula.Columns[7].HeaderText = "Categoria";
-            this.dgv_buscar_pelicula.Columns[8].HeaderText = "fecha";
+          
+           
 
             this.dgv_modificar_pelicula.Columns[0].HeaderText = "No";
             this.dgv_modificar_pelicula.Columns[1].HeaderText = "Nombre";
@@ -571,12 +512,65 @@ namespace cinepolis
             }
         }
 
-        
+        private void cb3()
+        {
+            try
+            {
 
 
-       
+                con.Conectar();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idcine, nomcine from cine;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Cine");
+                cbo_relacion_pelicula_cine1.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_pelicula_cine1.ValueMember = ("pk_idcine");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_pelicula_cine1.DisplayMember = ("nomcine");
+                con.Desconectar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-        private void cb5()
+
+        private void cb4()
+        {
+            try
+            {
+                string portal = cbo_relacion_pelicula_cine1.Text;
+
+                con.Conectar();
+                //se inicia un DataSet
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select a.pk_idcinesal, b.nomsala from cinessala a, sala b, cine c where a.pk_idcine=c.pk_idcine and a.pk_idsala=b.pk_idsala and c.nomcine= '"+ portal +"';";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Sala");
+                cbo_relacion_pelicula_sala1.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_relacion_pelicula_sala1.ValueMember = ("pk_idcinesal");
+                //se indica el valor a desplegar en el combobox
+                cbo_relacion_pelicula_sala1.DisplayMember = ("nomsala");
+                con.Desconectar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+
+        private void cb16()
         {
             try
             {
@@ -584,15 +578,15 @@ namespace cinepolis
                 con.Conectar();
                 DataSet ds = new DataSet();
                 //se indica la consulta en sql
-                String Query = "select pk_ididioma, nomidioma from idioma;";
+                String Query = "select pk_idfcar, fechainicar,fechafinalcar from fechascartelera;";
                 MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
                 //se indica con quu tabla se llena
-                dad.Fill(ds, "Idioma");
-                cbo_idioma.DataSource = ds.Tables[0].DefaultView;
+                dad.Fill(ds, "Fecha");
+                cbo_mod_fecha.DataSource = ds.Tables[0].DefaultView;
                 //indicamos el valor de los miembros
-                cbo_idioma.ValueMember = ("pk_ididioma");
+                cbo_mod_fecha.ValueMember = ("pk_idfcar");
                 //se indica el valor a desplegar en el combobox
-                cbo_idioma.DisplayMember = ("nomidioma");
+                cbo_mod_fecha.DisplayMember = ("fechainicar"+"-"+ "fechafinalcar");
                 con.Desconectar();
             }
             catch (Exception ex)
@@ -709,54 +703,7 @@ namespace cinepolis
         }
 
 
-        private void cb10()
-        {
-            try
-            {
-                con.Conectar();
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idclasificacion, nomclasificacion from clasificacion;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Clasificacion");
-                cbo_clasificacion.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_clasificacion.ValueMember = ("pk_idclasificacion");
-                //se indica el valor a desplegar en el combobox
-                cbo_clasificacion.DisplayMember = ("nomclasificacion");
-                con.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-
-        private void cb11()
-        {
-            try
-            {
-                con.Conectar();
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idcategorias, nomcategoria from categoria;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Categoria");
-                cbo_categoria.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_categoria.ValueMember = ("pk_idcategorias");
-                //se indica el valor a desplegar en el combobox
-                cbo_categoria.DisplayMember = ("nomcategoria");
-                con.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+       
 
         private void txt_mod_nombre_TextChanged(object sender, EventArgs e)
         {
@@ -765,57 +712,7 @@ namespace cinepolis
 
 
 
-        private void cb12()
-        {
-            try
-            {
-
-                con.Conectar();
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idfcar, fechainicar from fechascartelera;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Fecha");
-                cbo_fecha.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_fecha.ValueMember = ("pk_idfcar");
-                //se indica el valor a desplegar en el combobox
-                cbo_fecha.DisplayMember = ("fechainicar");
-                con.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-
-
-        private void cb18()
-        {
-            try
-            {
-
-                con.Conectar();
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idfcar, fechainicar from fechascartelera;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Fecha");
-                cbo_mod_fecha.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_mod_fecha.ValueMember = ("pk_idfcar");
-                //se indica el valor a desplegar en el combobox
-                cbo_mod_fecha.DisplayMember = ("fechainicar");
-                con.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+      
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -830,8 +727,8 @@ namespace cinepolis
             con.EjecutarQuery(Squery);
             String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','agrego cartelera de pelicula', NOW());";
             con.EjecutarQuery1(Query);
-            con.actualizargrid(dgv_insertar, Squeery, Stabla);
-            con.actualizargrid(dgv_buscar_pelicula, Squeery, Stabla);
+      
+            
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
             nombre_columna();
             con.Desconectar();
@@ -863,23 +760,74 @@ namespace cinepolis
 
         }
 
-        private void button1_Click_3(object sender, EventArgs e)
+       
+        private void cbo_fecha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            con.Conectar();
-            String Squerys = ("Select* from cartelerapelicula where pk_ like'" + txt_buscar.Text + "%' or despelicula like '" + txt_buscar.Text + "%' or vinculopelicula like'" + txt_buscar.Text + "%'or pk_ididioma like'" + txt_buscar.Text + "%'or pk_idclasificacion like'" + txt_buscar.Text + "%'or pk_idcategorias like'" + txt_buscar.Text + "%';");
-            con.buscarquery(Squerys);
-            con.actualizargrid(dgv_buscar_pelicula, Squerys, Stabla);
-            nombre_columna();
-            con.Desconectar();
-            txt_buscar.Clear();
+
         }
 
-
-
-        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
-        private void btn_ayuda_Click(object sender, EventArgs e)
+        private void button1_Click_4(object sender, EventArgs e)
         {
-            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
+            String SCelda = this.dgv_modificar_pelicula.CurrentRow.Cells[0].Value.ToString();
+            var Vresultado = MessageBox.Show("DESEA BORRAR EL REGISTRO SELECCIONADO", "CONFIRME SU ACCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (Vresultado == DialogResult.Yes)
+            {
+                con.Conectar();
+                String Squerys = "delete from  pelicula  where pk_idpelicula = '" + SCelda + "';";
+                con.EjecutarQuery(Squerys);
+                String Query = "insert into bitacora(usubitacora,ipusuario,eventobitacora,fechabitacora) values('" + usuario + "','" + con.ip() + "','elimino pelicula', NOW());";
+                con.EjecutarQuery1(Query);
+
+                con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+                nombre_columna();
+                con.Desconectar();
+
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btn_desactivar_Click(object sender, EventArgs e)
+        {
+            txt_mod_nombre.Enabled = false;
+            txt_mod_trailer.Enabled = false;
+            cbo_mod_clasificacion.Enabled=false;
+            cbo_mod_categoria.Enabled = false;
+            cbo_mod_fecha.Enabled = false;
+            txt_mod_descrip.Enabled = false;
+            btn_desactivar.Enabled = false;
+            btn_actualizar.Enabled = false;
+            btn_actualizar.Enabled = false;
+            btn_buscarmod.Enabled = false;
+            btn_eliminar.Enabled = false;
+            btn_portada1.Enabled = false;
+            btn_activar.Enabled = true;
+            txt_modificarbuscar.Enabled = true;
+        }
+
+        private void btn_activar_Click(object sender, EventArgs e)
+        {
+            txt_mod_nombre.Enabled = true;
+            txt_mod_trailer.Enabled = true;
+            cbo_mod_clasificacion.Enabled = true;
+            cbo_mod_categoria.Enabled = true;
+            cbo_mod_fecha.Enabled = true;
+            txt_mod_descrip.Enabled = true;
+            btn_desactivar.Enabled = true;
+            btn_actualizar.Enabled = true;
+            btn_actualizar.Enabled = true;
+            btn_buscarmod.Enabled = true;
+            btn_eliminar.Enabled = true;
+            btn_portada1.Enabled = true;
+            btn_activar.Enabled = false;
+            txt_modificarbuscar.Enabled = false;
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
         }
     }
 }
