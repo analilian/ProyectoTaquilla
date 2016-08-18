@@ -18,21 +18,47 @@ namespace proyectotaquilla
 
         conexionn conect = new conexionn();
 
-        MySqlConnection conexion = new MySqlConnection("server=localhost; database=bdcinetopiaa; Uid=root; pwd=;");
+        MySqlConnection conexion = new MySqlConnection("server=192.168.0.10; database=bdcinetopiaa; Uid=ana; pwd=1234;");
 
+        public string seleregion;
         public FPrincipal()
         {
             InitializeComponent();
         }
 
+
+        //Nombre_del_programador:Ana Lilian
+        //Fecha de inicio: 13/08/2016
+        //Fecha finalizacion: 13/08/2016
+
         private void bvercartelera_Click(object sender, EventArgs e)
         {
+            if (cbo_region.SelectedItem == null)
+            {
 
-            string selecine = cbComplejo.SelectedItem.ToString();
-            string seleregion = cbo_region.SelectedItem.ToString();
-            cartelera carte = new cartelera(seleregion, selecine);
-            this.Hide();
-            carte.Show();
+                MessageBox.Show("Seleccione una region por favor");
+            }
+            else
+            {
+                seleregion = cbo_region.SelectedItem.ToString();
+            }
+
+            if (cbComplejo.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un complejo por favor");
+            }
+            else
+            {
+                string selecine = cbComplejo.SelectedItem.ToString();
+
+                //MessageBox.Show(selecine);
+
+                //MessageBox.Show(seleregion);
+                cartelera carte = new cartelera(seleregion, selecine);
+                this.Hide();
+                carte.Show();
+            }
+
 
 
         }
@@ -41,10 +67,15 @@ namespace proyectotaquilla
         {
             timer1.Start();
             cbr();
-           // cbr2();
+            // cbr2();
 
 
         }
+
+
+        //Nombre_del_programador:Ana Lilian
+        //Fecha de inicio: 27/07/2016
+        //Fecha finalizacion: 27/07/2016
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -92,7 +123,7 @@ namespace proyectotaquilla
                 cbo_region.Items.Add(mdr.GetString("nombreregion"));
             }
 
-            
+
             conexion.Close();
 
         }
@@ -126,14 +157,22 @@ namespace proyectotaquilla
             while (mdr.Read())
             {
                 cbComplejo.Items.Add(mdr.GetString("nomcine"));
-             
+
             }
             cbComplejo.ResetText();
+
+            //bvercartelera_Click(seleccioncine,sel);
             conexion.Close();
-            
+
         }
 
-       
+        private void cbComplejo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //string seleccioncine = cbComplejo.SelectedItem.ToString();
+            //bvercartelera_Click(seleccioncine);
+        }
+
+
     }
 }
 

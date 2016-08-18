@@ -28,6 +28,13 @@ namespace proyectotaquilla
 
         }
 
+        public butacas(int idcartepelicula, int idcinesala,string region)
+        {
+            InitializeComponent();
+            //   this.comparar = cantidadTotal;
+
+        }
+
         int comparar = 0;
         
 

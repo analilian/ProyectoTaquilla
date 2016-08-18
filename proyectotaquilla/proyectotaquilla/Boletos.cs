@@ -20,9 +20,12 @@ namespace proyectotaquilla
             InitializeComponent();
         }
 
-        public boletos(string proyeccion)
+        public boletos(int proyeccion, string seleccionhorario)
         {
-            String proy = proyeccion;
+            string proy = Convert.ToString(proyeccion);
+           
+            //String proy = proyeccion;
+            MessageBox.Show(proy);
             InitializeComponent();
         }
 

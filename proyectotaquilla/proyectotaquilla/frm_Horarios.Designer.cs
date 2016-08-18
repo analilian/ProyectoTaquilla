@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbltitulo1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_sinopsis = new System.Windows.Forms.Button();
             this.cbo_Horario = new System.Windows.Forms.ComboBox();
             this.btn_seleboleto = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -42,15 +42,16 @@
             this.lbltitulo1.Size = new System.Drawing.Size(0, 21);
             this.lbltitulo1.TabIndex = 44;
             // 
-            // button4
+            // btn_sinopsis
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkCyan;
-            this.button4.Location = new System.Drawing.Point(135, 160);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 32);
-            this.button4.TabIndex = 45;
-            this.button4.Text = "Ver Sinopsis";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_sinopsis.BackColor = System.Drawing.Color.DarkCyan;
+            this.btn_sinopsis.Location = new System.Drawing.Point(135, 160);
+            this.btn_sinopsis.Name = "btn_sinopsis";
+            this.btn_sinopsis.Size = new System.Drawing.Size(113, 32);
+            this.btn_sinopsis.TabIndex = 45;
+            this.btn_sinopsis.Text = "Ver Sinopsis";
+            this.btn_sinopsis.UseVisualStyleBackColor = false;
+            this.btn_sinopsis.Click += new System.EventHandler(this.button4_Click);
             // 
             // cbo_Horario
             // 
@@ -81,7 +82,7 @@
             this.ClientSize = new System.Drawing.Size(384, 253);
             this.Controls.Add(this.btn_seleboleto);
             this.Controls.Add(this.cbo_Horario);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_sinopsis);
             this.Controls.Add(this.lbltitulo1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -96,7 +97,7 @@
 
         #endregion
         private System.Windows.Forms.Label lbltitulo1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_sinopsis;
         private System.Windows.Forms.ComboBox cbo_Horario;
         private System.Windows.Forms.Button btn_seleboleto;
     }

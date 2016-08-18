@@ -117,32 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Un año después de engañar al FBI y ganar la adulación del
- público con sus espectáculos de magia al estilo Robin Hood,
- los Cuatro Jinetes reaparecen en una actuación con la
- esperanza de exponer las prácticas poco éticas de un magnate
- de la tecnología. El hombre detrás de su acto de desaparición
- no es otro que Walter Mabry (Daniel Radcliffe), un prodigio en
- la tecnología que pone en peligro a los Jinetes y los lleva a 
-cometer un asalto aún más peligroso. Su única esperanza es 
-llevar a cabo un último truco sin precedentes para limpiar sus
- nombres y revelar la mente maestra detrás de todo.</value>
-  </data>
   <data name="axShockwaveFlash1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAA+wEAAAIB
-        AAAAAQAAAAAAAAAAAAAAAOYBAABnVWZVAA4AANssAABTFgAACAACAAAAAAAIAEwAAABoAHQAdABwAHMA
-        OgAvAC8AdwB3AHcALgB5AG8AdQB0AHUAYgBlAC4AYwBvAG0ALwB2AC8AcQBCAFoATQB6AE8ANQBNADYA
-        cQBZAAAACABMAAAAaAB0AHQAcABzADoALwAvAHcAdwB3AC4AeQBvAHUAdAB1AGIAZQAuAGMAbwBtAC8A
-        dgAvAHEAQgBaAE0AegBPADUATQA2AHEAWQAAAAgADgAAAFcAaQBuAGQAbwB3AAAACAAGAAAALQAxAAAA
-        CAAGAAAALQAxAAAACAAKAAAASABpAGcAaAAAAAgAAgAAAAAACAAGAAAALQAxAAAACAAAAAAACAACAAAA
-        AAAIABAAAABTAGgAbwB3AEEAbABsAAAACAAEAAAAMAAAAAgABAAAADAAAAAIAAIAAAAAAAgAAAAAAAgA
-        AgAAAAAADQAAAAAAAAAAAAAAAAAAAAAACAAEAAAAMQAAAAgABAAAADAAAAAIAAAAAAAIAAQAAAAwAAAA
-        CAAIAAAAYQBsAGwAAAAIAAwAAABmAGEAbABzAGUAAAAIAAwAAABmAGEAbABzAGUAAAAIAAwAAAAxADkA
-        MQAyADgAAAAIAAwAAABzAGMAYQBsAGUAAAAL
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAFQIAAAIB
+        AAAAAQAAAAAAAAAAAAAAAAACAABnVWZVAA4AAJhAAADDIwAACAACAAAAAAAIAFoAAAAgAGgAdAB0AHAA
+        cwA6AC8ALwB3AHcAdwAuAHkAbwB1AHQAdQBiAGUALgBjAG8AbQAvAHcAYQB0AGMAaAA/AHYAPQB6AGoA
+        TwB3ADIAeQBuAFEAMwBRAFEAAAAIAFoAAAAgAGgAdAB0AHAAcwA6AC8ALwB3AHcAdwAuAHkAbwB1AHQA
+        dQBiAGUALgBjAG8AbQAvAHcAYQB0AGMAaAA/AHYAPQB6AGoATwB3ADIAeQBuAFEAMwBRAFEAAAAIAA4A
+        AABXAGkAbgBkAG8AdwAAAAgABgAAAC0AMQAAAAgABgAAAC0AMQAAAAgACgAAAEgAaQBnAGgAAAAIAAYA
+        AABMAFQAAAAIAAYAAAAtADEAAAAIAAAAAAAIAAIAAAAAAAgAEAAAAE4AbwBTAGMAYQBsAGUAAAAIAAQA
+        AAAwAAAACAAEAAAAMAAAAAgAAgAAAAAACAAAAAAACAACAAAAAAANAAAAAAAAAAAAAAAAAAAAAAAIAAQA
+        AAAxAAAACAAEAAAAMAAAAAgAAAAAAAgABAAAADAAAAAIAAgAAABhAGwAbAAAAAgADAAAAGYAYQBsAHMA
+        ZQAAAAgADAAAAGYAYQBsAHMAZQAAAAgABgAAAC0AMQAAAAgADAAAAHMAYwBhAGwAZQAAAAs=
 </value>
   </data>
 </root>
