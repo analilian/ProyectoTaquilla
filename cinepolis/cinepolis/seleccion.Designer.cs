@@ -57,6 +57,8 @@
             this.btn_usuario.BackColor = System.Drawing.Color.Transparent;
             this.btn_usuario.BackgroundImage = global::cinepolis.Properties.Resources.User_Clients_icon;
             this.btn_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_usuario.FlatAppearance.BorderSize = 0;
+            this.btn_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_usuario.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_usuario.Location = new System.Drawing.Point(890, 324);
             this.btn_usuario.Name = "btn_usuario";
@@ -71,6 +73,8 @@
             this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
             this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
             this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.FlatAppearance.BorderSize = 0;
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ayuda.Location = new System.Drawing.Point(3, 325);
             this.btn_ayuda.Name = "btn_ayuda";
@@ -141,7 +145,7 @@
             // btn_bitacora
             // 
             this.btn_bitacora.BackgroundImage = global::cinepolis.Properties.Resources.FONDO_ICONO;
-            this.btn_bitacora.Location = new System.Drawing.Point(39, 333);
+            this.btn_bitacora.Location = new System.Drawing.Point(12, 41);
             this.btn_bitacora.Name = "btn_bitacora";
             this.btn_bitacora.Size = new System.Drawing.Size(94, 24);
             this.btn_bitacora.TabIndex = 14;

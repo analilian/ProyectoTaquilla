@@ -203,6 +203,16 @@ namespace cinepolis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Edit_Document_icon {
+            get {
+                object obj = ResourceManager.GetObject("Edit-Document-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap File_Delete_icon {
             get {
                 object obj = ResourceManager.GetObject("File-Delete-icon", resourceCulture);

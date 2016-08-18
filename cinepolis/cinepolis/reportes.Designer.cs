@@ -62,6 +62,7 @@
             this.btn_peliculataquillera.TabIndex = 4;
             this.btn_peliculataquillera.Text = "PELÍCULA MAS TAQUILLERA";
             this.btn_peliculataquillera.UseVisualStyleBackColor = true;
+            this.btn_peliculataquillera.Click += new System.EventHandler(this.btn_peliculataquillera_Click);
             // 
             // btn_ganancias
             // 
@@ -73,6 +74,7 @@
             this.btn_ganancias.TabIndex = 5;
             this.btn_ganancias.Text = "GANANCIAS";
             this.btn_ganancias.UseVisualStyleBackColor = true;
+            this.btn_ganancias.Click += new System.EventHandler(this.btn_ganancias_Click);
             // 
             // btn_horariosmasusados
             // 
@@ -84,6 +86,7 @@
             this.btn_horariosmasusados.TabIndex = 6;
             this.btn_horariosmasusados.Text = "HORARIOS MAS UTILIZADOS ";
             this.btn_horariosmasusados.UseVisualStyleBackColor = true;
+            this.btn_horariosmasusados.Click += new System.EventHandler(this.btn_horariosmasusados_Click);
             // 
             // btn_puntoscliente
             // 
@@ -95,6 +98,7 @@
             this.btn_puntoscliente.TabIndex = 7;
             this.btn_puntoscliente.Text = "PUNTOS DE CLIENTES";
             this.btn_puntoscliente.UseVisualStyleBackColor = true;
+            this.btn_puntoscliente.Click += new System.EventHandler(this.btn_puntoscliente_Click);
             // 
             // btn_regresar
             // 

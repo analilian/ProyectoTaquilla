@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="itextsharp">
       <HintPath>..\..\..\..\..\Desktop\programas\itextsharp-all-5.5.9\itextsharp-dll-core\itextsharp.dll</HintPath>
     </Reference>
@@ -45,6 +50,8 @@
     <Reference Include="MySql.Data, Version=7.0.2.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +88,30 @@
       <DependentUpon>clasificacion.cs</DependentUpon>
     </Compile>
     <Compile Include="conexionymanipulacion.cs" />
+    <Compile Include="CR_ganancia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CR_ganancia.Designer.cs">
+      <DependentUpon>CR_ganancia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR_horario_mas_optimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CR_horario_mas_optimo.Designer.cs">
+      <DependentUpon>CR_horario_mas_optimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR_pelicula_taquillera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CR_pelicula_taquillera.Designer.cs">
+      <DependentUpon>CR_pelicula_taquillera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR_tarjeta_puntos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CR_tarjeta_puntos.Designer.cs">
+      <DependentUpon>CR_tarjeta_puntos.cs</DependentUpon>
+    </Compile>
     <Compile Include="empleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +131,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ganacia_cine.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ganacia_cine.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Horario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="horario2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>horario2.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="mantenimiento.cs">
       <SubType>Form</SubType>
@@ -117,6 +160,12 @@
     </Compile>
     <Compile Include="MDIParent1.Designer.cs">
       <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="peliculamastaquillera.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>peliculamastaquillera.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -131,6 +180,12 @@
     </Compile>
     <Compile Include="Puesto.Designer.cs">
       <DependentUpon>Puesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="puntos_cliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>puntos_cliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Region.cs">
       <SubType>Form</SubType>
@@ -180,6 +235,18 @@
     <EmbeddedResource Include="clasificacion.resx">
       <DependentUpon>clasificacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CR_ganancia.resx">
+      <DependentUpon>CR_ganancia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_horario_mas_optimo.resx">
+      <DependentUpon>CR_horario_mas_optimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_pelicula_taquillera.resx">
+      <DependentUpon>CR_pelicula_taquillera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_tarjeta_puntos.resx">
+      <DependentUpon>CR_tarjeta_puntos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="empleado.resx">
       <DependentUpon>empleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,14 +256,26 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ganacia_cine.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ganacia_cine.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="horario2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>horario2.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento.resx">
       <DependentUpon>mantenimiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="peliculamastaquillera.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>peliculamastaquillera.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -213,6 +292,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Puesto.resx">
       <DependentUpon>Puesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="puntos_cliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>puntos_cliente.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Region.resx">
       <DependentUpon>Region.cs</DependentUpon>
@@ -338,6 +421,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\moddificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-Document-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

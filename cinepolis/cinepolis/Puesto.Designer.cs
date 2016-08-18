@@ -55,12 +55,15 @@
             this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
             this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
             this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.FlatAppearance.BorderSize = 0;
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ayuda.Location = new System.Drawing.Point(776, 3);
+            this.btn_ayuda.Location = new System.Drawing.Point(781, 4);
             this.btn_ayuda.Name = "btn_ayuda";
             this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
             this.btn_ayuda.TabIndex = 121;
             this.btn_ayuda.UseVisualStyleBackColor = false;
+            this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
             // 
             // button1
             // 
@@ -174,15 +177,15 @@
             // 
             this.lbl_titulo_mantenimiento_cine.AutoSize = true;
             this.lbl_titulo_mantenimiento_cine.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(144, 21);
+            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(227, 14);
             this.lbl_titulo_mantenimiento_cine.Name = "lbl_titulo_mantenimiento_cine";
-            this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(535, 36);
+            this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(415, 36);
             this.lbl_titulo_mantenimiento_cine.TabIndex = 107;
-            this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE CLASIFICACIÓN";
+            this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE PUESTO";
             // 
             // bttn_actualizar_pelicula
             // 
-            this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
+            this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Edit_Document_icon;
             this.bttn_actualizar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_pelicula.FlatAppearance.BorderSize = 0;
             this.bttn_actualizar_pelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -286,6 +289,7 @@
             this.Controls.Add(this.lbl_clasificacion);
             this.Controls.Add(this.txt_descrip_clasificacion);
             this.Controls.Add(this.btn_guardar);
+            this.MaximizeBox = false;
             this.Name = "Puesto";
             this.Text = "Puesto";
             this.Load += new System.EventHandler(this.Puesto_Load);

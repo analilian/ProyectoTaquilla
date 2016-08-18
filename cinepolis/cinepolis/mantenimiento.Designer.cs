@@ -86,6 +86,7 @@
             this.lbl_codigo_buscar = new System.Windows.Forms.Label();
             this.dgv_buscar_pelicula = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_relacion_pelicula = new System.Windows.Forms.Button();
             this.btn_agregar_relacion4 = new System.Windows.Forms.Button();
             this.cbo_relacion_pelicula_proyeccion1 = new System.Windows.Forms.ComboBox();
@@ -94,10 +95,8 @@
             this.btn_agregar_relacion2 = new System.Windows.Forms.Button();
             this.btn_agregar_relacion1 = new System.Windows.Forms.Button();
             this.dgv_relacion_pelicula_hora = new System.Windows.Forms.DataGridView();
-            this.cbo_relacion_pelicula_cine1 = new System.Windows.Forms.ComboBox();
             this.lbl_relacion_cine1 = new System.Windows.Forms.Label();
             this.cbo_relacion_pelicula_hora1 = new System.Windows.Forms.ComboBox();
-            this.cbo_relacion_pelicula_sala1 = new System.Windows.Forms.ComboBox();
             this.cbo_relacion_pelicula = new System.Windows.Forms.ComboBox();
             this.lbl_relacion_Hora1 = new System.Windows.Forms.Label();
             this.lbl_relacion_sala1 = new System.Windows.Forms.Label();
@@ -107,9 +106,10 @@
             this.lbl_titulo_mantenimiento_cine = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btn_regresar = new System.Windows.Forms.Button();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.btn_ayuda = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_cerrarsesion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_comentario = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_modificar_pelicula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mod_portada)).BeginInit();
@@ -121,7 +121,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscar_pelicula)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_relacion_pelicula_hora)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -166,7 +165,7 @@
             this.btn_buscarmod.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscarmod.FlatAppearance.BorderSize = 0;
             this.btn_buscarmod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscarmod.Location = new System.Drawing.Point(514, 272);
+            this.btn_buscarmod.Location = new System.Drawing.Point(524, 6);
             this.btn_buscarmod.Name = "btn_buscarmod";
             this.btn_buscarmod.Size = new System.Drawing.Size(65, 65);
             this.btn_buscarmod.TabIndex = 82;
@@ -178,7 +177,7 @@
             // 
             this.lbl_buscar.AutoSize = true;
             this.lbl_buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_buscar.Location = new System.Drawing.Point(68, 221);
+            this.lbl_buscar.Location = new System.Drawing.Point(47, 301);
             this.lbl_buscar.Name = "lbl_buscar";
             this.lbl_buscar.Size = new System.Drawing.Size(53, 16);
             this.lbl_buscar.TabIndex = 81;
@@ -186,7 +185,7 @@
             // 
             // txt_modificarbuscar
             // 
-            this.txt_modificarbuscar.Location = new System.Drawing.Point(138, 220);
+            this.txt_modificarbuscar.Location = new System.Drawing.Point(117, 300);
             this.txt_modificarbuscar.MaxLength = 20;
             this.txt_modificarbuscar.Name = "txt_modificarbuscar";
             this.txt_modificarbuscar.Size = new System.Drawing.Size(299, 20);
@@ -206,7 +205,7 @@
             // 
             // txt_mod_descrip
             // 
-            this.txt_mod_descrip.Location = new System.Drawing.Point(499, 121);
+            this.txt_mod_descrip.Location = new System.Drawing.Point(478, 201);
             this.txt_mod_descrip.MaxLength = 100;
             this.txt_mod_descrip.Multiline = true;
             this.txt_mod_descrip.Name = "txt_mod_descrip";
@@ -217,7 +216,7 @@
             // 
             this.cbo_mod_fecha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mod_fecha.FormattingEnabled = true;
-            this.cbo_mod_fecha.Location = new System.Drawing.Point(499, 92);
+            this.cbo_mod_fecha.Location = new System.Drawing.Point(478, 172);
             this.cbo_mod_fecha.Name = "cbo_mod_fecha";
             this.cbo_mod_fecha.Size = new System.Drawing.Size(151, 21);
             this.cbo_mod_fecha.TabIndex = 73;
@@ -226,7 +225,7 @@
             // 
             this.cbo_mod_categoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mod_categoria.FormattingEnabled = true;
-            this.cbo_mod_categoria.Location = new System.Drawing.Point(499, 65);
+            this.cbo_mod_categoria.Location = new System.Drawing.Point(478, 145);
             this.cbo_mod_categoria.Name = "cbo_mod_categoria";
             this.cbo_mod_categoria.Size = new System.Drawing.Size(151, 21);
             this.cbo_mod_categoria.TabIndex = 70;
@@ -235,7 +234,7 @@
             // 
             this.lbl_mod_categoria.AutoSize = true;
             this.lbl_mod_categoria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_categoria.Location = new System.Drawing.Point(398, 66);
+            this.lbl_mod_categoria.Location = new System.Drawing.Point(377, 146);
             this.lbl_mod_categoria.Name = "lbl_mod_categoria";
             this.lbl_mod_categoria.Size = new System.Drawing.Size(95, 21);
             this.lbl_mod_categoria.TabIndex = 69;
@@ -245,7 +244,7 @@
             // 
             this.cbo_mod_clasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mod_clasificacion.FormattingEnabled = true;
-            this.cbo_mod_clasificacion.Location = new System.Drawing.Point(208, 151);
+            this.cbo_mod_clasificacion.Location = new System.Drawing.Point(187, 231);
             this.cbo_mod_clasificacion.Name = "cbo_mod_clasificacion";
             this.cbo_mod_clasificacion.Size = new System.Drawing.Size(151, 21);
             this.cbo_mod_clasificacion.TabIndex = 68;
@@ -254,7 +253,7 @@
             // 
             this.lbl_mod_clasificacion.AutoSize = true;
             this.lbl_mod_clasificacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_clasificacion.Location = new System.Drawing.Point(67, 151);
+            this.lbl_mod_clasificacion.Location = new System.Drawing.Point(46, 231);
             this.lbl_mod_clasificacion.Name = "lbl_mod_clasificacion";
             this.lbl_mod_clasificacion.Size = new System.Drawing.Size(112, 21);
             this.lbl_mod_clasificacion.TabIndex = 67;
@@ -264,7 +263,7 @@
             // 
             this.cbo_mod_idioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mod_idioma.FormattingEnabled = true;
-            this.cbo_mod_idioma.Location = new System.Drawing.Point(208, 124);
+            this.cbo_mod_idioma.Location = new System.Drawing.Point(187, 204);
             this.cbo_mod_idioma.Name = "cbo_mod_idioma";
             this.cbo_mod_idioma.Size = new System.Drawing.Size(151, 21);
             this.cbo_mod_idioma.TabIndex = 64;
@@ -274,7 +273,7 @@
             // 
             this.lbl_mod_idioma.AutoSize = true;
             this.lbl_mod_idioma.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_idioma.Location = new System.Drawing.Point(110, 124);
+            this.lbl_mod_idioma.Location = new System.Drawing.Point(89, 204);
             this.lbl_mod_idioma.Name = "lbl_mod_idioma";
             this.lbl_mod_idioma.Size = new System.Drawing.Size(69, 21);
             this.lbl_mod_idioma.TabIndex = 63;
@@ -282,14 +281,14 @@
             // 
             // txt_mod_trailer
             // 
-            this.txt_mod_trailer.Location = new System.Drawing.Point(208, 95);
+            this.txt_mod_trailer.Location = new System.Drawing.Point(187, 175);
             this.txt_mod_trailer.Name = "txt_mod_trailer";
             this.txt_mod_trailer.Size = new System.Drawing.Size(151, 20);
             this.txt_mod_trailer.TabIndex = 60;
             // 
             // txt_mod_nombre
             // 
-            this.txt_mod_nombre.Location = new System.Drawing.Point(208, 66);
+            this.txt_mod_nombre.Location = new System.Drawing.Point(187, 146);
             this.txt_mod_nombre.MaxLength = 20;
             this.txt_mod_nombre.Name = "txt_mod_nombre";
             this.txt_mod_nombre.Size = new System.Drawing.Size(151, 20);
@@ -301,7 +300,7 @@
             // 
             this.lbl_mod_trailer.AutoSize = true;
             this.lbl_mod_trailer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_trailer.Location = new System.Drawing.Point(98, 95);
+            this.lbl_mod_trailer.Location = new System.Drawing.Point(77, 175);
             this.lbl_mod_trailer.Name = "lbl_mod_trailer";
             this.lbl_mod_trailer.Size = new System.Drawing.Size(81, 21);
             this.lbl_mod_trailer.TabIndex = 57;
@@ -311,7 +310,7 @@
             // 
             this.lbl_mod_descrip.AutoSize = true;
             this.lbl_mod_descrip.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_descrip.Location = new System.Drawing.Point(389, 121);
+            this.lbl_mod_descrip.Location = new System.Drawing.Point(368, 201);
             this.lbl_mod_descrip.Name = "lbl_mod_descrip";
             this.lbl_mod_descrip.Size = new System.Drawing.Size(104, 21);
             this.lbl_mod_descrip.TabIndex = 56;
@@ -321,7 +320,7 @@
             // 
             this.lbl_mod_fecha.AutoSize = true;
             this.lbl_mod_fecha.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_fecha.Location = new System.Drawing.Point(422, 92);
+            this.lbl_mod_fecha.Location = new System.Drawing.Point(401, 172);
             this.lbl_mod_fecha.Name = "lbl_mod_fecha";
             this.lbl_mod_fecha.Size = new System.Drawing.Size(71, 21);
             this.lbl_mod_fecha.TabIndex = 54;
@@ -331,7 +330,7 @@
             // 
             this.lbl_mod_portada.AutoSize = true;
             this.lbl_mod_portada.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_portada.Location = new System.Drawing.Point(679, 66);
+            this.lbl_mod_portada.Location = new System.Drawing.Point(658, 146);
             this.lbl_mod_portada.Name = "lbl_mod_portada";
             this.lbl_mod_portada.Size = new System.Drawing.Size(164, 21);
             this.lbl_mod_portada.TabIndex = 53;
@@ -341,7 +340,7 @@
             // 
             this.lbl_mod_nombre.AutoSize = true;
             this.lbl_mod_nombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod_nombre.Location = new System.Drawing.Point(98, 65);
+            this.lbl_mod_nombre.Location = new System.Drawing.Point(77, 145);
             this.lbl_mod_nombre.Name = "lbl_mod_nombre";
             this.lbl_mod_nombre.Size = new System.Drawing.Size(77, 21);
             this.lbl_mod_nombre.TabIndex = 52;
@@ -351,7 +350,7 @@
             // 
             this.lbl_mod.AutoSize = true;
             this.lbl_mod.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mod.Location = new System.Drawing.Point(255, 17);
+            this.lbl_mod.Location = new System.Drawing.Point(92, 13);
             this.lbl_mod.Name = "lbl_mod";
             this.lbl_mod.Size = new System.Drawing.Size(324, 36);
             this.lbl_mod.TabIndex = 17;
@@ -362,7 +361,7 @@
             this.pic_mod_portada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_mod_portada.ErrorImage = global::cinepolis.Properties.Resources.fondo_cine;
             this.pic_mod_portada.InitialImage = global::cinepolis.Properties.Resources.fondo_cine;
-            this.pic_mod_portada.Location = new System.Drawing.Point(695, 92);
+            this.pic_mod_portada.Location = new System.Drawing.Point(674, 172);
             this.pic_mod_portada.Name = "pic_mod_portada";
             this.pic_mod_portada.Size = new System.Drawing.Size(136, 158);
             this.pic_mod_portada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -375,7 +374,7 @@
             this.btn_portada1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_portada1.FlatAppearance.BorderSize = 0;
             this.btn_portada1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_portada1.Location = new System.Drawing.Point(727, 272);
+            this.btn_portada1.Location = new System.Drawing.Point(737, 6);
             this.btn_portada1.Name = "btn_portada1";
             this.btn_portada1.Size = new System.Drawing.Size(65, 65);
             this.btn_portada1.TabIndex = 78;
@@ -385,15 +384,15 @@
             // 
             // btn_actualizar
             // 
-            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
+            this.btn_actualizar.BackgroundImage = global::cinepolis.Properties.Resources.Edit_Document_icon;
             this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_actualizar.FlatAppearance.BorderSize = 0;
             this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_actualizar.Location = new System.Drawing.Point(585, 272);
+            this.btn_actualizar.Location = new System.Drawing.Point(595, 6);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(65, 65);
             this.btn_actualizar.TabIndex = 76;
-            this.toolTip1.SetToolTip(this.btn_actualizar, "actualizar");
+            this.toolTip1.SetToolTip(this.btn_actualizar, "Modificar");
             this.btn_actualizar.UseVisualStyleBackColor = true;
             this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
@@ -403,7 +402,7 @@
             this.btn_extraer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_extraer.FlatAppearance.BorderSize = 0;
             this.btn_extraer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_extraer.Location = new System.Drawing.Point(656, 272);
+            this.btn_extraer.Location = new System.Drawing.Point(666, 6);
             this.btn_extraer.Name = "btn_extraer";
             this.btn_extraer.Size = new System.Drawing.Size(65, 65);
             this.btn_extraer.TabIndex = 75;
@@ -515,7 +514,7 @@
             this.btn_portada.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_portada.FlatAppearance.BorderSize = 0;
             this.btn_portada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_portada.Location = new System.Drawing.Point(715, 180);
+            this.btn_portada.Location = new System.Drawing.Point(733, 180);
             this.btn_portada.Name = "btn_portada";
             this.btn_portada.Size = new System.Drawing.Size(77, 65);
             this.btn_portada.TabIndex = 53;
@@ -527,6 +526,8 @@
             // 
             this.btn_guardar.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Location = new System.Drawing.Point(644, 180);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(65, 65);
@@ -721,7 +722,7 @@
             this.btn_borrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_borrar.FlatAppearance.BorderSize = 0;
             this.btn_borrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_borrar.Location = new System.Drawing.Point(634, 37);
+            this.btn_borrar.Location = new System.Drawing.Point(735, 6);
             this.btn_borrar.Name = "btn_borrar";
             this.btn_borrar.Size = new System.Drawing.Size(65, 65);
             this.btn_borrar.TabIndex = 22;
@@ -735,7 +736,7 @@
             this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_buscar.FlatAppearance.BorderSize = 0;
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar.Location = new System.Drawing.Point(546, 37);
+            this.btn_buscar.Location = new System.Drawing.Point(647, 6);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(65, 65);
             this.btn_buscar.TabIndex = 21;
@@ -777,6 +778,7 @@
             // 
             this.tabPage4.AutoScroll = true;
             this.tabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage4.Controls.Add(this.lbl_comentario);
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Controls.Add(this.btn_relacion_pelicula);
             this.tabPage4.Controls.Add(this.btn_agregar_relacion4);
@@ -786,10 +788,8 @@
             this.tabPage4.Controls.Add(this.btn_agregar_relacion2);
             this.tabPage4.Controls.Add(this.btn_agregar_relacion1);
             this.tabPage4.Controls.Add(this.dgv_relacion_pelicula_hora);
-            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_cine1);
             this.tabPage4.Controls.Add(this.lbl_relacion_cine1);
             this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_hora1);
-            this.tabPage4.Controls.Add(this.cbo_relacion_pelicula_sala1);
             this.tabPage4.Controls.Add(this.cbo_relacion_pelicula);
             this.tabPage4.Controls.Add(this.lbl_relacion_Hora1);
             this.tabPage4.Controls.Add(this.lbl_relacion_sala1);
@@ -804,13 +804,23 @@
             this.tabPage4.Text = "Cartelera de pelicuas";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(341, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(189, 36);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "CARTELERAS";
+            // 
             // btn_relacion_pelicula
             // 
             this.btn_relacion_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Save_icon;
             this.btn_relacion_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_relacion_pelicula.FlatAppearance.BorderSize = 0;
             this.btn_relacion_pelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_relacion_pelicula.Location = new System.Drawing.Point(592, 158);
+            this.btn_relacion_pelicula.Location = new System.Drawing.Point(759, 104);
             this.btn_relacion_pelicula.Name = "btn_relacion_pelicula";
             this.btn_relacion_pelicula.Size = new System.Drawing.Size(65, 65);
             this.btn_relacion_pelicula.TabIndex = 97;
@@ -824,7 +834,7 @@
             this.btn_agregar_relacion4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_agregar_relacion4.FlatAppearance.BorderSize = 0;
             this.btn_agregar_relacion4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar_relacion4.Location = new System.Drawing.Point(483, 158);
+            this.btn_agregar_relacion4.Location = new System.Drawing.Point(385, 106);
             this.btn_agregar_relacion4.Name = "btn_agregar_relacion4";
             this.btn_agregar_relacion4.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_relacion4.TabIndex = 96;
@@ -836,7 +846,7 @@
             // 
             this.cbo_relacion_pelicula_proyeccion1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_relacion_pelicula_proyeccion1.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_proyeccion1.Location = new System.Drawing.Point(356, 158);
+            this.cbo_relacion_pelicula_proyeccion1.Location = new System.Drawing.Point(258, 106);
             this.cbo_relacion_pelicula_proyeccion1.Name = "cbo_relacion_pelicula_proyeccion1";
             this.cbo_relacion_pelicula_proyeccion1.Size = new System.Drawing.Size(121, 21);
             this.cbo_relacion_pelicula_proyeccion1.TabIndex = 94;
@@ -845,7 +855,7 @@
             // 
             this.lbl_relacion_proyeccion.AutoSize = true;
             this.lbl_relacion_proyeccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_proyeccion.Location = new System.Drawing.Point(240, 158);
+            this.lbl_relacion_proyeccion.Location = new System.Drawing.Point(142, 106);
             this.lbl_relacion_proyeccion.Name = "lbl_relacion_proyeccion";
             this.lbl_relacion_proyeccion.Size = new System.Drawing.Size(99, 21);
             this.lbl_relacion_proyeccion.TabIndex = 92;
@@ -857,7 +867,7 @@
             this.btn_agregar_relacion3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_agregar_relacion3.FlatAppearance.BorderSize = 0;
             this.btn_agregar_relacion3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar_relacion3.Location = new System.Drawing.Point(189, 107);
+            this.btn_agregar_relacion3.Location = new System.Drawing.Point(59, 103);
             this.btn_agregar_relacion3.Name = "btn_agregar_relacion3";
             this.btn_agregar_relacion3.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_relacion3.TabIndex = 89;
@@ -871,7 +881,7 @@
             this.btn_agregar_relacion2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_agregar_relacion2.FlatAppearance.BorderSize = 0;
             this.btn_agregar_relacion2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar_relacion2.Location = new System.Drawing.Point(790, 113);
+            this.btn_agregar_relacion2.Location = new System.Drawing.Point(344, 145);
             this.btn_agregar_relacion2.Name = "btn_agregar_relacion2";
             this.btn_agregar_relacion2.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_relacion2.TabIndex = 88;
@@ -885,7 +895,7 @@
             this.btn_agregar_relacion1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_agregar_relacion1.FlatAppearance.BorderSize = 0;
             this.btn_agregar_relacion1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar_relacion1.Location = new System.Drawing.Point(483, 110);
+            this.btn_agregar_relacion1.Location = new System.Drawing.Point(56, 139);
             this.btn_agregar_relacion1.Name = "btn_agregar_relacion1";
             this.btn_agregar_relacion1.Size = new System.Drawing.Size(31, 24);
             this.btn_agregar_relacion1.TabIndex = 87;
@@ -902,24 +912,14 @@
             this.dgv_relacion_pelicula_hora.Location = new System.Drawing.Point(36, 232);
             this.dgv_relacion_pelicula_hora.Name = "dgv_relacion_pelicula_hora";
             this.dgv_relacion_pelicula_hora.ReadOnly = true;
-            this.dgv_relacion_pelicula_hora.Size = new System.Drawing.Size(800, 124);
+            this.dgv_relacion_pelicula_hora.Size = new System.Drawing.Size(788, 124);
             this.dgv_relacion_pelicula_hora.TabIndex = 42;
-            // 
-            // cbo_relacion_pelicula_cine1
-            // 
-            this.cbo_relacion_pelicula_cine1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_relacion_pelicula_cine1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbo_relacion_pelicula_cine1.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_cine1.Location = new System.Drawing.Point(62, 110);
-            this.cbo_relacion_pelicula_cine1.Name = "cbo_relacion_pelicula_cine1";
-            this.cbo_relacion_pelicula_cine1.Size = new System.Drawing.Size(121, 21);
-            this.cbo_relacion_pelicula_cine1.TabIndex = 41;
             // 
             // lbl_relacion_cine1
             // 
             this.lbl_relacion_cine1.AutoSize = true;
             this.lbl_relacion_cine1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_cine1.Location = new System.Drawing.Point(3, 107);
+            this.lbl_relacion_cine1.Location = new System.Drawing.Point(3, 103);
             this.lbl_relacion_cine1.Name = "lbl_relacion_cine1";
             this.lbl_relacion_cine1.Size = new System.Drawing.Size(50, 21);
             this.lbl_relacion_cine1.TabIndex = 39;
@@ -929,27 +929,17 @@
             // 
             this.cbo_relacion_pelicula_hora1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_relacion_pelicula_hora1.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_hora1.Location = new System.Drawing.Point(663, 113);
+            this.cbo_relacion_pelicula_hora1.Location = new System.Drawing.Point(217, 145);
             this.cbo_relacion_pelicula_hora1.Name = "cbo_relacion_pelicula_hora1";
             this.cbo_relacion_pelicula_hora1.Size = new System.Drawing.Size(121, 21);
             this.cbo_relacion_pelicula_hora1.TabIndex = 35;
             this.cbo_relacion_pelicula_hora1.SelectedIndexChanged += new System.EventHandler(this.cbo_relacion_pelicula_hora1_SelectedIndexChanged);
             // 
-            // cbo_relacion_pelicula_sala1
-            // 
-            this.cbo_relacion_pelicula_sala1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_relacion_pelicula_sala1.FormattingEnabled = true;
-            this.cbo_relacion_pelicula_sala1.Location = new System.Drawing.Point(356, 113);
-            this.cbo_relacion_pelicula_sala1.Name = "cbo_relacion_pelicula_sala1";
-            this.cbo_relacion_pelicula_sala1.Size = new System.Drawing.Size(121, 21);
-            this.cbo_relacion_pelicula_sala1.TabIndex = 33;
-            this.cbo_relacion_pelicula_sala1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
-            // 
             // cbo_relacion_pelicula
             // 
             this.cbo_relacion_pelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_relacion_pelicula.FormattingEnabled = true;
-            this.cbo_relacion_pelicula.Location = new System.Drawing.Point(95, 64);
+            this.cbo_relacion_pelicula.Location = new System.Drawing.Point(221, 66);
             this.cbo_relacion_pelicula.Name = "cbo_relacion_pelicula";
             this.cbo_relacion_pelicula.Size = new System.Drawing.Size(284, 21);
             this.cbo_relacion_pelicula.TabIndex = 32;
@@ -958,7 +948,7 @@
             // 
             this.lbl_relacion_Hora1.AutoSize = true;
             this.lbl_relacion_Hora1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_Hora1.Location = new System.Drawing.Point(588, 110);
+            this.lbl_relacion_Hora1.Location = new System.Drawing.Point(142, 142);
             this.lbl_relacion_Hora1.Name = "lbl_relacion_Hora1";
             this.lbl_relacion_Hora1.Size = new System.Drawing.Size(69, 21);
             this.lbl_relacion_Hora1.TabIndex = 31;
@@ -968,7 +958,7 @@
             // 
             this.lbl_relacion_sala1.AutoSize = true;
             this.lbl_relacion_sala1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_sala1.Location = new System.Drawing.Point(292, 110);
+            this.lbl_relacion_sala1.Location = new System.Drawing.Point(6, 139);
             this.lbl_relacion_sala1.Name = "lbl_relacion_sala1";
             this.lbl_relacion_sala1.Size = new System.Drawing.Size(47, 21);
             this.lbl_relacion_sala1.TabIndex = 28;
@@ -978,7 +968,7 @@
             // 
             this.lbl_relacion_pelicula1.AutoSize = true;
             this.lbl_relacion_pelicula1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_relacion_pelicula1.Location = new System.Drawing.Point(16, 61);
+            this.lbl_relacion_pelicula1.Location = new System.Drawing.Point(142, 63);
             this.lbl_relacion_pelicula1.Name = "lbl_relacion_pelicula1";
             this.lbl_relacion_pelicula1.Size = new System.Drawing.Size(73, 21);
             this.lbl_relacion_pelicula1.TabIndex = 27;
@@ -1028,16 +1018,34 @@
             this.btn_regresar.UseVisualStyleBackColor = true;
             this.btn_regresar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pic_logo
+            // btn_ayuda
             // 
-            this.pic_logo.BackgroundImage = global::cinepolis.Properties.Resources._13672487_10208834486171149_1624040466_n;
-            this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pic_logo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pic_logo.Location = new System.Drawing.Point(794, 9);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(94, 72);
-            this.pic_logo.TabIndex = 11;
-            this.pic_logo.TabStop = false;
+            this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
+            this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.FlatAppearance.BorderSize = 0;
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ayuda.Location = new System.Drawing.Point(867, 5);
+            this.btn_ayuda.Name = "btn_ayuda";
+            this.btn_ayuda.Size = new System.Drawing.Size(30, 30);
+            this.btn_ayuda.TabIndex = 105;
+            this.toolTip1.SetToolTip(this.btn_ayuda, "Menu de Ayuda");
+            this.btn_ayuda.UseVisualStyleBackColor = false;
+            this.btn_ayuda.Click += new System.EventHandler(this.btn_ayuda_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::cinepolis.Properties.Resources.Button_Refresh_icon;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(800, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 65);
+            this.button1.TabIndex = 83;
+            this.toolTip1.SetToolTip(this.button1, "actualizar");
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btn_cerrarsesion
             // 
@@ -1050,15 +1058,15 @@
             this.btn_cerrarsesion.UseVisualStyleBackColor = true;
             this.btn_cerrarsesion.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // lbl_comentario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(341, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 36);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "CARTELERAS";
+            this.lbl_comentario.AutoSize = true;
+            this.lbl_comentario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_comentario.Location = new System.Drawing.Point(6, 196);
+            this.lbl_comentario.Name = "lbl_comentario";
+            this.lbl_comentario.Size = new System.Drawing.Size(288, 21);
+            this.lbl_comentario.TabIndex = 98;
+            this.lbl_comentario.Text = "Seleccione la Sala - Cine que desee:";
             // 
             // mantenimiento
             // 
@@ -1066,7 +1074,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(900, 515);
-            this.Controls.Add(this.pic_logo);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ayuda);
             this.Controls.Add(this.btn_regresar);
             this.Controls.Add(this.btn_cerrarsesion);
             this.Controls.Add(this.lbl_titulo_mantenimiento_cine);
@@ -1074,6 +1083,7 @@
             this.MaximizeBox = false;
             this.Name = "mantenimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.toolTip1.SetToolTip(this, "Actualizar Grid\'s");
             this.Load += new System.EventHandler(this.mantenimiento_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -1090,7 +1100,6 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_relacion_pelicula_hora)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1113,7 +1122,6 @@
         private System.Windows.Forms.Label lbl_codigo_buscar;
         private System.Windows.Forms.Button btn_cerrarsesion;
         private System.Windows.Forms.Button btn_regresar;
-        private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.Label lbl_trailer;
         private System.Windows.Forms.ComboBox cbo_fecha;
         private System.Windows.Forms.ComboBox cbo_categoria;
@@ -1166,10 +1174,8 @@
         private System.Windows.Forms.Button btn_agregar_relacion2;
         private System.Windows.Forms.Button btn_agregar_relacion1;
         private System.Windows.Forms.DataGridView dgv_relacion_pelicula_hora;
-        private System.Windows.Forms.ComboBox cbo_relacion_pelicula_cine1;
         private System.Windows.Forms.Label lbl_relacion_cine1;
         private System.Windows.Forms.ComboBox cbo_relacion_pelicula_hora1;
-        private System.Windows.Forms.ComboBox cbo_relacion_pelicula_sala1;
         private System.Windows.Forms.ComboBox cbo_relacion_pelicula;
         private System.Windows.Forms.Label lbl_relacion_Hora1;
         private System.Windows.Forms.Label lbl_relacion_sala1;
@@ -1179,5 +1185,8 @@
         private System.Windows.Forms.Button btn_relacion_pelicula;
         private System.Windows.Forms.ComboBox cbo_mod_clasificacion;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_ayuda;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_comentario;
     }
 }

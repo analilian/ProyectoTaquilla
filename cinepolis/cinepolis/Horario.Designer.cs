@@ -98,7 +98,7 @@
             // 
             // bttn_actualizar_horario
             // 
-            this.bttn_actualizar_horario.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
+            this.bttn_actualizar_horario.BackgroundImage = global::cinepolis.Properties.Resources.Edit_Document_icon;
             this.bttn_actualizar_horario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_horario.FlatAppearance.BorderSize = 0;
             this.bttn_actualizar_horario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

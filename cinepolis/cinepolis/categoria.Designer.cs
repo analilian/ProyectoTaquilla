@@ -178,7 +178,7 @@
             // 
             // bttn_actualizar_categoria
             // 
-            this.bttn_actualizar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
+            this.bttn_actualizar_categoria.BackgroundImage = global::cinepolis.Properties.Resources.Edit_Document_icon;
             this.bttn_actualizar_categoria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_categoria.FlatAppearance.BorderSize = 0;
             this.bttn_actualizar_categoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

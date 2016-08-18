@@ -86,8 +86,6 @@ namespace cinepolis
         {
             cb1();
             cb2();
-            cb4();
-            cb3();
             cb5();
             cb6();
             cb7();
@@ -96,6 +94,7 @@ namespace cinepolis
             cb10();
             cb11();
             cb12();
+            cb18();
             carga_dgv_cinessala();
         }
 
@@ -572,62 +571,10 @@ namespace cinepolis
             }
         }
 
-        private void cb3()
-        {
-            try
-            {
+        
 
 
-                con.Conectar();
-                //se inicia un DataSet
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idcine, nomcine from cine;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Cine");
-                cbo_relacion_pelicula_cine1.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_relacion_pelicula_cine1.ValueMember = ("pk_idcine");
-                //se indica el valor a desplegar en el combobox
-                cbo_relacion_pelicula_cine1.DisplayMember = ("nomcine");
-                con.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-
-        private void cb4()
-        {
-            try
-            {
-                string portal = cbo_relacion_pelicula_cine1.Text;
-
-                con.Conectar();
-                //se inicia un DataSet
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select a.pk_idcinesal, b.nomsala from cinessala a, sala b, cine c where a.pk_idcine=c.pk_idcine and a.pk_idsala=b.pk_idsala and c.nomcine= '"+ portal +"';";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Sala");
-                cbo_relacion_pelicula_sala1.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_relacion_pelicula_sala1.ValueMember = ("pk_idcinesal");
-                //se indica el valor a desplegar en el combobox
-                cbo_relacion_pelicula_sala1.DisplayMember = ("nomsala");
-                con.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-
+       
 
         private void cb5()
         {
@@ -843,6 +790,33 @@ namespace cinepolis
             }
         }
 
+
+
+        private void cb18()
+        {
+            try
+            {
+
+                con.Conectar();
+                DataSet ds = new DataSet();
+                //se indica la consulta en sql
+                String Query = "select pk_idfcar, fechainicar from fechascartelera;";
+                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
+                //se indica con quu tabla se llena
+                dad.Fill(ds, "Fecha");
+                cbo_mod_fecha.DataSource = ds.Tables[0].DefaultView;
+                //indicamos el valor de los miembros
+                cbo_mod_fecha.ValueMember = ("pk_idfcar");
+                //se indica el valor a desplegar en el combobox
+                cbo_mod_fecha.DisplayMember = ("fechainicar");
+                con.Desconectar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             string pelicula_ralacion = cbo_relacion_pelicula.SelectedValue.ToString();
@@ -898,6 +872,14 @@ namespace cinepolis
             nombre_columna();
             con.Desconectar();
             txt_buscar.Clear();
+        }
+
+
+
+        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
         }
     }
 }

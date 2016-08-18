@@ -45,5 +45,33 @@ namespace cinepolis
         {
             System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
         }
+
+        private void btn_peliculataquillera_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CR_pelicula_taquillera r = new CR_pelicula_taquillera(usu);
+            r.ShowDialog();
+        }
+
+        private void btn_horariosmasusados_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CR_horario_mas_optimo r = new CR_horario_mas_optimo(usu);
+            r.ShowDialog();
+        }
+
+        private void btn_puntoscliente_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CR_tarjeta_puntos r = new CR_tarjeta_puntos(usu);
+            r.ShowDialog();
+        }
+
+        private void btn_ganancias_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CR_ganancia r = new CR_ganancia(usu);
+            r.ShowDialog();
+        }
     }
 }

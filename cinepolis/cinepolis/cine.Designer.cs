@@ -283,7 +283,7 @@
             // 
             // bttn_actualizar_pelicula
             // 
-            this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
+            this.bttn_actualizar_pelicula.BackgroundImage = global::cinepolis.Properties.Resources.Edit_Document_icon;
             this.bttn_actualizar_pelicula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_pelicula.FlatAppearance.BorderSize = 0;
             this.bttn_actualizar_pelicula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

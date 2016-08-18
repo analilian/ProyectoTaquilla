@@ -109,7 +109,7 @@
             // 
             // bttn_actualizar_usuario
             // 
-            this.bttn_actualizar_usuario.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
+            this.bttn_actualizar_usuario.BackgroundImage = global::cinepolis.Properties.Resources.Edit_Document_icon;
             this.bttn_actualizar_usuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_usuario.FlatAppearance.BorderSize = 0;
             this.bttn_actualizar_usuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -196,6 +196,8 @@
             this.btn_ayuda.BackColor = System.Drawing.Color.Transparent;
             this.btn_ayuda.BackgroundImage = global::cinepolis.Properties.Resources.ayuda3;
             this.btn_ayuda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ayuda.FlatAppearance.BorderSize = 0;
+            this.btn_ayuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ayuda.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ayuda.Location = new System.Drawing.Point(822, 2);
             this.btn_ayuda.Name = "btn_ayuda";

@@ -98,7 +98,7 @@
             // 
             // bttn_actualizar_fecha
             // 
-            this.bttn_actualizar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.moddificar;
+            this.bttn_actualizar_fecha.BackgroundImage = global::cinepolis.Properties.Resources.Edit_Document_icon;
             this.bttn_actualizar_fecha.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bttn_actualizar_fecha.FlatAppearance.BorderSize = 0;
             this.bttn_actualizar_fecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
