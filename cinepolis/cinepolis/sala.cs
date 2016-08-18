@@ -12,6 +12,9 @@ using MySql.Data.MySqlClient;
 //programadores: walter y rodrigo
 namespace cinepolis
 {
+    //----------------------------------------programado por walter y rodrigo-------------------------------------------
+    //----------------------------------------fecha inicio:1/08/2016----------------------------------------------------
+    //----------------------------------------fecha fin: 17/08/2016-----------------------------------------------------
     public partial class sala : Form
     {
         string usu;

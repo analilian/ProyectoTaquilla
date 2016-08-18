@@ -13,6 +13,9 @@ namespace cinepolis
 {
     public partial class cine : Form
     {
+        //----------------------------------------programado por walter y rodrigo-------------------------------------------
+        //----------------------------------------fecha inicio:1/08/2016----------------------------------------------------
+        //----------------------------------------fecha fin: 17/08/2016-----------------------------------------------------
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "cine";
         String Squeery = "select a.pk_idcine, a.nomcine, a.direccin, b.nombreregion from cine a, region b where a.pk_idregion=b.pk_idregion ORDER BY `a`.`nomcine` ASC";

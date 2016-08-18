@@ -57,6 +57,7 @@
             this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(481, 36);
             this.lbl_titulo_mantenimiento_cine.TabIndex = 14;
             this.lbl_titulo_mantenimiento_cine.Text = "MANTENIMIENTO DE CATEGORIA";
+            this.lbl_titulo_mantenimiento_cine.Click += new System.EventHandler(this.lbl_titulo_mantenimiento_cine_Click);
             // 
             // txt_buscarmod
             // 

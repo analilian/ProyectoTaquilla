@@ -16,6 +16,7 @@ namespace cinepolis
 {
     public partial class usuario : Form
     {
+
         encriptado encrip = new encriptado();
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla ="usuario";

@@ -14,6 +14,11 @@ namespace cinepolis
 {
     public partial class mantenimiento : Form
     {
+
+
+        //----------------------------------------programado por walter y rodrigo-------------------------------------------
+        //----------------------------------------fecha inicio:1/08/2016----------------------------------------------------
+        //----------------------------------------fecha fin: 17/08/2016-----------------------------------------------------
         public bool Enabled { get; set; }
         string usuario;
         MySqlCommand comand;
@@ -85,8 +90,6 @@ namespace cinepolis
         {
             cb1();
             cb2();
-            cb4();
-            cb3();
             cb16();
             cb6();
             cb7();
@@ -512,64 +515,10 @@ namespace cinepolis
             }
         }
 
-        private void cb3()
-        {
-            try
-            {
+        
 
 
-                con.Conectar();
-                //se inicia un DataSet
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select pk_idcine, nomcine from cine;";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Cine");
-                cbo_relacion_pelicula_cine1.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_relacion_pelicula_cine1.ValueMember = ("pk_idcine");
-                //se indica el valor a desplegar en el combobox
-                cbo_relacion_pelicula_cine1.DisplayMember = ("nomcine");
-                con.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-
-        private void cb4()
-        {
-            try
-            {
-                string portal = cbo_relacion_pelicula_cine1.Text;
-
-                con.Conectar();
-                //se inicia un DataSet
-                DataSet ds = new DataSet();
-                //se indica la consulta en sql
-                String Query = "select a.pk_idcinesal, b.nomsala from cinessala a, sala b, cine c where a.pk_idcine=c.pk_idcine and a.pk_idsala=b.pk_idsala and c.nomcine= '"+ portal +"';";
-                MySqlDataAdapter dad = new MySqlDataAdapter(Query, con.rutaconectada());
-                //se indica con quu tabla se llena
-                dad.Fill(ds, "Sala");
-                cbo_relacion_pelicula_sala1.DataSource = ds.Tables[0].DefaultView;
-                //indicamos el valor de los miembros
-                cbo_relacion_pelicula_sala1.ValueMember = ("pk_idcinesal");
-                //se indica el valor a desplegar en el combobox
-                cbo_relacion_pelicula_sala1.DisplayMember = ("nomsala");
-                con.Desconectar();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-
-
-
+        
         private void cb16()
         {
             try
@@ -828,6 +777,43 @@ namespace cinepolis
         private void button2_Click_2(object sender, EventArgs e)
         {
             con.actualizargrid(dgv_modificar_pelicula, Squeery, Stabla);
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            this.Hide();
+            cliente r = new cliente(usuario);
+            r.ShowDialog();
+        }
+
+
+
+
+        private const string ayudacinetopiaadministrativa = "Title of this help project.chm";
+        private void btn_ayuda_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
+        }
+
+        private void button1_Click_5(object sender, EventArgs e)
+        {
+            this.Hide();
+            clasificacion r = new clasificacion(usuario);
+            r.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fecha r = new fecha(usuario);
+            r.ShowDialog();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            categoria r = new categoria(usuario);
+            r.ShowDialog();
         }
     }
 }

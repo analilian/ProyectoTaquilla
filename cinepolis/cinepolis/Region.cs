@@ -12,6 +12,9 @@ namespace cinepolis
 {
     public partial class Region : Form
     {
+        //----------------------------------------programado por walter y rodrigo-------------------------------------------
+        //----------------------------------------fecha inicio:1/08/2016----------------------------------------------------
+        //----------------------------------------fecha fin: 17/08/2016-----------------------------------------------------
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "region";
         String Squeery = "select* from region";

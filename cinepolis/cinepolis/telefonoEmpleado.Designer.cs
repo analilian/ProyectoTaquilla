@@ -114,6 +114,7 @@
             this.tabPage1.Size = new System.Drawing.Size(643, 336);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mantenimiento de Telefono";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // button1
             // 

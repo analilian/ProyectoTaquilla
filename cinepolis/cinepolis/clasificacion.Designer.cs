@@ -121,7 +121,7 @@
             // 
             this.lbl_titulo_mantenimiento_cine.AutoSize = true;
             this.lbl_titulo_mantenimiento_cine.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(99, 26);
+            this.lbl_titulo_mantenimiento_cine.Location = new System.Drawing.Point(108, 9);
             this.lbl_titulo_mantenimiento_cine.Name = "lbl_titulo_mantenimiento_cine";
             this.lbl_titulo_mantenimiento_cine.Size = new System.Drawing.Size(535, 36);
             this.lbl_titulo_mantenimiento_cine.TabIndex = 57;

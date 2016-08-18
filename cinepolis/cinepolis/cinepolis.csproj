@@ -87,6 +87,12 @@
     <Compile Include="clasificacion.Designer.cs">
       <DependentUpon>clasificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cliente.Designer.cs">
+      <DependentUpon>cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="conexionymanipulacion.cs" />
     <Compile Include="CR_ganancia.cs">
       <SubType>Form</SubType>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="clasificacion.resx">
       <DependentUpon>clasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cliente.resx">
+      <DependentUpon>cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CR_ganancia.resx">
       <DependentUpon>CR_ganancia.cs</DependentUpon>
@@ -427,6 +436,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Coat-Red-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

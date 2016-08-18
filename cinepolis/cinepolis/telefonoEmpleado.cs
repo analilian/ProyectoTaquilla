@@ -13,6 +13,9 @@ namespace cinepolis
 {
     public partial class telefonoEmpleado : Form
     {
+        //----------------------------------------programado por walter y rodrigo-------------------------------------------
+        //----------------------------------------fecha inicio:1/08/2016----------------------------------------------------
+        //----------------------------------------fecha fin: 17/08/2016-----------------------------------------------------
         string usu;
         public telefonoEmpleado(string usuario)
         {
@@ -587,6 +590,11 @@ namespace cinepolis
         }
 
         private void btn_tel_cliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }

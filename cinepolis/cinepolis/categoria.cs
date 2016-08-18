@@ -13,6 +13,9 @@ namespace cinepolis
 
     public partial class categoria : Form
     {
+        //----------------------------------------programado por walter y rodrigo-------------------------------------------
+        //----------------------------------------fecha inicio:1/08/2016----------------------------------------------------
+        //----------------------------------------fecha fin: 17/08/2016-----------------------------------------------------
         conexionymanipulacion conect = new conexionymanipulacion();
         String Stabla = "categoria";
         String Squeery = "select* from categoria";
@@ -259,6 +262,11 @@ namespace cinepolis
         private void btn_ayuda_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Help.ShowHelp(this, Application.StartupPath + @"/" + ayudacinetopiaadministrativa);
+        }
+
+        private void lbl_titulo_mantenimiento_cine_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

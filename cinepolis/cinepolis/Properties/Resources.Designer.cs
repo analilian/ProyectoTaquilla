@@ -333,6 +333,16 @@ namespace cinepolis.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap User_Coat_Red_icon {
+            get {
+                object obj = ResourceManager.GetObject("User-Coat-Red-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap usuario_1 {
             get {
                 object obj = ResourceManager.GetObject("usuario 1", resourceCulture);
